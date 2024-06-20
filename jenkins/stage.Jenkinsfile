@@ -30,6 +30,7 @@ def pruneKeycloakContainers() {
      throw e
   }
 }
+
 def runKeycloakContainer() {
   try {
     sh '''
@@ -77,7 +78,6 @@ def runGeoserverContainer() {
 }
 
 
- 
 def pruneApiDatabaseContainer() {
   try {
     sh '''
@@ -107,20 +107,7 @@ def runApiDatabaseContainer() {
      throw e
   }
 }
-// def runApiDatabaseContainer() {
-//   try {
-//     sh '''
-//       # Build postgres image
-//       docker compose --env-file  ./docker/services/postgres/env/.env.stage \
-//       -f ./docker/services/postgres/docker-compose.postgres.base.yml \
-//       -f ./docker/services/postgres/docker-compose.postgres.stage.yml \
-//       up -d
-//     '''
-//   } catch (Exception e) {
-//      echo "Error in building API database image: ${e.getMessage()}"
-//      throw e
-//   }
-// }
+ 
 
 // pva api containers
 def prunePvaApiContainer() {
@@ -188,8 +175,6 @@ pipeline {
     booleanParam(name: 'run_keycloak', defaultValue: false, description: 'Run Keycloak container individually')
     booleanParam(name: 'prune_geoserver', defaultValue: false, description: 'Prune Geoserver container individually')
     booleanParam(name: 'run_geoserver', defaultValue: false, description: 'Run Geoserver container individually')
-    // booleanParam(name: 'prune_postgres', defaultValue: false, description: 'Prune Postgres container individually')
-    // booleanParam(name: 'run_postgres', defaultValue: false, description: 'Run Postgres container individually')
     booleanParam(name: 'prune_sqlserver', defaultValue: false, description: 'Prune Sql Server container individually')
     booleanParam(name: 'run_sqlserver', defaultValue: false, description: 'Run  Sql Server container individually')
     booleanParam(name: 'prune_pva_api', defaultValue: false, description: 'Prune pva-api container before building and deploying')
