@@ -6,7 +6,7 @@ echo "SQLSERVER_API_DB: ${SQLSERVER_API_DB}"
 
 # Wait for SQL Server to start
 echo "Waiting for SQL Server to start..."
-timeout=10  # Timeout in seconds 
+timeout=30  # Timeout in seconds 
 interval=3  # Sleep interval in seconds
 elapsed=0
 
