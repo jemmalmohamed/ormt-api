@@ -1,5 +1,0 @@
-version: "3.9"
-services:
-  pva-database:
-    ports:
-      - 5435:5432 # expose port 5435 to host machine
