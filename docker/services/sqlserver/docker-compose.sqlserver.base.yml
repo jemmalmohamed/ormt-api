@@ -5,7 +5,6 @@ services:
     container_name: ${PVA_DATABASE_HOSTNAME}
     restart: always
     environment:
-      MSSQL_USER: ${SQLSERVER_API_USER}
       MSSQL_SA_PASSWORD: ${SQLSERVER_API_PASSWORD}
       SQLSERVER_DB: ${SQLSERVER_API_DB}
       ACCEPT_EULA: "Y"
