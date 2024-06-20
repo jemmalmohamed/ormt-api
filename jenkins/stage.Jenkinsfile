@@ -97,7 +97,7 @@ def runApiDatabaseContainer() {
   try {
     sh '''
       # Build sqlserver image
-      sh 'chmod +x ./services/sqlserver/env/init-db.sh'
+      sh 'chmod +x ./docker/services/sqlserver/env/init-db.sh'
       docker compose --env-file  ./docker/services/sqlserver/env/.env.stage \
       -f ./docker/services/sqlserver/docker-compose.sqlserver.base.yml \
       -f ./docker/services/sqlserver/docker-compose.sqlserver.stage.yml \
