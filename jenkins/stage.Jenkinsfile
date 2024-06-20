@@ -106,8 +106,8 @@ def runApiDatabaseContainer() {
         exit 1
       fi
       
-      # Build sqlserver image
-      docker-compose --env-file  ./docker/services/sqlserver/env/.env.stage \
+      # Build and run sqlserver container
+      docker-compose --env-file ./docker/services/sqlserver/env/.env.stage \
       -f ./docker/services/sqlserver/docker-compose.sqlserver.base.yml \
       -f ./docker/services/sqlserver/docker-compose.sqlserver.stage.yml \
       up -d
@@ -117,6 +117,7 @@ def runApiDatabaseContainer() {
      throw e
   }
 }
+
  
 
 // pva api containers
