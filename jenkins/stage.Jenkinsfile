@@ -95,7 +95,7 @@ def pruneApiDatabaseContainer() {
 
 def runApiDatabaseContainer() {
   try {
-    def scriptPath = './docker/services/sqlserver/env/init-db.sh'
+    def scriptPath = './docker/services/sqlserver/env/init-db-stage.sh'
     sh """
       # Verify if the script exists
       if [ -f ${scriptPath} ]; then
