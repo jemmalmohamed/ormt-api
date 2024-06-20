@@ -8,12 +8,12 @@ services:
       ACCEPT_EULA: "Y"
       MSSQL_PID: Developer
       MSSQL_SA_PASSWORD: ${SQLSERVER_API_PASSWORD}
-    volumes:
-      - "sqlserver_data_pva_api:/var/opt/mssql"
-      - ./init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
-
     networks:
       - proxy
+    volumes:
+      - "sqlserver_data_pva_api:/var/opt/mssql"
+      - ./env/init-db-stage.sh:/docker-entrypoint-initdb.d/init-db.sh
+
     user: root # Ensure the script runs with the necessary permissions
     command: /bin/bash /docker-entrypoint-initdb.d/init-db.sh & /opt/mssql/bin/sqlservr
 
