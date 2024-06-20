@@ -14,7 +14,7 @@ services:
       - proxy
     volumes:
       - "sqlserver_data_pva_api:/var/opt/mssql"
-    command: /bin/bash -c "/opt/mssql/bin/sqlservr & sleep 10 && /docker-entrypoint-initdb.d/init-db.sh"
+    command: /bin/bash -c "/opt/mssql/bin/sqlservr & sleep 30 && /docker-entrypoint-initdb.d/init-db.sh"
 
 volumes:
   sqlserver_data_pva_api:
