@@ -5,11 +5,10 @@ services:
     container_name: ${PVA_DATABASE_HOSTNAME}
     restart: always
     environment:
+      ACCEPT_EULA: "Y"
       MSSQL_SA_PASSWORD: ${SQLSERVER_API_PASSWORD}
       SQLSERVER_DB: ${SQLSERVER_API_DB}
-      ACCEPT_EULA: "Y"
       MSSQL_PID: "Developer"
-      MSSQL_TCP_PORT: 1433
     volumes:
       - "sqlserver_data_pva_api:/var/opt/mssql"
     networks:
