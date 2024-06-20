@@ -77,22 +77,8 @@ def runGeoserverContainer() {
 }
 
 
-// api database containers
-// def pruneApiDatabaseContainer() {
-//   try {
-//     sh '''
-//       # Prune postgres container
-//       docker compose --env-file  ./docker/services/postgres/env/.env.stage \
-//       -f ./docker/services/postgres/docker-compose.postgres.base.yml \
-//       -f ./docker/services/postgres/docker-compose.postgres.stage.yml \
-//       down -v
-//     '''
-//   } catch (Exception e) {
-//      echo "Error in pruning API database containers: ${e.getMessage()}"
-//      throw e
-//   }
-// }
-def pruneApiDatabaseSqlServerContainer() {
+ 
+def pruneApiDatabaseContainer() {
   try {
     sh '''
       # Prune sqlserver container
@@ -107,7 +93,7 @@ def pruneApiDatabaseSqlServerContainer() {
   }
 }
 
-def runApiDatabaseSqlServerContainer() {
+def runApiDatabaseContainer() {
   try {
     sh '''
       # Build sqlserver image
