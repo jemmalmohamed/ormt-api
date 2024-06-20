@@ -1,0 +1,6 @@
+version: "3.9"
+
+services:
+  pva-geoserver:
+    ports:
+      - "8085:8080"

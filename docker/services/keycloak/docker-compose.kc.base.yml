@@ -1,0 +1,59 @@
+version: "3.9"
+
+services:
+  pva-kc-db:
+    image: postgres:15.3-alpine
+    container_name: pva-kc-db
+    restart: always
+    environment:
+      POSTGRES_USER: ${KEYCLOAK_POSTGRES_USER}
+      POSTGRES_PASSWORD: ${KEYCLOAK_POSTGRES_PASSWORD}
+      POSTGRES_DB: ${KEYCLOAK_POSTGRES_DB}
+    volumes:
+      - "pgdata_kc_pva:/var/lib/postgresql/data"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${KEYCLOAK_POSTGRES_USER}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - proxy
+
+  pva-kc:
+    image: quay.io/keycloak/keycloak:23.0.3
+    container_name: pva-kc
+    restart: always
+    tty: true
+    environment:
+      KC_DB: postgres
+      KC_DB_URL_HOST: pva-kc-db
+      KC_DB_USERNAME: ${KEYCLOAK_POSTGRES_USER}
+      KC_DB_PASSWORD: ${KEYCLOAK_POSTGRES_PASSWORD}
+      KC_DB_URL_DATABASE: ${KEYCLOAK_POSTGRES_DB}
+      KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN}
+      KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
+      KC_HEALTH_ENABLED: true
+      KC_METRICS_ENABLED: true
+      KC_PROXY_ADDRESS_FORWARDING: true
+      KC_PROXY: edge
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.pva-kc.entrypoints=web"
+      - "traefik.http.routers.pva-kc.rule=Host(`${KEYCLOAK_HOST_URL}`)"
+      - "traefik.http.services.pva-kc.loadbalancer.server.port=${KEYCLOAK_PORT}"
+
+    depends_on:
+      pva-kc-db:
+        condition: service_healthy
+    volumes:
+      - ./../../../services/keycloak/realms:/opt/keycloak/data/import
+      - ./../../../services/keycloak/themes:/opt/keycloak/themes
+    networks:
+      - proxy
+
+volumes:
+  pgdata_kc_pva:
+
+networks:
+  proxy:
+    external: true

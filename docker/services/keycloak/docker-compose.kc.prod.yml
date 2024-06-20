@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  pva-kc:
+    command: start ##--import-realm
+    labels:
+      - "traefik.http.routers.pva-kc.entrypoints=websecure"
+      - "traefik.http.routers.pva-kc.tls=true"
+    environment:
+      KC_HOSTNAME: ${KEYCLOAK_HOST_URL}

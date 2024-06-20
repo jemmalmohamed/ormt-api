@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:tc:postgis:15-3.3-alpine:///databasename
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    username: test
+    password: test
+  
+  jpa: 
+    hibernate:
+      ddl-auto: create-drop
+      database: postgresql
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  flyway:
+    enabled: false
+
+
+geoserver:
+  url: http://localhost:8085/geoserver
+  host: localhost
+  port: 8085
+  username: pva
+  password: pva
+  workspace: pva
+  postgis-datastore: pva_postgis
+   
+
+  
+ 

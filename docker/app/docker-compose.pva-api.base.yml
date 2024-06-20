@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  pva-api:
+    image: ancfcc/pva-api:latest
+    container_name: pva-api
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.pva-api.rule=Host(`${API_HOST_URL}`)"
+      - "traefik.http.routers.pva-api.entrypoints=web"
+    networks:
+      - proxy
+    environment:
+      - SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE}
+    volumes:
+      - ../../data/:/data
+networks:
+  proxy:
+    external: true

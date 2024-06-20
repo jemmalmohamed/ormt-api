@@ -1,0 +1,67 @@
+server:
+  port: 8083
+
+starter:
+  database:
+    reset: true
+    seed: true
+  geoserver:
+    reset: true
+    seed: true
+  keycloak: 
+    reset: true
+    seed: true
+  faker :
+    seed : false
+ 
+spring:
+  security:
+    enabled: true
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=${spring.datasource.database}
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    host: pva-database
+    port: 1433
+    database: pva
+    username: pva
+    password: pva@database
+ 
+geoserver:
+  url: http://localhost:8085/geoserver
+  host: localhost
+  port: 8085
+  username: pva
+  password: pva
+  workspace: pva
+  postgis-datastore: pva_postgis
+
+
+keycloak:
+  host: localhost:8082
+  auth-server-url: http://${keycloak.host}
+  admin:
+    realm: master
+    client: admin-cli
+    username: admin
+    password: admin
+  realm: pva  # this is the realm name
+  secret: "SSnam21521xFoFQAqi5TA68jKV3nBOyl"
+  clients:
+    backend:
+      id: pva-api   # this is the client id (name )of the api
+      name: pva api
+      root-url: http://localhost:8083
+      valid-redirect-urls: http://${keycloak.clients.backend.root-url}/*
+      web-origins: "*"
+      authorization: true
+    frontend:
+      id: pva-web  # this is the client id (name) of the frontend
+      name: prise de vue aérienne
+      root-url:  http://localhost:4200
+      web-origins: "*"
+      authorization: false
+
+logging:
+  level:
+    org.hibernate.SQL: ERROR
+    org.hibernate.tool.hbm2ddl: ERROR

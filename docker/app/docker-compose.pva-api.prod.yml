@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  pva-api:
+    labels:
+      - "traefik.http.routers.pva-api.entrypoints=websecure"
+      - "traefik.http.routers.pva-api.tls=true"
+
+    env_file:
+      - ../services/postgres/env/.env.prod
+      - ../services/keycloak/env/.env.prod
+      - ../services/geoserver/env/.env.prod

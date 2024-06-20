@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  pva-database:
+    image: postgis/postgis:15-3.3-alpine
+    container_name: ${PVA_DATABASE_HOSTNAME}
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_API_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_API_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_API_DB}
+    volumes:
+      - "pgdata_pva_api:/var/lib/postgresql/data"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_API_USER}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - proxy
+
+volumes:
+  pgdata_pva_api:
+
+networks:
+  proxy:
+    external: true
