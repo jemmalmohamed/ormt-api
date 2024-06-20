@@ -199,6 +199,11 @@ pipeline {
           }
       }
     }
+    stage('Set Permissions') {
+            steps {
+                sh 'chmod +x ./docker/services/sqlserver/env/init-db-stage.sh'
+            }
+        }
 
 
     stage("Build and Deploy App Services") {
