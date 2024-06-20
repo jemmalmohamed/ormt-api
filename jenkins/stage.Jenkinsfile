@@ -95,14 +95,23 @@ def pruneApiDatabaseContainer() {
 
 def runApiDatabaseContainer() {
   try {
-    sh '''
+    def scriptPath = './docker/services/sqlserver/env/init-db.sh'
+    sh """
+      # Verify if the script exists
+      if [ -f ${scriptPath} ]; then
+        echo "Script found: ${scriptPath}"
+        chmod +x ${scriptPath}
+      else
+        echo "Script not found: ${scriptPath}"
+        exit 1
+      fi
+      
       # Build sqlserver image
-      sh 'chmod +x ./docker/services/sqlserver/env/init-db.sh'
-      docker compose --env-file  ./docker/services/sqlserver/env/.env.stage \
+      docker-compose --env-file  ./docker/services/sqlserver/env/.env.stage \
       -f ./docker/services/sqlserver/docker-compose.sqlserver.base.yml \
       -f ./docker/services/sqlserver/docker-compose.sqlserver.stage.yml \
       up -d
-    '''
+    """
   } catch (Exception e) {
      echo "Error in building API database image: ${e.getMessage()}"
      throw e
