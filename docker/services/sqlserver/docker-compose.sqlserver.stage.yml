@@ -3,5 +3,3 @@ services:
   pva-database:
     ports:
       - 1431:1433 # expose port 1431 to host machine
-    volumes:
-      - ./env/init-db-stage.sh:/docker-entrypoint-initdb.d/init-db.sh
