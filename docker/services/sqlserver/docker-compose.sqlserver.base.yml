@@ -6,6 +6,7 @@ services:
       args:
         ACCEPT_EULA: "Y"
         MSSQL_SA_PASSWORD: ${SQLSERVER_API_PASSWORD}
+        SQLSERVER_API_DB: ${SQLSERVER_API_DB}
     container_name: ${PVA_DATABASE_HOSTNAME}
     restart: always
     environment:
