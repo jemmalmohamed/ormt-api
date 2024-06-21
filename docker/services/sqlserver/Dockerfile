@@ -9,7 +9,7 @@ ARG SA_PASSWORD
 ENV SA_PASSWORD=${SA_PASSWORD}
 
 # Copy initialization script from the correct location
-COPY ./sqlserver/env/init-db-stage.sh /docker-entrypoint-initdb.d/
+COPY ./env/init-db-stage.sh /docker-entrypoint-initdb.d/
 
 # Grant execute permission on the initialization script
 RUN chmod +x /docker-entrypoint-initdb.d/init-db-stage.sh
