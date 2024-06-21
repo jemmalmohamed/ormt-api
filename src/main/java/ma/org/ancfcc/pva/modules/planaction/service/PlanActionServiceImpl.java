@@ -54,7 +54,7 @@ public class PlanActionServiceImpl extends BaseServiceImpl<PlanAction> implement
     }
 
     /**
-     * @param nom
+     * @param designation
      * @return Optional<PlanAction>
      */
     @Override
