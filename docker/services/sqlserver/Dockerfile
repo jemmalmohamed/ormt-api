@@ -8,8 +8,18 @@ ENV ACCEPT_EULA=${ACCEPT_EULA}
 ARG SA_PASSWORD
 ENV SA_PASSWORD=${SA_PASSWORD}
 
-# Copy initialization script from the correct location
-COPY --chmod=0755 ./env/init-db-stage.sh /docker-entrypoint-initdb.d/
+# Set SQL Server API DB name
+ARG SQLSERVER_API_DB
+ENV SQLSERVER_API_DB=${SQLSERVER_API_DB}
 
-# Start SQL Server and run the initialization script
-CMD /bin/bash -c "/opt/mssql/bin/sqlservr & sleep 30 && /docker-entrypoint-initdb.d/init-db-stage.sh"
+# Start SQL Server and run the initialization commands
+CMD /bin/bash -c "\
+    /opt/mssql/bin/sqlservr & \
+    sleep 30 && \
+    /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P ${SA_PASSWORD} -Q \"IF DB_ID('${SQLSERVER_API_DB}') IS NULL CREATE DATABASE [${SQLSERVER_API_DB}]\" && \
+    if [ $? -eq 0 ]; then \
+    touch /var/opt/mssql/data/.init_done && \
+    echo 'Initialization script completed.'; \
+    else \
+    echo 'Initialization script failed.'; \
+    fi"
