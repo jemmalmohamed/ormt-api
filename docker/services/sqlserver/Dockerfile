@@ -9,10 +9,10 @@ ARG SA_PASSWORD
 ENV SA_PASSWORD=${SA_PASSWORD}
 
 # Copy initialization script from the correct location
-COPY ./env/init-db-stage.sh /docker-entrypoint-initdb.d/
 
+COPY --chmod=0755 ./env/init-db-stage.sh /docker-entrypoint-initdb.d/
 # Grant execute permission on the initialization script
-RUN chmod +x /docker-entrypoint-initdb.d/init-db-stage.sh
+# RUN chmod +x /docker-entrypoint-initdb.d/init-db-stage.sh
 
 # Start SQL Server and run the initialization script
 CMD /bin/bash -c "/opt/mssql/bin/sqlservr & sleep 30 && /docker-entrypoint-initdb.d/init-db-stage.sh"
