@@ -6,9 +6,6 @@ if [ -f /var/opt/mssql/data/.init_done ]; then
   exit 0
 fi
 
-# Wait for SQL Server to start up
-sleep 30s
-
 # Run your initialization SQL scripts
 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "${SQLSERVER_API_PASSWORD}" -Q "IF DB_ID('${SQLSERVER_API_DB}') IS NULL CREATE DATABASE [${SQLSERVER_API_DB}]"
 
