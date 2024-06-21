@@ -31,7 +31,7 @@ import ma.org.ancfcc.pva.modules.planaction.dto.detail.PlanActionDetailMapper;
 import ma.org.ancfcc.pva.modules.planaction.service.PlanActionService;
 
 @RestController
-@RequestMapping("/api/planactions")
+@RequestMapping("api/v1/planactions")
 @RequiredArgsConstructor
 public class PlanActionLoadController {
 

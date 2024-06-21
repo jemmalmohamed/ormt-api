@@ -3,12 +3,13 @@ package ma.org.ancfcc.pva.core.commun.base.service;
 import java.util.List;
 import java.util.Optional;
 
+import java.util.UUID;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.lang.NonNull;
 
-public interface BaseService<T, ID extends Number> {
+public interface BaseService<T, ID extends UUID> {
 
     public List<T> findAll();
 

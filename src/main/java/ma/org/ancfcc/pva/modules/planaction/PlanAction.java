@@ -1,6 +1,7 @@
 package ma.org.ancfcc.pva.modules.planaction;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -22,7 +23,7 @@ import ma.org.ancfcc.pva.core.commun.base.entity.BaseEntity;
 @NoArgsConstructor
 @Entity
 @Table(name = "plan_action")
-public class PlanAction extends BaseEntity<Long> {
+public class PlanAction extends BaseEntity<UUID> {
 
     private String designation;
 

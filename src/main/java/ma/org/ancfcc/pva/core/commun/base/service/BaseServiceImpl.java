@@ -17,10 +17,11 @@ import lombok.RequiredArgsConstructor;
 import ma.org.ancfcc.pva.core.commun.base.entity.BaseEntity;
 import ma.org.ancfcc.pva.core.commun.base.repository.BaseRepository;
 import ma.org.ancfcc.pva.core.commun.rest.responses.MessageResponse;
+import java.util.UUID;
 
 @MappedSuperclass
 @RequiredArgsConstructor
-public abstract class BaseServiceImpl<T extends BaseEntity<ID>, ID extends Number> implements BaseService<T, ID> {
+public abstract class BaseServiceImpl<T extends BaseEntity<ID>, ID extends UUID> implements BaseService<T, ID> {
 
     protected final BaseRepository<T, ID> baseRepository;
 

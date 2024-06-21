@@ -8,12 +8,13 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import ma.org.ancfcc.pva.core.validators.groups.OnUpdate;
+import java.util.UUID;
 
 @Setter
 @Getter
 @EqualsAndHashCode
 @MappedSuperclass
-public class Dto<ID extends Number> {
+public class Dto<ID extends UUID> {
 
     @Schema(accessMode = AccessMode.READ_ONLY)
     @NotNull(groups = { OnUpdate.class })
