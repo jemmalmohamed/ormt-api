@@ -51,50 +51,10 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
         // truncateCarteTable();
     }
 
-    private void truncateMissionTable() {
-        entityManager.createNativeQuery("TRUNCATE TABLE mission RESTART IDENTITY CASCADE").executeUpdate();
-        log.warn("### DATABASE: Mission table truncated successfully.");
-    }
-
-    private void truncateBasemapTable() {
-        entityManager.createNativeQuery("TRUNCATE TABLE basemap RESTART IDENTITY CASCADE").executeUpdate();
-        log.warn("### DATABASE: Basemap table truncated successfully.");
-
-    }
-
-    private void truncateCarteTable() {
-        entityManager.createNativeQuery("TRUNCATE TABLE carte RESTART IDENTITY CASCADE").executeUpdate();
-        log.warn("### DATABASE: Carte table truncated successfully.");
-
-    }
-
-    private void truncateBlocPrioriteTable() {
-        entityManager.createNativeQuery("TRUNCATE TABLE bloc_priorite RESTART IDENTITY CASCADE").executeUpdate();
-        log.warn("### DATABASE: Bloc priorite table truncated successfully.");
-
-    }
-
     @Transactional
     public void truncateTable(String tableName) {
         entityManager.createNativeQuery("TRUNCATE TABLE " + tableName).executeUpdate();
-        log.warn("### DATABASE: Plan action table truncated and identity reset successfully.");
+        log.warn("### DATABASE:  " + tableName + " table truncated successfully.");
     }
 
-    private void truncateCapteurTable() {
-        entityManager.createNativeQuery("TRUNCATE TABLE capteur RESTART IDENTITY CASCADE").executeUpdate();
-        log.warn("### DATABASE: Capteur table truncated successfully.");
-
-    }
-
-    private void truncateAvionTable() {
-        entityManager.createNativeQuery("TRUNCATE TABLE avion RESTART IDENTITY CASCADE").executeUpdate();
-        log.warn("### DATABASE: Avion table truncated successfully.");
-
-    }
-
-    private void truncateOrganismeTable() {
-        entityManager.createNativeQuery("TRUNCATE TABLE organisme RESTART IDENTITY CASCADE").executeUpdate();
-        log.warn("### DATABASE: Organisme table truncated successfully.");
-
-    }
 }
