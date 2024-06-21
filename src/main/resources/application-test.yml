@@ -1,20 +1,19 @@
 spring:
   datasource:
-    url: jdbc:tc:postgis:15-3.3-alpine:///databasename
+    url: jdbc:tc:sqlserver:2019-CU4:///test-database
     driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
-    username: test
-    password: test
+    username: sa
+    password: pva@database2024
   
   jpa: 
     hibernate:
       ddl-auto: create-drop
-      database: postgresql
-      database-platform: org.hibernate.dialect.PostgreSQLDialect
+      database: sql_server
+      database-platform: org.hibernate.dialect.SQLServerDialect
     show-sql: true
+    
   flyway:
     enabled: false
-
-
 geoserver:
   url: http://localhost:8085/geoserver
   host: localhost

@@ -18,13 +18,12 @@ spring:
   security:
     enabled: true
   datasource:
-    url: jdbc:sqlserver://localhost:1433;databaseName=${spring.datasource.database}
+    url: jdbc:sqlserver://localhost:1431;databaseName=${spring.datasource.database};encrypt=false;trustServerCertificate=true
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     host: pva-database
-    port: 1433
     database: pva
-    username: pva
-    password: pva@database
+    username: sa
+    password: pva@database2024
  
 geoserver:
   url: http://localhost:8085/geoserver

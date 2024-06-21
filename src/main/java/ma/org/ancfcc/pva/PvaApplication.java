@@ -1,4 +1,4 @@
-package ma.gov.ancfcc.pva;
+package ma.org.ancfcc.pva;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

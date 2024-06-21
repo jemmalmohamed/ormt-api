@@ -22,18 +22,18 @@ spring:
   output:
     ansi:
       enabled: ALWAYS
-
+ 
 flyway:
-    enabled: true
-    baseline-on-migrate: true
-    baseline-version: 1.0.0
-    baseline-description: Initial database state
-    user: ${spring.datasource.username}
-    password: ${spring.datasource.password}
+  enabled: true
+  baseline-on-migrate: true
+  clean-on-validation-error: true
+  baseline-description: Initial database state
+  user: ${spring.datasource.username}
+  password: ${spring.datasource.password}
 
 data:
-   external:
-      path: ./data/
+  external:
+    path: ./data/
 
 jwt:
   auth:
@@ -47,3 +47,6 @@ springdoc:
     path: /swagger-ui.html 
     filter: false
  
+logging:
+  level:
+    com.zaxxer.hikari: DEBUG
