@@ -5,8 +5,8 @@ ARG ACCEPT_EULA
 ENV ACCEPT_EULA=${ACCEPT_EULA}
 
 # Set SA password
-ARG SA_PASSWORD
-ENV SA_PASSWORD=${SA_PASSWORD}
+ARG MSSQL_SA_PASSWORD
+ENV MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
 
 # Set SQL Server API DB name
 ARG SQLSERVER_API_DB
@@ -16,7 +16,7 @@ ENV SQLSERVER_API_DB=${SQLSERVER_API_DB}
 CMD /bin/bash -c "\
     /opt/mssql/bin/sqlservr & \
     sleep 30 && \
-    /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P ${SA_PASSWORD} -Q \"IF DB_ID('${SQLSERVER_API_DB}') IS NULL CREATE DATABASE [${SQLSERVER_API_DB}]\" && \
+    /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P ${MSSQL_SA_PASSWORD} -Q \"IF DB_ID('${SQLSERVER_API_DB}') IS NULL CREATE DATABASE [${SQLSERVER_API_DB}]\" && \
     if [ $? -eq 0 ]; then \
     touch /var/opt/mssql/data/.init_done && \
     echo 'Initialization script completed.'; \

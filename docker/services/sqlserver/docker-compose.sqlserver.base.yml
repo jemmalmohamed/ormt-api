@@ -5,15 +5,13 @@ services:
       context: .
       args:
         ACCEPT_EULA: "Y"
-        SA_PASSWORD: "${SQLSERVER_API_PASSWORD}"
+        MSSQL_SA_PASSWORD: ${SQLSERVER_API_PASSWORD}
     container_name: ${PVA_DATABASE_HOSTNAME}
     restart: always
     environment:
       ACCEPT_EULA: "Y"
       MSSQL_PID: Developer
       MSSQL_SA_PASSWORD: ${SQLSERVER_API_PASSWORD}
-      SQLSERVER_API_PASSWORD: ${SQLSERVER_API_PASSWORD}
-      SQLSERVER_API_DB: ${SQLSERVER_API_DB}
     networks:
       - proxy
     volumes:
