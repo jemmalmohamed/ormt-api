@@ -9,7 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.lang.NonNull;
 
-public interface BaseService<T, ID extends UUID> {
+public interface BaseService<T> {
 
     public List<T> findAll();
 
@@ -19,29 +19,30 @@ public interface BaseService<T, ID extends UUID> {
 
     List<T> findBySpecification(Specification<T> specification);
 
-    public Optional<T> findById(ID id);
+    public Optional<T> findById(UUID id);
 
-    public List<ID> findAllIds();
+    public List<UUID> findAllIds();
 
     T create(@NonNull T entity);
 
     List<T> saveAll(List<T> entities);
 
-    public void deleteAllById(List<ID> ids);
+    public void deleteAllById(List<UUID> ids);
 
-    public void delete(ID id);
+    public void delete(UUID id);
 
-    public void deleteAllExceptIds(List<ID> ids);
+    public void deleteAllExceptIds(List<UUID> ids);
 
     public void deleteAll();
 
-    List<ID> deleteBySpecification(List<String> filters, String globalFilter, Class<T> clazz);
+    List<UUID> deleteBySpecification(List<String> filters, String globalFilter, Class<T> clazz);
 
-    List<ID> deleteBySpecificationExceptIds(List<String> filters, String globalFilter, Class<T> clazz, List<ID> ids);
+    List<UUID> deleteBySpecificationExceptIds(List<String> filters, String globalFilter, Class<T> clazz,
+            List<UUID> ids);
 
-    public T update(ID id, T entity);
+    public T update(UUID id, T entity);
 
-    default void validateBeforeDelete(ID id) {
+    default void validateBeforeDelete(UUID id) {
         // Default implementation (does nothing)
     }
 

@@ -77,7 +77,7 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
     @Transactional
     public void truncatePlanActionTable() {
         entityManager.createNativeQuery("TRUNCATE TABLE plan_action").executeUpdate();
-        entityManager.createNativeQuery("DBCC CHECKIDENT ('plan_action', RESEED, 0)").executeUpdate();
+
         log.warn("### DATABASE: Plan action table truncated and identity reset successfully.");
     }
 

@@ -1,5 +1,7 @@
 package ma.org.ancfcc.pva.modules.planaction.controller;
 
+import java.util.UUID;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -62,7 +64,7 @@ public class PlanActionCreateUpdateController {
         })
         @PutMapping("{id}")
         @PreAuthorize("hasAuthority('planaction:update')")
-        public ResponseEntity<RestResponse<PlanActionDto>> updatePlanAction(@PathVariable Long id,
+        public ResponseEntity<RestResponse<PlanActionDto>> updatePlanAction(@PathVariable UUID id,
                         @Validated(OnUpdate.class) @RequestBody PlanActionRequestDto planactionRequestDto) {
                 PlanAction planaction = planactionService.update(id, planactionRequestDto);
                 return buildResponseEntity(planaction, HttpStatus.OK);

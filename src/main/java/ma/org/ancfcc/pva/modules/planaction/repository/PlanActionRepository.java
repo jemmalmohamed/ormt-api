@@ -5,7 +5,7 @@ import java.util.Optional;
 import ma.org.ancfcc.pva.core.commun.base.repository.BaseRepository;
 import ma.org.ancfcc.pva.modules.planaction.PlanAction;
 
-public interface PlanActionRepository extends BaseRepository<PlanAction, Long> {
+public interface PlanActionRepository extends BaseRepository<PlanAction> {
 
     Optional<PlanAction> findByDesignation(String designation);
 

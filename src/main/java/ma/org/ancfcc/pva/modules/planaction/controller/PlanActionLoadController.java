@@ -1,6 +1,7 @@
 package ma.org.ancfcc.pva.modules.planaction.controller;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
@@ -80,7 +81,7 @@ public class PlanActionLoadController {
         })
         @GetMapping("/{id}")
         @PreAuthorize("hasAuthority('planaction:read')")
-        public ResponseEntity<RestResponse<PlanActionDetailDto>> getPlanAction(@PathVariable("id") Long id) {
+        public ResponseEntity<RestResponse<PlanActionDetailDto>> getPlanAction(@PathVariable("id") UUID id) {
                 PlanAction planAction = planActionService.findById(id).orElseThrow(EntityNotFoundException::new);
                 PlanActionDetailDto dto = planActionDetailMapper.mapToDto(planAction);
                 RestResponse<PlanActionDetailDto> restResponse = RestResponseUtil.buildRestResponse(dto);

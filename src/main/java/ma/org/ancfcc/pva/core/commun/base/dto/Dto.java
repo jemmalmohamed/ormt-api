@@ -14,10 +14,10 @@ import java.util.UUID;
 @Getter
 @EqualsAndHashCode
 @MappedSuperclass
-public class Dto<ID extends UUID> {
+public class Dto {
 
     @Schema(accessMode = AccessMode.READ_ONLY)
     @NotNull(groups = { OnUpdate.class })
-    private ID id;
+    private UUID id;
 
 }

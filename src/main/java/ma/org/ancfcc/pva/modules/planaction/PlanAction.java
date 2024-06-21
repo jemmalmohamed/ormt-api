@@ -23,7 +23,7 @@ import ma.org.ancfcc.pva.core.commun.base.entity.BaseEntity;
 @NoArgsConstructor
 @Entity
 @Table(name = "plan_action")
-public class PlanAction extends BaseEntity<UUID> {
+public class PlanAction extends BaseEntity {
 
     private String designation;
 

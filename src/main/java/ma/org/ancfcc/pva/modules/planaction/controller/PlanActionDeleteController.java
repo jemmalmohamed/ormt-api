@@ -1,6 +1,7 @@
 package ma.org.ancfcc.pva.modules.planaction.controller;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,7 +38,7 @@ public class PlanActionDeleteController {
         })
         @DeleteMapping("/{id}")
         @PreAuthorize("hasAuthority('planaction:delete')")
-        public ResponseEntity<Void> deleteById(@PathVariable Long id) {
+        public ResponseEntity<Void> deleteById(@PathVariable UUID id) {
                 return handleDelete(() -> planActionService.delete(id));
         }
 
@@ -48,7 +49,7 @@ public class PlanActionDeleteController {
         })
         @DeleteMapping("/bulk")
         @PreAuthorize("hasAuthority('planaction:delete')")
-        public ResponseEntity<Void> deleteMultiple(@RequestBody List<Long> ids) {
+        public ResponseEntity<Void> deleteMultiple(@RequestBody List<UUID> ids) {
                 return handleDelete(() -> planActionService.deleteAllById(ids));
         }
 
@@ -70,7 +71,7 @@ public class PlanActionDeleteController {
         })
         @DeleteMapping("/exclude")
         @PreAuthorize("hasAuthority('planaction:delete')")
-        public ResponseEntity<Void> deleteAllExcept(@RequestBody List<Long> ids) {
+        public ResponseEntity<Void> deleteAllExcept(@RequestBody List<UUID> ids) {
                 return handleDelete(() -> planActionService.deleteAllExceptIds(ids));
         }
 
@@ -81,14 +82,14 @@ public class PlanActionDeleteController {
         })
         @DeleteMapping("/query")
         @PreAuthorize("hasAuthority('planaction:delete')")
-        public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParams(
+        public ResponseEntity<RestResponse<List<UUID>>> deleteByQueryParams(
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
-                List<Long> deletedIds = planActionService.deleteBySpecification(filters, globalFilter,
+                List<UUID> deletedIds = planActionService.deleteBySpecification(filters, globalFilter,
                                 PlanAction.class);
 
-                return ResponseEntity.ok(RestResponse.<List<Long>>builder()
+                return ResponseEntity.ok(RestResponse.<List<UUID>>builder()
                                 .status(HttpStatus.OK)
                                 .data(deletedIds)
                                 .message(!deletedIds.isEmpty() ? null : "No data found")

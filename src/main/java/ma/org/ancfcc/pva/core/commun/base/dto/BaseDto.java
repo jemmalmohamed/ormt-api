@@ -13,7 +13,7 @@ import lombok.Setter;
 @Getter
 @EqualsAndHashCode(callSuper = false)
 @MappedSuperclass
-public class BaseDto extends Dto<Long> {
+public class BaseDto extends Dto {
 
     @Schema(accessMode = AccessMode.READ_ONLY)
     private Integer statusCode;

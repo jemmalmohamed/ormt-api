@@ -1,6 +1,7 @@
 package ma.org.ancfcc.pva.modules.planaction.service;
 
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 
@@ -9,7 +10,7 @@ import ma.org.ancfcc.pva.core.commun.rest.queries.QueryParams;
 import ma.org.ancfcc.pva.modules.planaction.PlanAction;
 import ma.org.ancfcc.pva.modules.planaction.dto.request.PlanActionRequestDto;
 
-public interface PlanActionService extends BaseService<PlanAction, Long> {
+public interface PlanActionService extends BaseService<PlanAction> {
 
     Optional<PlanAction> findByDesignation(String designation);
 
@@ -17,8 +18,8 @@ public interface PlanActionService extends BaseService<PlanAction, Long> {
 
     PlanAction create(PlanActionRequestDto requestDto);
 
-    PlanAction update(Long id, PlanActionRequestDto planActionRequestDto);
+    PlanAction update(UUID id, PlanActionRequestDto planActionRequestDto);
 
-    boolean existsById(Long id);
+    boolean existsById(UUID id);
 
 }

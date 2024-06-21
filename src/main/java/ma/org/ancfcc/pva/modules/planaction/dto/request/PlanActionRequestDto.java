@@ -1,6 +1,7 @@
 package ma.org.ancfcc.pva.modules.planaction.dto.request;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -22,7 +23,7 @@ import ma.org.ancfcc.pva.core.validators.unique.Unique;
         @Unique(message = "La designation ${validatedValue.designation} existe déjà", fieldName = "designation", fieldId = "id", tableName = "plan_action"),
 })
 @JsonIgnoreProperties(value = { "planAction.id" }, allowGetters = true)
-public class PlanActionRequestDto extends Dto<Long> {
+public class PlanActionRequestDto extends Dto {
 
     @NotBlank(message = "Ce champ est requis.e")
     private String designation;

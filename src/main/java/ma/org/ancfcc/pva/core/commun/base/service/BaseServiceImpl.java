@@ -21,16 +21,16 @@ import java.util.UUID;
 
 @MappedSuperclass
 @RequiredArgsConstructor
-public abstract class BaseServiceImpl<T extends BaseEntity<ID>, ID extends UUID> implements BaseService<T, ID> {
+public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseService<T> {
 
-    protected final BaseRepository<T, ID> baseRepository;
+    protected final BaseRepository<T> baseRepository;
 
     protected final SpecificationService specificationService;
 
     @PersistenceContext
     private EntityManager entityManager;
 
-    public List<ID> findAllIds() {
+    public List<UUID> findAllIds() {
         return this.baseRepository.findAllIds();
 
     }
@@ -65,21 +65,21 @@ public abstract class BaseServiceImpl<T extends BaseEntity<ID>, ID extends UUID>
     }
 
     // ** READ ONE **//
-    public Optional<T> findById(ID id) {
+    public Optional<T> findById(UUID id) {
         return baseRepository.findById(id);
     }
 
     // ** UPDATE **//
     // @CacheEvict(cacheResolver = "dynamicCacheNameResolver", allEntries = true)
     @Transactional
-    public T update(ID id, T entity) {
+    public T update(UUID id, T entity) {
         checkPathId(id, entity.getId());
         return baseRepository.save(entity);
     }
 
     // @CacheEvict(cacheResolver = "dynamicCacheNameResolver", allEntries = true)
     @Transactional
-    public void deleteAllById(List<ID> ids) {
+    public void deleteAllById(List<UUID> ids) {
 
         validateEntitiesBeforeDelete(ids);
         baseRepository.deleteAllById(ids);
@@ -87,7 +87,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity<ID>, ID extends UUID>
     }
 
     @Transactional
-    public void delete(ID id) {
+    public void delete(UUID id) {
 
         validateEntitiesBeforeDelete(List.of(id));
 
@@ -100,7 +100,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity<ID>, ID extends UUID>
     @Transactional
     public void deleteAll() {
 
-        List<ID> ids = baseRepository.findAllIds();
+        List<UUID> ids = baseRepository.findAllIds();
 
         validateEntitiesBeforeDelete(ids);
 
@@ -110,9 +110,9 @@ public abstract class BaseServiceImpl<T extends BaseEntity<ID>, ID extends UUID>
 
     // @CacheEvict(cacheResolver = "dynamicCacheNameResolver", allEntries = true)
     @Transactional
-    public void deleteAllExceptIds(List<ID> ids) {
+    public void deleteAllExceptIds(List<UUID> ids) {
 
-        List<ID> idsToDelete = baseRepository.findAllIdsNotIn(ids);
+        List<UUID> idsToDelete = baseRepository.findAllIdsNotIn(ids);
 
         validateEntitiesBeforeDelete(idsToDelete);
 
@@ -126,14 +126,14 @@ public abstract class BaseServiceImpl<T extends BaseEntity<ID>, ID extends UUID>
 
     @Override
     @Transactional
-    public List<ID> deleteBySpecification(List<String> filters, String globalFilter, Class<T> clazz) {
+    public List<UUID> deleteBySpecification(List<String> filters, String globalFilter, Class<T> clazz) {
 
         Specification<T> specification = specificationService
                 .createSpecificationWithDynamicGlobalFilter(filters, globalFilter, clazz);
 
         List<T> entities = findBySpecification(specification);
 
-        List<ID> ids = entities.stream().map(T::getId).collect(Collectors.toList());
+        List<UUID> ids = entities.stream().map(T::getId).collect(Collectors.toList());
 
         deleteAllById(ids);
 
@@ -142,8 +142,8 @@ public abstract class BaseServiceImpl<T extends BaseEntity<ID>, ID extends UUID>
 
     @Override
     @Transactional
-    public List<ID> deleteBySpecificationExceptIds(List<String> filters, String globalFilter, Class<T> clazz,
-            List<ID> exceptIds) {
+    public List<UUID> deleteBySpecificationExceptIds(List<String> filters, String globalFilter, Class<T> clazz,
+            List<UUID> exceptIds) {
 
         Specification<T> specification = specificationService
                 .createSpecificationWithDynamicGlobalFilter(filters, globalFilter, clazz);
@@ -152,7 +152,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity<ID>, ID extends UUID>
 
         entities.removeIf(entity -> exceptIds.contains(entity.getId()));
 
-        List<ID> ids = entities.stream().map(T::getId).collect(Collectors.toList());
+        List<UUID> ids = entities.stream().map(T::getId).collect(Collectors.toList());
 
         deleteAllById(ids);
 
@@ -165,7 +165,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity<ID>, ID extends UUID>
      * @param id
      * @param pathId
      */
-    public void checkPathId(ID id, ID pathId) {
+    public void checkPathId(UUID id, UUID pathId) {
         if (!id.equals(pathId)) {
             String message = MessageResponse.builder().title("Erreur")
                     .mainMessage("L'identifiant dans le chemin et dans le corps de la requête ne sont pas les mêmes")
@@ -175,8 +175,8 @@ public abstract class BaseServiceImpl<T extends BaseEntity<ID>, ID extends UUID>
         }
     }
 
-    private void validateEntitiesBeforeDelete(List<ID> ids) {
-        for (ID id : ids) {
+    private void validateEntitiesBeforeDelete(List<UUID> ids) {
+        for (UUID id : ids) {
             validateBeforeDelete(id);
         }
     }
