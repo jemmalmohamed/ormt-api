@@ -41,7 +41,7 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
     }
 
     private void resetDatabase() {
-        truncatePlanActionTable();
+        truncateTable("plan_action");
         // truncateMissionTable();
         // truncateOrganismeTable();
         // truncateBasemapTable();
@@ -75,9 +75,8 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
     }
 
     @Transactional
-    public void truncatePlanActionTable() {
-        entityManager.createNativeQuery("TRUNCATE TABLE plan_action").executeUpdate();
-
+    public void truncateTable(String tableName) {
+        entityManager.createNativeQuery("TRUNCATE TABLE " + tableName).executeUpdate();
         log.warn("### DATABASE: Plan action table truncated and identity reset successfully.");
     }
 
