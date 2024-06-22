@@ -14,7 +14,7 @@ public interface OrganismeService extends BaseService<Organisme> {
 
     Optional<Organisme> findByNom(String nom);
 
-    Page<Organisme> getOrganismes(QueryParams requestParams);
+    Page<Organisme> getEntityList(QueryParams requestParams);
 
     Organisme create(OrganismeRequestDto requestDto);
 

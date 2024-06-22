@@ -63,7 +63,7 @@ public class OrganismeLoadController extends BaseController<Organisme> {
                 QueryParams requestParams = createQueryParams(pageIndex, pageSize, sortField, direction, filters,
                                 globalFilter);
 
-                Page<Organisme> organismePage = organismeService.getOrganismes(requestParams);
+                Page<Organisme> organismePage = organismeService.getEntityList(requestParams);
 
                 List<OrganismeDto> dtos = organismeDtoMapper.mapToDto(organismePage.getContent());
 

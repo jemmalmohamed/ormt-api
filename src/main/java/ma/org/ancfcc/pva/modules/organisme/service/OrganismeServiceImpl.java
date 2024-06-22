@@ -39,13 +39,22 @@ public class OrganismeServiceImpl extends BaseServiceImpl<Organisme> implements 
         super(organismeRepository, specificationService);
     }
 
-    public Page<Organisme> getOrganismes(QueryParams requestParams) {
+    @Override
+    public boolean existsById(UUID id) {
+        return organismeRepository.existsById(id);
+    }
+
+    @Override
+    public Optional<Organisme> findByNom(String nom) {
+        return organismeRepository.findByNom(nom);
+    }
+
+    @Override
+    public Page<Organisme> getEntityList(QueryParams requestParams) {
         if (requestParams.getPageSize() == -1) {
             requestParams.setPageSize(Integer.MAX_VALUE);
         }
-
         Pageable pageable = PaginationUtils.createPageable(requestParams);
-
         if (!EntityInspector.isFieldPresentInEntity(pageable.getSort().toString(), Organisme.class)) {
             pageable = PaginationUtils.createPageable(requestParams);
         }
@@ -53,39 +62,6 @@ public class OrganismeServiceImpl extends BaseServiceImpl<Organisme> implements 
                 .createSpecificationWithDynamicGlobalFilter(requestParams.getFilters(),
                         requestParams.getGlobalFilter(), Organisme.class);
         return findAll(specification, pageable);
-    }
-
-    /**
-     * @param nom
-     * @return Optional<Organisme>
-     */
-    @Override
-    public Optional<Organisme> findByNom(String nom) {
-        return organismeRepository.findByNom(nom);
-    }
-
-    @Override
-    public Organisme update(UUID id, OrganismeRequestDto requestDto) {
-        // verify if id is the same as the one in the body
-        validator.validate(requestDto);
-        Organisme organismeToUpdate = organismeRequestMapper.mapToEntity(requestDto);
-
-        checkPathId(id, organismeToUpdate.getId());
-        Organisme organisme = organismeRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
-        updateFields(organisme, organismeToUpdate);
-        return organismeRepository.save(organisme);
-    }
-
-    private void updateFields(Organisme organisme, Organisme entityToUpdate) {
-        organisme.setNom(entityToUpdate.getNom());
-        organisme.setSecteur(entityToUpdate.getSecteur());
-
-    }
-
-    @Override
-    public void validateBeforeDelete(UUID id) {
-        validateMissionDependencies(id);
     }
 
     @Override
@@ -96,8 +72,26 @@ public class OrganismeServiceImpl extends BaseServiceImpl<Organisme> implements 
     }
 
     @Override
-    public boolean existsById(UUID id) {
-        return organismeRepository.existsById(id);
+    public Organisme update(UUID id, OrganismeRequestDto requestDto) {
+        // verify if id is the same as the one in the body
+        validator.validate(requestDto);
+        Organisme organismeToUpdate = organismeRequestMapper.mapToEntity(requestDto);
+        checkPathId(id, organismeToUpdate.getId());
+        Organisme organisme = organismeRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+        updateFields(organisme, organismeToUpdate);
+        return organismeRepository.save(organisme);
+    }
+
+    @Override
+    public void validateBeforeDelete(UUID id) {
+        validateMissionDependencies(id);
+    }
+
+    private void updateFields(Organisme organisme, Organisme entityToUpdate) {
+        organisme.setNom(entityToUpdate.getNom());
+        organisme.setSecteur(entityToUpdate.getSecteur());
+
     }
 
     private void validateMissionDependencies(UUID id) {

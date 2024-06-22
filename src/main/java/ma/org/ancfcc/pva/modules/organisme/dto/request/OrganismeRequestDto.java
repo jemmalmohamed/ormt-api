@@ -1,8 +1,5 @@
 package ma.org.ancfcc.pva.modules.organisme.dto.request;
 
-import java.time.LocalDateTime;
-import java.util.UUID;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import io.swagger.v3.oas.annotations.media.Schema;
