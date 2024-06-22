@@ -1,4 +1,3 @@
--- init.sql
 -- Create a new database
 CREATE DATABASE MySpatialDB;
 
