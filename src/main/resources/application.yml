@@ -26,7 +26,6 @@ spring:
 flyway:
   enabled: true
   baseline-on-migrate: true
-  clean-on-validation-error: true
   baseline-description: Initial database state
   user: ${spring.datasource.username}
   password: ${spring.datasource.password}

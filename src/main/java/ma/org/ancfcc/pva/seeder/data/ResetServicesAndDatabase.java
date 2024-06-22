@@ -41,7 +41,7 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
     }
 
     private void resetDatabase() {
-        truncateTable("plan_action");
+        // truncateTable("plan_action");
         // truncateMissionTable();
         // truncateOrganismeTable();
         // truncateBasemapTable();
