@@ -20,7 +20,7 @@ services:
       retries: 10
       start_period: 10s
       timeout: 3s
-  sqlserver.configurator:
+  pva-database.configurator:
     image: mcr.microsoft.com/mssql/server:2022-latest
     volumes:
       - ./init:/docker-entrypoint-initdb.d
