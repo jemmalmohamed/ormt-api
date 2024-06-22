@@ -20,6 +20,7 @@ services:
       timeout: 3s
     volumes:
       - ./init:/docker-entrypoint-initdb.d
+    entrypoint: ["/docker-entrypoint-initdb.d/entrypoint.sh"]
 
 volumes:
   sqlserver_data_pva_api:

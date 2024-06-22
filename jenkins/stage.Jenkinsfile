@@ -95,8 +95,17 @@ def pruneApiDatabaseContainer() {
 
 def runApiDatabaseContainer() {
   try {
-  
+    def scriptPath = './docker/services/sqlserver/init/entrypoint.sh'
     sh """
+      # Verify if the script exists
+      if [ -f ${scriptPath} ]; then
+        echo "Script found: ${scriptPath}"
+        chmod +x ${scriptPath}
+      else
+        echo "Script not found: ${scriptPath}"
+        exit 1
+      fi
+      
       # Build and run sqlserver container
       docker-compose --env-file ./docker/services/sqlserver/env/.env.stage \
       -f ./docker/services/sqlserver/docker-compose.sqlserver.base.yml \
