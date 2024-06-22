@@ -12,15 +12,12 @@ services:
       SQLSERVER_API_DB: ${SQLSERVER_API_DB}
     networks:
       - proxy
-    volumes:
-      - "sqlserver_data_pva_api:/var/opt/mssql"
     healthcheck:
       test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P pva@database2024 -Q 'SELECT 1' || exit 1"]
       interval: 10s
       retries: 10
       start_period: 10s
       timeout: 3s
-
   pva-database.configurator:
     image: mcr.microsoft.com/mssql/server:2022-latest
     volumes:
@@ -30,9 +27,13 @@ services:
         condition: service_healthy
     command: >
       bash -c '
-      /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P pva@database2024 -d master -i /docker-entrypoint-initdb.d/init.sql;
+      /opt/mssql-tools/bin/sqlcmd -S sqlserver -U sa -P pva@database2024 -d master -i docker-entrypoint-initdb.d/init.sql;
       echo "All done!";
       '
 
 volumes:
   sqlserver_data_pva_api:
+
+networks:
+  proxy:
+    external: true
