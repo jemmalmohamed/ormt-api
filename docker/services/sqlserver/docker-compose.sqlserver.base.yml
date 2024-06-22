@@ -1,22 +1,37 @@
 version: "3.9"
 services:
   pva-database:
-    build:
-      context: .
-      args:
-        ACCEPT_EULA: "Y"
-        SA_PASSWORD: ${SQLSERVER_API_PASSWORD}
-        SQLSERVER_API_DB: ${SQLSERVER_API_DB}
+    image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: ${PVA_DATABASE_HOSTNAME}
     restart: always
     environment:
       ACCEPT_EULA: "Y"
       MSSQL_PID: Developer
       MSSQL_SA_PASSWORD: ${SQLSERVER_API_PASSWORD}
+      SQLSERVER_API_PASSWORD: ${SQLSERVER_API_PASSWORD}
+      SQLSERVER_API_DB: ${SQLSERVER_API_DB}
     networks:
       - proxy
     volumes:
       - "sqlserver_data_pva_api:/var/opt/mssql"
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P pva@database2024 -Q 'SELECT 1' || exit 1"]
+      interval: 10s
+      retries: 10
+      start_period: 10s
+      timeout: 3s
+  sqlserver.configurator:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+    depends_on:
+      pva-database:
+        condition: service_healthy
+    command: >
+      bash -c '
+      /opt/mssql-tools/bin/sqlcmd -S sqlserver -U sa -P pva@database2024 -d master -i docker-entrypoint-initdb.d/init.sql;
+      echo "All done!";
+      '
 
 volumes:
   sqlserver_data_pva_api:
