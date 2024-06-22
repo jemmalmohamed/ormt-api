@@ -18,6 +18,8 @@ services:
       retries: 10
       start_period: 10s
       timeout: 3s
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
 
 volumes:
   sqlserver_data_pva_api:
