@@ -29,8 +29,7 @@ services:
       - proxy
     command: >
       bash -c '
-      sleep 40;  # Ensure SQL Server has had enough time to start up
-      /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P ${SQLSERVER_API_PASSWORD} -d master -i /docker-entrypoint-initdb.d/init.sql;
+      /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P pva@database2024 -d master -i /docker-entrypoint-initdb.d/init.sql;
       echo "All done!";
       '
 
