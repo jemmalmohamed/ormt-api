@@ -27,7 +27,7 @@ services:
         condition: service_healthy
     command: >
       bash -c '
-      /opt/mssql-tools/bin/sqlcmd -S sqlserver -U sa -P pva@database2024 -d master -i docker-entrypoint-initdb.d/init.sql;
+      /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P ${SQLSERVER_API_PASSWORD} -d master -i /docker-entrypoint-initdb.d/init.sql;
       echo "All done!";
       '
 
