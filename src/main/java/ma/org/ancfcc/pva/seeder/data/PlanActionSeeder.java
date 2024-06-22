@@ -49,7 +49,7 @@ public class PlanActionSeeder implements CommandLineRunner {
 
     PlanAction createPlanAction(String plan) {
         PlanAction planAction = new PlanAction();
-        planAction.setDesignation(plan);
+        planAction.setNom(plan);
         planAction.setDescription("");
         LocalDateTime startDate = LocalDateTime.of(LocalDate.of(Integer.parseInt(plan), 1, 1), LocalTime.of(0, 0, 0));
 

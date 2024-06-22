@@ -7,6 +7,6 @@ import ma.org.ancfcc.pva.modules.planaction.PlanAction;
 
 public interface PlanActionRepository extends BaseRepository<PlanAction> {
 
-    Optional<PlanAction> findByDesignation(String designation);
+    Optional<PlanAction> findByNom(String nom);
 
 }

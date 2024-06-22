@@ -7,7 +7,7 @@ import org.mapstruct.Context;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.Named;
 
-public interface BaseMapper<T, DTO> {
+public interface BaseDtoMapper<T, DTO> {
 
     @Named("mapToDtoWithServices")
     DTO mapToDto(T source, @Context Object... services);

@@ -12,9 +12,9 @@ import ma.org.ancfcc.pva.modules.planaction.dto.request.PlanActionRequestDto;
 
 public interface PlanActionService extends BaseService<PlanAction> {
 
-    Optional<PlanAction> findByDesignation(String designation);
+    Optional<PlanAction> findByNom(String nom);
 
-    Page<PlanAction> getPlanActions(QueryParams requestParams);
+    Page<PlanAction> getEntityList(QueryParams requestParams);
 
     PlanAction create(PlanActionRequestDto requestDto);
 

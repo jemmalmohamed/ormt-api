@@ -37,7 +37,8 @@ public class PlanActionServiceImpl extends BaseServiceImpl<PlanAction> implement
         super(planActionRepository, specificationService);
     }
 
-    public Page<PlanAction> getPlanActions(QueryParams requestParams) {
+    public Page<PlanAction> getEntityList(QueryParams requestParams) {
+
         if (requestParams.getPageSize() == -1) {
             requestParams.setPageSize(Integer.MAX_VALUE);
         }
@@ -54,12 +55,12 @@ public class PlanActionServiceImpl extends BaseServiceImpl<PlanAction> implement
     }
 
     /**
-     * @param designation
+     * @param nom
      * @return Optional<PlanAction>
      */
     @Override
-    public Optional<PlanAction> findByDesignation(String designation) {
-        return planActionRepository.findByDesignation(designation);
+    public Optional<PlanAction> findByNom(String nom) {
+        return planActionRepository.findByNom(nom);
     }
 
     @Override
@@ -77,7 +78,7 @@ public class PlanActionServiceImpl extends BaseServiceImpl<PlanAction> implement
 
     private void updatePlanActionFields(PlanAction planAction, PlanAction planActionToUpdate) {
         planAction.setDescription(planActionToUpdate.getDescription());
-        planAction.setDesignation(planActionToUpdate.getDesignation());
+        planAction.setNom(planActionToUpdate.getNom());
         planAction.setDebutDate(planActionToUpdate.getDebutDate());
         planAction.setFinDate(planActionToUpdate.getFinDate());
     }
@@ -109,7 +110,7 @@ public class PlanActionServiceImpl extends BaseServiceImpl<PlanAction> implement
         // .orElseThrow(() -> new EntityNotFoundException("Plan action not found"));
 
         // String error = "Impossible de supprimer le plan d'action -" +
-        // planAction.getDesignation()
+        // planAction.getNom()
         // + "- car il est associé aux missions : ";
 
         // String message = MessageResponse.builder()

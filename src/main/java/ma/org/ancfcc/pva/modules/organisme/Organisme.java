@@ -1,7 +1,6 @@
-package ma.org.ancfcc.pva.modules.planaction;
+package ma.org.ancfcc.pva.modules.organisme;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -22,17 +21,11 @@ import ma.org.ancfcc.pva.core.commun.base.entity.BaseEntity;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "plan_action")
-public class PlanAction extends BaseEntity {
+@Table(name = "organisme")
+public class Organisme extends BaseEntity {
 
     private String nom;
 
-    private String description;
-
-    @Column(name = "debut_date")
-    private LocalDateTime debutDate;
-
-    @Column(name = "fin_date")
-    private LocalDateTime finDate;
+    private String secteur;
 
 }

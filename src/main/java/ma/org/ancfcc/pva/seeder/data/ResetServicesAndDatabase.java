@@ -41,20 +41,21 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
     }
 
     private void resetDatabase() {
-        truncateTable("plan_action");
-        // truncateMissionTable();
-        // truncateOrganismeTable();
-        // truncateBasemapTable();
-        // truncateAvionTable();
-        // truncateCapteurTable();
-        // truncateBlocPrioriteTable();
-        // truncateCarteTable();
+        truncateTableIfExists("plan_action");
+        truncateTableIfExists("organisme");
+
     }
 
     @Transactional
-    public void truncateTable(String tableName) {
-        entityManager.createNativeQuery("TRUNCATE TABLE " + tableName).executeUpdate();
-        log.warn("### DATABASE:  " + tableName + " table truncated successfully.");
+    public void truncateTableIfExists(String tableName) {
+        String checkTableExistenceQuery = "IF EXISTS (SELECT 1 FROM sys.tables WHERE name = :tableName) " +
+                "BEGIN " +
+                "TRUNCATE TABLE " + tableName + "; " +
+                "END";
+        entityManager.createNativeQuery(checkTableExistenceQuery)
+                .setParameter("tableName", tableName)
+                .executeUpdate();
+        log.warn("### DATABASE: Checked and truncated table if exists: " + tableName);
     }
 
 }

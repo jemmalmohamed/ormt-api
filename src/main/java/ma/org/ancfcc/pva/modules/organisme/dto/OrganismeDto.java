@@ -1,6 +1,4 @@
-package ma.org.ancfcc.pva.modules.planaction.dto;
-
-import java.time.LocalDateTime;
+package ma.org.ancfcc.pva.modules.organisme.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -13,17 +11,13 @@ import ma.org.ancfcc.pva.core.commun.base.dto.BaseDto;
 
 @Setter
 @Getter
-@Schema(name = "PlanAction")
-@JsonIgnoreProperties(value = { "planAction.id" }, allowGetters = true)
+@Schema(name = "Organisme")
+@JsonIgnoreProperties(value = { "organisme.id" }, allowGetters = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class PlanActionDto extends BaseDto {
+public class OrganismeDto extends BaseDto {
 
     private String nom;
 
-    private String description;
-
-    private LocalDateTime debutDate;
-
-    private LocalDateTime finDate;
+    private String secteur;
 }

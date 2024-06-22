@@ -16,7 +16,7 @@ public class KeycloakSecurityAuditorAware implements AuditorAware<String> {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
         if (authentication != null && authentication.isAuthenticated()) {
-            String username = authentication.getName(); // or any other attribute containing the username
+            String username = authentication.getName();
             return Optional.of(username);
         }
         return Optional.of(DEFAULT_AUDITOR);

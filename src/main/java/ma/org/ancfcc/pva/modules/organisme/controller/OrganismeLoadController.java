@@ -1,4 +1,4 @@
-package ma.org.ancfcc.pva.modules.planaction.controller;
+package ma.org.ancfcc.pva.modules.organisme.controller;
 
 import java.util.List;
 import java.util.UUID;
@@ -25,34 +25,34 @@ import lombok.RequiredArgsConstructor;
 import ma.org.ancfcc.pva.core.commun.base.controller.BaseController;
 import ma.org.ancfcc.pva.core.commun.rest.queries.QueryParams;
 import ma.org.ancfcc.pva.core.commun.rest.responses.RestResponse;
-import ma.org.ancfcc.pva.modules.planaction.PlanAction;
-import ma.org.ancfcc.pva.modules.planaction.dto.PlanActionDto;
-import ma.org.ancfcc.pva.modules.planaction.dto.PlanActionDtoMapper;
-import ma.org.ancfcc.pva.modules.planaction.dto.detail.PlanActionDetailDto;
-import ma.org.ancfcc.pva.modules.planaction.dto.detail.PlanActionDetailMapper;
-import ma.org.ancfcc.pva.modules.planaction.service.PlanActionService;
+import ma.org.ancfcc.pva.modules.organisme.Organisme;
+import ma.org.ancfcc.pva.modules.organisme.dto.OrganismeDto;
+import ma.org.ancfcc.pva.modules.organisme.dto.OrganismeDtoMapper;
+import ma.org.ancfcc.pva.modules.organisme.dto.detail.OrganismeDetailDto;
+import ma.org.ancfcc.pva.modules.organisme.dto.detail.OrganismeDetailMapper;
+import ma.org.ancfcc.pva.modules.organisme.service.OrganismeService;
 
 @RestController
-@RequestMapping("api/v1/planactions")
+@RequestMapping("api/v1/organismes")
 @RequiredArgsConstructor
-public class PlanActionLoadController extends BaseController<PlanAction> {
+public class OrganismeLoadController extends BaseController<Organisme> {
 
-        private static final String ENTITY_NAME = "planaction";
+        private static final String ENTITY_NAME = "organisme";
 
-        private final PlanActionService planActionService;
-        private final PlanActionDtoMapper planActionDtoMapper;
-        private final PlanActionDetailMapper planActionDetailMapper;
+        private final OrganismeService organismeService;
+        private final OrganismeDtoMapper organismeDtoMapper;
+        private final OrganismeDetailMapper organismeDetailMapper;
 
         @Operation(summary = "Get all " + ENTITY_NAME + "s")
         @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Ok", content = {
-                        @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = PlanActionDto.class))) }),
+                        @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = OrganismeDto.class))) }),
                         @ApiResponse(responseCode = "404", description = ENTITY_NAME
                                         + " not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("")
-        @PreAuthorize("hasAuthority('planaction:list')")
-        public ResponseEntity<RestResponse<List<PlanActionDto>>> getEntityList(
+        @PreAuthorize("hasAuthority('organisme:list')")
+        public ResponseEntity<RestResponse<List<OrganismeDto>>> getOrganismes(
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
                         @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
                         @RequestParam(value = "sortField", defaultValue = "createdDate") String sortField,
@@ -63,11 +63,11 @@ public class PlanActionLoadController extends BaseController<PlanAction> {
                 QueryParams requestParams = createQueryParams(pageIndex, pageSize, sortField, direction, filters,
                                 globalFilter);
 
-                Page<PlanAction> planactionPage = planActionService.getEntityList(requestParams);
+                Page<Organisme> organismePage = organismeService.getOrganismes(requestParams);
 
-                List<PlanActionDto> dtos = planActionDtoMapper.mapToDto(planactionPage.getContent());
+                List<OrganismeDto> dtos = organismeDtoMapper.mapToDto(organismePage.getContent());
 
-                QueryParams queryParams = adjustQueryParamsForAllRecords(requestParams, planactionPage);
+                QueryParams queryParams = adjustQueryParamsForAllRecords(requestParams, organismePage);
 
                 return buildResponseEntity(dtos, queryParams, HttpStatus.OK);
 
@@ -76,25 +76,25 @@ public class PlanActionLoadController extends BaseController<PlanAction> {
         @Operation(summary = "Get " + ENTITY_NAME + " by id")
         @ApiResponses(value = {
                         @ApiResponse(responseCode = "200", description = "Ok", content = {
-                                        @Content(mediaType = "application/json", schema = @Schema(implementation = PlanActionDto.class)) }),
+                                        @Content(mediaType = "application/json", schema = @Schema(implementation = OrganismeDto.class)) }),
                         @ApiResponse(responseCode = "404", description = ENTITY_NAME
                                         + " not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('planaction:read')")
-        public ResponseEntity<RestResponse<PlanActionDetailDto>> getPlanaction(@PathVariable("id") UUID id) {
-                PlanAction planAction = planActionService.findById(id).orElseThrow(EntityNotFoundException::new);
-                return buildResponseEntity(planAction, PlanActionDetailDto.class, HttpStatus.OK);
+        @PreAuthorize("hasAuthority('organisme:read')")
+        public ResponseEntity<RestResponse<OrganismeDetailDto>> getOrganisme(@PathVariable("id") UUID id) {
+                Organisme organisme = organismeService.findById(id).orElseThrow(EntityNotFoundException::new);
+                return buildResponseEntity(organisme, OrganismeDetailDto.class, HttpStatus.OK);
 
         }
 
         @Override
-        protected <DTO> DTO mapToDto(PlanAction entity, Class<DTO> dtoClass) {
-                if (dtoClass == PlanActionDetailDto.class) {
-                        return dtoClass.cast(planActionDetailMapper.mapToDto(entity));
-                } else if (dtoClass == PlanActionDto.class) {
-                        return dtoClass.cast(planActionDtoMapper.mapToDto(entity));
+        protected <DTO> DTO mapToDto(Organisme entity, Class<DTO> dtoClass) {
+                if (dtoClass == OrganismeDetailDto.class) {
+                        return dtoClass.cast(organismeDetailMapper.mapToDto(entity));
+                } else if (dtoClass == OrganismeDto.class) {
+                        return dtoClass.cast(organismeDtoMapper.mapToDto(entity));
                 }
                 throw new IllegalArgumentException("Unsupported DTO type: " + dtoClass.getName());
         }

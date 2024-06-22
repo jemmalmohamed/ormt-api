@@ -20,13 +20,13 @@ import ma.org.ancfcc.pva.core.validators.unique.Unique;
 @Schema(name = "PlanAction")
 @RequiredArgsConstructor
 @Unique.List({
-        @Unique(message = "La designation ${validatedValue.designation} existe déjà", fieldName = "designation", fieldId = "id", tableName = "plan_action"),
+        @Unique(message = "La nom ${validatedValue.nom} existe déjà", fieldName = "nom", fieldId = "id", tableName = "plan_action"),
 })
 @JsonIgnoreProperties(value = { "planAction.id" }, allowGetters = true)
 public class PlanActionRequestDto extends Dto {
 
     @NotBlank(message = "Ce champ est requis.e")
-    private String designation;
+    private String nom;
 
     @NotNull(message = "Ce champ est requis.")
     private LocalDateTime debutDate;
