@@ -1,9 +1,9 @@
 -- Create a new database
-CREATE DATABASE MySpatialDB;
+CREATE DATABASE pva;
 
 GO
     -- Switch to the new database
-    USE MySpatialDB;
+    USE pva;
 
 GO
     -- Create a table with a spatial column
