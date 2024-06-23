@@ -58,19 +58,23 @@ public class KeycloakAuthorizationResourceSetupRunner implements CommandLineRunn
         List<String> resources1 = Arrays.asList(
 
                 "capteur",
+                "avion",
+                "organisme",
+                "planaction",
+                "mission",
+                "objet",
                 "user",
                 "basemap",
-                "srid",
                 "carte"
 
         );
 
         List<String> resources2 = Arrays.asList(
-                "mission",
-                "auth",
-                "organisme",
-                "planaction",
-                "avion"
+        // "mission",
+        // "auth",
+        // "organisme",
+        // "planaction",
+        // "avion"
 
         );
 

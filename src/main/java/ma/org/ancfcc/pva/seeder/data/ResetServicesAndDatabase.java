@@ -43,7 +43,9 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
     private void resetDatabase() {
         truncateTableIfExists("plan_action");
         truncateTableIfExists("organisme");
-
+        truncateTableIfExists("avion");
+        truncateTableIfExists("capteur");
+        truncateTableIfExists("objet");
     }
 
     @Transactional
