@@ -3,6 +3,7 @@ package ma.org.ancfcc.pva.modules.mission.dto;
 import java.time.LocalDate;
 
 import org.locationtech.jts.geom.MultiPolygon;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -35,9 +36,10 @@ public class MissionDto extends BaseDto {
 
     private String description;
 
-    // @JsonSerialize(using = MultiPolygonSerializer.class)
-    // private MultiPolygon delimitation;
+    @JsonSerialize(using = MultiPolygonSerializer.class)
+    private MultiPolygon delimitation;
 
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate datePva;
 
     private MissionOrganismeDto organisme;

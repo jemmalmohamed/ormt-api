@@ -42,8 +42,8 @@ public class Mission extends BaseEntity {
 
   private String description;
 
-  @Column(columnDefinition = "geometry")
-  private Geometry delimitation;
+  @Column(columnDefinition = "geometry(MULTIPOLYGON)")
+  private MultiPolygon delimitation;
 
   private LocalDate datePva;
 

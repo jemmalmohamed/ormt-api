@@ -139,9 +139,9 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
             geometry = GeometryConversion.convertTo2D(geometry);
             if (geometry instanceof MultiPolygon) {
                 MultiPolygon delimitation = (MultiPolygon) geometry;
-                geometry.setSRID(4326);
-                if (geometry.isValid()) {
-                    mission.setDelimitation(geometry);
+                delimitation.setSRID(srid);
+                if (delimitation.isValid()) {
+                    mission.setDelimitation(delimitation);
                 } else {
                     throw new IllegalArgumentException(
                             "Delimitation de la mission " + mission.getCode() + " n'est pas valide");
