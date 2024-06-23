@@ -92,4 +92,26 @@ BEGIN
         last_modified_by varchar(255) NULL 
     );
 END;
+--  CREATE MISSION  TABLE
+IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='mission' and xtype='U')
+BEGIN
+    CREATE TABLE mission (
+        id UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
+      
+        nom varchar(255) NOT NULL,
+	    code varchar(255) NOT NULL,
+	    etat varchar(255) NULL,
+	    date_pva DATE NULL,
+	    superficie   BIGINT   NULL,
+	    description varchar(255) NULL,
+	    delimitation GEOMETRY NULL,
+	  
+        status_code int NULL,
+        created_date datetime2 NOT NULL DEFAULT SYSDATETIME(),
+        last_modified_date datetime2 NULL DEFAULT SYSDATETIME(),
+        version bigint NULL,
+        created_by varchar(255) NULL,
+        last_modified_by varchar(255) NULL 
+    );
+END;
  
