@@ -1,6 +1,7 @@
 package ma.org.ancfcc.pva.config.audit;
 
 import org.springframework.data.domain.AuditorAware;
+import org.springframework.lang.NonNull;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
@@ -11,7 +12,7 @@ public class KeycloakSecurityAuditorAware implements AuditorAware<String> {
     static final String DEFAULT_AUDITOR = "system"; // Set your desired default auditor value here
 
     @Override
-    public Optional<String> getCurrentAuditor() {
+    public @NonNull Optional<String> getCurrentAuditor() {
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 

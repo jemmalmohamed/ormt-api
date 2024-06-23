@@ -1,11 +1,13 @@
 package ma.org.ancfcc.pva.modules.planaction;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -14,6 +16,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 import ma.org.ancfcc.pva.core.commun.base.entity.BaseEntity;
+import ma.org.ancfcc.pva.modules.mission.Mission;
 
 @Setter
 @Getter
@@ -34,5 +37,9 @@ public class PlanAction extends BaseEntity {
 
     @Column(name = "fin_date")
     private LocalDateTime finDate;
+
+    @OneToMany(mappedBy = "planAction")
+    @JsonBackReference
+    private List<Mission> missions;
 
 }

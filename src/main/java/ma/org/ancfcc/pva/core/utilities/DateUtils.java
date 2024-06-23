@@ -15,53 +15,72 @@ import lombok.extern.log4j.Log4j2;
 public class DateUtils {
 
     /**
-     * Tries to parse a date string which could be in different formats.
+     * Tries to parse a date string which could be in different formats and return a
+     * LocalDateTime.
      * 
      * @param dateString The date string to be parsed.
      * @return A LocalDateTime object or null if parsing fails.
      */
     public static LocalDateTime parseDateString(String dateString) {
-        // Primary format (with century)
+        LocalDate date = parseToDate(dateString);
+        return date != null ? date.atStartOfDay() : null;
+    }
+
+    /**
+     * Tries to parse a date string which could be in different formats and return a
+     * LocalDate.
+     * 
+     * @param dateString The date string to be parsed.
+     * @return A LocalDate object or null if parsing fails.
+     */
+    public static LocalDate parseToDate(String dateString) {
         DateTimeFormatter primaryFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        // Secondary format (without century)
         DateTimeFormatter secondaryFormatter = DateTimeFormatter.ofPattern("dd/MM/yy");
 
-        // Try with the primary format
         try {
-            LocalDate date = LocalDate.parse(dateString, primaryFormatter);
-            return date.atStartOfDay(); // Convert to LocalDateTime at start of the day
+            return LocalDate.parse(dateString, primaryFormatter);
         } catch (DateTimeParseException e) {
-            // If primary format fails, try with the secondary format
             try {
-                LocalDate date = LocalDate.parse(dateString, secondaryFormatter);
-                return date.atStartOfDay(); // Convert to LocalDateTime at start of the day
+                return LocalDate.parse(dateString, secondaryFormatter);
             } catch (DateTimeParseException ex) {
-                // If both formats fail, handle the error (e.g., log an error or return null)
                 log.warn("Failed to parse date string: " + dateString);
-                return null; // Or handle differently
+                return null;
             }
         }
     }
 
     /**
-     * Parses a date string which could be in a verbose datetime format or simpler
-     * date formats.
+     * Parses a verbose date string which could be in a verbose datetime format or
+     * simpler date formats and return a LocalDateTime.
      * 
      * @param dateString The date string to be parsed.
      * @return A LocalDateTime object or null if parsing fails.
      */
     public static LocalDateTime parseVerboseDateString(String dateString) {
-        // Verbose datetime format including day of week, month in text, time, time
-        // zone, and year
+        ZonedDateTime zonedDateTime = parseVerboseToDate(dateString);
+        return zonedDateTime != null ? zonedDateTime.toLocalDateTime() : null;
+    }
+
+    /**
+     * Parses a verbose date string which could be in a verbose datetime format or
+     * simpler date formats and return a LocalDate.
+     * 
+     * @param dateString The date string to be parsed.
+     * @return A LocalDate object or null if parsing fails.
+     */
+    public static LocalDate parseVerboseToLocalDate(String dateString) {
+        ZonedDateTime zonedDateTime = parseVerboseToDate(dateString);
+        return zonedDateTime != null ? zonedDateTime.toLocalDate() : null;
+    }
+
+    private static ZonedDateTime parseVerboseToDate(String dateString) {
         DateTimeFormatter verboseFormatter = DateTimeFormatter.ofPattern("EEE MMM dd HH:mm:ss zzz yyyy");
 
-        // Attempt to parse the verbose datetime format
         try {
-            ZonedDateTime zonedDateTime = ZonedDateTime.parse(dateString, verboseFormatter);
-            return zonedDateTime.toLocalDateTime();
+            return ZonedDateTime.parse(dateString, verboseFormatter);
         } catch (DateTimeParseException e) {
             log.warn("Failed to parse verbose date string: " + dateString);
-            return null; // Or handle differently
+            return null;
         }
     }
 }

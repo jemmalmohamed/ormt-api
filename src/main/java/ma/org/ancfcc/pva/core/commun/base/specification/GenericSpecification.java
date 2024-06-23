@@ -8,6 +8,8 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.lang.NonNull;
+
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Path;
@@ -21,11 +23,12 @@ public class GenericSpecification<T> implements Specification<T> {
 
     private String key;
     private String operation;
-    private Object value;
-    private Object upperValue;
+    private transient Object value;
+    private transient Object upperValue;
 
+    @SuppressWarnings("null")
     @Override
-    public Predicate toPredicate(Root<T> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
+    public Predicate toPredicate(@NonNull Root<T> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
         List<String> keys = Arrays.asList(key.split("\\."));
         Path<?> path = root;
 
@@ -39,7 +42,8 @@ public class GenericSpecification<T> implements Specification<T> {
         }
     }
 
-    private Predicate createStandardPredicate(Path<?> path, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
+    private Predicate createStandardPredicate(@NonNull Path<?> path, CriteriaQuery<?> query,
+            CriteriaBuilder criteriaBuilder) {
         switch (operation) {
             case "=":
                 if (value instanceof String) {

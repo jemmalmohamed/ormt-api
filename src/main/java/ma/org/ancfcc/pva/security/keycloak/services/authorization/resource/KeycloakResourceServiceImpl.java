@@ -5,8 +5,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-import jakarta.ws.rs.NotFoundException;
-
 import org.keycloak.admin.client.resource.ClientResource;
 import org.keycloak.admin.client.resource.ResourceResource;
 import org.keycloak.representations.idm.authorization.ResourceRepresentation;
@@ -49,12 +47,20 @@ public class KeycloakResourceServiceImpl implements KeycloakResourceService {
             ResourceRepresentation resourceRepresentation) {
         if (resourceExists(clientResource, resourceRepresentation.getName())) {
             return null;
+        } else {
+            clientResource.authorization().resources().create(resourceRepresentation);
+
+            Optional<ResourceRepresentation> optionalResource = findResourceByName(clientResource,
+                    resourceRepresentation.getName());
+
+            if (optionalResource.isPresent()) {
+                String resourceId = optionalResource.get().getId();
+                return clientResource.authorization().resources().resource(resourceId);
+            } else {
+                // Handle the case where the resource is not found after creation
+                throw new IllegalStateException("Resource not found after creation");
+            }
         }
-        clientResource.authorization().resources().create(resourceRepresentation);
-
-        String resourceId = findResourceByName(clientResource, resourceRepresentation.getName()).get().getId();
-
-        return clientResource.authorization().resources().resource(resourceId);
     }
 
     @Override
@@ -62,8 +68,16 @@ public class KeycloakResourceServiceImpl implements KeycloakResourceService {
         if (!resourceExists(clientResource, resourceName)) {
             return;
         }
-        String resourceId = findResourceByName(clientResource, resourceName).get().getId();
-        clientResource.authorization().resources().resource(resourceId).remove();
+
+        Optional<ResourceRepresentation> optionalResource = findResourceByName(clientResource, resourceName);
+
+        if (optionalResource.isPresent()) {
+            String resourceId = optionalResource.get().getId();
+            clientResource.authorization().resources().resource(resourceId).remove();
+        } else {
+            // Handle the case where the resource is not found
+            throw new IllegalStateException("Resource not found for deletion");
+        }
 
     }
 

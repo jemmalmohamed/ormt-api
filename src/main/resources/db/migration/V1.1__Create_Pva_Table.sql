@@ -105,6 +105,11 @@ BEGIN
 	    superficie   BIGINT   NULL,
 	    description varchar(255) NULL,
 	    delimitation GEOMETRY NULL,
+         
+        organisme_id UNIQUEIDENTIFIER NOT NULL,
+        CONSTRAINT FK_mission_organisme FOREIGN KEY (organisme_id) REFERENCES organisme(id),
+        plan_action_id UNIQUEIDENTIFIER NOT NULL,
+        CONSTRAINT FK_mission_plan_action FOREIGN KEY (plan_action_id) REFERENCES plan_action(id),
 	  
         status_code int NULL,
         created_date datetime2 NOT NULL DEFAULT SYSDATETIME(),
@@ -112,6 +117,8 @@ BEGIN
         version bigint NULL,
         created_by varchar(255) NULL,
         last_modified_by varchar(255) NULL 
+
+       
     );
 END;
  

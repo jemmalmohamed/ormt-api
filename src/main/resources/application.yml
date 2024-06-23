@@ -32,7 +32,9 @@ flyway:
 
 data:
   external:
-    path: ./data/
+    data_path: ./data/
+    level_1_path : ./data/pva/niveau_1/
+    level_2_path : ./data/pva/niveau_2/
 
 jwt:
   auth:

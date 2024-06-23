@@ -115,4 +115,14 @@ public class FileUtils {
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("No " + extension + " file provided in components."));
     }
+
+    public static void validateDirectory(File dir) throws IOException {
+        if (!dir.exists()) {
+            log.info("### DATA: folder {} does not exist", dir.getPath());
+            throw new IOException("Directory does not exist: " + dir.getPath());
+        }
+        if (!dir.isDirectory()) {
+            throw new IOException("Expected a directory but found a file: " + dir.getPath());
+        }
+    }
 }

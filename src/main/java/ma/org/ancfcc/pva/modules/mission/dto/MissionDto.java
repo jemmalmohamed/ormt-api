@@ -14,6 +14,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ancfcc.pva.core.commun.base.dto.BaseDto;
 import ma.org.ancfcc.pva.core.geometry.serializer.MultiPolygonSerializer;
+import ma.org.ancfcc.pva.modules.mission.dto.organisme.MissionOrganismeDto;
+import ma.org.ancfcc.pva.modules.mission.dto.planaction.MissionPlanActionDto;
 
 @Setter
 @Getter
@@ -33,8 +35,12 @@ public class MissionDto extends BaseDto {
 
     private String description;
 
-    @JsonSerialize(using = MultiPolygonSerializer.class)
-    private MultiPolygon delimitation;
+    // @JsonSerialize(using = MultiPolygonSerializer.class)
+    // private MultiPolygon delimitation;
 
     private LocalDate datePva;
+
+    private MissionOrganismeDto organisme;
+
+    private MissionPlanActionDto planAction;
 }

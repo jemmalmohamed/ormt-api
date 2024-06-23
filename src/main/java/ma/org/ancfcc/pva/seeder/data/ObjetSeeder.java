@@ -39,7 +39,7 @@ public class ObjetSeeder implements CommandLineRunner {
         projectNames.add("màj couverture aérienne du 50k à une résolution de 50cm");
         projectNames.add("màj couverture aérienne du 25k à une résolution de 50cm");
         projectNames.add("màj couverture aérienne du 50k à une résolution de 40cm");
-        projectNames.add("établissement plan de ville");
+        projectNames.add("etablissement plan de ville");
         projectNames.add("cartographie de base");
         projectNames.add("projet séisme");
         projectNames.add("ife 2023");
@@ -48,7 +48,7 @@ public class ObjetSeeder implements CommandLineRunner {
         projectNames.add("Besoin Carto 2024");
         projectNames.add("Besoin Carto 2025");
         projectNames.add("Besoin Carto 2026");
-        projectNames.add("établissement Cartes 50k");
+        projectNames.add("etablissement Cartes 50k");
 
         List<Objet> objets = new ArrayList<>();
         for (String projectName : projectNames) {
