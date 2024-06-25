@@ -1,6 +1,7 @@
 package ma.org.ancfcc.pva.modules.mission.dto;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import org.locationtech.jts.geom.MultiPolygon;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -15,6 +16,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ancfcc.pva.core.commun.base.dto.BaseDto;
 import ma.org.ancfcc.pva.core.geometry.serializer.MultiPolygonSerializer;
+import ma.org.ancfcc.pva.modules.mission.dto.objet.MissionObjetDto;
 import ma.org.ancfcc.pva.modules.mission.dto.organisme.MissionOrganismeDto;
 import ma.org.ancfcc.pva.modules.mission.dto.planaction.MissionPlanActionDto;
 
@@ -45,4 +47,6 @@ public class MissionDto extends BaseDto {
     private MissionOrganismeDto organisme;
 
     private MissionPlanActionDto planAction;
+
+    private List<MissionObjetDto> objets;
 }

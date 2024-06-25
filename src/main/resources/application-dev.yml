@@ -27,7 +27,7 @@ spring:
  
 geoserver:
   url: http://localhost:8085/geoserver
-  host: localhost
+  host: localhost 
   port: 8085
   username: pva
   password: pva

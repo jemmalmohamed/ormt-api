@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
-
 import org.geotools.api.feature.simple.SimpleFeature;
 import org.geotools.data.simple.SimpleFeatureCollection;
 import org.geotools.data.simple.SimpleFeatureIterator;
@@ -13,11 +12,9 @@ import org.locationtech.jts.geom.Geometry;
 import org.locationtech.jts.geom.MultiPolygon;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ancfcc.pva.core.commun.base.service.BaseServiceImpl;
 import ma.org.ancfcc.pva.core.commun.base.service.SpecificationService;
@@ -186,6 +183,7 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
         mission.setPlanAction(planAction);
     }
 
+    @Transactional
     private void setMissionObjets(SimpleFeature feature, Mission mission) {
         List<String> objetAttributNameList = ShpSimpleFeatureService.findFeatureListWithPatternIgnoreCase(feature,
                 "objet");
@@ -193,13 +191,16 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
         for (String objetAttributName : objetAttributNameList) {
             String objetName = StringHelper.getSafeString(feature.getAttribute(objetAttributName)).toLowerCase();
             if (objetName != null && !objetName.isEmpty()) {
-
                 Objet objet = objetService.findByNom(objetName)
-                        .orElseThrow(() -> new EntityNotFoundException("Objet not found :" + objetName));
-                // mission.getObjets().add(objet);
+                        .orElseThrow(() -> new EntityNotFoundException("Objet not found: " + objetName));
+
+                mission.getObjets().add(objet); // Add objet to the mission's objets collection
+
+                // Add the mission to the objet's missions collection to maintain bidirectional
+                // relationship
+                // objet.getMissions().add(mission);
             }
         }
-
     }
 
     private void setMissionAttributs(SimpleFeature feature, Mission mission) {

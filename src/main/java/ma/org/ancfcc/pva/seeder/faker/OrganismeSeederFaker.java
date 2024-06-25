@@ -43,7 +43,7 @@ public class OrganismeSeederFaker implements CommandLineRunner {
         if (!seedingFaker.equals("true"))
             return;
 
-        long totalOrganismes = 2000;
+        long totalOrganismes = 20;
 
         int batchSize = 5000;
         ExecutorService executor = Executors.newFixedThreadPool(10);

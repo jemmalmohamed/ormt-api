@@ -1,5 +1,7 @@
 package ma.org.ancfcc.pva.seeder.data;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
@@ -41,16 +43,19 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
     }
 
     private void resetDatabase() {
+
+        deleteRecordsIfExists("mission_objet");
+        deleteRecordsIfExists("objet");
         deleteRecordsIfExists("mission");
         deleteRecordsIfExists("plan_action");
         deleteRecordsIfExists("organisme");
         deleteRecordsIfExists("avion");
         deleteRecordsIfExists("capteur");
-        deleteRecordsIfExists("objet");
     }
 
     @Transactional
     public void truncateTableIfExists(String tableName) {
+
         String checkTableExistenceQuery = "IF EXISTS (SELECT 1 FROM sys.tables WHERE name = :tableName) " +
                 "BEGIN " +
                 "TRUNCATE TABLE " + tableName + "; " +
