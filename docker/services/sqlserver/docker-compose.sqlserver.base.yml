@@ -24,9 +24,9 @@ services:
     deploy:
       resources:
         limits:
-          memory: 4g
+          memory: 8g
         reservations:
-          memory: 1g
+          memory: 2g
 
 volumes:
   sqlserver_data_pva_api:
