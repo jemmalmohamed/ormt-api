@@ -1,5 +1,4 @@
 version: "3.9"
-
 services:
   pva-database:
     image: mcr.microsoft.com/mssql/server:2022-latest
@@ -25,9 +24,9 @@ services:
     deploy:
       resources:
         limits:
-          memory: 8g
-        reservations:
           memory: 4g
+        reservations:
+          memory: 1g
 
 volumes:
   sqlserver_data_pva_api:
