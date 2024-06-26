@@ -21,6 +21,12 @@ services:
     volumes:
       - ./init:/docker-entrypoint-initdb.d
     entrypoint: ["/docker-entrypoint-initdb.d/entrypoint.sh"]
+    deploy:
+      resources:
+        limits:
+          memory: 4g
+        reservations:
+          memory: 1g
 
 volumes:
   sqlserver_data_pva_api:

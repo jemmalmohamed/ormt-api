@@ -15,6 +15,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import com.github.javafaker.Bool;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ancfcc.pva.core.gis.shapefile.ShpFileService;
@@ -28,7 +30,7 @@ import ma.org.ancfcc.pva.modules.mission.service.imports.MissionImportService;
 public class MissionLevelOneSeeder implements CommandLineRunner {
 
     @Value("${starter.database.seed}")
-    private String seeding;
+    private boolean seeding;
 
     @Value("${data.external.level_1_path}")
     private String levelOnePath;
@@ -37,18 +39,24 @@ public class MissionLevelOneSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
+        if (!seeding) {
+            log.info("### DATA: Skipping data seeding");
+            return;
+        }
+
         List<String> yearFolderList = Arrays.asList(
-                // "2013",
-                // "2014",
-                // "2015",
-                // "2016",
-                // "2017",
-                // "2018",
-                // "2019",
-                // "2020",
-                // "2021",
-                // "2022",
-                // "2023",
+                "2013",
+                "2014",
+                "2015",
+                "2016",
+                "2017",
+                "2018",
+                "2019",
+                "2020",
+                "2021",
+                "2022",
+                "2023",
                 "2024");
 
         log.info("### DATA: Début chargement données mission format shapefiles...");

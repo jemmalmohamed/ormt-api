@@ -1,6 +1,4 @@
-package ma.org.ancfcc.pva.modules.objet.dto;
-
-import java.util.Set;
+package ma.org.ancfcc.pva.modules.objet.dto.mission;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -8,9 +6,14 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
+import java.util.UUID;
+
 import lombok.Setter;
 import ma.org.ancfcc.pva.core.commun.base.dto.BaseDto;
-import ma.org.ancfcc.pva.modules.mission.dto.summary.MissionSummaryDto;
+import ma.org.ancfcc.pva.core.commun.base.dto.Dto;
+import ma.org.ancfcc.pva.modules.mission.Mission;
 
 @Setter
 @Getter
@@ -18,11 +21,9 @@ import ma.org.ancfcc.pva.modules.mission.dto.summary.MissionSummaryDto;
 @JsonIgnoreProperties(value = { "objet.id" }, allowGetters = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class ObjetDto extends BaseDto {
+public class ObjetMissionDto extends Dto {
 
     private String nom;
 
-    private String description;
-
-    private Set<MissionSummaryDto> missions;
+    private String code;
 }

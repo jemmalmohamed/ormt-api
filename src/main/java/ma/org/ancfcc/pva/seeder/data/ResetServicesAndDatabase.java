@@ -1,7 +1,5 @@
 package ma.org.ancfcc.pva.seeder.data;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;

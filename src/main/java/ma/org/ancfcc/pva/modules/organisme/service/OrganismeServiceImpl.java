@@ -98,14 +98,14 @@ public class OrganismeServiceImpl extends BaseServiceImpl<Organisme> implements 
     }
 
     private void validateMissionDependencies(UUID id) {
-        List<String> missionCount = organismeRepository.findMissionCodesByOrganismeId(id);
-        if (missionCount.size() > 0) {
+        List<String> missionList = organismeRepository.findMissionCodesByOrganismeId(id);
+        if (!missionList.isEmpty()) {
 
             String message = MessageResponse.builder()
                     .title("Suppression impossible ")
                     .mainMessage("Impossible de supprimer l'organisme  car il est associé aux missions.")
                     .subMessageList(
-                            missionCount)
+                            missionList)
                     .build()
                     .format();
 

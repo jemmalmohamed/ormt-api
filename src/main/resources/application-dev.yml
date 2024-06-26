@@ -3,16 +3,16 @@ server:
 
 starter:
   database:
-    reset: true
-    seed: true
+    reset: false
+    seed: false
   geoserver:
-    reset: true
-    seed: true
+    reset: false
+    seed: false
   keycloak: 
     reset: false
     seed: false
   faker :
-    seed : true
+    seed : false
  
 spring:
   security:
@@ -22,7 +22,7 @@ spring:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     host: pva-database
     database: pva
-    username: sa
+    username: sa 
     password: pva@database2024
  
 geoserver:

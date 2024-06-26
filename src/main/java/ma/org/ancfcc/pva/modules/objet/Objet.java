@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -20,7 +19,7 @@ import ma.org.ancfcc.pva.modules.mission.Mission;
 @Setter
 @Getter
 @SuperBuilder
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = false, exclude = { "missions" })
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -32,7 +31,7 @@ public class Objet extends BaseEntity {
     private String description;
 
     @Builder.Default
-    @ManyToMany(mappedBy = "objets", fetch = FetchType.EAGER)
+    @ManyToMany(mappedBy = "objets")
     private Set<Mission> missions = new HashSet<>();
 
 }

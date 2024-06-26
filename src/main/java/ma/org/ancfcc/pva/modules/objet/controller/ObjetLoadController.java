@@ -29,7 +29,7 @@ import ma.org.ancfcc.pva.modules.objet.Objet;
 import ma.org.ancfcc.pva.modules.objet.dto.ObjetDto;
 import ma.org.ancfcc.pva.modules.objet.dto.ObjetDtoMapper;
 import ma.org.ancfcc.pva.modules.objet.dto.detail.ObjetDetailDto;
-import ma.org.ancfcc.pva.modules.objet.dto.detail.ObjetDetailMapper;
+import ma.org.ancfcc.pva.modules.objet.dto.detail.ObjetDetailDtoMapper;
 import ma.org.ancfcc.pva.modules.objet.service.ObjetService;
 
 @RestController
@@ -41,7 +41,7 @@ public class ObjetLoadController extends BaseController<Objet> {
 
         private final ObjetService objetService;
         private final ObjetDtoMapper objetDtoMapper;
-        private final ObjetDetailMapper objetDetailMapper;
+        private final ObjetDetailDtoMapper objetDetailMapper;
 
         @Operation(summary = "Get all " + ENTITY_NAME + "s")
         @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Ok", content = {

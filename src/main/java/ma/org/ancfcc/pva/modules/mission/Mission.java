@@ -31,7 +31,7 @@ import ma.org.ancfcc.pva.modules.planaction.PlanAction;
 @Setter
 @Getter
 @SuperBuilder
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = true, exclude = { "objets" })
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -64,8 +64,8 @@ public class Mission extends BaseEntity {
   private PlanAction planAction;
 
   @Builder.Default
-  @ManyToMany(fetch = FetchType.EAGER)
-  @JoinTable(name = "mission_objet", joinColumns = @JoinColumn(name = "mission_id"), inverseJoinColumns = @JoinColumn(name = "objet_id"))
+  @ManyToMany(fetch = FetchType.LAZY)
+  @JoinTable(name = "mission_objet", joinColumns = @JoinColumn(name = "mission_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "objet_id", referencedColumnName = "id"))
   private Set<Objet> objets = new HashSet<>();
 
 }

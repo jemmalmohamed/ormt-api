@@ -30,6 +30,7 @@ import ma.org.ancfcc.pva.modules.mission.dto.MissionDto;
 import ma.org.ancfcc.pva.modules.mission.dto.MissionDtoMapper;
 import ma.org.ancfcc.pva.modules.mission.dto.detail.MissionDetailDto;
 import ma.org.ancfcc.pva.modules.mission.dto.detail.MissionDetailMapper;
+import ma.org.ancfcc.pva.modules.mission.repository.MissionRepository;
 import ma.org.ancfcc.pva.modules.mission.service.MissionService;
 
 @RestController
@@ -42,6 +43,8 @@ public class MissionLoadController extends BaseController<Mission> {
         private final MissionService missionService;
         private final MissionDtoMapper missionDtoMapper;
         private final MissionDetailMapper missionDetailMapper;
+
+        private final MissionRepository missionRepository;
 
         @Operation(summary = "Get all " + ENTITY_NAME + "s")
         @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Ok", content = {
@@ -84,9 +87,9 @@ public class MissionLoadController extends BaseController<Mission> {
         @GetMapping("/{id}")
         @PreAuthorize("hasAuthority('mission:read')")
         public ResponseEntity<RestResponse<MissionDetailDto>> getMission(@PathVariable("id") UUID id) {
-                Mission mission = missionService.findById(id).orElseThrow(EntityNotFoundException::new);
-                return buildResponseEntity(mission, MissionDetailDto.class, HttpStatus.OK);
+                Mission mission = missionRepository.findById(id).orElseThrow(EntityNotFoundException::new);
 
+                return buildResponseEntity(mission, MissionDetailDto.class, HttpStatus.OK);
         }
 
         @Override
