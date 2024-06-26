@@ -3,16 +3,16 @@ server:
 
 starter:
   database:
-    reset: false
-    seed: false
+    reset: true
+    seed: true
   geoserver:
     reset: false
     seed: false
   keycloak: 
-    reset: false
-    seed: false
+    reset: true
+    seed: true
   faker :
-    seed : false
+    seed : true
  
 spring:
   security:
