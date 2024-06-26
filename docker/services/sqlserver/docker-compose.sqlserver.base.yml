@@ -1,4 +1,5 @@
 version: "3.9"
+
 services:
   pva-database:
     image: mcr.microsoft.com/mssql/server:2022-latest
