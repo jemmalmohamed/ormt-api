@@ -1,6 +1,6 @@
 package ma.org.ancfcc.pva.modules.planaction;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -33,10 +33,10 @@ public class PlanAction extends BaseEntity {
     private String description;
 
     @Column(name = "debut_date")
-    private LocalDateTime debutDate;
+    private LocalDate debutDate;
 
     @Column(name = "fin_date")
-    private LocalDateTime finDate;
+    private LocalDate finDate;
 
     @OneToMany(mappedBy = "planAction")
     @JsonBackReference

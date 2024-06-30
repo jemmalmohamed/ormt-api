@@ -1,8 +1,6 @@
 package ma.org.ancfcc.pva.seeder.data;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -51,12 +49,11 @@ public class PlanActionSeeder implements CommandLineRunner {
         PlanAction planAction = new PlanAction();
         planAction.setNom(plan);
         planAction.setDescription("");
-        LocalDateTime startDate = LocalDateTime.of(LocalDate.of(Integer.parseInt(plan), 1, 1), LocalTime.of(0, 0, 0));
+        LocalDate startDate = LocalDate.of(Integer.parseInt(plan), 1, 1);
 
         planAction.setDebutDate(startDate);
 
-        LocalDateTime endDate = LocalDateTime.of(LocalDate.of(Integer.parseInt(plan), 12, 31),
-                LocalTime.of(23, 59, 59));
+        LocalDate endDate = LocalDate.of(Integer.parseInt(plan), 12, 31);
         planAction.setFinDate(endDate);
 
         return planAction;

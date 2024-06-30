@@ -1,6 +1,6 @@
 package ma.org.ancfcc.pva.core.commun.base.dto;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema.AccessMode;
@@ -19,10 +19,10 @@ public class BaseDto extends Dto {
     private Integer statusCode;
 
     @Schema(accessMode = AccessMode.READ_ONLY)
-    private LocalDateTime createdDate;
+    private LocalDate createdDate;
 
     @Schema(accessMode = AccessMode.READ_ONLY)
-    private LocalDateTime lastModifiedDate;
+    private LocalDate lastModifiedDate;
 
     @Schema(accessMode = AccessMode.READ_ONLY)
     private String createdBy;

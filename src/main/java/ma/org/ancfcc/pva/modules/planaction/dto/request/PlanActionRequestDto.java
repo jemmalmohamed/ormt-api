@@ -1,6 +1,6 @@
 package ma.org.ancfcc.pva.modules.planaction.dto.request;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -28,10 +28,10 @@ public class PlanActionRequestDto extends Dto {
     private String nom;
 
     @NotNull(message = "Ce champ est requis.")
-    private LocalDateTime debutDate;
+    private LocalDate debutDate;
 
     @NotNull(message = "Ce champ est requis.")
-    private LocalDateTime finDate;
+    private LocalDate finDate;
 
     private String description;
 

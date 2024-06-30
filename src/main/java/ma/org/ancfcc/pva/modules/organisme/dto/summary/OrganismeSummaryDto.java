@@ -1,4 +1,4 @@
-package ma.org.ancfcc.pva.modules.objet.dto.mission;
+package ma.org.ancfcc.pva.modules.organisme.dto.summary;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -11,13 +11,13 @@ import ma.org.ancfcc.pva.core.commun.base.dto.Dto;
 
 @Setter
 @Getter
-@Schema(name = "Objet")
-@JsonIgnoreProperties(value = { "objet.id" }, allowGetters = true)
+@Schema(name = "Organisme")
+@JsonIgnoreProperties(value = { "organisme.id" }, allowGetters = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class ObjetMissionDto extends Dto {
+public class OrganismeSummaryDto extends Dto {
 
     private String nom;
 
-    private String code;
+    private String secteur;
 }

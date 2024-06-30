@@ -5,7 +5,11 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+
 import org.geotools.api.feature.simple.SimpleFeature;
+import org.geotools.api.geometry.MismatchedDimensionException;
+import org.geotools.api.referencing.FactoryException;
+import org.geotools.api.referencing.operation.TransformException;
 import org.geotools.data.simple.SimpleFeatureCollection;
 import org.geotools.data.simple.SimpleFeatureIterator;
 import org.locationtech.jts.geom.Geometry;
@@ -13,6 +17,7 @@ import org.locationtech.jts.geom.MultiPolygon;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.extern.log4j.Log4j2;
@@ -22,8 +27,6 @@ import ma.org.ancfcc.pva.core.commun.rest.responses.MessageResponse;
 import ma.org.ancfcc.pva.core.exceptions.handlers.ShapefileProcessingException;
 import ma.org.ancfcc.pva.core.gis.shapefile.ShpFileService;
 import ma.org.ancfcc.pva.core.gis.shapefile.ShpSimpleFeatureService;
-import ma.org.ancfcc.pva.core.gis.utils.GeometryConversion;
-import ma.org.ancfcc.pva.core.gis.utils.GeometryUtils;
 import ma.org.ancfcc.pva.core.utilities.DateUtils;
 import ma.org.ancfcc.pva.core.utilities.FileUtils;
 import ma.org.ancfcc.pva.core.utilities.StringHelper;
@@ -84,22 +87,24 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
         try (SimpleFeatureIterator features = featureCollection.features()) {
             while (features.hasNext()) {
                 SimpleFeature feature = features.next();
+                Mission mission = null;
                 try {
 
-                    Mission mission = createMissionShapefileFromSimpleFeature(feature, srid);
+                    mission = createMissionShapefileFromSimpleFeature(feature, srid);
 
                     if (missionRepository.existsByCode(mission.getCode())) {
                         log.info("Mission with code: " + mission.getCode() + " already exists");
 
                     } else {
                         create(mission);
-
+                        // log.info("Mission with code: " + mission.getCode() + " created");
                     }
                 } catch (Exception e) {
                     log.error("Error creating mission from shapefile", e);
+
                     String message = MessageResponse.builder()
                             .title("Invalide Shapefile")
-                            .mainMessage("Le shapefile ne contient pas les attributs d'une mission")
+                            .mainMessage("Le shapefile ne contient pas les attributs d'une mission + " + e.getMessage())
                             .subMessage("Veuillez vérifier les attributs de la mission")
                             .build()
                             .format();
@@ -112,11 +117,13 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
 
     }
 
-    private Mission createMissionShapefileFromSimpleFeature(SimpleFeature feature, Integer srid) {
+    private Mission createMissionShapefileFromSimpleFeature(SimpleFeature feature, Integer srid)
+            throws MismatchedDimensionException, FactoryException, TransformException {
         log.info("Creating mission from shapefile");
 
         Mission mission = new Mission();
 
+        setMissionGeometry(feature, mission, srid);
         setMissionAttributs(feature, mission);
         setMissionObjets(feature, mission);
         setMissionSuperficie(feature, mission);
@@ -124,30 +131,25 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
         setMissionPLanAction(feature, mission);
         setMissionOrganisme(feature, mission);
         setMissionCapteurAttributs(feature, mission);
-        setMissionGeometry(feature, mission, srid);
 
         return mission;
     }
 
-    private void setMissionGeometry(SimpleFeature feature, Mission mission, Integer srid) {
-        if (feature.getDefaultGeometry() instanceof Geometry) {
-            Geometry geometry = (Geometry) feature.getDefaultGeometry();
-            geometry = GeometryUtils.geometryIsPolygonOrMultiPolygon(geometry);
-            geometry = GeometryConversion.convertTo2D(geometry);
-            if (geometry instanceof MultiPolygon) {
-                MultiPolygon delimitation = (MultiPolygon) geometry;
-                delimitation.setSRID(srid);
-                if (delimitation.isValid()) {
-                    mission.setDelimitation(delimitation);
-                } else {
-                    throw new IllegalArgumentException(
-                            "Delimitation de la mission " + mission.getCode() + " n'est pas valide");
-                }
+    private void setMissionGeometry(SimpleFeature feature, Mission mission, Integer srid)
+            throws MismatchedDimensionException {
 
+        Geometry geometry = ShpSimpleFeatureService.get2DGeometryFromFeature(feature, srid);
+
+        if (geometry instanceof MultiPolygon) {
+            MultiPolygon delimitation = (MultiPolygon) geometry;
+            delimitation.setSRID(srid);
+            if (delimitation.isValid()) {
+                mission.setDelimitation(delimitation);
+            } else {
+                throw new IllegalArgumentException(
+                        "Delimitation de la mission " + mission.getCode() + " n'est pas valide");
             }
-
         }
-
     }
 
     private void setMissionDate(SimpleFeature feature, Mission mission) {
@@ -160,17 +162,24 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
     }
 
     private void setMissionOrganisme(SimpleFeature feature, Mission mission) {
-        Organisme organisme = organismeService.findByNom("ancfcc")
-                .orElseThrow(() -> new EntityNotFoundException("Organisme not found"));
+        String organismeAttributName = ShpSimpleFeatureService.findFeatureAttributIgnoreCase(feature, "organisme");
+        String organismeName = StringHelper.getSafeString(feature.getAttribute(organismeAttributName)).toLowerCase();
+
+        Organisme organisme = organismeService.findByNom(organismeName)
+                .orElseGet(() -> organismeService.findByNom("ancfcc")
+                        .orElseThrow(() -> new EntityNotFoundException("Organisme not found")));
         mission.setOrganisme(organisme);
     }
 
-    private void setMissionSuperficie(SimpleFeature feature, Mission mission) {
+    private void setMissionSuperficie(SimpleFeature feature, Mission mission)
+            throws MismatchedDimensionException {
         String superficieAttributName = ShpSimpleFeatureService.findFeatureAttributIgnoreCase(feature, "superficie");
         String superficieString = StringHelper.getSafeString(feature.getAttribute(superficieAttributName));
         if (!superficieString.equals("")) {
+            Double superficie = Double.parseDouble(
+                    StringHelper.getSafeString(feature.getAttribute(superficieAttributName)));
             mission.setSuperficie(
-                    Long.parseLong(StringHelper.getSafeString(feature.getAttribute(superficieAttributName))));
+                    superficie);
         }
     }
 
@@ -187,18 +196,12 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
     private void setMissionObjets(SimpleFeature feature, Mission mission) {
         List<String> objetAttributNameList = ShpSimpleFeatureService.findFeatureListWithPatternIgnoreCase(feature,
                 "objet");
-
         for (String objetAttributName : objetAttributNameList) {
             String objetName = StringHelper.getSafeString(feature.getAttribute(objetAttributName)).toLowerCase();
             if (objetName != null && !objetName.isEmpty()) {
                 Objet objet = objetService.findByNom(objetName)
                         .orElseThrow(() -> new EntityNotFoundException("Objet not found: " + objetName));
-
-                mission.getObjets().add(objet); // Add objet to the mission's objets collection
-
-                // Add the mission to the objet's missions collection to maintain bidirectional
-                // relationship
-                // objet.getMissions().add(mission);
+                mission.getObjets().add(objet);
             }
         }
     }

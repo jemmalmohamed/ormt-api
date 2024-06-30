@@ -29,7 +29,7 @@ import ma.org.ancfcc.pva.modules.mission.Mission;
 import ma.org.ancfcc.pva.modules.mission.dto.MissionDto;
 import ma.org.ancfcc.pva.modules.mission.dto.MissionDtoMapper;
 import ma.org.ancfcc.pva.modules.mission.dto.detail.MissionDetailDto;
-import ma.org.ancfcc.pva.modules.mission.dto.detail.MissionDetailMapper;
+import ma.org.ancfcc.pva.modules.mission.dto.detail.MissionDetailDtoMapper;
 import ma.org.ancfcc.pva.modules.mission.repository.MissionRepository;
 import ma.org.ancfcc.pva.modules.mission.service.MissionService;
 
@@ -42,7 +42,7 @@ public class MissionLoadController extends BaseController<Mission> {
 
         private final MissionService missionService;
         private final MissionDtoMapper missionDtoMapper;
-        private final MissionDetailMapper missionDetailMapper;
+        private final MissionDetailDtoMapper missionDetailMapper;
 
         private final MissionRepository missionRepository;
 

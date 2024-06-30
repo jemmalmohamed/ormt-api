@@ -33,8 +33,8 @@ BEGIN
         id UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
         nom varchar(255) NOT NULL,
         description varchar(255) NULL,
-        debut_date datetime2 NOT NULL,
-        fin_date datetime2 NOT NULL,
+        debut_date DATE NOT NULL,
+        fin_date DATE NOT NULL,
         status_code int NULL,
         created_date datetime2 NOT NULL DEFAULT SYSDATETIME(),
         last_modified_date datetime2 NULL DEFAULT SYSDATETIME(),
@@ -165,7 +165,9 @@ BEGIN
         code varchar(255) NOT NULL,
         etat varchar(255) NULL,
         date_pva DATE NULL,
-        superficie BIGINT NULL,
+        superficie FLOAT NULL,
+
+
         description varchar(255) NULL,
         delimitation GEOMETRY NULL,
 

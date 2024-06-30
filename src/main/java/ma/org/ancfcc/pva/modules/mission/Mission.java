@@ -44,11 +44,11 @@ public class Mission extends BaseEntity {
 
   private String etat;
 
-  private Long superficie;
+  private Double superficie;
 
   private String description;
 
-  @Column(columnDefinition = "geometry(MULTIPOLYGON)")
+  @Column(columnDefinition = "geometry(MultiPolygon,4326")
   private MultiPolygon delimitation;
 
   private LocalDate datePva;

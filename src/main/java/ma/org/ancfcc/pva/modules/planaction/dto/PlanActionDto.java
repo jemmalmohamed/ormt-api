@@ -1,6 +1,6 @@
 package ma.org.ancfcc.pva.modules.planaction.dto;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -23,7 +23,7 @@ public class PlanActionDto extends BaseDto {
 
     private String description;
 
-    private LocalDateTime debutDate;
+    private LocalDate debutDate;
 
-    private LocalDateTime finDate;
+    private LocalDate finDate;
 }

@@ -5,9 +5,12 @@ import java.util.List;
 
 import org.geotools.api.feature.simple.SimpleFeature;
 import org.geotools.api.feature.type.AttributeDescriptor;
+import org.locationtech.jts.geom.Geometry;
 
-import lombok.NoArgsConstructor;
 import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+import ma.org.ancfcc.pva.core.gis.utils.GeometryConversion;
+import ma.org.ancfcc.pva.core.gis.utils.GeometryUtils;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ShpSimpleFeatureService {
@@ -35,6 +38,18 @@ public class ShpSimpleFeatureService {
             }
         }
         return matchingAttributes;
+    }
+
+    public static Geometry get2DGeometryFromFeature(SimpleFeature feature, Integer srid) {
+        if (feature.getDefaultGeometry() instanceof Geometry) {
+            Geometry geometry = (Geometry) feature.getDefaultGeometry();
+            geometry = GeometryUtils.geometryIsPolygonOrMultiPolygon(geometry);
+            geometry = GeometryConversion.convertTo2D(geometry);
+            geometry.setSRID(srid);
+            return geometry;
+        }
+        return null;
+
     }
 
 }

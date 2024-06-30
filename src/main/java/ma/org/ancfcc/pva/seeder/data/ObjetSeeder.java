@@ -29,7 +29,7 @@ public class ObjetSeeder implements CommandLineRunner {
 
         List<String> projectNames = new ArrayList<>();
         projectNames.add("ife");
-        projectNames.add("màj couverture aérienne du 50k à une échelle de 1/40000");
+        projectNames.add("màj couverture aérienne du 50k à une echelle de 1/40000");
         projectNames.add("màj couverture aérienne des villes");
         projectNames.add("màj couverture aérienne à une résolution de 35/40 cm");
         projectNames.add("màj couverture aérienne à une résolution de 50/60cm");

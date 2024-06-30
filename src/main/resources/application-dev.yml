@@ -6,13 +6,13 @@ starter:
     reset: true
     seed: true
   geoserver:
-    reset: false
-    seed: false
-  keycloak: 
     reset: true
     seed: true
+  keycloak: 
+    reset: false
+    seed: false
   faker :
-    seed : true
+    seed : false
  
 spring:
   security:

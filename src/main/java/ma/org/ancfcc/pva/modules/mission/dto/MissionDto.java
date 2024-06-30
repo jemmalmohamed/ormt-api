@@ -16,9 +16,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ancfcc.pva.core.commun.base.dto.BaseDto;
 import ma.org.ancfcc.pva.core.geometry.serializer.MultiPolygonSerializer;
-import ma.org.ancfcc.pva.modules.mission.dto.objet.MissionObjetDto;
-import ma.org.ancfcc.pva.modules.mission.dto.organisme.MissionOrganismeDto;
-import ma.org.ancfcc.pva.modules.mission.dto.planaction.MissionPlanActionDto;
+import ma.org.ancfcc.pva.modules.objet.dto.summary.ObjetSummaryDto;
+import ma.org.ancfcc.pva.modules.organisme.dto.summary.OrganismeSummaryDto;
+import ma.org.ancfcc.pva.modules.planaction.dto.summary.PlanActionSummaryDto;
 
 @Setter
 @Getter
@@ -34,7 +34,7 @@ public class MissionDto extends BaseDto {
 
     private String etat;
 
-    private Long superficie;
+    private Double superficie;
 
     private String description;
 
@@ -44,9 +44,9 @@ public class MissionDto extends BaseDto {
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate datePva;
 
-    private MissionOrganismeDto organisme;
+    private OrganismeSummaryDto organisme;
 
-    private MissionPlanActionDto planAction;
+    private PlanActionSummaryDto planAction;
 
-    private List<MissionObjetDto> objets;
+    private List<ObjetSummaryDto> objets;
 }
