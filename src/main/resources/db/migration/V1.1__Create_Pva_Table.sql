@@ -93,6 +93,7 @@ BEGIN
     (
         id UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
         nom varchar(255) NOT NULL,
+        code varchar(255) NOT NULL,
         categorie varchar(255) NOT NULL,
         serial varchar(255) NULL,
         mode varchar(255) NOT NULL,
@@ -173,6 +174,10 @@ BEGIN
 
         organisme_id UNIQUEIDENTIFIER NOT NULL,
         CONSTRAINT FK_mission_organisme FOREIGN KEY (organisme_id) REFERENCES organisme(id),
+
+        capteur_id UNIQUEIDENTIFIER NOT NULL,
+        CONSTRAINT FK_mission_capteur FOREIGN KEY (capteur_id) REFERENCES capteur(id),
+
         plan_action_id UNIQUEIDENTIFIER NOT NULL,
         CONSTRAINT FK_mission_plan_action FOREIGN KEY (plan_action_id) REFERENCES plan_action(id),
 

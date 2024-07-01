@@ -50,6 +50,11 @@ public class CapteurServiceImpl extends BaseServiceImpl<Capteur> implements Capt
     }
 
     @Override
+    public Optional<Capteur> findByCode(String code) {
+        return capteurRepository.findByCode(code);
+    }
+
+    @Override
     public Page<Capteur> getEntityList(QueryParams requestParams) {
         if (requestParams.getPageSize() == -1) {
             requestParams.setPageSize(Integer.MAX_VALUE);
@@ -90,6 +95,7 @@ public class CapteurServiceImpl extends BaseServiceImpl<Capteur> implements Capt
 
     private void updateFields(Capteur capteur, Capteur entityToUpdate) {
         capteur.setNom(entityToUpdate.getNom());
+        capteur.setCode(entityToUpdate.getCode());
         capteur.setCategorie(entityToUpdate.getCategorie());
         capteur.setSerial(entityToUpdate.getSerial());
         capteur.setMode(entityToUpdate.getMode());

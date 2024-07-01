@@ -25,13 +25,14 @@ import ma.org.ancfcc.pva.core.commun.base.service.BaseServiceImpl;
 import ma.org.ancfcc.pva.core.commun.base.service.SpecificationService;
 import ma.org.ancfcc.pva.core.commun.rest.responses.MessageResponse;
 import ma.org.ancfcc.pva.core.exceptions.handlers.ShapefileProcessingException;
+import ma.org.ancfcc.pva.core.gis.crs.ITRFCrsTransformer;
 import ma.org.ancfcc.pva.core.gis.shapefile.ShpFileService;
 import ma.org.ancfcc.pva.core.gis.shapefile.ShpSimpleFeatureService;
 import ma.org.ancfcc.pva.core.utilities.DateUtils;
 import ma.org.ancfcc.pva.core.utilities.FileUtils;
 import ma.org.ancfcc.pva.core.utilities.StringHelper;
 import ma.org.ancfcc.pva.modules.capteur.Capteur;
-import ma.org.ancfcc.pva.modules.capteur.enums.CapteurName;
+import ma.org.ancfcc.pva.modules.capteur.enums.CapteurCode;
 import ma.org.ancfcc.pva.modules.capteur.enums.CapteurSubName;
 import ma.org.ancfcc.pva.modules.capteur.service.CapteurService;
 import ma.org.ancfcc.pva.modules.mission.Mission;
@@ -97,7 +98,7 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
 
                     } else {
                         create(mission);
-                        // log.info("Mission with code: " + mission.getCode() + " created");
+
                     }
                 } catch (Exception e) {
                     log.error("Error creating mission from shapefile", e);
@@ -126,11 +127,11 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
         setMissionGeometry(feature, mission, srid);
         setMissionAttributs(feature, mission);
         setMissionObjets(feature, mission);
-        setMissionSuperficie(feature, mission);
         setMissionDate(feature, mission);
         setMissionPLanAction(feature, mission);
         setMissionOrganisme(feature, mission);
         setMissionCapteurAttributs(feature, mission);
+        setMissionSuperficie(feature, mission, srid, 900918);
 
         return mission;
     }
@@ -171,16 +172,26 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
         mission.setOrganisme(organisme);
     }
 
-    private void setMissionSuperficie(SimpleFeature feature, Mission mission)
+    private void setMissionSuperficie(SimpleFeature feature, Mission mission, Integer sourceSrid,
+            Integer projectionSrid)
             throws MismatchedDimensionException {
         String superficieAttributName = ShpSimpleFeatureService.findFeatureAttributIgnoreCase(feature, "superficie");
         String superficieString = StringHelper.getSafeString(feature.getAttribute(superficieAttributName));
+
         if (!superficieString.equals("")) {
             Double superficie = Double.parseDouble(
                     StringHelper.getSafeString(feature.getAttribute(superficieAttributName)));
             mission.setSuperficie(
                     superficie);
+        } else {
+            Geometry geometry = ShpSimpleFeatureService.get2DGeometryFromFeature(feature, sourceSrid);
+            Geometry transformerGeom = ITRFCrsTransformer.transformFromTo(geometry, sourceSrid, projectionSrid);
+            double areaInSquareMeters = transformerGeom.getArea();
+            double areaInHectares = areaInSquareMeters / 10000;
+            double roundedArea = Math.round(areaInHectares);
+            mission.setSuperficie(roundedArea);
         }
+
     }
 
     private void setMissionPLanAction(SimpleFeature feature, Mission mission) {
@@ -216,12 +227,15 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
     private Mission setMissionCapteurAttributs(SimpleFeature feature, Mission mission) {
         String capteurAttributName = ShpSimpleFeatureService.findFeatureAttributIgnoreCase(feature, "camera");
         String capteurName = StringHelper.getSafeString(feature.getAttribute(capteurAttributName)).toLowerCase();
+        String capteurCode = getCapteurCodeFromString(capteurName);
+
         String gsdAttributName = ShpSimpleFeatureService.findFeatureAttributIgnoreCase(feature, "gsd");
         String gsdEchelle = StringHelper.getSafeString(feature.getAttribute(gsdAttributName));
-        String capteurNom = getCapteurNameFromString(capteurName);
 
-        Optional<Capteur> capteur = capteurService.findByNom(capteurNom);
+        Optional<Capteur> capteur = capteurService.findByCode(capteurCode);
+
         if (capteur.isPresent()) {
+            mission.setCapteur(capteur.get());
             String mode = capteur.get().getMode();
             switch (mode) {
                 // case "analogique":
@@ -252,17 +266,17 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
         return mission;
     }
 
-    public String getCapteurNameFromString(String nom) {
+    public String getCapteurCodeFromString(String nom) {
         if (nom.contains(CapteurSubName.ADS.getDescription())) {
-            return CapteurName.ADS40_80.getDescription();
+            return CapteurCode.ADS40_80.getDescription();
         } else if (nom.contains(CapteurSubName.ALS.getDescription())) {
-            return CapteurName.ALS70.getDescription();
+            return CapteurCode.ALS70.getDescription();
         } else if (nom.contains(CapteurSubName.DMC.getDescription())) {
-            return CapteurName.DMC_II_230.getDescription();
+            return CapteurCode.DMC_II_230.getDescription();
         } else if (nom.contains(CapteurSubName.RC30.getDescription())) {
-            return CapteurName.RC30.getDescription();
+            return CapteurCode.RC30.getDescription();
         } else if (nom.contains(CapteurSubName.RMK.getDescription())) {
-            return CapteurName.RMK_TOP_15.getDescription();
+            return CapteurCode.RMK_TOP_15.getDescription();
         } else {
             throw new EntityNotFoundException("Capteur with name '" + nom + "' not found");
         }

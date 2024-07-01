@@ -14,6 +14,8 @@ public interface CapteurService extends BaseService<Capteur> {
 
     Optional<Capteur> findByNom(String nom);
 
+    Optional<Capteur> findByCode(String code);
+
     Page<Capteur> getEntityList(QueryParams requestParams);
 
     Capteur create(CapteurRequestDto requestDto);

@@ -1,6 +1,6 @@
 package ma.org.ancfcc.pva.modules.capteur.enums;
 
-public enum CapteurName {
+public enum CapteurCode {
 
     ADS40_80("ADS40/80"),
     DMC_II_230("DMC_II_230"),
@@ -10,7 +10,7 @@ public enum CapteurName {
 
     private final String description;
 
-    CapteurName(String description) {
+    CapteurCode(String description) {
         this.description = description;
     }
 

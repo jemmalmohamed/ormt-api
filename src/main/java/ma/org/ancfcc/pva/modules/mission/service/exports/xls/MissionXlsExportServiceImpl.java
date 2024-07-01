@@ -96,6 +96,9 @@ public class MissionXlsExportServiceImpl implements MissionXlsExportService {
                 case "mission_organisme":
                     cell.setCellValue(mission.getOrganisme().getNom());
                     break;
+                case "mission_capteur":
+                    cell.setCellValue(mission.getCapteur().getNom());
+                    break;
                 case "pa_nom":
                     cell.setCellValue(mission.getPlanAction().getNom());
                     break;

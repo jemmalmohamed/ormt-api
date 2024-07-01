@@ -9,4 +9,6 @@ public interface CapteurRepository extends BaseRepository<Capteur> {
 
     Optional<Capteur> findByNom(String nom);
 
+    Optional<Capteur> findByCode(String code);
+
 }

@@ -16,6 +16,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ancfcc.pva.core.commun.base.dto.BaseDto;
 import ma.org.ancfcc.pva.core.geometry.serializer.MultiPolygonSerializer;
+import ma.org.ancfcc.pva.modules.capteur.dto.summary.CapteurSummaryDto;
 import ma.org.ancfcc.pva.modules.objet.dto.summary.ObjetSummaryDto;
 import ma.org.ancfcc.pva.modules.organisme.dto.summary.OrganismeSummaryDto;
 import ma.org.ancfcc.pva.modules.planaction.dto.summary.PlanActionSummaryDto;
@@ -45,6 +46,8 @@ public class MissionDto extends BaseDto {
     private LocalDate datePva;
 
     private OrganismeSummaryDto organisme;
+
+    private CapteurSummaryDto capteur;
 
     private PlanActionSummaryDto planAction;
 

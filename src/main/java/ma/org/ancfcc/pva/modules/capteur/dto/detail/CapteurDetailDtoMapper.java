@@ -6,6 +6,6 @@ import ma.org.ancfcc.pva.core.commun.base.mapper.BaseDtoMapper;
 import ma.org.ancfcc.pva.modules.capteur.Capteur;
 
 @Mapper
-public interface CapteurDetailMapper extends BaseDtoMapper<Capteur, CapteurDetailDto> {
+public interface CapteurDetailDtoMapper extends BaseDtoMapper<Capteur, CapteurDetailDto> {
 
 }

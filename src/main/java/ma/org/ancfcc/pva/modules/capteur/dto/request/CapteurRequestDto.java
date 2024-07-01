@@ -25,6 +25,9 @@ public class CapteurRequestDto extends Dto {
     private String nom;
 
     @NotBlank(message = "Ce champ est requis.")
+    private String code;
+
+    @NotBlank(message = "Ce champ est requis.")
     private String categorie;
 
     private String serial;

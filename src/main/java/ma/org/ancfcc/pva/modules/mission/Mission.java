@@ -24,6 +24,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 import ma.org.ancfcc.pva.core.commun.base.entity.BaseEntity;
+import ma.org.ancfcc.pva.modules.capteur.Capteur;
 import ma.org.ancfcc.pva.modules.objet.Objet;
 import ma.org.ancfcc.pva.modules.organisme.Organisme;
 import ma.org.ancfcc.pva.modules.planaction.PlanAction;
@@ -52,6 +53,11 @@ public class Mission extends BaseEntity {
   private MultiPolygon delimitation;
 
   private LocalDate datePva;
+
+  @ManyToOne
+  @JoinColumn(name = "capteur_id")
+  @JsonManagedReference
+  private Capteur capteur;
 
   @ManyToOne
   @JoinColumn(name = "organisme_id")

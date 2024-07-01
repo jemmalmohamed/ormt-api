@@ -29,7 +29,7 @@ import ma.org.ancfcc.pva.modules.capteur.Capteur;
 import ma.org.ancfcc.pva.modules.capteur.dto.CapteurDto;
 import ma.org.ancfcc.pva.modules.capteur.dto.CapteurDtoMapper;
 import ma.org.ancfcc.pva.modules.capteur.dto.detail.CapteurDetailDto;
-import ma.org.ancfcc.pva.modules.capteur.dto.detail.CapteurDetailMapper;
+import ma.org.ancfcc.pva.modules.capteur.dto.detail.CapteurDetailDtoMapper;
 import ma.org.ancfcc.pva.modules.capteur.service.CapteurService;
 
 @RestController
@@ -41,7 +41,7 @@ public class CapteurLoadController extends BaseController<Capteur> {
 
         private final CapteurService capteurService;
         private final CapteurDtoMapper capteurDtoMapper;
-        private final CapteurDetailMapper capteurDetailMapper;
+        private final CapteurDetailDtoMapper capteurDetailMapper;
 
         @Operation(summary = "Get all " + ENTITY_NAME + "s")
         @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Ok", content = {

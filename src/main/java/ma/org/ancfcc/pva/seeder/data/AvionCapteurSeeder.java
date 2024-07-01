@@ -16,7 +16,7 @@ import ma.org.ancfcc.pva.modules.capteur.Capteur;
 import ma.org.ancfcc.pva.modules.capteur.enums.CapteurCategorie;
 import ma.org.ancfcc.pva.modules.capteur.enums.CapteurFormat;
 import ma.org.ancfcc.pva.modules.capteur.enums.CapteurMode;
-import ma.org.ancfcc.pva.modules.capteur.enums.CapteurName;
+import ma.org.ancfcc.pva.modules.capteur.enums.CapteurCode;
 import ma.org.ancfcc.pva.modules.capteur.service.CapteurService;
 
 @Component
@@ -31,15 +31,24 @@ public class AvionCapteurSeeder implements CommandLineRunner {
 
     private final AvionService avionService;
 
-    private static final String ADS = CapteurName.ADS40_80.getDescription();
+    private static final String ADS_CODE = CapteurCode.ADS40_80.getDescription();
+    private static final String ADS_NOM = "ADS 80";
     private static final String ADS_DESC = "Leica ADS40/80 Airborne Digital Sensor";
-    private static final String ALS = CapteurName.ALS70.getDescription();
+
+    private static final String ALS_CODE = CapteurCode.ALS70.getDescription();
+    private static final String ALS_NOM = "ALS 70";
     private static final String ALS_DESC = "Leica ALS Airborne Laser Scanner";
-    private static final String DMC = CapteurName.DMC_II_230.getDescription();
+
+    private static final String DMC_CODE = CapteurCode.DMC_II_230.getDescription();
+    private static final String DMC_NOM = "DMC II";
     private static final String DMC_DESC = "Z/I Digital Mapping Camera II 230 Megapixel";
-    private static final String RMK = CapteurName.RMK_TOP_15.getDescription();
+
+    private static final String RMK_CODE = CapteurCode.RMK_TOP_15.getDescription();
+    private static final String RMK_NOM = "RMK TOP 15";
     private static final String RMK_DESC = "Zeiss RMK TOP 153 mm focal length";
-    private static final String RC30 = CapteurName.RC30.getDescription();
+
+    private static final String RC30_CODE = CapteurCode.RC30.getDescription();
+    private static final String RC30_NOM = "RC 30";
     private static final String RC30_DESC = "Leica RC30 153 mm focal length";
 
     private static final String FCC = "cn-fcc";
@@ -85,6 +94,7 @@ public class AvionCapteurSeeder implements CommandLineRunner {
             Capteur capteur = createCapteur(
                     "drone-capteur-" + i,
                     "drone-capteur-" + i,
+                    "DRONE_SENSOR",
                     CapteurCategorie.DRONE.getDescription(),
                     CapteurFormat.MATRICIELLE.getDescription(),
                     CapteurMode.NUMERIQUE.getDescription(),
@@ -110,30 +120,33 @@ public class AvionCapteurSeeder implements CommandLineRunner {
     }
 
     private void seedCapteurs() {
-        createAndSaveCapteur(ADS, ADS_DESC, CapteurCategorie.AVION.getDescription(),
+        createAndSaveCapteur(ADS_CODE, ADS_NOM, ADS_DESC, CapteurCategorie.AVION.getDescription(),
                 CapteurFormat.LINEAIRE.getDescription(), CapteurMode.NUMERIQUE.getDescription(), LEICA);
-        createAndSaveCapteur(ALS, ALS_DESC, CapteurCategorie.AVION.getDescription(),
+        createAndSaveCapteur(ALS_CODE, ALS_NOM, ALS_DESC, CapteurCategorie.AVION.getDescription(),
                 CapteurFormat.LINEAIRE.getDescription(), CapteurMode.LIDAR.getDescription(), LEICA);
-        createAndSaveCapteur(DMC, DMC_DESC, CapteurCategorie.AVION.getDescription(),
+        createAndSaveCapteur(DMC_CODE, DMC_NOM, DMC_DESC, CapteurCategorie.AVION.getDescription(),
                 CapteurFormat.MATRICIELLE.getDescription(), CapteurMode.NUMERIQUE.getDescription(), ZI_IMAGING);
-        createAndSaveCapteur(RMK, RMK_DESC, CapteurCategorie.AVION.getDescription(),
+        createAndSaveCapteur(RMK_CODE, RMK_NOM, RMK_DESC, CapteurCategorie.AVION.getDescription(),
                 CapteurFormat.MATRICIELLE.getDescription(), CapteurMode.ANALOGIQUE.getDescription(), ZEISS);
-        createAndSaveCapteur(RC30, RC30_DESC, CapteurCategorie.AVION.getDescription(),
+        createAndSaveCapteur(RC30_CODE, RC30_NOM, RC30_DESC, CapteurCategorie.AVION.getDescription(),
                 CapteurFormat.MATRICIELLE.getDescription(), CapteurMode.ANALOGIQUE.getDescription(), LEICA);
     }
 
-    private void createAndSaveCapteur(String nom, String description, String categorie, String format, String mode,
+    private void createAndSaveCapteur(String code, String nom, String description, String categorie, String format,
+            String mode,
             String constructeur) {
         if (capteurService.findByNom(nom).isEmpty()) {
-            Capteur capteur = createCapteur(nom, description, categorie, format, mode, constructeur);
+            Capteur capteur = createCapteur(nom, code, description, categorie, format, mode, constructeur);
             capteurService.create(capteur);
         }
     }
 
-    private Capteur createCapteur(String nom, String description, String categorie, String format, String mode,
+    private Capteur createCapteur(String nom, String code, String description, String categorie, String format,
+            String mode,
             String constructeur) {
         Capteur capteur = new Capteur();
         capteur.setNom(nom);
+        capteur.setCode(code);
         capteur.setDescription(description);
         capteur.setCategorie(categorie);
         capteur.setFormat(format);

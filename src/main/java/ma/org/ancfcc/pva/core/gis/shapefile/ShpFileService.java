@@ -33,7 +33,7 @@ import lombok.extern.log4j.Log4j2;
 import ma.org.ancfcc.pva.core.commun.rest.responses.MessageResponse;
 import ma.org.ancfcc.pva.core.exceptions.handlers.ShapefileProcessingException;
 import ma.org.ancfcc.pva.core.exceptions.handlers.ShapefileUploadException;
-import ma.org.ancfcc.pva.core.gis.utils.CRSHelper;
+import ma.org.ancfcc.pva.core.gis.crs.CRSHelper;
 import ma.org.ancfcc.pva.core.utilities.FileUtils;
 
 @Log4j2
