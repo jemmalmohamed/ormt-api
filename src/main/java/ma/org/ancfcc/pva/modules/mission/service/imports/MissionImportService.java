@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.List;
 
 import ma.org.ancfcc.pva.core.commun.base.service.BaseService;
-import ma.org.ancfcc.pva.modules.mission.Mission;
+import ma.org.ancfcc.pva.modules.mission.models.Mission;
 
 public interface MissionImportService extends BaseService<Mission> {
 

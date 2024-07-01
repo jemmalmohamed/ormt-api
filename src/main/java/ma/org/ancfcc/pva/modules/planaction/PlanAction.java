@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 import ma.org.ancfcc.pva.core.commun.base.entity.BaseEntity;
-import ma.org.ancfcc.pva.modules.mission.Mission;
+import ma.org.ancfcc.pva.modules.mission.models.Mission;
 
 @Setter
 @Getter

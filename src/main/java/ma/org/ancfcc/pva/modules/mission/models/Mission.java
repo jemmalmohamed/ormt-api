@@ -1,4 +1,4 @@
-package ma.org.ancfcc.pva.modules.mission;
+package ma.org.ancfcc.pva.modules.mission.models;
 
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -8,6 +8,7 @@ import org.locationtech.jts.geom.MultiPolygon;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -15,6 +16,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -73,5 +76,17 @@ public class Mission extends BaseEntity {
   @ManyToMany(fetch = FetchType.LAZY)
   @JoinTable(name = "mission_objet", joinColumns = @JoinColumn(name = "mission_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "objet_id", referencedColumnName = "id"))
   private Set<Objet> objets = new HashSet<>();
+
+  @OneToOne(mappedBy = "mission", cascade = CascadeType.ALL, orphanRemoval = true)
+  @PrimaryKeyJoinColumn
+  private AnalogiqueAttribut analogiqueAttributs;
+
+  @OneToOne(mappedBy = "mission", cascade = CascadeType.ALL, orphanRemoval = true)
+  @PrimaryKeyJoinColumn
+  private NumeriqueAttribut numeriqueAttributs;
+
+  @OneToOne(mappedBy = "mission", cascade = CascadeType.ALL, orphanRemoval = true)
+  @PrimaryKeyJoinColumn
+  private LidarAttribut lidarAttributs;
 
 }

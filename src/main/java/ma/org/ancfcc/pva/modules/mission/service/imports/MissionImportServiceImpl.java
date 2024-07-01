@@ -35,7 +35,10 @@ import ma.org.ancfcc.pva.modules.capteur.Capteur;
 import ma.org.ancfcc.pva.modules.capteur.enums.CapteurCode;
 import ma.org.ancfcc.pva.modules.capteur.enums.CapteurSubName;
 import ma.org.ancfcc.pva.modules.capteur.service.CapteurService;
-import ma.org.ancfcc.pva.modules.mission.Mission;
+import ma.org.ancfcc.pva.modules.mission.models.AnalogiqueAttribut;
+import ma.org.ancfcc.pva.modules.mission.models.LidarAttribut;
+import ma.org.ancfcc.pva.modules.mission.models.Mission;
+import ma.org.ancfcc.pva.modules.mission.models.NumeriqueAttribut;
 import ma.org.ancfcc.pva.modules.mission.repository.MissionRepository;
 import ma.org.ancfcc.pva.modules.objet.Objet;
 import ma.org.ancfcc.pva.modules.objet.service.ObjetService;
@@ -238,23 +241,24 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
             mission.setCapteur(capteur.get());
             String mode = capteur.get().getMode();
             switch (mode) {
-                // case "analogique":
-                // AnalogiqueAttribut analogiqueAttribut = new AnalogiqueAttribut();
-                // analogiqueAttribut.setEchelle(Long.parseLong(gsdEchelle));
-                // analogiqueAttribut.setMission(mission);
-                // mission.setAnalogiqueAttributs(analogiqueAttribut);
-                // break;
-                // case "numérique":
-                // NumeriqueAttribut numeriqueAttribut = new NumeriqueAttribut();
-                // numeriqueAttribut.setResolution(Integer.parseInt(gsdEchelle));
-                // numeriqueAttribut.setMission(mission);
-                // mission.setNumeriqueAttributs(numeriqueAttribut);
-                // break;
-                // case "lidar":
-                // LidarAttribut lidarAttribut = new LidarAttribut();
-                // lidarAttribut.setDensite(Float.parseFloat(gsdEchelle));
-                // lidarAttribut.setMission(mission);
-                // mission.setLidarAttributs(lidarAttribut);
+                case "analogique":
+                    AnalogiqueAttribut analogiqueAttribut = new AnalogiqueAttribut();
+                    analogiqueAttribut.setEchelle(Integer.parseInt(gsdEchelle));
+                    analogiqueAttribut.setMission(mission);
+                    mission.setAnalogiqueAttributs(analogiqueAttribut);
+                    break;
+                case "numérique":
+                    NumeriqueAttribut numeriqueAttribut = new NumeriqueAttribut();
+                    numeriqueAttribut.setResolution(Integer.parseInt(gsdEchelle));
+                    numeriqueAttribut.setMission(mission);
+                    mission.setNumeriqueAttributs(numeriqueAttribut);
+                    break;
+                case "lidar":
+                    LidarAttribut lidarAttribut = new LidarAttribut();
+                    lidarAttribut.setDensite(Float.parseFloat(gsdEchelle));
+                    lidarAttribut.setMission(mission);
+                    mission.setLidarAttributs(lidarAttribut);
+                    break;
                 default:
                     break;
             }

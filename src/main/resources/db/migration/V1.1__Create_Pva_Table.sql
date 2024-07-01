@@ -192,7 +192,6 @@ BEGIN
     );
 END;
 
-
 IF NOT EXISTS (SELECT *
 FROM sysobjects
 WHERE name='mission_objet' and xtype='U')
@@ -206,4 +205,67 @@ BEGIN
         PRIMARY KEY (mission_id, objet_id)
     );
 END;
- 
+
+
+IF NOT EXISTS (SELECT *
+FROM sysobjects
+WHERE name='numerique_attribut' and xtype='U')
+BEGIN
+    CREATE TABLE numerique_attribut
+    (
+        id UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
+        resolution INT NULL,
+
+        mission_id UNIQUEIDENTIFIER NOT NULL,
+        CONSTRAINT FK_numerique_attribut_mission FOREIGN KEY(mission_id) REFERENCES mission(id),
+        status_code int NULL,
+        created_date datetime2 NOT NULL DEFAULT SYSDATETIME(),
+        last_modified_date datetime2 NULL DEFAULT SYSDATETIME(),
+        version bigint NULL,
+        created_by varchar(255) NULL,
+        last_modified_by varchar(255) NULL
+    );
+END;
+IF NOT EXISTS (SELECT *
+FROM sysobjects
+WHERE name='analogique_attribut' and xtype='U')
+BEGIN
+    CREATE TABLE analogique_attribut
+    (
+        id UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
+        echelle INT NULL,
+
+        mission_id UNIQUEIDENTIFIER NOT NULL,
+        CONSTRAINT FK_analogique_attribut_mission FOREIGN KEY(mission_id) REFERENCES mission(id),
+
+        status_code int NULL,
+        created_date datetime2 NOT NULL DEFAULT SYSDATETIME(),
+        last_modified_date datetime2 NULL DEFAULT SYSDATETIME(),
+        version bigint NULL,
+        created_by varchar(255) NULL,
+        last_modified_by varchar(255) NULL
+    );
+END;
+
+IF NOT EXISTS (SELECT *
+FROM sysobjects
+WHERE name='lidar_attribut' and xtype='U')
+BEGIN
+    CREATE TABLE lidar_attribut
+    (
+        id UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
+        densite FLOAT NULL,
+
+        mission_id UNIQUEIDENTIFIER NOT NULL,
+        CONSTRAINT FK_lidar_attribut_mission FOREIGN KEY(mission_id) REFERENCES mission(id),
+
+        status_code int NULL,
+        created_date datetime2 NOT NULL DEFAULT SYSDATETIME(),
+        last_modified_date datetime2 NULL DEFAULT SYSDATETIME(),
+        version bigint NULL,
+        created_by varchar(255) NULL,
+        last_modified_by varchar(255) NULL
+    );
+END;
+
+

@@ -4,7 +4,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 import ma.org.ancfcc.pva.core.commun.base.repository.BaseRepository;
-import ma.org.ancfcc.pva.modules.mission.Mission;
+import ma.org.ancfcc.pva.modules.mission.models.Mission;
 
 public interface MissionRepository extends BaseRepository<Mission> {
 

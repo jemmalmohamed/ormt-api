@@ -21,11 +21,11 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import ma.org.ancfcc.pva.modules.mission.Mission;
 import ma.org.ancfcc.pva.modules.mission.dto.detail.MissionDetailDto;
 import ma.org.ancfcc.pva.modules.mission.dto.detail.MissionDetailDtoMapper;
 import ma.org.ancfcc.pva.modules.mission.dto.export.ExportMissionRequestDto;
 import ma.org.ancfcc.pva.modules.mission.dto.export.FieldXlsParams;
+import ma.org.ancfcc.pva.modules.mission.models.Mission;
 import ma.org.ancfcc.pva.modules.mission.service.MissionService;
 import ma.org.ancfcc.pva.modules.objet.dto.summary.ObjetSummaryDto;
 
@@ -101,11 +101,20 @@ public class MissionXlsExportServiceImpl implements MissionXlsExportService {
                     break;
                 case "pa_nom":
                     cell.setCellValue(mission.getPlanAction().getNom());
+                case "mission_status":
+                    createMissionStatusCell(workbook, row, mission, field);
+
                     break;
                 default:
                     break;
             }
         }
+    }
+
+    private void createMissionStatusCell(Workbook workbook, Row row, MissionDetailDto mission, FieldXlsParams field) {
+
+        // Cell cell = row.createCell(field.getValue().getIndex());
+        // cell.setCellValue(status);
     }
 
     private void createHeaderRow(Sheet sheet, List<FieldXlsParams> fields) {

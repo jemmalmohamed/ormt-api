@@ -43,6 +43,9 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
     private void resetDatabase() {
 
         deleteRecordsIfExists("mission_objet");
+        deleteRecordsIfExists("analogique_attribut");
+        deleteRecordsIfExists("lidar_attribut");
+        deleteRecordsIfExists("numerique_attribut");
         deleteRecordsIfExists("objet");
         deleteRecordsIfExists("mission");
         deleteRecordsIfExists("plan_action");

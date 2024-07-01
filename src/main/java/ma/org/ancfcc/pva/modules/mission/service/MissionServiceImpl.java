@@ -16,9 +16,9 @@ import ma.org.ancfcc.pva.core.commun.rest.queries.QueryParams;
 import ma.org.ancfcc.pva.core.utilities.EntityInspector;
 import ma.org.ancfcc.pva.core.utilities.PaginationUtils;
 import ma.org.ancfcc.pva.core.validators.ObjectsValidator;
-import ma.org.ancfcc.pva.modules.mission.Mission;
 import ma.org.ancfcc.pva.modules.mission.dto.request.MissionRequestDto;
 import ma.org.ancfcc.pva.modules.mission.dto.request.MissionRequestMapper;
+import ma.org.ancfcc.pva.modules.mission.models.Mission;
 import ma.org.ancfcc.pva.modules.mission.repository.MissionRepository;
 
 @Service
