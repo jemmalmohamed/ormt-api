@@ -23,6 +23,7 @@ import ma.org.ancfcc.pva.modules.mission.dto.detail.MissionDetailDtoMapper;
 import ma.org.ancfcc.pva.modules.mission.dto.export.ExportMissionRequestDto;
 import ma.org.ancfcc.pva.modules.mission.models.Mission;
 import ma.org.ancfcc.pva.modules.mission.service.exports.xls.MissionXlsExportService;
+import ma.org.ancfcc.pva.modules.mission.service.exports.xls.single.MissionSingleXlsExportService;
 
 @RestController
 @RequestMapping("api/v1/missions")
@@ -32,6 +33,7 @@ public class MissionExportController extends BaseController<Mission> {
         private static final String ENTITY_NAME = "mission";
 
         private final MissionXlsExportService missionXlsExportService;
+        private final MissionSingleXlsExportService missionSingleXlsExportService;
         private final MissionDtoMapper missionDtoMapper;
         private final MissionDetailDtoMapper missionDetailMapper;
 
@@ -48,30 +50,17 @@ public class MissionExportController extends BaseController<Mission> {
 
                 switch (requestDto.getFormat()) {
                         case "xlsx":
-                                return missionXlsExportService.exportMissionList(requestDto);
+                                if (requestDto.isSingleSheet())
+                                        return missionSingleXlsExportService.exportSingleMission(requestDto);
+                                else {
+                                        return missionXlsExportService.exportMissionList(requestDto);
+                                }
                         case "shp":
                                 // return exportExcelFormat(missionDtos);
                         default:
                                 return new ResponseEntity<>(HttpStatus.UNSUPPORTED_MEDIA_TYPE);
                 }
         }
-
-        // private ResponseEntity<byte[]> exportExcelFormat(ExportMissionRequestDto
-        // requestDto) {
-        // try (ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
-        // missionExportService.exportMission(requestDto, outputStream);
-        // HttpHeaders headers = new HttpHeaders();
-        // headers.setContentType(MediaType.parseMediaType("application/vnd.ms-excel"));
-        // headers.setContentDispositionFormData("attachment", "missions.xlsx");
-        // headers.setCacheControl("must-revalidate, post-check=0, pre-check=0");
-
-        // return new ResponseEntity<>(outputStream.toByteArray(), headers,
-        // HttpStatus.OK);
-        // } catch (IOException e) {
-        // e.printStackTrace();
-        // return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        // }
-        // }
 
         @Override
         protected <DTO> DTO mapToDto(Mission entity, Class<DTO> dtoClass) {

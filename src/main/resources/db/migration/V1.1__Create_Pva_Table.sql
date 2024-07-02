@@ -14,12 +14,13 @@ BEGIN
         geometry_type VARCHAR(30) ,
         geometry_columns_id UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
     );
-
-    -- Insert the geometry column metadata into the Geometry Columns Table 
+    -- Insert the geometry column metadata into the Geometry Columns Table  
     INSERT INTO geometry_columns
         ( f_table_catalog, f_table_schema, f_table_name, f_geometry_column, geometry_type, coord_dimension, srid )
     VALUES
-        ( 'pva', 'dbo', 'mission', 'delimitation', 'MULTIPOLYGON', 2 , 4326);
+        ( 'pva', 'dbo', 'mission', 'delimitation', 'MULTIPOLYGON', 2 , 4326),
+        ( 'pva', 'dbo', 'photo_planification', 'center', 'POINT', 2 , 4326),
+        ( 'pva', 'dbo', 'bande', 'axe_planification', 'LINESTRING', 2 , 4326);
 END;
 
 
@@ -258,6 +259,56 @@ BEGIN
 
         mission_id UNIQUEIDENTIFIER NOT NULL,
         CONSTRAINT FK_lidar_attribut_mission FOREIGN KEY(mission_id) REFERENCES mission(id),
+
+        status_code int NULL,
+        created_date datetime2 NOT NULL DEFAULT SYSDATETIME(),
+        last_modified_date datetime2 NULL DEFAULT SYSDATETIME(),
+        version bigint NULL,
+        created_by varchar(255) NULL,
+        last_modified_by varchar(255) NULL
+    );
+END;
+
+IF NOT EXISTS (SELECT *
+FROM sysobjects
+WHERE name='bande' and xtype='U')
+BEGIN
+    CREATE TABLE bande
+    (
+        id UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
+
+        nom varchar(255) NOT NULL,
+        label varchar (255) NOT NULL,
+        commentaire varchar (255) NULL,
+        axe_planification GEOMETRY NULL,
+
+        mission_id UNIQUEIDENTIFIER NOT NULL,
+        CONSTRAINT FK_bande_mission FOREIGN KEY(mission_id) REFERENCES mission(id),
+
+        status_code int NULL,
+        created_date datetime2 NOT NULL DEFAULT SYSDATETIME(),
+        last_modified_date datetime2 NULL DEFAULT SYSDATETIME(),
+        version bigint NULL,
+        created_by varchar(255) NULL,
+        last_modified_by varchar(255) NULL
+    );
+END;
+
+IF NOT EXISTS (SELECT *
+FROM sysobjects
+WHERE name='photo_planification' and xtype='U')
+BEGIN
+    CREATE TABLE photo_planification
+    (
+        id UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
+
+        nom varchar(255) NOT NULL,
+        label varchar (255) NOT NULL,
+        commentaire varchar (255) NULL,
+        center GEOMETRY NULL,
+
+        bande_id UNIQUEIDENTIFIER NOT NULL,
+        CONSTRAINT FK_photo_planification_bande FOREIGN KEY(bande_id) REFERENCES bande(id),
 
         status_code int NULL,
         created_date datetime2 NOT NULL DEFAULT SYSDATETIME(),

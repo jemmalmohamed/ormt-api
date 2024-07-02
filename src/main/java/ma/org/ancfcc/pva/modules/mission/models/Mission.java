@@ -1,7 +1,9 @@
 package ma.org.ancfcc.pva.modules.mission.models;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.locationtech.jts.geom.MultiPolygon;
@@ -16,6 +18,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
@@ -28,6 +31,7 @@ import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 import ma.org.ancfcc.pva.core.commun.base.entity.BaseEntity;
 import ma.org.ancfcc.pva.modules.capteur.Capteur;
+import ma.org.ancfcc.pva.modules.mission.bande.Bande;
 import ma.org.ancfcc.pva.modules.objet.Objet;
 import ma.org.ancfcc.pva.modules.organisme.Organisme;
 import ma.org.ancfcc.pva.modules.planaction.PlanAction;
@@ -88,5 +92,9 @@ public class Mission extends BaseEntity {
   @OneToOne(mappedBy = "mission", cascade = CascadeType.ALL, orphanRemoval = true)
   @PrimaryKeyJoinColumn
   private LidarAttribut lidarAttributs;
+
+  @Builder.Default()
+  @OneToMany(mappedBy = "mission", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+  private List<Bande> bandes = new ArrayList<>();
 
 }

@@ -126,4 +126,10 @@ public class GeometryUtils {
         return (Point) GeometryConversion.convertTo2D(geometry);
     }
 
+    public static Point extract2DPointFromFeature(SimpleFeature feature, Integer srid) {
+        Point point = extract2DPointFromFeature(feature);
+        point.setSRID(srid);
+        return point;
+    }
+
 }

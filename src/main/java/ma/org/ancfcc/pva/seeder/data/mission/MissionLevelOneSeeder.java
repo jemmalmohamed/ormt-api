@@ -18,6 +18,7 @@ import org.springframework.stereotype.Component;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ancfcc.pva.core.gis.shapefile.ShpFileService;
+import ma.org.ancfcc.pva.core.threads.ThreadService;
 import ma.org.ancfcc.pva.core.utilities.FileUtils;
 import ma.org.ancfcc.pva.modules.mission.service.imports.MissionImportService;
 
@@ -56,6 +57,7 @@ public class MissionLevelOneSeeder implements CommandLineRunner {
                 "2022",
                 "2023",
                 "2024");
+        // List<String> yearFolderList = Arrays.asList("2015");
 
         log.info("### DATA: Début chargement données mission format shapefiles...");
         processFolderList(yearFolderList);
@@ -70,9 +72,9 @@ public class MissionLevelOneSeeder implements CommandLineRunner {
                 futures.add(
                         executor.submit(() -> processYearFolder(levelOnePath + yearFolder)));
             }
-            waitForCompletion(futures);
+            ThreadService.waitForCompletion(futures);
         } finally {
-            shutdownExecutorService(executor);
+            ThreadService.shutdownExecutorService(executor);
         }
     }
 
@@ -87,34 +89,6 @@ public class MissionLevelOneSeeder implements CommandLineRunner {
 
         } catch (IOException e) {
             log.error("### DATA: Error processing folder {}: {}", yearFolder, e.getMessage());
-        }
-    }
-
-    private void waitForCompletion(List<Future<?>> futures) {
-        futures.forEach(future -> {
-            try {
-                future.get();
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-                log.error("### DATA: Thread interrupted during execution.");
-            } catch (Exception e) {
-                log.error("### DATA: Error waiting for future completion: {}", e.getMessage());
-            }
-        });
-    }
-
-    private void shutdownExecutorService(ExecutorService executor) {
-        executor.shutdown();
-        try {
-            if (!executor.awaitTermination(60, TimeUnit.SECONDS)) {
-                executor.shutdownNow();
-                if (!executor.awaitTermination(60, TimeUnit.SECONDS)) {
-                    log.warn("ExecutorService did not terminate");
-                }
-            }
-        } catch (InterruptedException e) {
-            executor.shutdownNow();
-            Thread.currentThread().interrupt();
         }
     }
 

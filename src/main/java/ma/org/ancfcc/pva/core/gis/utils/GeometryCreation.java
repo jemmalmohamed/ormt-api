@@ -29,9 +29,16 @@ public class GeometryCreation {
         return factory.createLineString(coordinateList.toArray(new Coordinate[0]));
     }
 
+    public static Point createPoint(String coordinate, Integer srid) {
+        Point point = createPoint(coordinate);
+        point.setSRID(srid);
+        return point;
+    }
+
     public static Point createPoint(String coordinate) {
         Coordinate coordinateObj = parseCoordinate(coordinate);
         GeometryFactory factory = new GeometryFactory();
+
         return factory.createPoint(coordinateObj);
     }
 

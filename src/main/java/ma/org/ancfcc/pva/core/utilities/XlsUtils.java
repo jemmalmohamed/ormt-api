@@ -1,8 +1,19 @@
 package ma.org.ancfcc.pva.core.utilities;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
+import org.apache.poi.ss.usermodel.BorderStyle;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -80,6 +91,39 @@ public class XlsUtils {
         } else {
             throw new IOException(CELL_IS_NULL_OR_BLANK);
         }
+    }
+
+    public static CellStyle createBorderedCellStyle(Workbook workbook, BorderStyle borderStyle) {
+        CellStyle style = workbook.createCellStyle();
+        style.setBorderTop(borderStyle);
+        style.setBorderBottom(borderStyle);
+        style.setBorderLeft(borderStyle);
+        style.setBorderRight(borderStyle);
+        style.setAlignment(HorizontalAlignment.LEFT);
+        return style;
+    }
+
+    public static CellStyle createForegroundColorStyle(Workbook workbook, Short colorIndex) {
+        CellStyle style = workbook.createCellStyle();
+        style.setFillForegroundColor(colorIndex);
+        style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+        return style;
+    }
+
+    public static void autoSizeColumns(Sheet sheet, int columnCount) {
+        for (int i = 0; i < columnCount; i++) {
+            sheet.autoSizeColumn(i);
+
+        }
+    }
+
+    public static ResponseEntity<byte[]> exportExcelFormat(ByteArrayOutputStream outputStream, String fileName) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.parseMediaType("application/vnd.ms-excel"));
+        headers.setContentDispositionFormData("attachment", "export_" + fileName + ".xlsx");
+        headers.setCacheControl("must-revalidate, post-check=0, pre-check=0");
+        return new ResponseEntity<>(outputStream.toByteArray(), headers, HttpStatus.OK);
+
     }
 
 }

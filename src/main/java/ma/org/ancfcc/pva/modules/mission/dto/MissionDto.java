@@ -18,6 +18,7 @@ import lombok.Setter;
 import ma.org.ancfcc.pva.core.commun.base.dto.BaseDto;
 import ma.org.ancfcc.pva.core.geometry.serializer.MultiPolygonSerializer;
 import ma.org.ancfcc.pva.modules.capteur.dto.summary.CapteurSummaryDto;
+import ma.org.ancfcc.pva.modules.mission.bande.dto.BandeDto;
 import ma.org.ancfcc.pva.modules.mission.dto.attributs.analogique.AnalogiqueAttributDto;
 import ma.org.ancfcc.pva.modules.mission.dto.attributs.lidar.LidarAttributDto;
 import ma.org.ancfcc.pva.modules.mission.dto.attributs.numerique.NumeriqueAttributDto;
@@ -65,4 +66,7 @@ public class MissionDto extends BaseDto {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private LidarAttributDto lidarAttributs;
+
+    private List<BandeDto> bandes;
+
 }

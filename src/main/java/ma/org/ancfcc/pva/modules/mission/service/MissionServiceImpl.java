@@ -106,4 +106,14 @@ public class MissionServiceImpl extends BaseServiceImpl<Mission> implements Miss
         // TODO : uncomment this code after implementing the mission module
     }
 
+    @Override
+    public Long countPhotoPlanificationsByMissionId(UUID missionId) {
+        return missionRepository.countPhotoPlanificationsByMissionId(missionId);
+    }
+
+    @Override
+    public Long countBandeByMissionId(UUID missionId) {
+        return missionRepository.countPhotoPlanificationsByMissionId(missionId);
+    }
+
 }

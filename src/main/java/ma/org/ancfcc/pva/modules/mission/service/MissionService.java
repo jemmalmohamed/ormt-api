@@ -24,4 +24,8 @@ public interface MissionService extends BaseService<Mission> {
 
     Mission update(UUID id, MissionRequestDto missionRequestDto);
 
+    Long countPhotoPlanificationsByMissionId(UUID missionId);
+
+    Long countBandeByMissionId(UUID missionId);
+
 }
