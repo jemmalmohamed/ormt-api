@@ -13,7 +13,7 @@ spring:
       format_sql: true
     database: sql_server
     database-platform: org.hibernate.dialect.SQLServerDialect
-    show-sql: true 
+    show-sql: false 
   sql:
     init:
       mode: never

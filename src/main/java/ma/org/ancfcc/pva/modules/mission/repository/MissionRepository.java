@@ -23,6 +23,6 @@ public interface MissionRepository extends BaseRepository<Mission> {
     long countPhotoPlanificationsByMissionId(@Param("missionId") UUID missionId);
 
     @Query("SELECT COUNT(b) FROM Bande b JOIN b.mission m WHERE m.id = :missionId")
-    long countByBandesMissionId(@Param("missionId") UUID missionId);
+    long countBandesByMissionId(@Param("missionId") UUID missionId);
 
 }

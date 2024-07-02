@@ -1,73 +1,50 @@
-package ma.org.ancfcc.pva.modules.mission.service.exports.xls.single;
+package ma.org.ancfcc.pva.modules.mission.service.exports.xls.single.informations;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 import org.apache.poi.ss.usermodel.BorderStyle;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import lombok.RequiredArgsConstructor;
 import ma.org.ancfcc.pva.core.utilities.XlsUtils;
-import ma.org.ancfcc.pva.modules.mission.dto.export.ExportMissionRequestDto;
+import ma.org.ancfcc.pva.modules.capteur.enums.CapteurFormat;
 import ma.org.ancfcc.pva.modules.mission.models.Mission;
 import ma.org.ancfcc.pva.modules.mission.service.MissionService;
 import ma.org.ancfcc.pva.modules.objet.Objet;
 
 @Service
-public class MissionSingleXlsExportServiceImpl implements MissionSingleXlsExportService {
+@RequiredArgsConstructor
+public class MissionInformationsXlsGeneratorImpl implements MissionInformationsXlsGenerator {
+
+    private static final String DEFAULT_EMPTY = "********";
+    private static final String DEFAULT_DATE_FORMAT = "dd/MM/yyyy";
 
     @Autowired
-    private MissionService missionService;
-
-    private static final String DEFAULT_DATE_FORMAT = "dd/MM/yyyy";
-    private static final String DEFAULT_EMPTY = "********";
+    private final MissionService missionService;
 
     @Override
-    public ResponseEntity<byte[]> exportSingleMission(ExportMissionRequestDto requestDto) throws IOException {
-        try (ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
-            createMissionXls(requestDto, outputStream);
-            return XlsUtils.exportExcelFormat(outputStream, "mission_by_sheet");
-        } catch (IOException e) {
-            e.printStackTrace();
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-
-    private void createMissionXls(ExportMissionRequestDto requestDto, ByteArrayOutputStream outputStream)
-            throws IOException {
-        List<Mission> missionList = missionService.findAll();
-
-        try (Workbook workbook = new XSSFWorkbook()) {
-
-            for (Mission mission : missionList) {
-                Sheet sheet = workbook.createSheet(mission.getCode());
-                createTemplateHeader(sheet, mission, workbook);
-
-                XlsUtils.autoSizeColumns(sheet, 5);
-            }
-
-            workbook.write(outputStream);
-        }
-
-    }
-
-    private void createTemplateHeader(Sheet sheet, Mission mission, Workbook workbook) {
+    public void createMissionInformationTable(Sheet sheet, Mission mission, Workbook workbook) {
         int rowNum = 0;
         Row row = sheet.createRow(rowNum++);
+        sheet.setColumnWidth(0, 30 * 256);
+        sheet.setColumnWidth(1, 30 * 256);
+        CellStyle headerCellStyle = workbook.createCellStyle();
+        headerCellStyle.setAlignment(HorizontalAlignment.CENTER);
+        Font headerFont = workbook.createFont();
+        headerFont.setBold(true);
+        headerCellStyle.setFont(headerFont);
         row.createCell(0).setCellValue("FICHE MISSION");
+        row.getCell(0).setCellStyle(headerCellStyle);
         sheet.createRow(rowNum++);
 
         String[] headers = {
@@ -85,7 +62,7 @@ public class MissionSingleXlsExportServiceImpl implements MissionSingleXlsExport
 
         for (int i = 0; i < headers.length; i++) {
             row = sheet.createRow(rowNum++);
-            sheet.setColumnWidth(0, 20 * 256);
+
             setHeaderCell(row, 0, headers[i], workbook);
             CellStyle style = createValueStyle(workbook);
             // Use custom methods for different types of details, passing the mission object
@@ -119,7 +96,7 @@ public class MissionSingleXlsExportServiceImpl implements MissionSingleXlsExport
                     setTotalBandesPlanifiesCell(row, 1, mission, workbook, style);
                     break;
                 case "total photo planifiées":
-                    setTotalPhotoPlanifieesCell(row, 1, mission, workbook, style);
+                    setTotalPhotoPlanifieesCell(row, 1, mission, style);
                     break;
                 default:
                     setCellWithStyle(row, 1, DEFAULT_EMPTY, style);
@@ -141,28 +118,14 @@ public class MissionSingleXlsExportServiceImpl implements MissionSingleXlsExport
         cell.setCellStyle(style);
     }
 
-    private void setTotalBandesPlanifiesCell(Row row, int index, Mission mission, Workbook workbook, CellStyle style) {
-        int totalBande = mission.getBandes().size();
-        Cell cell = row.createCell(index);
-        cell.setCellStyle(style);
-        cell.setCellValue(totalBande);
-        if (totalBande == 0) {
-            if (mission.getDatePva() != null) {
-                style = XlsUtils.createForegroundColorStyle(workbook, IndexedColors.RED.getIndex());
-                cell.setCellStyle(style);
-            } else {
-                style = XlsUtils.createForegroundColorStyle(workbook, IndexedColors.YELLOW.getIndex());
-                cell.setCellStyle(style);
-            }
-
-        }
-    }
-
-    private void setTotalPhotoPlanifieesCell(Row row, int cellNum, Mission mission, Workbook workbook,
+    private void setTotalPhotoPlanifieesCell(Row row, int cellNum, Mission mission,
             CellStyle style) {
         Cell cell = row.createCell(cellNum);
         long totalBandePhotoPlan = missionService.countPhotoPlanificationsByMissionId(mission.getId());
-        cell.setCellValue(totalBandePhotoPlan);
+        cell.setCellValue(mission.getCapteur().getFormat().equals(CapteurFormat.MATRICIELLE.getDescription())
+                ? String.valueOf(totalBandePhotoPlan)
+                : DEFAULT_EMPTY);
+
         cell.setCellStyle(style);
     }
 
@@ -170,51 +133,6 @@ public class MissionSingleXlsExportServiceImpl implements MissionSingleXlsExport
         Cell cell = row.createCell(cellNum);
         cell.setCellValue(value);
         cell.setCellStyle(style);
-    }
-
-    private void setPlanifieStatusCell(Row row, int cellNum, Mission mission, CellStyle style) {
-        Cell cell = row.createCell(cellNum);
-        String status = !mission.getBandes().isEmpty() ? "OUI" : "NON";
-        cell.setCellValue(status);
-        cell.setCellStyle(style);
-    }
-
-    private void setCapteurCell(Row row, int cellNum, Mission mission, CellStyle style) {
-        Cell cell = row.createCell(cellNum);
-        cell.setCellValue(mission.getCapteur().getNom().toUpperCase());
-        cell.setCellStyle(style);
-    }
-
-    private void setHeaderCell(Row row, int cellNum, String value, Workbook workbook) {
-
-        Cell cell = row.createCell(cellNum);
-
-        cell.setCellValue(value.toUpperCase());
-        cell.setCellStyle(createHeaderStyle(workbook));
-    }
-
-    private CellStyle createHeaderStyle(Workbook workbook) {
-        CellStyle style = workbook.createCellStyle();
-        style.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());
-        style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-        style.setAlignment(HorizontalAlignment.LEFT);
-        style.setBorderBottom(BorderStyle.THIN);
-        style.setBorderTop(BorderStyle.THIN);
-        style.setBorderLeft(BorderStyle.THIN);
-        style.setBorderRight(BorderStyle.THIN);
-
-        return style;
-    }
-
-    private CellStyle createValueStyle(Workbook workbook) {
-        CellStyle style = workbook.createCellStyle();
-        style.setAlignment(HorizontalAlignment.CENTER);
-        style.setBorderBottom(BorderStyle.THIN);
-        style.setBorderTop(BorderStyle.THIN);
-        style.setBorderLeft(BorderStyle.THIN);
-        style.setBorderRight(BorderStyle.THIN);
-
-        return style;
     }
 
     private void setDatePvaCell(Row row, int cellNum, Mission mission, CellStyle style) {
@@ -244,4 +162,71 @@ public class MissionSingleXlsExportServiceImpl implements MissionSingleXlsExport
         cell.setCellStyle(style);
     }
 
+    private void setPlanifieStatusCell(Row row, int cellNum, Mission mission, CellStyle style) {
+        Cell cell = row.createCell(cellNum);
+        String status = !mission.getBandes().isEmpty() ? "OUI" : "NON";
+        cell.setCellValue(status);
+        cell.setCellStyle(style);
+    }
+
+    private void setCapteurCell(Row row, int cellNum, Mission mission, CellStyle style) {
+        Cell cell = row.createCell(cellNum);
+        cell.setCellValue(mission.getCapteur().getNom().toUpperCase());
+        cell.setCellStyle(style);
+    }
+
+    private void setHeaderCell(Row row, int cellNum, String value, Workbook workbook) {
+        Cell cell = row.createCell(cellNum);
+        cell.setCellValue(value.toUpperCase());
+        cell.setCellStyle(createHeaderStyle(workbook));
+    }
+
+    private CellStyle createHeaderStyle(Workbook workbook) {
+        CellStyle style = workbook.createCellStyle();
+        style.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());
+        style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+        style.setAlignment(HorizontalAlignment.LEFT);
+        style.setBorderBottom(BorderStyle.THIN);
+        style.setBorderTop(BorderStyle.THIN);
+        style.setBorderLeft(BorderStyle.THIN);
+        style.setBorderRight(BorderStyle.THIN);
+
+        return style;
+    }
+
+    public void setTotalBandesPlanifiesCell(Row row, int index, Mission mission, Workbook workbook,
+            CellStyle style) {
+        int totalBande = mission.getBandes().size();
+
+        Cell cell = row.createCell(index);
+        cell.setCellStyle(style);
+        cell.setCellValue(totalBande);
+        if (totalBande == 0) {
+            if (mission.getDatePva() != null) {
+                style = workbook.createCellStyle();
+                style.setFillForegroundColor(IndexedColors.RED.getIndex());
+                style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+                style.setAlignment(HorizontalAlignment.CENTER);
+                cell.setCellStyle(style);
+            } else {
+                style = workbook.createCellStyle();
+                style.setFillForegroundColor(IndexedColors.YELLOW.getIndex());
+                style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+                style.setAlignment(HorizontalAlignment.CENTER);
+                cell.setCellStyle(style);
+            }
+
+        }
+    }
+
+    private CellStyle createValueStyle(Workbook workbook) {
+        CellStyle style = workbook.createCellStyle();
+        style.setAlignment(HorizontalAlignment.CENTER);
+        style.setBorderBottom(BorderStyle.THIN);
+        style.setBorderTop(BorderStyle.THIN);
+        style.setBorderLeft(BorderStyle.THIN);
+        style.setBorderRight(BorderStyle.THIN);
+
+        return style;
+    }
 }
