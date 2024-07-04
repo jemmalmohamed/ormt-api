@@ -88,11 +88,6 @@ public class MissionServiceImpl extends BaseServiceImpl<Mission> implements Miss
         return missionRepository.save(mission);
     }
 
-    @Override
-    public void validateBeforeDelete(UUID id) {
-        validateMissionDependencies(id);
-    }
-
     private void updateFields(Mission mission, Mission entityToUpdate) {
         mission.setNom(entityToUpdate.getNom());
         mission.setCode(entityToUpdate.getCode());
@@ -100,10 +95,6 @@ public class MissionServiceImpl extends BaseServiceImpl<Mission> implements Miss
         mission.setSuperficie(entityToUpdate.getSuperficie());
         mission.setDescription(entityToUpdate.getDescription());
 
-    }
-
-    private void validateMissionDependencies(UUID id) {
-        // TODO : uncomment this code after implementing the mission module
     }
 
     @Override

@@ -1,5 +1,6 @@
 package ma.org.ancfcc.pva.modules.planaction.service;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -21,5 +22,7 @@ public interface PlanActionService extends BaseService<PlanAction> {
     PlanAction update(UUID id, PlanActionRequestDto planActionRequestDto);
 
     boolean existsById(UUID id);
+
+    List<String> findMissionCodesByPLanActionId(UUID planActionId);
 
 }

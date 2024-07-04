@@ -115,7 +115,7 @@ public class ShpFileService {
         return null;
     }
 
-    public static void validatePrjFile(File prjFile, Integer srid) {
+    public static void validatePrjFileIsWgs(File prjFile, Integer srid) {
         if (!srid.equals(4326)) {
             String message = MessageResponse.builder()
                     .title("Erreur de projection")
@@ -207,7 +207,7 @@ public class ShpFileService {
         return fileDirectory;
     }
 
-    public boolean isValidShapefile(File dir, String name) {
+    public static boolean isValidShapefile(File dir, String name) {
         if (dir == null || !dir.isDirectory()) {
             return false;
         }

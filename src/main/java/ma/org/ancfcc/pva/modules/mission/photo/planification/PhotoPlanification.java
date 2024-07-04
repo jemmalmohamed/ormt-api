@@ -2,6 +2,7 @@ package ma.org.ancfcc.pva.modules.mission.photo.planification;
 
 import org.locationtech.jts.geom.Point;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
@@ -15,6 +16,8 @@ import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 import ma.org.ancfcc.pva.core.commun.base.entity.BaseEntity;
 import ma.org.ancfcc.pva.modules.mission.bande.Bande;
+import ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution;
+import ma.org.ancfcc.pva.modules.mission.photo.orientation.PhotoOrientation;
 
 @Setter
 @Getter
@@ -30,13 +33,19 @@ public class PhotoPlanification extends BaseEntity {
 
     private String label;
 
-    private String commentaire;
+    private String observation;
 
     @Column(columnDefinition = "geometry(Point,4326")
-    private Point center;
+    private Point centre;
 
     @OneToOne
     @JoinColumn(name = "bande_id")
     private Bande bande;
+
+    @OneToOne(mappedBy = "photoPlanification", cascade = CascadeType.ALL)
+    private PhotoExecution photoExecution;
+
+    @OneToOne(mappedBy = "photoPlanification", cascade = CascadeType.ALL)
+    private PhotoOrientation photoOrientation;
 
 }

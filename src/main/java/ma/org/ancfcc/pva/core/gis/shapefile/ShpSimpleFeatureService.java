@@ -11,6 +11,7 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import ma.org.ancfcc.pva.core.gis.utils.GeometryConversion;
 import ma.org.ancfcc.pva.core.gis.utils.GeometryUtils;
+import ma.org.ancfcc.pva.core.utilities.StringHelper;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ShpSimpleFeatureService {
@@ -50,6 +51,11 @@ public class ShpSimpleFeatureService {
         }
         return null;
 
+    }
+
+    public static String getValueFromFeature(SimpleFeature feature, String attributName) {
+        String attributeName = findFeatureAttributIgnoreCase(feature, attributName);
+        return StringHelper.getSafeString(feature.getAttribute(attributeName));
     }
 
 }

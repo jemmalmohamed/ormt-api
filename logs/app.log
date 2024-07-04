@@ -1,0 +1,1266 @@
+2024-07-04 18:15:37.618 [restartedMain] INFO  ma.org.ancfcc.pva.PvaApplication - Starting PvaApplication using Java 22.0.1 with PID 1686198 (/home/jemmal/dev/ancfcc/pva/ancfcc-pva-api/target/classes started by jemmal in /home/jemmal/dev/ancfcc/pva/ancfcc-pva-api)
+2024-07-04 18:15:37.619 [restartedMain] INFO  ma.org.ancfcc.pva.PvaApplication - The following 1 profile is active: "dev"
+2024-07-04 18:15:39.112 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-07-04 18:15:39.560 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-04 18:15:39.561 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-04 18:15:39.594 [pool-4-thread-1] ERROR m.o.a.p.m.m.s.e.MissionExecutionServiceImpl - Error while validating prj file: org.springframework.dao.InvalidDataAccessApiUsageException: EntityManagerFactory is closed
+java.util.concurrent.CompletionException: org.springframework.dao.InvalidDataAccessApiUsageException: EntityManagerFactory is closed
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1807)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.springframework.dao.InvalidDataAccessApiUsageException: EntityManagerFactory is closed
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:368)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:246)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy4/jdk.proxy4.$Proxy203.findPhotoPlanificationByNomAndBandeNomAndMissionCode(Unknown Source)
+	at ma.org.ancfcc.pva.modules.mission.photo.planification.service.PhotoPlanificationServiceImpl.findPhotoPlanificationByNomAndBandeNomAndMissionCode(PhotoPlanificationServiceImpl.java:112)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+	at ma.org.ancfcc.pva.modules.mission.photo.planification.service.PhotoPlanificationServiceImpl$$SpringCGLIB$$0.findPhotoPlanificationByNomAndBandeNomAndMissionCode(<generated>)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.processMissionEOFeature(MissionExecutionServiceImpl.java:265)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.lambda$3(MissionExecutionServiceImpl.java:252)
+	at ma.org.ancfcc.pva.core.threads.ThreadService.lambda$1(ThreadService.java:23)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	... 3 common frames omitted
+Caused by: java.lang.IllegalStateException: EntityManagerFactory is closed
+	at org.hibernate.internal.SessionFactoryImpl.validateNotClosed(SessionFactoryImpl.java:695)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:753)
+	at org.hibernate.internal.SessionFactoryImpl.createEntityManager(SessionFactoryImpl.java:165)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:519)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:735)
+	at jdk.proxy4/jdk.proxy4.$Proxy171.createEntityManager(Unknown Source)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:313)
+	at jdk.proxy4/jdk.proxy4.$Proxy176.createQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.createJpaQuery(AbstractStringBasedJpaQuery.java:184)
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.doCreateQuery(AbstractStringBasedJpaQuery.java:124)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:243)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:223)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:152)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:140)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 20 common frames omitted
+2024-07-04 18:15:39.597 [restartedMain] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: Fin chargement données niveau 2 .
+2024-07-04 18:15:39.601 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-07-04 18:15:39.758 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2024-07-04 18:15:39.795 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection ConnectionID:11 ClientConnectionId: 1ac6ce50-0d46-4a30-b60a-98fd8e48d581
+2024-07-04 18:15:39.796 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2024-07-04 18:15:39.799 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlserver://localhost:1431;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=false;disableStatementPooling=true;databaseName=pva;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite; (Microsoft SQL Server 16.0)
+2024-07-04 18:15:39.816 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.006s)
+2024-07-04 18:15:39.830 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema [dbo]: 1.1
+2024-07-04 18:15:39.832 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema [dbo] is up to date. No migration necessary.
+2024-07-04 18:15:39.919 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-04 18:15:42.329 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-04 18:15:42.986 [restartedMain] INFO  ma.org.ancfcc.pva.PvaApplication - Started PvaApplication in 5.512 seconds (process running for 278.975)
+2024-07-04 18:15:43.007 [restartedMain] INFO  m.o.a.p.s.c.k.KeycloakClientSetupRunner - ### KEYCLOAK: Skipping keycloak client seeding
+2024-07-04 18:15:43.010 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Resetting database...
+2024-07-04 18:15:43.012 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Checked and deleted records if table exists: mission_objet
+2024-07-04 18:15:43.013 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Checked and deleted records if table exists: photo_orientation
+2024-07-04 18:15:43.134 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Checked and deleted records if table exists: photo_execution
+2024-07-04 18:15:43.217 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Checked and deleted records if table exists: photo_planification
+2024-07-04 18:15:43.229 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Checked and deleted records if table exists: scan_execution
+2024-07-04 18:15:43.241 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Checked and deleted records if table exists: bande
+2024-07-04 18:15:43.243 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Checked and deleted records if table exists: analogique_attribut
+2024-07-04 18:15:43.244 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Checked and deleted records if table exists: lidar_attribut
+2024-07-04 18:15:43.246 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Checked and deleted records if table exists: numerique_attribut
+2024-07-04 18:15:43.248 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Checked and deleted records if table exists: objet
+2024-07-04 18:15:43.252 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Checked and deleted records if table exists: mission
+2024-07-04 18:15:43.255 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Checked and deleted records if table exists: plan_action
+2024-07-04 18:15:43.258 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Checked and deleted records if table exists: organisme
+2024-07-04 18:15:43.260 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Checked and deleted records if table exists: avion
+2024-07-04 18:15:43.263 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Checked and deleted records if table exists: capteur
+2024-07-04 18:15:43.263 [restartedMain] WARN  m.o.a.p.s.d.ResetServicesAndDatabase - ### DATABASE: Database reset successfully.
+2024-07-04 18:15:43.446 [restartedMain] INFO  m.o.a.p.s.c.k.KeycloakUserSetupRunner - ### KEYCLOAK: Skipping keycloak users seeding
+2024-07-04 18:15:43.660 [restartedMain] INFO  m.o.a.p.s.c.k.a.KeycloakAuthorizationResourceSetupRunner - ### KEYCLOAK: Skipping keycloak resource seeding
+2024-07-04 18:15:43.685 [restartedMain] INFO  m.o.a.p.s.d.m.MissionLevelOneSeeder - ### DATA: Début chargement données mission format shapefiles...
+2024-07-04 18:15:43.700 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:43.765 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:43.799 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:43.839 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:43.877 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:43.919 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:43.957 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:43.991 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.024 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.057 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.099 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.135 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.167 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.204 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.234 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.263 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.298 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.332 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.366 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.398 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.431 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.463 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.497 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.525 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.556 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.592 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.632 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.661 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.687 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.716 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.743 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.768 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.795 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.819 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.849 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.880 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.911 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.948 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:44.978 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:45.004 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:45.029 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:45.059 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:45.089 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:45.121 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:45.143 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:45.168 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:45.197 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:45.227 [pool-7-thread-1] INFO  m.o.a.p.m.m.s.i.MissionImportServiceImpl - Creating mission from shapefile
+2024-07-04 18:15:45.260 [restartedMain] INFO  m.o.a.p.s.d.m.MissionLevelOneSeeder - ### DATA: Fin chargement données mission format shapefiles...
+2024-07-04 18:15:45.260 [restartedMain] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: Début chargement données niveau 2  ...
+2024-07-04 18:15:45.288 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_11
+2024-07-04 18:15:45.288 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD50_06
+2024-07-04 18:15:45.288 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_28
+2024-07-04 18:15:45.288 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD50_04
+2024-07-04 18:15:45.288 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_36
+2024-07-04 18:15:45.288 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_10
+2024-07-04 18:15:45.288 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_35
+2024-07-04 18:15:45.288 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD50_02
+2024-07-04 18:15:45.288 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_46
+2024-07-04 18:15:45.291 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD20_13
+2024-07-04 18:15:45.467 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-03-2023 start
+2024-07-04 18:15:45.469 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: oued zem.shp
+2024-07-04 18:15:45.469 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: oued zem.prj
+2024-07-04 18:15:45.469 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: oued zem.dbf
+2024-07-04 18:15:45.469 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: oued zem.shx
+2024-07-04 18:15:45.491 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 20-03-2023 start
+2024-07-04 18:15:45.491 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-05-2023 start
+2024-07-04 18:15:45.491 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD50_06).shp
+2024-07-04 18:15:45.491 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Bni Boufrah (23_GSD40_10).dbf
+2024-07-04 18:15:45.491 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD50_06).dbf
+2024-07-04 18:15:45.491 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Bni Boufrah (23_GSD40_10).prj
+2024-07-04 18:15:45.491 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Bni Boufrah (23_GSD40_10).shp
+2024-07-04 18:15:45.491 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD50_06).shx
+2024-07-04 18:15:45.492 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD50_06).prj
+2024-07-04 18:15:45.491 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Bni Boufrah (23_GSD40_10).shx
+2024-07-04 18:15:45.525 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 03-04-2023 start
+2024-07-04 18:15:45.526 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Al_Jadida (23_GSD40_28).shp
+2024-07-04 18:15:45.526 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Al_Jadida (23_GSD40_28).prj
+2024-07-04 18:15:45.526 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Al_Jadida (23_GSD40_28).shx
+2024-07-04 18:15:45.526 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Al_Jadida (23_GSD40_28).dbf
+2024-07-04 18:15:45.551 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 10-05-2023 start
+2024-07-04 18:15:45.552 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Hoceima (23_GSD40_11).shx
+2024-07-04 18:15:45.552 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Hoceima (23_GSD40_11).prj
+2024-07-04 18:15:45.552 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Hoceima (23_GSD40_11).shp
+2024-07-04 18:15:45.552 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Hoceima (23_GSD40_11).dbf
+2024-07-04 18:15:45.570 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-05-2023 done
+2024-07-04 18:15:45.570 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-05-2023 start
+2024-07-04 18:15:45.570 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Bni Boufrah (23_GSD40_10).dbf
+2024-07-04 18:15:45.571 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Bni Boufrah (23_GSD40_10).prj
+2024-07-04 18:15:45.571 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Bni Boufrah (23_GSD40_10).shp
+2024-07-04 18:15:45.571 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Bni Boufrah (23_GSD40_10).shx
+2024-07-04 18:15:45.614 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-07-2023 start
+2024-07-04 18:15:45.614 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Rabt Sbayta (23_GSD40_46).dbf
+2024-07-04 18:15:45.614 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Rabt Sbayta (23_GSD40_46).shp
+2024-07-04 18:15:45.615 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Rabt Sbayta (23_GSD40_46).shx
+2024-07-04 18:15:45.615 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Rabt Sbayta (23_GSD40_46).prj
+2024-07-04 18:15:45.616 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 18-08-2023 start
+2024-07-04 18:15:45.617 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Awnat (23_GSD40_36).dbf
+2024-07-04 18:15:45.617 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Awnat (23_GSD40_36).shx
+2024-07-04 18:15:45.617 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Awnat (23_GSD40_36).shp
+2024-07-04 18:15:45.617 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Awnat (23_GSD40_36).prj
+2024-07-04 18:15:45.652 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-04-2023 start
+2024-07-04 18:15:45.652 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Talsint (23_GSD50_04).shp
+2024-07-04 18:15:45.652 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Talsint (23_GSD50_04).prj
+2024-07-04 18:15:45.652 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Talsint (23_GSD50_04).dbf
+2024-07-04 18:15:45.652 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Talsint (23_GSD50_04).shx
+2024-07-04 18:15:45.668 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-04-2023 start
+2024-07-04 18:15:45.669 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Immouzzer_Marmoucha (23_GSD50_02).dbf
+2024-07-04 18:15:45.669 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Immouzzer_Marmoucha (23_GSD50_02).shp
+2024-07-04 18:15:45.669 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Immouzzer_Marmoucha (23_GSD50_02).shx
+2024-07-04 18:15:45.669 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Immouzzer_Marmoucha (23_GSD50_02).prj
+2024-07-04 18:15:45.686 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-03-2023 done
+2024-07-04 18:15:45.686 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-03-2023 start
+2024-07-04 18:15:45.686 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: oued zem.shp
+2024-07-04 18:15:45.686 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: oued zem.prj
+2024-07-04 18:15:45.686 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: oued zem.dbf
+2024-07-04 18:15:45.686 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 05-06-2023 start
+2024-07-04 18:15:45.686 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: oued zem.shx
+2024-07-04 18:15:45.686 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Laayoune (23_GSD20_13).shx
+2024-07-04 18:15:45.686 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Laayoune (23_GSD20_13).prj
+2024-07-04 18:15:45.687 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Laayoune (23_GSD20_13).shp
+2024-07-04 18:15:45.687 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Laayoune (23_GSD20_13).dbf
+2024-07-04 18:15:45.744 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-03-2023 done
+2024-07-04 18:15:45.746 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 20-03-2023 done
+2024-07-04 18:15:45.754 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD25_09
+2024-07-04 18:15:45.758 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_29
+2024-07-04 18:15:45.765 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-04-2023 done
+2024-07-04 18:15:45.765 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 13-04-2023 start
+2024-07-04 18:15:45.766 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Talsint (23_GSD50_04).shp
+2024-07-04 18:15:45.766 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Talsint (23_GSD50_04).prj
+2024-07-04 18:15:45.766 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Talsint (23_GSD50_04).dbf
+2024-07-04 18:15:45.766 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Talsint (23_GSD50_04).shx
+2024-07-04 18:15:45.771 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-05-2023 done
+2024-07-04 18:15:45.783 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_49
+2024-07-04 18:15:45.869 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 05-06-2023 done
+2024-07-04 18:15:45.869 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 06-06-2023 start
+2024-07-04 18:15:45.869 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Laayoune (23_GSD20_13).shx
+2024-07-04 18:15:45.869 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Laayoune (23_GSD20_13).prj
+2024-07-04 18:15:45.869 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Laayoune (23_GSD20_13).shp
+2024-07-04 18:15:45.869 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Laayoune (23_GSD20_13).dbf
+2024-07-04 18:15:45.889 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 03-04-2023 done
+2024-07-04 18:15:45.896 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD25_08
+2024-07-04 18:15:45.911 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 10-05-2023 done
+2024-07-04 18:15:45.912 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-05-2023 start
+2024-07-04 18:15:45.912 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Hoceima (23_GSD40_11).shx
+2024-07-04 18:15:45.912 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Hoceima (23_GSD40_11).prj
+2024-07-04 18:15:45.912 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Hoceima (23_GSD40_11).shp
+2024-07-04 18:15:45.912 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Hoceima (23_GSD40_11).dbf
+2024-07-04 18:15:45.925 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-04-2023 done
+2024-07-04 18:15:45.926 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 16-04-2023 start
+2024-07-04 18:15:45.926 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Immouzzer_Marmoucha (23_GSD50_02).dbf
+2024-07-04 18:15:45.926 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Immouzzer_Marmoucha (23_GSD50_02).shp
+2024-07-04 18:15:45.927 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Immouzzer_Marmoucha (23_GSD50_02).shx
+2024-07-04 18:15:45.927 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Immouzzer_Marmoucha (23_GSD50_02).prj
+2024-07-04 18:15:45.957 [Cleaner-0] WARN  o.jboss.resteasy.client.jaxrs.i18n - RESTEASY004687: Closing a class org.jboss.resteasy.client.jaxrs.engines.ManualClosingApacheHttpClient43Engine$CleanupAction instance for you. Please close clients yourself.
+2024-07-04 18:15:45.970 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-07-2023 done
+2024-07-04 18:15:45.970 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-07-2023 start
+2024-07-04 18:15:45.971 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Rabt Sbayta (23_GSD40_46).dbf
+2024-07-04 18:15:45.972 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Rabt Sbayta (23_GSD40_46).shp
+2024-07-04 18:15:45.972 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Rabt Sbayta (23_GSD40_46).shx
+2024-07-04 18:15:45.972 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Rabt Sbayta (23_GSD40_46).prj
+2024-07-04 18:15:46.046 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-05-2023 done
+2024-07-04 18:15:46.047 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-05-2023 start
+2024-07-04 18:15:46.050 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Hoceima (23_GSD40_11).shx
+2024-07-04 18:15:46.051 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Hoceima (23_GSD40_11).prj
+2024-07-04 18:15:46.054 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Hoceima (23_GSD40_11).shp
+2024-07-04 18:15:46.054 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Hoceima (23_GSD40_11).dbf
+2024-07-04 18:15:46.063 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 22-08-2023 start
+2024-07-04 18:15:46.064 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Settat (23_GSD40_29).shx
+2024-07-04 18:15:46.064 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Settat (23_GSD40_29).dbf
+2024-07-04 18:15:46.064 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Settat (23_GSD40_29).shp
+2024-07-04 18:15:46.064 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Settat (23_GSD40_29).prj
+2024-07-04 18:15:46.064 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 18-08-2023 done
+2024-07-04 18:15:46.077 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_13
+2024-07-04 18:15:46.107 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 13-04-2023 done
+2024-07-04 18:15:46.108 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-04-2023 start
+2024-07-04 18:15:46.108 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Talsint (23_GSD50_04).shp
+2024-07-04 18:15:46.108 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Talsint (23_GSD50_04).prj
+2024-07-04 18:15:46.108 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Talsint (23_GSD50_04).dbf
+2024-07-04 18:15:46.108 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Talsint (23_GSD50_04).shx
+2024-07-04 18:15:46.110 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-05-2023 done
+2024-07-04 18:15:46.127 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_26
+2024-07-04 18:15:46.183 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-07-2023 done
+2024-07-04 18:15:46.191 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_44
+2024-07-04 18:15:46.202 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 16-04-2023 done
+2024-07-04 18:15:46.211 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_42
+2024-07-04 18:15:46.219 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 16-07-2023 start
+2024-07-04 18:15:46.219 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Bouchwaymiya (23_GSD40_49).dbf
+2024-07-04 18:15:46.219 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Bouchwaymiya (23_GSD40_49).shx
+2024-07-04 18:15:46.219 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Bouchwaymiya (23_GSD40_49).prj
+2024-07-04 18:15:46.219 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Bouchwaymiya (23_GSD40_49).shp
+2024-07-04 18:15:46.231 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-04-2023 done
+2024-07-04 18:15:46.243 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD25_05
+2024-07-04 18:15:46.247 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 06-06-2023 done
+2024-07-04 18:15:46.260 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_27
+2024-07-04 18:15:46.269 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-05-2023 start
+2024-07-04 18:15:46.269 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Nador (23_GSD40_13) Reduite.dbf
+2024-07-04 18:15:46.270 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Nador (23_GSD40_13) Reduite.shp
+2024-07-04 18:15:46.270 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Nador (23_GSD40_13) Reduite.shx
+2024-07-04 18:15:46.270 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Nador (23_GSD40_13) Reduite.prj
+2024-07-04 18:15:46.350 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 21-08-2023 start
+2024-07-04 18:15:46.350 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Gara (23_GSD40_26).prj
+2024-07-04 18:15:46.350 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Gara (23_GSD40_26).shp
+2024-07-04 18:15:46.350 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Gara (23_GSD40_26).dbf
+2024-07-04 18:15:46.350 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Gara (23_GSD40_26).shx
+2024-07-04 18:15:46.361 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 22-08-2023 done
+2024-07-04 18:15:46.376 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD20_11
+2024-07-04 18:15:46.507 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 02-08-2023 start
+2024-07-04 18:15:46.508 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azhiliga (23_GSD40_27).dbf
+2024-07-04 18:15:46.508 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azhiliga (23_GSD40_27).shp
+2024-07-04 18:15:46.508 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azhiliga (23_GSD40_27).shx
+2024-07-04 18:15:46.508 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azhiliga (23_GSD40_27).prj
+2024-07-04 18:15:46.550 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 10-06-2023 start
+2024-07-04 18:15:46.551 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Tarfaya (23_GSD20_11).shx
+2024-07-04 18:15:46.552 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Tarfaya (23_GSD20_11).shp
+2024-07-04 18:15:46.552 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Tarfaya (23_GSD20_11).dbf
+2024-07-04 18:15:46.552 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Tarfaya (23_GSD20_11).prj
+2024-07-04 18:15:46.559 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-05-2023 done
+2024-07-04 18:15:46.672 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_31
+2024-07-04 18:15:46.886 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-06-2023 start
+2024-07-04 18:15:46.886 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Awfist  (23_GSD40_44).shx
+2024-07-04 18:15:46.886 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Awfist  (23_GSD40_44).prj
+2024-07-04 18:15:46.886 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Awfist  (23_GSD40_44).shp
+2024-07-04 18:15:46.886 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Awfist  (23_GSD40_44).dbf
+2024-07-04 18:15:47.135 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 16-07-2023 done
+2024-07-04 18:15:47.143 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 09-06-2023 start
+2024-07-04 18:15:47.144 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Lemside (23_GSD40_42).prj
+2024-07-04 18:15:47.144 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Lemside (23_GSD40_42).shx
+2024-07-04 18:15:47.144 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Lemside (23_GSD40_42).shp
+2024-07-04 18:15:47.144 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Lemside (23_GSD40_42).dbf
+2024-07-04 18:15:47.146 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_gsd25_07
+2024-07-04 18:15:47.171 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 10-06-2023 done
+2024-07-04 18:15:47.209 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD25_10
+2024-07-04 18:15:47.280 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 21-08-2023 done
+2024-07-04 18:15:47.322 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_15
+2024-07-04 18:15:47.458 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 02-08-2023 done
+2024-07-04 18:15:47.478 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_gsd25_03
+2024-07-04 18:15:47.613 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-12-2023 start
+2024-07-04 18:15:47.613 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.dbf
+2024-07-04 18:15:47.614 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.prj
+2024-07-04 18:15:47.614 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.shp
+2024-07-04 18:15:47.614 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.shx
+2024-07-04 18:15:47.626 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 02-08-2023 start
+2024-07-04 18:15:47.626 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Moulay Bouazza (23_GSD40_31).dbf
+2024-07-04 18:15:47.627 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Moulay Bouazza (23_GSD40_31).prj
+2024-07-04 18:15:47.627 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Moulay Bouazza (23_GSD40_31).shx
+2024-07-04 18:15:47.627 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Moulay Bouazza (23_GSD40_31).shp
+2024-07-04 18:15:47.710 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 16-03-2023 start
+2024-07-04 18:15:47.711 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Khmisset (23_GSD40_15) DMC.shx
+2024-07-04 18:15:47.711 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Khmisset (23_GSD40_15) DMC.prj
+2024-07-04 18:15:47.711 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Khmisset (23_GSD40_15) DMC.shp
+2024-07-04 18:15:47.711 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Khmisset (23_GSD40_15) DMC.dbf
+2024-07-04 18:15:47.716 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 09-06-2023 done
+2024-07-04 18:15:47.716 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 08-06-2023 start
+2024-07-04 18:15:47.716 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Lemside (23_GSD40_42).prj
+2024-07-04 18:15:47.717 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Lemside (23_GSD40_42).shx
+2024-07-04 18:15:47.717 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Lemside (23_GSD40_42).shp
+2024-07-04 18:15:47.717 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Lemside (23_GSD40_42).dbf
+2024-07-04 18:15:47.742 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-06-2023 done
+2024-07-04 18:15:47.742 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-06-2023 start
+2024-07-04 18:15:47.742 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Awfist  (23_GSD40_44).shx
+2024-07-04 18:15:47.742 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Awfist  (23_GSD40_44).prj
+2024-07-04 18:15:47.742 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Awfist  (23_GSD40_44).shp
+2024-07-04 18:15:47.742 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Awfist  (23_GSD40_44).dbf
+2024-07-04 18:15:47.856 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 02-08-2023 done
+2024-07-04 18:15:47.856 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-03-2023 start
+2024-07-04 18:15:47.856 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Moulay Bouazza (23_GSD40_31).dbf
+2024-07-04 18:15:47.857 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Moulay Bouazza (23_GSD40_31).prj
+2024-07-04 18:15:47.857 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Moulay Bouazza (23_GSD40_31).shx
+2024-07-04 18:15:47.857 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Moulay Bouazza (23_GSD40_31).shp
+2024-07-04 18:15:48.439 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-06-2023 done
+2024-07-04 18:15:48.486 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_48
+2024-07-04 18:15:48.506 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-03-2023 done
+2024-07-04 18:15:48.590 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 03-12-2023 start
+2024-07-04 18:15:48.590 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.shp
+2024-07-04 18:15:48.590 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.dbf
+2024-07-04 18:15:48.590 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.shx
+2024-07-04 18:15:48.590 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.prj
+2024-07-04 18:15:48.632 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_gsd25_04
+2024-07-04 18:15:48.864 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 08-06-2023 done
+2024-07-04 18:15:48.871 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_47
+2024-07-04 18:15:49.362 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-12-2023 start
+2024-07-04 18:15:49.363 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).dbf
+2024-07-04 18:15:49.363 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).shx
+2024-07-04 18:15:49.363 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).shp
+2024-07-04 18:15:49.363 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).prj
+2024-07-04 18:15:49.852 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 09-11-2023 start
+2024-07-04 18:15:49.853 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_03) ADS80.shx
+2024-07-04 18:15:49.853 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_03) ADS80.dbf
+2024-07-04 18:15:49.853 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_03) ADS80.shp
+2024-07-04 18:15:49.853 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_03) ADS80.prj
+2024-07-04 18:15:49.869 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 17-07-2023 start
+2024-07-04 18:15:49.869 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Imlily (23_GSD40_48).dbf
+2024-07-04 18:15:49.869 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Imlily (23_GSD40_48).shp
+2024-07-04 18:15:49.869 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Imlily (23_GSD40_48).prj
+2024-07-04 18:15:49.869 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Imlily (23_GSD40_48).shx
+2024-07-04 18:15:50.108 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 17-07-2023 start
+2024-07-04 18:15:50.108 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Dakhla (23_GSD40_47).shp
+2024-07-04 18:15:50.108 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Dakhla (23_GSD40_47).prj
+2024-07-04 18:15:50.109 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Dakhla (23_GSD40_47).dbf
+2024-07-04 18:15:50.109 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Dakhla (23_GSD40_47).shx
+2024-07-04 18:15:50.412 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 17-07-2023 done
+2024-07-04 18:15:50.413 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 18-07-2023 start
+2024-07-04 18:15:50.413 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Dakhla (23_GSD40_47).shp
+2024-07-04 18:15:50.413 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Dakhla (23_GSD40_47).prj
+2024-07-04 18:15:50.413 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Dakhla (23_GSD40_47).dbf
+2024-07-04 18:15:50.414 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Dakhla (23_GSD40_47).shx
+2024-07-04 18:15:50.583 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 09-11-2023 done
+2024-07-04 18:15:50.583 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-11-2023 start
+2024-07-04 18:15:50.583 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_03) ADS80.shx
+2024-07-04 18:15:50.583 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_03) ADS80.dbf
+2024-07-04 18:15:50.583 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_03) ADS80.shp
+2024-07-04 18:15:50.584 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_03) ADS80.prj
+2024-07-04 18:15:50.884 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 03-12-2023 start
+2024-07-04 18:15:50.884 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_07).shp
+2024-07-04 18:15:50.884 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_07).shx
+2024-07-04 18:15:50.884 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_07).prj
+2024-07-04 18:15:50.884 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_07).dbf
+2024-07-04 18:15:51.211 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 20-11-2023 start
+2024-07-04 18:15:51.212 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_05)bis.prj
+2024-07-04 18:15:51.212 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_05)bis.shp
+2024-07-04 18:15:51.212 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_05)bis.shx
+2024-07-04 18:15:51.212 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_05)bis.dbf
+2024-07-04 18:15:51.217 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 08-11-2023 start
+2024-07-04 18:15:51.217 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.shx
+2024-07-04 18:15:51.218 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.dbf
+2024-07-04 18:15:51.218 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.prj
+2024-07-04 18:15:51.218 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.shp
+2024-07-04 18:15:51.266 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-11-2023 done
+2024-07-04 18:15:51.267 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 10-11-2023 start
+2024-07-04 18:15:51.267 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_03) ADS80.shx
+2024-07-04 18:15:51.267 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_03) ADS80.dbf
+2024-07-04 18:15:51.267 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_03) ADS80.shp
+2024-07-04 18:15:51.267 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_03) ADS80.prj
+2024-07-04 18:15:51.284 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 18-07-2023 done
+2024-07-04 18:15:51.298 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD20_07
+2024-07-04 18:15:51.317 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 17-07-2023 done
+2024-07-04 18:15:51.333 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_40
+2024-07-04 18:15:51.379 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 03-12-2023 done
+2024-07-04 18:15:51.380 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 02-12-2023 start
+2024-07-04 18:15:51.380 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-04-2023 start
+2024-07-04 18:15:51.380 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_07).shp
+2024-07-04 18:15:51.380 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: khenifra.shp
+2024-07-04 18:15:51.380 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_07).shx
+2024-07-04 18:15:51.380 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: khenifra.dbf
+2024-07-04 18:15:51.380 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: khenifra.prj
+2024-07-04 18:15:51.380 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_07).prj
+2024-07-04 18:15:51.380 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_07).dbf
+2024-07-04 18:15:51.380 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: khenifra.shx
+2024-07-04 18:15:51.502 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 10-11-2023 done
+2024-07-04 18:15:51.502 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-11-2023 start
+2024-07-04 18:15:51.502 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_03) ADS80.shx
+2024-07-04 18:15:51.502 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_03) ADS80.dbf
+2024-07-04 18:15:51.502 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_03) ADS80.shp
+2024-07-04 18:15:51.502 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_03) ADS80.prj
+2024-07-04 18:15:51.613 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 10-06-2023 start
+2024-07-04 18:15:51.613 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Tarfaya (23_GSD40_40).prj
+2024-07-04 18:15:51.613 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Tarfaya (23_GSD40_40).shp
+2024-07-04 18:15:51.613 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Tarfaya (23_GSD40_40).shx
+2024-07-04 18:15:51.613 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Tarfaya (23_GSD40_40).dbf
+2024-07-04 18:15:51.702 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 02-12-2023 done
+2024-07-04 18:15:51.702 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 30-11-2023 start
+2024-07-04 18:15:51.702 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_07).shp
+2024-07-04 18:15:51.702 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_07).shx
+2024-07-04 18:15:51.702 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_07).prj
+2024-07-04 18:15:51.702 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_07).dbf
+2024-07-04 18:15:51.749 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-11-2023 done
+2024-07-04 18:15:51.765 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD20_12
+2024-07-04 18:15:51.777 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 10-06-2023 done
+2024-07-04 18:15:51.777 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 22-06-2023 start
+2024-07-04 18:15:51.777 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Tarfaya (23_GSD40_40).prj
+2024-07-04 18:15:51.777 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Tarfaya (23_GSD40_40).shp
+2024-07-04 18:15:51.777 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Tarfaya (23_GSD40_40).shx
+2024-07-04 18:15:51.778 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Tarfaya (23_GSD40_40).dbf
+2024-07-04 18:15:51.857 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 05-06-2023 start
+2024-07-04 18:15:51.858 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Es smara (23_GSD20_12).shx
+2024-07-04 18:15:51.858 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Es smara (23_GSD20_12).prj
+2024-07-04 18:15:51.858 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Es smara (23_GSD20_12).dbf
+2024-07-04 18:15:51.858 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Es smara (23_GSD20_12).shp
+2024-07-04 18:15:51.869 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 30-11-2023 done
+2024-07-04 18:15:51.869 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 29-11-2023 start
+2024-07-04 18:15:51.870 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_07).shp
+2024-07-04 18:15:51.870 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_07).shx
+2024-07-04 18:15:51.870 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_07).prj
+2024-07-04 18:15:51.870 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_07).dbf
+2024-07-04 18:15:51.930 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 22-06-2023 done
+2024-07-04 18:15:51.942 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_45
+2024-07-04 18:15:51.990 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 05-06-2023 done
+2024-07-04 18:15:52.006 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_12
+2024-07-04 18:15:52.123 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 29-11-2023 done
+2024-07-04 18:15:52.130 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_41
+2024-07-04 18:15:52.323 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-06-2023 start
+2024-07-04 18:15:52.323 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chtoukane  (23_GSD40_45)2.dbf
+2024-07-04 18:15:52.323 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chtoukane  (23_GSD40_45)2.shx
+2024-07-04 18:15:52.323 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chtoukane  (23_GSD40_45)2.prj
+2024-07-04 18:15:52.323 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chtoukane  (23_GSD40_45)2.shp
+2024-07-04 18:15:52.346 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 16-05-2023 start
+2024-07-04 18:15:52.346 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Kebdani (23_GSD40_12)Elargie.dbf
+2024-07-04 18:15:52.346 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Kebdani (23_GSD40_12)Elargie.shp
+2024-07-04 18:15:52.346 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Kebdani (23_GSD40_12)Elargie.shx
+2024-07-04 18:15:52.347 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Kebdani (23_GSD40_12)Elargie.prj
+2024-07-04 18:15:52.391 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 09-06-2023 start
+2024-07-04 18:15:52.392 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Laayoune (23_GSD40_41).shx
+2024-07-04 18:15:52.392 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Laayoune (23_GSD40_41).dbf
+2024-07-04 18:15:52.392 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Laayoune (23_GSD40_41).prj
+2024-07-04 18:15:52.392 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Laayoune (23_GSD40_41).shp
+2024-07-04 18:15:52.533 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-06-2023 done
+2024-07-04 18:15:52.534 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 17-06-2023 start
+2024-07-04 18:15:52.534 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chtoukane  (23_GSD40_45)2.dbf
+2024-07-04 18:15:52.534 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chtoukane  (23_GSD40_45)2.shx
+2024-07-04 18:15:52.535 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chtoukane  (23_GSD40_45)2.prj
+2024-07-04 18:15:52.535 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chtoukane  (23_GSD40_45)2.shp
+2024-07-04 18:15:52.538 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 09-06-2023 done
+2024-07-04 18:15:52.539 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 06-06-2023 start
+2024-07-04 18:15:52.539 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Laayoune (23_GSD40_41).shx
+2024-07-04 18:15:52.539 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Laayoune (23_GSD40_41).dbf
+2024-07-04 18:15:52.539 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Laayoune (23_GSD40_41).prj
+2024-07-04 18:15:52.539 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Laayoune (23_GSD40_41).shp
+2024-07-04 18:15:52.647 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 16-05-2023 done
+2024-07-04 18:15:52.647 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-05-2023 start
+2024-07-04 18:15:52.648 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Kebdani (23_GSD40_12)Elargie.dbf
+2024-07-04 18:15:52.648 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Kebdani (23_GSD40_12)Elargie.shp
+2024-07-04 18:15:52.648 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Kebdani (23_GSD40_12)Elargie.shx
+2024-07-04 18:15:52.648 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Kebdani (23_GSD40_12)Elargie.prj
+2024-07-04 18:15:52.675 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 06-06-2023 done
+2024-07-04 18:15:52.684 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_33
+2024-07-04 18:15:52.723 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 17-06-2023 done
+2024-07-04 18:15:52.733 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-05-2023 done
+2024-07-04 18:15:52.734 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD50_03
+2024-07-04 18:15:52.752 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD25_01
+2024-07-04 18:15:52.863 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 10-03-2023 start
+2024-07-04 18:15:52.863 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boulaawane (23_GSD40_33).shx
+2024-07-04 18:15:52.863 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boulaawane (23_GSD40_33).dbf
+2024-07-04 18:15:52.863 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boulaawane (23_GSD40_33).shp
+2024-07-04 18:15:52.864 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boulaawane (23_GSD40_33).prj
+2024-07-04 18:15:53.035 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-04-2023 start
+2024-07-04 18:15:53.036 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Missour (23_GSD50_03).dbf
+2024-07-04 18:15:53.036 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Missour (23_GSD50_03).prj
+2024-07-04 18:15:53.036 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Missour (23_GSD50_03).shx
+2024-07-04 18:15:53.036 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Missour (23_GSD50_03).shp
+2024-07-04 18:15:53.106 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 10-03-2023 done
+2024-07-04 18:15:53.177 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_50
+2024-07-04 18:15:53.808 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-04-2023 done
+2024-07-04 18:15:53.808 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-04-2023 start
+2024-07-04 18:15:53.808 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Missour (23_GSD50_03).dbf
+2024-07-04 18:15:53.809 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Missour (23_GSD50_03).prj
+2024-07-04 18:15:53.809 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Missour (23_GSD50_03).shx
+2024-07-04 18:15:53.809 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Missour (23_GSD50_03).shp
+2024-07-04 18:15:54.539 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 26-10-2023 start
+2024-07-04 18:15:54.539 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_01).shx
+2024-07-04 18:15:54.539 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_01).prj
+2024-07-04 18:15:54.539 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_01).dbf
+2024-07-04 18:15:54.539 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_01).shp
+2024-07-04 18:15:54.586 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-04-2023 done
+2024-07-04 18:15:54.591 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  22_GSD20_14
+2024-07-04 18:15:54.658 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 31-03-2023 start
+2024-07-04 18:15:54.658 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azrou (22_GSD20_14).shp
+2024-07-04 18:15:54.658 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azrou (22_GSD20_14).prj
+2024-07-04 18:15:54.658 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azrou (22_GSD20_14).shx
+2024-07-04 18:15:54.658 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azrou (22_GSD20_14).dbf
+2024-07-04 18:15:54.682 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 20-07-2023 start
+2024-07-04 18:15:54.682 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Lemhayriz (23_GSD40_50).shx
+2024-07-04 18:15:54.683 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Lemhayriz (23_GSD40_50).prj
+2024-07-04 18:15:54.683 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Lemhayriz (23_GSD40_50).dbf
+2024-07-04 18:15:54.683 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Lemhayriz (23_GSD40_50).shp
+2024-07-04 18:15:55.038 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 20-07-2023 done
+2024-07-04 18:15:55.044 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_43
+2024-07-04 18:15:55.294 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-06-2023 start
+2024-07-04 18:15:55.295 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boujdour  (23_GSD40_43).prj
+2024-07-04 18:15:55.295 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boujdour  (23_GSD40_43).shp
+2024-07-04 18:15:55.295 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boujdour  (23_GSD40_43).dbf
+2024-07-04 18:15:55.295 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boujdour  (23_GSD40_43).shx
+2024-07-04 18:15:55.358 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-06-2023 done
+2024-07-04 18:15:55.358 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-06-2023 start
+2024-07-04 18:15:55.358 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boujdour (23_GSD40_43).dbf
+2024-07-04 18:15:55.359 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boujdour (23_GSD40_43).shp
+2024-07-04 18:15:55.359 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boujdour (23_GSD40_43).shx
+2024-07-04 18:15:55.359 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boujdour (23_GSD40_43).prj
+2024-07-04 18:15:55.513 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-06-2023 done
+2024-07-04 18:15:55.513 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-06-2023 start
+2024-07-04 18:15:55.514 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boujdour  (23_GSD40_43).prj
+2024-07-04 18:15:55.514 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boujdour  (23_GSD40_43).shp
+2024-07-04 18:15:55.514 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boujdour  (23_GSD40_43).dbf
+2024-07-04 18:15:55.514 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boujdour  (23_GSD40_43).shx
+2024-07-04 18:15:55.770 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-06-2023 done
+2024-07-04 18:15:55.776 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_34
+2024-07-04 18:15:55.926 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-03-2023 start
+2024-07-04 18:15:55.926 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Khouribga (23_GSD40_34).prj
+2024-07-04 18:15:55.926 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Khouribga (23_GSD40_34).shp
+2024-07-04 18:15:55.926 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Khouribga (23_GSD40_34).shx
+2024-07-04 18:15:55.926 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Khouribga (23_GSD40_34).dbf
+2024-07-04 18:15:56.010 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-03-2023 done
+2024-07-04 18:15:56.010 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 06-03-2023 start
+2024-07-04 18:15:56.010 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Khouribga (23_GSD40_34).prj
+2024-07-04 18:15:56.010 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Khouribga (23_GSD40_34).shp
+2024-07-04 18:15:56.010 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Khouribga (23_GSD40_34).shx
+2024-07-04 18:15:56.010 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Khouribga (23_GSD40_34).dbf
+2024-07-04 18:15:56.152 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 06-03-2023 done
+2024-07-04 18:15:56.163 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD20_05
+2024-07-04 18:15:56.298 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-04-2023 start
+2024-07-04 18:15:56.299 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Sefrou(23_GSD20_05).shp
+2024-07-04 18:15:56.299 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Sefrou(23_GSD20_05).prj
+2024-07-04 18:15:56.299 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Sefrou(23_GSD20_05).shx
+2024-07-04 18:15:56.299 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Sefrou(23_GSD20_05).dbf
+2024-07-04 18:15:58.908 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-04-2023 done
+2024-07-04 18:15:58.917 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD20_15
+2024-07-04 18:15:59.144 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-07-2023 start
+2024-07-04 18:15:59.144 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Dakhla (23_GSD20_15).shp
+2024-07-04 18:15:59.144 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Dakhla (23_GSD20_15).dbf
+2024-07-04 18:15:59.145 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Dakhla (23_GSD20_15).shx
+2024-07-04 18:15:59.145 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Dakhla (23_GSD20_15).prj
+2024-07-04 18:15:59.351 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 15-07-2023 done
+2024-07-04 18:15:59.351 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 16-07-2023 start
+2024-07-04 18:15:59.351 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Dakhla (23_GSD20_15).shp
+2024-07-04 18:15:59.352 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Dakhla (23_GSD20_15).dbf
+2024-07-04 18:15:59.352 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Dakhla (23_GSD20_15).shx
+2024-07-04 18:15:59.352 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Dakhla (23_GSD20_15).prj
+2024-07-04 18:15:59.451 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 16-07-2023 done
+2024-07-04 18:15:59.465 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  22_GSD20_15
+2024-07-04 18:15:59.636 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 31-03-2023 start
+2024-07-04 18:15:59.637 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boulmane (22_GSD20_15).prj
+2024-07-04 18:15:59.637 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boulmane (22_GSD20_15).shx
+2024-07-04 18:15:59.637 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boulmane (22_GSD20_15).shp
+2024-07-04 18:15:59.638 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boulmane (22_GSD20_15).dbf
+2024-07-04 18:16:00.186 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 31-03-2023 done
+2024-07-04 18:16:00.198 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD40_38
+2024-07-04 18:16:00.596 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 21-03-2023 start
+2024-07-04 18:16:00.597 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Marakech  (23_GSD40_38).dbf
+2024-07-04 18:16:00.597 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Marakech  (23_GSD40_38).shx
+2024-07-04 18:16:00.597 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Marakech  (23_GSD40_38).shp
+2024-07-04 18:16:00.597 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Marakech  (23_GSD40_38).prj
+2024-07-04 18:16:00.830 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-12-2023 done
+2024-07-04 18:16:00.830 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 09-12-2023 start
+2024-07-04 18:16:00.831 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).dbf
+2024-07-04 18:16:00.831 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).shx
+2024-07-04 18:16:00.831 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).shp
+2024-07-04 18:16:00.831 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).prj
+2024-07-04 18:16:01.006 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 21-03-2023 done
+2024-07-04 18:16:01.019 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD20_14
+2024-07-04 18:16:01.198 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-06-2023 start
+2024-07-04 18:16:01.199 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boujdour (23_GSD20_14).shp
+2024-07-04 18:16:01.199 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boujdour (23_GSD20_14).shx
+2024-07-04 18:16:01.199 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boujdour (23_GSD20_14).prj
+2024-07-04 18:16:01.199 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Boujdour (23_GSD20_14).dbf
+2024-07-04 18:16:01.394 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-06-2023 done
+2024-07-04 18:16:01.415 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement planification mission:  23_GSD20_08
+2024-07-04 18:16:01.555 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 20-03-2023 start
+2024-07-04 18:16:01.556 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD20_08).prj
+2024-07-04 18:16:01.556 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD20_08).shx
+2024-07-04 18:16:01.556 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD20_08).dbf
+2024-07-04 18:16:01.556 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD20_08).shp
+2024-07-04 18:16:01.804 [pool-10-thread-2] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 20-03-2023 done
+2024-07-04 18:16:05.109 [pool-10-thread-3] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 31-03-2023 done
+2024-07-04 18:16:07.469 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 08-11-2023 done
+2024-07-04 18:16:07.469 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 09-11-2023 start
+2024-07-04 18:16:07.469 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.shx
+2024-07-04 18:16:07.470 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.dbf
+2024-07-04 18:16:07.470 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.prj
+2024-07-04 18:16:07.470 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.shp
+2024-07-04 18:16:07.724 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 16-03-2023 done
+2024-07-04 18:16:07.724 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 23-03-2023 start
+2024-07-04 18:16:07.725 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Khmisset (23_GSD40_15) DMC.shx
+2024-07-04 18:16:07.725 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Khmisset (23_GSD40_15) DMC.prj
+2024-07-04 18:16:07.725 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Khmisset (23_GSD40_15) DMC.shp
+2024-07-04 18:16:07.725 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Khmisset (23_GSD40_15) DMC.dbf
+2024-07-04 18:16:09.530 [pool-10-thread-6] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-04-2023 done
+2024-07-04 18:16:11.079 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-12-2023 done
+2024-07-04 18:16:11.079 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 02-12-2023 start
+2024-07-04 18:16:11.080 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.dbf
+2024-07-04 18:16:11.080 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.prj
+2024-07-04 18:16:11.080 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.shp
+2024-07-04 18:16:11.080 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.shx
+2024-07-04 18:16:11.090 [pool-10-thread-8] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 23-03-2023 done
+2024-07-04 18:16:13.135 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 02-12-2023 done
+2024-07-04 18:16:13.135 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 30-11-2023 start
+2024-07-04 18:16:13.135 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.dbf
+2024-07-04 18:16:13.135 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.prj
+2024-07-04 18:16:13.135 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.shp
+2024-07-04 18:16:13.136 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.shx
+2024-07-04 18:16:21.302 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 09-12-2023 done
+2024-07-04 18:16:21.302 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-12-2023 start
+2024-07-04 18:16:21.303 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).dbf
+2024-07-04 18:16:21.303 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).shx
+2024-07-04 18:16:21.303 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).shp
+2024-07-04 18:16:21.303 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).prj
+2024-07-04 18:16:23.874 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 26-10-2023 done
+2024-07-04 18:16:23.875 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 19-10-2023 start
+2024-07-04 18:16:23.875 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).shx
+2024-07-04 18:16:23.875 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).shp
+2024-07-04 18:16:23.875 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).dbf
+2024-07-04 18:16:23.875 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).prj
+2024-07-04 18:16:35.104 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 30-11-2023 done
+2024-07-04 18:16:35.104 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 29-11-2023 start
+2024-07-04 18:16:35.105 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.dbf
+2024-07-04 18:16:35.105 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.prj
+2024-07-04 18:16:35.105 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.shp
+2024-07-04 18:16:35.105 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.shx
+2024-07-04 18:16:38.256 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 09-11-2023 done
+2024-07-04 18:16:38.256 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-11-2023 start
+2024-07-04 18:16:38.257 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.shx
+2024-07-04 18:16:38.257 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.dbf
+2024-07-04 18:16:38.257 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.prj
+2024-07-04 18:16:38.257 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.shp
+2024-07-04 18:16:39.236 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 03-12-2023 done
+2024-07-04 18:16:39.236 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 09-12-2023 start
+2024-07-04 18:16:39.236 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.shp
+2024-07-04 18:16:39.237 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.dbf
+2024-07-04 18:16:39.237 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.shx
+2024-07-04 18:16:39.237 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.prj
+2024-07-04 18:16:43.210 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 20-11-2023 done
+2024-07-04 18:16:43.210 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 19-11-2023 start
+2024-07-04 18:16:43.211 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_05).shx
+2024-07-04 18:16:43.211 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_05).prj
+2024-07-04 18:16:43.211 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_05).dbf
+2024-07-04 18:16:43.211 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_05).shp
+2024-07-04 18:16:50.162 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-11-2023 done
+2024-07-04 18:16:50.162 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 10-11-2023 start
+2024-07-04 18:16:50.163 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.shx
+2024-07-04 18:16:50.163 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.dbf
+2024-07-04 18:16:50.163 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.prj
+2024-07-04 18:16:50.163 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.shp
+2024-07-04 18:16:56.480 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-12-2023 done
+2024-07-04 18:16:56.481 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 10-12-2023 start
+2024-07-04 18:16:56.481 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).dbf
+2024-07-04 18:16:56.481 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).shx
+2024-07-04 18:16:56.481 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).shp
+2024-07-04 18:16:56.482 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).prj
+2024-07-04 18:16:56.623 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 29-11-2023 done
+2024-07-04 18:16:56.624 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 13-12-2023 start
+2024-07-04 18:16:56.624 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.dbf
+2024-07-04 18:16:56.624 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.prj
+2024-07-04 18:16:56.624 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.shp
+2024-07-04 18:16:56.624 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.shx
+2024-07-04 18:17:01.646 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 09-12-2023 done
+2024-07-04 18:17:01.646 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 04-12-2023 start
+2024-07-04 18:17:01.647 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.shp
+2024-07-04 18:17:01.647 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.dbf
+2024-07-04 18:17:01.647 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.shx
+2024-07-04 18:17:01.647 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.prj
+2024-07-04 18:17:04.059 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 19-10-2023 done
+2024-07-04 18:17:04.060 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-11-2023 start
+2024-07-04 18:17:04.060 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).shx
+2024-07-04 18:17:04.060 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).shp
+2024-07-04 18:17:04.060 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).dbf
+2024-07-04 18:17:04.060 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).prj
+2024-07-04 18:17:06.959 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-11-2023 done
+2024-07-04 18:17:06.960 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 17-10-2023 start
+2024-07-04 18:17:06.960 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).shx
+2024-07-04 18:17:06.960 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).shp
+2024-07-04 18:17:06.960 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).dbf
+2024-07-04 18:17:06.960 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).prj
+2024-07-04 18:17:11.295 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 19-11-2023 done
+2024-07-04 18:17:11.296 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 16-11-2023 start
+2024-07-04 18:17:11.296 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_06)bis.dbf
+2024-07-04 18:17:11.296 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_06)bis.prj
+2024-07-04 18:17:11.296 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_06)bis.shp
+2024-07-04 18:17:11.296 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_06)bis.shx
+2024-07-04 18:17:22.615 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 13-12-2023 done
+2024-07-04 18:17:22.615 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 08-12-2023 start
+2024-07-04 18:17:22.615 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.dbf
+2024-07-04 18:17:22.615 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.prj
+2024-07-04 18:17:22.615 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.shp
+2024-07-04 18:17:22.615 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_08) DMC90.shx
+2024-07-04 18:17:33.003 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 17-10-2023 done
+2024-07-04 18:17:33.003 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-10-2023 start
+2024-07-04 18:17:33.004 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).shx
+2024-07-04 18:17:33.004 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).shp
+2024-07-04 18:17:33.004 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).dbf
+2024-07-04 18:17:33.004 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).prj
+2024-07-04 18:17:35.478 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 10-12-2023 done
+2024-07-04 18:17:35.478 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 13-12-2023 start
+2024-07-04 18:17:35.478 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).dbf
+2024-07-04 18:17:35.478 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).shx
+2024-07-04 18:17:35.479 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).shp
+2024-07-04 18:17:35.479 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Azilal (23_GSD25_10).prj
+2024-07-04 18:17:35.532 [pool-10-thread-9] ERROR m.o.a.p.m.m.s.e.MissionExecutionServiceImpl - Error while creating execution from shapefile: More than one row with the given identifier was found: f413a3ac-38cf-4d11-8288-11526b871d43, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution
+org.springframework.orm.jpa.JpaSystemException: More than one row with the given identifier was found: f413a3ac-38cf-4d11-8288-11526b871d43, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:341)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy5/jdk.proxy5.$Proxy244.findPhotoPlanificationByLabelAndBandeId(Unknown Source)
+	at ma.org.ancfcc.pva.modules.mission.photo.planification.service.PhotoPlanificationServiceImpl.findPhotoPlanificationByLabelAndBandeId(PhotoPlanificationServiceImpl.java:106)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+	at ma.org.ancfcc.pva.modules.mission.photo.planification.service.PhotoPlanificationServiceImpl$$SpringCGLIB$$0.findPhotoPlanificationByLabelAndBandeId(<generated>)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.getPhotoPlanificationByBandeAndMission(MissionExecutionServiceImpl.java:208)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.createPhotoExecutionFromShpFeature(MissionExecutionServiceImpl.java:176)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.processNumeriqueFeature(MissionExecutionServiceImpl.java:126)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.processNumeriqueShapefiles(MissionExecutionServiceImpl.java:109)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.uploadNumeriqueExecutionShapefile(MissionExecutionServiceImpl.java:94)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl$$SpringCGLIB$$0.uploadNumeriqueExecutionShapefile(<generated>)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.uploadExecutionShapefiles(MissionLevelTwoSeeder.java:259)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processExecutionDateFolder(MissionLevelTwoSeeder.java:246)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processNumeriqueExecutionMissionFiles(MissionLevelTwoSeeder.java:233)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.handleMission(MissionLevelTwoSeeder.java:180)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.lambda$9(MissionLevelTwoSeeder.java:153)
+	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processNumeriqueMissionFolder(MissionLevelTwoSeeder.java:152)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.lambda$8(MissionLevelTwoSeeder.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.hibernate.HibernateException: More than one row with the given identifier was found: f413a3ac-38cf-4d11-8288-11526b871d43, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution
+	at org.hibernate.loader.ast.internal.SingleUniqueKeyEntityLoaderStandard.load(SingleUniqueKeyEntityLoaderStandard.java:146)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2645)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2637)
+	at org.hibernate.sql.results.graph.entity.internal.EntitySelectFetchByUniqueKeyInitializer.initializeInstance(EntitySelectFetchByUniqueKeyInitializer.java:96)
+	at org.hibernate.sql.results.internal.InitializersList.initializeInstance(InitializersList.java:73)
+	at org.hibernate.sql.results.internal.StandardRowReader.coordinateInitializers(StandardRowReader.java:113)
+	at org.hibernate.sql.results.internal.StandardRowReader.readRow(StandardRowReader.java:87)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:205)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:211)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$2(ConcreteSqmSelectQueryPlan.java:139)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:382)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:302)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:526)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:423)
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:555)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:418)
+	at jdk.proxy5/jdk.proxy5.$Proxy252.getSingleResult(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:223)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:152)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:140)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 36 common frames omitted
+2024-07-04 18:17:35.535 [pool-10-thread-9] ERROR m.o.a.p.m.m.s.e.MissionExecutionServiceImpl - Error processing shapefiles for mission 37a87986-b958-4ad9-a653-2db0a8e1894e: [title]Invalid Shapefile[/title][mainMessage]Error processing shapefile: More than one row with the given identifier was found: f413a3ac-38cf-4d11-8288-11526b871d43, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution[/mainMessage][subMessage]Please check the mission execution attributes[/subMessage]
+ma.org.ancfcc.pva.core.exceptions.handlers.ShapefileProcessingException: [title]Invalid Shapefile[/title][mainMessage]Error processing shapefile: More than one row with the given identifier was found: f413a3ac-38cf-4d11-8288-11526b871d43, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution[/mainMessage][subMessage]Please check the mission execution attributes[/subMessage]
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.processNumeriqueFeature(MissionExecutionServiceImpl.java:134)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.processNumeriqueShapefiles(MissionExecutionServiceImpl.java:109)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.uploadNumeriqueExecutionShapefile(MissionExecutionServiceImpl.java:94)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl$$SpringCGLIB$$0.uploadNumeriqueExecutionShapefile(<generated>)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.uploadExecutionShapefiles(MissionLevelTwoSeeder.java:259)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processExecutionDateFolder(MissionLevelTwoSeeder.java:246)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processNumeriqueExecutionMissionFiles(MissionLevelTwoSeeder.java:233)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.handleMission(MissionLevelTwoSeeder.java:180)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.lambda$9(MissionLevelTwoSeeder.java:153)
+	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processNumeriqueMissionFolder(MissionLevelTwoSeeder.java:152)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.lambda$8(MissionLevelTwoSeeder.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-07-04 18:17:35.536 [pool-10-thread-9] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 13-12-2023 done
+2024-07-04 18:17:35.670 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 04-12-2023 done
+2024-07-04 18:17:35.670 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 02-12-2023 start
+2024-07-04 18:17:35.670 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.shp
+2024-07-04 18:17:35.670 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.dbf
+2024-07-04 18:17:35.671 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.shx
+2024-07-04 18:17:35.671 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.prj
+2024-07-04 18:17:36.519 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 10-11-2023 done
+2024-07-04 18:17:36.519 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-11-2023 start
+2024-07-04 18:17:36.519 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.shx
+2024-07-04 18:17:36.519 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.dbf
+2024-07-04 18:17:36.519 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.prj
+2024-07-04 18:17:36.519 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Chichaoua (23_GSD25_04) DMC.shp
+2024-07-04 18:17:55.281 [pool-10-thread-4] ERROR m.o.a.p.m.m.s.e.MissionExecutionServiceImpl - Error while creating execution from shapefile: More than one row with the given identifier was found: 8fa11bba-014a-4821-b297-304673006c24, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution
+org.springframework.orm.jpa.JpaSystemException: More than one row with the given identifier was found: 8fa11bba-014a-4821-b297-304673006c24, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:341)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy5/jdk.proxy5.$Proxy244.findPhotoPlanificationByLabelAndBandeId(Unknown Source)
+	at ma.org.ancfcc.pva.modules.mission.photo.planification.service.PhotoPlanificationServiceImpl.findPhotoPlanificationByLabelAndBandeId(PhotoPlanificationServiceImpl.java:106)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+	at ma.org.ancfcc.pva.modules.mission.photo.planification.service.PhotoPlanificationServiceImpl$$SpringCGLIB$$0.findPhotoPlanificationByLabelAndBandeId(<generated>)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.getPhotoPlanificationByBandeAndMission(MissionExecutionServiceImpl.java:208)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.createPhotoExecutionFromShpFeature(MissionExecutionServiceImpl.java:176)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.processNumeriqueFeature(MissionExecutionServiceImpl.java:126)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.processNumeriqueShapefiles(MissionExecutionServiceImpl.java:109)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.uploadNumeriqueExecutionShapefile(MissionExecutionServiceImpl.java:94)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl$$SpringCGLIB$$0.uploadNumeriqueExecutionShapefile(<generated>)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.uploadExecutionShapefiles(MissionLevelTwoSeeder.java:259)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processExecutionDateFolder(MissionLevelTwoSeeder.java:246)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processNumeriqueExecutionMissionFiles(MissionLevelTwoSeeder.java:233)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.handleMission(MissionLevelTwoSeeder.java:180)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.lambda$9(MissionLevelTwoSeeder.java:153)
+	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processNumeriqueMissionFolder(MissionLevelTwoSeeder.java:152)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.lambda$8(MissionLevelTwoSeeder.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.hibernate.HibernateException: More than one row with the given identifier was found: 8fa11bba-014a-4821-b297-304673006c24, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution
+	at org.hibernate.loader.ast.internal.SingleUniqueKeyEntityLoaderStandard.load(SingleUniqueKeyEntityLoaderStandard.java:146)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2645)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2637)
+	at org.hibernate.sql.results.graph.entity.internal.EntitySelectFetchByUniqueKeyInitializer.initializeInstance(EntitySelectFetchByUniqueKeyInitializer.java:96)
+	at org.hibernate.sql.results.internal.InitializersList.initializeInstance(InitializersList.java:73)
+	at org.hibernate.sql.results.internal.StandardRowReader.coordinateInitializers(StandardRowReader.java:113)
+	at org.hibernate.sql.results.internal.StandardRowReader.readRow(StandardRowReader.java:87)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:205)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:211)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$2(ConcreteSqmSelectQueryPlan.java:139)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:382)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:302)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:526)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:423)
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:555)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:418)
+	at jdk.proxy5/jdk.proxy5.$Proxy252.getSingleResult(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:223)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:152)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:140)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 36 common frames omitted
+2024-07-04 18:17:55.283 [pool-10-thread-4] ERROR m.o.a.p.m.m.s.e.MissionExecutionServiceImpl - Error processing shapefiles for mission 5c384f1a-909e-4575-82b4-d3a4f2dd8f05: [title]Invalid Shapefile[/title][mainMessage]Error processing shapefile: More than one row with the given identifier was found: 8fa11bba-014a-4821-b297-304673006c24, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution[/mainMessage][subMessage]Please check the mission execution attributes[/subMessage]
+ma.org.ancfcc.pva.core.exceptions.handlers.ShapefileProcessingException: [title]Invalid Shapefile[/title][mainMessage]Error processing shapefile: More than one row with the given identifier was found: 8fa11bba-014a-4821-b297-304673006c24, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution[/mainMessage][subMessage]Please check the mission execution attributes[/subMessage]
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.processNumeriqueFeature(MissionExecutionServiceImpl.java:134)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.processNumeriqueShapefiles(MissionExecutionServiceImpl.java:109)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.uploadNumeriqueExecutionShapefile(MissionExecutionServiceImpl.java:94)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl$$SpringCGLIB$$0.uploadNumeriqueExecutionShapefile(<generated>)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.uploadExecutionShapefiles(MissionLevelTwoSeeder.java:259)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processExecutionDateFolder(MissionLevelTwoSeeder.java:246)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processNumeriqueExecutionMissionFiles(MissionLevelTwoSeeder.java:233)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.handleMission(MissionLevelTwoSeeder.java:180)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.lambda$9(MissionLevelTwoSeeder.java:153)
+	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processNumeriqueMissionFolder(MissionLevelTwoSeeder.java:152)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.lambda$8(MissionLevelTwoSeeder.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-07-04 18:17:55.283 [pool-10-thread-4] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 08-12-2023 done
+2024-07-04 18:18:00.905 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 02-12-2023 done
+2024-07-04 18:18:00.905 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 06-12-2023 start
+2024-07-04 18:18:00.905 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.shp
+2024-07-04 18:18:00.906 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.dbf
+2024-07-04 18:18:00.906 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.shx
+2024-07-04 18:18:00.906 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Ouarzazate (23_GSD25_09) DMC90.prj
+2024-07-04 18:18:06.728 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 16-11-2023 done
+2024-07-04 18:18:06.729 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 22-11-2023 start
+2024-07-04 18:18:06.729 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_05)bis.prj
+2024-07-04 18:18:06.729 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_05)bis.shp
+2024-07-04 18:18:06.729 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_05)bis.shx
+2024-07-04 18:18:06.729 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_05)bis.dbf
+2024-07-04 18:18:07.980 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-10-2023 done
+2024-07-04 18:18:07.980 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 13-10-2023 start
+2024-07-04 18:18:07.980 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).shx
+2024-07-04 18:18:07.980 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).shp
+2024-07-04 18:18:07.981 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).dbf
+2024-07-04 18:18:07.981 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).prj
+2024-07-04 18:18:18.341 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 13-10-2023 done
+2024-07-04 18:18:18.341 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 25-10-2023 start
+2024-07-04 18:18:18.341 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_01).shx
+2024-07-04 18:18:18.341 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_01).prj
+2024-07-04 18:18:18.341 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_01).dbf
+2024-07-04 18:18:18.341 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_01).shp
+2024-07-04 18:18:19.848 [pool-10-thread-5] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 11-11-2023 done
+2024-07-04 18:18:42.526 [pool-10-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 06-12-2023 done
+2024-07-04 18:18:49.360 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 25-10-2023 done
+2024-07-04 18:18:49.360 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 02-11-2023 start
+2024-07-04 18:18:49.360 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_01).shx
+2024-07-04 18:18:49.360 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_01).prj
+2024-07-04 18:18:49.360 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_01).dbf
+2024-07-04 18:18:49.360 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_01).shp
+2024-07-04 18:19:01.888 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 02-11-2023 done
+2024-07-04 18:19:01.888 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 01-11-2023 start
+2024-07-04 18:19:01.888 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_01).shx
+2024-07-04 18:19:01.888 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_01).prj
+2024-07-04 18:19:01.888 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_01).dbf
+2024-07-04 18:19:01.888 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_01).shp
+2024-07-04 18:19:02.710 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 22-11-2023 done
+2024-07-04 18:19:02.710 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 23-11-2023 start
+2024-07-04 18:19:02.710 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_05)bis.prj
+2024-07-04 18:19:02.711 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_05)bis.shp
+2024-07-04 18:19:02.711 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_05)bis.shx
+2024-07-04 18:19:02.711 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_05)bis.dbf
+2024-07-04 18:19:31.676 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 01-11-2023 done
+2024-07-04 18:19:31.676 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-10-2023 start
+2024-07-04 18:19:31.676 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).shx
+2024-07-04 18:19:31.676 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).shp
+2024-07-04 18:19:31.676 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).dbf
+2024-07-04 18:19:31.676 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: El Haouz (23_GSD25_02).prj
+2024-07-04 18:19:34.455 [pool-10-thread-7] ERROR m.o.a.p.m.m.s.e.MissionExecutionServiceImpl - Error while creating execution from shapefile: More than one row with the given identifier was found: 4c14d30c-3940-41b5-9d02-dde2c9980596, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution
+org.springframework.orm.jpa.JpaSystemException: More than one row with the given identifier was found: 4c14d30c-3940-41b5-9d02-dde2c9980596, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:341)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy5/jdk.proxy5.$Proxy244.findPhotoPlanificationByLabelAndBandeId(Unknown Source)
+	at ma.org.ancfcc.pva.modules.mission.photo.planification.service.PhotoPlanificationServiceImpl.findPhotoPlanificationByLabelAndBandeId(PhotoPlanificationServiceImpl.java:106)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+	at ma.org.ancfcc.pva.modules.mission.photo.planification.service.PhotoPlanificationServiceImpl$$SpringCGLIB$$0.findPhotoPlanificationByLabelAndBandeId(<generated>)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.getPhotoPlanificationByBandeAndMission(MissionExecutionServiceImpl.java:208)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.createPhotoExecutionFromShpFeature(MissionExecutionServiceImpl.java:176)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.processNumeriqueFeature(MissionExecutionServiceImpl.java:126)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.processNumeriqueShapefiles(MissionExecutionServiceImpl.java:109)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.uploadNumeriqueExecutionShapefile(MissionExecutionServiceImpl.java:94)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl$$SpringCGLIB$$0.uploadNumeriqueExecutionShapefile(<generated>)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.uploadExecutionShapefiles(MissionLevelTwoSeeder.java:259)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processExecutionDateFolder(MissionLevelTwoSeeder.java:246)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processNumeriqueExecutionMissionFiles(MissionLevelTwoSeeder.java:233)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.handleMission(MissionLevelTwoSeeder.java:180)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.lambda$9(MissionLevelTwoSeeder.java:153)
+	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processNumeriqueMissionFolder(MissionLevelTwoSeeder.java:152)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.lambda$8(MissionLevelTwoSeeder.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.hibernate.HibernateException: More than one row with the given identifier was found: 4c14d30c-3940-41b5-9d02-dde2c9980596, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution
+	at org.hibernate.loader.ast.internal.SingleUniqueKeyEntityLoaderStandard.load(SingleUniqueKeyEntityLoaderStandard.java:146)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2645)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2637)
+	at org.hibernate.sql.results.graph.entity.internal.EntitySelectFetchByUniqueKeyInitializer.initializeInstance(EntitySelectFetchByUniqueKeyInitializer.java:96)
+	at org.hibernate.sql.results.internal.InitializersList.initializeInstance(InitializersList.java:73)
+	at org.hibernate.sql.results.internal.StandardRowReader.coordinateInitializers(StandardRowReader.java:113)
+	at org.hibernate.sql.results.internal.StandardRowReader.readRow(StandardRowReader.java:87)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:205)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:211)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$2(ConcreteSqmSelectQueryPlan.java:139)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:382)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:302)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:526)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:423)
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:555)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:418)
+	at jdk.proxy5/jdk.proxy5.$Proxy252.getSingleResult(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:223)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:152)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:140)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 36 common frames omitted
+2024-07-04 18:19:34.456 [pool-10-thread-7] ERROR m.o.a.p.m.m.s.e.MissionExecutionServiceImpl - Error processing shapefiles for mission 730e0e02-be7c-4bb8-b351-661c5a3c3692: [title]Invalid Shapefile[/title][mainMessage]Error processing shapefile: More than one row with the given identifier was found: 4c14d30c-3940-41b5-9d02-dde2c9980596, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution[/mainMessage][subMessage]Please check the mission execution attributes[/subMessage]
+ma.org.ancfcc.pva.core.exceptions.handlers.ShapefileProcessingException: [title]Invalid Shapefile[/title][mainMessage]Error processing shapefile: More than one row with the given identifier was found: 4c14d30c-3940-41b5-9d02-dde2c9980596, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution[/mainMessage][subMessage]Please check the mission execution attributes[/subMessage]
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.processNumeriqueFeature(MissionExecutionServiceImpl.java:134)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.processNumeriqueShapefiles(MissionExecutionServiceImpl.java:109)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.uploadNumeriqueExecutionShapefile(MissionExecutionServiceImpl.java:94)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl$$SpringCGLIB$$0.uploadNumeriqueExecutionShapefile(<generated>)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.uploadExecutionShapefiles(MissionLevelTwoSeeder.java:259)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processExecutionDateFolder(MissionLevelTwoSeeder.java:246)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processNumeriqueExecutionMissionFiles(MissionLevelTwoSeeder.java:233)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.handleMission(MissionLevelTwoSeeder.java:180)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.lambda$9(MissionLevelTwoSeeder.java:153)
+	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.processNumeriqueMissionFolder(MissionLevelTwoSeeder.java:152)
+	at ma.org.ancfcc.pva.seeder.data.mission.MissionLevelTwoSeeder.lambda$8(MissionLevelTwoSeeder.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-07-04 18:19:34.456 [pool-10-thread-7] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 12-10-2023 done
+2024-07-04 18:19:41.239 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 23-11-2023 done
+2024-07-04 18:19:41.239 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-11-2023 start
+2024-07-04 18:19:41.239 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_06)bis.dbf
+2024-07-04 18:19:41.239 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_06)bis.prj
+2024-07-04 18:19:41.239 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_06)bis.shp
+2024-07-04 18:19:41.239 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_06)bis.shx
+2024-07-04 18:20:20.889 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 14-11-2023 done
+2024-07-04 18:20:20.889 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 18-11-2023 start
+2024-07-04 18:20:20.889 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_06)bis.dbf
+2024-07-04 18:20:20.889 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_06)bis.prj
+2024-07-04 18:20:20.889 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_06)bis.shp
+2024-07-04 18:20:20.890 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_06)bis.shx
+2024-07-04 18:21:06.920 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 18-11-2023 done
+2024-07-04 18:21:06.920 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 17-11-2023 start
+2024-07-04 18:21:06.920 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_06)bis.dbf
+2024-07-04 18:21:06.921 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_06)bis.prj
+2024-07-04 18:21:06.921 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_06)bis.shp
+2024-07-04 18:21:06.921 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier: Taroudannt (23_GSD25_06)bis.shx
+2024-07-04 18:21:59.594 [pool-10-thread-10] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement date : 17-11-2023 done
+2024-07-04 18:21:59.596 [pool-9-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier EO: eo-2023.dbf
+2024-07-04 18:21:59.596 [pool-9-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier EO: eo-2023.prj
+2024-07-04 18:21:59.596 [pool-9-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier EO: eo-2023.shp
+2024-07-04 18:21:59.596 [pool-9-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier EO: eo-2023.qmd
+2024-07-04 18:21:59.596 [pool-9-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier EO: eo-2023.shx
+2024-07-04 18:21:59.596 [pool-9-thread-1] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: chargement fichier EO: eo-2023.cpg
+2024-07-04 18:23:24.288 [pool-9-thread-1] ERROR m.o.a.p.m.m.s.e.MissionExecutionServiceImpl - Error while validating prj file: org.springframework.orm.jpa.JpaSystemException: More than one row with the given identifier was found: a8d53a80-6b1f-47c9-badc-ed1ebf3d04a2, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution
+java.util.concurrent.CompletionException: org.springframework.orm.jpa.JpaSystemException: More than one row with the given identifier was found: a8d53a80-6b1f-47c9-badc-ed1ebf3d04a2, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1807)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.springframework.orm.jpa.JpaSystemException: More than one row with the given identifier was found: a8d53a80-6b1f-47c9-badc-ed1ebf3d04a2, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:341)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy5/jdk.proxy5.$Proxy244.findPhotoPlanificationByNomAndBandeNomAndMissionCode(Unknown Source)
+	at ma.org.ancfcc.pva.modules.mission.photo.planification.service.PhotoPlanificationServiceImpl.findPhotoPlanificationByNomAndBandeNomAndMissionCode(PhotoPlanificationServiceImpl.java:112)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+	at ma.org.ancfcc.pva.modules.mission.photo.planification.service.PhotoPlanificationServiceImpl$$SpringCGLIB$$0.findPhotoPlanificationByNomAndBandeNomAndMissionCode(<generated>)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.processMissionEOFeature(MissionExecutionServiceImpl.java:265)
+	at ma.org.ancfcc.pva.modules.mission.service.execution.MissionExecutionServiceImpl.lambda$3(MissionExecutionServiceImpl.java:252)
+	at ma.org.ancfcc.pva.core.threads.ThreadService.lambda$1(ThreadService.java:23)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	... 3 common frames omitted
+Caused by: org.hibernate.HibernateException: More than one row with the given identifier was found: a8d53a80-6b1f-47c9-badc-ed1ebf3d04a2, for class: ma.org.ancfcc.pva.modules.mission.photo.execution.PhotoExecution
+	at org.hibernate.loader.ast.internal.SingleUniqueKeyEntityLoaderStandard.load(SingleUniqueKeyEntityLoaderStandard.java:146)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2645)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2637)
+	at org.hibernate.sql.results.graph.entity.internal.EntitySelectFetchByUniqueKeyInitializer.initializeInstance(EntitySelectFetchByUniqueKeyInitializer.java:96)
+	at org.hibernate.sql.results.internal.InitializersList.initializeInstance(InitializersList.java:73)
+	at org.hibernate.sql.results.internal.StandardRowReader.coordinateInitializers(StandardRowReader.java:113)
+	at org.hibernate.sql.results.internal.StandardRowReader.readRow(StandardRowReader.java:87)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:205)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:211)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$2(ConcreteSqmSelectQueryPlan.java:139)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:382)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:302)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:526)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:423)
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:555)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:418)
+	at jdk.proxy5/jdk.proxy5.$Proxy252.getSingleResult(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:223)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:152)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:140)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 20 common frames omitted
+2024-07-04 18:23:24.289 [restartedMain] INFO  m.o.a.p.s.d.m.MissionLevelTwoSeeder - ### DATA: Fin chargement données niveau 2 .

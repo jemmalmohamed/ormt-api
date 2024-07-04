@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -28,6 +27,8 @@ import ma.org.ancfcc.pva.modules.mission.service.imports.MissionImportService;
 @Order(10)
 public class MissionLevelOneSeeder implements CommandLineRunner {
 
+    private static final Integer WGS_SRID = 4326;
+
     @Value("${starter.database.seed}")
     private boolean seeding;
 
@@ -44,20 +45,20 @@ public class MissionLevelOneSeeder implements CommandLineRunner {
             return;
         }
 
-        List<String> yearFolderList = Arrays.asList(
-                "2013",
-                "2014",
-                "2015",
-                "2016",
-                "2017",
-                "2018",
-                "2019",
-                "2020",
-                "2021",
-                "2022",
-                "2023",
-                "2024");
-        // List<String> yearFolderList = Arrays.asList("2015");
+        List<String> yearFolderList = Arrays.asList("2023");
+        // List<String> yearFolderList = Arrays.asList(
+        // "2013",
+        // "2014",
+        // "2015",
+        // "2016",
+        // "2017",
+        // "2018",
+        // "2019",
+        // "2020",
+        // "2021",
+        // "2022",
+        // "2023",
+        // "2024");
 
         log.info("### DATA: Début chargement données mission format shapefiles...");
         processFolderList(yearFolderList);
@@ -85,7 +86,7 @@ public class MissionLevelOneSeeder implements CommandLineRunner {
             File[] filesArray = resourceDir.listFiles();
             List<File> shapefileComponents = Arrays.asList(filesArray);
             ShpFileService.validateShapefileComponents(shapefileComponents);
-            missionImportService.importMissionFromShapefile(shapefileComponents, 4326);
+            missionImportService.importMissionFromShapefile(shapefileComponents, WGS_SRID);
 
         } catch (IOException e) {
             log.error("### DATA: Error processing folder {}: {}", yearFolder, e.getMessage());

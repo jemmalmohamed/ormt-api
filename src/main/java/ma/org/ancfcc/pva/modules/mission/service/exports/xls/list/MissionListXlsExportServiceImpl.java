@@ -19,10 +19,13 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
 import ma.org.ancfcc.pva.core.commun.rest.queries.QueryParams;
+import ma.org.ancfcc.pva.core.utilities.XlsUtils;
 import ma.org.ancfcc.pva.modules.mission.dto.export.ExportMissionRequestDto;
 import ma.org.ancfcc.pva.modules.mission.dto.export.FieldXlsParams;
 import ma.org.ancfcc.pva.modules.mission.models.Mission;
@@ -37,6 +40,17 @@ public class MissionListXlsExportServiceImpl implements MissionListXlsExportServ
     private final MissionService missionService;
 
     private static final String DEFAULT_DATE_FORMAT = "dd/MM/yyyy";
+
+    @Override
+    public ResponseEntity<byte[]> exportMissionList(ExportMissionRequestDto requestDto) throws IOException {
+        try (ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
+            createMissionListTableXls(requestDto, outputStream);
+            return XlsUtils.exportExcelFormat(outputStream, "missions");
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 
     @Override
     public void createMissionListTableXls(ExportMissionRequestDto requestDto, ByteArrayOutputStream outputStream)

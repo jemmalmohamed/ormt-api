@@ -26,7 +26,8 @@ import ma.org.ancfcc.pva.modules.mission.dto.detail.MissionDetailDto;
 import ma.org.ancfcc.pva.modules.mission.dto.detail.MissionDetailDtoMapper;
 import ma.org.ancfcc.pva.modules.mission.dto.export.ExportMissionRequestDto;
 import ma.org.ancfcc.pva.modules.mission.models.Mission;
-import ma.org.ancfcc.pva.modules.mission.service.exports.xls.MissionXlsExportService;
+import ma.org.ancfcc.pva.modules.mission.service.exports.xls.list.MissionListXlsExportService;
+import ma.org.ancfcc.pva.modules.mission.service.exports.xls.single.MissionSingleXlsExportService;
 
 @RestController
 @RequestMapping("api/v1/missions")
@@ -35,7 +36,8 @@ public class MissionExportController extends BaseController<Mission> {
 
         private static final String ENTITY_NAME = "mission";
 
-        private final MissionXlsExportService missionXlsExportService;
+        private final MissionSingleXlsExportService missionSingleXlsExportService;
+        private final MissionListXlsExportService missionListXlsExportService;
         private final MissionDtoMapper missionDtoMapper;
         private final MissionDetailDtoMapper missionDetailMapper;
 
@@ -52,10 +54,10 @@ public class MissionExportController extends BaseController<Mission> {
 
                 switch (requestDto.getFormat()) {
                         case "xlsx":
-                                if (requestDto.isSingleSheet())
-                                        return missionXlsExportService.exportSingleMissionBySheet(requestDto);
-                                else {
-                                        return missionXlsExportService.exportMissionList(requestDto);
+                                if (requestDto.isSingleSheet()) {
+                                        return missionSingleXlsExportService.exportSingleMissionBySheet();
+                                } else {
+                                        return missionListXlsExportService.exportMissionList(requestDto);
                                 }
                         case "shp":
                                 // return exportExcelFormat(missionDtos);
@@ -88,10 +90,9 @@ public class MissionExportController extends BaseController<Mission> {
                 switch (requestDto.getFormat()) {
                         case "xlsx":
                                 if (requestDto.isSingleSheet()) {
-                                        return missionXlsExportService.exportSingleMissionBySheet(requestDto,
-                                                        requestParams);
+                                        return missionSingleXlsExportService.exportSingleMissionBySheet(requestParams);
                                 } else {
-                                        return missionXlsExportService.exportMissionList(requestDto);
+                                        return missionListXlsExportService.exportMissionList(requestDto);
                                 }
                         case "shp":
                                 // return exportExcelFormat(missionDt os);

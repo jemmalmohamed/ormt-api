@@ -38,7 +38,7 @@ public class Bande extends BaseEntity {
 
   private String label;
 
-  private String commentaire;
+  private String observation;
 
   @Column(columnDefinition = "geometry(LineString,4326")
   private LineString axePlanification;

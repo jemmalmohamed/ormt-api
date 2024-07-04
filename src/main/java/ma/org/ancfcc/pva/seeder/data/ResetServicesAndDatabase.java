@@ -47,6 +47,7 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
         deleteRecordsIfExists("photo_orientation");
         deleteRecordsIfExists("photo_execution");
         deleteRecordsIfExists("photo_planification");
+        deleteRecordsIfExists("scan_execution");
         deleteRecordsIfExists("bande");
         deleteRecordsIfExists("analogique_attribut");
         deleteRecordsIfExists("lidar_attribut");

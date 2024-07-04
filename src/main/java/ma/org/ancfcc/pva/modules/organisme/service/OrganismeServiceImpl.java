@@ -98,7 +98,7 @@ public class OrganismeServiceImpl extends BaseServiceImpl<Organisme> implements 
     }
 
     private void validateMissionDependencies(UUID id) {
-        List<String> missionList = organismeRepository.findMissionCodesByOrganismeId(id);
+        List<String> missionList = findMissionCodesByOrganismeId(id);
         if (!missionList.isEmpty()) {
 
             String message = MessageResponse.builder()
@@ -111,6 +111,10 @@ public class OrganismeServiceImpl extends BaseServiceImpl<Organisme> implements 
 
             throw new CannotDeleteException(message);
         }
+    }
+
+    public List<String> findMissionCodesByOrganismeId(UUID organismeId) {
+        return organismeRepository.findMissionCodesByOrganismeId(organismeId);
     }
 
 }

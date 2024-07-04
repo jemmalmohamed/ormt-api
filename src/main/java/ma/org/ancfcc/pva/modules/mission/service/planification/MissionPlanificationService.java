@@ -21,6 +21,6 @@ public interface MissionPlanificationService extends BaseService<Mission> {
 
     void removeMissionPlanification(UUID id);
 
-    void uploadAnalogiqueShapefile(List<File> shapefileComponentFiles, Integer srid) throws IOException;
+    void uploadAnalogiqueEOShapefile(List<File> shapefileComponentFiles, Integer srid) throws IOException;
 
 }

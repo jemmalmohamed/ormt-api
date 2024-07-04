@@ -1,7 +1,5 @@
 package ma.org.ancfcc.pva.core.commun.base.specification;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Date;
@@ -17,6 +15,7 @@ import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
 import lombok.AllArgsConstructor;
 import ma.org.ancfcc.pva.core.commun.rest.responses.MessageResponse;
+import ma.org.ancfcc.pva.core.utilities.DateUtils;
 
 @AllArgsConstructor
 public class GenericSpecification<T> implements Specification<T> {
@@ -86,8 +85,8 @@ public class GenericSpecification<T> implements Specification<T> {
                 return criteriaBuilder.like(criteriaBuilder.lower(path.as(String.class)),
                         "%" + value.toString().toLowerCase() + "%");
             case "between":
-                Date lowerDate = parseDate(value.toString());
-                Date upperDate = parseDate(upperValue.toString());
+                Date lowerDate = DateUtils.parseDate(value.toString());
+                Date upperDate = DateUtils.parseDate(upperValue.toString());
                 return criteriaBuilder.between(path.<Date>as(Date.class), lowerDate, upperDate);
             default:
                 String message = MessageResponse.builder()
@@ -104,15 +103,15 @@ public class GenericSpecification<T> implements Specification<T> {
         switch (operation) {
 
             case "=":
-                return criteriaBuilder.equal(path.get(key), parseDate(value.toString()));
+                return criteriaBuilder.equal(path.get(key), DateUtils.parseDate(value.toString()));
             case ">":
-                return criteriaBuilder.greaterThan(path.<Date>get(key), parseDate(value.toString()));
+                return criteriaBuilder.greaterThan(path.<Date>get(key), DateUtils.parseDate(value.toString()));
             case "<":
-                return criteriaBuilder.lessThan(path.<Date>get(key), parseDate(value.toString()));
+                return criteriaBuilder.lessThan(path.<Date>get(key), DateUtils.parseDate(value.toString()));
             case ">=":
-                return criteriaBuilder.greaterThanOrEqualTo(path.<Date>get(key), parseDate(value.toString()));
+                return criteriaBuilder.greaterThanOrEqualTo(path.<Date>get(key), DateUtils.parseDate(value.toString()));
             case "<=":
-                return criteriaBuilder.lessThanOrEqualTo(path.<Date>get(key), parseDate(value.toString()));
+                return criteriaBuilder.lessThanOrEqualTo(path.<Date>get(key), DateUtils.parseDate(value.toString()));
             default:
                 return null;
         }
@@ -124,21 +123,4 @@ public class GenericSpecification<T> implements Specification<T> {
                                                  // etc. based on your date type
     }
 
-    // Method to parse string into Date
-    private Date parseDate(String dateStr) {
-        try {
-            // Adjust the format as necessary
-            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-            return formatter.parse(dateStr);
-        } catch (ParseException e) {
-
-            String message = MessageResponse.builder()
-                    .title("Erreur de format de date")
-                    .mainMessage("Le format de date doit être yyyy-MM-dd'T'HH:mm:ss")
-                    .build()
-                    .format();
-
-            throw new RuntimeException(message);
-        }
-    }
 }

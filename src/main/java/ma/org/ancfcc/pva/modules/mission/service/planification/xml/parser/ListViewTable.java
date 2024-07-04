@@ -1,4 +1,4 @@
-package ma.org.ancfcc.pva.modules.mission.service.planification.parser.xml;
+package ma.org.ancfcc.pva.modules.mission.service.planification.xml.parser;
 
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -66,7 +66,7 @@ public class ListViewTable {
                 PlanEventInfo info = new PlanEventInfo();
                 info.setStatus(status);
                 info.setPlanLineLabel(row.getPlanLineLabel());
-                info.setPlanEventLabel(row.EventLabel());
+                info.setPlanEventLabel(row.eventLabel());
                 info.setPosition(row.getPosition());
                 info.setEventType(row.getType());
 

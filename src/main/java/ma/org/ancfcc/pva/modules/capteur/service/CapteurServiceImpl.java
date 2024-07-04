@@ -1,5 +1,6 @@
 package ma.org.ancfcc.pva.modules.capteur.service;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -13,12 +14,16 @@ import jakarta.persistence.EntityNotFoundException;
 import ma.org.ancfcc.pva.core.commun.base.service.BaseServiceImpl;
 import ma.org.ancfcc.pva.core.commun.base.service.SpecificationService;
 import ma.org.ancfcc.pva.core.commun.rest.queries.QueryParams;
+import ma.org.ancfcc.pva.core.commun.rest.responses.MessageResponse;
+import ma.org.ancfcc.pva.core.exceptions.handlers.CannotDeleteException;
 import ma.org.ancfcc.pva.core.utilities.EntityInspector;
 import ma.org.ancfcc.pva.core.utilities.PaginationUtils;
 import ma.org.ancfcc.pva.core.validators.ObjectsValidator;
 import ma.org.ancfcc.pva.modules.capteur.Capteur;
 import ma.org.ancfcc.pva.modules.capteur.dto.request.CapteurRequestDto;
 import ma.org.ancfcc.pva.modules.capteur.dto.request.CapteurRequestMapper;
+import ma.org.ancfcc.pva.modules.capteur.enums.CapteurCode;
+import ma.org.ancfcc.pva.modules.capteur.enums.CapteurSubName;
 import ma.org.ancfcc.pva.modules.capteur.repository.CapteurRepository;
 
 @Service
@@ -106,7 +111,36 @@ public class CapteurServiceImpl extends BaseServiceImpl<Capteur> implements Capt
     }
 
     private void validateMissionDependencies(UUID id) {
-        // TODO : uncomment this code after implementing the mission module
+        List<String> missionList = capteurRepository.findMissionCodesByCapteurId(id);
+        if (!missionList.isEmpty()) {
+
+            String message = MessageResponse.builder()
+                    .title("Suppression impossible ")
+                    .mainMessage("Impossible de supprimer le capteur  car il est associé aux missions.")
+                    .subMessageList(
+                            missionList)
+                    .build()
+                    .format();
+
+            throw new CannotDeleteException(message);
+        }
+    }
+
+    @Override
+    public String getCapteurCodeFromString(String nom) {
+        if (nom.contains(CapteurSubName.ADS.getDescription())) {
+            return CapteurCode.ADS40_80.getDescription();
+        } else if (nom.contains(CapteurSubName.ALS.getDescription())) {
+            return CapteurCode.ALS70.getDescription();
+        } else if (nom.contains(CapteurSubName.DMC.getDescription())) {
+            return CapteurCode.DMC_II_230.getDescription();
+        } else if (nom.contains(CapteurSubName.RC30.getDescription())) {
+            return CapteurCode.RC30.getDescription();
+        } else if (nom.contains(CapteurSubName.RMK.getDescription())) {
+            return CapteurCode.RMK_TOP_15.getDescription();
+        } else {
+            throw new EntityNotFoundException("Capteur with name '" + nom + "' not found");
+        }
     }
 
 }

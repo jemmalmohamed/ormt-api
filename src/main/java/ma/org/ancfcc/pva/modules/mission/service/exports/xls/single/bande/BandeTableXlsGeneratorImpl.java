@@ -34,7 +34,7 @@ public class BandeTableXlsGeneratorImpl implements BandeTableXlsGenerator {
                 "label",
                 "Total photos planifiées",
                 "total photos réalisées",
-                "commentaire" };
+                "observation" };
 
         Row row = sheet.createRow(rowNum++);
         for (int i = 0; i < headers.length; i++) {
@@ -50,7 +50,7 @@ public class BandeTableXlsGeneratorImpl implements BandeTableXlsGenerator {
             setBandeNumCell(row, 0, bande, valueStyle);
             setBandeLabelCell(row, 1, bande, valueStyle);
             setBandeTotalPhotosPlanifieesCell(row, 2, bande, workbook, valueStyle);
-            setCommentaireCell(row, 3, bande, workbook, valueStyle);
+            setObservationCell(row, 3, bande, valueStyle);
         }
 
         // Auto-size columns for better readability
@@ -59,9 +59,9 @@ public class BandeTableXlsGeneratorImpl implements BandeTableXlsGenerator {
         }
     }
 
-    private void setCommentaireCell(Row row, int cellNum, Bande bande, Workbook workbook, CellStyle style) {
+    private void setObservationCell(Row row, int cellNum, Bande bande, CellStyle style) {
         Cell cell = row.createCell(cellNum);
-        cell.setCellValue(bande.getCommentaire());
+        cell.setCellValue(bande.getObservation());
         cell.setCellStyle(style);
     }
 

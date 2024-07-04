@@ -1,5 +1,6 @@
 package ma.org.ancfcc.pva.modules.organisme.service;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -21,5 +22,7 @@ public interface OrganismeService extends BaseService<Organisme> {
     Organisme update(UUID id, OrganismeRequestDto organismeRequestDto);
 
     boolean existsById(UUID id);
+
+    List<String> findMissionCodesByOrganismeId(UUID organismeId);
 
 }

@@ -1,10 +1,14 @@
-package ma.org.ancfcc.pva.modules.mission.service.planification.parser.xml;
+package ma.org.ancfcc.pva.modules.mission.service.planification.xml.parser;
 
-import jakarta.xml.bind.annotation.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
+
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlAccessType;
 
 @Getter
 @Setter
@@ -29,7 +33,7 @@ public class Row {
         return items.get(2).getValue();
     }
 
-    public String EventLabel() {
+    public String eventLabel() {
         return items.get(3).getValue();
     }
 

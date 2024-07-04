@@ -19,7 +19,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.transaction.Transactional;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ancfcc.pva.core.commun.base.service.BaseServiceImpl;
 import ma.org.ancfcc.pva.core.commun.base.service.SpecificationService;
@@ -32,8 +31,6 @@ import ma.org.ancfcc.pva.core.utilities.DateUtils;
 import ma.org.ancfcc.pva.core.utilities.FileUtils;
 import ma.org.ancfcc.pva.core.utilities.StringHelper;
 import ma.org.ancfcc.pva.modules.capteur.Capteur;
-import ma.org.ancfcc.pva.modules.capteur.enums.CapteurCode;
-import ma.org.ancfcc.pva.modules.capteur.enums.CapteurSubName;
 import ma.org.ancfcc.pva.modules.capteur.service.CapteurService;
 import ma.org.ancfcc.pva.modules.mission.models.AnalogiqueAttribut;
 import ma.org.ancfcc.pva.modules.mission.models.LidarAttribut;
@@ -82,7 +79,7 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
 
         File prjFile = FileUtils.getFileByExtFromFileListComponents(shapefileComponents, "prj");
 
-        ShpFileService.validatePrjFile(prjFile, srid);
+        ShpFileService.validatePrjFileIsWgs(prjFile, srid);
 
         File shpFile = FileUtils.getFileByExtFromFileListComponents(shapefileComponents, "shp");
 
@@ -157,8 +154,8 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
     }
 
     private void setMissionDate(SimpleFeature feature, Mission mission) {
-        String dateAttributName = ShpSimpleFeatureService.findFeatureAttributIgnoreCase(feature, "date");
-        String dateStr = StringHelper.getSafeString(feature.getAttribute(dateAttributName)); // Make sure this is the
+        String dateStr = ShpSimpleFeatureService.getValueFromFeature(feature, "date");
+
         if (!dateStr.equals("")) {
             LocalDate date = DateUtils.parseVerboseToLocalDate(dateStr);
             mission.setDatePva(date);
@@ -166,8 +163,7 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
     }
 
     private void setMissionOrganisme(SimpleFeature feature, Mission mission) {
-        String organismeAttributName = ShpSimpleFeatureService.findFeatureAttributIgnoreCase(feature, "organisme");
-        String organismeName = StringHelper.getSafeString(feature.getAttribute(organismeAttributName)).toLowerCase();
+        String organismeName = ShpSimpleFeatureService.getValueFromFeature(feature, "organisme");
 
         Organisme organisme = organismeService.findByNom(organismeName)
                 .orElseGet(() -> organismeService.findByNom("ancfcc")
@@ -178,12 +174,10 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
     private void setMissionSuperficie(SimpleFeature feature, Mission mission, Integer sourceSrid,
             Integer projectionSrid)
             throws MismatchedDimensionException {
-        String superficieAttributName = ShpSimpleFeatureService.findFeatureAttributIgnoreCase(feature, "superficie");
-        String superficieString = StringHelper.getSafeString(feature.getAttribute(superficieAttributName));
+        String superficieString = ShpSimpleFeatureService.getValueFromFeature(feature, "superficie");
 
         if (!superficieString.equals("")) {
-            Double superficie = Double.parseDouble(
-                    StringHelper.getSafeString(feature.getAttribute(superficieAttributName)));
+            Double superficie = Double.parseDouble(superficieString);
             mission.setSuperficie(
                     superficie);
         } else {
@@ -198,18 +192,17 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
     }
 
     private void setMissionPLanAction(SimpleFeature feature, Mission mission) {
-        String exerciceAttributName = ShpSimpleFeatureService.findFeatureAttributIgnoreCase(feature, "exercice");
-        String planActionName = StringHelper.getSafeString(feature.getAttribute(exerciceAttributName)).toLowerCase();
+        String planActionName = ShpSimpleFeatureService.getValueFromFeature(feature, "exercice");
 
         PlanAction planAction = planActionService.findByNom(planActionName).orElseThrow(
                 () -> new EntityNotFoundException("PlanAction not found"));
         mission.setPlanAction(planAction);
     }
 
-    @Transactional
     private void setMissionObjets(SimpleFeature feature, Mission mission) {
         List<String> objetAttributNameList = ShpSimpleFeatureService.findFeatureListWithPatternIgnoreCase(feature,
                 "objet");
+
         for (String objetAttributName : objetAttributNameList) {
             String objetName = StringHelper.getSafeString(feature.getAttribute(objetAttributName)).toLowerCase();
             if (objetName != null && !objetName.isEmpty()) {
@@ -221,19 +214,16 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
     }
 
     private void setMissionAttributs(SimpleFeature feature, Mission mission) {
-        String codeAttributName = ShpSimpleFeatureService.findFeatureAttributIgnoreCase(feature, "code");
-        String missionAttributName = ShpSimpleFeatureService.findFeatureAttributIgnoreCase(feature, "mission");
-        mission.setCode(StringHelper.getSafeString(feature.getAttribute(codeAttributName)).toLowerCase());
-        mission.setNom(StringHelper.getSafeString(feature.getAttribute(missionAttributName)).toLowerCase());
+        String missionCode = ShpSimpleFeatureService.getValueFromFeature(feature, "code");
+        String missionMission = ShpSimpleFeatureService.getValueFromFeature(feature, "mission");
+        mission.setCode(missionCode);
+        mission.setNom(missionMission);
     }
 
     private Mission setMissionCapteurAttributs(SimpleFeature feature, Mission mission) {
-        String capteurAttributName = ShpSimpleFeatureService.findFeatureAttributIgnoreCase(feature, "camera");
-        String capteurName = StringHelper.getSafeString(feature.getAttribute(capteurAttributName)).toLowerCase();
-        String capteurCode = getCapteurCodeFromString(capteurName);
-
-        String gsdAttributName = ShpSimpleFeatureService.findFeatureAttributIgnoreCase(feature, "gsd");
-        String gsdEchelle = StringHelper.getSafeString(feature.getAttribute(gsdAttributName));
+        String capteurName = ShpSimpleFeatureService.getValueFromFeature(feature, "camera");
+        String capteurCode = capteurService.getCapteurCodeFromString(capteurName.toLowerCase());
+        String gsdEchelle = ShpSimpleFeatureService.getValueFromFeature(feature, "gsd");
 
         Optional<Capteur> capteur = capteurService.findByCode(capteurCode);
 
@@ -268,22 +258,6 @@ public class MissionImportServiceImpl extends BaseServiceImpl<Mission>
 
         }
         return mission;
-    }
-
-    public String getCapteurCodeFromString(String nom) {
-        if (nom.contains(CapteurSubName.ADS.getDescription())) {
-            return CapteurCode.ADS40_80.getDescription();
-        } else if (nom.contains(CapteurSubName.ALS.getDescription())) {
-            return CapteurCode.ALS70.getDescription();
-        } else if (nom.contains(CapteurSubName.DMC.getDescription())) {
-            return CapteurCode.DMC_II_230.getDescription();
-        } else if (nom.contains(CapteurSubName.RC30.getDescription())) {
-            return CapteurCode.RC30.getDescription();
-        } else if (nom.contains(CapteurSubName.RMK.getDescription())) {
-            return CapteurCode.RMK_TOP_15.getDescription();
-        } else {
-            throw new EntityNotFoundException("Capteur with name '" + nom + "' not found");
-        }
     }
 
 }

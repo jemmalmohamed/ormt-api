@@ -22,7 +22,7 @@ public class BandeRequestDto extends Dto {
     @NotBlank(message = "Ce champ est requis.")
     private String nom;
 
-    private String commentaire;
+    private String observation;
 
     @NotNull(message = "Sélectionnez une mission")
     private MissionSummaryDto mission;

@@ -11,7 +11,7 @@ import ma.org.ancfcc.pva.core.commun.rest.queries.QueryParams;
 import ma.org.ancfcc.pva.modules.mission.bande.Bande;
 import ma.org.ancfcc.pva.modules.mission.bande.dto.request.BandeRequestDto;
 import ma.org.ancfcc.pva.modules.mission.models.Mission;
-import ma.org.ancfcc.pva.modules.mission.service.planification.parser.xml.PlanLineXmlInfo;
+import ma.org.ancfcc.pva.modules.mission.service.planification.xml.parser.PlanLineXmlInfo;
 
 public interface BandeService extends BaseService<Bande> {
 
@@ -19,9 +19,9 @@ public interface BandeService extends BaseService<Bande> {
 
     Optional<Bande> findByLabel(String label);
 
-    Optional<Bande> findBandeByLabelAndMission_Id(String label, UUID missionId);
+    Optional<Bande> findBandeByLabelAndMissionId(String label, UUID missionId);
 
-    void deleteAllByMission_Id(UUID missionId);
+    void deleteBandesByMissionId(UUID missionId);
 
     Page<Bande> bandeWithPagination(QueryParams requestParams);
 
@@ -29,11 +29,11 @@ public interface BandeService extends BaseService<Bande> {
 
     Bande update(UUID id, BandeRequestDto bandeRequestDto);
 
-    boolean existsByLabelAndMission_Id(String label, UUID missionId);
+    boolean existsByLabelAndMissionId(String label, UUID missionId);
 
     Bande saveBandePlanificationFromShapeFileFeature(String nom, Point start, Point end, Mission mission,
             Integer srid);
 
-    Bande saveBandePlanificationFromXml(PlanLineXmlInfo planLine, Mission mission);
+    Bande saveBandePlanificationFromXml(PlanLineXmlInfo planLine, Mission mission, Integer srid);
 
 }

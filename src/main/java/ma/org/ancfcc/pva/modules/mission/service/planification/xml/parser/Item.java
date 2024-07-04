@@ -1,4 +1,4 @@
-package ma.org.ancfcc.pva.modules.mission.service.planification.parser.xml;
+package ma.org.ancfcc.pva.modules.mission.service.planification.xml.parser;
 
 import jakarta.xml.bind.annotation.XmlElement;
 

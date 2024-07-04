@@ -1,5 +1,6 @@
 package ma.org.ancfcc.pva.modules.planaction.service;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -13,6 +14,8 @@ import jakarta.persistence.EntityNotFoundException;
 import ma.org.ancfcc.pva.core.commun.base.service.BaseServiceImpl;
 import ma.org.ancfcc.pva.core.commun.base.service.SpecificationService;
 import ma.org.ancfcc.pva.core.commun.rest.queries.QueryParams;
+import ma.org.ancfcc.pva.core.commun.rest.responses.MessageResponse;
+import ma.org.ancfcc.pva.core.exceptions.handlers.CannotDeleteException;
 import ma.org.ancfcc.pva.core.utilities.EntityInspector;
 import ma.org.ancfcc.pva.core.utilities.PaginationUtils;
 import ma.org.ancfcc.pva.core.validators.ObjectsValidator;
@@ -101,27 +104,24 @@ public class PlanActionServiceImpl extends BaseServiceImpl<PlanAction> implement
     }
 
     private void validateMissionDependencies(UUID id) {
-        // TODO : uncomment this code after implementing the mission module
-        // Long missionCount = missionCoreRepository.countByPlanActionId(id);
-        // if (missionCount > 0) {
-        // List<String> missionNames =
-        // missionCoreRepository.findNamesByPlanActionId(id);
-        // PlanAction planAction = planActionRepository.findById(id)
-        // .orElseThrow(() -> new EntityNotFoundException("Plan action not found"));
+        List<String> missionList = findMissionCodesByPLanActionId(id);
+        if (!missionList.isEmpty()) {
 
-        // String error = "Impossible de supprimer le plan d'action -" +
-        // planAction.getNom()
-        // + "- car il est associé aux missions : ";
+            String message = MessageResponse.builder()
+                    .title("Suppression impossible ")
+                    .mainMessage("Impossible de supprimer le plan d'action  car il est associé aux missions.")
+                    .subMessageList(
+                            missionList)
+                    .build()
+                    .format();
 
-        // String message = MessageResponse.builder()
-        // .title("Suppression impossible")
-        // .mainMessage(error)
-        // .subMessageList(missionNames)
-        // .build()
-        // .format();
-        // throw new CannotDeleteException(message);
+            throw new CannotDeleteException(message);
+        }
+    }
 
-        // }
+    @Override
+    public List<String> findMissionCodesByPLanActionId(UUID planActionId) {
+        return planActionRepository.findMissionCodesByPLanActionId(planActionId);
     }
 
 }

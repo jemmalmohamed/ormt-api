@@ -6,11 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
-import java.util.function.BiConsumer;
 import java.util.stream.Collectors;
 
 import org.geotools.api.feature.simple.SimpleFeature;
@@ -29,22 +25,19 @@ import ma.org.ancfcc.pva.core.commun.base.service.BaseServiceImpl;
 import ma.org.ancfcc.pva.core.commun.base.service.SpecificationService;
 import ma.org.ancfcc.pva.core.commun.rest.responses.MessageResponse;
 import ma.org.ancfcc.pva.core.exceptions.handlers.ShapefileProcessingException;
-import ma.org.ancfcc.pva.core.exceptions.handlers.XMLfileProcessingException;
 import ma.org.ancfcc.pva.core.gis.shapefile.ShpFileService;
 import ma.org.ancfcc.pva.core.gis.utils.GeometryUtils;
 import ma.org.ancfcc.pva.core.utilities.FileUtils;
-import ma.org.ancfcc.pva.modules.capteur.Capteur;
-import ma.org.ancfcc.pva.modules.capteur.enums.CapteurCode;
 import ma.org.ancfcc.pva.modules.mission.bande.Bande;
 import ma.org.ancfcc.pva.modules.mission.bande.service.BandeService;
 import ma.org.ancfcc.pva.modules.mission.models.Mission;
+import ma.org.ancfcc.pva.modules.mission.photo.execution.service.PhotoExecutionService;
+import ma.org.ancfcc.pva.modules.mission.photo.orientation.service.PhotoOrientationService;
 import ma.org.ancfcc.pva.modules.mission.photo.planification.PhotoPlanification;
 import ma.org.ancfcc.pva.modules.mission.photo.planification.service.PhotoPlanificationService;
 import ma.org.ancfcc.pva.modules.mission.repository.MissionRepository;
 import ma.org.ancfcc.pva.modules.mission.service.MissionService;
-import ma.org.ancfcc.pva.modules.mission.service.planification.parser.xml.ListViewTable;
-import ma.org.ancfcc.pva.modules.mission.service.planification.parser.xml.PlanEventInfo;
-import ma.org.ancfcc.pva.modules.mission.service.planification.parser.xml.PlanLineXmlInfo;
+import ma.org.ancfcc.pva.modules.mission.service.planification.xml.UploadXmlPlanificationService;
 
 @Log4j2
 @Service
@@ -62,9 +55,13 @@ public class MissionPlanificationServiceImpl extends BaseServiceImpl<Mission>
 
     @Autowired
     private PhotoPlanificationService photoPlanificationService;
+    @Autowired
+    private PhotoOrientationService photoOrientationService;
+    @Autowired
+    private PhotoExecutionService photoExecutionService;
 
     @Autowired
-    PlanificationParserService planificationParserService;
+    UploadXmlPlanificationService uploadXmlPlanificationService;
 
     @Autowired
     private MissionService missionService;
@@ -98,7 +95,7 @@ public class MissionPlanificationServiceImpl extends BaseServiceImpl<Mission>
         String ext = FileUtils.getFileExtension(file);
         switch (ext) {
             case "xml":
-                parseXmlFile(mission, file);
+                uploadXmlPlanificationService.uploadPlanificationXmlFile(mission, file);
                 break;
             case "xls":
 
@@ -112,100 +109,16 @@ public class MissionPlanificationServiceImpl extends BaseServiceImpl<Mission>
 
     @Override
     public void removeMissionPlanification(UUID id) {
-        bandeService.deleteAllByMission_Id(id);
-    }
-
-    private void parseXmlFile(Mission mission, File file) throws JAXBException {
-
-        ListViewTable listViewTable = planificationParserService.parsePlanificationXml(file);
-        String sensorType = listViewTable.getSensorType();
-
-        checkCapteur(sensorType, mission);
-        if (sensorType.equals(CapteurCode.ADS40_80.getDescription())) {
-            processPlanification(listViewTable, mission, this::createADS80Planification);
-
-        }
-        if (sensorType.equals(CapteurCode.DMC_II_230.getDescription())) {
-            processPlanification(listViewTable, mission, this::createDMCII230Planification);
-        }
-
-    }
-
-    private void processPlanification(ListViewTable listViewTable, Mission mission,
-            BiConsumer<ListViewTable, Mission> planificationProcessor) {
-        bandeService.deleteAllByMission_Id(mission.getId());
-        planificationProcessor.accept(listViewTable, mission);
-    }
-
-    private void checkCapteur(String sensorType, Mission mission) {
-        Capteur capteur = mission.getCapteur();
-        if (!capteur.getCode().equals(sensorType)) {
-            String message = MessageResponse.builder()
-                    .title("Erreur traitement XML")
-                    .mainMessage("Capteur de la mission + " + mission.getCode()
-                            + " ne correspond pas au capteur du fichier XML")
-                    .build().format();
-            throw new XMLfileProcessingException(message);
-        }
-    }
-
-    private void createADS80Planification(ListViewTable listViewTable, Mission mission) {
-        processPlanLines(listViewTable.extractPlanLineInfo(), mission);
-    }
-
-    private void createDMCII230Planification(ListViewTable listViewTable, Mission mission) {
-
-        List<PlanLineXmlInfo> planLinesXml = listViewTable.extractPlanLineInfo();
-        Map<String, List<PlanEventInfo>> planEventsGroup = listViewTable.extractPlanEventInfo();
-
-        // Process plan lines in parallel using CompletableFuture
-        List<CompletableFuture<Void>> futures = planLinesXml.stream()
-                .map(planLineXml -> CompletableFuture.runAsync(() -> {
-                    Bande bande = bandeService.saveBandePlanificationFromXml(planLineXml, mission);
-                    List<PlanEventInfo> planEvents = planEventsGroup.get(planLineXml.getPlanLineLabel());
-                    processPlanEvents(planEvents, bande);
-                }))
-                .collect(Collectors.toList());
-
-        // Wait for all futures to complete
-        try {
-            CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).get();
-        } catch (InterruptedException | ExecutionException e) {
-
-            e.printStackTrace();
-        }
-    }
-
-    private void processPlanLines(List<PlanLineXmlInfo> planLinesInfo, Mission mission) {
-        for (PlanLineXmlInfo planLineInfo : planLinesInfo) {
-            Optional<Bande> bande = bandeService.findBandeByLabelAndMission_Id(planLineInfo.getPlanLineLabel(),
-                    mission.getId());
-
-            if (bande.isPresent()) {
-                bandeService.delete(bande.get().getId());
-            }
-
-            bandeService.saveBandePlanificationFromXml(planLineInfo, mission);
-
-        }
-    }
-
-    private void processPlanEvents(List<PlanEventInfo> planEventsListInfo, Bande bande) {
-        photoPlanificationService.savePhotoPlanificationFromXml(planEventsListInfo, bande);
-
+        bandeService.deleteBandesByMissionId(id);
     }
 
     @Override
-    public void uploadAnalogiqueShapefile(List<File> shapefileComponents, Integer srid) throws IOException {
-        processAnalogiqueShapefiles(shapefileComponents, srid);
-    }
-
-    private void processAnalogiqueShapefiles(List<File> shapefileComponents, Integer srid)
+    public void uploadAnalogiqueEOShapefile(List<File> shapefileComponents, Integer srid)
             throws IOException {
         File prjFile = FileUtils.getFileByExtFromFileListComponents(shapefileComponents, PRJ_EXT);
         File shpFile = FileUtils.getFileByExtFromFileListComponents(shapefileComponents, SHP_EXT);
 
-        ShpFileService.validatePrjFile(prjFile, srid);
+        ShpFileService.validatePrjFileIsWgs(prjFile, srid);
         SimpleFeatureCollection collection = ShpFileService.getFeatureCollectionFromShapefile(shpFile);
 
         processAnalogiqueCollection(collection, srid);
@@ -260,24 +173,31 @@ public class MissionPlanificationServiceImpl extends BaseServiceImpl<Mission>
 
                 if (startPoint != null && endPoint != null) {
                     Bande bande = saveBande(bandePhotosEntry.getKey(), startPoint, endPoint, mission, srid);
-                    saveBandePhotoPlanificationsFromSimpleFeature(bandePhotosFeatures, bande);
+                    savePhotoPlanificationsFromSimpleFeature(bandePhotosFeatures, bande, srid);
                 }
             }
         }
     }
 
-    private void saveBandePhotoPlanificationsFromSimpleFeature(List<SimpleFeature> bandePhotosFeatures, Bande bande) {
+    private void savePhotoPlanificationsFromSimpleFeature(List<SimpleFeature> bandePhotosFeatures, Bande bande,
+            Integer srid) {
         for (SimpleFeature featurePhoto : bandePhotosFeatures) {
-            Point center = GeometryUtils.extract2DPointFromFeature(featurePhoto, 4326);
-            String photoName = featurePhoto.getAttribute("Photo").toString();
-            PhotoPlanification photoPlanification = new PhotoPlanification();
-            photoPlanification.setBande(bande);
-            photoPlanification.setNom(photoName);
-            photoPlanification.setLabel(photoName);
-            photoPlanification.setCenter(center);
-            photoPlanificationService.create(photoPlanification);
-
+            PhotoPlanification photoPlanification = savePhotoPlanification(featurePhoto, bande, srid);
+            photoOrientationService.savePhotoOrientationFromShpFeature(photoPlanification, featurePhoto, srid);
+            photoExecutionService.savePhotoExecution(photoPlanification, featurePhoto);
         }
+    }
+
+    private PhotoPlanification savePhotoPlanification(SimpleFeature featurePhoto, Bande bande, Integer srid) {
+        Point centre = GeometryUtils.extract2DPointFromFeature(featurePhoto, srid);
+        String photoName = featurePhoto.getAttribute("Photo").toString();
+        PhotoPlanification photoPlanification = new PhotoPlanification();
+        photoPlanification.setBande(bande);
+        photoPlanification.setNom(photoName);
+        photoPlanification.setLabel(photoName);
+        photoPlanification.setCentre(centre);
+        return photoPlanificationService.create(photoPlanification);
+
     }
 
     private Bande saveBande(String name, Point startPoint, Point endPoint, Mission mission, Integer srid) {

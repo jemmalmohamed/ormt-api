@@ -20,6 +20,8 @@ public interface CapteurService extends BaseService<Capteur> {
 
     Capteur create(CapteurRequestDto requestDto);
 
+    String getCapteurCodeFromString(String nom);
+
     Capteur update(UUID id, CapteurRequestDto capteurRequestDto);
 
     boolean existsById(UUID id);

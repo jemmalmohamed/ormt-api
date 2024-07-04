@@ -1,36 +1,27 @@
-package ma.org.ancfcc.pva.modules.mission.service.planification;
+package ma.org.ancfcc.pva.modules.mission.service.planification.helper;
 
 import org.springframework.stereotype.Service;
 
 @Service
 public class MissionPlanificationHelper {
 
-    public String formatBandeLabel(String label) {
+    public String formaLabel(String label) {
         StringBuilder numericalPart = new StringBuilder();
 
-        // Conserver uniquement les chiffres
+        // Collect only the digits
         for (char ch : label.toCharArray()) {
             if (Character.isDigit(ch)) {
                 numericalPart.append(ch);
             }
         }
 
-        // Vérifier la longueur de la partie numérique et formater correctement
+        // Remove leading zeros by converting to an integer and back to a string
         if (numericalPart.length() > 0) {
-            String digits = numericalPart.toString();
-            int number = Integer.parseInt(digits);
-            if (number < 100) {
-                // Formater pour avoir toujours deux chiffres si le nombre est inférieur à 100
-                return String.format("%02d", number);
-            } else {
-                // Garder le nombre tel quel s'il est supérieur ou égal à 100
-                return digits;
-            }
+            return String.valueOf(Integer.parseInt(numericalPart.toString()));
         }
 
-        // Retourner "00" si aucun chiffre n'est présent pour maintenir un format
-        // cohérent
-        return "00";
+        // Return "0" if no digits are present to maintain a consistent format
+        return "0";
     }
 
     public String formatScanLabel(String label) {

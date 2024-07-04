@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
-import lombok.extern.log4j.Log4j2;
 import ma.org.ancfcc.pva.core.commun.base.service.BaseServiceImpl;
 import ma.org.ancfcc.pva.core.commun.base.service.SpecificationService;
 import ma.org.ancfcc.pva.core.commun.rest.queries.QueryParams;
@@ -26,10 +25,9 @@ import ma.org.ancfcc.pva.modules.mission.bande.dto.request.BandeRequestDto;
 import ma.org.ancfcc.pva.modules.mission.bande.dto.request.BandeRequestDtoMapper;
 import ma.org.ancfcc.pva.modules.mission.bande.repository.BandeRepository;
 import ma.org.ancfcc.pva.modules.mission.models.Mission;
-import ma.org.ancfcc.pva.modules.mission.service.planification.MissionPlanificationHelper;
-import ma.org.ancfcc.pva.modules.mission.service.planification.parser.xml.PlanLineXmlInfo;
+import ma.org.ancfcc.pva.modules.mission.service.planification.helper.MissionPlanificationHelper;
+import ma.org.ancfcc.pva.modules.mission.service.planification.xml.parser.PlanLineXmlInfo;
 
-@Log4j2
 @Service
 public class BandeServiceImpl extends BaseServiceImpl<Bande> implements BandeService {
 
@@ -99,7 +97,7 @@ public class BandeServiceImpl extends BaseServiceImpl<Bande> implements BandeSer
                 .orElseThrow(() -> new EntityNotFoundException("Bande not found"));
 
         bande.setNom(bandeToUpdate.getNom());
-        bande.setCommentaire(bandeToUpdate.getCommentaire());
+        bande.setObservation(bandeToUpdate.getObservation());
 
         return bandeRepository.save(bande);
     }
@@ -117,33 +115,20 @@ public class BandeServiceImpl extends BaseServiceImpl<Bande> implements BandeSer
         return bandeRepository.save(bande);
     }
 
-    /**
-     * Validates whether an Bande can be deleted
-     *
-     * @param id the ID of the Bande to validate
-     */
     @Override
-    public void validateBeforeDelete(UUID id) {
-        Bande bande = findById(id).orElse(null);
-        if (bande != null) {
-            log.warn("### DATA: Bande with id {} found in Validation before delete", id);
-        }
+    public boolean existsByLabelAndMissionId(String label, UUID missionId) {
+        return bandeRepository.existsByLabelAndMissionId(label, missionId);
     }
 
     @Override
-    public boolean existsByLabelAndMission_Id(String label, UUID missionId) {
-        return bandeRepository.existsByLabelAndMission_Id(label, missionId);
-    }
-
-    @Override
-    public Optional<Bande> findBandeByLabelAndMission_Id(String label, UUID missionId) {
-        return bandeRepository.findBandeByLabelAndMission_Id(label, missionId);
+    public Optional<Bande> findBandeByLabelAndMissionId(String label, UUID missionId) {
+        return bandeRepository.findBandeByLabelAndMissionId(label, missionId);
     }
 
     @Override
     @Transactional
-    public void deleteAllByMission_Id(UUID missionId) {
-        bandeRepository.deleteAllByMission_Id(missionId);
+    public void deleteBandesByMissionId(UUID missionId) {
+        bandeRepository.deleteAllByMissionId(missionId);
     }
 
     @Override
@@ -160,15 +145,15 @@ public class BandeServiceImpl extends BaseServiceImpl<Bande> implements BandeSer
     }
 
     @Override
-    public Bande saveBandePlanificationFromXml(PlanLineXmlInfo planLine, Mission mission) {
+    public Bande saveBandePlanificationFromXml(PlanLineXmlInfo planLine, Mission mission, Integer srid) {
         Bande bande = new Bande();
         bande.setMission(mission);
-        bande.setNom(missionPlanificationHelper.formatBandeLabel(planLine.getPlanLineLabel()));
+        bande.setNom(missionPlanificationHelper.formaLabel(planLine.getPlanLineLabel()));
         bande.setLabel(planLine.getPlanLineLabel());
         LineString lineString = GeometryCreation.createLineString(planLine.getStartPosition(),
                 planLine.getEndPosition());
         bande.setAxePlanification(lineString);
-        lineString.setSRID(4326);
+        lineString.setSRID(srid);
         return create(bande);
     }
 

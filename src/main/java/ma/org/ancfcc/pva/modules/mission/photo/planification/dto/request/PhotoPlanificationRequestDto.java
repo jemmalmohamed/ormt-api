@@ -16,6 +16,6 @@ public class PhotoPlanificationRequestDto extends BaseDto {
 
     private Point center;
 
-    private String commentaire;
+    private String observation;
 
 }

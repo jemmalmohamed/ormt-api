@@ -24,6 +24,6 @@ public class PhotoPlanificationDto extends BaseDto {
     @JsonSerialize(using = PointSerializer.class)
     private Point center;
 
-    private String commentaire;
+    private String observation;
 
 }

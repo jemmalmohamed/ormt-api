@@ -21,7 +21,7 @@ public class BandeDto extends BaseDto {
 
     private String label;
 
-    private String commentaire;
+    private String observation;
 
     @JsonSerialize(using = LineStringSerializer.class)
     private LineString axePlanification;

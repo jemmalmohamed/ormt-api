@@ -2,6 +2,7 @@ package ma.org.ancfcc.pva.core.commun.base.service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.springframework.data.domain.Page;
@@ -17,7 +18,6 @@ import lombok.RequiredArgsConstructor;
 import ma.org.ancfcc.pva.core.commun.base.entity.BaseEntity;
 import ma.org.ancfcc.pva.core.commun.base.repository.BaseRepository;
 import ma.org.ancfcc.pva.core.commun.rest.responses.MessageResponse;
-import java.util.UUID;
 
 @MappedSuperclass
 @RequiredArgsConstructor

@@ -85,7 +85,7 @@ public class AvionServiceImpl extends BaseServiceImpl<Avion> implements AvionSer
 
     @Override
     public void validateBeforeDelete(UUID id) {
-        validateMissionDependencies(id);
+        validateCapteurDependencies();
     }
 
     private void updateFields(Avion avion, Avion entityToUpdate) {
@@ -95,7 +95,7 @@ public class AvionServiceImpl extends BaseServiceImpl<Avion> implements AvionSer
 
     }
 
-    private void validateMissionDependencies(UUID id) {
+    private void validateCapteurDependencies() {
         // TODO : uncomment this code after implementing the mission module
     }
 

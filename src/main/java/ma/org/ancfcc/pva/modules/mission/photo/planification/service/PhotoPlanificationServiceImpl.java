@@ -2,6 +2,7 @@ package ma.org.ancfcc.pva.modules.mission.photo.planification.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.locationtech.jts.geom.Point;
@@ -18,8 +19,8 @@ import ma.org.ancfcc.pva.modules.mission.photo.planification.PhotoPlanification;
 import ma.org.ancfcc.pva.modules.mission.photo.planification.dto.request.PhotoPlanificationRequestDto;
 import ma.org.ancfcc.pva.modules.mission.photo.planification.dto.request.PhotoPlanificationRequestDtoMapper;
 import ma.org.ancfcc.pva.modules.mission.photo.planification.repository.PhotoPlanificationRepository;
-import ma.org.ancfcc.pva.modules.mission.service.planification.MissionPlanificationHelper;
-import ma.org.ancfcc.pva.modules.mission.service.planification.parser.xml.PlanEventInfo;
+import ma.org.ancfcc.pva.modules.mission.service.planification.helper.MissionPlanificationHelper;
+import ma.org.ancfcc.pva.modules.mission.service.planification.xml.parser.PlanEventInfo;
 
 @Service
 public class PhotoPlanificationServiceImpl extends BaseServiceImpl<PhotoPlanification>
@@ -79,33 +80,37 @@ public class PhotoPlanificationServiceImpl extends BaseServiceImpl<PhotoPlanific
     }
 
     @Override
-    public List<PhotoPlanification> savePhotoPlanificationFromXml(List<PlanEventInfo> planEventInfos, Bande bande) {
+    public List<PhotoPlanification> savePhotoPlanificationFromXml(List<PlanEventInfo> planEventInfos, Bande bande,
+            Integer srid) {
         List<PhotoPlanification> photos = new ArrayList<>();
         for (PlanEventInfo planEventInfo : planEventInfos) {
             PhotoPlanification photo = new PhotoPlanification();
-            Point centre = GeometryCreation.createPoint(planEventInfo.getPosition(), 4326);
-            photo.setCenter(centre);
+            Point centre = GeometryCreation.createPoint(planEventInfo.getPosition(), srid);
+            photo.setCentre(centre);
             photo.setBande(bande);
-            photo.setNom(missionPlanificationHelper.formatEventLabel(planEventInfo.getPlanEventLabel()));
+
+            photo.setNom(missionPlanificationHelper.formaLabel(planEventInfo.getPlanEventLabel()));
             photo.setLabel(planEventInfo.getPlanEventLabel());
             photos.add(photo);
         }
         return photoPlanificationRepository.saveAll(photos);
     }
 
-    /**
-     * Validates whether an Photo can be deleted
-     *
-     * @param id the ID of the Photo to validate
-     */
-    @Override
-    public void validateBeforeDelete(UUID id) {
-
-    }
-
     @Override
     public Long countByBandeId(UUID bandeId) {
         return photoPlanificationRepository.countByBandeId(bandeId);
+    }
+
+    @Override
+    public Optional<PhotoPlanification> findPhotoPlanificationByLabelAndBandeId(String label, UUID bandeId) {
+        return photoPlanificationRepository.findPhotoPlanificationByLabelAndBandeId(label, bandeId);
+    }
+
+    @Override
+    public Optional<PhotoPlanification> findPhotoPlanificationByNomAndBandeNomAndMissionCode(
+            String photoPlanificationNom, String bandeNom, String missionCode) {
+        return photoPlanificationRepository.findPhotoPlanificationByNomAndBandeNomAndMissionCode(photoPlanificationNom,
+                bandeNom, missionCode);
     }
 
 }

@@ -83,19 +83,10 @@ public class BasemapServiceImpl extends BaseServiceImpl<Basemap> implements Base
         return basemapRepository.save(basemap);
     }
 
-    @Override
-    public void validateBeforeDelete(UUID id) {
-        validateMissionDependencies(id);
-    }
-
     private void updateFields(Basemap basemap, Basemap entityToUpdate) {
         basemap.setNom(entityToUpdate.getNom());
         basemap.setUrl(entityToUpdate.getUrl());
 
-    }
-
-    private void validateMissionDependencies(UUID id) {
-        // TODO : uncomment this code after implementing the mission module
     }
 
 }

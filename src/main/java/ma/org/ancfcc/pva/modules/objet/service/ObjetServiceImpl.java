@@ -1,5 +1,6 @@
 package ma.org.ancfcc.pva.modules.objet.service;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -13,6 +14,8 @@ import jakarta.persistence.EntityNotFoundException;
 import ma.org.ancfcc.pva.core.commun.base.service.BaseServiceImpl;
 import ma.org.ancfcc.pva.core.commun.base.service.SpecificationService;
 import ma.org.ancfcc.pva.core.commun.rest.queries.QueryParams;
+import ma.org.ancfcc.pva.core.commun.rest.responses.MessageResponse;
+import ma.org.ancfcc.pva.core.exceptions.handlers.CannotDeleteException;
 import ma.org.ancfcc.pva.core.utilities.EntityInspector;
 import ma.org.ancfcc.pva.core.utilities.PaginationUtils;
 import ma.org.ancfcc.pva.core.validators.ObjectsValidator;
@@ -95,7 +98,19 @@ public class ObjetServiceImpl extends BaseServiceImpl<Objet> implements ObjetSer
     }
 
     private void validateMissionDependencies(UUID id) {
-        // TODO : uncomment this code after implementing the mission module
+        List<String> missionList = objetRepository.findMissionCodesByObjetsId(id);
+        if (!missionList.isEmpty()) {
+
+            String message = MessageResponse.builder()
+                    .title("Suppression impossible ")
+                    .mainMessage("Impossible de supprimer l'objet car il est associé aux missions.")
+                    .subMessageList(
+                            missionList)
+                    .build()
+                    .format();
+
+            throw new CannotDeleteException(message);
+        }
     }
 
 }
