@@ -41,7 +41,7 @@ public class KeycloakClientSetupRunner implements CommandLineRunner {
     private String kcBackendClientName;
 
     @Value("${keycloak.clients.backend.root-url}")
-    private String kcPvaApiRootUrl;
+    private String kcOrmtApiRootUrl;
 
     @Value("${keycloak.clients.frontend.id}")
     private String kcFrontendClientId;
@@ -78,7 +78,7 @@ public class KeycloakClientSetupRunner implements CommandLineRunner {
 
         RealmResource realmResource = setupRealm(keycloak, kcRealmName);
 
-        setupBackendClient(realmResource, kcBackendClientId, kcBackendClientName, kcPvaApiRootUrl, kcSecret);
+        setupBackendClient(realmResource, kcBackendClientId, kcBackendClientName, kcOrmtApiRootUrl, kcSecret);
 
         setupFrontendClient(realmResource, kcFrontendClientId, kcFrontendClientName, kcFrontendRootUrl, kcSecret);
 

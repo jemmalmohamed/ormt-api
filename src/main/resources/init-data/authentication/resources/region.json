@@ -1,14 +1,15 @@
 [
   {
-    "name": "user",
-    "displayName": "user",
-    "uris": ["/users/*"],
+    "name": "region",
+    "displayName": "Region",
+    "uris": ["/regions/*"],
     "scopes": [
       {
         "name": "read",
         "roles": [
           { "name": "admin_ormt", "required": false },
-          { "name": "responsable_ormt", "required": false }
+          { "name": "responsable_ormt", "required": false },
+          { "name": "agent_ormt", "required": false }
         ]
       },
       {
@@ -22,7 +23,8 @@
         "name": "list",
         "roles": [
           { "name": "admin_ormt", "required": false },
-          { "name": "responsable_ormt", "required": false }
+          { "name": "responsable_ormt", "required": false },
+          { "name": "agent_ormt", "required": false }
         ]
       },
       {

@@ -7,7 +7,7 @@
     "emailVerified": true,
     "enabled": true,
     "password": "password",
-    "clientRoles": ["admin_pva"]
+    "clientRoles": ["admin_ormt"]
   },
   {
     "username": "a.lahlou",
@@ -17,7 +17,7 @@
     "emailVerified": true,
     "enabled": true,
     "password": "password",
-    "clientRoles": ["agent_pva"]
+    "clientRoles": ["agent_ormt"]
   },
   {
     "username": "m.amar",
@@ -27,7 +27,7 @@
     "emailVerified": true,
     "password": "password",
     "enabled": true,
-    "clientRoles": ["responsable_pva"]
+    "clientRoles": ["responsable_ormt"]
   },
   {
     "username": "i.affa",

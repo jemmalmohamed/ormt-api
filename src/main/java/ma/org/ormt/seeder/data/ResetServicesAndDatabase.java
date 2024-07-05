@@ -35,6 +35,8 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
     }
 
     private void resetDatabase() {
+        truncateTable("province");
+        truncateTable("region");
         truncateTable("organisme");
     }
 
