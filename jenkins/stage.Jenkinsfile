@@ -30,7 +30,6 @@ def pruneKeycloakContainers() {
      throw e
   }
 }
-
 def runKeycloakContainer() {
   try {
     sh '''
@@ -46,45 +45,18 @@ def runKeycloakContainer() {
   }
 }
 
-// geoserver containers
-def pruneGeoserverContainer() {
-  try {
-    sh '''
-      # Prune geoserver container
-      docker compose --env-file ./docker/services/geoserver/env/.env.stage \
-      -f ./docker/services/geoserver/docker-compose.geoserver.base.yml \
-      -f ./docker/services/geoserver/docker-compose.geoserver.stage.yml \
-      down -v
-    '''
-  } catch (Exception e) {
-     echo "Error in pruning Geoserver containers: ${e.getMessage()}"
-     throw e
-  }
-}
-
-def runGeoserverContainer() {
-  try {
-    sh '''
-      # Build geoserver image
-      docker compose --env-file  ./docker/services/geoserver/env/.env.stage \
-      -f ./docker/services/geoserver/docker-compose.geoserver.base.yml \
-      -f ./docker/services/geoserver/docker-compose.geoserver.stage.yml \
-      up -d
-    '''
-  } catch (Exception e) {
-     echo "Error in building Geoserver image: ${e.getMessage()}"
-     throw e
-  }
-}
+ 
+ 
 
 
+// api database containers
 def pruneApiDatabaseContainer() {
   try {
     sh '''
-      # Prune sqlserver container
-      docker compose --env-file  ./docker/services/sqlserver/env/.env.stage \
-      -f ./docker/services/sqlserver/docker-compose.sqlserver.base.yml \
-      -f ./docker/services/sqlserver/docker-compose.sqlserver.stage.yml \
+      # Prune postgres container
+      docker compose --env-file  ./docker/services/postgres/env/.env.stage \
+      -f ./docker/services/postgres/docker-compose.postgres.base.yml \
+      -f ./docker/services/postgres/docker-compose.postgres.stage.yml \
       down -v
     '''
   } catch (Exception e) {
@@ -95,85 +67,73 @@ def pruneApiDatabaseContainer() {
 
 def runApiDatabaseContainer() {
   try {
-    def scriptPath = './docker/services/sqlserver/init/entrypoint.sh'
-    sh """
-      # Verify if the script exists
-      if [ -f ${scriptPath} ]; then
-        echo "Script found: ${scriptPath}"
-        chmod +x ${scriptPath}
-      else
-        echo "Script not found: ${scriptPath}"
-        exit 1
-      fi
-      
-      # Build and run sqlserver container
-      docker-compose --env-file ./docker/services/sqlserver/env/.env.stage \
-      -f ./docker/services/sqlserver/docker-compose.sqlserver.base.yml \
-      -f ./docker/services/sqlserver/docker-compose.sqlserver.stage.yml \
+    sh '''
+      # Build postgres image
+      docker compose --env-file  ./docker/services/postgres/env/.env.stage \
+      -f ./docker/services/postgres/docker-compose.postgres.base.yml \
+      -f ./docker/services/postgres/docker-compose.postgres.stage.yml \
       up -d
-    """
+    '''
   } catch (Exception e) {
      echo "Error in building API database image: ${e.getMessage()}"
      throw e
   }
 }
 
- 
-
-// pva api containers
-def prunePvaApiContainer() {
+// ormt api containers
+def pruneOrmtApiContainer() {
   try { 
     sh '''
-      # Prune pva-api containers
+      # Prune ormt-api containers
       docker compose --env-file  ./docker/app/env/.env.stage \
-      -f ./docker/app/docker-compose.pva-api.base.yml \
-      -f ./docker/app/docker-compose.pva-api.stage.yml \
-      --project-name pva-api \
+      -f ./docker/app/docker-compose.ormt-api.base.yml \
+      -f ./docker/app/docker-compose.ormt-api.stage.yml \
+      --project-name ormt-api \
       down -v
 
       docker rmi -f $IMAGE_TAG || true
      '''
   } catch (Exception e) {
-     echo "Error in pruning pva-api containers: ${e.getMessage()}"
+     echo "Error in pruning ormt-api containers: ${e.getMessage()}"
      throw e
   }
 }
 
-def buildPvaApi() {
+def buildOrmtApi() {
   try {
     sh '''
      mvn clean install   
     '''
   } catch (Exception e) {
-     echo "Error in building pva-api image: ${e.getMessage()}"
+     echo "Error in building ormt-api image: ${e.getMessage()}"
      throw e
   }
 }
 
-def buildPvaApiImage() {
+def buildOrmtApiImage() {
   try {
     sh '''
-      # Build pva-api image
+      # Build ormt-api image
        docker build -t  $IMAGE_TAG .
     '''
   } catch (Exception e) {
-     echo "Error in building pva-api image: ${e.getMessage()}"
+     echo "Error in building ormt-api image: ${e.getMessage()}"
      throw e
   }
 }
 
-def runPvaApiContainer() {
+def runOrmtApiContainer() {
   try {
     sh '''
-      # Build pva-api image
+      # Build ormt-api image
       docker compose --env-file  ./docker/app/env/.env.stage \
-      -f ./docker/app/docker-compose.pva-api.base.yml \
-      -f ./docker/app/docker-compose.pva-api.stage.yml \
-      --project-name pva-api \
+      -f ./docker/app/docker-compose.ormt-api.base.yml \
+      -f ./docker/app/docker-compose.ormt-api.stage.yml \
+      --project-name ormt-api \
       up -d
     '''
   } catch (Exception e) {
-     echo "Error in runing pva-api container: ${e.getMessage()}"
+     echo "Error in runing ormt-api container: ${e.getMessage()}"
      throw e
   }
 }
@@ -184,20 +144,18 @@ pipeline {
     
     booleanParam(name: 'prune_keycloak', defaultValue: false, description: 'Prune Keycloak containers individually')
     booleanParam(name: 'run_keycloak', defaultValue: false, description: 'Run Keycloak container individually')
-    booleanParam(name: 'prune_geoserver', defaultValue: false, description: 'Prune Geoserver container individually')
-    booleanParam(name: 'run_geoserver', defaultValue: false, description: 'Run Geoserver container individually')
-    booleanParam(name: 'prune_sqlserver', defaultValue: false, description: 'Prune Sql Server container individually')
-    booleanParam(name: 'run_sqlserver', defaultValue: false, description: 'Run  Sql Server container individually')
-    booleanParam(name: 'prune_pva_api', defaultValue: false, description: 'Prune pva-api container before building and deploying')
-    booleanParam(name: 'build_pva_api', defaultValue: false, description: 'Build pva-api before building and deploying')
-    booleanParam(name: 'build_pva_api_image', defaultValue: false, description: 'Build pva-api image before building and deploying')
-    booleanParam(name: 'run_pva_api', defaultValue: false, description: 'Run pva-api')
+    booleanParam(name: 'prune_postgres', defaultValue: false, description: 'Prune Postgres container individually')
+    booleanParam(name: 'run_postgres', defaultValue: false, description: 'Run Postgres container individually')
+    booleanParam(name: 'prune_ormt_api', defaultValue: true, description: 'Prune ormt-api container before building and deploying')
+    booleanParam(name: 'build_ormt_api', defaultValue: true, description: 'Build ormt-api before building and deploying')
+    booleanParam(name: 'build_ormt_api_image', defaultValue: true, description: 'Build ormt-api image before building and deploying')
+    booleanParam(name: 'run_ormt_api', defaultValue: true, description: 'Run ormt-api')
     }
   tools {
         maven 'maven' 
     }
   environment {
-        IMAGE_TAG = 'ancfcc/pva-api:latest'
+        IMAGE_TAG = 'ormt/ormt-api:latest'
     }
   stages {
 
@@ -210,7 +168,6 @@ pipeline {
           }
       }
     }
- 
 
 
     stage("Build and Deploy App Services") {
@@ -230,28 +187,16 @@ pipeline {
       }
     }
 
-       stage("Build Geoserver container"){
-      when {  expression {  params.prune_geoserver || params.run_geoserver  }  }
-      steps{
-        script {
-          if (params.prune_geoserver) {
-            pruneGeoserverContainer()
-          }
-          if (params.run_geoserver) {
-            runGeoserverContainer()
-          }
-        }
-      }
-    }
+     
        
-        stage("Build Sql Server container"){
-          when {  expression {  params.prune_sqlserver || params.run_sqlserver  }  }
+        stage("Build Postgres container"){
+          when {  expression {  params.prune_postgres || params.run_postgres  }  }
            steps{
             script {
-              if (params.prune_sqlserver) {
+              if (params.prune_postgres) {
                 pruneApiDatabaseContainer()
               }
-              if (params.run_sqlserver) {
+              if (params.run_postgres) {
                 runApiDatabaseContainer()
               }
         }
@@ -262,38 +207,38 @@ pipeline {
 
 
 
-     // pva api
-    stage("Prune pva-api container"){
-      when {  expression {  params.prune_pva_api  }  }
+     // ormt api
+    stage("Prune ormt-api container"){
+      when {  expression {  params.prune_ormt_api  }  }
       steps{
         script {
-            prunePvaApiContainer()
+            pruneOrmtApiContainer()
         }
        }
      }
 
-      stage("Build pva-api jar"){
-        when {  expression {  params.build_pva_api  }  }
+      stage("Build ormt-api jar"){
+        when {  expression {  params.build_ormt_api  }  }
         steps{
           script {
-              buildPvaApi()  
+              buildOrmtApi()  
           }
         }
       }
 
-      stage("Build pva-api docker image"){
-        when {  expression {  params.build_pva_api_image  }  }
+      stage("Build ormt-api docker image"){
+        when {  expression {  params.build_ormt_api_image  }  }
         steps{
           script {
-              buildPvaApiImage()
+              buildOrmtApiImage()
           }
         }
       }
-      stage(" Run pva-api container"){
-        when {  expression {  params.run_pva_api  }  }
+      stage(" Run ormt-api container"){
+        when {  expression {  params.run_ormt_api  }  }
         steps{
           script {
-              runPvaApiContainer()
+              runOrmtApiContainer()
           }
         }
       }

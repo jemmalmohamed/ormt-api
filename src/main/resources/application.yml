@@ -11,9 +11,9 @@ spring:
     hibernate:
       ddl-auto: validate
       format_sql: true
-    database: sql_server
-    database-platform: org.hibernate.dialect.SQLServerDialect
-    show-sql: false 
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
   sql:
     init:
       mode: never
@@ -33,8 +33,6 @@ flyway:
 data:
   external:
     data_path: ./data/
-    level_1_path : ./data/pva/niveau_1/
-    level_2_path : ./data/pva/niveau_2/
 
 jwt:
   auth:

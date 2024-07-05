@@ -1,8 +1,0 @@
-version: "3.9"
-
-services:
-  pva-api:
-    env_file:
-      - ../services/postgres/env/.env.stage
-      - ../services/keycloak/env/.env.stage
-      - ../services/geoserver/env/.env.stage

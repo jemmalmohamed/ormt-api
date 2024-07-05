@@ -1,0 +1,7 @@
+version: "3.9"
+
+services:
+  ormt-api:
+    env_file:
+      - ../services/postgres/env/.env.stage
+      - ../services/keycloak/env/.env.stage

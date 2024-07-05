@@ -49,7 +49,7 @@
     <!-- Log levels -->
     <logger name="org.springframework" level="WARN" />
     <logger name="org.hibernate" level="WARN" />
-    <logger name="ma.org.ancfcc.pva" level="INFO" />
+    <logger name="ma.org.ormt" level="INFO" />
 
     <!-- Root logger -->
     <root level="INFO">

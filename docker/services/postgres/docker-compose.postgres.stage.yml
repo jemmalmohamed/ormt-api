@@ -1,0 +1,5 @@
+version: "3.9"
+services:
+  ormt-database:
+    ports:
+      - 5436:5432 # expose port 5436 to host machine

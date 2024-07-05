@@ -1,11 +1,11 @@
 version: "3.9"
 
 services:
-  pva-kc-db:
+  ormt-kc-db:
     ports:
-      - 5433:5432
+      - 5437:5432
 
-  pva-kc:
+  ormt-kc:
     command: start-dev ## --import-realm
     ports:
-      - 8082:8080
+      - 8092:8080

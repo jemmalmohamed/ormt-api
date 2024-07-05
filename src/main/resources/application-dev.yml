@@ -1,11 +1,8 @@
 server:
-  port: 8083
+  port: 8093
 
 starter:
   database:
-    reset: true
-    seed: true
-  geoserver:
     reset: true
     seed: true
   keycloak: 
@@ -18,44 +15,38 @@ spring:
   security:
     enabled: true
   datasource:
-    url: jdbc:sqlserver://localhost:1431;databaseName=${spring.datasource.database};encrypt=false;trustServerCertificate=true
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    host: pva-database
-    database: pva
-    username: sa 
-    password: pva@database2024
+      url: jdbc:postgresql://localhost:5436/${spring.datasource.database}
+      driver-class-name: org.postgresql.Driver
+      host: ormt-database
+      port: 5432
+      database: ormt
+      username: ormt
+      password: ormt@database
  
-geoserver:
-  url: http://localhost:8085/geoserver
-  host: localhost 
-  port: 8085
-  username: pva
-  password: pva
-  workspace: pva
-  postgis-datastore: pva_postgis
+ 
 
 
 keycloak:
-  host: localhost:8082
+  host: localhost:8092
   auth-server-url: http://${keycloak.host}
   admin:
     realm: master
     client: admin-cli
     username: admin
     password: admin
-  realm: pva  # this is the realm name
+  realm: ormt  # this is the realm name
   secret: "SSnam21521xFoFQAqi5TA68jKV3nBOyl"
   clients:
     backend:
-      id: pva-api   # this is the client id (name )of the api
-      name: pva api
-      root-url: http://localhost:8083
+      id: ormt-api   # this is the client id (name )of the api
+      name: ormt api
+      root-url: http://localhost:8093
       valid-redirect-urls: http://${keycloak.clients.backend.root-url}/*
       web-origins: "*"
       authorization: true
     frontend:
-      id: pva-web  # this is the client id (name) of the frontend
-      name: prise de vue aérienne
+      id: ormt-web  # this is the client id (name) of the frontend
+      name: ormt-ms
       root-url:  http://localhost:4200
       web-origins: "*"
       authorization: false

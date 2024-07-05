@@ -1,9 +1,0 @@
-version: "3.9"
-services:
-  pva-geoserver:
-    labels:
-      - "traefik.http.routers.pva-geoserver.entrypoints=websecure"
-      - "traefik.http.routers.pva-geoserver.tls=true"
-    environment:
-      HTTP_PROXY_NAME: ${GEOSERVER_API_HOST_URL}
-      HTTP_SCHEME: https

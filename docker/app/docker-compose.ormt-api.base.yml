@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  ormt-api:
+    image: ormt/ormt-api:latest
+    container_name: ormt-api
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.ormt-api.rule=Host(`${API_HOST_URL}`)"
+      - "traefik.http.routers.ormt-api.entrypoints=web"
+    networks:
+      - proxy
+    environment:
+      - SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE}
+    volumes:
+      - ../../data/:/data
+networks:
+  proxy:
+    external: true

@@ -1,16 +1,16 @@
 version: "3.9"
 
 services:
-  pva-kc-db:
+  ormt-kc-db:
     image: postgres:15.3-alpine
-    container_name: pva-kc-db
+    container_name: ormt-kc-db
     restart: always
     environment:
       POSTGRES_USER: ${KEYCLOAK_POSTGRES_USER}
       POSTGRES_PASSWORD: ${KEYCLOAK_POSTGRES_PASSWORD}
       POSTGRES_DB: ${KEYCLOAK_POSTGRES_DB}
     volumes:
-      - "pgdata_kc_pva:/var/lib/postgresql/data"
+      - "pgdata_kc_ormt:/var/lib/postgresql/data"
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${KEYCLOAK_POSTGRES_USER}"]
       interval: 10s
@@ -19,15 +19,14 @@ services:
     networks:
       - proxy
 
-  pva-kc:
-    # image: quay.io/keycloak/keycloak:23.0.3
-    image: quay.io/keycloak/keycloak:25.0.1
-    container_name: pva-kc
+  ormt-kc:
+    image: quay.io/keycloak/keycloak:23.0.3
+    container_name: ormt-kc
     restart: always
     tty: true
     environment:
       KC_DB: postgres
-      KC_DB_URL_HOST: pva-kc-db
+      KC_DB_URL_HOST: ormt-kc-db
       KC_DB_USERNAME: ${KEYCLOAK_POSTGRES_USER}
       KC_DB_PASSWORD: ${KEYCLOAK_POSTGRES_PASSWORD}
       KC_DB_URL_DATABASE: ${KEYCLOAK_POSTGRES_DB}
@@ -39,12 +38,12 @@ services:
       KC_PROXY: edge
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.pva-kc.entrypoints=web"
-      - "traefik.http.routers.pva-kc.rule=Host(`${KEYCLOAK_HOST_URL}`)"
-      - "traefik.http.services.pva-kc.loadbalancer.server.port=${KEYCLOAK_PORT}"
+      - "traefik.http.routers.ormt-kc.entrypoints=web"
+      - "traefik.http.routers.ormt-kc.rule=Host(`${KEYCLOAK_HOST_URL}`)"
+      - "traefik.http.services.ormt-kc.loadbalancer.server.port=${KEYCLOAK_PORT}"
 
     depends_on:
-      pva-kc-db:
+      ormt-kc-db:
         condition: service_healthy
     volumes:
       - ./../../../services/keycloak/realms:/opt/keycloak/data/import
@@ -53,7 +52,7 @@ services:
       - proxy
 
 volumes:
-  pgdata_kc_pva:
+  pgdata_kc_ormt:
 
 networks:
   proxy:
