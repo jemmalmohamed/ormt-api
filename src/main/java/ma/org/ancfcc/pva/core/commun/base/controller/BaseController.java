@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.core.commun.base.controller;
 
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
@@ -28,8 +27,8 @@ public abstract class BaseController<T> {
         return ResponseEntity.status(status).body(restResponse);
     }
 
-    public ResponseEntity<RestResponse<List<UUID>>> buildResponseEntity(List<UUID> ids, HttpStatus status) {
-        return ResponseEntity.ok(RestResponse.<List<UUID>>builder()
+    public ResponseEntity<RestResponse<List<Long>>> buildResponseEntity(List<Long> ids, HttpStatus status) {
+        return ResponseEntity.ok(RestResponse.<List<Long>>builder()
                 .status(status)
                 .data(ids)
                 .message(!ids.isEmpty() ? null : "No data found")

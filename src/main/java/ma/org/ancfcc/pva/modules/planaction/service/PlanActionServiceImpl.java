@@ -2,7 +2,6 @@ package ma.org.ancfcc.pva.modules.planaction.service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -67,7 +66,7 @@ public class PlanActionServiceImpl extends BaseServiceImpl<PlanAction> implement
     }
 
     @Override
-    public PlanAction update(UUID id, PlanActionRequestDto requestDto) {
+    public PlanAction update(Long id, PlanActionRequestDto requestDto) {
         // verify if id is the same as the one in the body
         validator.validate(requestDto);
         PlanAction planActionToUpdate = planActionRequestMapper.mapToEntity(requestDto);
@@ -87,7 +86,7 @@ public class PlanActionServiceImpl extends BaseServiceImpl<PlanAction> implement
     }
 
     @Override
-    public void validateBeforeDelete(UUID id) {
+    public void validateBeforeDelete(Long id) {
         validateMissionDependencies(id);
     }
 
@@ -99,11 +98,11 @@ public class PlanActionServiceImpl extends BaseServiceImpl<PlanAction> implement
     }
 
     @Override
-    public boolean existsById(UUID id) {
+    public boolean existsById(Long id) {
         return planActionRepository.existsById(id);
     }
 
-    private void validateMissionDependencies(UUID id) {
+    private void validateMissionDependencies(Long id) {
         List<String> missionList = findMissionCodesByPLanActionId(id);
         if (!missionList.isEmpty()) {
 
@@ -120,7 +119,7 @@ public class PlanActionServiceImpl extends BaseServiceImpl<PlanAction> implement
     }
 
     @Override
-    public List<String> findMissionCodesByPLanActionId(UUID planActionId) {
+    public List<String> findMissionCodesByPLanActionId(Long planActionId) {
         return planActionRepository.findMissionCodesByPLanActionId(planActionId);
     }
 

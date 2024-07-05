@@ -2,7 +2,6 @@ package ma.org.ancfcc.pva.modules.objet.service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -43,7 +42,7 @@ public class ObjetServiceImpl extends BaseServiceImpl<Objet> implements ObjetSer
     }
 
     @Override
-    public boolean existsById(UUID id) {
+    public boolean existsById(Long id) {
         return objetRepository.existsById(id);
     }
 
@@ -75,7 +74,7 @@ public class ObjetServiceImpl extends BaseServiceImpl<Objet> implements ObjetSer
     }
 
     @Override
-    public Objet update(UUID id, ObjetRequestDto requestDto) {
+    public Objet update(Long id, ObjetRequestDto requestDto) {
         // verify if id is the same as the one in the body
         validator.validate(requestDto);
         Objet objetToUpdate = objetRequestMapper.mapToEntity(requestDto);
@@ -87,7 +86,7 @@ public class ObjetServiceImpl extends BaseServiceImpl<Objet> implements ObjetSer
     }
 
     @Override
-    public void validateBeforeDelete(UUID id) {
+    public void validateBeforeDelete(Long id) {
         validateMissionDependencies(id);
     }
 
@@ -97,7 +96,7 @@ public class ObjetServiceImpl extends BaseServiceImpl<Objet> implements ObjetSer
 
     }
 
-    private void validateMissionDependencies(UUID id) {
+    private void validateMissionDependencies(Long id) {
         List<String> missionList = objetRepository.findMissionCodesByObjetsId(id);
         if (!missionList.isEmpty()) {
 

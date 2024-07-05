@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.basemap.controller;
 
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
@@ -80,7 +79,7 @@ public class BasemapLoadController extends BaseController<Basemap> {
         })
         @GetMapping("/{id}")
         @PreAuthorize("hasAuthority('basemap:read')")
-        public ResponseEntity<RestResponse<BasemapDto>> getBasemap(@PathVariable("id") UUID id) {
+        public ResponseEntity<RestResponse<BasemapDto>> getBasemap(@PathVariable("id") Long id) {
                 Basemap basemap = basemapService.findById(id).orElseThrow(EntityNotFoundException::new);
                 return buildResponseEntity(basemap, BasemapDto.class, HttpStatus.OK);
 

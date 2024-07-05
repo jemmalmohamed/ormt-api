@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.avion.controller;
 
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
@@ -83,7 +82,7 @@ public class AvionLoadController extends BaseController<Avion> {
         })
         @GetMapping("/{id}")
         @PreAuthorize("hasAuthority('avion:read')")
-        public ResponseEntity<RestResponse<AvionDetailDto>> getAvion(@PathVariable("id") UUID id) {
+        public ResponseEntity<RestResponse<AvionDetailDto>> getAvion(@PathVariable("id") Long id) {
                 Avion avion = avionService.findById(id).orElseThrow(EntityNotFoundException::new);
                 return buildResponseEntity(avion, AvionDetailDto.class, HttpStatus.OK);
 

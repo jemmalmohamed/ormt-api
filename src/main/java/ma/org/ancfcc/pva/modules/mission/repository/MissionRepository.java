@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.mission.repository;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -17,12 +16,12 @@ public interface MissionRepository extends BaseRepository<Mission> {
 
     boolean existsByCode(String code);
 
-    boolean existsByIdAndDelimitationIsNotNull(UUID id);
+    boolean existsByIdAndDelimitationIsNotNull(Long id);
 
     @Query("SELECT COUNT(p) FROM PhotoPlanification p JOIN p.bande b JOIN b.mission m WHERE m.id = :missionId")
-    long countPhotoPlanificationsByMissionId(@Param("missionId") UUID missionId);
+    long countPhotoPlanificationsByMissionId(@Param("missionId") Long missionId);
 
     @Query("SELECT COUNT(b) FROM Bande b JOIN b.mission m WHERE m.id = :missionId")
-    long countBandesByMissionId(@Param("missionId") UUID missionId);
+    long countBandesByMissionId(@Param("missionId") Long missionId);
 
 }

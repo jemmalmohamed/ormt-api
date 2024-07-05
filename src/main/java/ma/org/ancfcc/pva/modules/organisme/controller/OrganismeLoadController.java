@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.organisme.controller;
 
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
@@ -83,7 +82,7 @@ public class OrganismeLoadController extends BaseController<Organisme> {
         })
         @GetMapping("/{id}")
         @PreAuthorize("hasAuthority('organisme:read')")
-        public ResponseEntity<RestResponse<OrganismeDetailDto>> getOrganisme(@PathVariable("id") UUID id) {
+        public ResponseEntity<RestResponse<OrganismeDetailDto>> getOrganisme(@PathVariable("id") Long id) {
                 Organisme organisme = organismeService.findById(id).orElseThrow(EntityNotFoundException::new);
                 return buildResponseEntity(organisme, OrganismeDetailDto.class, HttpStatus.OK);
 

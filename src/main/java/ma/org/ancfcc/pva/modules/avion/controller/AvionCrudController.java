@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.avion.controller;
 
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -68,7 +67,7 @@ public class AvionCrudController extends BaseController<Avion> {
         })
         @PutMapping("{id}")
         @PreAuthorize("hasAuthority('avion:update')")
-        public ResponseEntity<RestResponse<AvionDto>> updateAvion(@PathVariable UUID id,
+        public ResponseEntity<RestResponse<AvionDto>> updateAvion(@PathVariable Long id,
                         @Validated(OnUpdate.class) @RequestBody AvionRequestDto avionRequestDto) {
                 Avion avion = avionService.update(id, avionRequestDto);
                 return buildResponseEntity(avion, AvionDto.class, HttpStatus.OK);
@@ -81,7 +80,7 @@ public class AvionCrudController extends BaseController<Avion> {
         })
         @DeleteMapping("/{id}")
         @PreAuthorize("hasAuthority('avion:delete')")
-        public ResponseEntity<Void> deleteById(@PathVariable UUID id) {
+        public ResponseEntity<Void> deleteById(@PathVariable Long id) {
                 return handleDelete(() -> avionService.delete(id));
         }
 
@@ -92,7 +91,7 @@ public class AvionCrudController extends BaseController<Avion> {
         })
         @DeleteMapping("/bulk")
         @PreAuthorize("hasAuthority('avion:delete')")
-        public ResponseEntity<Void> deleteMultiple(@RequestBody List<UUID> ids) {
+        public ResponseEntity<Void> deleteMultiple(@RequestBody List<Long> ids) {
                 return handleDelete(() -> avionService.deleteAllById(ids));
         }
 
@@ -114,7 +113,7 @@ public class AvionCrudController extends BaseController<Avion> {
         })
         @DeleteMapping("/exclude")
         @PreAuthorize("hasAuthority('avion:delete')")
-        public ResponseEntity<Void> deleteAllExcept(@RequestBody List<UUID> ids) {
+        public ResponseEntity<Void> deleteAllExcept(@RequestBody List<Long> ids) {
                 return handleDelete(() -> avionService.deleteAllExceptIds(ids));
         }
 
@@ -125,11 +124,11 @@ public class AvionCrudController extends BaseController<Avion> {
         })
         @DeleteMapping("/query")
         @PreAuthorize("hasAuthority('avion:delete')")
-        public ResponseEntity<RestResponse<List<UUID>>> deleteByQueryParams(
+        public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParams(
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
-                List<UUID> deletedIds = avionService.deleteBySpecification(filters, globalFilter,
+                List<Long> deletedIds = avionService.deleteBySpecification(filters, globalFilter,
                                 Avion.class);
                 return buildResponseEntity(deletedIds, HttpStatus.OK);
 
@@ -142,12 +141,12 @@ public class AvionCrudController extends BaseController<Avion> {
         })
         @DeleteMapping("/query-exclude")
         @PreAuthorize("hasAuthority('avion:delete')")
-        public ResponseEntity<RestResponse<List<UUID>>> deleteByQueryParamsExceptIds(
-                        @RequestBody List<UUID> ids,
+        public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParamsExceptIds(
+                        @RequestBody List<Long> ids,
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
-                List<UUID> deletedIds = avionService.deleteBySpecificationExceptIds(filters, globalFilter,
+                List<Long> deletedIds = avionService.deleteBySpecificationExceptIds(filters, globalFilter,
                                 Avion.class, ids);
 
                 return buildResponseEntity(deletedIds, HttpStatus.OK);

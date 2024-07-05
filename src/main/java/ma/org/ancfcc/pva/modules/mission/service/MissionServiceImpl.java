@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.mission.service;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -40,7 +39,7 @@ public class MissionServiceImpl extends BaseServiceImpl<Mission> implements Miss
     }
 
     @Override
-    public boolean existsById(UUID id) {
+    public boolean existsById(Long id) {
         return missionRepository.existsById(id);
     }
 
@@ -77,7 +76,7 @@ public class MissionServiceImpl extends BaseServiceImpl<Mission> implements Miss
     }
 
     @Override
-    public Mission update(UUID id, MissionRequestDto requestDto) {
+    public Mission update(Long id, MissionRequestDto requestDto) {
         // verify if id is the same as the one in the body
         validator.validate(requestDto);
         Mission missionToUpdate = missionRequestMapper.mapToEntity(requestDto);
@@ -98,12 +97,12 @@ public class MissionServiceImpl extends BaseServiceImpl<Mission> implements Miss
     }
 
     @Override
-    public Long countPhotoPlanificationsByMissionId(UUID missionId) {
+    public Long countPhotoPlanificationsByMissionId(Long missionId) {
         return missionRepository.countPhotoPlanificationsByMissionId(missionId);
     }
 
     @Override
-    public Long countBandeByMissionId(UUID missionId) {
+    public Long countBandeByMissionId(Long missionId) {
         return missionRepository.countPhotoPlanificationsByMissionId(missionId);
     }
 

@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.capteur.controller;
 
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -68,7 +67,7 @@ public class CapteurCrudController extends BaseController<Capteur> {
         })
         @PutMapping("{id}")
         @PreAuthorize("hasAuthority('capteur:update')")
-        public ResponseEntity<RestResponse<CapteurDto>> updateCapteur(@PathVariable UUID id,
+        public ResponseEntity<RestResponse<CapteurDto>> updateCapteur(@PathVariable Long id,
                         @Validated(OnUpdate.class) @RequestBody CapteurRequestDto capteurRequestDto) {
                 Capteur capteur = capteurService.update(id, capteurRequestDto);
                 return buildResponseEntity(capteur, CapteurDto.class, HttpStatus.OK);
@@ -81,7 +80,7 @@ public class CapteurCrudController extends BaseController<Capteur> {
         })
         @DeleteMapping("/{id}")
         @PreAuthorize("hasAuthority('capteur:delete')")
-        public ResponseEntity<Void> deleteById(@PathVariable UUID id) {
+        public ResponseEntity<Void> deleteById(@PathVariable Long id) {
                 return handleDelete(() -> capteurService.delete(id));
         }
 
@@ -92,7 +91,7 @@ public class CapteurCrudController extends BaseController<Capteur> {
         })
         @DeleteMapping("/bulk")
         @PreAuthorize("hasAuthority('capteur:delete')")
-        public ResponseEntity<Void> deleteMultiple(@RequestBody List<UUID> ids) {
+        public ResponseEntity<Void> deleteMultiple(@RequestBody List<Long> ids) {
                 return handleDelete(() -> capteurService.deleteAllById(ids));
         }
 
@@ -114,7 +113,7 @@ public class CapteurCrudController extends BaseController<Capteur> {
         })
         @DeleteMapping("/exclude")
         @PreAuthorize("hasAuthority('capteur:delete')")
-        public ResponseEntity<Void> deleteAllExcept(@RequestBody List<UUID> ids) {
+        public ResponseEntity<Void> deleteAllExcept(@RequestBody List<Long> ids) {
                 return handleDelete(() -> capteurService.deleteAllExceptIds(ids));
         }
 
@@ -125,11 +124,11 @@ public class CapteurCrudController extends BaseController<Capteur> {
         })
         @DeleteMapping("/query")
         @PreAuthorize("hasAuthority('capteur:delete')")
-        public ResponseEntity<RestResponse<List<UUID>>> deleteByQueryParams(
+        public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParams(
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
-                List<UUID> deletedIds = capteurService.deleteBySpecification(filters, globalFilter,
+                List<Long> deletedIds = capteurService.deleteBySpecification(filters, globalFilter,
                                 Capteur.class);
                 return buildResponseEntity(deletedIds, HttpStatus.OK);
 
@@ -142,12 +141,12 @@ public class CapteurCrudController extends BaseController<Capteur> {
         })
         @DeleteMapping("/query-exclude")
         @PreAuthorize("hasAuthority('capteur:delete')")
-        public ResponseEntity<RestResponse<List<UUID>>> deleteByQueryParamsExceptIds(
-                        @RequestBody List<UUID> ids,
+        public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParamsExceptIds(
+                        @RequestBody List<Long> ids,
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
-                List<UUID> deletedIds = capteurService.deleteBySpecificationExceptIds(filters, globalFilter,
+                List<Long> deletedIds = capteurService.deleteBySpecificationExceptIds(filters, globalFilter,
                                 Capteur.class, ids);
 
                 return buildResponseEntity(deletedIds, HttpStatus.OK);

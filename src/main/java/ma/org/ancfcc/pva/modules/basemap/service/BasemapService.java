@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.basemap.service;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 
@@ -18,8 +17,8 @@ public interface BasemapService extends BaseService<Basemap> {
 
     Basemap create(BasemapRequestDto requestDto);
 
-    Basemap update(UUID id, BasemapRequestDto basemapRequestDto);
+    Basemap update(Long id, BasemapRequestDto basemapRequestDto);
 
-    boolean existsById(UUID id);
+    boolean existsById(Long id);
 
 }

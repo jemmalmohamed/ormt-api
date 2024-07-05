@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.mission.controller;
 
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
@@ -86,7 +85,7 @@ public class MissionLoadController extends BaseController<Mission> {
         })
         @GetMapping("/{id}")
         @PreAuthorize("hasAuthority('mission:read')")
-        public ResponseEntity<RestResponse<MissionDetailDto>> getMission(@PathVariable("id") UUID id) {
+        public ResponseEntity<RestResponse<MissionDetailDto>> getMission(@PathVariable("id") Long id) {
                 Mission mission = missionRepository.findById(id).orElseThrow(EntityNotFoundException::new);
 
                 return buildResponseEntity(mission, MissionDetailDto.class, HttpStatus.OK);

@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.organisme.controller;
 
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -68,7 +67,7 @@ public class OrganismeCrudController extends BaseController<Organisme> {
         })
         @PutMapping("{id}")
         @PreAuthorize("hasAuthority('organisme:update')")
-        public ResponseEntity<RestResponse<OrganismeDto>> updateOrganisme(@PathVariable UUID id,
+        public ResponseEntity<RestResponse<OrganismeDto>> updateOrganisme(@PathVariable Long id,
                         @Validated(OnUpdate.class) @RequestBody OrganismeRequestDto organismeRequestDto) {
                 Organisme organisme = organismeService.update(id, organismeRequestDto);
                 return buildResponseEntity(organisme, OrganismeDto.class, HttpStatus.OK);
@@ -81,7 +80,7 @@ public class OrganismeCrudController extends BaseController<Organisme> {
         })
         @DeleteMapping("/{id}")
         @PreAuthorize("hasAuthority('organisme:delete')")
-        public ResponseEntity<Void> deleteById(@PathVariable UUID id) {
+        public ResponseEntity<Void> deleteById(@PathVariable Long id) {
                 return handleDelete(() -> organismeService.delete(id));
         }
 
@@ -92,7 +91,7 @@ public class OrganismeCrudController extends BaseController<Organisme> {
         })
         @DeleteMapping("/bulk")
         @PreAuthorize("hasAuthority('organisme:delete')")
-        public ResponseEntity<Void> deleteMultiple(@RequestBody List<UUID> ids) {
+        public ResponseEntity<Void> deleteMultiple(@RequestBody List<Long> ids) {
                 return handleDelete(() -> organismeService.deleteAllById(ids));
         }
 
@@ -114,7 +113,7 @@ public class OrganismeCrudController extends BaseController<Organisme> {
         })
         @DeleteMapping("/exclude")
         @PreAuthorize("hasAuthority('organisme:delete')")
-        public ResponseEntity<Void> deleteAllExcept(@RequestBody List<UUID> ids) {
+        public ResponseEntity<Void> deleteAllExcept(@RequestBody List<Long> ids) {
                 return handleDelete(() -> organismeService.deleteAllExceptIds(ids));
         }
 
@@ -125,11 +124,11 @@ public class OrganismeCrudController extends BaseController<Organisme> {
         })
         @DeleteMapping("/query")
         @PreAuthorize("hasAuthority('organisme:delete')")
-        public ResponseEntity<RestResponse<List<UUID>>> deleteByQueryParams(
+        public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParams(
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
-                List<UUID> deletedIds = organismeService.deleteBySpecification(filters, globalFilter,
+                List<Long> deletedIds = organismeService.deleteBySpecification(filters, globalFilter,
                                 Organisme.class);
                 return buildResponseEntity(deletedIds, HttpStatus.OK);
 
@@ -142,12 +141,12 @@ public class OrganismeCrudController extends BaseController<Organisme> {
         })
         @DeleteMapping("/query-exclude")
         @PreAuthorize("hasAuthority('organisme:delete')")
-        public ResponseEntity<RestResponse<List<UUID>>> deleteByQueryParamsExceptIds(
-                        @RequestBody List<UUID> ids,
+        public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParamsExceptIds(
+                        @RequestBody List<Long> ids,
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
-                List<UUID> deletedIds = organismeService.deleteBySpecificationExceptIds(filters, globalFilter,
+                List<Long> deletedIds = organismeService.deleteBySpecificationExceptIds(filters, globalFilter,
                                 Organisme.class, ids);
 
                 return buildResponseEntity(deletedIds, HttpStatus.OK);

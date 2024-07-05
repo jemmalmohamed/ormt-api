@@ -1,7 +1,5 @@
 package ma.org.ancfcc.pva.modules.mission.scan.service;
 
-import java.util.UUID;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -41,7 +39,7 @@ public class ScanExecutionServiceImpl extends BaseServiceImpl<ScanExecution>
      */
     @Override
     // @Transactional
-    public ScanExecution update(UUID id, ScanExecutionRequestDto scanExecutionRequestDto) {
+    public ScanExecution update(Long id, ScanExecutionRequestDto scanExecutionRequestDto) {
         validator.validate(scanExecutionRequestDto);
 
         ScanExecution scanExecutionToUpdate = scanExecutionRequestMapper
@@ -68,7 +66,7 @@ public class ScanExecutionServiceImpl extends BaseServiceImpl<ScanExecution>
     }
 
     @Override
-    public Long countByBandeId(UUID bandeId) {
+    public Long countByBandeId(Long bandeId) {
         return scanExecutionRepository.countByBandeId(bandeId);
     }
 

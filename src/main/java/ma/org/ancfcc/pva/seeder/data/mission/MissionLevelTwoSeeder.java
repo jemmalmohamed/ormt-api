@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Arrays;
 import java.util.List;
-import java.util.UUID;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -49,7 +49,7 @@ public class MissionLevelTwoSeeder implements CommandLineRunner {
     private static final String DATE_PATTERN = "dd-MM-yyyy";
     private static final String EO_SHAPEFILE_FOLDER = "eo-shapefile";
     private static final Integer FOLDER_THREAD_POOL = 11;
-    private static final Integer MISSION_THREAD_POOL = 2;
+    private static final Integer MISSION_THREAD_POOL = 5;
 
     @Override
     public void run(String... args) throws Exception {
@@ -72,7 +72,7 @@ public class MissionLevelTwoSeeder implements CommandLineRunner {
         // "2022",
         // "2023",
         // "2024");
-        List<String> yearFolderList = Arrays.asList("2023");
+        List<String> yearFolderList = Arrays.asList("2022");
 
         log.info("### DATA: Début chargement données niveau 2  ...");
         processFolderList(yearFolderList);
@@ -125,7 +125,7 @@ public class MissionLevelTwoSeeder implements CommandLineRunner {
     }
 
     public void processNumeriqueDirectory(File[] missionDirectories) {
-        int numThreads = 10; // Adjust the number of threads as needed
+        int numThreads = 1; // Adjust the number of threads as needed
         ExecutorService executorService = Executors.newFixedThreadPool(numThreads);
 
         Arrays.stream(missionDirectories)
@@ -251,7 +251,7 @@ public class MissionLevelTwoSeeder implements CommandLineRunner {
         log.info("### DATA: chargement date : {} done", dateFolder.getName());
     }
 
-    private void uploadExecutionShapefiles(File[] shapefileComponents, UUID missionId, String dateFolder)
+    private void uploadExecutionShapefiles(File[] shapefileComponents, Long missionId, String dateFolder)
             throws IOException {
         Arrays.stream(shapefileComponents)
                 .filter(File::isFile)

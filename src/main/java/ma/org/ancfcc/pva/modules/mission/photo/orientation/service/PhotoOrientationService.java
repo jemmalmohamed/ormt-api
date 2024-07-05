@@ -1,7 +1,5 @@
 package ma.org.ancfcc.pva.modules.mission.photo.orientation.service;
 
-import java.util.UUID;
-
 import org.geotools.api.feature.simple.SimpleFeature;
 
 import ma.org.ancfcc.pva.core.commun.base.service.BaseService;
@@ -13,7 +11,7 @@ public interface PhotoOrientationService extends BaseService<PhotoOrientation> {
 
     PhotoOrientation create(PhotoOrientationRequestDto requestDto);
 
-    PhotoOrientation update(UUID id, PhotoOrientationRequestDto photoRequestDto);
+    PhotoOrientation update(Long id, PhotoOrientationRequestDto photoRequestDto);
 
     PhotoOrientation savePhotoOrientationFromShpFeature(PhotoPlanification photoPlanification,
             SimpleFeature featurePhoto, Integer srid);

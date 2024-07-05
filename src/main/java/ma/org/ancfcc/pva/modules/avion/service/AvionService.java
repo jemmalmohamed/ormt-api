@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.avion.service;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 
@@ -18,8 +17,8 @@ public interface AvionService extends BaseService<Avion> {
 
     Avion create(AvionRequestDto requestDto);
 
-    Avion update(UUID id, AvionRequestDto avionRequestDto);
+    Avion update(Long id, AvionRequestDto avionRequestDto);
 
-    boolean existsById(UUID id);
+    boolean existsById(Long id);
 
 }

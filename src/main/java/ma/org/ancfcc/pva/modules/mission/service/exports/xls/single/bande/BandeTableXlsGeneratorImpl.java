@@ -92,6 +92,21 @@ public class BandeTableXlsGeneratorImpl implements BandeTableXlsGenerator {
         cell.setCellStyle(style);
     }
 
+    public void setTotalPhotoRealiseeCell(Row row, int cellNum, Bande bande, Workbook workbook,
+            CellStyle style) {
+
+        long totalBandePhotoPlan = bande.getPhotoPlanifications().size();
+        Cell cell = row.createCell(cellNum);
+        boolean shouldHavePhotos = bande.getMission().getCapteur().getFormat()
+                .equals(CapteurFormat.MATRICIELLE.getDescription());
+        cell.setCellValue(shouldHavePhotos ? String.valueOf(totalBandePhotoPlan) : DEFAULT_EMPTY);
+        if (shouldHavePhotos && totalBandePhotoPlan == 0) {
+            style = XlsUtils.createForegroundColorStyle(workbook, IndexedColors.RED.getIndex());
+            style.setAlignment(HorizontalAlignment.CENTER);
+        }
+        cell.setCellStyle(style);
+    }
+
     public CellStyle createHeaderBandeTableStyle(Workbook workbook) {
         CellStyle style = workbook.createCellStyle();
         style.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());

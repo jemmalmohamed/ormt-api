@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.objet.service;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 
@@ -18,8 +17,8 @@ public interface ObjetService extends BaseService<Objet> {
 
     Objet create(ObjetRequestDto requestDto);
 
-    Objet update(UUID id, ObjetRequestDto objetRequestDto);
+    Objet update(Long id, ObjetRequestDto objetRequestDto);
 
-    boolean existsById(UUID id);
+    boolean existsById(Long id);
 
 }

@@ -8,7 +8,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import ma.org.ancfcc.pva.core.validators.groups.OnUpdate;
-import java.util.UUID;
 
 @Setter
 @Getter
@@ -18,6 +17,6 @@ public class Dto {
 
     @Schema(accessMode = AccessMode.READ_ONLY)
     @NotNull(groups = { OnUpdate.class })
-    private UUID id;
+    private Long id;
 
 }

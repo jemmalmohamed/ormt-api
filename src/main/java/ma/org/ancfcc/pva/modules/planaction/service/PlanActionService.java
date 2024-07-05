@@ -2,7 +2,6 @@ package ma.org.ancfcc.pva.modules.planaction.service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 
@@ -19,10 +18,10 @@ public interface PlanActionService extends BaseService<PlanAction> {
 
     PlanAction create(PlanActionRequestDto requestDto);
 
-    PlanAction update(UUID id, PlanActionRequestDto planActionRequestDto);
+    PlanAction update(Long id, PlanActionRequestDto planActionRequestDto);
 
-    boolean existsById(UUID id);
+    boolean existsById(Long id);
 
-    List<String> findMissionCodesByPLanActionId(UUID planActionId);
+    List<String> findMissionCodesByPLanActionId(Long planActionId);
 
 }

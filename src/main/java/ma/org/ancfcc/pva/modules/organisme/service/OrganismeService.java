@@ -2,7 +2,6 @@ package ma.org.ancfcc.pva.modules.organisme.service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 
@@ -19,10 +18,10 @@ public interface OrganismeService extends BaseService<Organisme> {
 
     Organisme create(OrganismeRequestDto requestDto);
 
-    Organisme update(UUID id, OrganismeRequestDto organismeRequestDto);
+    Organisme update(Long id, OrganismeRequestDto organismeRequestDto);
 
-    boolean existsById(UUID id);
+    boolean existsById(Long id);
 
-    List<String> findMissionCodesByOrganismeId(UUID organismeId);
+    List<String> findMissionCodesByOrganismeId(Long organismeId);
 
 }

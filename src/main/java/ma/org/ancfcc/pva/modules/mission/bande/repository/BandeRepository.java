@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.mission.bande.repository;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -16,11 +15,11 @@ public interface BandeRepository extends BaseRepository<Bande> {
     Optional<Bande> findByLabel(String label);
 
     @Query("SELECT CASE WHEN COUNT(b) > 0 THEN true ELSE false END FROM Bande b WHERE b.label = :label AND b.mission.id = :missionId")
-    boolean existsByLabelAndMissionId(@Param("label") String label, @Param("missionId") UUID missionId);
+    boolean existsByLabelAndMissionId(@Param("label") String label, @Param("missionId") Long missionId);
 
     @Query("SELECT b FROM Bande b WHERE b.label = :label AND b.mission.id = :missionId")
-    Optional<Bande> findBandeByLabelAndMissionId(@Param("label") String label, @Param("missionId") UUID missionId);
+    Optional<Bande> findBandeByLabelAndMissionId(@Param("label") String label, @Param("missionId") Long missionId);
 
     @Query("DELETE FROM Bande b WHERE b.mission.id = :missionId")
-    void deleteAllByMissionId(@Param("missionId") UUID missionId);
+    void deleteAllByMissionId(@Param("missionId") Long missionId);
 }

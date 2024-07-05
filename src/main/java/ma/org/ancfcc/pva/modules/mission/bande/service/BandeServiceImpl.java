@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.mission.bande.service;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import org.locationtech.jts.geom.LineString;
 import org.locationtech.jts.geom.Point;
@@ -87,7 +86,7 @@ public class BandeServiceImpl extends BaseServiceImpl<Bande> implements BandeSer
      */
     @Override
     // @Transactional
-    public Bande update(UUID id, BandeRequestDto bandeRequestDto) {
+    public Bande update(Long id, BandeRequestDto bandeRequestDto) {
         validator.validate(bandeRequestDto);
         Bande bandeToUpdate = bandeRequestMapper.mapToEntity(bandeRequestDto);
 
@@ -116,18 +115,18 @@ public class BandeServiceImpl extends BaseServiceImpl<Bande> implements BandeSer
     }
 
     @Override
-    public boolean existsByLabelAndMissionId(String label, UUID missionId) {
+    public boolean existsByLabelAndMissionId(String label, Long missionId) {
         return bandeRepository.existsByLabelAndMissionId(label, missionId);
     }
 
     @Override
-    public Optional<Bande> findBandeByLabelAndMissionId(String label, UUID missionId) {
+    public Optional<Bande> findBandeByLabelAndMissionId(String label, Long missionId) {
         return bandeRepository.findBandeByLabelAndMissionId(label, missionId);
     }
 
     @Override
     @Transactional
-    public void deleteBandesByMissionId(UUID missionId) {
+    public void deleteBandesByMissionId(Long missionId) {
         bandeRepository.deleteAllByMissionId(missionId);
     }
 

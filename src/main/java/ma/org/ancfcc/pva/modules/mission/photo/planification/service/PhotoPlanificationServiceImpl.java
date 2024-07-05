@@ -3,7 +3,6 @@ package ma.org.ancfcc.pva.modules.mission.photo.planification.service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 import org.locationtech.jts.geom.Point;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +51,7 @@ public class PhotoPlanificationServiceImpl extends BaseServiceImpl<PhotoPlanific
      */
     @Override
     // @Transactional
-    public PhotoPlanification update(UUID id, PhotoPlanificationRequestDto photoPlanificationRequestDto) {
+    public PhotoPlanification update(Long id, PhotoPlanificationRequestDto photoPlanificationRequestDto) {
         validator.validate(photoPlanificationRequestDto);
 
         PhotoPlanification photoPlanificationToUpdate = photoPlanificationRequestMapper
@@ -97,12 +96,12 @@ public class PhotoPlanificationServiceImpl extends BaseServiceImpl<PhotoPlanific
     }
 
     @Override
-    public Long countByBandeId(UUID bandeId) {
+    public Long countByBandeId(Long bandeId) {
         return photoPlanificationRepository.countByBandeId(bandeId);
     }
 
     @Override
-    public Optional<PhotoPlanification> findPhotoPlanificationByLabelAndBandeId(String label, UUID bandeId) {
+    public Optional<PhotoPlanification> findPhotoPlanificationByLabelAndBandeId(String label, Long bandeId) {
         return photoPlanificationRepository.findPhotoPlanificationByLabelAndBandeId(label, bandeId);
     }
 

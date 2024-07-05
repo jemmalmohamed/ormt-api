@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
+
 import java.util.function.Consumer;
 
 import org.geotools.api.feature.simple.SimpleFeature;
@@ -88,7 +88,7 @@ public class MissionExecutionServiceImpl extends BaseServiceImpl<Mission>
     }
 
     @Override
-    public void uploadNumeriqueExecutionShapefile(UUID missionId, List<File> shapefileComponents, String dateFolder,
+    public void uploadNumeriqueExecutionShapefile(Long missionId, List<File> shapefileComponents, String dateFolder,
             Integer srid) throws IOException {
         Mission mission = missionService.findById(missionId).orElseThrow(EntityNotFoundException::new);
         processNumeriqueShapefiles(mission, shapefileComponents, dateFolder, srid);

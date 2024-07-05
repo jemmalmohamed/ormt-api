@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.planaction.controller;
 
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -68,7 +67,7 @@ public class PlanActionCrudController extends BaseController<PlanAction> {
         })
         @PutMapping("{id}")
         @PreAuthorize("hasAuthority('planaction:update')")
-        public ResponseEntity<RestResponse<PlanActionDto>> updatePlanAction(@PathVariable UUID id,
+        public ResponseEntity<RestResponse<PlanActionDto>> updatePlanAction(@PathVariable Long id,
                         @Validated(OnUpdate.class) @RequestBody PlanActionRequestDto planActionRequestDto) {
                 PlanAction planaction = planActionService.update(id, planActionRequestDto);
                 return buildResponseEntity(planaction, PlanActionDto.class, HttpStatus.OK);
@@ -81,7 +80,7 @@ public class PlanActionCrudController extends BaseController<PlanAction> {
         })
         @DeleteMapping("/{id}")
         @PreAuthorize("hasAuthority('planaction:delete')")
-        public ResponseEntity<Void> deleteById(@PathVariable UUID id) {
+        public ResponseEntity<Void> deleteById(@PathVariable Long id) {
                 return handleDelete(() -> planActionService.delete(id));
         }
 
@@ -92,7 +91,7 @@ public class PlanActionCrudController extends BaseController<PlanAction> {
         })
         @DeleteMapping("/bulk")
         @PreAuthorize("hasAuthority('planaction:delete')")
-        public ResponseEntity<Void> deleteMultiple(@RequestBody List<UUID> ids) {
+        public ResponseEntity<Void> deleteMultiple(@RequestBody List<Long> ids) {
                 return handleDelete(() -> planActionService.deleteAllById(ids));
         }
 
@@ -114,7 +113,7 @@ public class PlanActionCrudController extends BaseController<PlanAction> {
         })
         @DeleteMapping("/exclude")
         @PreAuthorize("hasAuthority('planaction:delete')")
-        public ResponseEntity<Void> deleteAllExcept(@RequestBody List<UUID> ids) {
+        public ResponseEntity<Void> deleteAllExcept(@RequestBody List<Long> ids) {
                 return handleDelete(() -> planActionService.deleteAllExceptIds(ids));
         }
 
@@ -125,11 +124,11 @@ public class PlanActionCrudController extends BaseController<PlanAction> {
         })
         @DeleteMapping("/query")
         @PreAuthorize("hasAuthority('planaction:delete')")
-        public ResponseEntity<RestResponse<List<UUID>>> deleteByQueryParams(
+        public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParams(
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
-                List<UUID> deletedIds = planActionService.deleteBySpecification(filters, globalFilter,
+                List<Long> deletedIds = planActionService.deleteBySpecification(filters, globalFilter,
                                 PlanAction.class);
                 return buildResponseEntity(deletedIds, HttpStatus.OK);
 
@@ -142,12 +141,12 @@ public class PlanActionCrudController extends BaseController<PlanAction> {
         })
         @DeleteMapping("/query-exclude")
         @PreAuthorize("hasAuthority('planaction:delete')")
-        public ResponseEntity<RestResponse<List<UUID>>> deleteByQueryParamsExceptIds(
-                        @RequestBody List<UUID> ids,
+        public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParamsExceptIds(
+                        @RequestBody List<Long> ids,
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
-                List<UUID> deletedIds = planActionService.deleteBySpecificationExceptIds(filters, globalFilter,
+                List<Long> deletedIds = planActionService.deleteBySpecificationExceptIds(filters, globalFilter,
                                 PlanAction.class, ids);
 
                 return buildResponseEntity(deletedIds, HttpStatus.OK);

@@ -2,7 +2,6 @@ package ma.org.ancfcc.pva.core.commun.base.entity;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
@@ -30,8 +29,8 @@ import lombok.experimental.SuperBuilder;
 public class BaseEntity implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @CreatedDate
     private LocalDateTime createdDate;

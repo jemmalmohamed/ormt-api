@@ -42,26 +42,37 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
 
     private void resetDatabase() {
 
-        deleteRecordsIfExists("mission_objet");
+        truncateTableIfExists("mission_objet");
 
-        deleteRecordsIfExists("photo_orientation");
-        deleteRecordsIfExists("photo_execution");
-        deleteRecordsIfExists("photo_planification");
-        deleteRecordsIfExists("scan_execution");
-        deleteRecordsIfExists("bande");
-        deleteRecordsIfExists("analogique_attribut");
-        deleteRecordsIfExists("lidar_attribut");
-        deleteRecordsIfExists("numerique_attribut");
-        deleteRecordsIfExists("objet");
-        deleteRecordsIfExists("mission");
-        deleteRecordsIfExists("plan_action");
-        deleteRecordsIfExists("organisme");
-        deleteRecordsIfExists("avion");
-        deleteRecordsIfExists("capteur");
+        truncateTableIfExists("photo_orientation");
+        truncateTableIfExists("photo_execution");
+        truncateTableIfExists("photo_planification");
+
+        truncateTableIfExists("scan_execution");
+        truncateTableIfExists("bande");
+
+        truncateTableIfExists("analogique_attribut");
+        truncateTableIfExists("lidar_attribut");
+        truncateTableIfExists("numerique_attribut");
+        truncateTableIfExists("objet");
+        truncateTableIfExists("mission");
+        truncateTableIfExists("plan_action");
+        truncateTableIfExists("organisme");
+        truncateTableIfExists("avion");
+        truncateTableIfExists("capteur");
     }
 
     @Transactional
     public void truncateTableIfExists(String tableName) {
+        String dropConstraintsQuery = "DECLARE @sql NVARCHAR(MAX) = ''; " +
+                "SELECT @sql += 'ALTER TABLE ' + QUOTENAME(OBJECT_NAME(parent_object_id)) + ' DROP CONSTRAINT ' + QUOTENAME(name) + '; ' "
+                +
+                "FROM sys.foreign_keys " +
+                "WHERE referenced_object_id = OBJECT_ID(:tableName); " +
+                "EXEC sp_executesql @sql;";
+        entityManager.createNativeQuery(dropConstraintsQuery)
+                .setParameter("tableName", tableName)
+                .executeUpdate();
 
         String checkTableExistenceQuery = "IF EXISTS (SELECT 1 FROM sys.tables WHERE name = :tableName) " +
                 "BEGIN " +
@@ -70,8 +81,24 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
         entityManager.createNativeQuery(checkTableExistenceQuery)
                 .setParameter("tableName", tableName)
                 .executeUpdate();
-        log.warn("### DATABASE: Checked and truncated table if exists: " + tableName);
+
+        System.out.println("### DATABASE: Checked and truncated table if exists: " + tableName);
     }
+
+    // @Transactional
+    // public void truncateTableIfExists(String tableName) {
+
+    // String checkTableExistenceQuery = "IF EXISTS (SELECT 1 FROM sys.tables WHERE
+    // name = :tableName) " +
+    // "BEGIN " +
+    // "TRUNCATE TABLE " + tableName + "; " +
+    // "END";
+    // entityManager.createNativeQuery(checkTableExistenceQuery)
+    // .setParameter("tableName", tableName)
+    // .executeUpdate();
+    // log.warn("### DATABASE: Checked and truncated table if exists: " +
+    // tableName);
+    // }
 
     @Transactional
     public void deleteRecordsIfExists(String tableName) {

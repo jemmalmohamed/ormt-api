@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.capteur.service;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 
@@ -22,8 +21,8 @@ public interface CapteurService extends BaseService<Capteur> {
 
     String getCapteurCodeFromString(String nom);
 
-    Capteur update(UUID id, CapteurRequestDto capteurRequestDto);
+    Capteur update(Long id, CapteurRequestDto capteurRequestDto);
 
-    boolean existsById(UUID id);
+    boolean existsById(Long id);
 
 }

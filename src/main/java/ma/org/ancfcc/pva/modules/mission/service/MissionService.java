@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.mission.service;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 
@@ -16,16 +15,16 @@ public interface MissionService extends BaseService<Mission> {
 
     Optional<Mission> findByCode(String code);
 
-    boolean existsById(UUID id);
+    boolean existsById(Long id);
 
     Page<Mission> getEntityList(QueryParams requestParams);
 
     Mission create(MissionRequestDto requestDto);
 
-    Mission update(UUID id, MissionRequestDto missionRequestDto);
+    Mission update(Long id, MissionRequestDto missionRequestDto);
 
-    Long countPhotoPlanificationsByMissionId(UUID missionId);
+    Long countPhotoPlanificationsByMissionId(Long missionId);
 
-    Long countBandeByMissionId(UUID missionId);
+    Long countBandeByMissionId(Long missionId);
 
 }

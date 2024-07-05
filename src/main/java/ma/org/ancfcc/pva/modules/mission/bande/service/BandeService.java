@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.mission.bande.service;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import org.locationtech.jts.geom.Point;
 import org.springframework.data.domain.Page;
@@ -19,17 +18,17 @@ public interface BandeService extends BaseService<Bande> {
 
     Optional<Bande> findByLabel(String label);
 
-    Optional<Bande> findBandeByLabelAndMissionId(String label, UUID missionId);
+    Optional<Bande> findBandeByLabelAndMissionId(String label, Long missionId);
 
-    void deleteBandesByMissionId(UUID missionId);
+    void deleteBandesByMissionId(Long missionId);
 
     Page<Bande> bandeWithPagination(QueryParams requestParams);
 
     Bande create(BandeRequestDto requestDto);
 
-    Bande update(UUID id, BandeRequestDto bandeRequestDto);
+    Bande update(Long id, BandeRequestDto bandeRequestDto);
 
-    boolean existsByLabelAndMissionId(String label, UUID missionId);
+    boolean existsByLabelAndMissionId(String label, Long missionId);
 
     Bande saveBandePlanificationFromShapeFileFeature(String nom, Point start, Point end, Mission mission,
             Integer srid);

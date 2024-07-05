@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.objet.controller;
 
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
@@ -83,7 +82,7 @@ public class ObjetLoadController extends BaseController<Objet> {
         })
         @GetMapping("/{id}")
         @PreAuthorize("hasAuthority('objet:read')")
-        public ResponseEntity<RestResponse<ObjetDetailDto>> getObjet(@PathVariable("id") UUID id) {
+        public ResponseEntity<RestResponse<ObjetDetailDto>> getObjet(@PathVariable("id") Long id) {
                 Objet objet = objetService.findById(id).orElseThrow(EntityNotFoundException::new);
                 return buildResponseEntity(objet, ObjetDetailDto.class, HttpStatus.OK);
 

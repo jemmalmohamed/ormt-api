@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.mission.photo.execution.service;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
 import org.geotools.api.feature.simple.SimpleFeature;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +45,7 @@ public class PhotoExecutionServiceImpl extends BaseServiceImpl<PhotoExecution>
      */
     @Override
     // @Transactional
-    public PhotoExecution update(UUID id, PhotoExecutionRequestDto photoExecutionRequestDto) {
+    public PhotoExecution update(Long id, PhotoExecutionRequestDto photoExecutionRequestDto) {
         validator.validate(photoExecutionRequestDto);
 
         PhotoExecution photoExecutionToUpdate = photoExecutionRequestMapper

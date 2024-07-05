@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.capteur.controller;
 
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
@@ -83,7 +82,7 @@ public class CapteurLoadController extends BaseController<Capteur> {
         })
         @GetMapping("/{id}")
         @PreAuthorize("hasAuthority('capteur:read')")
-        public ResponseEntity<RestResponse<CapteurDetailDto>> getCapteur(@PathVariable("id") UUID id) {
+        public ResponseEntity<RestResponse<CapteurDetailDto>> getCapteur(@PathVariable("id") Long id) {
                 Capteur capteur = capteurService.findById(id).orElseThrow(EntityNotFoundException::new);
                 return buildResponseEntity(capteur, CapteurDetailDto.class, HttpStatus.OK);
 

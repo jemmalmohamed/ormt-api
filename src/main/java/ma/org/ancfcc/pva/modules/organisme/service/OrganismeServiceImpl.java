@@ -2,7 +2,6 @@ package ma.org.ancfcc.pva.modules.organisme.service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -43,7 +42,7 @@ public class OrganismeServiceImpl extends BaseServiceImpl<Organisme> implements 
     }
 
     @Override
-    public boolean existsById(UUID id) {
+    public boolean existsById(Long id) {
         return organismeRepository.existsById(id);
     }
 
@@ -75,7 +74,7 @@ public class OrganismeServiceImpl extends BaseServiceImpl<Organisme> implements 
     }
 
     @Override
-    public Organisme update(UUID id, OrganismeRequestDto requestDto) {
+    public Organisme update(Long id, OrganismeRequestDto requestDto) {
         // verify if id is the same as the one in the body
         validator.validate(requestDto);
         Organisme organismeToUpdate = organismeRequestMapper.mapToEntity(requestDto);
@@ -87,7 +86,7 @@ public class OrganismeServiceImpl extends BaseServiceImpl<Organisme> implements 
     }
 
     @Override
-    public void validateBeforeDelete(UUID id) {
+    public void validateBeforeDelete(Long id) {
         validateMissionDependencies(id);
     }
 
@@ -97,7 +96,7 @@ public class OrganismeServiceImpl extends BaseServiceImpl<Organisme> implements 
 
     }
 
-    private void validateMissionDependencies(UUID id) {
+    private void validateMissionDependencies(Long id) {
         List<String> missionList = findMissionCodesByOrganismeId(id);
         if (!missionList.isEmpty()) {
 
@@ -113,7 +112,7 @@ public class OrganismeServiceImpl extends BaseServiceImpl<Organisme> implements 
         }
     }
 
-    public List<String> findMissionCodesByOrganismeId(UUID organismeId) {
+    public List<String> findMissionCodesByOrganismeId(Long organismeId) {
         return organismeRepository.findMissionCodesByOrganismeId(organismeId);
     }
 

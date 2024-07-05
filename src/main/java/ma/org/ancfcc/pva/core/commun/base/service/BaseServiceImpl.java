@@ -2,7 +2,7 @@ package ma.org.ancfcc.pva.core.commun.base.service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
+
 import java.util.stream.Collectors;
 
 import org.springframework.data.domain.Page;
@@ -30,7 +30,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
     @PersistenceContext
     private EntityManager entityManager;
 
-    public List<UUID> findAllIds() {
+    public List<Long> findAllIds() {
         return this.baseRepository.findAllIds();
 
     }
@@ -65,21 +65,21 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
     }
 
     // ** READ ONE **//
-    public Optional<T> findById(UUID id) {
+    public Optional<T> findById(Long id) {
         return baseRepository.findById(id);
     }
 
     // ** UPDATE **//
     // @CacheEvict(cacheResolver = "dynamicCacheNameResolver", allEntries = true)
     @Transactional
-    public T update(UUID id, T entity) {
+    public T update(Long id, T entity) {
         checkPathId(id, entity.getId());
         return baseRepository.save(entity);
     }
 
     // @CacheEvict(cacheResolver = "dynamicCacheNameResolver", allEntries = true)
     @Transactional
-    public void deleteAllById(List<UUID> ids) {
+    public void deleteAllById(List<Long> ids) {
 
         validateEntitiesBeforeDelete(ids);
         baseRepository.deleteAllById(ids);
@@ -87,7 +87,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
     }
 
     @Transactional
-    public void delete(UUID id) {
+    public void delete(Long id) {
 
         validateEntitiesBeforeDelete(List.of(id));
 
@@ -100,7 +100,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
     @Transactional
     public void deleteAll() {
 
-        List<UUID> ids = baseRepository.findAllIds();
+        List<Long> ids = baseRepository.findAllIds();
 
         validateEntitiesBeforeDelete(ids);
 
@@ -110,9 +110,9 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
 
     // @CacheEvict(cacheResolver = "dynamicCacheNameResolver", allEntries = true)
     @Transactional
-    public void deleteAllExceptIds(List<UUID> ids) {
+    public void deleteAllExceptIds(List<Long> ids) {
 
-        List<UUID> idsToDelete = baseRepository.findAllIdsNotIn(ids);
+        List<Long> idsToDelete = baseRepository.findAllIdsNotIn(ids);
 
         validateEntitiesBeforeDelete(idsToDelete);
 
@@ -126,14 +126,14 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
 
     @Override
     @Transactional
-    public List<UUID> deleteBySpecification(List<String> filters, String globalFilter, Class<T> clazz) {
+    public List<Long> deleteBySpecification(List<String> filters, String globalFilter, Class<T> clazz) {
 
         Specification<T> specification = specificationService
                 .createSpecificationWithDynamicGlobalFilter(filters, globalFilter, clazz);
 
         List<T> entities = findBySpecification(specification);
 
-        List<UUID> ids = entities.stream().map(T::getId).collect(Collectors.toList());
+        List<Long> ids = entities.stream().map(T::getId).collect(Collectors.toList());
 
         deleteAllById(ids);
 
@@ -142,8 +142,8 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
 
     @Override
     @Transactional
-    public List<UUID> deleteBySpecificationExceptIds(List<String> filters, String globalFilter, Class<T> clazz,
-            List<UUID> exceptIds) {
+    public List<Long> deleteBySpecificationExceptIds(List<String> filters, String globalFilter, Class<T> clazz,
+            List<Long> exceptIds) {
 
         Specification<T> specification = specificationService
                 .createSpecificationWithDynamicGlobalFilter(filters, globalFilter, clazz);
@@ -152,7 +152,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
 
         entities.removeIf(entity -> exceptIds.contains(entity.getId()));
 
-        List<UUID> ids = entities.stream().map(T::getId).collect(Collectors.toList());
+        List<Long> ids = entities.stream().map(T::getId).collect(Collectors.toList());
 
         deleteAllById(ids);
 
@@ -165,7 +165,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
      * @param id
      * @param pathId
      */
-    public void checkPathId(UUID id, UUID pathId) {
+    public void checkPathId(Long id, Long pathId) {
         if (!id.equals(pathId)) {
             String message = MessageResponse.builder().title("Erreur")
                     .mainMessage("L'identifiant dans le chemin et dans le corps de la requête ne sont pas les mêmes")
@@ -175,8 +175,8 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
         }
     }
 
-    private void validateEntitiesBeforeDelete(List<UUID> ids) {
-        for (UUID id : ids) {
+    private void validateEntitiesBeforeDelete(List<Long> ids) {
+        for (Long id : ids) {
             validateBeforeDelete(id);
         }
     }

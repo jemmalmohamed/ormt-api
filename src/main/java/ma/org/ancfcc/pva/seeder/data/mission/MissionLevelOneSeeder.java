@@ -45,7 +45,7 @@ public class MissionLevelOneSeeder implements CommandLineRunner {
             return;
         }
 
-        List<String> yearFolderList = Arrays.asList("2023");
+        List<String> yearFolderList = Arrays.asList("2022");
         // List<String> yearFolderList = Arrays.asList(
         // "2013",
         // "2014",

@@ -1,7 +1,5 @@
 package ma.org.ancfcc.pva.modules.mission.photo.orientation.service;
 
-import java.util.UUID;
-
 import org.geotools.api.feature.simple.SimpleFeature;
 import org.locationtech.jts.geom.Point;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,7 +45,7 @@ public class PhotoOrientationServiceImpl extends BaseServiceImpl<PhotoOrientatio
      */
     @Override
     // @Transactional
-    public PhotoOrientation update(UUID id, PhotoOrientationRequestDto photoOrientationRequestDto) {
+    public PhotoOrientation update(Long id, PhotoOrientationRequestDto photoOrientationRequestDto) {
         validator.validate(photoOrientationRequestDto);
 
         PhotoOrientation photoOrientationToUpdate = photoOrientationRequestMapper

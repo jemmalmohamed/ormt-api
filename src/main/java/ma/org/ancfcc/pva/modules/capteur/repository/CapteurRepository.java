@@ -2,7 +2,6 @@ package ma.org.ancfcc.pva.modules.capteur.repository;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.data.jpa.repository.Query;
 
@@ -16,6 +15,6 @@ public interface CapteurRepository extends BaseRepository<Capteur> {
     Optional<Capteur> findByCode(String code);
 
     @Query("SELECT m.code FROM Capteur o JOIN o.missions m WHERE o.id = :capteurId")
-    List<String> findMissionCodesByCapteurId(UUID capteurId);
+    List<String> findMissionCodesByCapteurId(Long capteurId);
 
 }

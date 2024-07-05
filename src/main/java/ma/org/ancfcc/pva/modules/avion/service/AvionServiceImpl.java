@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.avion.service;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -40,7 +39,7 @@ public class AvionServiceImpl extends BaseServiceImpl<Avion> implements AvionSer
     }
 
     @Override
-    public boolean existsById(UUID id) {
+    public boolean existsById(Long id) {
         return avionRepository.existsById(id);
     }
 
@@ -72,7 +71,7 @@ public class AvionServiceImpl extends BaseServiceImpl<Avion> implements AvionSer
     }
 
     @Override
-    public Avion update(UUID id, AvionRequestDto requestDto) {
+    public Avion update(Long id, AvionRequestDto requestDto) {
         // verify if id is the same as the one in the body
         validator.validate(requestDto);
         Avion avionToUpdate = avionRequestMapper.mapToEntity(requestDto);
@@ -84,7 +83,7 @@ public class AvionServiceImpl extends BaseServiceImpl<Avion> implements AvionSer
     }
 
     @Override
-    public void validateBeforeDelete(UUID id) {
+    public void validateBeforeDelete(Long id) {
         validateCapteurDependencies();
     }
 

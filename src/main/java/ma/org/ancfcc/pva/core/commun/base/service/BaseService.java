@@ -3,7 +3,6 @@ package ma.org.ancfcc.pva.core.commun.base.service;
 import java.util.List;
 import java.util.Optional;
 
-import java.util.UUID;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -19,30 +18,30 @@ public interface BaseService<T> {
 
     List<T> findBySpecification(Specification<T> specification);
 
-    public Optional<T> findById(UUID id);
+    public Optional<T> findById(Long id);
 
-    public List<UUID> findAllIds();
+    public List<Long> findAllIds();
 
     T create(@NonNull T entity);
 
     List<T> saveAll(List<T> entities);
 
-    public void deleteAllById(List<UUID> ids);
+    public void deleteAllById(List<Long> ids);
 
-    public void delete(UUID id);
+    public void delete(Long id);
 
-    public void deleteAllExceptIds(List<UUID> ids);
+    public void deleteAllExceptIds(List<Long> ids);
 
     public void deleteAll();
 
-    List<UUID> deleteBySpecification(List<String> filters, String globalFilter, Class<T> clazz);
+    List<Long> deleteBySpecification(List<String> filters, String globalFilter, Class<T> clazz);
 
-    List<UUID> deleteBySpecificationExceptIds(List<String> filters, String globalFilter, Class<T> clazz,
-            List<UUID> ids);
+    List<Long> deleteBySpecificationExceptIds(List<String> filters, String globalFilter, Class<T> clazz,
+            List<Long> ids);
 
-    public T update(UUID id, T entity);
+    public T update(Long id, T entity);
 
-    default void validateBeforeDelete(UUID id) {
+    default void validateBeforeDelete(Long id) {
         // Default implementation (does nothing)
     }
 

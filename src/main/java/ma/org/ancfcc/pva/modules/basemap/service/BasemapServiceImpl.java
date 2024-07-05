@@ -1,7 +1,6 @@
 package ma.org.ancfcc.pva.modules.basemap.service;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -40,7 +39,7 @@ public class BasemapServiceImpl extends BaseServiceImpl<Basemap> implements Base
     }
 
     @Override
-    public boolean existsById(UUID id) {
+    public boolean existsById(Long id) {
         return basemapRepository.existsById(id);
     }
 
@@ -72,7 +71,7 @@ public class BasemapServiceImpl extends BaseServiceImpl<Basemap> implements Base
     }
 
     @Override
-    public Basemap update(UUID id, BasemapRequestDto requestDto) {
+    public Basemap update(Long id, BasemapRequestDto requestDto) {
         // verify if id is the same as the one in the body
         validator.validate(requestDto);
         Basemap basemapToUpdate = basemapRequestMapper.mapToEntity(requestDto);

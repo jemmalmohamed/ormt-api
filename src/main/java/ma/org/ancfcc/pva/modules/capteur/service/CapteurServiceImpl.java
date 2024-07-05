@@ -2,7 +2,6 @@ package ma.org.ancfcc.pva.modules.capteur.service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -45,7 +44,7 @@ public class CapteurServiceImpl extends BaseServiceImpl<Capteur> implements Capt
     }
 
     @Override
-    public boolean existsById(UUID id) {
+    public boolean existsById(Long id) {
         return capteurRepository.existsById(id);
     }
 
@@ -82,7 +81,7 @@ public class CapteurServiceImpl extends BaseServiceImpl<Capteur> implements Capt
     }
 
     @Override
-    public Capteur update(UUID id, CapteurRequestDto requestDto) {
+    public Capteur update(Long id, CapteurRequestDto requestDto) {
         // verify if id is the same as the one in the body
         validator.validate(requestDto);
         Capteur capteurToUpdate = capteurRequestMapper.mapToEntity(requestDto);
@@ -94,7 +93,7 @@ public class CapteurServiceImpl extends BaseServiceImpl<Capteur> implements Capt
     }
 
     @Override
-    public void validateBeforeDelete(UUID id) {
+    public void validateBeforeDelete(Long id) {
         validateMissionDependencies(id);
     }
 
@@ -110,7 +109,7 @@ public class CapteurServiceImpl extends BaseServiceImpl<Capteur> implements Capt
 
     }
 
-    private void validateMissionDependencies(UUID id) {
+    private void validateMissionDependencies(Long id) {
         List<String> missionList = capteurRepository.findMissionCodesByCapteurId(id);
         if (!missionList.isEmpty()) {
 

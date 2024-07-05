@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
+
 import java.util.stream.Collectors;
 
 import org.geotools.api.feature.simple.SimpleFeature;
@@ -78,14 +78,14 @@ public class MissionPlanificationServiceImpl extends BaseServiceImpl<Mission>
     }
 
     @Override
-    public void uploadPlanificationFile(UUID id, MultipartFile multipartFile) throws IOException, JAXBException {
+    public void uploadPlanificationFile(Long id, MultipartFile multipartFile) throws IOException, JAXBException {
         Mission mission = missionService.findById(id).orElseThrow(EntityNotFoundException::new);
         File xmlFile = FileUtils.convertMultipartFileToFile(multipartFile);
         uploadPlanificationFile(mission, xmlFile);
     }
 
     @Override
-    public void uploadPlanificationFile(UUID id, File file) throws IOException, JAXBException {
+    public void uploadPlanificationFile(Long id, File file) throws IOException, JAXBException {
         Mission mission = missionService.findById(id).orElseThrow(EntityNotFoundException::new);
         uploadPlanificationFile(mission, file);
     }
@@ -108,7 +108,7 @@ public class MissionPlanificationServiceImpl extends BaseServiceImpl<Mission>
     }
 
     @Override
-    public void removeMissionPlanification(UUID id) {
+    public void removeMissionPlanification(Long id) {
         bandeService.deleteBandesByMissionId(id);
     }
 
