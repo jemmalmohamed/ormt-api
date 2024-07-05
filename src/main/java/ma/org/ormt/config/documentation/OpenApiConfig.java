@@ -10,7 +10,7 @@ import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.servers.Server;
 
 @OpenAPIDefinition(info = @Info(contact = @Contact(name = "Mohamed Jemmal", email = "jemmalmohamed@gmail.com"), description = "Documentation for ORMT API", title = "ORMT API", version = "1.0"), servers = {
-                @Server(description = "Local ENV", url = "http://localhost:8083") })
+                @Server(description = "Local ENV", url = "http://localhost:8093") })
 
 @Configuration
 public class OpenApiConfig {
@@ -39,23 +39,8 @@ public class OpenApiConfig {
         }
 
         @Bean
-        GroupedOpenApi missionApis() {
-                return GroupedOpenApi.builder().group("Missions").pathsToMatch("/**/missions/**").build();
-        }
-
-        @Bean
         GroupedOpenApi organismeApis() {
                 return GroupedOpenApi.builder().group("Organismes").pathsToMatch("/**/organismes/**").build();
-        }
-
-        @Bean
-        GroupedOpenApi planActionApis() {
-                return GroupedOpenApi.builder().group("Plan Actions").pathsToMatch("/**/planactions/**").build();
-        }
-
-        @Bean
-        GroupedOpenApi capteursApis() {
-                return GroupedOpenApi.builder().group("capteurs").pathsToMatch("/**/capteurs/**").build();
         }
 
 }

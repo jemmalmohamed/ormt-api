@@ -1,6 +1,5 @@
 package ma.org.ormt.modules.organisme.service;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +12,6 @@ import jakarta.persistence.EntityNotFoundException;
 import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
 import ma.org.ormt.core.commun.base.service.SpecificationService;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
-import ma.org.ormt.core.commun.rest.responses.MessageResponse;
-import ma.org.ormt.core.exceptions.handlers.CannotDeleteException;
 import ma.org.ormt.core.utilities.EntityInspector;
 import ma.org.ormt.core.utilities.PaginationUtils;
 import ma.org.ormt.core.validators.ObjectsValidator;
@@ -87,7 +84,7 @@ public class OrganismeServiceImpl extends BaseServiceImpl<Organisme> implements 
 
     @Override
     public void validateBeforeDelete(Long id) {
-        validateMissionDependencies(id);
+        validateOrganismeDependencies(id);
     }
 
     private void updateFields(Organisme organisme, Organisme entityToUpdate) {
@@ -96,24 +93,8 @@ public class OrganismeServiceImpl extends BaseServiceImpl<Organisme> implements 
 
     }
 
-    private void validateMissionDependencies(Long id) {
-        List<String> missionList = findMissionCodesByOrganismeId(id);
-        if (!missionList.isEmpty()) {
+    private void validateOrganismeDependencies(Long id) {
 
-            String message = MessageResponse.builder()
-                    .title("Suppression impossible ")
-                    .mainMessage("Impossible de supprimer l'organisme  car il est associé aux missions.")
-                    .subMessageList(
-                            missionList)
-                    .build()
-                    .format();
-
-            throw new CannotDeleteException(message);
-        }
-    }
-
-    public List<String> findMissionCodesByOrganismeId(Long organismeId) {
-        return organismeRepository.findMissionCodesByOrganismeId(organismeId);
     }
 
 }

@@ -22,6 +22,4 @@ public interface OrganismeService extends BaseService<Organisme> {
 
     boolean existsById(Long id);
 
-    List<String> findMissionCodesByOrganismeId(Long organismeId);
-
 }

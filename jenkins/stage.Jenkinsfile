@@ -146,10 +146,10 @@ pipeline {
     booleanParam(name: 'run_keycloak', defaultValue: false, description: 'Run Keycloak container individually')
     booleanParam(name: 'prune_postgres', defaultValue: false, description: 'Prune Postgres container individually')
     booleanParam(name: 'run_postgres', defaultValue: false, description: 'Run Postgres container individually')
-    booleanParam(name: 'prune_ormt_api', defaultValue: true, description: 'Prune ormt-api container before building and deploying')
-    booleanParam(name: 'build_ormt_api', defaultValue: true, description: 'Build ormt-api before building and deploying')
-    booleanParam(name: 'build_ormt_api_image', defaultValue: true, description: 'Build ormt-api image before building and deploying')
-    booleanParam(name: 'run_ormt_api', defaultValue: true, description: 'Run ormt-api')
+    booleanParam(name: 'prune_ormt_api', defaultValue: false, description: 'Prune ormt-api container before building and deploying')
+    booleanParam(name: 'build_ormt_api', defaultValue: false, description: 'Build ormt-api before building and deploying')
+    booleanParam(name: 'build_ormt_api_image', defaultValue: false, description: 'Build ormt-api image before building and deploying')
+    booleanParam(name: 'run_ormt_api', defaultValue: false, description: 'Run ormt-api')
     }
   tools {
         maven 'maven' 

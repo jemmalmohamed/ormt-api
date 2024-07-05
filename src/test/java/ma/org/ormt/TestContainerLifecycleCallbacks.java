@@ -1,29 +1,23 @@
 package ma.org.ormt;
 
-import java.time.Duration;
-
 import org.junit.jupiter.api.extension.BeforeEachCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
-
-import org.testcontainers.containers.MSSQLServerContainer;
+import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.utility.DockerImageName;
 
-@SuppressWarnings("resource")
 public class TestContainerLifecycleCallbacks implements BeforeEachCallback {
 
-    private static MSSQLServerContainer<?> mssqlServerContainer;
+    private static PostgreSQLContainer<?> postgreSQLContainer;
 
     static {
-        DockerImageName dockerImageName = DockerImageName.parse("mcr.microsoft.com/mssql/server:2022-latest");
-        mssqlServerContainer = new MSSQLServerContainer<>(dockerImageName)
-                .withStartupTimeout(Duration.ofSeconds(20))
-                .acceptLicense();
-        mssqlServerContainer.start();
+        postgreSQLContainer = new PostgreSQLContainer<>(
+                DockerImageName.parse("postgis/postgis:15-3.3-alpine").asCompatibleSubstituteFor("postgres"));
+        postgreSQLContainer.start();
     }
 
     @Override
     public void beforeEach(ExtensionContext context) throws Exception {
         context.getStore(ExtensionContext.Namespace.GLOBAL)
-                .put("mssqlServerContainer", mssqlServerContainer);
+                .put("postgreSQLContainer", postgreSQLContainer);
     }
 }
