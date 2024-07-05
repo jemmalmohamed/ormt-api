@@ -1,0 +1,42 @@
+[
+  {
+    "username": "m.jemmal",
+    "firstName": "Mohamed",
+    "lastName": "Jemmal",
+    "email": "jemmalmohamed@gmail.com",
+    "emailVerified": true,
+    "enabled": true,
+    "password": "password",
+    "clientRoles": ["admin_pva"]
+  },
+  {
+    "username": "a.lahlou",
+    "firstName": "abdelah",
+    "lastName": "lahlou",
+    "email": "",
+    "emailVerified": true,
+    "enabled": true,
+    "password": "password",
+    "clientRoles": ["agent_pva"]
+  },
+  {
+    "username": "m.amar",
+    "firstName": "Mohamed",
+    "lastName": "Amar",
+    "email": "",
+    "emailVerified": true,
+    "password": "password",
+    "enabled": true,
+    "clientRoles": ["responsable_pva"]
+  },
+  {
+    "username": "i.affa",
+    "firstName": "ilyas",
+    "lastName": "affa",
+    "email": "",
+    "emailVerified": true,
+    "password": "password",
+    "enabled": true,
+    "clientRoles": ["responsable_externe"]
+  }
+]

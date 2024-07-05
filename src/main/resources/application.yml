@@ -13,7 +13,7 @@ spring:
       format_sql: true
     database: sql_server
     database-platform: org.hibernate.dialect.SQLServerDialect
-    show-sql: false
+    show-sql: false 
   sql:
     init:
       mode: never
@@ -26,14 +26,15 @@ spring:
 flyway:
   enabled: true
   baseline-on-migrate: true
-  clean-on-validation-error: true
   baseline-description: Initial database state
   user: ${spring.datasource.username}
   password: ${spring.datasource.password}
 
 data:
   external:
-    path: ./data/
+    data_path: ./data/
+    level_1_path : ./data/pva/niveau_1/
+    level_2_path : ./data/pva/niveau_2/
 
 jwt:
   auth:
@@ -47,6 +48,6 @@ springdoc:
     path: /swagger-ui.html 
     filter: false
  
-logging:
-  level:
-    com.zaxxer.hikari: DEBUG
+# logging:
+#   level:
+#     com.zaxxer.hikari: DEBUG

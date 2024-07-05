@@ -9,8 +9,8 @@ starter:
     reset: true
     seed: true
   keycloak: 
-    reset: true
-    seed: true
+    reset: false
+    seed: false
   faker :
     seed : false
  
@@ -22,12 +22,12 @@ spring:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     host: pva-database
     database: pva
-    username: sa
+    username: sa 
     password: pva@database2024
  
 geoserver:
   url: http://localhost:8085/geoserver
-  host: localhost
+  host: localhost 
   port: 8085
   username: pva
   password: pva

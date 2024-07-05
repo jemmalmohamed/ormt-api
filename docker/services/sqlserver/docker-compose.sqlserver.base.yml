@@ -12,9 +12,15 @@ services:
       SQLSERVER_API_DB: ${SQLSERVER_API_DB}
     networks:
       - proxy
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P ${SQLSERVER_API_PASSWORD} -Q 'SELECT 1' || exit 1"]
+      interval: 10s
+      retries: 10
+      start_period: 10s
+      timeout: 3s
     volumes:
-      - "sqlserver_data_pva_api:/var/opt/mssql"
-    command: /bin/bash -c "/opt/mssql/bin/sqlservr & sleep 30 && /docker-entrypoint-initdb.d/init-db.sh"
+      - ./init:/docker-entrypoint-initdb.d
+    entrypoint: ["/docker-entrypoint-initdb.d/entrypoint.sh"]
 
 volumes:
   sqlserver_data_pva_api:

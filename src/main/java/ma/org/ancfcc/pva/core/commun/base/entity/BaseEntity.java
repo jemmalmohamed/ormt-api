@@ -26,11 +26,11 @@ import lombok.experimental.SuperBuilder;
 @MappedSuperclass
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
-public class BaseEntity<ID extends Number> implements Serializable {
+public class BaseEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private ID id;
+    private Long id;
 
     @CreatedDate
     private LocalDateTime createdDate;
