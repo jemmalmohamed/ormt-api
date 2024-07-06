@@ -31,7 +31,7 @@ public class Province extends BaseEntity {
 
     private String description;
 
-    private String type_collectivite;
+    private String typeCollectivite;
 
     private MultiPolygon delimitation;
 

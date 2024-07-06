@@ -1,5 +1,9 @@
 package ma.org.ormt.modules.region.dto;
 
+import java.util.List;
+
+import org.locationtech.jts.geom.MultiPolygon;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -8,6 +12,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.BaseDto;
+import ma.org.ormt.modules.province.dto.detail.ProvinceDetailDto;
 
 @Setter
 @Getter
@@ -19,5 +24,10 @@ public class RegionDto extends BaseDto {
 
     private String nom;
 
-    private String secteur;
+    private Long superficie;
+
+    private String description;
+
+    private List<ProvinceDetailDto> provinces;
+
 }

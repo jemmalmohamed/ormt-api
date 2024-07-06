@@ -10,9 +10,9 @@ import ma.org.ormt.modules.province.dto.ProvinceDto;
 
 @Setter
 @Getter
-@Schema(name = "ProvinceDetailDto")
+@Schema(name = "RegionDetailDto")
 @RequiredArgsConstructor
-@JsonIgnoreProperties(value = { "province.id" }, allowGetters = true)
+@JsonIgnoreProperties(value = { "region.id" }, allowGetters = true)
 public class ProvinceDetailDto extends ProvinceDto {
 
 }

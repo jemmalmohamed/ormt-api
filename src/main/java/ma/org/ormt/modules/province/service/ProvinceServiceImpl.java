@@ -172,7 +172,7 @@ public class ProvinceServiceImpl extends BaseServiceImpl<Province> implements Pr
         Province province = new Province();
 
         province.setNom(provinceName.toLowerCase());
-        province.setType_collectivite(type.toLowerCase());
+        province.setTypeCollectivite(type.toLowerCase());
 
         Region region = regionRepository.findByNom(regionName.toLowerCase()).get();
 

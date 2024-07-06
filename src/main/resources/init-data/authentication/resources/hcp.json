@@ -1,0 +1,44 @@
+[
+  {
+    "name": "hcp",
+    "displayName": "hcp",
+    "uris": ["/hcps/*"],
+    "scopes": [
+      {
+        "name": "read",
+        "roles": [
+          { "name": "admin_ormt", "required": false },
+          { "name": "responsable_ormt", "required": false }
+        ]
+      },
+      {
+        "name": "delete",
+        "roles": [
+          { "name": "admin_ormt", "required": false },
+          { "name": "responsable_ormt", "required": false }
+        ]
+      },
+      {
+        "name": "list",
+        "roles": [
+          { "name": "admin_ormt", "required": false },
+          { "name": "responsable_ormt", "required": false }
+        ]
+      },
+      {
+        "name": "update",
+        "roles": [
+          { "name": "admin_ormt", "required": false },
+          { "name": "responsable_ormt", "required": false }
+        ]
+      },
+      {
+        "name": "create",
+        "roles": [
+          { "name": "admin_ormt", "required": false },
+          { "name": "responsable_ormt", "required": false }
+        ]
+      }
+    ]
+  }
+]

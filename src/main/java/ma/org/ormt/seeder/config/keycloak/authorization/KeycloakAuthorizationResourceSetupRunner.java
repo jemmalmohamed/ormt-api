@@ -56,8 +56,10 @@ public class KeycloakAuthorizationResourceSetupRunner implements CommandLineRunn
         // twice
         // to void 10 resources in one list
         List<String> resources1 = Arrays.asList(
-
-                "organisme"
+                "region",
+                "province",
+                "organisme",
+                "hcp"
 
         );
 
