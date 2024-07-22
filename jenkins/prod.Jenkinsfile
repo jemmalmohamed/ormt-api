@@ -116,7 +116,7 @@ def buildOrmtApiImage() {
        docker build -t  $IMAGE_TAG .
     '''
   } catch (Exception e) {
-     echo "Error in building ormt-api image: ${e.getMessage()}"
+     echo "Error in building ormt-api image: ${e.getMessage()}" 
      throw e
   }
 }
