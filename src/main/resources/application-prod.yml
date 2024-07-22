@@ -10,6 +10,8 @@ starter:
  
 
 spring:
+  security:
+    enabled: true
   datasource:
       url: jdbc:postgresql://${spring.datasource.host}:${spring.datasource.port}/${spring.datasource.database}
       driver-class-name: org.postgresql.Driver
@@ -40,7 +42,7 @@ keycloak:
       authorization: true
     frontend:
       id: ormt-web  # this is the client id (name) of the frontend
-      name: prise de vue aérienne
+      name: ormt
       root-url:  https://www.ormt-ms.org
       web-origins: "https://www.ormt-ms.org"
       authorization: false
