@@ -13,7 +13,7 @@ spring:
   datasource:
       url: jdbc:postgresql://${spring.datasource.host}:${spring.datasource.port}/${spring.datasource.database}
       driver-class-name: org.postgresql.Driver
-      host: pva-database
+      host: ormt-database
       port: 5432
       database: ormt
       username: ormt
@@ -28,21 +28,21 @@ keycloak:
     client: admin-cli
     username: admin
     password: admin
-  realm: pva  # this is the realm name
+  realm: ormt  # this is the realm name
   secret: "SSnam21521xFoFQAqi5TA68jKV3nBOyl"
   clients:
     backend:
-      id: pva-api   # this is the client id (name )of the api
-      name: pva api
+      id: ormt-api   # this is the client id (name )of the api
+      name: ormt api
       root-url: http://ormt-api.ormt-ms.org
       valid-redirect-urls: http://${keycloak.clients.backend.root-url}/*
       web-origins: "http://ormt-api.ormt-ms.org"
       authorization: true
     frontend:
-      id: pva-web  # this is the client id (name) of the frontend
+      id: ormt-web  # this is the client id (name) of the frontend
       name: prise de vue aérienne
-      root-url:  https://pva.ormt-ms.org
-      web-origins: "https://pva.ormt-ms.org"
+      root-url:  https://public.ormt-ms.org
+      web-origins: "https://public.ormt-ms.org"
       authorization: false
  
 logging:
