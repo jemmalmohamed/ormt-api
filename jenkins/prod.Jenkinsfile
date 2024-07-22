@@ -101,7 +101,7 @@ def pruneOrmtApiContainer() {
 def buildOrmtApi() {
   try {
     sh '''
-     mvn clean install -Pprod    -DskipTests
+     mvn clean install -Pprod  -DskipTests
     '''
   } catch (Exception e) {
      echo "Error in building ormt-api image: ${e.getMessage()}"

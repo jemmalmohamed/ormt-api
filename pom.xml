@@ -294,6 +294,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>ormt-api</finalName>
 	</build>
 
 	<dependencyManagement>
