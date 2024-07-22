@@ -12,10 +12,10 @@ RUN chmod 777 /tmp
 EXPOSE 8080
 
 # The application's jar file
-ARG JAR_FILE=target/pva-api.jar
+ARG JAR_FILE=target/ormt-api.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} pva-api.jar
+ADD ${JAR_FILE} ormt-api.jar
 
 # Run the jar file 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/pva-api.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/ormt-api.jar"]
