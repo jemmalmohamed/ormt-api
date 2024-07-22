@@ -34,15 +34,15 @@ keycloak:
     backend:
       id: pva-api   # this is the client id (name )of the api
       name: pva api
-      root-url: http://ormt-api.ormt-ms.net
+      root-url: http://ormt-api.ormt-ms.org
       valid-redirect-urls: http://${keycloak.clients.backend.root-url}/*
-      web-origins: "http://ormt-api.ormt-ms.net"
+      web-origins: "http://ormt-api.ormt-ms.org"
       authorization: true
     frontend:
       id: pva-web  # this is the client id (name) of the frontend
       name: prise de vue aérienne
-      root-url:  https://pva.ormt-ms.net
-      web-origins: "https://pva.ormt-ms.net"
+      root-url:  https://pva.ormt-ms.org
+      web-origins: "https://pva.ormt-ms.org"
       authorization: false
  
 logging:

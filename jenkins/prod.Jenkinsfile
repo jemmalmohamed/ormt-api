@@ -138,7 +138,7 @@ def runOrmtApiContainer() {
 }
 
 pipeline {
-  agent { node { label 'vps-ormt-ms.net' } }  
+  agent { node { label 'vps-ormt-ms.org' } }  
   parameters {
     
     booleanParam(name: 'prune_keycloak', defaultValue: false, description: 'Prune Keycloak containers individually')
