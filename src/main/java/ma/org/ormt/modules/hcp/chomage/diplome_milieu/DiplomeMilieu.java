@@ -1,4 +1,4 @@
-package ma.org.ormt.modules.hcp.chomage.sexe_milieu;
+package ma.org.ormt.modules.hcp.chomage.diplome_milieu;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -17,12 +17,12 @@ import ma.org.ormt.core.commun.base.entity.BaseEntity;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "taux_chomage_sexe_milieu")
-public class SexeMilieu extends BaseEntity {
+@Table(name = "taux_chomage_diplome_milieu")
+public class DiplomeMilieu extends BaseEntity {
 
     private String annee;
 
-    private String sexe;
+    private String diplome;
 
     private String milieu;
 

@@ -1,18 +1,18 @@
 [
   {
-    "username": "m.jemmal",
-    "firstName": "Mohamed",
-    "lastName": "Jemmal",
-    "email": "jemmalmohamed@gmail.com",
+    "username": "admin",
+    "firstName": "admin",
+    "lastName": "admin",
+    "email": "admin@gmail.com",
     "emailVerified": true,
     "enabled": true,
     "password": "password",
     "clientRoles": ["admin_ormt"]
   },
   {
-    "username": "a.lahlou",
-    "firstName": "abdelah",
-    "lastName": "lahlou",
+    "username": "o.ibourk",
+    "firstName": "oamar",
+    "lastName": "ibourk",
     "email": "",
     "emailVerified": true,
     "enabled": true,
@@ -20,9 +20,9 @@
     "clientRoles": ["agent_ormt"]
   },
   {
-    "username": "m.amar",
-    "firstName": "Mohamed",
-    "lastName": "Amar",
+    "username": "h.tbatou",
+    "firstName": "hassan",
+    "lastName": "tbatou",
     "email": "",
     "emailVerified": true,
     "password": "password",
@@ -30,9 +30,9 @@
     "clientRoles": ["responsable_ormt"]
   },
   {
-    "username": "i.affa",
-    "firstName": "ilyas",
-    "lastName": "affa",
+    "username": "a.faouzi",
+    "firstName": "faouzi",
+    "lastName": "faouzi",
     "email": "",
     "emailVerified": true,
     "password": "password",

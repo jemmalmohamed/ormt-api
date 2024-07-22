@@ -1,4 +1,4 @@
-package ma.org.ormt.modules.hcp.chomage.sexe_milieu.dto.request;
+package ma.org.ormt.modules.hcp.chomage.diplome_milieu.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -11,16 +11,16 @@ import ma.org.ormt.core.commun.base.dto.Dto;
 
 @Setter
 @Getter
-@Schema(name = "SexeMilieu")
+@Schema(name = "DiplomeMilieu")
 @RequiredArgsConstructor
-@JsonIgnoreProperties(value = { "sexeMilieu.id" }, allowGetters = true)
-public class SexeMilieuRequestDto extends Dto {
+@JsonIgnoreProperties(value = { "diplomeMilieu.id" }, allowGetters = true)
+public class DiplomeMilieuRequestDto extends Dto {
 
     @NotBlank(message = "Ce champ est requis.")
     private String annee;
 
     @NotBlank(message = "Ce champ est requis.")
-    private String sexe;
+    private String diplome;
 
     @NotBlank(message = "Ce champ est requis.")
     private String milieu;

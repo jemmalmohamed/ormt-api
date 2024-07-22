@@ -1,0 +1,51 @@
+starter:
+  database:
+    reset: true
+    seed: true
+  geoserver:
+    reset: true
+    seed: true
+  keycloak:
+    reset: true
+    seed: true
+
+spring:
+  datasource:
+      url: jdbc:postgresql://${spring.datasource.host}:${spring.datasource.port}/${spring.datasource.database}
+      driver-class-name: org.postgresql.Driver
+      host: pva-database
+      port: 5432
+      database: ormt
+      username: ormt
+      password: ormt@database2024
+      
+ 
+keycloak:
+  host: ormt-kc:8080
+  auth-server-url: http://${keycloak.host}
+  admin:
+    realm: master
+    client: admin-cli
+    username: admin
+    password: admin
+  realm: pva  # this is the realm name
+  secret: "SSnam21521xFoFQAqi5TA68jKV3nBOyl"
+  clients:
+    backend:
+      id: pva-api   # this is the client id (name )of the api
+      name: pva api
+      root-url: http://ormt-api.ormt-ms.net
+      valid-redirect-urls: http://${keycloak.clients.backend.root-url}/*
+      web-origins: "http://ormt-api.ormt-ms.net"
+      authorization: true
+    frontend:
+      id: pva-web  # this is the client id (name) of the frontend
+      name: prise de vue aérienne
+      root-url:  https://pva.ormt-ms.net
+      web-origins: "https://pva.ormt-ms.net"
+      authorization: false
+ 
+logging:
+  level:
+    org.hibernate.SQL: ERROR
+    org.hibernate.tool.hbm2ddl: ERROR

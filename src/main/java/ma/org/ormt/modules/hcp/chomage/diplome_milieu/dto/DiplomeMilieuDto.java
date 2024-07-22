@@ -1,4 +1,4 @@
-package ma.org.ormt.modules.hcp.chomage.sexe_milieu.dto;
+package ma.org.ormt.modules.hcp.chomage.diplome_milieu.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -11,15 +11,15 @@ import ma.org.ormt.core.commun.base.dto.BaseDto;
 
 @Setter
 @Getter
-@Schema(name = "sexeMilieu")
-@JsonIgnoreProperties(value = { "sexeMilieu.id" }, allowGetters = true)
+@Schema(name = "diplomeMilieu")
+@JsonIgnoreProperties(value = { "diplomeMilieu.id" }, allowGetters = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class SexeMilieuDto extends BaseDto {
+public class DiplomeMilieuDto extends BaseDto {
 
     private String annee;
 
-    private String sexe;
+    private String diplome;
 
     private String milieu;
 
