@@ -28,8 +28,8 @@ keycloak:
   admin:
     realm: master
     client: admin-cli
-    username: admin
-    password: admin
+    username: ormt
+    password: ormt
   realm: ormt  # this is the realm name
   secret: "SSnam21521xFoFQAqi5TA68jKV3nBOyl"
   clients:
