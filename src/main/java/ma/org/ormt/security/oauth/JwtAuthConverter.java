@@ -58,7 +58,7 @@ public class JwtAuthConverter implements Converter<Jwt, AbstractAuthenticationTo
         }
 
         authorities.addAll(extractResourceRoles(jwt));
-
+        log.debug("authorities: {}", authorities);
         return new JwtAuthenticationToken(
                 jwt,
                 authorities,
@@ -80,7 +80,7 @@ public class JwtAuthConverter implements Converter<Jwt, AbstractAuthenticationTo
     private Collection<? extends GrantedAuthority> extractResourceRoles(Jwt jwt) {
 
         Optional<Map<String, Object>> resourceAccessOpt = Optional.ofNullable(jwt.getClaim("resource_access"));
-
+        log.info("resourceAccess: {}", resourceAccessOpt);
         if (resourceAccessOpt.isEmpty()) {
             return Set.of();
         }
@@ -94,7 +94,7 @@ public class JwtAuthConverter implements Converter<Jwt, AbstractAuthenticationTo
         }
 
         Map<String, Object> resource = resourceOpt.get();
-        log.debug("resource: {}", resource);
+        log.info("resource: {}", resource);
         Collection<String> resourceRoles = safelyCastToCollection(resource.get("roles"));
 
         Jwt rpt = getAuthorizeRequestRpt(jwt);
@@ -117,7 +117,7 @@ public class JwtAuthConverter implements Converter<Jwt, AbstractAuthenticationTo
             AuthorizationResponse authResponse = authzClient.authorization(token).authorize();
 
             String rpt = authResponse.getToken();
-            log.debug("rpt: {}", rpt);
+            log.info("rpt: {}", rpt);
             return jwtDecoder.decode(rpt);
 
         } catch (Exception e) {
