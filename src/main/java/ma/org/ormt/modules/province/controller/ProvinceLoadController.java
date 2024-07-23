@@ -47,7 +47,6 @@ public class ProvinceLoadController extends BaseController<Province> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("")
-        // //@PreAuthorize("hasAuthority('province:list')")
         public ResponseEntity<RestResponse<List<ProvinceDto>>> getProvinces(
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
                         @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
