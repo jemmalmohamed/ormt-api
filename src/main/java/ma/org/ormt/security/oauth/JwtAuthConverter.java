@@ -123,7 +123,7 @@ public class JwtAuthConverter implements Converter<Jwt, AbstractAuthenticationTo
             return jwtDecoder.decode(rpt);
 
         } catch (Exception e) {
-            log.error("Authorization error: {}", e.getCause());
+            log.error("Authorization error: {}", e.getMessage());
             throw new KeycloakException(clientId + " authorization error");
         }
     }
