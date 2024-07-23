@@ -48,11 +48,18 @@ public class KeycloakAuthzService {
         log.info("### KEYCLOAK: Secret: " + secret);
         try {
             AuthzClient authzClient = AuthzClient.create(new org.keycloak.authorization.client.Configuration(
-                    keycloakServerUrl, // Keycloak server URL
-                    realm, // The realm where the client is located
-                    clientId, // The client Name
-                    Collections.singletonMap("secret", secret), // The client credentials
+                    "http://ormt-kc:8080", // Keycloak server URL
+                    "ormt", // The realm where the client is located
+                    "ormt-api", // The client Name
+                    Collections.singletonMap("secret", "SSnam21521xFoFQAqi5TA68jKV3nBOyl"), // The client credentials
                     null // HttpClient instance
+            // AuthzClient authzClient = AuthzClient.create(new
+            // org.keycloak.authorization.client.Configuration(
+            // keycloakServerUrl, // Keycloak server URL
+            // realm, // The realm where the client is located
+            // clientId, // The client Name
+            // Collections.singletonMap("secret", secret), // The client credentials
+            // null // HttpClient instance
             ));
 
             log.info("### KEYCLOAK: AuthzClient created successfully");
