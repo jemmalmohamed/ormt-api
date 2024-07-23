@@ -115,6 +115,7 @@ public class JwtAuthConverter implements Converter<Jwt, AbstractAuthenticationTo
             String token = accessToken.getTokenValue();
             log.info("token: {}", token);
             AuthzClient authzClient = keycloakAuthzService.createAuthzClient();
+            log.info(authzClient.obtainAccessToken());
             AuthorizationResponse authResponse = authzClient.authorization(token).authorize();
             log.info(token, authResponse);
             String rpt = authResponse.getToken();
