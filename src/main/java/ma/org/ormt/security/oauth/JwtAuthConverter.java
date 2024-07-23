@@ -58,7 +58,7 @@ public class JwtAuthConverter implements Converter<Jwt, AbstractAuthenticationTo
         }
 
         authorities.addAll(extractResourceRoles(jwt));
-        log.debug("authorities: {}", authorities);
+        log.info("authorities: {}", authorities);
         return new JwtAuthenticationToken(
                 jwt,
                 authorities,
@@ -113,9 +113,10 @@ public class JwtAuthConverter implements Converter<Jwt, AbstractAuthenticationTo
         try {
 
             String token = accessToken.getTokenValue();
+            log.info("token: {}", token);
             AuthzClient authzClient = keycloakAuthzService.createAuthzClient();
             AuthorizationResponse authResponse = authzClient.authorization(token).authorize();
-
+            log.info(token, authResponse);
             String rpt = authResponse.getToken();
             log.info("rpt: {}", rpt);
             return jwtDecoder.decode(rpt);
