@@ -37,21 +37,11 @@ public class JwtAuthConverter implements Converter<Jwt, AbstractAuthenticationTo
 
     private final JwtGrantedAuthoritiesConverter jwtGrantedAuthoritiesConverter = new JwtGrantedAuthoritiesConverter();
 
-    @Autowired
-    private KeycloakAuthzService keycloakAuthzService;
-
-    @Autowired
-    private JwtDecoder jwtDecoder;
-
     @Value("${jwt.auth.converter.principle-attribute}")
     private String principleAttribute;
 
-    @Value("${keycloak.clients.backend.id}")
-    private String clientId;
-
     @Override
     public AbstractAuthenticationToken convert(@NonNull Jwt jwt) {
-
         Collection<GrantedAuthority> authorities = jwtGrantedAuthoritiesConverter.convert(jwt);
         if (authorities == null) {
             authorities = new ArrayList<>();
@@ -59,10 +49,7 @@ public class JwtAuthConverter implements Converter<Jwt, AbstractAuthenticationTo
 
         authorities.addAll(extractResourceRoles(jwt));
         log.info("authorities: {}", authorities);
-        return new JwtAuthenticationToken(
-                jwt,
-                authorities,
-                getPrincipleClaimName(jwt));
+        return new JwtAuthenticationToken(jwt, authorities, getPrincipleClaimName(jwt));
     }
 
     private String getPrincipleClaimName(Jwt jwt) {
@@ -70,95 +57,28 @@ public class JwtAuthConverter implements Converter<Jwt, AbstractAuthenticationTo
         if (principleAttribute != null) {
             claimName = principleAttribute;
         }
-
-        jwt.getClaimAsString(principleAttribute);
-
-        return jwt.getClaim(claimName);
+        return jwt.getClaimAsString(claimName);
     }
 
     @SuppressWarnings("unchecked")
     private Collection<? extends GrantedAuthority> extractResourceRoles(Jwt jwt) {
-
-        Optional<Map<String, Object>> resourceAccessOpt = Optional.ofNullable(jwt.getClaim("resource_access"));
-        log.info("resourceAccess: {}", resourceAccessOpt);
-        if (resourceAccessOpt.isEmpty()) {
+        Map<String, Object> resourceAccess = jwt.getClaim("resource_access");
+        if (resourceAccess == null) {
             return Set.of();
         }
 
-        Map<String, Object> resourceAccess = resourceAccessOpt.get();
-
-        Optional<Map<String, Object>> resourceOpt = Optional
-                .ofNullable((Map<String, Object>) resourceAccess.get(clientId));
-        if (resourceOpt.isEmpty()) {
+        Map<String, Object> resource = (Map<String, Object>) resourceAccess.get("ormt-api");
+        if (resource == null) {
             return Set.of();
         }
 
-        Map<String, Object> resource = resourceOpt.get();
-        log.info("resource: {}", resource);
-        Collection<String> resourceRoles = safelyCastToCollection(resource.get("roles"));
-
-        Jwt rpt = getAuthorizeRequestRpt(jwt);
-        Map<String, Object> authorization = rpt.getClaim("authorization");
-
-        Collection<Map<String, Object>> permissions = (Collection<Map<String, Object>>) authorization
-                .get("permissions");
-
-        Collection<String> resourcePermissions = extractResourcePermissions(permissions);
-
-        return combineResourceRolesAndPermissions(resourceRoles, resourcePermissions);
-
-    }
-
-    private Jwt getAuthorizeRequestRpt(Jwt accessToken) {
-        try {
-
-            String token = accessToken.getTokenValue();
-            log.info("token: {}", token);
-            AuthzClient authzClient = keycloakAuthzService.createAuthzClient();
-            log.info(authzClient.obtainAccessToken());
-            AuthorizationResponse authResponse = authzClient.authorization(token).authorize();
-            log.info(token, authResponse);
-            String rpt = authResponse.getToken();
-            log.info("rpt: {}", rpt);
-            return jwtDecoder.decode(rpt);
-
-        } catch (Exception e) {
-            log.error("Authorization error: {}", e.getMessage());
-            throw new KeycloakException(clientId + " authorization error");
+        Collection<String> resourceRoles = (Collection<String>) resource.get("roles");
+        if (resourceRoles == null) {
+            return Set.of();
         }
-    }
 
-    private Collection<String> extractResourcePermissions(Collection<Map<String, Object>> permissions) {
-        return permissions.stream()
-                .flatMap(permission -> {
-                    Collection<?> scopes = safelyCastToCollection(permission.get("scopes"));
-                    Object rsname = permission.get("rsname");
-                    if (scopes == null || rsname == null) {
-                        return Stream.empty(); // Skip if scopes or rsname is null
-                    }
-                    return scopes.stream()
-                            .map(scope -> rsname + ":" + scope);
-                })
-                .collect(Collectors.toList());
-    }
-
-    @SuppressWarnings("unchecked")
-    private Collection<String> safelyCastToCollection(Object object) {
-        try {
-            return (Collection<String>) object;
-        } catch (ClassCastException e) {
-            log.error("Error casting to Collection: ", e);
-            return new ArrayList<>();
-        }
-    }
-
-    private Set<GrantedAuthority> combineResourceRolesAndPermissions(Collection<String> resourceRoles,
-            Collection<String> resourcePermissions) {
-        return Stream.concat(
-                resourceRoles.stream()
-                        .map(role -> new SimpleGrantedAuthority("ROLE_" + role)),
-                resourcePermissions.stream()
-                        .map(SimpleGrantedAuthority::new))
+        return resourceRoles.stream()
+                .map(role -> new SimpleGrantedAuthority("ROLE_" + role))
                 .collect(Collectors.toSet());
     }
 }

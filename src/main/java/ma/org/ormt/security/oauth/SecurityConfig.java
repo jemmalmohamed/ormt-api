@@ -65,6 +65,30 @@ public class SecurityConfig {
                 return http.build();
         }
 
+        // @Bean
+        // public SecurityFilterChain securityFilterChain(HttpSecurity http) throws
+        // Exception {
+        // if (securityEnabled) {
+        // http
+        // .cors(cors -> cors.configurationSource(corsConfigurationSource()))
+        // .csrf(csrf -> csrf.disable())
+        // .authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
+        // .requestMatchers(AUTH_SWAGGER_WHITELIST).permitAll()
+        // .anyRequest().authenticated())
+        // .oauth2ResourceServer(oauth2ResourceServer -> oauth2ResourceServer
+        // .jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthConverter)))
+        // .sessionManagement(sessionManagement -> sessionManagement
+        // .sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+        // } else {
+        // http
+        // .cors(cors -> cors.configurationSource(corsConfigurationSource()))
+        // .csrf(csrf -> csrf.disable())
+        // .authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
+        // .anyRequest().permitAll());
+        // }
+        // return http.build();
+        // }
+
         CorsConfigurationSource corsConfigurationSource() {
                 CorsConfiguration configuration = new CorsConfiguration();
                 configuration.setAllowedOrigins(Arrays.asList(originFrontendUrl));

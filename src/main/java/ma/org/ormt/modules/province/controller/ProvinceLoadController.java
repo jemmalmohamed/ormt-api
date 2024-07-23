@@ -50,7 +50,7 @@ public class ProvinceLoadController extends BaseController<Province> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("")
-        @PreAuthorize("hasAuthority('province:list')")
+        // @PreAuthorize("hasAuthority('province:list')")
         public ResponseEntity<RestResponse<List<ProvinceDto>>> getProvinces(
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
                         @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
@@ -81,7 +81,7 @@ public class ProvinceLoadController extends BaseController<Province> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('province:read')")
+        // @PreAuthorize("hasAuthority('province:read')")
         public ResponseEntity<RestResponse<ProvinceDetailDto>> getProvince(@PathVariable("id") Long id) {
                 Province province = provinceService.findById(id).orElseThrow(EntityNotFoundException::new);
                 return buildResponseEntity(province, ProvinceDetailDto.class, HttpStatus.OK);
