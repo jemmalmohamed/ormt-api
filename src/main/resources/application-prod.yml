@@ -41,8 +41,8 @@ keycloak:
     frontend:
       id: ormt-web # this is the client id (name) of the frontend
       name: ormt ms
-      root-url: https://www.ormt-ms.org
-      web-origins: "https://www.ormt-ms.org"
+      root-url: https://admin.ormt-ms.org
+      web-origins: "https://admin.ormt-ms.org"
       authorization: false
 
 logging:
