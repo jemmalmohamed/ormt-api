@@ -2,26 +2,24 @@ starter:
   database:
     reset: true
     seed: true
-  keycloak: 
+  keycloak:
     reset: true
     seed: true
-  faker :
-    seed : false
- 
+  faker:
+    seed: false
 
 spring:
   security:
     enabled: true
   datasource:
-      url: jdbc:postgresql://${spring.datasource.host}:${spring.datasource.port}/${spring.datasource.database}
-      driver-class-name: org.postgresql.Driver
-      host: ormt-database
-      port: 5432
-      database: ormt
-      username: ormt
-      password: ormt@database2024
-      
- 
+    url: jdbc:postgresql://${spring.datasource.host}:${spring.datasource.port}/${spring.datasource.database}
+    driver-class-name: org.postgresql.Driver
+    host: ormt-database
+    port: 5432
+    database: ormt
+    username: ormt
+    password: ormt@database2024
+
 keycloak:
   host: ormt-kc:8080
   auth-server-url: http://${keycloak.host}
@@ -30,23 +28,23 @@ keycloak:
     client: admin-cli
     username: ormt
     password: ormt
-  realm: ormt  # this is the realm name
+  realm: ormt # this is the realm name
   secret: "SSnam21521xFoFQAqi5TA68jKV3nBOyl"
   clients:
     backend:
-      id: ormt-api   # this is the client id (name )of the api
+      id: ormt-api # this is the client id (name )of the api
       name: ormt api
       root-url: http://ormt-api.ormt-ms.org
       valid-redirect-urls: https//${keycloak.clients.backend.root-url}/*
       web-origins: "http://ormt-api.ormt-ms.org"
       authorization: true
     frontend:
-      id: ormt-web  # this is the client id (name) of the frontend
+      id: ormt-web # this is the client id (name) of the frontend
       name: ormt ms
-      root-url:  https://ormt.ormt-ms.org
-      web-origins: "https://ormt.ormt-ms.org"
+      root-url: https://www.ormt-ms.org
+      web-origins: "https://www.ormt-ms.org"
       authorization: false
- 
+
 logging:
   level:
     org.hibernate.SQL: ERROR
