@@ -49,7 +49,7 @@ public class BasemapCrudController extends BaseController<Basemap> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PostMapping("")
-        @PreAuthorize("hasAuthority('basemap:create')")
+        // //@PreAuthorize("hasAuthority('basemap:create')")
         public ResponseEntity<RestResponse<BasemapDto>> createBasemap(
                         @Validated(OnCreate.class) @RequestBody BasemapRequestDto requestDto) {
                 Basemap basemap = basemapService.create(requestDto);
@@ -66,7 +66,7 @@ public class BasemapCrudController extends BaseController<Basemap> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PutMapping("{id}")
-        @PreAuthorize("hasAuthority('basemap:update')")
+        // //@PreAuthorize("hasAuthority('basemap:update')")
         public ResponseEntity<RestResponse<BasemapDto>> updateBasemap(@PathVariable Long id,
                         @Validated(OnUpdate.class) @RequestBody BasemapRequestDto basemapRequestDto) {
                 Basemap basemap = basemapService.update(id, basemapRequestDto);
@@ -79,7 +79,7 @@ public class BasemapCrudController extends BaseController<Basemap> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/{id}")
-        @PreAuthorize("hasAuthority('basemap:delete')")
+        // //@PreAuthorize("hasAuthority('basemap:delete')")
         public ResponseEntity<Void> deleteById(@PathVariable Long id) {
                 return handleDelete(() -> basemapService.delete(id));
         }
@@ -90,7 +90,7 @@ public class BasemapCrudController extends BaseController<Basemap> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/bulk")
-        @PreAuthorize("hasAuthority('basemap:delete')")
+        // //@PreAuthorize("hasAuthority('basemap:delete')")
         public ResponseEntity<Void> deleteMultiple(@RequestBody List<Long> ids) {
                 return handleDelete(() -> basemapService.deleteAllById(ids));
         }
@@ -101,7 +101,7 @@ public class BasemapCrudController extends BaseController<Basemap> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/all")
-        @PreAuthorize("hasAuthority('basemap:delete')")
+        // //@PreAuthorize("hasAuthority('basemap:delete')")
         public ResponseEntity<Void> deleteAll() {
                 return handleDelete(basemapService::deleteAll);
         }
@@ -112,7 +112,7 @@ public class BasemapCrudController extends BaseController<Basemap> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/exclude")
-        @PreAuthorize("hasAuthority('basemap:delete')")
+        // @PreAuthorize("hasAuthority('basemap:delete')")
         public ResponseEntity<Void> deleteAllExcept(@RequestBody List<Long> ids) {
                 return handleDelete(() -> basemapService.deleteAllExceptIds(ids));
         }
@@ -123,7 +123,7 @@ public class BasemapCrudController extends BaseController<Basemap> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/query")
-        @PreAuthorize("hasAuthority('basemap:delete')")
+        // @PreAuthorize("hasAuthority('basemap:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParams(
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
@@ -140,7 +140,7 @@ public class BasemapCrudController extends BaseController<Basemap> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/query-exclude")
-        @PreAuthorize("hasAuthority('basemap:delete')")
+        // @PreAuthorize("hasAuthority('basemap:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParamsExceptIds(
                         @RequestBody List<Long> ids,
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,

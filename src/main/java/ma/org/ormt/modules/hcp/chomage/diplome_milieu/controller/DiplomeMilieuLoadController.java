@@ -50,7 +50,7 @@ public class DiplomeMilieuLoadController extends BaseController<DiplomeMilieu> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("")
-        @PreAuthorize("hasAuthority('hcp:list')")
+        // @PreAuthorize("hasAuthority('hcp:list')")
         public ResponseEntity<RestResponse<List<DiplomeMilieuDto>>> getDiplomeMilieus(
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
                         @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
@@ -81,7 +81,7 @@ public class DiplomeMilieuLoadController extends BaseController<DiplomeMilieu> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('hcp:read')")
+        // @PreAuthorize("hasAuthority('hcp:read')")
         public ResponseEntity<RestResponse<DiplomeMilieuDetailDto>> getDiplomeMilieu(@PathVariable("id") Long id) {
                 DiplomeMilieu diplomeMilieu = diplomeMilieuService.findById(id)
                                 .orElseThrow(EntityNotFoundException::new);

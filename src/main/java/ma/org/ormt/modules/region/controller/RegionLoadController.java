@@ -50,7 +50,7 @@ public class RegionLoadController extends BaseController<Region> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("")
-        @PreAuthorize("hasAuthority('region:list')")
+        // @PreAuthorize("hasAuthority('region:list')")
         public ResponseEntity<RestResponse<List<RegionDto>>> getRegions(
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
                         @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
@@ -81,7 +81,7 @@ public class RegionLoadController extends BaseController<Region> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('region:read')")
+        // @PreAuthorize("hasAuthority('region:read')")
         public ResponseEntity<RestResponse<RegionDetailDto>> getRegion(@PathVariable("id") Long id) {
                 Region region = regionService.findById(id).orElseThrow(EntityNotFoundException::new);
                 return buildResponseEntity(region, RegionDetailDto.class, HttpStatus.OK);

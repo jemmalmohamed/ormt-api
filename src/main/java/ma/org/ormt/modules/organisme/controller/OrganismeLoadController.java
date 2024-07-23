@@ -50,7 +50,7 @@ public class OrganismeLoadController extends BaseController<Organisme> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("")
-        @PreAuthorize("hasAuthority('organisme:list')")
+        // @PreAuthorize("hasAuthority('organisme:list')")
         public ResponseEntity<RestResponse<List<OrganismeDto>>> getOrganismes(
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
                         @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
@@ -81,7 +81,7 @@ public class OrganismeLoadController extends BaseController<Organisme> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('organisme:read')")
+        // @PreAuthorize("hasAuthority('organisme:read')")
         public ResponseEntity<RestResponse<OrganismeDetailDto>> getOrganisme(@PathVariable("id") Long id) {
                 Organisme organisme = organismeService.findById(id).orElseThrow(EntityNotFoundException::new);
                 return buildResponseEntity(organisme, OrganismeDetailDto.class, HttpStatus.OK);

@@ -47,7 +47,7 @@ public class BasemapLoadController extends BaseController<Basemap> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("")
-        @PreAuthorize("hasAuthority('basemap:list')")
+        // @PreAuthorize("hasAuthority('basemap:list')")
         public ResponseEntity<RestResponse<List<BasemapDto>>> getBasemaps(
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
                         @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
@@ -78,7 +78,7 @@ public class BasemapLoadController extends BaseController<Basemap> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('basemap:read')")
+        // @PreAuthorize("hasAuthority('basemap:read')")
         public ResponseEntity<RestResponse<BasemapDto>> getBasemap(@PathVariable("id") Long id) {
                 Basemap basemap = basemapService.findById(id).orElseThrow(EntityNotFoundException::new);
                 return buildResponseEntity(basemap, BasemapDto.class, HttpStatus.OK);

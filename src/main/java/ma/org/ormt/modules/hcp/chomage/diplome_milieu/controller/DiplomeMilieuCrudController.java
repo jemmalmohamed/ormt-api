@@ -49,7 +49,7 @@ public class DiplomeMilieuCrudController extends BaseController<DiplomeMilieu> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PostMapping("")
-        @PreAuthorize("hasAuthority('hcp:create')")
+        // @PreAuthorize("hasAuthority('hcp:create')")
         public ResponseEntity<RestResponse<DiplomeMilieuDto>> createDiplomeMilieu(
                         @Validated(OnCreate.class) @RequestBody DiplomeMilieuRequestDto requestDto) {
                 DiplomeMilieu diplomeMilieu = diplomeMilieuService.create(requestDto);
@@ -66,7 +66,7 @@ public class DiplomeMilieuCrudController extends BaseController<DiplomeMilieu> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PutMapping("{id}")
-        @PreAuthorize("hasAuthority('hcp:update')")
+        // @PreAuthorize("hasAuthority('hcp:update')")
         public ResponseEntity<RestResponse<DiplomeMilieuDto>> updateDiplomeMilieu(@PathVariable Long id,
                         @Validated(OnUpdate.class) @RequestBody DiplomeMilieuRequestDto diplomeMilieuRequestDto) {
                 DiplomeMilieu diplomeMilieu = diplomeMilieuService.update(id, diplomeMilieuRequestDto);
@@ -79,7 +79,7 @@ public class DiplomeMilieuCrudController extends BaseController<DiplomeMilieu> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/{id}")
-        @PreAuthorize("hasAuthority('hcp:delete')")
+        // @PreAuthorize("hasAuthority('hcp:delete')")
         public ResponseEntity<Void> deleteById(@PathVariable Long id) {
                 return handleDelete(() -> diplomeMilieuService.delete(id));
         }
@@ -90,7 +90,7 @@ public class DiplomeMilieuCrudController extends BaseController<DiplomeMilieu> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/bulk")
-        @PreAuthorize("hasAuthority('hcp:delete')")
+        // @PreAuthorize("hasAuthority('hcp:delete')")
         public ResponseEntity<Void> deleteMultiple(@RequestBody List<Long> ids) {
                 return handleDelete(() -> diplomeMilieuService.deleteAllById(ids));
         }
@@ -101,7 +101,7 @@ public class DiplomeMilieuCrudController extends BaseController<DiplomeMilieu> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/all")
-        @PreAuthorize("hasAuthority('hcp:delete')")
+        // @PreAuthorize("hasAuthority('hcp:delete')")
         public ResponseEntity<Void> deleteAll() {
                 return handleDelete(diplomeMilieuService::deleteAll);
         }
@@ -112,7 +112,7 @@ public class DiplomeMilieuCrudController extends BaseController<DiplomeMilieu> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/exclude")
-        @PreAuthorize("hasAuthority('hcp:delete')")
+        // @PreAuthorize("hasAuthority('hcp:delete')")
         public ResponseEntity<Void> deleteAllExcept(@RequestBody List<Long> ids) {
                 return handleDelete(() -> diplomeMilieuService.deleteAllExceptIds(ids));
         }
@@ -123,7 +123,7 @@ public class DiplomeMilieuCrudController extends BaseController<DiplomeMilieu> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/query")
-        @PreAuthorize("hasAuthority('hcp:delete')")
+        // @PreAuthorize("hasAuthority('hcp:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParams(
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
@@ -140,7 +140,7 @@ public class DiplomeMilieuCrudController extends BaseController<DiplomeMilieu> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/query-exclude")
-        @PreAuthorize("hasAuthority('hcp:delete')")
+        // @PreAuthorize("hasAuthority('hcp:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParamsExceptIds(
                         @RequestBody List<Long> ids,
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,

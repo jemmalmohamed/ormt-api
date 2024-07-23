@@ -49,7 +49,7 @@ public class ProvinceCrudController extends BaseController<Province> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PostMapping("")
-        @PreAuthorize("hasAuthority('province:create')")
+        // @PreAuthorize("hasAuthority('province:create')")
         public ResponseEntity<RestResponse<ProvinceDto>> createProvince(
                         @Validated(OnCreate.class) @RequestBody ProvinceRequestDto requestDto) {
                 Province province = provinceService.create(requestDto);
@@ -66,7 +66,7 @@ public class ProvinceCrudController extends BaseController<Province> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PutMapping("{id}")
-        @PreAuthorize("hasAuthority('province:update')")
+        // @PreAuthorize("hasAuthority('province:update')")
         public ResponseEntity<RestResponse<ProvinceDto>> updateProvince(@PathVariable Long id,
                         @Validated(OnUpdate.class) @RequestBody ProvinceRequestDto provinceRequestDto) {
                 Province province = provinceService.update(id, provinceRequestDto);
@@ -79,7 +79,7 @@ public class ProvinceCrudController extends BaseController<Province> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/{id}")
-        @PreAuthorize("hasAuthority('province:delete')")
+        // @PreAuthorize("hasAuthority('province:delete')")
         public ResponseEntity<Void> deleteById(@PathVariable Long id) {
                 return handleDelete(() -> provinceService.delete(id));
         }
@@ -90,7 +90,7 @@ public class ProvinceCrudController extends BaseController<Province> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/bulk")
-        @PreAuthorize("hasAuthority('province:delete')")
+        // @PreAuthorize("hasAuthority('province:delete')")
         public ResponseEntity<Void> deleteMultiple(@RequestBody List<Long> ids) {
                 return handleDelete(() -> provinceService.deleteAllById(ids));
         }
@@ -101,7 +101,7 @@ public class ProvinceCrudController extends BaseController<Province> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/all")
-        @PreAuthorize("hasAuthority('province:delete')")
+        // @PreAuthorize("hasAuthority('province:delete')")
         public ResponseEntity<Void> deleteAll() {
                 return handleDelete(provinceService::deleteAll);
         }
@@ -112,7 +112,7 @@ public class ProvinceCrudController extends BaseController<Province> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/exclude")
-        @PreAuthorize("hasAuthority('province:delete')")
+        // @PreAuthorize("hasAuthority('province:delete')")
         public ResponseEntity<Void> deleteAllExcept(@RequestBody List<Long> ids) {
                 return handleDelete(() -> provinceService.deleteAllExceptIds(ids));
         }
@@ -123,7 +123,7 @@ public class ProvinceCrudController extends BaseController<Province> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/query")
-        @PreAuthorize("hasAuthority('province:delete')")
+        // @PreAuthorize("hasAuthority('province:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParams(
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
@@ -140,7 +140,7 @@ public class ProvinceCrudController extends BaseController<Province> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/query-exclude")
-        @PreAuthorize("hasAuthority('province:delete')")
+        // @PreAuthorize("hasAuthority('province:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParamsExceptIds(
                         @RequestBody List<Long> ids,
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,

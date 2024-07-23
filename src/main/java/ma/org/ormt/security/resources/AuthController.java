@@ -42,7 +42,7 @@ public class AuthController {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/permissions")
-        @PreAuthorize("hasAuthority('auth:read')")
+        // @PreAuthorize("hasAuthority('auth:read')")
         public ResponseEntity<RestResponse<List<String>>> getPermissions() {
 
                 Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

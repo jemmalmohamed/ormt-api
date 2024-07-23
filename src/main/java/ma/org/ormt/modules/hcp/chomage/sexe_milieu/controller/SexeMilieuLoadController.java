@@ -50,7 +50,7 @@ public class SexeMilieuLoadController extends BaseController<SexeMilieu> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("")
-        @PreAuthorize("hasAuthority('hcp:list')")
+        // @PreAuthorize("hasAuthority('hcp:list')")
         public ResponseEntity<RestResponse<List<SexeMilieuDto>>> getSexeMilieus(
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
                         @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
@@ -81,7 +81,7 @@ public class SexeMilieuLoadController extends BaseController<SexeMilieu> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('hcp:read')")
+        // @PreAuthorize("hasAuthority('hcp:read')")
         public ResponseEntity<RestResponse<SexeMilieuDetailDto>> getSexeMilieu(@PathVariable("id") Long id) {
                 SexeMilieu sexeMilieu = sexeMilieuService.findById(id).orElseThrow(EntityNotFoundException::new);
                 return buildResponseEntity(sexeMilieu, SexeMilieuDetailDto.class, HttpStatus.OK);
