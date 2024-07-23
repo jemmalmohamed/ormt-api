@@ -138,7 +138,7 @@ def runOrmtApiContainer() {
 }
 
 pipeline {
-  agent { node { label 'vps-jemmal.net' } }  
+  agent { node { label 'vps-84.247.134.226' } }  
   parameters {
     
     booleanParam(name: 'prune_keycloak', defaultValue: false, description: 'Prune Keycloak containers individually')

@@ -1,12 +1,12 @@
 [
   {
-    "username": "admin",
-    "firstName": "admin",
-    "lastName": "admin",
-    "email": "admin@gmail.com",
+    "username": "ormt",
+    "firstName": "ormt",
+    "lastName": "ormt",
+    "email": "ormt@gmail.com",
     "emailVerified": true,
     "enabled": true,
-    "password": "password",
+    "password": "ormt",
     "clientRoles": ["admin_ormt"]
   },
   {
@@ -16,7 +16,7 @@
     "email": "",
     "emailVerified": true,
     "enabled": true,
-    "password": "password",
+    "password": "ormt",
     "clientRoles": ["agent_ormt"]
   },
   {
@@ -25,7 +25,7 @@
     "lastName": "tbatou",
     "email": "",
     "emailVerified": true,
-    "password": "password",
+    "password": "ormt",
     "enabled": true,
     "clientRoles": ["responsable_ormt"]
   },
@@ -35,7 +35,7 @@
     "lastName": "faouzi",
     "email": "",
     "emailVerified": true,
-    "password": "password",
+    "password": "ormt",
     "enabled": true,
     "clientRoles": ["responsable_externe"]
   }
