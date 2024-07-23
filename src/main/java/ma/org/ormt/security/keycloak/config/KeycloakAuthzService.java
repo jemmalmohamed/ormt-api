@@ -46,6 +46,7 @@ public class KeycloakAuthzService {
         String secret = keycloakClientService.getClientSecret(realmResource,
                 clientId);
         log.info("### KEYCLOAK: Secret: " + secret);
+
         try {
             AuthzClient authzClient = AuthzClient.create(new org.keycloak.authorization.client.Configuration(
                     "http://ormt-kc:8080", // Keycloak server URL
