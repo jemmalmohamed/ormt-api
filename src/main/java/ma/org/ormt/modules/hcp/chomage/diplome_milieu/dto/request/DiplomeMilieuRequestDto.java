@@ -8,6 +8,8 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.Dto;
+import ma.org.ormt.modules.province.Province;
+import ma.org.ormt.modules.province.dto.ProvinceDto;
 
 @Setter
 @Getter
