@@ -36,9 +36,9 @@ keycloak:
     backend:
       id: ormt-api   # this is the client id (name )of the api
       name: ormt api
-      root-url: http://ormt-api.ormt-ms.org
+      root-url: http://api.ormt-ms.org
       valid-redirect-urls: http://${keycloak.clients.backend.root-url}/*
-      web-origins: "http://ormt-api.ormt-ms.org"
+      web-origins: "http://api.ormt-ms.org"
       authorization: true
     frontend:
       id: ormt-web  # this is the client id (name) of the frontend
