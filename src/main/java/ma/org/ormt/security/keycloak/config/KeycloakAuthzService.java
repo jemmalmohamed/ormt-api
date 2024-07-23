@@ -45,6 +45,7 @@ public class KeycloakAuthzService {
         RealmResource realmResource = keycloakRealmService.getRealmResource(keycloak, realm);
         String secret = keycloakClientService.getClientSecret(realmResource,
                 clientId);
+        log.info("### KEYCLOAK: Secret: " + secret);
         try {
             AuthzClient authzClient = AuthzClient.create(new org.keycloak.authorization.client.Configuration(
                     keycloakServerUrl, // Keycloak server URL
