@@ -6,7 +6,7 @@ import java.util.List;
 public enum KeycloakRole {
 
     ADMIN_ORMT("admin_ormt"),
-    AGENT_ORMT("agent_ormt"),
+    public_ormt("public_ormt"),
     RESPONSABLE_ORMT("responsable_ormt"),
     RESPONSABLE_EXTERNE("responsable_externe");
 

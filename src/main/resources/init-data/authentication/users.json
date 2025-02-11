@@ -7,7 +7,9 @@
     "emailVerified": true,
     "enabled": true,
     "password": "ormt",
-    "clientRoles": ["admin_ormt"]
+    "clientRoles": [
+      "admin_ormt"
+    ]
   },
   {
     "username": "o.ibourk",
@@ -17,7 +19,9 @@
     "emailVerified": true,
     "enabled": true,
     "password": "ormt",
-    "clientRoles": ["agent_ormt"]
+    "clientRoles": [
+      "public_ormt"
+    ]
   },
   {
     "username": "h.tbatou",
@@ -27,7 +31,9 @@
     "emailVerified": true,
     "password": "ormt",
     "enabled": true,
-    "clientRoles": ["responsable_ormt"]
+    "clientRoles": [
+      "responsable_ormt"
+    ]
   },
   {
     "username": "a.faouzi",
@@ -37,6 +43,8 @@
     "emailVerified": true,
     "password": "ormt",
     "enabled": true,
-    "clientRoles": ["responsable_externe"]
+    "clientRoles": [
+      "responsable_externe"
+    ]
   }
 ]
