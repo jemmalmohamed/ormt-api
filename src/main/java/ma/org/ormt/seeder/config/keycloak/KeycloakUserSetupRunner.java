@@ -76,10 +76,9 @@ public class KeycloakUserSetupRunner implements CommandLineRunner {
 
     private Map<String, String> getRolesMap() {
         return Map.of(
-                KeycloakRole.ADMIN_ORMT.getRoleName(), "administrateur ormt",
-                KeycloakRole.public_ormt.getRoleName(), "agent ormt",
-                KeycloakRole.RESPONSABLE_ORMT.getRoleName(), "responsable ormt",
-                KeycloakRole.RESPONSABLE_EXTERNE.getRoleName(), "responsable externe");
+                KeycloakRole.admin_ormt.getRoleName(), "administrateur ormt",
+                KeycloakRole.public_ormt.getRoleName(), "public ormt",
+                KeycloakRole.decisionnel_ormt.getRoleName(), "décisinnel ormt");
     }
 
     private void setupClientRoles(ClientResource clientResource, Map<String, String> rolesMap) {

@@ -1,24 +1,25 @@
 [
   {
     "name": "region",
-    "displayName": "Region",
+    "displayName": "region",
     "uris": [
       "/regions/*"
     ],
     "scopes": [
       {
-        "name": "read",
+        "name": "edit",
         "roles": [
           {
             "name": "admin_ormt",
             "required": false
-          },
+          }
+        ]
+      },
+      {
+        "name": "create",
+        "roles": [
           {
-            "name": "responsable_ormt",
-            "required": false
-          },
-          {
-            "name": "public_ormt",
+            "name": "admin_ormt",
             "required": false
           }
         ]
@@ -29,9 +30,22 @@
           {
             "name": "admin_ormt",
             "required": false
+          }
+        ]
+      },
+      {
+        "name": "read",
+        "roles": [
+          {
+            "name": "admin_ormt",
+            "required": false
           },
           {
-            "name": "responsable_ormt",
+            "name": "decisionnel_ormt",
+            "required": false
+          },
+          {
+            "name": "public_ormt",
             "required": false
           }
         ]
@@ -44,37 +58,11 @@
             "required": false
           },
           {
-            "name": "responsable_ormt",
+            "name": "decisionnel_ormt",
             "required": false
           },
           {
             "name": "public_ormt",
-            "required": false
-          }
-        ]
-      },
-      {
-        "name": "update",
-        "roles": [
-          {
-            "name": "admin_ormt",
-            "required": false
-          },
-          {
-            "name": "responsable_ormt",
-            "required": false
-          }
-        ]
-      },
-      {
-        "name": "create",
-        "roles": [
-          {
-            "name": "admin_ormt",
-            "required": false
-          },
-          {
-            "name": "responsable_ormt",
             "required": false
           }
         ]

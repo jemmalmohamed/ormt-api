@@ -11,6 +11,8 @@ import lombok.Setter;
 @NoArgsConstructor
 public class PermissionDto {
 
-    String name;
+    String resource;
+
+    String scope;
 
 }

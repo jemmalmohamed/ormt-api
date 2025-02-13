@@ -8,8 +8,8 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import lombok.RequiredArgsConstructor;
-import ma.org.ormt.modules.basemap.Basemap;
-import ma.org.ormt.modules.basemap.service.BasemapService;
+import ma.org.ormt.modules.gis.basemap.Basemap;
+import ma.org.ormt.modules.gis.basemap.service.BasemapService;
 
 @Component
 @Order(2)

@@ -30,6 +30,8 @@ public class SecurityConfig {
 
         private final JwtAuthConverter jwtAuthConverter;
 
+        private final JwtAuthResourceConverter jwtAuthResourceConverter;
+
         private static final String[] AUTH_SWAGGER_WHITELIST = {
                         "/v2/api-docs",
                         "/v3/api-docs",
@@ -52,7 +54,8 @@ public class SecurityConfig {
                                                         .requestMatchers(AUTH_SWAGGER_WHITELIST).permitAll()
                                                         .anyRequest().authenticated())
                                         .oauth2ResourceServer(oauth2ResourceServer -> oauth2ResourceServer
-                                                        .jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthConverter)))
+                                                        .jwt(jwt -> jwt.jwtAuthenticationConverter(
+                                                                        jwtAuthResourceConverter)))
                                         .sessionManagement(sessionManagement -> sessionManagement
                                                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS));
                 } else {

@@ -1,8 +1,8 @@
 [
   {
-    "username": "ormt",
+    "username": "o.admin",
     "firstName": "ormt",
-    "lastName": "ormt",
+    "lastName": "admin",
     "email": "ormt@gmail.com",
     "emailVerified": true,
     "enabled": true,
@@ -12,39 +12,27 @@
     ]
   },
   {
-    "username": "o.ibourk",
-    "firstName": "oamar",
-    "lastName": "ibourk",
+    "username": "o.decision",
+    "firstName": "ormt",
+    "lastName": "decisionnel",
     "email": "",
     "emailVerified": true,
-    "enabled": true,
     "password": "ormt",
+    "enabled": true,
+    "clientRoles": [
+      "decisionnel_ormt"
+    ]
+  },
+  {
+    "username": "o.public",
+    "firstName": "ormt",
+    "lastName": "public",
+    "email": "",
+    "emailVerified": true,
+    "password": "ormt",
+    "enabled": true,
     "clientRoles": [
       "public_ormt"
-    ]
-  },
-  {
-    "username": "h.tbatou",
-    "firstName": "hassan",
-    "lastName": "tbatou",
-    "email": "",
-    "emailVerified": true,
-    "password": "ormt",
-    "enabled": true,
-    "clientRoles": [
-      "responsable_ormt"
-    ]
-  },
-  {
-    "username": "a.faouzi",
-    "firstName": "faouzi",
-    "lastName": "faouzi",
-    "email": "",
-    "emailVerified": true,
-    "password": "ormt",
-    "enabled": true,
-    "clientRoles": [
-      "responsable_externe"
     ]
   }
 ]

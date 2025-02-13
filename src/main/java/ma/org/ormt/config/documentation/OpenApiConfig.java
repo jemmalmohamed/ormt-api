@@ -39,8 +39,8 @@ public class OpenApiConfig {
         }
 
         @Bean
-        GroupedOpenApi organismeApis() {
-                return GroupedOpenApi.builder().group("Organismes").pathsToMatch("/**/organismes/**").build();
+        GroupedOpenApi domaineApis() {
+                return GroupedOpenApi.builder().group("Domaines").pathsToMatch("/**/domaines/**").build();
         }
 
 }

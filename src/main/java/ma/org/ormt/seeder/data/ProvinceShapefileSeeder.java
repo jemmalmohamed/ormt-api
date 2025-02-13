@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.core.gis.shapefile.ShpFileService;
-import ma.org.ormt.modules.province.service.ProvinceService;
+import ma.org.ormt.modules.gis.province.service.ProvinceService;
 
 @Log4j2
 @Component
