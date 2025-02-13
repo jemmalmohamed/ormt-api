@@ -28,8 +28,6 @@ public class SecurityConfig {
         @Value("${spring.security.enabled}")
         private boolean securityEnabled;
 
-        private final JwtAuthConverter jwtAuthConverter;
-
         private final JwtAuthResourceConverter jwtAuthResourceConverter;
 
         private static final String[] AUTH_SWAGGER_WHITELIST = {

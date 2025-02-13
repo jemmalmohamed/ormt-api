@@ -19,12 +19,16 @@ import ma.org.ormt.modules.domaine.Domaine;
 import ma.org.ormt.modules.domaine.dto.request.DomaineRequestDto;
 import ma.org.ormt.modules.domaine.dto.request.DomaineRequestMapper;
 import ma.org.ormt.modules.domaine.repository.DomaineRepository;
+import ma.org.ormt.modules.sousdomaine.SousDomaine;
+import ma.org.ormt.modules.sousdomaine.repository.SousDomaineRepository;
 
 @Service
 public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements DomaineService {
 
     @Autowired
     private DomaineRepository domaineRepository;
+    @Autowired
+    private SousDomaineRepository sousDomaineRepository;
 
     @Autowired
     private ObjectsValidator<DomaineRequestDto> validator;
@@ -80,6 +84,16 @@ public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements Doma
                 .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
         updateFields(domaine, domaineToUpdate);
         return domaineRepository.save(domaine);
+    }
+
+    @Override
+    public void addSousDomaine(Long domaineId, Long sousDomaineId) {
+        Domaine domaine = domaineRepository.findById(domaineId)
+                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+        SousDomaine sousDomaine = sousDomaineRepository.findById(sousDomaineId)
+                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+        domaine.getSousDomaines().add(sousDomaine);
+        domaineRepository.save(domaine);
     }
 
     @Override

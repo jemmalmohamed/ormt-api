@@ -21,4 +21,6 @@ public interface DomaineService extends BaseService<Domaine> {
 
     boolean existsById(Long id);
 
+    void addSousDomaine(Long domaineId, Long sousDomaineId);
+
 }

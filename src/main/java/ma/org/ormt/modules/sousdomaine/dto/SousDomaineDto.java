@@ -1,6 +1,4 @@
-package ma.org.ormt.modules.domaine.dto;
-
-import java.util.List;
+package ma.org.ormt.modules.sousdomaine.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -10,19 +8,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.BaseDto;
-import ma.org.ormt.modules.sousdomaine.dto.SousDomaineDto;
+import ma.org.ormt.core.commun.base.dto.Dto;
 
 @Setter
 @Getter
-@Schema(name = "Domaine")
-@JsonIgnoreProperties(value = { "domaine.id" }, allowGetters = true)
+@Schema(name = "SousDomaineDto")
+@JsonIgnoreProperties(value = { "sousDomaine.id" }, allowGetters = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class DomaineDto extends BaseDto {
+public class SousDomaineDto extends BaseDto {
 
     private String titre;
 
     private String description;
 
-    private List<SousDomaineDto> sousDomaines;
+    private Dto domaine;
 }

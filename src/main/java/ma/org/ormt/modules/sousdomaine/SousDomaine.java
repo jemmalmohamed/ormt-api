@@ -1,8 +1,9 @@
-package ma.org.ormt.modules.domaine;
+package ma.org.ormt.modules.sousdomaine;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -11,9 +12,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 import ma.org.ormt.core.commun.base.entity.BaseEntity;
-import ma.org.ormt.modules.sousdomaine.SousDomaine;
-
-import java.util.List;
+import ma.org.ormt.modules.domaine.Domaine;
 
 @Setter
 @Getter
@@ -22,14 +21,15 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "domaine")
-public class Domaine extends BaseEntity {
+@Table(name = "sous_domaine")
+public class SousDomaine extends BaseEntity {
 
     private String titre;
 
     private String description;
 
-    @OneToMany(mappedBy = "domaine", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<SousDomaine> sousDomaines;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_domaine")
+    private Domaine domaine;
 
 }
