@@ -14,36 +14,6 @@
   {
     "titre": "Demande de travail",
     "description": "Étude de l'emploi, sa qualité et les besoins en compétences du marché",
-    "sousDomaines": [
-      {
-        "titre": "Création d'emploi",
-        "description": "Analyse de la création d'emplois dans différents secteurs"
-      },
-      {
-        "titre": "Volume d'emploi",
-        "description": "Étude du volume d'emplois disponibles sur le marché"
-      },
-      {
-        "titre": "Qualité de l'emploi",
-        "description": "Évaluation de la qualité des emplois offerts"
-      },
-      {
-        "titre": "Salaires & productivité",
-        "description": "Analyse des salaires et de la productivité du travail"
-      },
-      {
-        "titre": "Tissu économique",
-        "description": "Étude du tissu économique et de sa diversité"
-      },
-      {
-        "titre": "Prospective",
-        "description": "Analyse prospective des tendances du marché du travail"
-      },
-      {
-        "titre": "Indicateurs de l'emploi",
-        "description": "Suivi des indicateurs clés de l'emploi"
-      }
-    ]
   },
   {
     "titre": "Intermédiation sur le marché du travail",

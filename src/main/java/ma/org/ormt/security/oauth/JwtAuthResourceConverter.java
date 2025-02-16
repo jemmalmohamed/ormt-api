@@ -58,7 +58,7 @@ public class JwtAuthResourceConverter implements Converter<Jwt, AbstractAuthenti
     private String adminPassword;
 
     @Override
-    public AbstractAuthenticationToken convert(Jwt jwt) {
+    public AbstractAuthenticationToken convert(@SuppressWarnings("null") Jwt jwt) {
 
         Collection<GrantedAuthority> authorities = Stream.concat(
                 jwtGrantedAuthoritiesConverter.convert(jwt).stream(),

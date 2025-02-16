@@ -1,0 +1,290 @@
+{
+  "titre": "Demande de travail",
+  "description": "Étude de l'emploi, sa qualité et les besoins en compétences du marché",
+  "sousDomaines": [
+    {
+      "titre": "Volume d'emploi",
+      "description": "Étude du volume d'emplois disponibles sur le marché",
+      "indicateurs": [
+        {
+          "nom": "Emploi par genre",
+          "categorie": "emploi",
+          "abbreviation": "",
+          "type_tb": "Décisionnel / Grand Public",
+          "source": "HCP",
+          "regle_calcul": "-",
+          "periodicite": "annuel",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "genre",
+              "libelle": "Genre",
+              "type": "string"
+            },
+            {
+              "nom": "milieu_de_residence",
+              "libelle": "milieu de résidence",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "nom": "Emploi par âge",
+          "categorie": "emploi",
+          "abbreviation": "",
+          "type_tb": "Décisionnel / Grand Public",
+          "source": "HCP",
+          "regle_calcul": "-",
+          "periodicite": "annuel",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "age",
+              "libelle": "âge",
+              "type": "string"
+            },
+            {
+              "nom": "genre",
+              "libelle": "Genre",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "nom": "Emploi par diplôme",
+          "categorie": "emploi",
+          "abbreviation": "",
+          "type_tb": "Décisionnel / Grand Public",
+          "source": "HCP",
+          "regle_calcul": "-",
+          "periodicite": "annuel",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "diplome",
+              "libelle": "diplôme",
+              "type": "string"
+            },
+            {
+              "nom": "genre",
+              "libelle": "Genre",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "nom": "Emploi par secteur d'activité",
+          "categorie": "emploi",
+          "abbreviation": "",
+          "type_tb": "Décisionnel / Grand Public",
+          "source": "HCP",
+          "regle_calcul": "-",
+          "periodicite": "annuel",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "secteur_activite",
+              "libelle": "secteur d'activité",
+              "type": "string"
+            },
+            {
+              "nom": "milieu_de_residence",
+              "libelle": "milieu de résidence",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "nom": "Emploi par statut professionnel",
+          "categorie": "emploi",
+          "abbreviation": "",
+          "type_tb": "Grand public",
+          "source": "HCP",
+          "regle_calcul": "-",
+          "periodicite": "annuel",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "statut",
+              "libelle": "statut",
+              "type": "string"
+            },
+            {
+              "nom": "milieu_de_residence",
+              "libelle": "milieu de résidence",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "nom": "Emploi par type d'emploi",
+          "categorie": "emploi",
+          "abbreviation": "",
+          "type_tb": "Grand public",
+          "source": "HCP",
+          "regle_calcul": "-",
+          "periodicite": "annuel",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "type_emploi",
+              "libelle": "Type d'emploi",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "nom": "Emploi par secteur d'emploi",
+          "categorie": "emploi",
+          "abbreviation": "",
+          "type_tb": "Grand public",
+          "source": "HCP",
+          "regle_calcul": "-",
+          "periodicite": "annuel",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "secteur_emploi",
+              "libelle": "secteur d'emploi",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "nom": "Emploi par région",
+          "categorie": "emploi",
+          "abbreviation": "",
+          "type_tb": "Grand public",
+          "source": "HCP",
+          "regle_calcul": "-",
+          "periodicite": "annuel",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "region",
+              "libelle": "région",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "nom": "Emploi indépendants déclarés à la CNSS par secteur d'activité",
+          "categorie": "emploi",
+          "abbreviation": "",
+          "type_tb": "Décisionnel",
+          "source": "CNSS",
+          "regle_calcul": "-",
+          "periodicite": "annuel",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "secteur_activite",
+              "libelle": "secteur d'activité",
+              "type": "string"
+            },
+            {
+              "nom": "genre",
+              "libelle": "Genre",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "nom": "Emploi indépendants déclarés à la CNSS par région",
+          "categorie": "emploi",
+          "abbreviation": "",
+          "type_tb": "Décisionnel",
+          "source": "CNSS",
+          "regle_calcul": "-",
+          "periodicite": "annuel",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "region",
+              "libelle": "Région",
+              "type": "string"
+            },
+            {
+              "nom": "genre",
+              "libelle": "Genre",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "nom": "Salariés déclarés à la CNSS par secteur d'activité",
+          "categorie": "emploi",
+          "abbreviation": "",
+          "type_tb": "Décisionnel / Grand Public",
+          "source": "CNSS",
+          "regle_calcul": "-",
+          "periodicite": "annuel",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "secteur_activite",
+              "libelle": "secteur d'activité",
+              "type": "string"
+            },
+            {
+              "nom": "genre",
+              "libelle": "Genre",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "nom": "Salariés déclarés à la CNSS par région",
+          "categorie": "emploi",
+          "abbreviation": "",
+          "type_tb": "Décisionnel / Grand Public",
+          "source": "CNSS",
+          "regle_calcul": "-",
+          "periodicite": "annuel",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "region",
+              "libelle": "région",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "nom": "Emploi salarié EQYP par secteur d'activité",
+          "categorie": "emploi",
+          "abbreviation": "",
+          "type_tb": "Décisionnel",
+          "source": "FSS",
+          "regle_calcul": "-",
+          "periodicite": "annuel",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "secteur_activite",
+              "libelle": "secteur d'activité",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "nom": "Nombre de déclaration CNSS par secteur d'activité",
+          "categorie": "emploi",
+          "abbreviation": "",
+          "type_tb": "Décisionnel",
+          "source": "CNSS",
+          "regle_calcul": "-",
+          "periodicite": "annuel",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "secteur_activite",
+              "libelle": "secteur d'activité",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
