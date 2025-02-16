@@ -21,6 +21,8 @@ public class RestResponse<T> {
 
     private String message;
 
+    private boolean success;
+
     private T data;
 
     private QueryParams queryParams;

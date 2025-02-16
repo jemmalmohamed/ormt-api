@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS indicateur (
     CONSTRAINT fk_indicateur_sous_domaine FOREIGN KEY (id_sous_domaine) REFERENCES sous_domaine(id)
 );
 
-CREATE TABLE dimension (
+CREATE TABLE IF NOT EXISTS  dimension (
     id BIGSERIAL PRIMARY KEY,
     nom VARCHAR(255) NOT NULL,
     type VARCHAR(50),
@@ -46,7 +46,7 @@ CREATE TABLE dimension (
 );
 
 -- Pivot table for indicateur and dimension
-CREATE TABLE indicateur_dimension (
+CREATE TABLE IF NOT EXISTS  indicateur_dimension (
     id_indicateur BIGINT NOT NULL,
     id_dimension BIGINT NOT NULL,
     created_date timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -58,6 +58,39 @@ CREATE TABLE indicateur_dimension (
     CONSTRAINT fk_indicateur_dimension_indicateur FOREIGN KEY (id_indicateur) REFERENCES indicateur(id),
     CONSTRAINT fk_indicateur_dimension_dimension FOREIGN KEY (id_dimension) REFERENCES dimension(id)
 );
+
+
+CREATE TABLE IF NOT EXISTS donnee_indicateur (
+    id BIGSERIAL PRIMARY KEY,
+  
+    id_indicateur BIGINT NOT NULL,
+    valeur numeric NOT NULL,
+ 
+    created_date timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    last_modified_date timestamptz NULL DEFAULT CURRENT_TIMESTAMP,
+    version int8 NULL,
+    created_by varchar(255) NULL,
+    last_modified_by varchar(255) NULL,
+    
+    CONSTRAINT fk_donnee_indicateur_indicateur FOREIGN KEY (id_indicateur) REFERENCES indicateur(id)
+);
+
+CREATE TABLE IF NOT EXISTS valeur_dimension (
+    id BIGSERIAL PRIMARY KEY,
+    id_dimension BIGINT NOT NULL,
+    id_donnee_indicateur BIGINT NOT NULL,
+    valeur varchar(255) NOT NULL,
+    created_date timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    last_modified_date timestamptz NULL DEFAULT CURRENT_TIMESTAMP,
+    version int8 NULL,
+    created_by varchar(255) NULL,
+    last_modified_by varchar(255) NULL,
+    CONSTRAINT fk_valeur_dimension_dimension FOREIGN KEY (id_dimension) REFERENCES dimension(id),
+    CONSTRAINT fk_valeur_dimension_donnee_indicateur FOREIGN KEY (id_donnee_indicateur) REFERENCES donnee_indicateur(id)
+);
+
+
+
 
 -- Create indexes for the pivot table
 CREATE INDEX idx_indicateur_dimension_indicateur ON indicateur_dimension(id_indicateur);
