@@ -10,10 +10,11 @@
           "nom": "Emploi par genre",
           "categorie": "emploi",
           "abbreviation": "",
-          "type_tb": "Décisionnel / Grand Public",
+          "typeTb": "Décisionnel / Grand Public",
           "source": "HCP",
-          "regle_calcul": "-",
+          "regleCalcul": "",
           "periodicite": "annuel",
+          "unite": "milliers",
           "periode": "2019-2024",
           "dimensions": [
             {
@@ -22,7 +23,7 @@
               "type": "string"
             },
             {
-              "nom": "milieu_de_residence",
+              "nom": "milieu",
               "libelle": "milieu de résidence",
               "type": "string"
             }
@@ -32,10 +33,11 @@
           "nom": "Emploi par âge",
           "categorie": "emploi",
           "abbreviation": "",
-          "type_tb": "Décisionnel / Grand Public",
+          "typeTb": "Décisionnel / Grand Public",
           "source": "HCP",
-          "regle_calcul": "-",
+          "regleCalcul": "",
           "periodicite": "annuel",
+          "unite": "milliers",
           "periode": "2019-2024",
           "dimensions": [
             {
@@ -54,10 +56,11 @@
           "nom": "Emploi par diplôme",
           "categorie": "emploi",
           "abbreviation": "",
-          "type_tb": "Décisionnel / Grand Public",
+          "typeTb": "Décisionnel / Grand Public",
           "source": "HCP",
-          "regle_calcul": "-",
+          "regleCalcul": "",
           "periodicite": "annuel",
+          "unite": "milliers",
           "periode": "2019-2024",
           "dimensions": [
             {
@@ -76,10 +79,11 @@
           "nom": "Emploi par secteur d'activité",
           "categorie": "emploi",
           "abbreviation": "",
-          "type_tb": "Décisionnel / Grand Public",
+          "typeTb": "Décisionnel / Grand Public",
           "source": "HCP",
-          "regle_calcul": "-",
+          "regleCalcul": "",
           "periodicite": "annuel",
+          "unite": "milliers",
           "periode": "2019-2024",
           "dimensions": [
             {
@@ -88,7 +92,7 @@
               "type": "string"
             },
             {
-              "nom": "milieu_de_residence",
+              "nom": "milieu",
               "libelle": "milieu de résidence",
               "type": "string"
             }
@@ -98,10 +102,11 @@
           "nom": "Emploi par statut professionnel",
           "categorie": "emploi",
           "abbreviation": "",
-          "type_tb": "Grand public",
+          "typeTb": "Grand public",
           "source": "HCP",
-          "regle_calcul": "-",
+          "regleCalcul": "",
           "periodicite": "annuel",
+          "unite": "milliers",
           "periode": "2019-2024",
           "dimensions": [
             {
@@ -110,7 +115,7 @@
               "type": "string"
             },
             {
-              "nom": "milieu_de_residence",
+              "nom": "milieu",
               "libelle": "milieu de résidence",
               "type": "string"
             }
@@ -120,10 +125,11 @@
           "nom": "Emploi par type d'emploi",
           "categorie": "emploi",
           "abbreviation": "",
-          "type_tb": "Grand public",
+          "typeTb": "Grand public",
           "source": "HCP",
-          "regle_calcul": "-",
+          "regleCalcul": "",
           "periodicite": "annuel",
+          "unite": "milliers",
           "periode": "2019-2024",
           "dimensions": [
             {
@@ -137,10 +143,11 @@
           "nom": "Emploi par secteur d'emploi",
           "categorie": "emploi",
           "abbreviation": "",
-          "type_tb": "Grand public",
+          "typeTb": "Grand public",
           "source": "HCP",
-          "regle_calcul": "-",
+          "regleCalcul": "",
           "periodicite": "annuel",
+          "unite": "milliers",
           "periode": "2019-2024",
           "dimensions": [
             {
@@ -154,10 +161,11 @@
           "nom": "Emploi par région",
           "categorie": "emploi",
           "abbreviation": "",
-          "type_tb": "Grand public",
+          "typeTb": "Grand public",
           "source": "HCP",
-          "regle_calcul": "-",
+          "regleCalcul": "",
           "periodicite": "annuel",
+          "unite": "milliers",
           "periode": "2019-2024",
           "dimensions": [
             {
@@ -171,10 +179,11 @@
           "nom": "Emploi indépendants déclarés à la CNSS par secteur d'activité",
           "categorie": "emploi",
           "abbreviation": "",
-          "type_tb": "Décisionnel",
+          "typeTb": "Décisionnel",
           "source": "CNSS",
-          "regle_calcul": "-",
+          "regleCalcul": "",
           "periodicite": "annuel",
+          "unite": "milliers",
           "periode": "2019-2024",
           "dimensions": [
             {
@@ -193,10 +202,11 @@
           "nom": "Emploi indépendants déclarés à la CNSS par région",
           "categorie": "emploi",
           "abbreviation": "",
-          "type_tb": "Décisionnel",
+          "typeTb": "Décisionnel",
           "source": "CNSS",
-          "regle_calcul": "-",
+          "regleCalcul": "",
           "periodicite": "annuel",
+          "unite": "milliers",
           "periode": "2019-2024",
           "dimensions": [
             {
@@ -215,10 +225,11 @@
           "nom": "Salariés déclarés à la CNSS par secteur d'activité",
           "categorie": "emploi",
           "abbreviation": "",
-          "type_tb": "Décisionnel / Grand Public",
+          "typeTb": "Décisionnel / Grand Public",
           "source": "CNSS",
-          "regle_calcul": "-",
+          "regleCalcul": "",
           "periodicite": "annuel",
+          "unite": "milliers",
           "periode": "2019-2024",
           "dimensions": [
             {
@@ -237,10 +248,11 @@
           "nom": "Salariés déclarés à la CNSS par région",
           "categorie": "emploi",
           "abbreviation": "",
-          "type_tb": "Décisionnel / Grand Public",
+          "typeTb": "Décisionnel / Grand Public",
           "source": "CNSS",
-          "regle_calcul": "-",
+          "regleCalcul": "",
           "periodicite": "annuel",
+          "unite": "milliers",
           "periode": "2019-2024",
           "dimensions": [
             {
@@ -254,10 +266,11 @@
           "nom": "Emploi salarié EQYP par secteur d'activité",
           "categorie": "emploi",
           "abbreviation": "",
-          "type_tb": "Décisionnel",
+          "typeTb": "Décisionnel",
           "source": "FSS",
-          "regle_calcul": "-",
+          "regleCalcul": "",
           "periodicite": "annuel",
+          "unite": "milliers",
           "periode": "2019-2024",
           "dimensions": [
             {
@@ -271,10 +284,11 @@
           "nom": "Nombre de déclaration CNSS par secteur d'activité",
           "categorie": "emploi",
           "abbreviation": "",
-          "type_tb": "Décisionnel",
+          "typeTb": "Décisionnel",
           "source": "CNSS",
-          "regle_calcul": "-",
+          "regleCalcul": "",
           "periodicite": "annuel",
+          "unite": "milliers",
           "periode": "2019-2024",
           "dimensions": [
             {

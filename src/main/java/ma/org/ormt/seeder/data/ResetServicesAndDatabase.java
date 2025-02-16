@@ -40,6 +40,7 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
         truncateTable("basemap");
         truncateTable("domaine");
         truncateTable("periodicite");
+        truncateTable("dimension");
         truncateTable("indicateur");
         truncateTable("sous_domaine");
     }

@@ -9,9 +9,9 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import lombok.RequiredArgsConstructor;
-import ma.org.ormt.modules.periodicite.Periodicite;
-import ma.org.ormt.modules.periodicite.dto.request.PeriodiciteRequestDto;
-import ma.org.ormt.modules.periodicite.service.PeriodiciteService;
+import ma.org.ormt.modules.periodicite.dtos.request.PeriodiciteRequestDto;
+import ma.org.ormt.modules.periodicite.models.Periodicite;
+import ma.org.ormt.modules.periodicite.services.PeriodiciteService;
 
 @Component
 @Order(2)

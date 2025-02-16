@@ -1,0 +1,158 @@
+package ma.org.ormt.modules.dimension.services.impl;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import jakarta.persistence.EntityNotFoundException;
+import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
+import ma.org.ormt.core.commun.base.service.SpecificationService;
+import ma.org.ormt.core.commun.rest.queries.QueryParams;
+import ma.org.ormt.core.utilities.EntityInspector;
+import ma.org.ormt.core.utilities.PaginationUtils;
+import ma.org.ormt.core.validators.ObjectsValidator;
+import ma.org.ormt.modules.dimension.dtos.request.DimensionRequestDto;
+import ma.org.ormt.modules.dimension.dtos.request.DimensionRequestDtoMapper;
+import ma.org.ormt.modules.dimension.models.Dimension;
+import ma.org.ormt.modules.dimension.repositories.DimensionRepository;
+import ma.org.ormt.modules.dimension.services.DimensionService;
+import ma.org.ormt.modules.indicateur.models.Indicateur;
+import ma.org.ormt.modules.indicateur.services.IndicateurService;
+
+@Service
+@Transactional
+public class DimensionServiceImpl extends BaseServiceImpl<Dimension> implements DimensionService {
+
+    @Autowired
+    private DimensionRepository dimensionRepository;
+
+    @Autowired
+    private IndicateurService indicateurService;
+
+    @Autowired
+    private ObjectsValidator<DimensionRequestDto> validator;
+
+    @Autowired
+    private DimensionRequestDtoMapper dimensionRequestMapper;
+
+    private static final String NOT_FOUND_STRING = "Dimension non trouvée";
+    private static final String INDICATEUR_NOT_FOUND = "Indicateur non trouvé";
+
+    public DimensionServiceImpl(DimensionRepository dimensionRepository, SpecificationService specificationService) {
+        super(dimensionRepository, specificationService);
+    }
+
+    @Override
+    public boolean existsById(Long id) {
+        return dimensionRepository.existsById(id);
+    }
+
+    @Override
+    public Optional<Dimension> findByNom(String nom) {
+        return dimensionRepository.findByNom(nom);
+    }
+
+    @Override
+    public Page<Dimension> getEntityList(QueryParams requestParams) {
+        if (requestParams.getPageSize() == -1) {
+            requestParams.setPageSize(Integer.MAX_VALUE);
+        }
+        Pageable pageable = PaginationUtils.createPageable(requestParams);
+        if (!EntityInspector.isFieldPresentInEntity(pageable.getSort().toString(), Dimension.class)) {
+            pageable = PaginationUtils.createPageable(requestParams);
+        }
+        Specification<Dimension> specification = specificationService
+                .createSpecificationWithDynamicGlobalFilter(requestParams.getFilters(),
+                        requestParams.getGlobalFilter(), Dimension.class);
+        return findAll(specification, pageable);
+    }
+
+    @Override
+    public Dimension save(Dimension dimension) {
+        return dimensionRepository.save(dimension);
+    }
+
+    @Override
+    public Dimension create(DimensionRequestDto requestDto) {
+        try {
+            validator.validate(requestDto);
+            Dimension dimensionToCreate = dimensionRequestMapper.mapToEntity(requestDto);
+            return dimensionRepository.save(dimensionToCreate);
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Erreur lors de la création de la dimension: " + e.getMessage());
+        }
+    }
+
+    @Override
+    public Dimension update(Long id, DimensionRequestDto requestDto) {
+        try {
+            validator.validate(requestDto);
+            Dimension dimensionToUpdate = dimensionRequestMapper.mapToEntity(requestDto);
+            checkPathId(id, dimensionToUpdate.getId());
+
+            Dimension dimension = dimensionRepository.findById(id)
+                    .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+
+            updateFields(dimension, dimensionToUpdate);
+            return dimensionRepository.save(dimension);
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Erreur lors de la mise à jour de la dimension: " + e.getMessage());
+        }
+    }
+
+    @Override
+    @Transactional
+    public void associateWithIndicateur(Long dimensionId, Long indicateurId) {
+        try {
+            Dimension dimension = dimensionRepository.findById(dimensionId)
+                    .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+
+            Indicateur indicateur = indicateurService.findById(indicateurId)
+                    .orElseThrow(() -> new EntityNotFoundException(INDICATEUR_NOT_FOUND));
+
+            if (indicateur.getDimensions().contains(dimension)) {
+                throw new IllegalArgumentException("Cette dimension est déjà associée à cet indicateur");
+            }
+
+            indicateur.getDimensions().add(dimension);
+            indicateurService.save(indicateur);
+        } catch (Exception e) {
+            throw new IllegalArgumentException(
+                    "Erreur lors de l'association de la dimension avec l'indicateur: " + e.getMessage());
+        }
+    }
+
+    @Override
+    @Transactional
+    public void dissociateFromIndicateur(Long dimensionId, Long indicateurId) {
+        try {
+            Dimension dimension = dimensionRepository.findById(dimensionId)
+                    .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+
+            Indicateur indicateur = indicateurService.findById(indicateurId)
+                    .orElseThrow(() -> new EntityNotFoundException(INDICATEUR_NOT_FOUND));
+
+            if (!indicateur.getDimensions().contains(dimension)) {
+                throw new IllegalArgumentException("Cette dimension n'est pas associée à cet indicateur");
+            }
+
+            indicateur.getDimensions().remove(dimension);
+            indicateurService.save(indicateur);
+        } catch (Exception e) {
+            throw new IllegalArgumentException(
+                    "Erreur lors de la dissociation de la dimension de l'indicateur: " + e.getMessage());
+        }
+    }
+
+    private void updateFields(Dimension dimension, Dimension entityToUpdate) {
+        dimension.setNom(entityToUpdate.getNom());
+        dimension.setType(entityToUpdate.getType());
+        dimension.setDescription(entityToUpdate.getDescription());
+    }
+
+}
