@@ -26,6 +26,11 @@
               "nom": "milieu",
               "libelle": "milieu de résidence",
               "type": "string"
+            },
+            {
+              "nom": "annee",
+              "libelle": "periode",
+              "type": "string"
             }
           ]
         },
@@ -48,6 +53,11 @@
             {
               "nom": "genre",
               "libelle": "Genre",
+              "type": "string"
+            },
+            {
+              "nom": "annee",
+              "libelle": "periode",
               "type": "string"
             }
           ]
@@ -72,6 +82,11 @@
               "nom": "genre",
               "libelle": "Genre",
               "type": "string"
+            },
+            {
+              "nom": "annee",
+              "libelle": "periode",
+              "type": "string"
             }
           ]
         },
@@ -94,6 +109,11 @@
             {
               "nom": "milieu",
               "libelle": "milieu de résidence",
+              "type": "string"
+            },
+            {
+              "nom": "annee",
+              "libelle": "periode",
               "type": "string"
             }
           ]
@@ -118,6 +138,11 @@
               "nom": "milieu",
               "libelle": "milieu de résidence",
               "type": "string"
+            },
+            {
+              "nom": "annee",
+              "libelle": "periode",
+              "type": "string"
             }
           ]
         },
@@ -135,6 +160,11 @@
             {
               "nom": "type_emploi",
               "libelle": "Type d'emploi",
+              "type": "string"
+            },
+            {
+              "nom": "annee",
+              "libelle": "periode",
               "type": "string"
             }
           ]
@@ -154,6 +184,11 @@
               "nom": "secteur_emploi",
               "libelle": "secteur d'emploi",
               "type": "string"
+            },
+            {
+              "nom": "annee",
+              "libelle": "periode",
+              "type": "string"
             }
           ]
         },
@@ -171,6 +206,11 @@
             {
               "nom": "region",
               "libelle": "région",
+              "type": "string"
+            },
+            {
+              "nom": "annee",
+              "libelle": "periode",
               "type": "string"
             }
           ]
@@ -195,6 +235,11 @@
               "nom": "genre",
               "libelle": "Genre",
               "type": "string"
+            },
+            {
+              "nom": "annee",
+              "libelle": "periode",
+              "type": "string"
             }
           ]
         },
@@ -217,6 +262,11 @@
             {
               "nom": "genre",
               "libelle": "Genre",
+              "type": "string"
+            },
+            {
+              "nom": "annee",
+              "libelle": "periode",
               "type": "string"
             }
           ]
@@ -241,6 +291,11 @@
               "nom": "genre",
               "libelle": "Genre",
               "type": "string"
+            },
+            {
+              "nom": "annee",
+              "libelle": "periode",
+              "type": "string"
             }
           ]
         },
@@ -258,6 +313,11 @@
             {
               "nom": "region",
               "libelle": "région",
+              "type": "string"
+            },
+            {
+              "nom": "annee",
+              "libelle": "periode",
               "type": "string"
             }
           ]
@@ -277,6 +337,11 @@
               "nom": "secteur_activite",
               "libelle": "secteur d'activité",
               "type": "string"
+            },
+            {
+              "nom": "annee",
+              "libelle": "periode",
+              "type": "string"
             }
           ]
         },
@@ -294,6 +359,11 @@
             {
               "nom": "secteur_activite",
               "libelle": "secteur d'activité",
+              "type": "string"
+            },
+            {
+              "nom": "annee",
+              "libelle": "periode",
               "type": "string"
             }
           ]

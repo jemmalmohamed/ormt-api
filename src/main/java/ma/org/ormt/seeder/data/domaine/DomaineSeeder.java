@@ -23,16 +23,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import ma.org.ormt.modules.dimension.models.Dimension;
-import ma.org.ormt.modules.dimension.services.DimensionService;
-import ma.org.ormt.modules.domaine.dtos.request.DomaineRequestDto;
-import ma.org.ormt.modules.domaine.models.Domaine;
-import ma.org.ormt.modules.domaine.services.DomaineService;
-import ma.org.ormt.modules.indicateur.models.Indicateur;
-import ma.org.ormt.modules.indicateur.services.IndicateurService;
-import ma.org.ormt.modules.sousdomaine.dtos.request.SousDomaineRequestDto;
-import ma.org.ormt.modules.sousdomaine.models.SousDomaine;
-import ma.org.ormt.modules.sousdomaine.services.SousDomaineService;
+import ma.org.ormt.modules.domaines.domaine.dtos.request.DomaineRequestDto;
+import ma.org.ormt.modules.domaines.domaine.models.Domaine;
+import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
+import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestDto;
+import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
+import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
+import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
+import ma.org.ormt.modules.indicateurs.dimension.services.DimensionService;
+import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurService;
 
 @Log4j2
 @Component

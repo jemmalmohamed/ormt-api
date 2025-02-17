@@ -64,30 +64,32 @@ CREATE TABLE IF NOT EXISTS donnee_indicateur (
     id BIGSERIAL PRIMARY KEY,
   
     id_indicateur BIGINT NOT NULL,
-    valeur numeric NOT NULL,
+    valeur  varchar(255) NULL,
  
+   status_code int4 NULL,
     created_date timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
     last_modified_date timestamptz NULL DEFAULT CURRENT_TIMESTAMP,
     version int8 NULL,
     created_by varchar(255) NULL,
     last_modified_by varchar(255) NULL,
-    
+
     CONSTRAINT fk_donnee_indicateur_indicateur FOREIGN KEY (id_indicateur) REFERENCES indicateur(id)
 );
 
-CREATE TABLE IF NOT EXISTS valeur_dimension (
+  CREATE TABLE IF NOT EXISTS valeur_dimension (
     id BIGSERIAL PRIMARY KEY,
     id_dimension BIGINT NOT NULL,
     id_donnee_indicateur BIGINT NOT NULL,
-    valeur varchar(255) NOT NULL,
+     valeur varchar(255) NOT NULL, 
+     status_code int4 NULL,
     created_date timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
     last_modified_date timestamptz NULL DEFAULT CURRENT_TIMESTAMP,
     version int8 NULL,
     created_by varchar(255) NULL,
     last_modified_by varchar(255) NULL,
-    CONSTRAINT fk_valeur_dimension_dimension FOREIGN KEY (id_dimension) REFERENCES dimension(id),
-    CONSTRAINT fk_valeur_dimension_donnee_indicateur FOREIGN KEY (id_donnee_indicateur) REFERENCES donnee_indicateur(id)
-);
+   CONSTRAINT fk_valeur_dimension_dimension FOREIGN KEY (id_dimension) REFERENCES dimension(id),
+     CONSTRAINT fk_valeur_dimension_donnee_indicateur FOREIGN KEY (id_donnee_indicateur) REFERENCES donnee_indicateur(id)
+  );
 
 
 
