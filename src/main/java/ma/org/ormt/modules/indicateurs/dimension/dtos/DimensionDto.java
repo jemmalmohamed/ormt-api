@@ -7,7 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ma.org.ormt.core.commun.base.dto.BaseDto;
 import ma.org.ormt.core.commun.base.dto.Dto;
 
 @Setter
