@@ -1,17 +1,17 @@
 {
-  "titre": "Demande de travail",
+  "nom": "Demande de travail",
   "description": "Étude de l'emploi, sa qualité et les besoins en compétences du marché",
   "sousDomaines": [
     {
-      "titre": "Volume d'emploi",
+      "nom": "Volume d'emploi",
       "description": "Étude du volume d'emplois disponibles sur le marché",
       "indicateurs": [
         {
           "nom": "Emploi par genre",
           "categorie": "emploi",
-          "abbreviation": "",
-          "typeTb": "Décisionnel / Grand Public",
-          "source": "HCP",
+          "abreviation": "",
+          "typeTb": "décisionnel / grand public",
+          "source": "hcp",
           "regleCalcul": "",
           "periodicite": "annuel",
           "unite": "milliers",
@@ -20,26 +20,38 @@
             {
               "nom": "genre",
               "libelle": "Genre",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
             },
             {
               "nom": "milieu",
               "libelle": "milieu de résidence",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": false
+              }
             },
             {
               "nom": "annee",
-              "libelle": "periode",
-              "type": "string"
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
             }
           ]
         },
         {
           "nom": "Emploi par âge",
           "categorie": "emploi",
-          "abbreviation": "",
-          "typeTb": "Décisionnel / Grand Public",
-          "source": "HCP",
+          "abreviation": "",
+          "typeTb": "décisionnel / grand public",
+          "source": "hcp",
           "regleCalcul": "",
           "periodicite": "annuel",
           "unite": "milliers",
@@ -48,26 +60,38 @@
             {
               "nom": "age",
               "libelle": "âge",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
             },
             {
               "nom": "genre",
               "libelle": "Genre",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": false
+              }
             },
             {
               "nom": "annee",
-              "libelle": "periode",
-              "type": "string"
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
             }
           ]
         },
         {
           "nom": "Emploi par diplôme",
           "categorie": "emploi",
-          "abbreviation": "",
-          "typeTb": "Décisionnel / Grand Public",
-          "source": "HCP",
+          "abreviation": "",
+          "typeTb": "décisionnel / grand public",
+          "source": "hcp",
           "regleCalcul": "",
           "periodicite": "annuel",
           "unite": "milliers",
@@ -76,26 +100,38 @@
             {
               "nom": "diplome",
               "libelle": "diplôme",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
             },
             {
               "nom": "genre",
               "libelle": "Genre",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": false
+              }
             },
             {
               "nom": "annee",
-              "libelle": "periode",
-              "type": "string"
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
             }
           ]
         },
         {
           "nom": "Emploi par secteur d'activité",
           "categorie": "emploi",
-          "abbreviation": "",
-          "typeTb": "Décisionnel / Grand Public",
-          "source": "HCP",
+          "abreviation": "",
+          "typeTb": "décisionnel / grand public",
+          "source": "hcp",
           "regleCalcul": "",
           "periodicite": "annuel",
           "unite": "milliers",
@@ -104,26 +140,38 @@
             {
               "nom": "secteur_activite",
               "libelle": "secteur d'activité",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
             },
             {
               "nom": "milieu",
               "libelle": "milieu de résidence",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": false
+              }
             },
             {
               "nom": "annee",
-              "libelle": "periode",
-              "type": "string"
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
             }
           ]
         },
         {
           "nom": "Emploi par statut professionnel",
           "categorie": "emploi",
-          "abbreviation": "",
-          "typeTb": "Grand public",
-          "source": "HCP",
+          "abreviation": "",
+          "typeTb": "grand public",
+          "source": "hcp",
           "regleCalcul": "",
           "periodicite": "annuel",
           "unite": "milliers",
@@ -132,26 +180,38 @@
             {
               "nom": "statut",
               "libelle": "statut",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
             },
             {
               "nom": "milieu",
               "libelle": "milieu de résidence",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": false
+              }
             },
             {
               "nom": "annee",
-              "libelle": "periode",
-              "type": "string"
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
             }
           ]
         },
         {
           "nom": "Emploi par type d'emploi",
           "categorie": "emploi",
-          "abbreviation": "",
-          "typeTb": "Grand public",
-          "source": "HCP",
+          "abreviation": "",
+          "typeTb": "grand public",
+          "source": "hcp",
           "regleCalcul": "",
           "periodicite": "annuel",
           "unite": "milliers",
@@ -160,21 +220,29 @@
             {
               "nom": "type_emploi",
               "libelle": "Type d'emploi",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
             },
             {
               "nom": "annee",
-              "libelle": "periode",
-              "type": "string"
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
             }
           ]
         },
         {
           "nom": "Emploi par secteur d'emploi",
           "categorie": "emploi",
-          "abbreviation": "",
-          "typeTb": "Grand public",
-          "source": "HCP",
+          "abreviation": "",
+          "typeTb": "grand public",
+          "source": "hcp",
           "regleCalcul": "",
           "periodicite": "annuel",
           "unite": "milliers",
@@ -183,21 +251,29 @@
             {
               "nom": "secteur_emploi",
               "libelle": "secteur d'emploi",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
             },
             {
               "nom": "annee",
-              "libelle": "periode",
-              "type": "string"
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
             }
           ]
         },
         {
           "nom": "Emploi par région",
           "categorie": "emploi",
-          "abbreviation": "",
-          "typeTb": "Grand public",
-          "source": "HCP",
+          "abreviation": "",
+          "typeTb": "grand public",
+          "source": "hcp",
           "regleCalcul": "",
           "periodicite": "annuel",
           "unite": "milliers",
@@ -206,21 +282,29 @@
             {
               "nom": "region",
               "libelle": "région",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
             },
             {
               "nom": "annee",
-              "libelle": "periode",
-              "type": "string"
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
             }
           ]
         },
         {
           "nom": "Emploi indépendants déclarés à la CNSS par secteur d'activité",
           "categorie": "emploi",
-          "abbreviation": "",
-          "typeTb": "Décisionnel",
-          "source": "CNSS",
+          "abreviation": "",
+          "typeTb": "décisionnel",
+          "source": "cnss",
           "regleCalcul": "",
           "periodicite": "annuel",
           "unite": "milliers",
@@ -229,26 +313,38 @@
             {
               "nom": "secteur_activite",
               "libelle": "secteur d'activité",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
             },
             {
               "nom": "genre",
               "libelle": "Genre",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": false
+              }
             },
             {
               "nom": "annee",
-              "libelle": "periode",
-              "type": "string"
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
             }
           ]
         },
         {
           "nom": "Emploi indépendants déclarés à la CNSS par région",
           "categorie": "emploi",
-          "abbreviation": "",
-          "typeTb": "Décisionnel",
-          "source": "CNSS",
+          "abreviation": "",
+          "typeTb": "décisionnel",
+          "source": "cnss",
           "regleCalcul": "",
           "periodicite": "annuel",
           "unite": "milliers",
@@ -257,26 +353,38 @@
             {
               "nom": "region",
               "libelle": "Région",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
             },
             {
               "nom": "genre",
               "libelle": "Genre",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": false
+              }
             },
             {
               "nom": "annee",
-              "libelle": "periode",
-              "type": "string"
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
             }
           ]
         },
         {
           "nom": "Salariés déclarés à la CNSS par secteur d'activité",
           "categorie": "emploi",
-          "abbreviation": "",
-          "typeTb": "Décisionnel / Grand Public",
-          "source": "CNSS",
+          "abreviation": "",
+          "typeTb": "décisionnel / grand public",
+          "source": "cnss",
           "regleCalcul": "",
           "periodicite": "annuel",
           "unite": "milliers",
@@ -285,26 +393,38 @@
             {
               "nom": "secteur_activite",
               "libelle": "secteur d'activité",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
             },
             {
               "nom": "genre",
               "libelle": "Genre",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": false
+              }
             },
             {
               "nom": "annee",
-              "libelle": "periode",
-              "type": "string"
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
             }
           ]
         },
         {
           "nom": "Salariés déclarés à la CNSS par région",
           "categorie": "emploi",
-          "abbreviation": "",
-          "typeTb": "Décisionnel / Grand Public",
-          "source": "CNSS",
+          "abreviation": "",
+          "typeTb": "décisionnel / grand public",
+          "source": "cnss",
           "regleCalcul": "",
           "periodicite": "annuel",
           "unite": "milliers",
@@ -313,21 +433,29 @@
             {
               "nom": "region",
               "libelle": "région",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
             },
             {
               "nom": "annee",
-              "libelle": "periode",
-              "type": "string"
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
             }
           ]
         },
         {
           "nom": "Emploi salarié EQYP par secteur d'activité",
           "categorie": "emploi",
-          "abbreviation": "",
-          "typeTb": "Décisionnel",
-          "source": "FSS",
+          "abreviation": "",
+          "typeTb": "décisionnel",
+          "source": "cnss",
           "regleCalcul": "",
           "periodicite": "annuel",
           "unite": "milliers",
@@ -336,21 +464,29 @@
             {
               "nom": "secteur_activite",
               "libelle": "secteur d'activité",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
             },
             {
               "nom": "annee",
-              "libelle": "periode",
-              "type": "string"
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
             }
           ]
         },
         {
           "nom": "Nombre de déclaration CNSS par secteur d'activité",
           "categorie": "emploi",
-          "abbreviation": "",
-          "typeTb": "Décisionnel",
-          "source": "CNSS",
+          "abreviation": "",
+          "typeTb": "décisionnel",
+          "source": "cnss",
           "regleCalcul": "",
           "periodicite": "annuel",
           "unite": "milliers",
@@ -359,12 +495,113 @@
             {
               "nom": "secteur_activite",
               "libelle": "secteur d'activité",
-              "type": "string"
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
             },
             {
               "nom": "annee",
-              "libelle": "periode",
-              "type": "string"
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
+            }
+          ]
+        },
+        {
+          "nom": "Indice de rotation de salariés par poste par secteur d'activité",
+          "categorie": "emploi",
+          "abreviation": "",
+          "typeTb": "décisionnel",
+          "source": "cnss",
+          "regleCalcul": "DEC/EQTP",
+          "periodicite": "annuel",
+          "unite": "milliers",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "secteur_activite",
+              "libelle": "secteur d'activité_cnss",
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
+            },
+            {
+              "nom": "annee",
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
+            }
+          ]
+        },
+        {
+          "nom": "Emploi informel par secteur d'activité",
+          "categorie": "emploi",
+          "abreviation": "",
+          "typeTb": "décisionnel",
+          "source": "hcp-cnss",
+          "regleCalcul": "ET-P-S-IDP",
+          "periodicite": "annuel",
+          "unite": "milliers",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "secteur_activite",
+              "libelle": "secteur d'activité_HCP",
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
+            },
+            {
+              "nom": "annee",
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
+            }
+          ]
+        },
+        {
+          "nom": "Salarié public par secteur",
+          "categorie": "emploi",
+          "abreviation": "",
+          "typeTb": "décisionnel",
+          "source": "mef",
+          "regleCalcul": "",
+          "periodicite": "annuel",
+          "unite": "milliers",
+          "periode": "2019-2024",
+          "dimensions": [
+            {
+              "nom": "secteur_activite",
+              "libelle": "secteur d'activité_HCP",
+              "type": "texte",
+              "association": {
+                "principale": true,
+                "temporelle": false
+              }
+            },
+            {
+              "nom": "annee",
+              "libelle": "annuel",
+              "type": "texte",
+              "association": {
+                "principale": false,
+                "temporelle": true
+              }
             }
           ]
         }

@@ -66,7 +66,7 @@ public class ProvinceCrudController extends BaseController<Province> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PutMapping("{id}")
-        @PreAuthorize("hasAuthority('province:update')")
+        @PreAuthorize("hasAuthority('province:edit')")
         public ResponseEntity<RestResponse<ProvinceDto>> updateProvince(@PathVariable Long id,
                         @Validated(OnUpdate.class) @RequestBody ProvinceRequestDto provinceRequestDto) {
                 Province province = provinceService.update(id, provinceRequestDto);

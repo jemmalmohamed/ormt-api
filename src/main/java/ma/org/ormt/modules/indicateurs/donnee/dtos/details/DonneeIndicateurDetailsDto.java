@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import ma.org.ormt.core.commun.base.dto.Dto;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
 
 @Setter
@@ -14,4 +15,7 @@ import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
 @RequiredArgsConstructor
 @JsonIgnoreProperties(value = { "donneIndicateur.id" }, allowGetters = true)
 public class DonneeIndicateurDetailsDto extends DonneeIndicateurDto {
+
+    Dto indicateur;
+
 }

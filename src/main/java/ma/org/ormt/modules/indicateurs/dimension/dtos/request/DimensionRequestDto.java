@@ -33,4 +33,5 @@ public class DimensionRequestDto extends Dto {
     private String type;
 
     private String description;
+
 }

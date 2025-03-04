@@ -59,6 +59,9 @@ public class KeycloakAuthorizationResourceSetupRunner implements CommandLineRunn
                 "region",
                 "province",
                 "domaine",
+                "sous_domaine",
+                "indicateur",
+                "dimension",
                 "auth"
 
         );

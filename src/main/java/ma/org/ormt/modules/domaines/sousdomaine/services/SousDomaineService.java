@@ -11,11 +11,13 @@ import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 
 public interface SousDomaineService extends BaseService<SousDomaine> {
 
-    Optional<SousDomaine> findByTitre(String titre);
+    Optional<SousDomaine> findByNom(String nom);
 
     Page<SousDomaine> getEntityList(QueryParams requestParams);
 
-    SousDomaine create(SousDomaineRequestDto requestDto);
+    Page<SousDomaine> getEntityListByDomaineId(Long domaineId, QueryParams requestParams);
+
+    SousDomaine create(Long domaineId, SousDomaineRequestDto requestDto);
 
     SousDomaine update(Long id, SousDomaineRequestDto sousDomaineRequestDto);
 

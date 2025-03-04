@@ -1,7 +1,10 @@
 package ma.org.ormt.modules.domaines.domaine.controllers;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -21,6 +24,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.core.commun.base.controller.BaseController;
 import ma.org.ormt.core.commun.rest.responses.RestResponse;
 import ma.org.ormt.core.validators.groups.OnCreate;
@@ -31,6 +35,7 @@ import ma.org.ormt.modules.domaines.domaine.dtos.request.DomaineRequestDto;
 import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
 
+@Log4j2
 @RestController
 @RequestMapping(value = "/api/v1/domaines")
 @RequiredArgsConstructor
@@ -66,7 +71,7 @@ public class DomaineCrudController extends BaseController<Domaine> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PutMapping("{id}")
-        @PreAuthorize("hasAuthority('domaine:update')")
+        @PreAuthorize("hasAuthority('domaine:edit')")
         public ResponseEntity<RestResponse<DomaineDto>> updateDomaine(@PathVariable Long id,
                         @Validated(OnUpdate.class) @RequestBody DomaineRequestDto domaineRequestDto) {
                 Domaine domaine = domaineService.update(id, domaineRequestDto);
@@ -91,8 +96,19 @@ public class DomaineCrudController extends BaseController<Domaine> {
         })
         @DeleteMapping("/bulk")
         @PreAuthorize("hasAuthority('domaine:delete')")
-        public ResponseEntity<Void> deleteMultiple(@RequestBody List<Long> ids) {
-                return handleDelete(() -> domaineService.deleteAllById(ids));
+        public ResponseEntity<Map<String, String>> deleteMultiple(@RequestBody List<Long> ids) {
+                try {
+                        domaineService.deleteAllById(ids);
+                        return ResponseEntity.noContent().build();
+                } catch (DataIntegrityViolationException e) {
+                        // Handle foreign key constraint violation
+                        Map<String, String> response = new HashMap<>();
+                        response.put("message", "Suppression impossible, les données sont utilisées ailleurs");
+                        return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
+                } catch (Exception e) {
+                        // Handle other exceptions
+                        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+                }
         }
 
         @Operation(summary = "Delete all " + ENTITY_NAME + "s", responses = {

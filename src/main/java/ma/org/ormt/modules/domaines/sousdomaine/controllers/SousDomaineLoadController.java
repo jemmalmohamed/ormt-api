@@ -32,7 +32,7 @@ import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
 
 @RestController
-@RequestMapping("api/v1/sousdomaines")
+@RequestMapping("api/v1/domaines")
 @RequiredArgsConstructor
 public class SousDomaineLoadController extends BaseController<SousDomaine> {
 
@@ -49,9 +49,10 @@ public class SousDomaineLoadController extends BaseController<SousDomaine> {
                                         + " not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
-        @GetMapping("")
-        @PreAuthorize("hasAuthority('sousdomaine:list')")
+        @GetMapping("/{domaineId}/sous-domaines")
+        @PreAuthorize("hasAuthority('domaine:list')")
         public ResponseEntity<RestResponse<List<SousDomaineDto>>> getSousDomaines(
+                        @PathVariable("domaineId") Long domaineId,
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
                         @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
                         @RequestParam(value = "sortField", defaultValue = "createdDate") String sortField,
@@ -62,14 +63,14 @@ public class SousDomaineLoadController extends BaseController<SousDomaine> {
                 QueryParams requestParams = createQueryParams(pageIndex, pageSize, sortField, direction, filters,
                                 globalFilter);
 
-                Page<SousDomaine> sousDomainePage = sousDomaineService.getEntityList(requestParams);
+                Page<SousDomaine> sousDomainePage = sousDomaineService.getEntityListByDomaineId(domaineId,
+                                requestParams);
 
                 List<SousDomaineDto> dtos = sousDomaineDtoMapper.mapToDto(sousDomainePage.getContent());
 
                 QueryParams queryParams = adjustQueryParamsForAllRecords(requestParams, sousDomainePage);
 
                 return buildResponseEntity(dtos, queryParams, HttpStatus.OK);
-
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id")
@@ -80,9 +81,10 @@ public class SousDomaineLoadController extends BaseController<SousDomaine> {
                                         + " not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
-        @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('sousdomaine:read')")
-        public ResponseEntity<RestResponse<SousDomaineDetailsDto>> getSousDomaine(@PathVariable("id") Long id) {
+        @GetMapping("/{domaineId}/sous-domaines/{id}")
+        @PreAuthorize("hasAuthority('domaine:read')")
+        public ResponseEntity<RestResponse<SousDomaineDetailsDto>> getSousDomaine(
+                        @PathVariable("domaineId") Long domaineId, @PathVariable("id") Long id) {
                 SousDomaine sousDomaine = sousDomaineService.findById(id).orElseThrow(EntityNotFoundException::new);
                 return buildResponseEntity(sousDomaine, SousDomaineDetailsDto.class, HttpStatus.OK);
 

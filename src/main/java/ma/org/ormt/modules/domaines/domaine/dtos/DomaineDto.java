@@ -1,7 +1,5 @@
 package ma.org.ormt.modules.domaines.domaine.dtos;
 
-import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -10,7 +8,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.BaseDto;
-import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDto;
 
 @Setter
 @Getter
@@ -20,9 +17,8 @@ import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDto;
 @NoArgsConstructor
 public class DomaineDto extends BaseDto {
 
-    private String titre;
+    private String nom;
 
     private String description;
 
-    private List<SousDomaineDto> sousDomaines;
 }

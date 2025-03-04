@@ -15,13 +15,13 @@ import ma.org.ormt.core.validators.unique.Unique;
 @Schema(name = "Domaine")
 @RequiredArgsConstructor
 @Unique.List({
-        @Unique(message = "Le titre ${validatedValue.titre} existe déjà", fieldName = "titre", fieldId = "id", tableName = "domaine"),
+        @Unique(message = "Le nom ${validatedValue.nom} existe déjà", fieldName = "nom", fieldId = "id", tableName = "domaine"),
 })
 @JsonIgnoreProperties(value = { "domaine.id" }, allowGetters = true)
 public class DomaineRequestDto extends Dto {
 
     @NotBlank(message = "Ce champ est requis.")
-    private String titre;
+    private String nom;
 
     @NotBlank(message = "Ce champ est requis.")
     private String description;

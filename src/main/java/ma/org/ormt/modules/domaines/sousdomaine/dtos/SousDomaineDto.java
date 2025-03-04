@@ -21,7 +21,7 @@ import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDto;
 @NoArgsConstructor
 public class SousDomaineDto extends BaseDto {
 
-    private String titre;
+    private String nom;
 
     private String description;
 

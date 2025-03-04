@@ -25,7 +25,7 @@ import java.util.List;
 @Table(name = "domaine")
 public class Domaine extends BaseEntity {
 
-    private String titre;
+    private String nom;
 
     private String description;
 

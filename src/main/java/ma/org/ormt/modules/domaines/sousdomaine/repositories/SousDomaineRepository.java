@@ -7,6 +7,6 @@ import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 
 public interface SousDomaineRepository extends BaseRepository<SousDomaine> {
 
-    Optional<SousDomaine> findByTitre(String titre);
+    Optional<SousDomaine> findByNom(String nom);
 
 }

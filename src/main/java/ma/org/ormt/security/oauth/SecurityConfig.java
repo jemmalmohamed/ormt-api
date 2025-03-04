@@ -50,7 +50,11 @@ public class SecurityConfig {
                                         .csrf(csrf -> csrf.disable())
                                         .authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
                                                         .requestMatchers(AUTH_SWAGGER_WHITELIST).permitAll()
-                                                        .anyRequest().authenticated())
+                                                        .anyRequest()
+                                                        // .requestMatchers("/admin/**")
+                                                        .authenticated())
+                                        // .requestMatchers("/admin/**").authenticated()
+                                        // .anyRequest().permitAll())
                                         .oauth2ResourceServer(oauth2ResourceServer -> oauth2ResourceServer
                                                         .jwt(jwt -> jwt.jwtAuthenticationConverter(
                                                                         jwtAuthResourceConverter)))

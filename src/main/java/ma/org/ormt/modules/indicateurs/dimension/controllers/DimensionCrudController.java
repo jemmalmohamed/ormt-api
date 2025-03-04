@@ -1,7 +1,9 @@
 package ma.org.ormt.modules.indicateurs.dimension.controllers;
 
 import java.util.List;
-
+import java.util.HashMap;
+import java.util.Map;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -27,7 +29,6 @@ import ma.org.ormt.core.validators.groups.OnCreate;
 import ma.org.ormt.core.validators.groups.OnUpdate;
 import ma.org.ormt.modules.indicateurs.dimension.dtos.DimensionDto;
 import ma.org.ormt.modules.indicateurs.dimension.dtos.DimensionDtoMapper;
-import ma.org.ormt.modules.indicateurs.dimension.dtos.association.IndicateurDimensionDto;
 import ma.org.ormt.modules.indicateurs.dimension.dtos.request.DimensionRequestDto;
 import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
 import ma.org.ormt.modules.indicateurs.dimension.services.DimensionService;
@@ -63,7 +64,7 @@ public class DimensionCrudController extends BaseController<Dimension> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PutMapping("{id}")
-        @PreAuthorize("hasAuthority('dimension:update')")
+        @PreAuthorize("hasAuthority('dimension:edit')")
         public ResponseEntity<RestResponse<DimensionDto>> updateDimension(@PathVariable Long id,
                         @Validated(OnUpdate.class) @RequestBody DimensionRequestDto dimensionRequestDto) {
                 Dimension dimension = dimensionService.update(id, dimensionRequestDto);
@@ -88,8 +89,20 @@ public class DimensionCrudController extends BaseController<Dimension> {
         })
         @DeleteMapping("/bulk")
         @PreAuthorize("hasAuthority('dimension:delete')")
-        public ResponseEntity<Void> deleteMultiple(@RequestBody List<Long> ids) {
-                return handleDelete(() -> dimensionService.deleteAllById(ids));
+        public ResponseEntity<Map<String, String>> deleteMultiple(@RequestBody List<Long> ids) {
+                try {
+                        dimensionService.deleteAllById(ids);
+                        return ResponseEntity.noContent().build();
+                } catch (DataIntegrityViolationException e) {
+                        // Handle foreign key constraint violation
+                        Map<String, String> response = new HashMap<>();
+                        response.put("message", "Suppression impossible, les données sont utilisées ailleurs");
+                        return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
+                } catch (Exception e) {
+                        // Handle other exceptions
+                        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+                }
+                // return handleDelete(() -> dimensionService.deleteAllById(ids));
         }
 
         @Operation(summary = "Delete all " + ENTITY_NAME + "s", responses = {
@@ -145,31 +158,37 @@ public class DimensionCrudController extends BaseController<Dimension> {
                 return buildResponseEntity(deletedIds, HttpStatus.OK);
         }
 
-        @Operation(summary = "Associate dimension with indicateur", responses = {
-                        @ApiResponse(responseCode = "204", description = "No content"),
-                        @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "ErrorResponse")),
-                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
-        })
-        @PostMapping("/associate")
-        @PreAuthorize("hasAuthority('dimension:update')")
-        public ResponseEntity<Void> associateWithIndicateur(@RequestBody IndicateurDimensionDto associationDto) {
-                dimensionService.associateWithIndicateur(associationDto.getIdDimension(),
-                                associationDto.getIdIndicateur());
-                return ResponseEntity.noContent().build();
-        }
+        // @Operation(summary = "Associate dimension with indicateur", responses = {
+        // @ApiResponse(responseCode = "204", description = "No content"),
+        // @ApiResponse(responseCode = "404", description = "Not found", content =
+        // @Content(mediaType = "ErrorResponse")),
+        // @ApiResponse(responseCode = "403", description = "Permission denied", content
+        // = @Content(mediaType = "ErrorResponse"))
+        // })
+        // @PostMapping("/associate")
+        // @PreAuthorize("hasAuthority('dimension:edit')")
+        // public ResponseEntity<Void> associateWithIndicateur(@RequestBody
+        // IndicateurDimensionDto associationDto) {
+        // dimensionService.associateWithIndicateur(associationDto.getIdDimension(),
+        // associationDto.getIdIndicateur());
+        // return ResponseEntity.noContent().build();
+        // }
 
-        @Operation(summary = "Dissociate dimension from indicateur", responses = {
-                        @ApiResponse(responseCode = "204", description = "No content"),
-                        @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "ErrorResponse")),
-                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
-        })
-        @DeleteMapping("/dissociate")
-        @PreAuthorize("hasAuthority('dimension:update')")
-        public ResponseEntity<Void> dissociateFromIndicateur(@RequestBody IndicateurDimensionDto associationDto) {
-                dimensionService.dissociateFromIndicateur(associationDto.getIdDimension(),
-                                associationDto.getIdIndicateur());
-                return ResponseEntity.noContent().build();
-        }
+        // @Operation(summary = "Dissociate dimension from indicateur", responses = {
+        // @ApiResponse(responseCode = "204", description = "No content"),
+        // @ApiResponse(responseCode = "404", description = "Not found", content =
+        // @Content(mediaType = "ErrorResponse")),
+        // @ApiResponse(responseCode = "403", description = "Permission denied", content
+        // = @Content(mediaType = "ErrorResponse"))
+        // })
+        // @DeleteMapping("/dissociate")
+        // @PreAuthorize("hasAuthority('dimension:edit')")
+        // public ResponseEntity<Void> dissociateFromIndicateur(@RequestBody
+        // IndicateurDimensionDto associationDto) {
+        // dimensionService.dissociateFromIndicateur(associationDto.getIdDimension(),
+        // associationDto.getIdIndicateur());
+        // return ResponseEntity.noContent().build();
+        // }
 
         @Override
         protected <DTO> DTO mapToDto(Dimension entity, Class<DTO> dtoClass) {

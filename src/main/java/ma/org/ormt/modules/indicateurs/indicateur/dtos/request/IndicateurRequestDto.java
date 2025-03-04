@@ -3,7 +3,6 @@ package ma.org.ormt.modules.indicateurs.indicateur.dtos.request;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,10 +25,11 @@ public class IndicateurRequestDto extends Dto {
     @NotBlank(message = "Ce champ est requis.")
     private String nom;
 
+    private String description;
+
     @NotBlank(message = "Ce champ est requis.")
     private String source;
 
-    @NotBlank(message = "Ce champ est requis.")
     private String regleCalcul;
 
     @NotBlank(message = "Ce champ est requis.")
@@ -38,9 +38,4 @@ public class IndicateurRequestDto extends Dto {
     @NotBlank(message = "Ce champ est requis.")
     private String typeTb;
 
-    @NotNull(message = "La périodicité est requise.")
-    private Long idPeriodicite;
-
-    @NotNull(message = "Le sous-domaine est requis.")
-    private Long idSousDomaine;
 }

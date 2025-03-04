@@ -11,7 +11,7 @@ import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 
 public interface DomaineService extends BaseService<Domaine> {
 
-    Optional<Domaine> findByTitre(String titre);
+    Optional<Domaine> findByNom(String nom);
 
     Page<Domaine> getEntityList(QueryParams requestParams);
 

@@ -20,4 +20,5 @@ public class DimensionSummaryDto extends Dto {
     private String type;
 
     private String libelle;
+
 }

@@ -41,7 +41,7 @@
             "required": false
           },
           {
-            "name": "decisionnel_ormt",
+            "name": "decideur_ormt",
             "required": false
           },
           {
@@ -58,7 +58,7 @@
             "required": false
           },
           {
-            "name": "decisionnel_ormt",
+            "name": "decideur_ormt",
             "required": false
           },
           {

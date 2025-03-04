@@ -1,14 +1,16 @@
 package ma.org.ormt.modules.domaines.sousdomaine.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,7 +30,7 @@ import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 @Table(name = "sous_domaine")
 public class SousDomaine extends BaseEntity {
 
-    private String titre;
+    private String nom;
 
     private String description;
 
@@ -36,7 +38,8 @@ public class SousDomaine extends BaseEntity {
     @JoinColumn(name = "id_domaine")
     private Domaine domaine;
 
-    @OneToMany(mappedBy = "sousDomaine", fetch = FetchType.LAZY)
-    private List<Indicateur> indicateurs;
+    @Builder.Default
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "sousDomaines")
+    private List<Indicateur> indicateurs = new ArrayList<>();
 
 }

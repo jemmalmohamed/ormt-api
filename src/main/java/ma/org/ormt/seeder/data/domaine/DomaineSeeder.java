@@ -9,9 +9,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -21,6 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.modules.domaines.domaine.dtos.request.DomaineRequestDto;
@@ -29,9 +27,15 @@ import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestDto;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
+import ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto;
+import ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto.IndicateurCreateRequestDto;
+import ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto.IndicateurCreateRequestDto.DimensionCreateRequestDto;
+import ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto.SousDomaineCreateRequestDto;
 import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
 import ma.org.ormt.modules.indicateurs.dimension.services.DimensionService;
+import ma.org.ormt.modules.indicateurs.indicateur.association.repository.IndicateurDimensionRepository;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurService;
 
 @Log4j2
@@ -39,8 +43,6 @@ import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurService;
 @Order(3)
 @RequiredArgsConstructor
 public class DomaineSeeder implements CommandLineRunner {
-
-    private static final int THREAD_POOL_SIZE = 4;
 
     @Value("${starter.database.seed}")
     private boolean seeding;
@@ -50,7 +52,7 @@ public class DomaineSeeder implements CommandLineRunner {
     private final IndicateurService indicateurService;
     private final DimensionService dimensionService;
     private final ObjectMapper objectMapper;
-    private final ExecutorService executorService = Executors.newFixedThreadPool(THREAD_POOL_SIZE);
+    private final IndicateurDimensionRepository indicateurDimensionRepository;
 
     @Override
     public void run(String... args) {
@@ -78,71 +80,46 @@ public class DomaineSeeder implements CommandLineRunner {
 
         } catch (Exception e) {
             log.error("Error during domain data seeding", e);
-        } finally {
-            executorService.shutdown();
         }
     }
 
     private void processJsonFiles(File[] files) {
-        CompletableFuture<?>[] futures = new CompletableFuture[files.length];
-        for (int i = 0; i < files.length; i++) {
-            final File file = files[i];
-            futures[i] = CompletableFuture.runAsync(() -> processJsonFile(file), executorService);
+        for (File file : files) {
+            processJsonFile(file);
         }
-        CompletableFuture.allOf(futures).join();
     }
 
     @Transactional
     private void processJsonFile(File file) {
         try (InputStream inputStream = Files.newInputStream(file.toPath())) {
             log.info("Processing file: {}", file.getName());
-            Domaine domaine = objectMapper.readValue(inputStream, Domaine.class);
-            createDomainWithRelations(domaine);
+            DomaineCreateRequestDto domaine = objectMapper.readValue(inputStream, DomaineCreateRequestDto.class);
 
-        } catch (IOException e) {
+            DomaineRequestDto requestDto = new DomaineRequestDto();
+            requestDto.setNom(domaine.getNom());
+            requestDto.setDescription(domaine.getDescription());
+            Domaine createdDomaine = domaineService.create(requestDto);
+
+            if (domaine.getSousDomaines() != null) {
+                for (SousDomaineCreateRequestDto sousDomaineRequest : domaine.getSousDomaines()) {
+                    SousDomaine newSousDomaine = createSousDomaine(sousDomaineRequest, createdDomaine);
+                    processIndicateurs(sousDomaineRequest.getIndicateurs(), newSousDomaine);
+                }
+            }
+        } catch (Exception e) {
             log.error("Error processing file {}: {}", file.getName(), e.getMessage());
         }
     }
 
-    private void createDomainWithRelations(Domaine domaine) {
-        try {
-            DomaineRequestDto requestDto = new DomaineRequestDto();
-            requestDto.setTitre(domaine.getTitre());
-            requestDto.setDescription(domaine.getDescription());
-            Domaine createdDomaine = domaineService.create(requestDto);
-
-            processSousDomaines(domaine.getSousDomaines(), createdDomaine);
-
-        } catch (Exception e) {
-            log.error("Error creating domain {}: {}", domaine.getTitre(), e.getMessage());
-        }
-    }
-
-    private void processSousDomaines(List<SousDomaine> sousDomaines, Domaine parentDomaine) {
-        if (sousDomaines == null || sousDomaines.isEmpty()) {
-            return;
-        }
-
-        sousDomaines.forEach(sousDomaineRequest -> {
-            try {
-                SousDomaine newSousDomaine = createSousDomaine(sousDomaineRequest, parentDomaine);
-                processIndicateurs(sousDomaineRequest.getIndicateurs(), newSousDomaine);
-            } catch (Exception e) {
-                log.error("Error processing sous-domaine {}: {}", sousDomaineRequest.getTitre(), e.getMessage());
-            }
-        });
-    }
-
-    private SousDomaine createSousDomaine(SousDomaine request, Domaine parentDomaine) {
+    private SousDomaine createSousDomaine(SousDomaineCreateRequestDto request, Domaine parentDomaine) {
         SousDomaineRequestDto requestDto = new SousDomaineRequestDto();
-        requestDto.setTitre(request.getTitre());
+        requestDto.setNom(request.getNom());
         requestDto.setDescription(request.getDescription());
-        requestDto.setIdDomaine(parentDomaine.getId());
 
-        return sousDomaineService.create(requestDto);
+        return sousDomaineService.create(parentDomaine.getId(), requestDto);
     }
 
-    private void processIndicateurs(List<Indicateur> indicateurs, SousDomaine parentSousDomaine) {
+    private void processIndicateurs(List<IndicateurCreateRequestDto> indicateurs, SousDomaine parentSousDomaine) {
         if (indicateurs == null || indicateurs.isEmpty()) {
             return;
         }
@@ -157,54 +134,71 @@ public class DomaineSeeder implements CommandLineRunner {
     }
 
     @Transactional
-    private void createIndicateur(Indicateur request, SousDomaine parentSousDomaine) {
+    private void createIndicateur(IndicateurCreateRequestDto indicateurRequest, SousDomaine parentSousDomaine) {
         try {
             Indicateur newIndicateur = new Indicateur();
-            newIndicateur.setNom(request.getNom());
-            newIndicateur.setDescription(request.getDescription());
-            newIndicateur.setAbreviation(request.getAbreviation());
-            newIndicateur.setTypeTb(request.getTypeTb());
-            newIndicateur.setUnite(request.getUnite());
-            newIndicateur.setSource(request.getSource());
-            newIndicateur.setRegleCalcul(request.getRegleCalcul());
-            newIndicateur.setCategorie(request.getCategorie());
-            newIndicateur.setSousDomaine(parentSousDomaine);
-            newIndicateur.setDimensions(new ArrayList<>());
+            newIndicateur.setNom(indicateurRequest.getNom());
+            newIndicateur.setDescription(indicateurRequest.getDescription());
+            newIndicateur.setAbreviation(indicateurRequest.getAbreviation());
+            newIndicateur.setTypeTb(indicateurRequest.getTypeTb());
+            newIndicateur.setUnite(indicateurRequest.getUnite());
+            newIndicateur.setSource(indicateurRequest.getSource());
+            newIndicateur.setRegleCalcul(indicateurRequest.getRegleCalcul());
+            newIndicateur.setCategorie(indicateurRequest.getCategorie());
 
-            // Save the indicateur first and flush to ensure it's in the database
+            newIndicateur.getSousDomaines().add(parentSousDomaine);
+
             Indicateur savedIndicateur = indicateurService.create(newIndicateur);
 
-            // Handle dimensions
-            if (request.getDimensions() != null && !request.getDimensions().isEmpty()) {
-                for (Dimension dimensionRequest : request.getDimensions()) {
+            if (indicateurRequest.getDimensions() != null) {
+                for (DimensionCreateRequestDto dimensionRequest : indicateurRequest.getDimensions()) {
                     try {
-                        // First try to find existing dimension
-                        Dimension dimension = dimensionService.findByNom(dimensionRequest.getNom())
-                                .orElseGet(() -> {
-                                    // Create and save new dimension if it doesn't exist
-                                    Dimension newDimension = new Dimension();
-                                    newDimension.setNom(dimensionRequest.getNom());
-                                    newDimension.setType(dimensionRequest.getType());
-                                    newDimension.setDescription(dimensionRequest.getDescription());
-                                    newDimension.setLibelle(dimensionRequest.getLibelle());
-                                    newDimension.setIndicateurs(new ArrayList<>());
-                                    return dimensionService.save(newDimension); // Use save instead of create
-                                });
-                        // Add bidirectional relationship
-                        dimension.getIndicateurs().add(savedIndicateur);
-                        // Save both entities
-                        dimensionService.save(dimension);
+                        handleDimensionInNewTransaction(dimensionRequest, savedIndicateur.getId());
                     } catch (Exception e) {
-                        log.error("Error handling dimension {}: {}", dimensionRequest.getNom(), e.getMessage());
-                        throw e; // Rethrow to rollback transaction
+                        log.error("Failed to add dimension {} to indicateur {}: {}",
+                                dimensionRequest.getNom(), savedIndicateur.getNom(), e.getMessage());
                     }
                 }
             }
 
-            log.info("Created indicateur: {} with dimensions", savedIndicateur.getNom());
+            log.info("Created indicateur: {}", savedIndicateur.getNom());
         } catch (Exception e) {
             log.error("Error in createIndicateur: {}", e.getMessage());
             throw new RuntimeException("Failed to create indicateur", e);
+        }
+    }
+
+    @Transactional()
+    private void handleDimensionInNewTransaction(DimensionCreateRequestDto dimensionRequest, Long indicateurId) {
+        try {
+            Indicateur indicateur = indicateurService.findById(indicateurId)
+                    .orElseThrow(() -> new RuntimeException("Indicateur not found"));
+
+            Dimension dimension = dimensionService.findByNom(dimensionRequest.getNom())
+                    .orElseGet(() -> {
+                        Dimension newDimension = new Dimension();
+                        newDimension.setNom(dimensionRequest.getNom());
+                        newDimension.setType(dimensionRequest.getType());
+                        newDimension.setDescription("");
+                        newDimension.setLibelle(dimensionRequest.getLibelle());
+
+                        return dimensionService.save(newDimension);
+                    });
+
+            indicateurService.save(indicateur);
+            boolean isPrincipale = dimensionRequest.getAssociation().getPrincipale();
+            boolean isTemporelle = dimensionRequest.getAssociation().getTemporelle();
+            IndicateurDimension indicateurDimension = new IndicateurDimension();
+            indicateurDimension.setIndicateur(indicateur);
+            indicateurDimension.setDimension(dimension);
+            indicateurDimension.setPrincipale(isPrincipale);
+            indicateurDimension.setTemporelle(isTemporelle);
+
+            indicateurDimensionRepository.save(indicateurDimension);
+
+        } catch (Exception e) {
+            log.error("Error handling dimension {}: {}", dimensionRequest.getNom(), e.getMessage());
+            throw e;
         }
     }
 }

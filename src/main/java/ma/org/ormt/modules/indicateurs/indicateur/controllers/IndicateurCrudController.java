@@ -1,7 +1,10 @@
 package ma.org.ormt.modules.indicateurs.indicateur.controllers;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -49,7 +52,7 @@ public class IndicateurCrudController extends BaseController<Indicateur> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PostMapping("")
-        @PreAuthorize("hasAuthority('indicateur:create')")
+        @PreAuthorize("hasAuthority('domaine:create')")
         public ResponseEntity<RestResponse<IndicateurDto>> createIndicateur(
                         @Validated(OnCreate.class) @RequestBody IndicateurRequestDto requestDto) {
                 Indicateur indicateur = indicateurService.create(requestDto);
@@ -63,7 +66,7 @@ public class IndicateurCrudController extends BaseController<Indicateur> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PutMapping("{id}")
-        @PreAuthorize("hasAuthority('indicateur:update')")
+        @PreAuthorize("hasAuthority('domaine:edit')")
         public ResponseEntity<RestResponse<IndicateurDto>> updateIndicateur(@PathVariable Long id,
                         @Validated(OnUpdate.class) @RequestBody IndicateurRequestDto indicateurRequestDto) {
                 Indicateur indicateur = indicateurService.update(id, indicateurRequestDto);
@@ -76,7 +79,7 @@ public class IndicateurCrudController extends BaseController<Indicateur> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/{id}")
-        @PreAuthorize("hasAuthority('indicateur:delete')")
+        @PreAuthorize("hasAuthority('domaine:delete')")
         public ResponseEntity<Void> deleteById(@PathVariable Long id) {
                 return handleDelete(() -> indicateurService.delete(id));
         }
@@ -87,9 +90,20 @@ public class IndicateurCrudController extends BaseController<Indicateur> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/bulk")
-        @PreAuthorize("hasAuthority('indicateur:delete')")
-        public ResponseEntity<Void> deleteMultiple(@RequestBody List<Long> ids) {
-                return handleDelete(() -> indicateurService.deleteAllById(ids));
+        @PreAuthorize("hasAuthority('domaine:delete')")
+        public ResponseEntity<Map<String, String>> deleteMultiple(@RequestBody List<Long> ids) {
+                try {
+                        indicateurService.deleteAllById(ids);
+                        return ResponseEntity.noContent().build();
+                } catch (DataIntegrityViolationException e) {
+                        // Handle foreign key constraint violation
+                        Map<String, String> response = new HashMap<>();
+                        response.put("message", "Suppression impossible, les données sont utilisées ailleurs");
+                        return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
+                } catch (Exception e) {
+                        // Handle other exceptions
+                        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+                }
         }
 
         @Operation(summary = "Delete all " + ENTITY_NAME + "s", responses = {
@@ -98,7 +112,7 @@ public class IndicateurCrudController extends BaseController<Indicateur> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/all")
-        @PreAuthorize("hasAuthority('indicateur:delete')")
+        @PreAuthorize("hasAuthority('domaine:delete')")
         public ResponseEntity<Void> deleteAll() {
                 return handleDelete(indicateurService::deleteAll);
         }
@@ -109,7 +123,7 @@ public class IndicateurCrudController extends BaseController<Indicateur> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/exclude")
-        @PreAuthorize("hasAuthority('indicateur:delete')")
+        @PreAuthorize("hasAuthority('domaine:delete')")
         public ResponseEntity<Void> deleteAllExcept(@RequestBody List<Long> ids) {
                 return handleDelete(() -> indicateurService.deleteAllExceptIds(ids));
         }
@@ -120,7 +134,7 @@ public class IndicateurCrudController extends BaseController<Indicateur> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/query")
-        @PreAuthorize("hasAuthority('indicateur:delete')")
+        @PreAuthorize("hasAuthority('domaine:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParams(
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
@@ -135,7 +149,7 @@ public class IndicateurCrudController extends BaseController<Indicateur> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/query-exclude")
-        @PreAuthorize("hasAuthority('indicateur:delete')")
+        @PreAuthorize("hasAuthority('domaine:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParamsExceptIds(
                         @RequestBody List<Long> ids,
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,

@@ -7,4 +7,5 @@ import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
 
 @Mapper
 public interface DimensionSummaryDtoMapper extends BaseDtoMapper<Dimension, DimensionSummaryDto> {
+
 }

@@ -151,6 +151,7 @@ public class DimensionServiceImpl extends BaseServiceImpl<Dimension> implements 
 
     private void updateFields(Dimension dimension, Dimension entityToUpdate) {
         dimension.setNom(entityToUpdate.getNom());
+        dimension.setLibelle(entityToUpdate.getLibelle());
         dimension.setType(entityToUpdate.getType());
         dimension.setDescription(entityToUpdate.getDescription());
     }

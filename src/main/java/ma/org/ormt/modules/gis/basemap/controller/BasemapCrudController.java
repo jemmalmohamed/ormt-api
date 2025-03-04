@@ -66,7 +66,7 @@ public class BasemapCrudController extends BaseController<Basemap> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PutMapping("{id}")
-        // //@PreAuthorize("hasAuthority('basemap:update')")
+        // //@PreAuthorize("hasAuthority('basemap:edit')")
         public ResponseEntity<RestResponse<BasemapDto>> updateBasemap(@PathVariable Long id,
                         @Validated(OnUpdate.class) @RequestBody BasemapRequestDto basemapRequestDto) {
                 Basemap basemap = basemapService.update(id, basemapRequestDto);

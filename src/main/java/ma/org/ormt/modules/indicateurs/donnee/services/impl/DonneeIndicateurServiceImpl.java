@@ -5,13 +5,20 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.persistence.criteria.Predicate;
 import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
 import ma.org.ormt.core.commun.base.service.SpecificationService;
+import ma.org.ormt.core.commun.base.specification.SpecificationAndPageable;
+import ma.org.ormt.core.commun.rest.queries.QueryParams;
 import ma.org.ormt.core.validators.ObjectsValidator;
+import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
+import ma.org.ormt.modules.indicateurs.dimension.services.DimensionService;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDtoMapper;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.request.DonneeIndicateurRequestDto;
@@ -22,8 +29,6 @@ import ma.org.ormt.modules.indicateurs.donnee.services.DonneeIndicateurService;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurService;
 import ma.org.ormt.modules.indicateurs.valeurdimension.dtos.request.ValeurDimensionRequestDto;
-import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
-import ma.org.ormt.modules.indicateurs.dimension.services.DimensionService;
 import ma.org.ormt.modules.indicateurs.valeurdimension.models.ValeurDimension;
 import ma.org.ormt.modules.indicateurs.valeurdimension.repositories.ValeurDimensionRepository;
 
@@ -38,25 +43,26 @@ public class DonneeIndicateurServiceImpl extends BaseServiceImpl<DonneeIndicateu
     private IndicateurService indicateurService;
 
     @Autowired
-    private ObjectsValidator<DonneeIndicateurRequestDto> validator;
+    private ValeurDimensionRepository valeurDimensionRepository;
 
-    @Autowired
-    private DonneeIndicateurRequestDtoMapper donneeIndicateurRequestMapper;
-    
     @Autowired
     private DonneeIndicateurDtoMapper donneeIndicateurDtoMapper;
 
     @Autowired
     private DimensionService dimensionService;
-    
+
     @Autowired
-    private ValeurDimensionRepository valeurDimensionRepository;
+    private ObjectsValidator<DonneeIndicateurRequestDto> validator;
 
-    private static final String NOT_FOUND_STRING = "DonneeIndicateur non trouvée";
+    @Autowired
+    private DonneeIndicateurRequestDtoMapper donneeIndicateurRequestMapper;
 
-    public DonneeIndicateurServiceImpl(DonneeIndicateurRepository donneeIndicateurRepository,
+    static final String NOT_FOUND_STRING = "DonneeIndicateur not found";
+    static final String INDICATEUR_NOT_FOUND = "Indicateur not found";
+
+    public DonneeIndicateurServiceImpl(DonneeIndicateurRepository donneeDonneeIndicateurRepository,
             SpecificationService specificationService) {
-        super(donneeIndicateurRepository, specificationService);
+        super(donneeDonneeIndicateurRepository, specificationService);
     }
 
     @Override
@@ -65,13 +71,46 @@ public class DonneeIndicateurServiceImpl extends BaseServiceImpl<DonneeIndicateu
     }
 
     @Override
-    public DonneeIndicateur save(DonneeIndicateur donneeIndicateur) {
-        return donneeIndicateurRepository.save(donneeIndicateur);
+    public Page<DonneeIndicateur> getEntityList(QueryParams requestParams) {
+
+        SpecificationAndPageable<DonneeIndicateur> result = getSpecificationAndPageable(requestParams,
+                DonneeIndicateur.class);
+
+        return findAll(result.getSpecification(), result.getPageable());
+    }
+
+    @Override
+    public Page<DonneeIndicateur> getEntityListByIndicateurId(Long indicateurId, QueryParams requestParams) {
+
+        SpecificationAndPageable<DonneeIndicateur> result = getSpecificationAndPageable(requestParams,
+                DonneeIndicateur.class);
+
+        Specification<DonneeIndicateur> indicateurSpec = (root, _, criteriaBuilder) -> {
+            Predicate indicateurPredicate = criteriaBuilder.equal(root.get("indicateur").get("id"), indicateurId);
+            return indicateurPredicate;
+        };
+
+        Specification<DonneeIndicateur> combinedSpec = addPredicateToSpecification(result.getSpecification(),
+                indicateurSpec);
+
+        return findAll(combinedSpec, result.getPageable());
+    }
+
+    @Override
+    public DonneeIndicateur create(Long indicateurId, DonneeIndicateurRequestDto requestDto) {
+        validator.validate(requestDto);
+        Indicateur indicateur = indicateurService.findById(
+                indicateurId)
+                .orElseThrow(() -> new EntityNotFoundException(INDICATEUR_NOT_FOUND));
+
+        DonneeIndicateur donneeDonneeIndicateurToCreate = donneeIndicateurRequestMapper.mapToEntity(requestDto);
+        donneeDonneeIndicateurToCreate.setIndicateur(indicateur);
+        return donneeIndicateurRepository.save(donneeDonneeIndicateurToCreate);
     }
 
     @Override
     @Transactional
-    public List<DonneeIndicateurDto> create(Long idIndicateur, List<DonneeIndicateurRequestDto> requestDto) {
+    public List<DonneeIndicateurDto> createByList(Long idIndicateur, List<DonneeIndicateurRequestDto> requestDto) {
         try {
             List<DonneeIndicateur> createdEntities = new ArrayList<>();
 
@@ -96,7 +135,7 @@ public class DonneeIndicateurServiceImpl extends BaseServiceImpl<DonneeIndicateu
                         valeurDimension.setDonneeIndicateur(donneeIndicateurToCreate);
                         return valeurDimension;
                     }).collect(Collectors.toList());
-                    
+
                     // Save ValeurDimension entities
                     dimensions.forEach(valeurDimensionRepository::save);
                     donneeIndicateurToCreate.setValeurDimensions(dimensions);
@@ -115,24 +154,28 @@ public class DonneeIndicateurServiceImpl extends BaseServiceImpl<DonneeIndicateu
 
     @Override
     public DonneeIndicateur update(Long id, DonneeIndicateurRequestDto requestDto) {
-        try {
-            validator.validate(requestDto);
-            DonneeIndicateur donneeIndicateurToUpdate = donneeIndicateurRequestMapper.mapToEntity(requestDto);
-            checkPathId(id, donneeIndicateurToUpdate.getId());
+        validator.validate(requestDto);
+        DonneeIndicateur donneeDonneeIndicateurToUpdate = donneeIndicateurRequestMapper.mapToEntity(requestDto);
+        checkPathId(id, donneeDonneeIndicateurToUpdate.getId());
 
-            DonneeIndicateur donneeIndicateur = donneeIndicateurRepository.findById(id)
-                    .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+        DonneeIndicateur donneeDonneeIndicateur = donneeIndicateurRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
 
-            updateFields(donneeIndicateur, donneeIndicateurToUpdate);
-            return donneeIndicateurRepository.save(donneeIndicateur);
-        } catch (Exception e) {
-            throw new IllegalArgumentException(
-                    "Erreur lors de la mise à jour de la donneeIndicateur: " + e.getMessage());
-        }
+        updateFields(donneeDonneeIndicateur, donneeDonneeIndicateurToUpdate);
+
+        return donneeIndicateurRepository.save(donneeDonneeIndicateur);
     }
 
-    private void updateFields(DonneeIndicateur donneeIndicateur, DonneeIndicateur entityToUpdate) {
-        donneeIndicateur.setValeur(entityToUpdate.getValeur());
+    @Override
+    public void validateBeforeDelete(Long id) {
+        validateDonneeIndicateurDependencies(id);
+    }
+
+    private void updateFields(DonneeIndicateur donneeDonneeIndicateur, DonneeIndicateur entityToUpdate) {
+        donneeDonneeIndicateur.setValeur(entityToUpdate.getValeur());
+    }
+
+    private void validateDonneeIndicateurDependencies(Long id) {
 
     }
 

@@ -17,7 +17,11 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import ma.org.ormt.core.commun.base.entity.BaseEntity;
 import ma.org.ormt.core.commun.base.repository.BaseRepository;
+import ma.org.ormt.core.commun.base.specification.SpecificationAndPageable;
+import ma.org.ormt.core.commun.rest.queries.QueryParams;
 import ma.org.ormt.core.commun.rest.responses.MessageResponse;
+import ma.org.ormt.core.utilities.EntityInspector;
+import ma.org.ormt.core.utilities.PaginationUtils;
 
 @MappedSuperclass
 @RequiredArgsConstructor
@@ -157,6 +161,33 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
         deleteAllById(ids);
 
         return ids;
+    }
+
+    public <E> SpecificationAndPageable<E> getSpecificationAndPageable(QueryParams requestParams,
+            Class<E> entityClass) {
+        if (requestParams.getPageSize() == -1) {
+            requestParams.setPageSize(Integer.MAX_VALUE);
+        }
+        Pageable pageable = PaginationUtils.createPageable(requestParams);
+        if (!EntityInspector.isFieldPresentInEntity(pageable.getSort().toString(), entityClass)) {
+            pageable = PaginationUtils.createPageable(requestParams);
+        }
+
+        Specification<E> specification = specificationService
+                .createSpecificationWithDynamicGlobalFilter(requestParams.getFilters(),
+                        requestParams.getGlobalFilter(), entityClass);
+
+        return new SpecificationAndPageable<>(specification, pageable);
+    }
+
+    public <E> Specification<E> addPredicateToSpecification(Specification<E> specification,
+            Specification<E> additionalSpec) {
+        if (specification == null) {
+            return additionalSpec;
+        }
+        return (root, query, criteriaBuilder) -> criteriaBuilder.and(
+                specification.toPredicate(root, query, criteriaBuilder),
+                additionalSpec.toPredicate(root, query, criteriaBuilder));
     }
 
     /**

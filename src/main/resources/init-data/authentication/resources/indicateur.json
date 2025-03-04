@@ -1,0 +1,72 @@
+[
+  {
+    "name": "indicateur",
+    "displayName": "Indicateur",
+    "uris": [
+      "/indicateurs/*"
+    ],
+    "scopes": [
+      {
+        "name": "edit",
+        "roles": [
+          {
+            "name": "admin_ormt",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "create",
+        "roles": [
+          {
+            "name": "admin_ormt",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "delete",
+        "roles": [
+          {
+            "name": "admin_ormt",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "read",
+        "roles": [
+          {
+            "name": "admin_ormt",
+            "required": false
+          },
+          {
+            "name": "decideur_ormt",
+            "required": false
+          },
+          {
+            "name": "public_ormt",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "list",
+        "roles": [
+          {
+            "name": "admin_ormt",
+            "required": false
+          },
+          {
+            "name": "decideur_ormt",
+            "required": false
+          },
+          {
+            "name": "public_ormt",
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -14,13 +14,13 @@
   {
     "username": "o.decision",
     "firstName": "ormt",
-    "lastName": "decisionnel",
+    "lastName": "decideur",
     "email": "",
     "emailVerified": true,
     "password": "ormt",
     "enabled": true,
     "clientRoles": [
-      "decisionnel_ormt"
+      "decideur_ormt"
     ]
   },
   {

@@ -17,7 +17,7 @@ import ma.org.ormt.core.commun.base.dto.Dto;
 @NoArgsConstructor
 public class DomaineSummaryDto extends Dto {
 
-    private String titre;
+    private String nom;
 
     private String description;
 }

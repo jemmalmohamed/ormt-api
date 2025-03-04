@@ -12,6 +12,8 @@ import jakarta.persistence.EntityNotFoundException;
 import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
 import ma.org.ormt.core.commun.base.service.SpecificationService;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
+import ma.org.ormt.core.commun.rest.responses.MessageResponse;
+import ma.org.ormt.core.exceptions.handlers.CannotDeleteException;
 import ma.org.ormt.core.utilities.EntityInspector;
 import ma.org.ormt.core.utilities.PaginationUtils;
 import ma.org.ormt.core.validators.ObjectsValidator;
@@ -49,8 +51,8 @@ public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements Doma
     }
 
     @Override
-    public Optional<Domaine> findByTitre(String titre) {
-        return domaineRepository.findByTitre(titre);
+    public Optional<Domaine> findByNom(String nom) {
+        return domaineRepository.findByNom(nom);
     }
 
     @Override
@@ -103,13 +105,26 @@ public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements Doma
     }
 
     private void updateFields(Domaine domaine, Domaine entityToUpdate) {
-        domaine.setTitre(entityToUpdate.getTitre());
+        domaine.setNom(entityToUpdate.getNom());
         domaine.setDescription(entityToUpdate.getDescription());
 
     }
 
     private void validateDomaineDependencies(Long id) {
+        Domaine domaine = domaineRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+        if (!domaine.getSousDomaines().isEmpty()) {
 
+            String message = MessageResponse.builder()
+                    .title("Suppression impossible ")
+                    .mainMessage("Impossible de supprimer le domaine  car il est associé aux sous domaines.")
+
+                    .build()
+                    .format();
+
+            throw new CannotDeleteException(message);
+
+        }
     }
 
 }

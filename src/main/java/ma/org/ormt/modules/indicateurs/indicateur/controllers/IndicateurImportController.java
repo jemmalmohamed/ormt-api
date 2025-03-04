@@ -115,14 +115,14 @@ public class IndicateurImportController {
                         @ApiResponse(responseCode = "400", description = "Bad request", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
-        @PostMapping(value = "{id}/donnee")
+        @PostMapping(value = "{indicateurId}/donnee")
         @PreAuthorize("hasAuthority('domaine:create')")
         public ResponseEntity<RestResponse<List<DonneeIndicateurDto>>> importDonneeFromOrginizedExcel(
-                        @PathVariable Long id,
+                        @PathVariable Long indicateurId,
                         @RequestBody List<DonneeIndicateurRequestDto> requestDtos) {
 
-                List<DonneeIndicateurDto> donneeIndicateurDtos = donneeIndicateurService.create(
-                                id, requestDtos);
+                List<DonneeIndicateurDto> donneeIndicateurDtos = donneeIndicateurService.createByList(indicateurId,
+                                requestDtos);
 
                 return ResponseEntity.ok(RestResponse.<List<DonneeIndicateurDto>>builder()
                                 .success(true)

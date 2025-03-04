@@ -15,8 +15,6 @@ import ma.org.ormt.core.commun.rest.queries.QueryParams;
 import ma.org.ormt.core.utilities.EntityInspector;
 import ma.org.ormt.core.utilities.PaginationUtils;
 import ma.org.ormt.core.validators.ObjectsValidator;
-import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
-import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.request.IndicateurRequestDto;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.request.IndicateurRequestDtoMapper;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
@@ -28,9 +26,6 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
 
     @Autowired
     private IndicateurRepository indicateurRepository;
-
-    @Autowired
-    private SousDomaineService sousDomaineService;
 
     @Autowired
     private ObjectsValidator<IndicateurRequestDto> validator;
@@ -75,11 +70,7 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
     public Indicateur create(IndicateurRequestDto requestDto) {
         validator.validate(requestDto);
 
-        SousDomaine sousDomaine = sousDomaineService.findById(requestDto.getIdSousDomaine())
-                .orElseThrow(() -> new EntityNotFoundException(SOUS_DOMAINE_NOT_FOUND));
-
         Indicateur indicateurToCreate = indicateurRequestMapper.mapToEntity(requestDto);
-        indicateurToCreate.setSousDomaine(sousDomaine);
 
         return indicateurRepository.save(indicateurToCreate);
     }
@@ -90,14 +81,10 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
         Indicateur indicateurToUpdate = indicateurRequestMapper.mapToEntity(requestDto);
         checkPathId(id, indicateurToUpdate.getId());
 
-        SousDomaine sousDomaine = sousDomaineService.findById(requestDto.getIdSousDomaine())
-                .orElseThrow(() -> new EntityNotFoundException(SOUS_DOMAINE_NOT_FOUND));
-
         Indicateur indicateur = indicateurRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
 
         updateFields(indicateur, indicateurToUpdate);
-        indicateur.setSousDomaine(sousDomaine);
 
         return indicateurRepository.save(indicateur);
     }

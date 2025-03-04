@@ -1,7 +1,10 @@
 package ma.org.ormt.modules.domaines.sousdomaine.controllers;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -32,7 +35,7 @@ import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
 
 @RestController
-@RequestMapping(value = "/api/v1/sousdomaines")
+@RequestMapping(value = "/api/v1/domaines")
 @RequiredArgsConstructor
 @Tag(name = "SousDomaine", description = "SousDomaine API")
 public class SousDomaineCrudController extends BaseController<SousDomaine> {
@@ -48,11 +51,12 @@ public class SousDomaineCrudController extends BaseController<SousDomaine> {
                         @ApiResponse(responseCode = "402", description = "Unprocessable entity", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
-        @PostMapping("")
-        @PreAuthorize("hasAuthority('sousdomaine:create')")
+        @PostMapping("{domaineId}/sous-domaines")
+        @PreAuthorize("hasAuthority('domaine:create')")
         public ResponseEntity<RestResponse<SousDomaineDto>> createSousDomaine(
+                        @PathVariable Long domaineId,
                         @Validated(OnCreate.class) @RequestBody SousDomaineRequestDto requestDto) {
-                SousDomaine sousDomaine = sousDomaineService.create(requestDto);
+                SousDomaine sousDomaine = sousDomaineService.create(domaineId, requestDto);
                 return buildResponseEntity(sousDomaine, SousDomaineDto.class, HttpStatus.CREATED);
 
         }
@@ -65,22 +69,27 @@ public class SousDomaineCrudController extends BaseController<SousDomaine> {
                         @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
-        @PutMapping("{id}")
-        @PreAuthorize("hasAuthority('sousdomaine:update')")
-        public ResponseEntity<RestResponse<SousDomaineDto>> updateSousDomaine(@PathVariable Long id,
+        @PutMapping("{domaineId}/sous-domaines/{id}")
+        @PreAuthorize("hasAuthority('domaine:edit')")
+        public ResponseEntity<RestResponse<SousDomaineDto>> updateSousDomaine(
+                        @PathVariable Long domaineId,
+                        @PathVariable Long id,
                         @Validated(OnUpdate.class) @RequestBody SousDomaineRequestDto sousDomaineRequestDto) {
                 SousDomaine sousDomaine = sousDomaineService.update(id, sousDomaineRequestDto);
                 return buildResponseEntity(sousDomaine, SousDomaineDto.class, HttpStatus.OK);
         }
+
+        // *********** DELETE OPERATIONS ***********
+        // **************************************** */
 
         @Operation(summary = "Delete " + ENTITY_NAME, responses = {
                         @ApiResponse(responseCode = "204", description = "No content"),
                         @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
-        @DeleteMapping("/{id}")
-        @PreAuthorize("hasAuthority('sousdomaine:delete')")
-        public ResponseEntity<Void> deleteById(@PathVariable Long id) {
+        @DeleteMapping("{domaineId}/sous-domaines/{id}")
+        @PreAuthorize("hasAuthority('domaine:delete')")
+        public ResponseEntity<Void> deleteById(@PathVariable Long domaineId, @PathVariable Long id) {
                 return handleDelete(() -> sousDomaineService.delete(id));
         }
 
@@ -89,10 +98,22 @@ public class SousDomaineCrudController extends BaseController<SousDomaine> {
                         @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
-        @DeleteMapping("/bulk")
-        @PreAuthorize("hasAuthority('sousdomaine:delete')")
-        public ResponseEntity<Void> deleteMultiple(@RequestBody List<Long> ids) {
-                return handleDelete(() -> sousDomaineService.deleteAllById(ids));
+        @DeleteMapping("{domaineId}/sous-domaines/bulk")
+        @PreAuthorize("hasAuthority('domaine:delete')")
+        public ResponseEntity<Map<String, String>> deleteMultiple(@PathVariable Long domaineId,
+                        @RequestBody List<Long> ids) {
+                try {
+                        sousDomaineService.deleteAllById(ids);
+                        return ResponseEntity.noContent().build();
+                } catch (DataIntegrityViolationException e) {
+                        // Handle foreign key constraint violation
+                        Map<String, String> response = new HashMap<>();
+                        response.put("message", "Suppression impossible, les données sont utilisées ailleurs");
+                        return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
+                } catch (Exception e) {
+                        // Handle other exceptions
+                        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+                }
         }
 
         @Operation(summary = "Delete all " + ENTITY_NAME + "s", responses = {
@@ -100,9 +121,9 @@ public class SousDomaineCrudController extends BaseController<SousDomaine> {
                         @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
-        @DeleteMapping("/all")
-        @PreAuthorize("hasAuthority('sousdomaine:delete')")
-        public ResponseEntity<Void> deleteAll() {
+        @DeleteMapping("{domaineId}/sous-domaines/all")
+        @PreAuthorize("hasAuthority('domaine:delete')")
+        public ResponseEntity<Void> deleteAll(@PathVariable Long domaineId) {
                 return handleDelete(sousDomaineService::deleteAll);
         }
 
@@ -111,9 +132,9 @@ public class SousDomaineCrudController extends BaseController<SousDomaine> {
                         @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
-        @DeleteMapping("/exclude")
-        @PreAuthorize("hasAuthority('sousdomaine:delete')")
-        public ResponseEntity<Void> deleteAllExcept(@RequestBody List<Long> ids) {
+        @DeleteMapping("{domaineId}/sous-domaines/exclude")
+        @PreAuthorize("hasAuthority('domaine:delete')")
+        public ResponseEntity<Void> deleteAllExcept(@PathVariable Long domaineId, @RequestBody List<Long> ids) {
                 return handleDelete(() -> sousDomaineService.deleteAllExceptIds(ids));
         }
 
@@ -122,9 +143,10 @@ public class SousDomaineCrudController extends BaseController<SousDomaine> {
                         @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
-        @DeleteMapping("/query")
-        @PreAuthorize("hasAuthority('sousdomaine:delete')")
+        @DeleteMapping("{domaineId}/sous-domaines/query")
+        @PreAuthorize("hasAuthority('domaine:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParams(
+                        @PathVariable Long domaineId,
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
@@ -139,9 +161,10 @@ public class SousDomaineCrudController extends BaseController<SousDomaine> {
                         @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
-        @DeleteMapping("/query-exclude")
-        @PreAuthorize("hasAuthority('sousdomaine:delete')")
+        @DeleteMapping("{domaineId}/sous-domaines/query-exclude")
+        @PreAuthorize("hasAuthority('domaine:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParamsExceptIds(
+                        @PathVariable Long domaineId,
                         @RequestBody List<Long> ids,
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {

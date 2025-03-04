@@ -50,7 +50,7 @@ public class IndicateurLoadController extends BaseController<Indicateur> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("")
-        @PreAuthorize("hasAuthority('indicateur:list')")
+        @PreAuthorize("hasAuthority('domaine:list')")
         public ResponseEntity<RestResponse<List<IndicateurDto>>> getIndicateurs(
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
                         @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,

@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS region (
 	status_code int4 NULL,
 	created_date timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	last_modified_date timestamptz NULL DEFAULT CURRENT_TIMESTAMP,
-	version int8 NULL,
+	version int8 NOT NULL DEFAULT 0,
 	created_by varchar(255) NULL,
 	last_modified_by varchar(255) NULL
 );
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS province (
 	status_code int4 NULL,
 	created_date timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	last_modified_date timestamptz NULL DEFAULT CURRENT_TIMESTAMP,
-	version int8 NULL,
+	version int8 NOT NULL DEFAULT 0,
 	created_by varchar(255) NULL,
 	last_modified_by varchar(255) NULL
 );
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS basemap (
 	status_code int4 NULL,
 	created_date timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	last_modified_date timestamptz NULL DEFAULT CURRENT_TIMESTAMP,
-	version int8 NULL,
+	version int8 NOT NULL DEFAULT 0,
 	created_by varchar(255) NULL,
 	last_modified_by varchar(255) NULL
 );  
