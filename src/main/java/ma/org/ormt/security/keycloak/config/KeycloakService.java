@@ -1,13 +1,18 @@
 package ma.org.ormt.security.keycloak.config;
 
+import java.util.Collections;
+
 import org.keycloak.OAuth2Constants;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.KeycloakBuilder;
+import org.keycloak.authorization.client.AuthzClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 
+@Log4j2
 @Service
 @RequiredArgsConstructor
 public class KeycloakService {
@@ -26,8 +31,10 @@ public class KeycloakService {
     @Value("${keycloak.admin.password}")
     private String adminPassword;
 
-    public Keycloak getKeyCloakAdminCli() {
+    @Value("${keycloak.secret}")
+    private String secret;
 
+    public Keycloak getKeyCloakAdminCli() {
         return KeycloakBuilder.builder()
                 .serverUrl(keycloakServerUrl)
                 .realm(adminRealm)
@@ -36,6 +43,22 @@ public class KeycloakService {
                 .username(adminUser)
                 .password(adminPassword)
                 .build();
+    }
+
+    public AuthzClient getAuthzClient() {
+        AuthzClient authzClient = AuthzClient.create(new org.keycloak.authorization.client.Configuration(
+                keycloakServerUrl,
+                "ormt",
+                "ormt-api",
+                Collections.singletonMap("secret", secret),
+                null));
+
+        try {
+            authzClient.obtainAccessToken();
+        } catch (Exception e) {
+            log.error("Error while creating authzClient", e);
+        }
+        return authzClient;
     }
 
 }

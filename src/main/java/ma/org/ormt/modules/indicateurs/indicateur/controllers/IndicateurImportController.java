@@ -1,7 +1,5 @@
 package ma.org.ormt.modules.indicateurs.indicateur.controllers;
 
-import java.util.List;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +21,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.core.commun.rest.responses.RestResponse;
 
-import ma.org.ormt.modules.indicateurs.donnee.services.DonneeIndicateurService;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.imports.ImportOrganizedRequest;
 import ma.org.ormt.modules.indicateurs.indicateur.helpers.ImportXlsResult;
 import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurImportService;
@@ -36,8 +33,6 @@ import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurImportServi
 public class IndicateurImportController {
 
         private final IndicateurImportService indicateurImportService;
-
-        private final DonneeIndicateurService donneeIndicateurService;
 
         @Operation(summary = "Import indicateurs from Excel file", responses = {
                         @ApiResponse(responseCode = "200", description = "Success", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ImportXlsResult.class))),

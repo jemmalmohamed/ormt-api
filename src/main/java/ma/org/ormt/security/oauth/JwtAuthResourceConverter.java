@@ -18,6 +18,7 @@ import org.springframework.security.oauth2.server.resource.authentication.JwtGra
 import org.springframework.stereotype.Component;
 
 import lombok.extern.log4j.Log4j2;
+import ma.org.ormt.security.keycloak.config.KeycloakService;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,8 +34,10 @@ public class JwtAuthResourceConverter implements Converter<Jwt, AbstractAuthenti
 
     private final JwtGrantedAuthoritiesConverter jwtGrantedAuthoritiesConverter = new JwtGrantedAuthoritiesConverter();
 
+    // @Autowired
+    // private AuthzClient authzClient;
     @Autowired
-    private AuthzClient authzClient;
+    private KeycloakService keycloakService;
 
     @Autowired
     private JwtDecoder jwtDecoder;
@@ -117,11 +120,10 @@ public class JwtAuthResourceConverter implements Converter<Jwt, AbstractAuthenti
 
     private Jwt getAuthorizeRequestRpt(Jwt accessToken) {
         try {
-            // AuthorizationRequest request = new AuthorizationRequest();
 
             String token = accessToken.getTokenValue();
 
-            AuthorizationResponse authResponse = authzClient.authorization(token).authorize();
+            AuthorizationResponse authResponse = keycloakService.getAuthzClient().authorization(token).authorize();
 
             String rpt = authResponse.getToken();
 

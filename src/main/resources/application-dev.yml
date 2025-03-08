@@ -6,8 +6,8 @@ starter:
     reset: true
     seed: true
   keycloak: 
-    reset: false
-    seed: false
+    reset: true
+    seed: true
   faker :
     seed : false
  
