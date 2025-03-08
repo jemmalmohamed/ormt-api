@@ -1,7 +1,5 @@
 package ma.org.ormt.security.oauth;
 
-import org.keycloak.authorization.client.AuthzClient;
-
 import org.keycloak.representations.idm.authorization.AuthorizationResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
