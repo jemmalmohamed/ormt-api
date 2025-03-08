@@ -44,7 +44,7 @@ def runKeycloakContainer() {
   }
 }
 // keycloak containers
-def pruneNextCloudContainers() {
+def pruneNextCloudContainer() {
   try {
     sh '''
       # Prune NextCloud containers
