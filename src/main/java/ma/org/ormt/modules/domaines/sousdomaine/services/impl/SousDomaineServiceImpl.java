@@ -1,6 +1,8 @@
 package ma.org.ormt.modules.domaines.sousdomaine.services.impl;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -9,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.persistence.criteria.Predicate;
+import jakarta.transaction.Transactional;
 import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
 import ma.org.ormt.core.commun.base.service.SpecificationService;
 import ma.org.ormt.core.commun.base.specification.SpecificationAndPageable;
@@ -21,12 +24,17 @@ import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestD
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.repositories.SousDomaineRepository;
 import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
+import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurService;
 
 @Service
 public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> implements SousDomaineService {
 
     @Autowired
     private SousDomaineRepository sousDomaineRepository;
+
+    @Autowired
+    private IndicateurService indicateurService;
 
     @Autowired
     private DomaineService domaineService;
@@ -100,6 +108,43 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
                 .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
 
         updateFields(sousDomaine, sousDomaineToUpdate);
+
+        return sousDomaineRepository.save(sousDomaine);
+    }
+
+    @Transactional
+    public SousDomaine associateIndicateurToSousDomaine(Long sousDomaineId, List<Long> indicateurIds) {
+        SousDomaine sousDomaine = findById(sousDomaineId)
+                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+
+        List<Indicateur> indicateurs = indicateurIds.stream()
+                .map(id -> indicateurService.findById(id)
+                        .orElseThrow(() -> new EntityNotFoundException("Indicateur not found with id: " + id)))
+                .collect(Collectors.toList());
+        for (Indicateur indicateur : indicateurs) {
+            sousDomaine.getIndicateurs().add(indicateur);
+            indicateur.getSousDomaines().add(sousDomaine);
+        }
+        // sousDomaine.getIndicateurs().addAll(indicateurs);
+        return sousDomaineRepository.save(sousDomaine);
+    }
+
+    @Transactional
+    public SousDomaine dissociateIndicateurFromSousDomaine(Long sousDomaineId, List<Long> indicateurIds) {
+        SousDomaine sousDomaine = findById(sousDomaineId)
+                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+
+        // Find all indicators that need to be dissociated
+        List<Indicateur> indicateursToRemove = sousDomaine.getIndicateurs()
+                .stream()
+                .filter(indicateur -> indicateurIds.contains(indicateur.getId()))
+                .collect(Collectors.toList());
+
+        // Update both sides of the relationship
+        for (Indicateur indicateur : indicateursToRemove) {
+            sousDomaine.getIndicateurs().remove(indicateur);
+            indicateur.getSousDomaines().remove(sousDomaine);
+        }
 
         return sousDomaineRepository.save(sousDomaine);
     }

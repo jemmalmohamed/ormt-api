@@ -1,7 +1,6 @@
 package ma.org.ormt.modules.indicateurs.donnee.services;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.data.domain.Page;
 
@@ -18,6 +17,8 @@ public interface DonneeIndicateurService extends BaseService<DonneeIndicateur> {
     Page<DonneeIndicateur> getEntityListByIndicateurId(Long indicateurId, QueryParams requestParams);
 
     DonneeIndicateur create(Long indicateurId, DonneeIndicateurRequestDto requestDto);
+
+    List<DonneeIndicateur> createBulk(Long indicateurId, List<DonneeIndicateurRequestDto> requestDtos);
 
     List<DonneeIndicateurDto> createByList(Long idIndicateur, List<DonneeIndicateurRequestDto> requestDto);
 

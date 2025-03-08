@@ -22,15 +22,14 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.core.commun.rest.responses.RestResponse;
-import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
-import ma.org.ormt.modules.indicateurs.donnee.dtos.request.DonneeIndicateurRequestDto;
+
 import ma.org.ormt.modules.indicateurs.donnee.services.DonneeIndicateurService;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.imports.ImportOrganizedRequest;
 import ma.org.ormt.modules.indicateurs.indicateur.helpers.ImportXlsResult;
 import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurImportService;
 
 @RestController
-@RequestMapping("/api/v1/indicateurs/import")
+@RequestMapping("/api/v1/indicateurs")
 @RequiredArgsConstructor
 @Log4j2
 @Tag(name = "Indicateur Import", description = "Indicateur Import API")
@@ -45,11 +44,12 @@ public class IndicateurImportController {
                         @ApiResponse(responseCode = "400", description = "Bad request", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
-        @PostMapping(value = "/excel", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+        @PostMapping(value = "{indicateurId}/import-excel", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
         @PreAuthorize("hasAuthority('domaine:create')")
         public ResponseEntity<RestResponse<ImportXlsResult>> importFromExcel(
+                        @PathVariable Long indicateurId,
                         @RequestParam("file") MultipartFile file,
-                        @RequestParam(value = "sheetName", required = false) String sheetName) {
+                        @RequestParam(value = "sheet", required = false) String sheetName) {
 
                 try {
                         if (file.isEmpty()) {
@@ -110,26 +110,32 @@ public class IndicateurImportController {
                                 .build());
         }
 
-        @Operation(summary = "Import organized indicateurs from User", responses = {
-                        @ApiResponse(responseCode = "200", description = "Success", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ImportXlsResult.class))),
-                        @ApiResponse(responseCode = "400", description = "Bad request", content = @Content(mediaType = "ErrorResponse")),
-                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
-        })
-        @PostMapping(value = "{indicateurId}/donnee")
-        @PreAuthorize("hasAuthority('domaine:create')")
-        public ResponseEntity<RestResponse<List<DonneeIndicateurDto>>> importDonneeFromOrginizedExcel(
-                        @PathVariable Long indicateurId,
-                        @RequestBody List<DonneeIndicateurRequestDto> requestDtos) {
+        // @Operation(summary = "Import organized indicateurs from User", responses = {
+        // @ApiResponse(responseCode = "200", description = "Success", content =
+        // @Content(mediaType = "application/json", schema = @Schema(implementation =
+        // ImportXlsResult.class))),
+        // @ApiResponse(responseCode = "400", description = "Bad request", content =
+        // @Content(mediaType = "ErrorResponse")),
+        // @ApiResponse(responseCode = "403", description = "Permission denied", content
+        // = @Content(mediaType = "ErrorResponse"))
+        // })
+        // @PostMapping(value = "{indicateurId}/donnee")
+        // @PreAuthorize("hasAuthority('domaine:create')")
+        // public ResponseEntity<RestResponse<List<DonneeIndicateurDto>>>
+        // importDonneeFromOrginizedExcel(
+        // @PathVariable Long indicateurId,
+        // @RequestBody List<DonneeIndicateurRequestDto> requestDtos) {
 
-                List<DonneeIndicateurDto> donneeIndicateurDtos = donneeIndicateurService.createByList(indicateurId,
-                                requestDtos);
+        // List<DonneeIndicateurDto> donneeIndicateurDtos =
+        // donneeIndicateurService.createByList(indicateurId,
+        // requestDtos);
 
-                return ResponseEntity.ok(RestResponse.<List<DonneeIndicateurDto>>builder()
-                                .success(true)
-                                .data(donneeIndicateurDtos)
-                                .message("Organized import completed successfully")
-                                .build());
-        }
+        // return ResponseEntity.ok(RestResponse.<List<DonneeIndicateurDto>>builder()
+        // .success(true)
+        // .data(donneeIndicateurDtos)
+        // .message("Organized import completed successfully")
+        // .build());
+        // }
 
         private boolean isExcelContentType(String contentType) {
                 return contentType != null && (contentType.equals("application/vnd.ms-excel") ||

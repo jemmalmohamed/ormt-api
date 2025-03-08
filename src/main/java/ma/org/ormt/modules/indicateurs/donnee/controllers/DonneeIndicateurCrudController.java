@@ -35,7 +35,7 @@ import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
 import ma.org.ormt.modules.indicateurs.donnee.services.DonneeIndicateurService;
 
 @RestController
-@RequestMapping(value = "/api/v1/indciateurs")
+@RequestMapping(value = "/api/v1/indicateurs")
 @RequiredArgsConstructor
 @Tag(name = "donnne", description = "donneeIndicateur API")
 public class DonneeIndicateurCrudController extends BaseController<DonneeIndicateur> {
@@ -52,13 +52,30 @@ public class DonneeIndicateurCrudController extends BaseController<DonneeIndicat
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PostMapping("{indicateurId}/donnees")
-        @PreAuthorize("hasAuthority('indicateur:create')")
+        @PreAuthorize("hasAuthority('domaine:create')")
         public ResponseEntity<RestResponse<DonneeIndicateurDto>> createDonneeIndicateur(
                         @PathVariable Long indicateurId,
                         @Validated(OnCreate.class) @RequestBody DonneeIndicateurRequestDto requestDto) {
                 DonneeIndicateur donneeIndicateur = donneeIndicateurService.create(indicateurId, requestDto);
                 return buildResponseEntity(donneeIndicateur, DonneeIndicateurDto.class, HttpStatus.CREATED);
 
+        }
+
+        @Operation(summary = "Create multiple " + ENTITY_NAME + "s", responses = {
+                        @ApiResponse(responseCode = "201", description = "Created", content = @Content(mediaType = "application/json", schema = @Schema(implementation = DonneeIndicateurDto.class))),
+                        @ApiResponse(responseCode = "402", description = "Unprocessable entity", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @PostMapping("{indicateurId}/donnees/bulk")
+        @PreAuthorize("hasAuthority('domaine:create')")
+        public ResponseEntity<RestResponse<List<DonneeIndicateurDto>>> createDonneeIndicateurList(
+                        @PathVariable Long indicateurId,
+                        @Validated(OnCreate.class) @RequestBody List<DonneeIndicateurRequestDto> requestDtos) {
+                List<DonneeIndicateur> donneeIndicateurs = donneeIndicateurService.createBulk(indicateurId,
+                                requestDtos);
+
+                return buildResponseEntity(donneeIndicateurs, DonneeIndicateurDto.class,
+                                HttpStatus.CREATED);
         }
 
         // *********** UPDATE OPERATIONS ***********
@@ -70,7 +87,7 @@ public class DonneeIndicateurCrudController extends BaseController<DonneeIndicat
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PutMapping("{indicateurId}/donnees/{id}")
-        @PreAuthorize("hasAuthority('indicateur:edit')")
+        @PreAuthorize("hasAuthority('domaine:edit')")
         public ResponseEntity<RestResponse<DonneeIndicateurDto>> updateDonneeIndicateur(
                         @PathVariable Long indicateurId,
                         @PathVariable Long id,
@@ -88,7 +105,7 @@ public class DonneeIndicateurCrudController extends BaseController<DonneeIndicat
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("{indicateurId}/donnees/{id}")
-        @PreAuthorize("hasAuthority('indicateur:delete')")
+        @PreAuthorize("hasAuthority('domaine:delete')")
         public ResponseEntity<Void> deleteById(@PathVariable Long indicateurId, @PathVariable Long id) {
                 return handleDelete(() -> donneeIndicateurService.delete(id));
         }
@@ -99,7 +116,7 @@ public class DonneeIndicateurCrudController extends BaseController<DonneeIndicat
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("{indicateurId}/donnees/bulk")
-        @PreAuthorize("hasAuthority('indicateur:delete')")
+        @PreAuthorize("hasAuthority('domaine:delete')")
         public ResponseEntity<Map<String, String>> deleteMultiple(@PathVariable Long indicateurId,
                         @RequestBody List<Long> ids) {
                 try {
@@ -122,7 +139,7 @@ public class DonneeIndicateurCrudController extends BaseController<DonneeIndicat
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("{indicateurId}/donnees/all")
-        @PreAuthorize("hasAuthority('indicateur:delete')")
+        @PreAuthorize("hasAuthority('domaine:delete')")
         public ResponseEntity<Void> deleteAll(@PathVariable Long indicateurId) {
                 return handleDelete(donneeIndicateurService::deleteAll);
         }
@@ -133,7 +150,7 @@ public class DonneeIndicateurCrudController extends BaseController<DonneeIndicat
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("{indicateurId}/donnees/exclude")
-        @PreAuthorize("hasAuthority('indicateur:delete')")
+        @PreAuthorize("hasAuthority('domaine:delete')")
         public ResponseEntity<Void> deleteAllExcept(@PathVariable Long indicateurId, @RequestBody List<Long> ids) {
                 return handleDelete(() -> donneeIndicateurService.deleteAllExceptIds(ids));
         }
@@ -144,7 +161,7 @@ public class DonneeIndicateurCrudController extends BaseController<DonneeIndicat
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("{indicateurId}/donnees/query")
-        @PreAuthorize("hasAuthority('indicateur:delete')")
+        @PreAuthorize("hasAuthority('domaine:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParams(
                         @PathVariable Long indicateurId,
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
@@ -162,7 +179,7 @@ public class DonneeIndicateurCrudController extends BaseController<DonneeIndicat
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("{indicateurId}/donnees/query-exclude")
-        @PreAuthorize("hasAuthority('indicateur:delete')")
+        @PreAuthorize("hasAuthority('domaine:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParamsExceptIds(
                         @PathVariable Long indicateurId,
                         @RequestBody List<Long> ids,

@@ -91,7 +91,17 @@ public class IndicateurImportServiceImpl implements IndicateurImportService {
                     if (DateUtil.isCellDateFormatted(cell)) {
                         return cell.getDateCellValue().toString();
                     }
-                    return String.valueOf(cell.getNumericCellValue());
+                    double value = cell.getNumericCellValue();
+                    // For numbers, follow Excel's display format (no decimals when possible)
+                    if (Math.abs(value - Math.round(value)) < 0.00000001) {
+                        // It's an integer equivalent, return without decimal part
+                        return String.valueOf((long) value);
+                    } else {
+                        // Use DataFormatter to get the formatted string as it would appear in Excel
+                        // This respects the actual cell formatting
+                        String formattedValue = new org.apache.poi.ss.usermodel.DataFormatter().formatCellValue(cell);
+                        return formattedValue;
+                    }
                 case BOOLEAN:
                     return String.valueOf(cell.getBooleanCellValue());
                 case FORMULA:

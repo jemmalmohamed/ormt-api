@@ -1,5 +1,6 @@
 package ma.org.ormt.modules.domaines.sousdomaine.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.domain.Page;
@@ -22,5 +23,9 @@ public interface SousDomaineService extends BaseService<SousDomaine> {
     SousDomaine update(Long id, SousDomaineRequestDto sousDomaineRequestDto);
 
     boolean existsById(Long id);
+
+    SousDomaine associateIndicateurToSousDomaine(Long sousDomaineId, List<Long> indicateurIds);
+
+    SousDomaine dissociateIndicateurFromSousDomaine(Long sousDomaineId, List<Long> indicateurIds);
 
 }

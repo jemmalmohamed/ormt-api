@@ -1,6 +1,7 @@
 package ma.org.ormt.core.commun.base.controller;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
@@ -23,6 +24,19 @@ public abstract class BaseController<T> {
         RestResponse<DTO> restResponse = RestResponse.<DTO>builder()
                 .status(status)
                 .data(dto)
+                .build();
+        return ResponseEntity.status(status).body(restResponse);
+    }
+
+    public <DTO> ResponseEntity<RestResponse<List<DTO>>> buildResponseEntity(List<T> entities, Class<DTO> dtoClass,
+            HttpStatus status) {
+        List<DTO> dtoList = entities.stream()
+                .map(entity -> mapToDto(entity, dtoClass))
+                .collect(Collectors.toList());
+
+        RestResponse<List<DTO>> restResponse = RestResponse.<List<DTO>>builder()
+                .status(status)
+                .data(dtoList)
                 .build();
         return ResponseEntity.status(status).body(restResponse);
     }

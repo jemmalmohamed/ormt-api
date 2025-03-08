@@ -10,6 +10,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.Dto;
+import ma.org.ormt.modules.indicateurs.dimension.dtos.DimensionDto;
 
 @Setter
 @Getter
@@ -26,5 +27,5 @@ public class ValeurDimensionRequestDto extends Dto {
     // private Long idDimension;
 
     @NotNull(message = "Le sous-domaine est requis.")
-    private String dimensionName;
+    private DimensionDto dimension;
 }

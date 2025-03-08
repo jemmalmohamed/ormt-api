@@ -50,7 +50,7 @@ public class DonneeIndicateurLoadController extends BaseController<DonneeIndicat
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{indicateurId}/donnees")
-        @PreAuthorize("hasAuthority('indicateur:list')")
+        @PreAuthorize("hasAuthority('domaine:list')")
         public ResponseEntity<RestResponse<List<DonneeIndicateurDto>>> getDonneeIndicateur(
                         @PathVariable("indicateurId") Long indicateurId,
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
@@ -83,7 +83,7 @@ public class DonneeIndicateurLoadController extends BaseController<DonneeIndicat
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{indicateurId}/donnees/{id}")
-        @PreAuthorize("hasAuthority('indicateur:read')")
+        @PreAuthorize("hasAuthority('domaine:read')")
         public ResponseEntity<RestResponse<DonneeIndicateurDetailsDto>> getDonneeIndicateur(
                         @PathVariable("indicateurId") Long indicateurId, @PathVariable("id") Long id) {
                 DonneeIndicateur donneeIndicateur = donneeIndicateurService.findById(id)

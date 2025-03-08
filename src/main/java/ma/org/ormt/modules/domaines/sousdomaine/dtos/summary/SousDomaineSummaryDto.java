@@ -19,6 +19,4 @@ public class SousDomaineSummaryDto extends Dto {
 
     private String nom;
 
-    private String description;
-
 }

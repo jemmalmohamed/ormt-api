@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.BaseDto;
 import ma.org.ormt.core.commun.base.dto.Dto;
+import ma.org.ormt.modules.domaines.sousdomaine.dtos.summary.SousDomaineSummaryDto;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
 import ma.org.ormt.modules.indicateurs.indicateur.association.dtos.IndicateurDimensionDto;
 
@@ -38,5 +39,5 @@ public class IndicateurDto extends BaseDto {
 
     private List<DonneeIndicateurDto> donnees;
 
-    private Dto sousDomaine;
+    private List<SousDomaineSummaryDto> sousDomaines;
 }

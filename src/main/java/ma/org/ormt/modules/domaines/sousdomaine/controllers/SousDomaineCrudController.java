@@ -33,6 +33,7 @@ import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDtoMapper;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestDto;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
+import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDto;
 
 @RestController
 @RequestMapping(value = "/api/v1/domaines")
@@ -76,6 +77,37 @@ public class SousDomaineCrudController extends BaseController<SousDomaine> {
                         @PathVariable Long id,
                         @Validated(OnUpdate.class) @RequestBody SousDomaineRequestDto sousDomaineRequestDto) {
                 SousDomaine sousDomaine = sousDomaineService.update(id, sousDomaineRequestDto);
+                return buildResponseEntity(sousDomaine, SousDomaineDto.class, HttpStatus.OK);
+        }
+
+        @Operation(summary = "attach indicateur " + ENTITY_NAME, responses = {
+                        @ApiResponse(responseCode = "200", description = "Success", content = @Content(mediaType = "application/json", schema = @Schema(implementation = IndicateurDto.class))),
+                        @ApiResponse(responseCode = "402", description = "Unprocessable entity", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @PostMapping("sous-domaines/{id}/attach-indicateurs")
+        @PreAuthorize("hasAuthority('domaine:edit')")
+        public ResponseEntity<RestResponse<SousDomaineDto>> associateDimensionToIndicateur(
+                        @PathVariable Long id,
+                        @Validated(OnCreate.class) @RequestBody List<Long> indicateurIds) {
+                SousDomaine sousDomaine = sousDomaineService
+                                .associateIndicateurToSousDomaine(id, indicateurIds);
+                return buildResponseEntity(sousDomaine, SousDomaineDto.class, HttpStatus.OK);
+        }
+
+        @Operation(summary = "detach indicateur " + ENTITY_NAME, responses = {
+                        @ApiResponse(responseCode = "200", description = "Success", content = @Content(mediaType = "application/json", schema = @Schema(implementation = IndicateurDto.class))),
+                        @ApiResponse(responseCode = "402", description = "Unprocessable entity", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @PostMapping("sous-domaines/{id}/detach-indicateurs")
+        @PreAuthorize("hasAuthority('domaine:edit')")
+        public ResponseEntity<RestResponse<SousDomaineDto>> dessociateDimensionToIndicateur(
+                        @PathVariable Long id,
+                        @Validated(OnCreate.class) @RequestBody List<Long> ids) {
+                SousDomaine sousDomaine = sousDomaineService.dissociateIndicateurFromSousDomaine(id, ids);
                 return buildResponseEntity(sousDomaine, SousDomaineDto.class, HttpStatus.OK);
         }
 
