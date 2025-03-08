@@ -17,7 +17,7 @@
 	<properties>
 		<java.version>23</java.version>
 		<org.mapstruct.version>1.6.3</org.mapstruct.version>
-		<org.projectlombok.version>1.18.30</org.projectlombok.version>
+		<org.projectlombok.version>1.18.36</org.projectlombok.version>
 		<org.geotools.version>31.2</org.geotools.version>
 		<org.flyway.version>9.20.0</org.flyway.version>
 		<org.keycloak.version>25.0.0</org.keycloak.version>
