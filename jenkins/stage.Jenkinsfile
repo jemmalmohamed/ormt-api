@@ -1,5 +1,4 @@
 
-
 // Define methods for common tasks
 def toolVerification() {
   try {
@@ -26,8 +25,8 @@ def pruneKeycloakContainers() {
       down -v
     '''
   } catch (Exception e) {
-     echo "Error in pruning Keycloak containers: ${e.getMessage()}"
-     throw e
+    echo "Error in pruning Keycloak containers: ${e.getMessage()}"
+    throw e
   }
 }
 def runKeycloakContainer() {
@@ -40,14 +39,39 @@ def runKeycloakContainer() {
       up -d
     '''
   } catch (Exception e) {
-     echo "Error in building Keycloak image: ${e.getMessage()}"
-     throw e
+    echo "Error in building Keycloak image: ${e.getMessage()}"
+    throw e
   }
 }
-
- 
- 
-
+// keycloak containers
+def pruneNextCloudContainers() {
+  try {
+    sh '''
+      # Prune NextCloud containers
+      docker compose --env-file ./docker/services/nextcloud/env/.env.stage \
+      -f ./docker/services/nextcloud/docker-compose.nextcloud.base.yml \
+      -f ./docker/services/nextcloud/docker-compose.nextcloud.stage.yml \
+      down -v
+    '''
+  } catch (Exception e) {
+    echo "Error in pruning nextcloud containers: ${e.getMessage()}"
+    throw e
+  }
+}
+def runNextCloudContainer() {
+  try {
+    sh '''
+      # Build nextcloud image
+      docker compose --env-file  ./docker/services/nextcloud/env/.env.stage \
+      -f ./docker/services/nextcloud/docker-compose.nextcloud.base.yml \
+      -f ./docker/services/nextcloud/docker-compose.nextcloud.stage.yml \
+      up -d
+    '''
+  } catch (Exception e) {
+    echo "Error in building nextcloud image: ${e.getMessage()}"
+    throw e
+  }
+}
 
 // api database containers
 def pruneApiDatabaseContainer() {
@@ -60,8 +84,8 @@ def pruneApiDatabaseContainer() {
       down -v
     '''
   } catch (Exception e) {
-     echo "Error in pruning API database containers: ${e.getMessage()}"
-     throw e
+    echo "Error in pruning API database containers: ${e.getMessage()}"
+    throw e
   }
 }
 
@@ -75,14 +99,14 @@ def runApiDatabaseContainer() {
       up -d
     '''
   } catch (Exception e) {
-     echo "Error in building API database image: ${e.getMessage()}"
-     throw e
+    echo "Error in building API database image: ${e.getMessage()}"
+    throw e
   }
 }
 
 // ormt api containers
 def pruneOrmtApiContainer() {
-  try { 
+  try {
     sh '''
       # Prune ormt-api containers
       docker compose --env-file  ./docker/app/env/.env.stage \
@@ -94,19 +118,19 @@ def pruneOrmtApiContainer() {
       docker rmi -f $IMAGE_TAG || true
      '''
   } catch (Exception e) {
-     echo "Error in pruning ormt-api containers: ${e.getMessage()}"
-     throw e
+    echo "Error in pruning ormt-api containers: ${e.getMessage()}"
+    throw e
   }
 }
 
 def buildOrmtApi() {
   try {
     sh '''
-     mvn clean install   
+     mvn clean install
     '''
   } catch (Exception e) {
-     echo "Error in building ormt-api image: ${e.getMessage()}"
-     throw e
+    echo "Error in building ormt-api image: ${e.getMessage()}"
+    throw e
   }
 }
 
@@ -117,8 +141,8 @@ def buildOrmtApiImage() {
        docker build -t  $IMAGE_TAG .
     '''
   } catch (Exception e) {
-     echo "Error in building ormt-api image: ${e.getMessage()}"
-     throw e
+    echo "Error in building ormt-api image: ${e.getMessage()}"
+    throw e
   }
 }
 
@@ -133,65 +157,73 @@ def runOrmtApiContainer() {
       up -d
     '''
   } catch (Exception e) {
-     echo "Error in runing ormt-api container: ${e.getMessage()}"
-     throw e
+    echo "Error in runing ormt-api container: ${e.getMessage()}"
+    throw e
   }
 }
 
 pipeline {
-  agent { node { label 'dev-host' } }  
+  agent { node { label 'dev-host' } }
   parameters {
-    
     booleanParam(name: 'prune_keycloak', defaultValue: false, description: 'Prune Keycloak containers individually')
     booleanParam(name: 'run_keycloak', defaultValue: false, description: 'Run Keycloak container individually')
+    booleanParam(name: 'prune_nextcloud', defaultValue: false, description: 'Prune nextcloud containers individually')
+    booleanParam(name: 'run_nextcloud', defaultValue: false, description: 'Run nextcloud container individually')
     booleanParam(name: 'prune_postgres', defaultValue: false, description: 'Prune Postgres container individually')
     booleanParam(name: 'run_postgres', defaultValue: false, description: 'Run Postgres container individually')
     booleanParam(name: 'prune_ormt_api', defaultValue: false, description: 'Prune ormt-api container before building and deploying')
     booleanParam(name: 'build_ormt_api', defaultValue: false, description: 'Build ormt-api before building and deploying')
     booleanParam(name: 'build_ormt_api_image', defaultValue: false, description: 'Build ormt-api image before building and deploying')
     booleanParam(name: 'run_ormt_api', defaultValue: false, description: 'Run ormt-api')
-    }
+  }
   tools {
-        maven 'maven' 
-    }
+        maven 'maven'
+  }
   environment {
         IMAGE_TAG = 'ormt/ormt-api:latest'
-    }
+  }
   stages {
-
-    
-    stage("Verify tooling"){
+    stage('Verify tooling') {
       when {  expression { params.verify_tooling }       }
-      steps{
+      steps {
           script {
             toolVerification()
           }
       }
     }
 
+    stage('Build and Deploy App Services') {
+        parallel {
+          stage('Build Keycloak containers') {
+          when {  expression {  params.prune_keycloak || params.run_keycloak  }  }
+          steps {
+            script {
+              if (params.prune_keycloak) {
+                pruneKeycloakContainers()
+              }
+              if (params.run_keycloak) {
+                runKeycloakContainer()
+              }
+            }
+          }
+          }
 
-    stage("Build and Deploy App Services") {
-      // when {  expression {  params.build_services  }  }
-       parallel{
-          stage("Build Keycloak containers"){
-           when {  expression {  params.prune_keycloak || params.run_keycloak  }  }
-           steps{
-             script {
-               if (params.prune_keycloak) {
-                 pruneKeycloakContainers()
-               }
-               if (params.run_keycloak) {
-                 runKeycloakContainer()
-               }
-             }
-      }
-    }
-
-     
-       
-        stage("Build Postgres container"){
+        stage('Build nexcloud container') {
+          when {  expression {  params.prune_nextcloud || params.run_nextcloud  }  }
+          steps {
+            script {
+              if (params.prune_nextcloud) {
+                pruneNextCloudContainer()
+              }
+              if (params.run_nextcloud) {
+                runNextCloudContainer()
+              }
+            }
+          }
+        }
+        stage('Build Postgres container') {
           when {  expression {  params.prune_postgres || params.run_postgres  }  }
-           steps{
+          steps {
             script {
               if (params.prune_postgres) {
                 pruneApiDatabaseContainer()
@@ -199,49 +231,46 @@ pipeline {
               if (params.run_postgres) {
                 runApiDatabaseContainer()
               }
+            }
+          }
         }
-      }
+        }
     }
-      }
-     }
 
-
-
-     // ormt api
-    stage("Prune ormt-api container"){
+    // ormt api
+    stage('Prune ormt-api container') {
       when {  expression {  params.prune_ormt_api  }  }
-      steps{
+      steps {
         script {
             pruneOrmtApiContainer()
         }
-       }
-     }
+      }
+    }
 
-      stage("Build ormt-api jar"){
+      stage('Build ormt-api jar') {
         when {  expression {  params.build_ormt_api  }  }
-        steps{
+        steps {
           script {
-              buildOrmtApi()  
+              buildOrmtApi()
           }
         }
       }
 
-      stage("Build ormt-api docker image"){
+      stage('Build ormt-api docker image') {
         when {  expression {  params.build_ormt_api_image  }  }
-        steps{
+        steps {
           script {
               buildOrmtApiImage()
           }
         }
       }
-      stage(" Run ormt-api container"){
+      stage(' Run ormt-api container') {
         when {  expression {  params.run_ormt_api  }  }
-        steps{
+        steps {
           script {
               runOrmtApiContainer()
           }
         }
       }
-      
   }
 }
