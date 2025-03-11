@@ -2,6 +2,7 @@
 CREATE TABLE IF NOT EXISTS domaine (
     id BIGSERIAL PRIMARY KEY,
     nom varchar(255) NOT NULL,
+    typeTb varchar(255) NOT NULL,
     description varchar(255) NULL,
     status_code int4 NULL,
     created_date timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,

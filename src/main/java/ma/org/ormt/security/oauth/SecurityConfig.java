@@ -42,6 +42,10 @@ public class SecurityConfig {
                         "/swagger-ui/**",
                         "/swagger-ui.html" };
 
+        private static final String[] PUBLIC_ENDPOINTS = {
+                        "/api/v1/public/**"
+        };
+
         @Bean
         public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
                 if (securityEnabled) {
@@ -50,11 +54,9 @@ public class SecurityConfig {
                                         .csrf(csrf -> csrf.disable())
                                         .authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
                                                         .requestMatchers(AUTH_SWAGGER_WHITELIST).permitAll()
+                                                        .requestMatchers(PUBLIC_ENDPOINTS).permitAll()
                                                         .anyRequest()
-                                                        // .requestMatchers("/admin/**")
                                                         .authenticated())
-                                        // .requestMatchers("/admin/**").authenticated()
-                                        // .anyRequest().permitAll())
                                         .oauth2ResourceServer(oauth2ResourceServer -> oauth2ResourceServer
                                                         .jwt(jwt -> jwt.jwtAuthenticationConverter(
                                                                         jwtAuthResourceConverter)))

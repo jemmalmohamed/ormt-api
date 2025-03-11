@@ -29,6 +29,8 @@ public class Domaine extends BaseEntity {
 
     private String description;
 
+    private String typeTb;
+
     @OneToMany(mappedBy = "domaine", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<SousDomaine> sousDomaines;
 

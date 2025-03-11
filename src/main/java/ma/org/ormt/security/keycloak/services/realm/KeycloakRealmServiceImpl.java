@@ -39,6 +39,7 @@ public class KeycloakRealmServiceImpl implements KeycloakRealmService {
         realmRepresentation.setEnabled(true);
         realmRepresentation.setLoginTheme(realmName);
         realmRepresentation.setEmailTheme(realmName);
+
         realmRepresentation.setAdminTheme(realmName);
         realmRepresentation.setAccountTheme(realmName);
 

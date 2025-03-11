@@ -1,7 +1,8 @@
 version: "3.9"
 services:
   ormt-database:
-    image: postgis/postgis:15-3.3-alpine
+    # image: postgis/postgis:15-3.3-alpine
+    image: postgres17.4
     container_name: ${ORMT_DATABASE_HOSTNAME}
     restart: always
     environment:
@@ -11,7 +12,7 @@ services:
     volumes:
       - "pgdata_ormt_api:/var/lib/postgresql/data"
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_API_USER}"]
+      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_API_USER}" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -20,6 +21,7 @@ services:
 
 volumes:
   pgdata_ormt_api:
+
 
 networks:
   proxy:
