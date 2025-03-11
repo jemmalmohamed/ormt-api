@@ -1,8 +1,7 @@
-version: "3.9"
 services:
   ormt-database:
     # image: postgis/postgis:15-3.3-alpine
-    image: postgres17.4
+    image: postgres:17.4
     container_name: ${ORMT_DATABASE_HOSTNAME}
     restart: always
     environment:
