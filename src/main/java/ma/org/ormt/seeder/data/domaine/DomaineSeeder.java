@@ -34,6 +34,25 @@ import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurService;
 
+/**
+ * DomaineSeeder is responsible for initializing domain data in the application.
+ * This seeder reads JSON files from a specified directory structure and creates
+ * the following hierarchy of entities:
+ * - Domaines (Domains)
+ * - Sous-Domaines (Sub-domains)
+ * - Indicateurs (Indicators)
+ * - Dimensions
+ *
+ * Directory structure expected:
+ * src/main/resources/init-data/domaines/
+ * ├── domain1/
+ * │ ├── domain.json
+ * │ └── sous-domaines/
+ * │ └── subdomain1/
+ * │ └── subdomain.json
+ * └── domain2/
+ * └── ...
+ */
 @Log4j2
 @Component
 @Order(3)
@@ -50,6 +69,15 @@ public class DomaineSeeder implements CommandLineRunner {
     private final ObjectMapper objectMapper;
     private final IndicateurDimensionRepository indicateurDimensionRepository;
 
+    private static final String INIT_DATA_PATH = "src/main/resources/init-data/domaines";
+    private static final String SOUS_DOMAINES_FOLDER = "sous-domaines";
+
+    /**
+     * Executes the domain data seeding process when the application starts.
+     * Only runs if seeding is enabled in the configuration.
+     *
+     * @param args Command line arguments (not used)
+     */
     @Override
     public void run(String... args) {
         if (!seeding) {
@@ -58,76 +86,206 @@ public class DomaineSeeder implements CommandLineRunner {
         }
 
         try {
-            Path resourcePath = Paths.get("src/main/resources/init-data/domaines");
+            Path resourcePath = Paths.get(INIT_DATA_PATH);
             if (!Files.exists(resourcePath)) {
                 log.warn("Resource path {} does not exist. Skipping domain data seeding.", resourcePath);
                 return;
             }
 
-            File[] jsonFiles = resourcePath.toFile().listFiles((_, name) -> name.toLowerCase().endsWith(".json"));
-            if (jsonFiles == null || jsonFiles.length == 0) {
-                log.warn("No JSON files found in {}. Skipping domain data seeding.", resourcePath);
-                return;
-            }
-
-            log.info("Starting domain data seeding with {} files...", jsonFiles.length);
-            processJsonFiles(jsonFiles);
+            processMainFolderDomains(resourcePath.toFile());
             log.info("Domain data seeding completed successfully.");
-
         } catch (Exception e) {
             log.error("Error during domain data seeding", e);
         }
     }
 
-    private void processJsonFiles(File[] files) {
-        for (File file : files) {
-            processJsonFile(file);
+    /**
+     * Processes the main domains folder and initiates the creation of domains.
+     *
+     * @param mainFolder The root folder containing domain data
+     */
+    private void processMainFolderDomains(File mainFolder) {
+        if (!validateFolder(mainFolder)) {
+            return;
+        }
+
+        try {
+            File[] domaineFolders = mainFolder.listFiles(File::isDirectory);
+            if (domaineFolders != null && domaineFolders.length > 0) {
+                log.info("Found {} domain folders in: {}", domaineFolders.length, mainFolder.getAbsolutePath());
+                for (File domaineFolder : domaineFolders) {
+                    processDomaineFolder(domaineFolder);
+                }
+            }
+        } catch (SecurityException e) {
+            log.error("Security error accessing folder {}: {}", mainFolder.getAbsolutePath(), e.getMessage(), e);
+        }
+    }
+
+    /**
+     * Validates if a folder exists and is actually a directory.
+     *
+     * @param folder The folder to validate
+     * @return true if the folder is valid, false otherwise
+     */
+    private boolean validateFolder(File folder) {
+        if (folder == null || !folder.exists()) {
+            log.error("Folder is null or does not exist");
+            return false;
+        }
+        if (!folder.isDirectory()) {
+            log.error("Specified path {} is not a directory", folder.getAbsolutePath());
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Processes a single domain folder, creating the domain and its sub-domains.
+     *
+     * @param folder The domain folder to process
+     */
+    private void processDomaineFolder(File folder) {
+        File[] jsonFiles = folder
+                .listFiles((dir, name) -> name.toLowerCase().endsWith(".json") && new File(dir, name).isFile());
+
+        if (jsonFiles != null && jsonFiles.length > 0) {
+            log.info("Found {} JSON files in folder: {}", jsonFiles.length, folder.getAbsolutePath());
+
+            for (File file : jsonFiles) {
+                try {
+                    Domaine newDomaine = createDomaineFromJsonFile(file);
+                    if (newDomaine != null) {
+                        processSousDomaineFolders(folder, newDomaine);
+                    }
+                } catch (Exception e) {
+                    log.error("Failed to process file {}: {}", file.getName(), e.getMessage(), e);
+                }
+            }
+        } else {
+            log.debug("No JSON files found in folder: {}", folder.getAbsolutePath());
         }
     }
 
     @Transactional
-    private void processJsonFile(File file) {
+    private Domaine createDomaineFromJsonFile(File file) {
+
         try (InputStream inputStream = Files.newInputStream(file.toPath())) {
-            log.info("Processing file: {}", file.getName());
+            log.info("Processing domain file: {}", file.getName());
             DomaineCreateRequestDto domaine = objectMapper.readValue(inputStream, DomaineCreateRequestDto.class);
 
             DomaineRequestDto requestDto = new DomaineRequestDto();
             requestDto.setNom(domaine.getNom());
             requestDto.setDescription(domaine.getDescription());
+            requestDto.setRole(domaine.getRole());
+            requestDto.setStatut(domaine.getStatut());
             Domaine createdDomaine = domaineService.create(requestDto);
 
-            if (domaine.getSousDomaines() != null) {
-                for (SousDomaineCreateRequestDto sousDomaineRequest : domaine.getSousDomaines()) {
-                    SousDomaine newSousDomaine = createSousDomaine(sousDomaineRequest, createdDomaine);
-                    processIndicateurs(sousDomaineRequest.getIndicateurs(), newSousDomaine);
+            // Store the created domain for later use with subfolders
+
+            log.info("Created domain: {}", createdDomaine.getNom());
+            return createdDomaine;
+
+        } catch (Exception e) {
+            log.error("Error processing domain file {}: {}", file.getName(), e.getMessage());
+        }
+        return null;
+    }
+
+    /**
+     * Processes the sous-domaines (sub-domains) folder for a given domain.
+     *
+     * @param domaineFolder The parent domain folder
+     * @param parentDomaine The parent domain entity
+     */
+    @Transactional
+    private void processSousDomaineFolders(File domaineFolder, Domaine parentDomaine) {
+        File specificSubfolder = new File(domaineFolder, SOUS_DOMAINES_FOLDER);
+        File[] sousDomaineFolders = specificSubfolder.listFiles(File::isDirectory);
+
+        if (sousDomaineFolders != null && sousDomaineFolders.length > 0) {
+            log.info("Processing {} sub-domains in domain: {}",
+                    sousDomaineFolders.length, parentDomaine.getNom());
+            for (File subFolder : sousDomaineFolders) {
+                processSousDomaineFolder(subFolder, parentDomaine);
+            }
+        }
+    }
+
+    private void processSousDomaineFolder(File folder, Domaine parentDomaine) {
+        File[] jsonFiles = folder.listFiles((dir, name) -> {
+            String lowerCaseName = name.toLowerCase();
+            return lowerCaseName.endsWith(".json") && new File(dir, name).isFile();
+        });
+
+        if (jsonFiles != null && jsonFiles.length > 0) {
+            log.info("Found {} JSON files in folder: {}",
+                    jsonFiles.length, folder.getAbsolutePath());
+
+            for (File file : jsonFiles) {
+                try {
+                    SousDomaine newSousDomaine = createSousDomaineFromJsonFile(file, parentDomaine);
+                    if (newSousDomaine != null) {
+                        // processSousDomaineFolders(folder, newDomaine);
+                    }
+                } catch (Exception e) {
+                    log.error("Failed to process file {}: {}",
+                            file.getName(), e.getMessage(), e);
                 }
             }
-        } catch (Exception e) {
-            log.error("Error processing file {}: {}", file.getName(), e.getMessage());
+        } else {
+            log.debug("No JSON files found in folder: {}",
+                    folder.getAbsolutePath());
         }
+    }
+
+    private SousDomaine createSousDomaineFromJsonFile(File file, Domaine parentDomaine) {
+        try (InputStream inputStream = Files.newInputStream(file.toPath())) {
+            log.info("Processing sous-domaine file: {}", file.getName());
+            SousDomaineCreateRequestDto souDomaineData = objectMapper.readValue(inputStream,
+                    SousDomaineCreateRequestDto.class);
+
+            SousDomaine newSousDomaine = createSousDomaine(souDomaineData, parentDomaine);
+            souDomaineData.getIndicateurs().forEach(indicateurRequest -> {
+                try {
+                    createIndicateur(indicateurRequest, newSousDomaine);
+                } catch (Exception e) {
+                    log.error("Error creating indicateur {}: {}", indicateurRequest.getNom(), e.getMessage());
+                }
+            });
+
+        } catch (Exception e) {
+            // log.error("Error processing sous-domaine file {}: {}", file.getName(),
+            // e.getMessage());
+        }
+        return null;
     }
 
     private SousDomaine createSousDomaine(SousDomaineCreateRequestDto request, Domaine parentDomaine) {
         SousDomaineRequestDto requestDto = new SousDomaineRequestDto();
         requestDto.setNom(request.getNom());
         requestDto.setDescription(request.getDescription());
+        requestDto.setRole(request.getRole());
+        requestDto.setStatut(request.getStatut());
 
         return sousDomaineService.create(parentDomaine.getId(), requestDto);
     }
 
-    private void processIndicateurs(List<IndicateurCreateRequestDto> indicateurs, SousDomaine parentSousDomaine) {
-        if (indicateurs == null || indicateurs.isEmpty()) {
-            return;
-        }
+    // private void processIndicateurs(List<IndicateurCreateRequestDto> indicateurs,
+    // SousDomaine parentSousDomaine) {
+    // if (indicateurs == null || indicateurs.isEmpty()) {
+    // return;
+    // }
 
-        indicateurs.forEach(indicateurRequest -> {
-            try {
-                createIndicateur(indicateurRequest, parentSousDomaine);
-            } catch (Exception e) {
-                log.error("Error creating indicateur {}: {}", indicateurRequest.getNom(), e.getMessage());
-            }
-        });
-    }
+    // indicateurs.forEach(indicateurRequest -> {
+    // try {
+    // createIndicateur(indicateurRequest, parentSousDomaine);
+    // } catch (Exception e) {
+    // log.error("Error creating indicateur {}: {}", indicateurRequest.getNom(),
+    // e.getMessage());
+    // }
+    // });
+    // }
 
     @Transactional
     private void createIndicateur(IndicateurCreateRequestDto indicateurRequest, SousDomaine parentSousDomaine) {
@@ -135,6 +293,8 @@ public class DomaineSeeder implements CommandLineRunner {
             Indicateur newIndicateur = new Indicateur();
             newIndicateur.setNom(indicateurRequest.getNom());
             newIndicateur.setDescription(indicateurRequest.getDescription());
+            newIndicateur.setRole(indicateurRequest.getRole());
+            newIndicateur.setStatut(indicateurRequest.getStatut());
             newIndicateur.setAbreviation(indicateurRequest.getAbreviation());
             newIndicateur.setTypeTb(indicateurRequest.getTypeTb());
             newIndicateur.setUnite(indicateurRequest.getUnite());
@@ -164,37 +324,64 @@ public class DomaineSeeder implements CommandLineRunner {
         }
     }
 
-    @Transactional()
+    /**
+     * Creates an indicator and its associated dimensions in a new transaction.
+     *
+     * @param dimensionRequest The dimension creation request
+     * @param indicateurId     The ID of the parent indicator
+     */
+    @Transactional
     private void handleDimensionInNewTransaction(DimensionCreateRequestDto dimensionRequest, Long indicateurId) {
         try {
             Indicateur indicateur = indicateurService.findById(indicateurId)
                     .orElseThrow(() -> new RuntimeException("Indicateur not found"));
 
-            Dimension dimension = dimensionService.findByNom(dimensionRequest.getNom())
-                    .orElseGet(() -> {
-                        Dimension newDimension = new Dimension();
-                        newDimension.setNom(dimensionRequest.getNom());
-                        newDimension.setType(dimensionRequest.getType());
-                        newDimension.setDescription("");
-                        newDimension.setLibelle(dimensionRequest.getLibelle());
-
-                        return dimensionService.save(newDimension);
-                    });
-
-            indicateurService.save(indicateur);
-            boolean isPrincipale = dimensionRequest.getAssociation().getPrincipale();
-            boolean isTemporelle = dimensionRequest.getAssociation().getTemporelle();
-            IndicateurDimension indicateurDimension = new IndicateurDimension();
-            indicateurDimension.setIndicateur(indicateur);
-            indicateurDimension.setDimension(dimension);
-            indicateurDimension.setPrincipale(isPrincipale);
-            indicateurDimension.setTemporelle(isTemporelle);
-
-            indicateurDimensionRepository.save(indicateurDimension);
+            Dimension dimension = getDimensionOrCreate(dimensionRequest);
+            createIndicateurDimensionAssociation(indicateur, dimension, dimensionRequest);
 
         } catch (Exception e) {
             log.error("Error handling dimension {}: {}", dimensionRequest.getNom(), e.getMessage());
             throw e;
         }
+    }
+
+    /**
+     * Gets an existing dimension or creates a new one if it doesn't exist.
+     *
+     * @param request The dimension creation request
+     * @return The found or created dimension
+     */
+    private Dimension getDimensionOrCreate(DimensionCreateRequestDto request) {
+        return dimensionService.findByNom(request.getNom())
+                .orElseGet(() -> {
+                    Dimension newDimension = new Dimension();
+                    newDimension.setNom(request.getNom());
+                    newDimension.setType(request.getType());
+                    newDimension.setDescription("");
+                    newDimension.setLibelle(request.getLibelle());
+                    return dimensionService.save(newDimension);
+                });
+    }
+
+    /**
+     * Creates the association between an indicator and a dimension.
+     *
+     * @param indicateur The indicator entity
+     * @param dimension  The dimension entity
+     * @param request    The dimension creation request containing association
+     *                   details
+     */
+    private void createIndicateurDimensionAssociation(
+            Indicateur indicateur,
+            Dimension dimension,
+            DimensionCreateRequestDto request) {
+
+        IndicateurDimension indicateurDimension = new IndicateurDimension();
+        indicateurDimension.setIndicateur(indicateur);
+        indicateurDimension.setDimension(dimension);
+        indicateurDimension.setPrincipale(request.getAssociation().getPrincipale());
+        indicateurDimension.setTemporelle(request.getAssociation().getTemporelle());
+
+        indicateurDimensionRepository.save(indicateurDimension);
     }
 }

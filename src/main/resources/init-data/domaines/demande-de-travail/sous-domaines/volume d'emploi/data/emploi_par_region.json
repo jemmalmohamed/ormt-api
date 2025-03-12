@@ -1,0 +1,390 @@
+{
+    "indicateur": "emploi par région",
+    "data": [
+        {
+            "region": "ensemble",
+            "annee": "2017",
+            "valeur": 10699
+        },
+        {
+            "region": "ensemble",
+            "annee": "2018",
+            "valeur": 10810
+        },
+        {
+            "region": "ensemble",
+            "annee": "2019",
+            "valeur": 10975
+        },
+        {
+            "region": "ensemble",
+            "annee": "2020",
+            "valeur": 10542
+        },
+        {
+            "region": "ensemble",
+            "annee": "2021",
+            "valeur": 10772
+        },
+        {
+            "region": "ensemble",
+            "annee": "2022",
+            "valeur": 10749
+        },
+        {
+            "region": "ensemble",
+            "annee": "2023",
+            "valeur": 10591
+        },
+        {
+            "region": "tanger-tétouan-al hoceima",
+            "annee": "2017",
+            "valeur": 1188
+        },
+        {
+            "region": "tanger-tétouan-al hoceima",
+            "annee": "2018",
+            "valeur": 1203
+        },
+        {
+            "region": "tanger-tétouan-al hoceima",
+            "annee": "2019",
+            "valeur": 1165
+        },
+        {
+            "region": "tanger-tétouan-al hoceima",
+            "annee": "2020",
+            "valeur": 1180
+        },
+        {
+            "region": "tanger-tétouan-al hoceima",
+            "annee": "2021",
+            "valeur": 1281
+        },
+        {
+            "region": "tanger-tétouan-al hoceima",
+            "annee": "2022",
+            "valeur": 1317
+        },
+        {
+            "region": "tanger-tétouan-al hoceima",
+            "annee": "2023",
+            "valeur": 1293
+        },
+        {
+            "region": "oriental",
+            "annee": "2017",
+            "valeur": 666
+        },
+        {
+            "region": "oriental",
+            "annee": "2018",
+            "valeur": 675
+        },
+        {
+            "region": "oriental",
+            "annee": "2019",
+            "valeur": 682
+        },
+        {
+            "region": "oriental",
+            "annee": "2020",
+            "valeur": 627
+        },
+        {
+            "region": "oriental",
+            "annee": "2021",
+            "valeur": 659
+        },
+        {
+            "region": "oriental",
+            "annee": "2022",
+            "valeur": 667
+        },
+        {
+            "region": "oriental",
+            "annee": "2023",
+            "valeur": 628
+        },
+        {
+            "region": "fès-meknès",
+            "annee": "2017",
+            "valeur": 1244
+        },
+        {
+            "region": "fès-meknès",
+            "annee": "2018",
+            "valeur": 1245
+        },
+        {
+            "region": "fès-meknès",
+            "annee": "2019",
+            "valeur": 1273
+        },
+        {
+            "region": "fès-meknès",
+            "annee": "2020",
+            "valeur": 1218
+        },
+        {
+            "region": "fès-meknès",
+            "annee": "2021",
+            "valeur": 1214
+        },
+        {
+            "region": "fès-meknès",
+            "annee": "2022",
+            "valeur": 1223
+        },
+        {
+            "region": "fès-meknès",
+            "annee": "2023",
+            "valeur": 1212
+        },
+        {
+            "region": "rabat-salé-kénitra",
+            "annee": "2017",
+            "valeur": 1440
+        },
+        {
+            "region": "rabat-salé-kénitra",
+            "annee": "2018",
+            "valeur": 1459
+        },
+        {
+            "region": "rabat-salé-kénitra",
+            "annee": "2019",
+            "valeur": 1466
+        },
+        {
+            "region": "rabat-salé-kénitra",
+            "annee": "2020",
+            "valeur": 1413
+        },
+        {
+            "region": "rabat-salé-kénitra",
+            "annee": "2021",
+            "valeur": 1441
+        },
+        {
+            "region": "rabat-salé-kénitra",
+            "annee": "2022",
+            "valeur": 1485
+        },
+        {
+            "region": "rabat-salé-kénitra",
+            "annee": "2023",
+            "valeur": 1485
+        },
+        {
+            "region": "béni mellal-khénifra",
+            "annee": "2017",
+            "valeur": 780
+        },
+        {
+            "region": "béni mellal-khénifra",
+            "annee": "2018",
+            "valeur": 767
+        },
+        {
+            "region": "béni mellal-khénifra",
+            "annee": "2019",
+            "valeur": 810
+        },
+        {
+            "region": "béni mellal-khénifra",
+            "annee": "2020",
+            "valeur": 772
+        },
+        {
+            "region": "béni mellal-khénifra",
+            "annee": "2021",
+            "valeur": 779
+        },
+        {
+            "region": "béni mellal-khénifra",
+            "annee": "2022",
+            "valeur": 739
+        },
+        {
+            "region": "béni mellal-khénifra",
+            "annee": "2023",
+            "valeur": 689
+        },
+        {
+            "region": "casablanca-settat",
+            "annee": "2017",
+            "valeur": 2397
+        },
+        {
+            "region": "casablanca-settat",
+            "annee": "2018",
+            "valeur": 2440
+        },
+        {
+            "region": "casablanca-settat",
+            "annee": "2019",
+            "valeur": 2486
+        },
+        {
+            "region": "casablanca-settat",
+            "annee": "2020",
+            "valeur": 2328
+        },
+        {
+            "region": "casablanca-settat",
+            "annee": "2021",
+            "valeur": 2329
+        },
+        {
+            "region": "casablanca-settat",
+            "annee": "2022",
+            "valeur": 2339
+        },
+        {
+            "region": "casablanca-settat",
+            "annee": "2023",
+            "valeur": 2314
+        },
+        {
+            "region": "marrakech-safi",
+            "annee": "2017",
+            "valeur": 1474
+        },
+        {
+            "region": "marrakech-safi",
+            "annee": "2018",
+            "valeur": 1500
+        },
+        {
+            "region": "marrakech-safi",
+            "annee": "2019",
+            "valeur": 1524
+        },
+        {
+            "region": "marrakech-safi",
+            "annee": "2020",
+            "valeur": 1499
+        },
+        {
+            "region": "marrakech-safi",
+            "annee": "2021",
+            "valeur": 1514
+        },
+        {
+            "region": "marrakech-safi",
+            "annee": "2022",
+            "valeur": 1488
+        },
+        {
+            "region": "marrakech-safi",
+            "annee": "2023",
+            "valeur": 1460
+        },
+        {
+            "region": "drâa-tafilalet",
+            "annee": "2017",
+            "valeur": 429
+        },
+        {
+            "region": "drâa-tafilalet",
+            "annee": "2018",
+            "valeur": 439
+        },
+        {
+            "region": "drâa-tafilalet",
+            "annee": "2019",
+            "valeur": 468
+        },
+        {
+            "region": "drâa-tafilalet",
+            "annee": "2020",
+            "valeur": 449
+        },
+        {
+            "region": "drâa-tafilalet",
+            "annee": "2021",
+            "valeur": 479
+        },
+        {
+            "region": "drâa-tafilalet",
+            "annee": "2022",
+            "valeur": 455
+        },
+        {
+            "region": "drâa-tafilalet",
+            "annee": "2023",
+            "valeur": 456
+        },
+        {
+            "region": "souss-massa",
+            "annee": "2017",
+            "valeur": 787
+        },
+        {
+            "region": "souss-massa",
+            "annee": "2018",
+            "valeur": 793
+        },
+        {
+            "region": "souss-massa",
+            "annee": "2019",
+            "valeur": 814
+        },
+        {
+            "region": "souss-massa",
+            "annee": "2020",
+            "valeur": 788
+        },
+        {
+            "region": "souss-massa",
+            "annee": "2021",
+            "valeur": 802
+        },
+        {
+            "region": "souss-massa",
+            "annee": "2022",
+            "valeur": 757
+        },
+        {
+            "region": "souss-massa",
+            "annee": "2023",
+            "valeur": 765
+        },
+        {
+            "region": "régions du sud",
+            "annee": "2017",
+            "valeur": 295
+        },
+        {
+            "region": "régions du sud",
+            "annee": "2018",
+            "valeur": 289
+        },
+        {
+            "region": "régions du sud",
+            "annee": "2019",
+            "valeur": 287
+        },
+        {
+            "region": "régions du sud",
+            "annee": "2020",
+            "valeur": 269
+        },
+        {
+            "region": "régions du sud",
+            "annee": "2021",
+            "valeur": 275
+        },
+        {
+            "region": "régions du sud",
+            "annee": "2022",
+            "valeur": 279
+        },
+        {
+            "region": "régions du sud",
+            "annee": "2023",
+            "valeur": 289
+        }
+    ]
+}

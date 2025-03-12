@@ -21,4 +21,6 @@ public class DomaineDto extends BaseDto {
 
     private String description;
 
+    private String role;
+
 }

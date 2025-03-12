@@ -1,0 +1,387 @@
+{
+  "nom": "salaires & productivité",
+  "description": "étude des salaires et de la productivité dans l'économie",
+  "role": "public",
+  "statut": "actif",
+  "indicateurs": [
+    {
+      "nom": "productivité par secteur d'activité",
+      "categorie": "economie",
+      "abreviation": "",
+      "typetb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "dh",
+      "periode": "2019-2024",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "valeur ajoutée par secteur d'activité",
+      "categorie": "economie",
+      "abreviation": "",
+      "typetb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "million dh",
+      "periode": "2019-2024",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "masse salariale par secteur d'activité",
+      "categorie": "economie",
+      "abreviation": "",
+      "typetb": "décisionnel / grand public",
+      "source": "cnss",
+      "reglecalcul": "",
+      "unite": "million dh",
+      "periode": "2019-2024",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "salaire moyen par secteur d'activité",
+      "categorie": "economie",
+      "abreviation": "",
+      "typetb": "décisionnel / grand public",
+      "source": "cnss",
+      "reglecalcul": "",
+      "unite": "dh",
+      "periode": "2019-2024",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "smig journalier",
+      "categorie": "economie",
+      "abreviation": "",
+      "typetb": "décisionnel",
+      "source": "miepeec",
+      "reglecalcul": "",
+      "unite": "dh",
+      "periode": "2019-2024",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "smag journalier",
+      "categorie": "economie",
+      "abreviation": "",
+      "typetb": "décisionnel",
+      "source": "miepeec",
+      "reglecalcul": "",
+      "unite": "dh",
+      "periode": "2019-2024",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "salaire moyen à l'année n par secteur d'activité",
+      "categorie": "economie",
+      "abreviation": "",
+      "typetb": "décisionnel",
+      "source": "cnss",
+      "reglecalcul": "",
+      "unite": "dh",
+      "periode": "a partir de 2023",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "salaire moyen n-10 par secteur d'activité",
+      "categorie": "economie",
+      "abreviation": "",
+      "typetb": "décisionnel",
+      "source": "cnss",
+      "reglecalcul": "",
+      "unite": "dh",
+      "periode": "a partir de 2024",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "variation productivité",
+      "categorie": "economie",
+      "abreviation": "",
+      "typetb": "décisionnel",
+      "source": "banque mondiale/fmi",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "a partir de 2023",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "variation valeur ajoutée",
+      "categorie": "economie",
+      "abreviation": "",
+      "typetb": "décisionnel",
+      "source": "banque mondiale/fmi",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "a partir de 2023",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "variation de la masse salariale en %",
+      "categorie": "economie",
+      "abreviation": "",
+      "typetb": "grand public",
+      "source": "cnss",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2023",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    }
+  ]
+}

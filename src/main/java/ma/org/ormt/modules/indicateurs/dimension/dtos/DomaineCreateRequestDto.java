@@ -9,13 +9,16 @@ import lombok.NoArgsConstructor;
 public class DomaineCreateRequestDto {
     private String nom;
     private String description;
-    private List<SousDomaineCreateRequestDto> sousDomaines;
+    private String role;
+    private String statut;
 
     @Data
     @NoArgsConstructor
     public static class SousDomaineCreateRequestDto {
         private String nom;
         private String description;
+        private String role;
+        private String statut;
         private List<IndicateurCreateRequestDto> indicateurs;
     }
 
@@ -24,12 +27,13 @@ public class DomaineCreateRequestDto {
     public static class IndicateurCreateRequestDto {
         private String nom;
         private String categorie;
+        private String role;
+        private String statut;
         private String abreviation;
         private String description;
         private String typeTb;
         private String source;
         private String regleCalcul;
-        private String periodicite;
         private String unite;
         private String periode;
         private List<DimensionCreateRequestDto> dimensions;

@@ -35,7 +35,6 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
 
     static final String NOT_FOUND_STRING = "Indicateur not found";
     static final String SOUS_DOMAINE_NOT_FOUND = "SousDomaine not found";
-    static final String PERIODICITE_NOT_FOUND = "Periodicite not found";
 
     public IndicateurServiceImpl(IndicateurRepository indicateurRepository, SpecificationService specificationService) {
         super(indicateurRepository, specificationService);

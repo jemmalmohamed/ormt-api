@@ -1,29 +1,49 @@
 -- Domaine
-CREATE TABLE IF NOT EXISTS domaine (
-    id BIGSERIAL PRIMARY KEY,
-    nom varchar(255) NOT NULL,
-    typeTb varchar(255) NOT NULL,
-    description varchar(255) NULL,
-    status_code int4 NULL,
-    created_date timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    last_modified_date timestamptz NULL DEFAULT CURRENT_TIMESTAMP,
-    version int8 NOT NULL DEFAULT 0,
-    created_by varchar(255) NULL,
-    last_modified_by varchar(255) NULL
-);
 
--- Sous domaine
+CREATE TABLE
+    IF NOT EXISTS espace (
+        id BIGSERIAL PRIMARY KEY,
+        nom CITEXT NOT NULL,
+        role varchar(255) NOT NULL,
+        statut varchar(255) NOT NULL,
+        description varchar(255) NULL,
+        status_code INT NULL,
+        created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+        version BIGINT NOT NULL DEFAULT 0,
+        created_by VARCHAR(50),
+        last_modified_by VARCHAR(50)
+    );
+
+
+CREATE TABLE
+    IF NOT EXISTS domaine (
+        id BIGSERIAL PRIMARY KEY,
+        nom CITEXT NOT NULL,
+        role varchar(255) NOT NULL,
+        statut varchar(255) NOT NULL,
+        description varchar(255) NULL,
+        status_code INT NULL,
+        created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+        version BIGINT NOT NULL DEFAULT 0,
+        created_by VARCHAR(50),
+        last_modified_by VARCHAR(50)
+    );
+
 CREATE TABLE IF NOT EXISTS sous_domaine (
     id BIGSERIAL PRIMARY KEY,
-    id_domaine BIGINT NOT NULL,
-    nom varchar(255) NOT NULL,
+    id_domaine BIGINT NOT NULL, 
+    nom CITEXT NOT NULL,
+    role varchar(255) NOT NULL,
+        statut varchar(255) NOT NULL,
     description varchar(255) NULL,
-    status_code int4 NULL,
-    created_date timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    last_modified_date timestamptz NULL DEFAULT CURRENT_TIMESTAMP,
-    version int8 NOT NULL DEFAULT 0,
-    created_by varchar(255) NULL,
-    last_modified_by varchar(255) NULL,
-    CONSTRAINT fk_sous_domaine_domaine FOREIGN KEY (id_domaine) REFERENCES domaine(id) ON DELETE CASCADE
+        status_code INT NULL,
+    created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+    version BIGINT NOT NULL DEFAULT 0,
+    created_by VARCHAR(50),
+    last_modified_by VARCHAR(50),
+    CONSTRAINT fk_sous_domaine_domaine FOREIGN KEY (id_domaine) 
+        REFERENCES domaine (id) ON DELETE CASCADE
 );
- 

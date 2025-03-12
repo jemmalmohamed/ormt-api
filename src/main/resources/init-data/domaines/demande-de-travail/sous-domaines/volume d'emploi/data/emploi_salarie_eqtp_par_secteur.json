@@ -1,0 +1,205 @@
+{
+    "indicateur": "emploi salarié eqtp par secteur d'activité",
+    "data": [
+        {
+            "secteur": "agriculture, forêt et pêche",
+            "annee": "2019",
+            "valeur": 223
+        },
+        {
+            "secteur": "agriculture, forêt et pêche",
+            "annee": "2020",
+            "valeur": 228
+        },
+        {
+            "secteur": "agriculture, forêt et pêche",
+            "annee": "2021",
+            "valeur": 262
+        },
+        {
+            "secteur": "agriculture, forêt et pêche",
+            "annee": "2022",
+            "valeur": 278
+        },
+        {
+            "secteur": "agriculture, forêt et pêche",
+            "annee": "2023",
+            "valeur": 294
+        },
+        {
+            "secteur": "industrie (y compris l'artisanat)",
+            "annee": "2019",
+            "valeur": 492
+        },
+        {
+            "secteur": "industrie (y compris l'artisanat)",
+            "annee": "2020",
+            "valeur": 449
+        },
+        {
+            "secteur": "industrie (y compris l'artisanat)",
+            "annee": "2021",
+            "valeur": 506
+        },
+        {
+            "secteur": "industrie (y compris l'artisanat)",
+            "annee": "2022",
+            "valeur": 524
+        },
+        {
+            "secteur": "industrie (y compris l'artisanat)",
+            "annee": "2023",
+            "valeur": 536
+        },
+        {
+            "secteur": "bâtiments et travaux publics",
+            "annee": "2019",
+            "valeur": 338
+        },
+        {
+            "secteur": "bâtiments et travaux publics",
+            "annee": "2020",
+            "valeur": 315
+        },
+        {
+            "secteur": "bâtiments et travaux publics",
+            "annee": "2021",
+            "valeur": 378
+        },
+        {
+            "secteur": "bâtiments et travaux publics",
+            "annee": "2022",
+            "valeur": 388
+        },
+        {
+            "secteur": "bâtiments et travaux publics",
+            "annee": "2023",
+            "valeur": 394
+        },
+        {
+            "secteur": "commerce",
+            "annee": "2019",
+            "valeur": 424
+        },
+        {
+            "secteur": "commerce",
+            "annee": "2020",
+            "valeur": 407
+        },
+        {
+            "secteur": "commerce",
+            "annee": "2021",
+            "valeur": 468
+        },
+        {
+            "secteur": "commerce",
+            "annee": "2022",
+            "valeur": 489
+        },
+        {
+            "secteur": "commerce",
+            "annee": "2023",
+            "valeur": 502
+        },
+        {
+            "secteur": "transport, entrepôts et communication",
+            "annee": "2019",
+            "valeur": 101
+        },
+        {
+            "secteur": "transport, entrepôts et communication",
+            "annee": "2020",
+            "valeur": 95
+        },
+        {
+            "secteur": "transport, entrepôts et communication",
+            "annee": "2021",
+            "valeur": 111
+        },
+        {
+            "secteur": "transport, entrepôts et communication",
+            "annee": "2022",
+            "valeur": 119
+        },
+        {
+            "secteur": "transport, entrepôts et communication",
+            "annee": "2023",
+            "valeur": 125
+        },
+        {
+            "secteur": "administration générale et services sociaux fournis à la collectivité",
+            "annee": "2019",
+            "valeur": 150
+        },
+        {
+            "secteur": "administration générale et services sociaux fournis à la collectivité",
+            "annee": "2020",
+            "valeur": 146
+        },
+        {
+            "secteur": "administration générale et services sociaux fournis à la collectivité",
+            "annee": "2021",
+            "valeur": 166
+        },
+        {
+            "secteur": "administration générale et services sociaux fournis à la collectivité",
+            "annee": "2022",
+            "valeur": 191
+        },
+        {
+            "secteur": "administration générale et services sociaux fournis à la collectivité",
+            "annee": "2023",
+            "valeur": 210
+        },
+        {
+            "secteur": "autres services",
+            "annee": "2019",
+            "valeur": 784
+        },
+        {
+            "secteur": "autres services",
+            "annee": "2020",
+            "valeur": 723
+        },
+        {
+            "secteur": "autres services",
+            "annee": "2021",
+            "valeur": 813
+        },
+        {
+            "secteur": "autres services",
+            "annee": "2022",
+            "valeur": 919
+        },
+        {
+            "secteur": "autres services",
+            "annee": "2023",
+            "valeur": 984
+        },
+        {
+            "secteur": "ensemble",
+            "annee": "2019",
+            "valeur": 2512
+        },
+        {
+            "secteur": "ensemble",
+            "annee": "2020",
+            "valeur": 2363
+        },
+        {
+            "secteur": "ensemble",
+            "annee": "2021",
+            "valeur": 2704
+        },
+        {
+            "secteur": "ensemble",
+            "annee": "2022",
+            "valeur": 2908
+        },
+        {
+            "secteur": "ensemble",
+            "annee": "2023",
+            "valeur": 3044
+        }
+    ]
+}

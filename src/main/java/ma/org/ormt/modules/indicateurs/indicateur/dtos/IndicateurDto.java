@@ -30,6 +30,8 @@ public class IndicateurDto extends BaseDto {
 
     private String regleCalcul;
 
+    private String role;
+
     private String unite;
 
     private String typeTb;

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.1</version>
-		<relativePath/>
+		<relativePath />
 	</parent>
 	<groupId>ma.gov.ormt</groupId>
 	<artifactId>ormt</artifactId>
@@ -19,7 +20,7 @@
 		<org.mapstruct.version>1.6.3</org.mapstruct.version>
 		<org.projectlombok.version>1.18.36</org.projectlombok.version>
 		<org.geotools.version>31.2</org.geotools.version>
-		<org.flyway.version>9.20.0</org.flyway.version>
+		<org.flyway.version>11.3.3</org.flyway.version>
 		<org.keycloak.version>26.0.4</org.keycloak.version>
 		<org.testcontainers.version>1.19.8</org.testcontainers.version>
 	</properties>
@@ -81,7 +82,11 @@
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-maven-plugin</artifactId>
+			<version>${org.flyway.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
@@ -155,38 +160,7 @@
 			<optional>true</optional>
 		</dependency>
 
-		<!-- GeoTools Dependencies -->
-		<dependency>
-			<groupId>org.geotools</groupId>
-			<artifactId>gt-main</artifactId>
-			<version>${org.geotools.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.geotools</groupId>
-			<artifactId>gt-shapefile</artifactId>
-			<version>${org.geotools.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.geotools</groupId>
-			<artifactId>gt-epsg-extension</artifactId>
-			<version>${org.geotools.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.geotools</groupId>
-			<artifactId>gt-referencing</artifactId>
-			<version>${org.geotools.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>net.sf.geographiclib</groupId>
-			<artifactId>GeographicLib-Java</artifactId>
-			<version>2.0</version>
-		</dependency>
 
-		<dependency>
-			<groupId>org.geotools</groupId>
-			<artifactId>gt-epsg-hsql</artifactId>
-			<version>${org.geotools.version}</version>
-		</dependency>
 		<!-- Other Dependencies -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -255,11 +229,11 @@
 					</excludes>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-maven-plugin</artifactId>
 				<version>${org.flyway.version}</version>
-			</plugin>
+			</plugin> -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>

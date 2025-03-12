@@ -18,7 +18,7 @@ public interface BaseRepository<T> extends JpaRepository<T, Long>, JpaSpecificat
     @Modifying
     @Transactional
     @Query("update #{#entityName} t SET t.statusCode = :statusCode WHERE t.id = :id")
-    void updateStatus(@Param("id") Long id, @Param("statusCode") Integer statusCode);
+    void updateStatusCode(@Param("id") Long id, @Param("statusCode") Integer statusCode);
 
     boolean existsById(@NonNull Long id);
 

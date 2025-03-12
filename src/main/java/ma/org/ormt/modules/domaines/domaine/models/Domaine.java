@@ -1,6 +1,7 @@
 package ma.org.ormt.modules.domaines.domaine.models;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
@@ -25,11 +26,14 @@ import java.util.List;
 @Table(name = "domaine")
 public class Domaine extends BaseEntity {
 
+    @Column(columnDefinition = "CITEXT")
     private String nom;
 
     private String description;
 
-    private String typeTb;
+    private String role;
+
+    private String statut;
 
     @OneToMany(mappedBy = "domaine", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<SousDomaine> sousDomaines;

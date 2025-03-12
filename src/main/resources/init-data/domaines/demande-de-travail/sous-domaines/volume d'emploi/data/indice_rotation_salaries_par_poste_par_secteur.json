@@ -1,0 +1,205 @@
+{
+    "indicateur": "indice de rotation de salariés par poste par secteur d'activité",
+    "data": [
+        {
+            "secteur": "agriculture, forêt et pêche",
+            "annee": "2019",
+            "valeur": 2
+        },
+        {
+            "secteur": "agriculture, forêt et pêche",
+            "annee": "2020",
+            "valeur": 2
+        },
+        {
+            "secteur": "agriculture, forêt et pêche",
+            "annee": "2021",
+            "valeur": 2
+        },
+        {
+            "secteur": "agriculture, forêt et pêche",
+            "annee": "2022",
+            "valeur": 2
+        },
+        {
+            "secteur": "agriculture, forêt et pêche",
+            "annee": "2023",
+            "valeur": 3
+        },
+        {
+            "secteur": "industrie (y compris l'artisanat)",
+            "annee": "2019",
+            "valeur": 1
+        },
+        {
+            "secteur": "industrie (y compris l'artisanat)",
+            "annee": "2020",
+            "valeur": 1
+        },
+        {
+            "secteur": "industrie (y compris l'artisanat)",
+            "annee": "2021",
+            "valeur": 1
+        },
+        {
+            "secteur": "industrie (y compris l'artisanat)",
+            "annee": "2022",
+            "valeur": 1
+        },
+        {
+            "secteur": "industrie (y compris l'artisanat)",
+            "annee": "2023",
+            "valeur": 1
+        },
+        {
+            "secteur": "bâtiments et travaux publics",
+            "annee": "2019",
+            "valeur": 2
+        },
+        {
+            "secteur": "bâtiments et travaux publics",
+            "annee": "2020",
+            "valeur": 2
+        },
+        {
+            "secteur": "bâtiments et travaux publics",
+            "annee": "2021",
+            "valeur": 2
+        },
+        {
+            "secteur": "bâtiments et travaux publics",
+            "annee": "2022",
+            "valeur": 2
+        },
+        {
+            "secteur": "bâtiments et travaux publics",
+            "annee": "2023",
+            "valeur": 2
+        },
+        {
+            "secteur": "commerce",
+            "annee": "2019",
+            "valeur": 1
+        },
+        {
+            "secteur": "commerce",
+            "annee": "2020",
+            "valeur": 1
+        },
+        {
+            "secteur": "commerce",
+            "annee": "2021",
+            "valeur": 1
+        },
+        {
+            "secteur": "commerce",
+            "annee": "2022",
+            "valeur": 1
+        },
+        {
+            "secteur": "commerce",
+            "annee": "2023",
+            "valeur": 1
+        },
+        {
+            "secteur": "transport, entrepôts et communication",
+            "annee": "2019",
+            "valeur": 1
+        },
+        {
+            "secteur": "transport, entrepôts et communication",
+            "annee": "2020",
+            "valeur": 1
+        },
+        {
+            "secteur": "transport, entrepôts et communication",
+            "annee": "2021",
+            "valeur": 1
+        },
+        {
+            "secteur": "transport, entrepôts et communication",
+            "annee": "2022",
+            "valeur": 1
+        },
+        {
+            "secteur": "transport, entrepôts et communication",
+            "annee": "2023",
+            "valeur": 1
+        },
+        {
+            "secteur": "administration générale et services sociaux fournis à la collectivité",
+            "annee": "2019",
+            "valeur": 3
+        },
+        {
+            "secteur": "administration générale et services sociaux fournis à la collectivité",
+            "annee": "2020",
+            "valeur": 3
+        },
+        {
+            "secteur": "administration générale et services sociaux fournis à la collectivité",
+            "annee": "2021",
+            "valeur": 3
+        },
+        {
+            "secteur": "administration générale et services sociaux fournis à la collectivité",
+            "annee": "2022",
+            "valeur": 3
+        },
+        {
+            "secteur": "administration générale et services sociaux fournis à la collectivité",
+            "annee": "2023",
+            "valeur": 3
+        },
+        {
+            "secteur": "autres services",
+            "annee": "2019",
+            "valeur": 4
+        },
+        {
+            "secteur": "autres services",
+            "annee": "2020",
+            "valeur": 5
+        },
+        {
+            "secteur": "autres services",
+            "annee": "2021",
+            "valeur": 5
+        },
+        {
+            "secteur": "autres services",
+            "annee": "2022",
+            "valeur": 5
+        },
+        {
+            "secteur": "autres services",
+            "annee": "2023",
+            "valeur": 4
+        },
+        {
+            "secteur": "ensemble",
+            "annee": "2019",
+            "valeur": 2
+        },
+        {
+            "secteur": "ensemble",
+            "annee": "2020",
+            "valeur": 2
+        },
+        {
+            "secteur": "ensemble",
+            "annee": "2021",
+            "valeur": 2
+        },
+        {
+            "secteur": "ensemble",
+            "annee": "2022",
+            "valeur": 2
+        },
+        {
+            "secteur": "ensemble",
+            "annee": "2023",
+            "valeur": 2
+        }
+    ]
+}

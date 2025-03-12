@@ -1,0 +1,332 @@
+{
+  "nom": "qualité de l'emploi",
+  "description": "étude des caractéristiques qualitatives du marché de l'emploi",
+  "role": "public",
+  "statut": "actif",
+  "indicateurs": [
+    {
+      "nom": "part de l'emploi informel par secteur d'activité",
+      "categorie": "emploi",
+      "abreviation": "",
+      "typetb": "décisionnel / grand public",
+      "source": "hcp-cnss",
+      "reglecalcul": "et-s-idp",
+      "unite": "pourcentage",
+      "periode": "2023",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité 7p",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "part de l'emploi rémunéré par secteur d'activité",
+      "categorie": "emploi",
+      "abreviation": "",
+      "typetb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2024",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité 7p",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "part des actifs occupés bénéficiant d'une couverture médicale",
+      "categorie": "emploi",
+      "abreviation": "",
+      "typetb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2024",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "part des salariés disposant d'un contrat de travail",
+      "categorie": "emploi",
+      "abreviation": "",
+      "typetb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2024",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "diplome",
+          "libelle": "diplôme",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "part de l'emploi de type occasionnel ou saisonnier",
+      "categorie": "emploi",
+      "abreviation": "",
+      "typetb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2024",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive)",
+      "categorie": "emploi",
+      "abreviation": "",
+      "typetb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2024",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle",
+      "categorie": "emploi",
+      "abreviation": "",
+      "typetb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2024",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "part des salariés touchant un salaire inférieur au smig par secteur d'activité- cnss",
+      "categorie": "emploi",
+      "abreviation": "",
+      "typetb": "décisionnel",
+      "source": "cnss",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2023",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité-cnss",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "salariés (stables) déclarés à la cnss par secteur d'activité-cnss",
+      "categorie": "emploi",
+      "abreviation": "",
+      "typetb": "grand public",
+      "source": "cnss",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2023",
+      "role": "public",
+      "statut": "actif",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité-cnss",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    }
+  ]
+}

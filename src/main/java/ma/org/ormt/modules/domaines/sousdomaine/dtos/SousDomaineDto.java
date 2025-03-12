@@ -25,6 +25,8 @@ public class SousDomaineDto extends BaseDto {
 
     private String description;
 
+    private String role;
+
     private List<IndicateurDto> indicateurs;
 
     private Dto domaine;

@@ -6,8 +6,8 @@ starter:
     reset: true
     seed: true
   keycloak: 
-    reset: true
-    seed: true
+    reset: false
+    seed: false
   faker :
     seed : false
  
@@ -23,7 +23,14 @@ spring:
       username: ormt
       password: ormt@database
  
- 
+flyway:
+  enabled: true
+  baseline-on-migrate: true
+  baseline-description: "Dev Database State"
+  locations: classpath:db/migration
+  validate-on-migrate: true
+  repair-on-validate: true
+  out-of-order: true
 
 
 keycloak:
