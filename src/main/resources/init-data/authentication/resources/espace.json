@@ -1,0 +1,72 @@
+[
+  {
+    "name": "espace",
+    "displayName": "Espace",
+    "uris": [
+      "/espaces/*"
+    ],
+    "scopes": [
+      {
+        "name": "edit",
+        "roles": [
+          {
+            "name": "role_admin",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "create",
+        "roles": [
+          {
+            "name": "role_admin",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "delete",
+        "roles": [
+          {
+            "name": "role_admin",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "read",
+        "roles": [
+          {
+            "name": "role_admin",
+            "required": false
+          },
+          {
+            "name": "role_decideur",
+            "required": false
+          },
+          {
+            "name": "role_public",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "list",
+        "roles": [
+          {
+            "name": "role_admin",
+            "required": false
+          },
+          {
+            "name": "role_decideur",
+            "required": false
+          },
+          {
+            "name": "role_public",
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+]

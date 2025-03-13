@@ -5,8 +5,8 @@
   "statut": "actif",
   "indicateurs": [
     {
-      "nom": "nbre d'entreprises",
-      "categorie": "economie",
+      "nom": "nombre d'entreprises",
+      "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
       "source": "cnss",
@@ -55,8 +55,8 @@
       ]
     },
     {
-      "nom": "nbre d'entreprises entrantes",
-      "categorie": "economie",
+      "nom": "nombre d'entreprises entrantes",
+      "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
       "source": "cnss",
@@ -105,8 +105,8 @@
       ]
     },
     {
-      "nom": "nbre d'entreprises sortantes",
-      "categorie": "economie",
+      "nom": "nombre d'entreprises sortantes",
+      "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
       "source": "cnss",
@@ -156,7 +156,7 @@
     },
     {
       "nom": "taux de survie des entreprises",
-      "categorie": "economie",
+      "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
       "source": "cnss",

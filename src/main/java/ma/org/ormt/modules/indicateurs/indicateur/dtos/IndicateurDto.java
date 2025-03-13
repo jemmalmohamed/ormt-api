@@ -33,6 +33,8 @@ public class IndicateurDto extends BaseDto {
 
     private String statut;
 
+    private String categorie;
+
     private String unite;
 
     private String typeTb;

@@ -6,7 +6,7 @@
   "indicateurs": [
     {
       "nom": "productivité par secteur d'activité",
-      "categorie": "economie",
+      "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
       "source": "hcp",
@@ -47,7 +47,7 @@
     },
     {
       "nom": "valeur ajoutée par secteur d'activité",
-      "categorie": "economie",
+      "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
       "source": "hcp",
@@ -88,7 +88,7 @@
     },
     {
       "nom": "masse salariale par secteur d'activité",
-      "categorie": "economie",
+      "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
       "source": "cnss",
@@ -129,7 +129,7 @@
     },
     {
       "nom": "salaire moyen par secteur d'activité",
-      "categorie": "economie",
+      "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
       "source": "cnss",
@@ -170,7 +170,7 @@
     },
     {
       "nom": "smig journalier",
-      "categorie": "economie",
+      "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel",
       "source": "miepeec",
@@ -193,7 +193,7 @@
     },
     {
       "nom": "smag journalier",
-      "categorie": "economie",
+      "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel",
       "source": "miepeec",
@@ -216,7 +216,7 @@
     },
     {
       "nom": "salaire moyen à l'année n par secteur d'activité",
-      "categorie": "economie",
+      "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel",
       "source": "cnss",
@@ -257,7 +257,7 @@
     },
     {
       "nom": "salaire moyen n-10 par secteur d'activité",
-      "categorie": "economie",
+      "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel",
       "source": "cnss",
@@ -298,7 +298,7 @@
     },
     {
       "nom": "variation productivité",
-      "categorie": "economie",
+      "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel",
       "source": "banque mondiale/fmi",
@@ -321,7 +321,7 @@
     },
     {
       "nom": "variation valeur ajoutée",
-      "categorie": "economie",
+      "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel",
       "source": "banque mondiale/fmi",
@@ -344,7 +344,7 @@
     },
     {
       "nom": "variation de la masse salariale en %",
-      "categorie": "economie",
+      "categorie": "économie",
       "abreviation": "",
       "typetb": "grand public",
       "source": "cnss",

@@ -34,7 +34,7 @@
     {
         "nom": "espace professionnels",
         "description": "professionnels et experts du marché",
-        "image": "/images/espaces/professionnels.jpg",
+        "image": "/images/espaces/academiciens.jpg",
         "apropos": "espace professionnels",
         "role": "role_public",
         "statut": "actif"

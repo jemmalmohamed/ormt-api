@@ -58,6 +58,7 @@ public class KeycloakAuthorizationResourceSetupRunner implements CommandLineRunn
         List<String> resources1 = Arrays.asList(
 
                 "domaine",
+                "espace",
                 "indicateur",
                 "dimension"
 

@@ -389,7 +389,7 @@
     },
     {
       "nom": "salariés déclarés à la cnss par secteur d'activité",
-      "categorie": "emploi",
+      "categorie": "salariés",
       "abreviation": "",
       "role": "role_public",
       "statut": "actif",
@@ -430,7 +430,7 @@
     },
     {
       "nom": "salariés déclarés à la cnss par région",
-      "categorie": "emploi",
+      "categorie": "salariés",
       "abreviation": "",
       "role": "role_public",
       "statut": "actif",
@@ -462,7 +462,7 @@
     },
     {
       "nom": "emploi salarié eqyp par secteur d'activité",
-      "categorie": "emploi",
+      "categorie": "salariés",
       "abreviation": "",
       "role": "role_public",
       "statut": "actif",
@@ -494,7 +494,7 @@
     },
     {
       "nom": "nombre de déclaration cnss par secteur d'activité",
-      "categorie": "emploi",
+      "categorie": "salariés",
       "abreviation": "",
       "typetb": "décisionnel",
       "source": "cnss",
@@ -526,7 +526,7 @@
     },
     {
       "nom": "indice de rotation de salariés par poste par secteur d'activité",
-      "categorie": "emploi",
+      "categorie": "salariés",
       "abreviation": "",
       "typetb": "décisionnel",
       "role": "role_public",
@@ -590,7 +590,7 @@
     },
     {
       "nom": "salarié public par secteur",
-      "categorie": "emploi",
+      "categorie": "salariés",
       "abreviation": "",
       "role": "role_public",
       "statut": "actif",

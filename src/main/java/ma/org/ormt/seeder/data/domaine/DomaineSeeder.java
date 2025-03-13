@@ -282,6 +282,7 @@ public class DomaineSeeder implements CommandLineRunner {
             newIndicateur.setDescription(indicateurRequest.getDescription());
             newIndicateur.setRole(indicateurRequest.getRole());
             newIndicateur.setStatut(indicateurRequest.getStatut());
+            newIndicateur.setCategorie(indicateurRequest.getCategorie());
             newIndicateur.setAbreviation(indicateurRequest.getAbreviation());
             newIndicateur.setTypeTb(indicateurRequest.getTypeTb());
             newIndicateur.setUnite(indicateurRequest.getUnite());
