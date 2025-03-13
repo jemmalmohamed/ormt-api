@@ -97,7 +97,7 @@ public class EspaceSeeder implements CommandLineRunner {
     private void createEspacesFromJsonFile(File file) {
 
         try (InputStream inputStream = Files.newInputStream(file.toPath())) {
-            log.info("Processing domain file: {}", file.getName());
+            log.info("Processing espaces file: {}", file.getName());
             List<EspaceRequestDto> espaceList = objectMapper.readValue(inputStream,
                     new TypeReference<List<EspaceRequestDto>>() {
                     });
@@ -107,7 +107,7 @@ public class EspaceSeeder implements CommandLineRunner {
             espaceList.forEach(this::createEspace);
 
         } catch (Exception e) {
-            log.error("Error processing domain file {}: {}", file.getName(), e.getMessage());
+            log.error("Error processing espaces file {}: {}", file.getName(), e.getMessage());
         }
     }
 

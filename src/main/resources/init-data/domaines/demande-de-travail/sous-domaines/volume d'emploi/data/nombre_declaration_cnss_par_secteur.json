@@ -2,202 +2,202 @@
     "indicateur": "nombre de déclaration cnss par secteur d'activité",
     "data": [
         {
-            "secteur": "agriculture, forêt et pêche",
+            "secteur_activite": "agriculture, forêt et pêche",
             "annee": "2019",
             "valeur": 509
         },
         {
-            "secteur": "agriculture, forêt et pêche",
+            "secteur_activite": "agriculture, forêt et pêche",
             "annee": "2020",
             "valeur": 516
         },
         {
-            "secteur": "agriculture, forêt et pêche",
+            "secteur_activite": "agriculture, forêt et pêche",
             "annee": "2021",
             "valeur": 617
         },
         {
-            "secteur": "agriculture, forêt et pêche",
+            "secteur_activite": "agriculture, forêt et pêche",
             "annee": "2022",
             "valeur": 680
         },
         {
-            "secteur": "agriculture, forêt et pêche",
+            "secteur_activite": "agriculture, forêt et pêche",
             "annee": "2023",
             "valeur": 762
         },
         {
-            "secteur": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l'artisanat)",
             "annee": "2019",
             "valeur": 661
         },
         {
-            "secteur": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l'artisanat)",
             "annee": "2020",
             "valeur": 644
         },
         {
-            "secteur": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l'artisanat)",
             "annee": "2021",
             "valeur": 673
         },
         {
-            "secteur": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l'artisanat)",
             "annee": "2022",
             "valeur": 699
         },
         {
-            "secteur": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l'artisanat)",
             "annee": "2023",
             "valeur": 713
         },
         {
-            "secteur": "bâtiments et travaux publics",
+            "secteur_activite": "bâtiments et travaux publics",
             "annee": "2019",
             "valeur": 537
         },
         {
-            "secteur": "bâtiments et travaux publics",
+            "secteur_activite": "bâtiments et travaux publics",
             "annee": "2020",
             "valeur": 544
         },
         {
-            "secteur": "bâtiments et travaux publics",
+            "secteur_activite": "bâtiments et travaux publics",
             "annee": "2021",
             "valeur": 600
         },
         {
-            "secteur": "bâtiments et travaux publics",
+            "secteur_activite": "bâtiments et travaux publics",
             "annee": "2022",
             "valeur": 613
         },
         {
-            "secteur": "bâtiments et travaux publics",
+            "secteur_activite": "bâtiments et travaux publics",
             "annee": "2023",
             "valeur": 628
         },
         {
-            "secteur": "commerce",
+            "secteur_activite": "commerce",
             "annee": "2019",
             "valeur": 571
         },
         {
-            "secteur": "commerce",
+            "secteur_activite": "commerce",
             "annee": "2020",
             "valeur": 580
         },
         {
-            "secteur": "commerce",
+            "secteur_activite": "commerce",
             "annee": "2021",
             "valeur": 627
         },
         {
-            "secteur": "commerce",
+            "secteur_activite": "commerce",
             "annee": "2022",
             "valeur": 654
         },
         {
-            "secteur": "commerce",
+            "secteur_activite": "commerce",
             "annee": "2023",
             "valeur": 673
         },
         {
-            "secteur": "transport, entrepôts et communication",
+            "secteur_activite": "transport, entrepôts et communication",
             "annee": "2019",
             "valeur": 138
         },
         {
-            "secteur": "transport, entrepôts et communication",
+            "secteur_activite": "transport, entrepôts et communication",
             "annee": "2020",
             "valeur": 140
         },
         {
-            "secteur": "transport, entrepôts et communication",
+            "secteur_activite": "transport, entrepôts et communication",
             "annee": "2021",
             "valeur": 152
         },
         {
-            "secteur": "transport, entrepôts et communication",
+            "secteur_activite": "transport, entrepôts et communication",
             "annee": "2022",
             "valeur": 161
         },
         {
-            "secteur": "transport, entrepôts et communication",
+            "secteur_activite": "transport, entrepôts et communication",
             "annee": "2023",
             "valeur": 166
         },
         {
-            "secteur": "administration générale et services sociaux fournis à la collectivité",
+            "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
             "annee": "2019",
             "valeur": 193
         },
         {
-            "secteur": "administration générale et services sociaux fournis à la collectivité",
+            "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
             "annee": "2020",
             "valeur": 200
         },
         {
-            "secteur": "administration générale et services sociaux fournis à la collectivité",
+            "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
             "annee": "2021",
             "valeur": 227
         },
         {
-            "secteur": "administration générale et services sociaux fournis à la collectivité",
+            "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
             "annee": "2022",
             "valeur": 256
         },
         {
-            "secteur": "administration générale et services sociaux fournis à la collectivité",
+            "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
             "annee": "2023",
             "valeur": 279
         },
         {
-            "secteur": "autres services",
+            "secteur_activite": "autres services",
             "annee": "2019",
             "valeur": 1178
         },
         {
-            "secteur": "autres services",
+            "secteur_activite": "autres services",
             "annee": "2020",
             "valeur": 1157
         },
         {
-            "secteur": "autres services",
+            "secteur_activite": "autres services",
             "annee": "2021",
             "valeur": 1226
         },
         {
-            "secteur": "autres services",
+            "secteur_activite": "autres services",
             "annee": "2022",
             "valeur": 1432
         },
         {
-            "secteur": "autres services",
+            "secteur_activite": "autres services",
             "annee": "2023",
             "valeur": 1546
         },
         {
-            "secteur": "ensemble",
+            "secteur_activite": "ensemble",
             "annee": "2019",
             "valeur": 3787
         },
         {
-            "secteur": "ensemble",
+            "secteur_activite": "ensemble",
             "annee": "2020",
             "valeur": 3781
         },
         {
-            "secteur": "ensemble",
+            "secteur_activite": "ensemble",
             "annee": "2021",
             "valeur": 4122
         },
         {
-            "secteur": "ensemble",
+            "secteur_activite": "ensemble",
             "annee": "2022",
             "valeur": 4494
         },
         {
-            "secteur": "ensemble",
+            "secteur_activite": "ensemble",
             "annee": "2023",
             "valeur": 4767
         }

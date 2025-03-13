@@ -5,6 +5,10 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -12,6 +16,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
@@ -25,6 +30,7 @@ import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
 import ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto;
 import ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto.IndicateurCreateRequestDto;
 import ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto.IndicateurCreateRequestDto.DimensionCreateRequestDto;
+import ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto.IndicateurCreateRequestDto.IndicateurDonneeRequestDto;
 import ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto.SousDomaineCreateRequestDto;
 import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
 import ma.org.ormt.modules.indicateurs.dimension.services.DimensionService;
@@ -34,6 +40,9 @@ import ma.org.ormt.modules.indicateurs.indicateur.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurService;
 import ma.org.ormt.modules.indicateurs.source.models.Source;
 import ma.org.ormt.modules.indicateurs.source.services.SourceService;
+import ma.org.ormt.modules.indicateurs.donnee.dtos.request.DonneeIndicateurRequestDto;
+import ma.org.ormt.modules.indicateurs.donnee.services.DonneeIndicateurService;
+import ma.org.ormt.modules.indicateurs.valeurdimension.dtos.request.ValeurDimensionRequestDto;
 
 /**
  * DomaineSeeder is responsible for initializing domain data in the application.
@@ -70,6 +79,7 @@ public class DomaineSeeder implements CommandLineRunner {
     private final SourceService sourceService;
     private final ObjectMapper objectMapper;
     private final IndicateurDimensionRepository indicateurDimensionRepository;
+    private final DonneeIndicateurService donneeIndicateurService;
 
     private static final String INIT_DATA_PATH = "src/main/resources/init-data/domaines";
     private static final String SOUS_DOMAINES_FOLDER = "sous-domaines";
@@ -252,11 +262,12 @@ public class DomaineSeeder implements CommandLineRunner {
             souDomaineData.getIndicateurs().forEach(indicateurRequest -> {
                 try {
                     createIndicateur(indicateurRequest, newSousDomaine);
+
                 } catch (Exception e) {
                     log.error("Error creating indicateur {}: {}", indicateurRequest.getNom(), e.getMessage());
                 }
             });
-
+            createIndicateurDonnee(file);
         } catch (Exception e) {
             // log.error("Error processing sous-domaine file {}: {}", file.getName(),
             // e.getMessage());
@@ -275,7 +286,7 @@ public class DomaineSeeder implements CommandLineRunner {
     }
 
     @Transactional
-    private void createIndicateur(IndicateurCreateRequestDto indicateurRequest, SousDomaine parentSousDomaine) {
+    private Indicateur createIndicateur(IndicateurCreateRequestDto indicateurRequest, SousDomaine parentSousDomaine) {
         try {
             Indicateur newIndicateur = new Indicateur();
             newIndicateur.setNom(indicateurRequest.getNom());
@@ -311,10 +322,12 @@ public class DomaineSeeder implements CommandLineRunner {
             }
 
             log.info("Created indicateur: {}", savedIndicateur.getNom());
+            return indicateurService.findById(savedIndicateur.getId()).orElse(null);
         } catch (Exception e) {
             log.error("Error in createIndicateur: {}", e.getMessage());
             throw new RuntimeException("Failed to create indicateur", e);
         }
+
     }
 
     /**
@@ -394,5 +407,168 @@ public class DomaineSeeder implements CommandLineRunner {
         indicateurDimension.setTemporelle(request.getAssociation().getTemporelle());
 
         indicateurDimensionRepository.save(indicateurDimension);
+    }
+
+    private void createIndicateurDonnee(File file) {
+
+        File parentFolder = file.getParentFile();
+        File dataFolder = new File(parentFolder, "data");
+
+        if (dataFolder.exists() && dataFolder.isDirectory()) {
+            File[] dataFiles = dataFolder
+                    .listFiles((dir, name) -> name.toLowerCase().endsWith(".json") && new File(dir, name).isFile());
+
+            if (dataFiles != null && dataFiles.length > 0) {
+                log.info("Found {} data JSON files in folder: {}", dataFiles.length, dataFolder.getAbsolutePath());
+
+                for (File dataFile : dataFiles) {
+                    try (InputStream dataInputStream = Files.newInputStream(dataFile.toPath())) {
+                        // Process each data file as needed
+                        log.info("Processing data file: {}", dataFile.getName());
+                        IndicateurDonneeRequestDto dataIndicareur = objectMapper.readValue(dataInputStream,
+                                IndicateurDonneeRequestDto.class);
+
+                        proccessDonneeIndicateur(dataIndicareur);
+
+                    } catch (Exception e) {
+                        log.error("Failed to process data file {}: {}", dataFile.getName(), e.getMessage(), e);
+                    }
+                }
+            } else {
+                log.debug("No data JSON files found in folder: {}", dataFolder.getAbsolutePath());
+            }
+        } else {
+            log.debug("Data folder does not exist or is not a directory: {}", dataFolder.getAbsolutePath());
+        }
+    }
+
+    private void proccessDonneeIndicateur(IndicateurDonneeRequestDto dataIndicareur) {
+        try {
+            Indicateur indicateur = indicateurService.findByNom(dataIndicareur.getIndicateur())
+                    .orElseThrow(() -> new RuntimeException("Indicateur not found: " + dataIndicareur.getIndicateur()));
+
+            List<Object> dataList = dataIndicareur.getData();
+            log.info("Processing {} data entries for indicator: {}", dataList.size(), indicateur.getNom());
+
+            for (Object dataItem : dataList) {
+                try {
+                    // Convert the data item to JsonNode for easier property access
+                    JsonNode jsonNode = objectMapper.valueToTree(dataItem);
+
+                    // Create a DonneeIndicateurRequestDto with the "valeur" property
+                    DonneeIndicateurRequestDto donneeRequest = new DonneeIndicateurRequestDto();
+
+                    // Extract the value property
+                    if (jsonNode.has("valeur")) {
+                        donneeRequest.setValeur(jsonNode.get("valeur").asText());
+                    } else {
+                        log.warn("Data item for indicator {} doesn't have 'valeur' property, skipping",
+                                indicateur.getNom());
+                        continue;
+                    }
+
+                    // Extract all other properties as dimension values
+                    List<ValeurDimensionRequestDto> dimensionValues = new ArrayList<>();
+                    Iterator<Map.Entry<String, JsonNode>> fields = jsonNode.fields();
+
+                    while (fields.hasNext()) {
+                        Map.Entry<String, JsonNode> field = fields.next();
+                        String dimensionName = field.getKey();
+
+                        // Skip the "valeur" field as it's already handled
+                        if (!dimensionName.equals("valeur")) {
+                            String dimensionValue = field.getValue().asText();
+
+                            // Find or create the dimension
+                            Dimension dimension = dimensionService.findByNom(dimensionName)
+                                    .orElseThrow(() -> new RuntimeException("Dimension not found: " + dimensionName));
+
+                            // Create ValeurDimensionRequestDto for this dimension
+                            ValeurDimensionRequestDto valeurDimensionDto = new ValeurDimensionRequestDto();
+                            valeurDimensionDto.setDimension(dimension);
+                            valeurDimensionDto.setValeur(dimensionValue);
+
+                            dimensionValues.add(valeurDimensionDto);
+                        }
+                    }
+
+                    // Set the dimension values to the request
+                    donneeRequest.setValeurDimensions(dimensionValues);
+
+                    // Save the indicator data
+                    donneeIndicateurService.create(indicateur.getId(), donneeRequest);
+
+                } catch (Exception e) {
+                    log.error("Error processing data item for indicator {}: {}", indicateur.getNom(), e.getMessage(),
+                            e);
+                }
+            }
+
+            log.info("Successfully processed {} data entries for indicator: {}", dataList.size(), indicateur.getNom());
+        } catch (Exception e) {
+            log.error("Failed to process data for indicator {}: {}", dataIndicareur.getIndicateur(), e.getMessage(), e);
+        }
+    }
+
+    /**
+     * Maps a JsonNode representing a data item to DonneeIndicateurRequestDto
+     * 
+     * @param dataItem JsonNode containing the data item properties
+     * @return A populated DonneeIndicateurRequestDto
+     */
+    private DonneeIndicateurRequestDto mapToDonneeIndicateurRequest(JsonNode dataItem) {
+        DonneeIndicateurRequestDto requestDto = new DonneeIndicateurRequestDto();
+
+        // Extract value property (assuming it's always present)
+        if (dataItem.has("valeur")) {
+            requestDto.setValeur(dataItem.get("valeur").asText());
+        } else {
+            throw new IllegalArgumentException("Data item doesn't contain 'valeur' property");
+        }
+
+        // Extract all other properties as dimension values
+        List<ValeurDimensionRequestDto> dimensionValues = new ArrayList<>();
+        Iterator<Map.Entry<String, JsonNode>> fields = dataItem.fields();
+
+        while (fields.hasNext()) {
+            Map.Entry<String, JsonNode> field = fields.next();
+            String key = field.getKey();
+
+            // Skip the value field as it's already handled
+            if (!key.equals("valeur")) {
+                ValeurDimensionRequestDto dimensionValue = createDimensionValue(key, field.getValue().asText());
+                dimensionValues.add(dimensionValue);
+            }
+        }
+
+        requestDto.setValeurDimensions(dimensionValues);
+        return requestDto;
+    }
+
+    /**
+     * Creates a ValeurDimensionRequestDto for a given dimension name and value
+     * 
+     * @param dimensionName The name of the dimension
+     * @param value         The value for the dimension
+     * @return A populated ValeurDimensionRequestDto
+     */
+    private ValeurDimensionRequestDto createDimensionValue(String dimensionName, String value) {
+        ValeurDimensionRequestDto requestDto = new ValeurDimensionRequestDto();
+
+        // Find or create the dimension
+        Dimension dimension = dimensionService.findByNom(dimensionName)
+                .orElseGet(() -> {
+                    Dimension newDimension = new Dimension();
+                    newDimension.setNom(dimensionName);
+                    newDimension.setType("string");
+                    newDimension.setDescription("Created automatically during data import");
+                    newDimension.setLibelle(dimensionName);
+                    return dimensionService.save(newDimension);
+                });
+
+        // requestDto.setDimensionId(dimension.getId());
+        requestDto.setValeur(value);
+
+        return requestDto;
     }
 }

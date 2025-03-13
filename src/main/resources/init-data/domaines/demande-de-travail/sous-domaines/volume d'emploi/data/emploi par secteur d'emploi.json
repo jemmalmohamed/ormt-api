@@ -2,92 +2,92 @@
     "indicateur": "emploi par secteur d'emploi",
     "data": [
         {
-            "secteur": "ensemble",
+            "secteur_emploi": "ensemble",
             "annee": "2019",
             "valeur": 10975
         },
         {
-            "secteur": "ensemble",
+            "secteur_emploi": "ensemble",
             "annee": "2020",
             "valeur": 10542
         },
         {
-            "secteur": "ensemble",
+            "secteur_emploi": "ensemble",
             "annee": "2021",
             "valeur": 10772
         },
         {
-            "secteur": "ensemble",
+            "secteur_emploi": "ensemble",
             "annee": "2022",
             "valeur": 10749
         },
         {
-            "secteur": "ensemble",
+            "secteur_emploi": "ensemble",
             "annee": "2023",
             "valeur": 10591
         },
         {
-            "secteur": "ensemble",
+            "secteur_emploi": "ensemble",
             "annee": "2024",
             "valeur": 10673
         },
         {
-            "secteur": "public - semi public",
+            "secteur_emploi": "public - semi public",
             "annee": "2019",
             "valeur": 955
         },
         {
-            "secteur": "public - semi public",
+            "secteur_emploi": "public - semi public",
             "annee": "2020",
             "valeur": 917
         },
         {
-            "secteur": "public - semi public",
+            "secteur_emploi": "public - semi public",
             "annee": "2021",
             "valeur": 937
         },
         {
-            "secteur": "public - semi public",
+            "secteur_emploi": "public - semi public",
             "annee": "2022",
             "valeur": 903
         },
         {
-            "secteur": "public - semi public",
+            "secteur_emploi": "public - semi public",
             "annee": "2023",
             "valeur": 911
         },
         {
-            "secteur": "public - semi public",
+            "secteur_emploi": "public - semi public",
             "annee": "2024",
             "valeur": 929
         },
         {
-            "secteur": "privé",
+            "secteur_emploi": "privé",
             "annee": "2019",
             "valeur": 10020
         },
         {
-            "secteur": "privé",
+            "secteur_emploi": "privé",
             "annee": "2020",
             "valeur": 9625
         },
         {
-            "secteur": "privé",
+            "secteur_emploi": "privé",
             "annee": "2021",
             "valeur": 9835
         },
         {
-            "secteur": "privé",
+            "secteur_emploi": "privé",
             "annee": "2022",
             "valeur": 9846
         },
         {
-            "secteur": "privé",
+            "secteur_emploi": "privé",
             "annee": "2023",
             "valeur": 9680
         },
         {
-            "secteur": "privé",
+            "secteur_emploi": "privé",
             "annee": "2024",
             "valeur": 9744
         }

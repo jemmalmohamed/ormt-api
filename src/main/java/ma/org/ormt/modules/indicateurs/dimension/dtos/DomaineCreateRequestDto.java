@@ -54,6 +54,13 @@ public class DomaineCreateRequestDto {
             private Boolean principale;
             private Boolean temporelle;
         }
+
+        @Data
+        @NoArgsConstructor
+        public static class IndicateurDonneeRequestDto {
+            private String indicateur;
+            private List<Object> data;
+        }
     }
 
 }
