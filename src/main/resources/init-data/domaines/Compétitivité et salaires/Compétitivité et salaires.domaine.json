@@ -1,6 +1,7 @@
 {
   "nom": "compétitivité et salaires",
   "description": "analyse des salaires, du smig et de la productivité du travail",
-  "role": "public",
+  "apropos": "analyse des salaires, du smig et de la productivité du travail",
+  "role": "role_public",
   "statut": "actif"
 }

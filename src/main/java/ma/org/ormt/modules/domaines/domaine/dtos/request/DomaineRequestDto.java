@@ -32,4 +32,7 @@ public class DomaineRequestDto extends Dto {
     @NotBlank(message = "Ce champ est requis.")
     private String description;
 
+    @NotBlank(message = "Ce champ est requis.")
+    private String apropos;
+
 }

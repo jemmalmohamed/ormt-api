@@ -53,4 +53,27 @@ public class AuthController {
                 return ResponseEntity.ok(restResponse);
         }
 
+        @Operation(summary = "Get all " + ENTITY_NAME + "s")
+        @ApiResponses(value = {
+                        @ApiResponse(responseCode = "200", description = "Ok", content = {
+                                        @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = PermissionDto.class))) }),
+                        @ApiResponse(responseCode = "404", description = ENTITY_NAME
+                                        + " not found", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @GetMapping("/autorities/roles")
+        @PreAuthorize("hasAuthority('auth:read')")
+        public ResponseEntity<RestResponse<AuthorisationDto>> getRoles() {
+
+                AuthorisationDto authorisationDto = authService.getRoles();
+
+                RestResponse<AuthorisationDto> restResponse = RestResponse.<AuthorisationDto>builder()
+                                .status(HttpStatus.OK)
+                                .data(authorisationDto)
+                                .message(authorisationDto != null ? null : "no data found")
+                                .build();
+
+                return ResponseEntity.ok(restResponse);
+        }
+
 }

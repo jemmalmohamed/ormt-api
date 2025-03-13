@@ -1,6 +1,24 @@
 -- Enable CITEXT extension for case-insensitive text fields
 CREATE EXTENSION IF NOT EXISTS citext;
 
+
+-- acteur
+CREATE TABLE
+    IF NOT EXISTS source (
+        id BIGSERIAL PRIMARY KEY,
+        nom CITEXT NOT NULL,
+        description TEXT, 
+        role VARCHAR(20) NOT NULL, 
+        statut varchar(255) NOT NULL,
+        status_code INT NULL,
+        created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+        version BIGINT NOT NULL DEFAULT 0,
+        created_by VARCHAR(50),
+        last_modified_by VARCHAR(50)
+    );
+  
+
 -- Indicateur
 CREATE TABLE
     IF NOT EXISTS indicateur (
@@ -13,14 +31,15 @@ CREATE TABLE
         categorie VARCHAR(30),
         type_tb VARCHAR(30),
         unite VARCHAR(20),
-        source VARCHAR(100),
+        source_id BIGINT,
         regle_calcul TEXT,
         status_code INT NULL,
         created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
         last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
         version BIGINT NOT NULL DEFAULT 0,
         created_by VARCHAR(50),
-        last_modified_by VARCHAR(50)
+        last_modified_by VARCHAR(50),
+        CONSTRAINT fk_indicateur_source FOREIGN KEY (source_id) REFERENCES source (id)
     );
 
 CREATE TABLE
@@ -116,6 +135,8 @@ CREATE INDEX idx_indicateur_sous_domaine_indicateur ON indicateur_sous_domaine (
 CREATE INDEX idx_indicateur_sous_domaine_sous_domaine ON indicateur_sous_domaine (id_sous_domaine);
 
 CREATE INDEX idx_indicateur_sous_domaine_composite ON indicateur_sous_domaine (id_indicateur, id_sous_domaine);
+
+ 
 
 -- Add column comments
 COMMENT ON TABLE indicateur IS 'Table storing indicator definitions and metadata';

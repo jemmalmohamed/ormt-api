@@ -107,6 +107,9 @@ public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements Doma
     private void updateFields(Domaine domaine, Domaine entityToUpdate) {
         domaine.setNom(entityToUpdate.getNom());
         domaine.setDescription(entityToUpdate.getDescription());
+        domaine.setRole(entityToUpdate.getRole());
+        domaine.setStatut(entityToUpdate.getStatut());
+        domaine.setApropos(entityToUpdate.getApropos());
 
     }
 

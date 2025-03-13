@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 public class DomaineCreateRequestDto {
     private String nom;
     private String description;
+    private String apropos;
     private String role;
     private String statut;
 

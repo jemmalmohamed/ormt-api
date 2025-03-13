@@ -1,6 +1,7 @@
 {
   "nom": "Offre de formation",
   "description": "Analyse du système de formation professionnelle, son accès et ses programmes",
-  "role": "public",
+  "apropos": "Analyse du système de formation professionnelle, son accès et ses programmes",
+  "role": "role_public",
   "statut": "actif"
 }

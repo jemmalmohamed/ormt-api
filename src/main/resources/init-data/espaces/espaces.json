@@ -1,0 +1,42 @@
+[
+    {
+        "nom": "espace institutions",
+        "role": "role_public",
+        "statut": "actif",
+        "description": "institutions et services publics",
+        "image": "/images/espaces/institutions.jpg",
+        "apropos": "espaces institutions"
+    },
+    {
+        "nom": "espace partenaires économiques & sociaux",
+        "description": "partenaires économiques et sociaux",
+        "role": "role_public",
+        "statut": "actif",
+        "image": "/images/espaces/partenaires.jpg",
+        "apropos": "espaces partenaires économiques & sociaux"
+    },
+    {
+        "nom": "espace chercheurs d'emploi",
+        "description": "emploi et carrière",
+        "image": "/images/espaces/chercheurs-emploi.jpg",
+        "apropos": "espace chercheurs d'emploi",
+        "role": "role_public",
+        "statut": "actif"
+    },
+    {
+        "nom": "espace académiciens",
+        "description": "académiciens et chercheurs",
+        "image": "/images/espaces/academiciens.jpg",
+        "apropos": "espace académiciens",
+        "role": "role_public",
+        "statut": "actif"
+    },
+    {
+        "nom": "espace professionnels",
+        "description": "professionnels et experts du marché",
+        "image": "/images/espaces/professionnels.jpg",
+        "apropos": "espace professionnels",
+        "role": "role_public",
+        "statut": "actif"
+    }
+]

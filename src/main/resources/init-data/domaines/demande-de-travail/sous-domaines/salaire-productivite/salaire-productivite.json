@@ -1,7 +1,7 @@
 {
   "nom": "salaires & productivité",
   "description": "étude des salaires et de la productivité dans l'économie",
-  "role": "public",
+  "role": "role_public",
   "statut": "actif",
   "indicateurs": [
     {
@@ -13,7 +13,7 @@
       "reglecalcul": "",
       "unite": "dh",
       "periode": "2019-2024",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -54,7 +54,7 @@
       "reglecalcul": "",
       "unite": "million dh",
       "periode": "2019-2024",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -95,7 +95,7 @@
       "reglecalcul": "",
       "unite": "million dh",
       "periode": "2019-2024",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -136,7 +136,7 @@
       "reglecalcul": "",
       "unite": "dh",
       "periode": "2019-2024",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -177,7 +177,7 @@
       "reglecalcul": "",
       "unite": "dh",
       "periode": "2019-2024",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -200,7 +200,7 @@
       "reglecalcul": "",
       "unite": "dh",
       "periode": "2019-2024",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -223,7 +223,7 @@
       "reglecalcul": "",
       "unite": "dh",
       "periode": "a partir de 2023",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -264,7 +264,7 @@
       "reglecalcul": "",
       "unite": "dh",
       "periode": "a partir de 2024",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -305,7 +305,7 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "a partir de 2023",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -328,7 +328,7 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "a partir de 2023",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -351,7 +351,7 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2023",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {

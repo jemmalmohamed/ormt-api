@@ -56,19 +56,17 @@ public class KeycloakAuthorizationResourceSetupRunner implements CommandLineRunn
         // twice
         // to void 10 resources in one list
         List<String> resources1 = Arrays.asList(
-                "region",
-                "province",
+
                 "domaine",
-                "sous_domaine",
                 "indicateur",
-                "dimension",
-                "auth"
+                "dimension"
 
         );
 
         List<String> resources2 = Arrays.asList(
-
-        );
+                "auth",
+                "region",
+                "province");
 
         setupKeycloakResources(resources1);
         setupKeycloakResources(resources2);

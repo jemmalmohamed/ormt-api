@@ -14,4 +14,6 @@ import ma.org.ormt.core.commun.base.dto.Dto;
 @RequiredArgsConstructor
 @JsonIgnoreProperties(value = { "indicateur.id" }, allowGetters = true)
 public class IndicateurSummaryDto extends Dto {
+
+    String nom;
 }

@@ -15,6 +15,7 @@ import ma.org.ormt.core.commun.base.dto.BaseDto;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.summary.SousDomaineSummaryDto;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
 import ma.org.ormt.modules.indicateurs.indicateur.association.dtos.IndicateurDimensionDto;
+import ma.org.ormt.modules.indicateurs.source.dtos.summary.SourceSummaryDto;
 
 @Setter
 @Getter
@@ -26,15 +27,17 @@ public class IndicateurDto extends BaseDto {
 
     private String nom;
 
-    private String source;
-
     private String regleCalcul;
 
     private String role;
 
+    private String statut;
+
     private String unite;
 
     private String typeTb;
+
+    private SourceSummaryDto source;
 
     @JsonProperty("dimensions")
     private List<IndicateurDimensionDto> indicateurDimensions;

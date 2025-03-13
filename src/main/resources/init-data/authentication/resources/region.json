@@ -10,7 +10,7 @@
         "name": "edit",
         "roles": [
           {
-            "name": "admin_ormt",
+            "name": "role_admin",
             "required": false
           }
         ]
@@ -19,7 +19,7 @@
         "name": "create",
         "roles": [
           {
-            "name": "admin_ormt",
+            "name": "role_admin",
             "required": false
           }
         ]
@@ -28,7 +28,7 @@
         "name": "delete",
         "roles": [
           {
-            "name": "admin_ormt",
+            "name": "role_admin",
             "required": false
           }
         ]
@@ -37,15 +37,15 @@
         "name": "read",
         "roles": [
           {
-            "name": "admin_ormt",
+            "name": "role_admin",
             "required": false
           },
           {
-            "name": "decideur_ormt",
+            "name": "role_decideur",
             "required": false
           },
           {
-            "name": "public_ormt",
+            "name": "role_public",
             "required": false
           }
         ]
@@ -54,15 +54,15 @@
         "name": "list",
         "roles": [
           {
-            "name": "admin_ormt",
+            "name": "role_admin",
             "required": false
           },
           {
-            "name": "decideur_ormt",
+            "name": "role_decideur",
             "required": false
           },
           {
-            "name": "public_ormt",
+            "name": "role_public",
             "required": false
           }
         ]

@@ -97,6 +97,8 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
         indicateur.setNom(entityToUpdate.getNom());
         indicateur.setDescription(entityToUpdate.getDescription());
         indicateur.setAbreviation(entityToUpdate.getAbreviation());
+        indicateur.setRole(entityToUpdate.getRole());
+        indicateur.setStatut(entityToUpdate.getStatut());
         indicateur.setTypeTb(entityToUpdate.getTypeTb());
         indicateur.setUnite(entityToUpdate.getUnite());
         indicateur.setSource(entityToUpdate.getSource());

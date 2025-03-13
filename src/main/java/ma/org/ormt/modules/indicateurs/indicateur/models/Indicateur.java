@@ -10,6 +10,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
@@ -24,6 +25,7 @@ import ma.org.ormt.core.commun.base.entity.BaseEntity;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
 import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
+import ma.org.ormt.modules.indicateurs.source.models.Source;
 
 @Setter
 @Getter
@@ -52,12 +54,14 @@ public class Indicateur extends BaseEntity {
 
     private String unite;
 
-    private String source;
-
     private String regleCalcul;
 
     @OneToMany(mappedBy = "indicateur", fetch = FetchType.EAGER)
     private List<IndicateurDimension> indicateurDimensions;
+
+    @ManyToOne
+    @JoinColumn(name = "source_id")
+    private Source source;
 
     @Transient
     public List<Dimension> getDimensions() {

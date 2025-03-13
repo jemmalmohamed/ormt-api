@@ -5,7 +5,6 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -33,6 +32,8 @@ import ma.org.ormt.modules.indicateurs.indicateur.association.repository.Indicat
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurService;
+import ma.org.ormt.modules.indicateurs.source.models.Source;
+import ma.org.ormt.modules.indicateurs.source.services.SourceService;
 
 /**
  * DomaineSeeder is responsible for initializing domain data in the application.
@@ -66,6 +67,7 @@ public class DomaineSeeder implements CommandLineRunner {
     private final SousDomaineService sousDomaineService;
     private final IndicateurService indicateurService;
     private final DimensionService dimensionService;
+    private final SourceService sourceService;
     private final ObjectMapper objectMapper;
     private final IndicateurDimensionRepository indicateurDimensionRepository;
 
@@ -177,6 +179,7 @@ public class DomaineSeeder implements CommandLineRunner {
             DomaineRequestDto requestDto = new DomaineRequestDto();
             requestDto.setNom(domaine.getNom());
             requestDto.setDescription(domaine.getDescription());
+            requestDto.setApropos(domaine.getApropos());
             requestDto.setRole(domaine.getRole());
             requestDto.setStatut(domaine.getStatut());
             Domaine createdDomaine = domaineService.create(requestDto);
@@ -271,22 +274,6 @@ public class DomaineSeeder implements CommandLineRunner {
         return sousDomaineService.create(parentDomaine.getId(), requestDto);
     }
 
-    // private void processIndicateurs(List<IndicateurCreateRequestDto> indicateurs,
-    // SousDomaine parentSousDomaine) {
-    // if (indicateurs == null || indicateurs.isEmpty()) {
-    // return;
-    // }
-
-    // indicateurs.forEach(indicateurRequest -> {
-    // try {
-    // createIndicateur(indicateurRequest, parentSousDomaine);
-    // } catch (Exception e) {
-    // log.error("Error creating indicateur {}: {}", indicateurRequest.getNom(),
-    // e.getMessage());
-    // }
-    // });
-    // }
-
     @Transactional
     private void createIndicateur(IndicateurCreateRequestDto indicateurRequest, SousDomaine parentSousDomaine) {
         try {
@@ -298,9 +285,14 @@ public class DomaineSeeder implements CommandLineRunner {
             newIndicateur.setAbreviation(indicateurRequest.getAbreviation());
             newIndicateur.setTypeTb(indicateurRequest.getTypeTb());
             newIndicateur.setUnite(indicateurRequest.getUnite());
-            newIndicateur.setSource(indicateurRequest.getSource());
+
             newIndicateur.setRegleCalcul(indicateurRequest.getRegleCalcul());
             newIndicateur.setCategorie(indicateurRequest.getCategorie());
+
+            String sourceName = indicateurRequest.getSource();
+            // find or create source
+            Source source = getSourceOrCreate(sourceName);
+            newIndicateur.setSource(source);
 
             newIndicateur.getSousDomaines().add(parentSousDomaine);
 
@@ -360,6 +352,24 @@ public class DomaineSeeder implements CommandLineRunner {
                     newDimension.setDescription("");
                     newDimension.setLibelle(request.getLibelle());
                     return dimensionService.save(newDimension);
+                });
+    }
+
+    /**
+     * Gets an existing dimension or creates a new one if it doesn't exist.
+     *
+     * @param request The dimension creation request
+     * @return The found or created dimension
+     */
+    private Source getSourceOrCreate(String sourceName) {
+        return sourceService.findByNom(sourceName.toLowerCase())
+                .orElseGet(() -> {
+                    Source newSource = new Source();
+                    newSource.setNom(sourceName);
+                    newSource.setDescription("");
+                    newSource.setRole("public");
+                    newSource.setStatut("actif");
+                    return sourceService.save(newSource);
                 });
     }
 

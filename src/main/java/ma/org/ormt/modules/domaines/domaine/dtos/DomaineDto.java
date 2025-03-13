@@ -23,4 +23,8 @@ public class DomaineDto extends BaseDto {
 
     private String role;
 
+    private String statut;
+
+    private String apropos;
+
 }

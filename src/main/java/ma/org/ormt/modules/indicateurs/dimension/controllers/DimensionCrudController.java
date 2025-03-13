@@ -158,38 +158,6 @@ public class DimensionCrudController extends BaseController<Dimension> {
                 return buildResponseEntity(deletedIds, HttpStatus.OK);
         }
 
-        // @Operation(summary = "Associate dimension with indicateur", responses = {
-        // @ApiResponse(responseCode = "204", description = "No content"),
-        // @ApiResponse(responseCode = "404", description = "Not found", content =
-        // @Content(mediaType = "ErrorResponse")),
-        // @ApiResponse(responseCode = "403", description = "Permission denied", content
-        // = @Content(mediaType = "ErrorResponse"))
-        // })
-        // @PostMapping("/associate")
-        // @PreAuthorize("hasAuthority('dimension:edit')")
-        // public ResponseEntity<Void> associateWithIndicateur(@RequestBody
-        // IndicateurDimensionDto associationDto) {
-        // dimensionService.associateWithIndicateur(associationDto.getIdDimension(),
-        // associationDto.getIdIndicateur());
-        // return ResponseEntity.noContent().build();
-        // }
-
-        // @Operation(summary = "Dissociate dimension from indicateur", responses = {
-        // @ApiResponse(responseCode = "204", description = "No content"),
-        // @ApiResponse(responseCode = "404", description = "Not found", content =
-        // @Content(mediaType = "ErrorResponse")),
-        // @ApiResponse(responseCode = "403", description = "Permission denied", content
-        // = @Content(mediaType = "ErrorResponse"))
-        // })
-        // @DeleteMapping("/dissociate")
-        // @PreAuthorize("hasAuthority('dimension:edit')")
-        // public ResponseEntity<Void> dissociateFromIndicateur(@RequestBody
-        // IndicateurDimensionDto associationDto) {
-        // dimensionService.dissociateFromIndicateur(associationDto.getIdDimension(),
-        // associationDto.getIdIndicateur());
-        // return ResponseEntity.noContent().build();
-        // }
-
         @Override
         protected <DTO> DTO mapToDto(Dimension entity, Class<DTO> dtoClass) {
                 return dtoClass.cast(dimensionDtoMapper.mapToDto(entity));

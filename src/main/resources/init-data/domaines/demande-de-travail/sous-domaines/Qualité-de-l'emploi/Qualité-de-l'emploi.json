@@ -1,7 +1,7 @@
 {
   "nom": "qualité de l'emploi",
   "description": "étude des caractéristiques qualitatives du marché de l'emploi",
-  "role": "public",
+  "role": "role_public",
   "statut": "actif",
   "indicateurs": [
     {
@@ -13,7 +13,7 @@
       "reglecalcul": "et-s-idp",
       "unite": "pourcentage",
       "periode": "2023",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -45,7 +45,7 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2024",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -86,7 +86,7 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2024",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -127,7 +127,7 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2024",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -159,7 +159,7 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2024",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -200,7 +200,7 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2024",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -241,7 +241,7 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2024",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -273,7 +273,7 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2023",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -305,7 +305,7 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2023",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {

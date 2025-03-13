@@ -1,6 +1,7 @@
 {
   "nom": "Intermédiation sur le marché du travail",
   "description": "Services d'intermédiation publique et privée sur le marché du travail",
-  "role": "public",
+  "apropos": "Services d'intermédiation publique et privée sur le marché du travail",
+  "role": "role_public",
   "statut": "actif"
 }

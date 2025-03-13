@@ -1,7 +1,7 @@
 {
   "nom": "tissu économique",
   "description": "étude des entreprises et de leur dynamique sur le marché",
-  "role": "public",
+  "role": "role_public",
   "statut": "actif",
   "indicateurs": [
     {
@@ -13,7 +13,7 @@
       "reglecalcul": "",
       "unite": "nombre",
       "periode": "2019-2023",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -63,7 +63,7 @@
       "reglecalcul": "",
       "unite": "nombre",
       "periode": "2019-2023",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -113,7 +113,7 @@
       "reglecalcul": "",
       "unite": "nombre",
       "periode": "2019-2023",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
@@ -163,7 +163,7 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2023",
-      "role": "public",
+      "role": "role_public",
       "statut": "actif",
       "dimensions": [
         {
