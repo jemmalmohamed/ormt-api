@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   ormt-kc:
-    command: start --proxy-protocol-enabled true
+    command: start --http-enabled=true --proxy-headers=xforwarded
     labels:
       - "traefik.http.routers.ormt-kc.entrypoints=websecure"
       - "traefik.http.routers.ormt-kc.tls=true"
@@ -11,3 +11,4 @@ services:
       KC_HOSTNAME_STRICT: "false"
       KC_HOSTNAME_STRICT_HTTPS: "false"
       KC_PROXY_ADDRESS_FORWARDING: "true"
+      KC_PROXY: "edge
