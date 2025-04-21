@@ -1,4 +1,4 @@
-FROM eclipse-temurin:22-jdk-alpine
+FROM eclipse-temurin:23-jdk-alpine
 
 # Add Maintainer Info
 LABEL maintainer="jemmalmohamed@gmail.com"
