@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   ormt-kc:
-    command: start --http-enabled=true --proxy=edge
+    command: start --proxy-protocol-enabled true
     labels:
       - "traefik.http.routers.ormt-kc.entrypoints=websecure"
       - "traefik.http.routers.ormt-kc.tls=true"
