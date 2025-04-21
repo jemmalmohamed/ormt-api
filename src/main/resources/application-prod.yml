@@ -20,17 +20,17 @@ spring:
     username: ormt
     password: ormt@database2024
 
-flyway:
-  enabled: true
-  clean-disabled: true  # Prevent accidental database cleanup in production
-  baseline-on-migrate: true
-  baseline-description: "Production Database State"
-  locations: classpath:db/migration
-  validate-on-migrate: true
-  repair-on-validate: false
-  out-of-order: false
-  ignore-missing-migrations: false
-  ignore-future-migrations: false
+# flyway:
+#   enabled: true
+#   clean-disabled: true  # Prevent accidental database cleanup in production
+#   baseline-on-migrate: true
+#   baseline-description: "Production Database State"
+#   locations: classpath:db/migration
+#   validate-on-migrate: true
+#   repair-on-validate: false
+#   out-of-order: false
+#   ignore-missing-migrations: false
+#   ignore-future-migrations: false
 
 keycloak:
   host: ormt-kc:8080
