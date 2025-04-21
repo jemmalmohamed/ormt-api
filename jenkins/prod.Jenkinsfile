@@ -141,6 +141,7 @@ pipeline {
   agent { node { label 'vps-84.247.134.226' } }  
   parameters {
     
+    booleanParam(name: 'verify_tooling', defaultValue: false, description: 'verify tooling')
     booleanParam(name: 'prune_keycloak', defaultValue: false, description: 'Prune Keycloak containers individually')
     booleanParam(name: 'run_keycloak', defaultValue: false, description: 'Run Keycloak container individually')
      booleanParam(name: 'prune_postgres', defaultValue: false, description: 'Prune Postgres container individually')
