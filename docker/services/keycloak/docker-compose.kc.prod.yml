@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   ormt-kc:
-    command: start --optimized ##--import-realm
+    command: start ##--import-realm
     labels:
       - "traefik.http.routers.ormt-kc.entrypoints=websecure"
       - "traefik.http.routers.ormt-kc.tls=true"
