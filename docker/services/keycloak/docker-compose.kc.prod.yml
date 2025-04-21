@@ -2,9 +2,12 @@ version: "3.9"
 
 services:
   ormt-kc:
-    command: start ##--import-realm
+    command: start --http-enabled=true --proxy=edge
     labels:
       - "traefik.http.routers.ormt-kc.entrypoints=websecure"
       - "traefik.http.routers.ormt-kc.tls=true"
     environment:
       KC_HOSTNAME: ${KEYCLOAK_HOST_URL}
+      KC_HOSTNAME_STRICT: "false"
+      KC_HOSTNAME_STRICT_HTTPS: "false"
+      KC_PROXY_ADDRESS_FORWARDING: "true"
