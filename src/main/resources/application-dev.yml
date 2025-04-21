@@ -6,8 +6,8 @@ starter:
     reset: true
     seed: true
   keycloak: 
-    reset: false
-    seed: false
+    reset: true
+    seed: true
   faker :
     seed : false
  
@@ -54,7 +54,7 @@ keycloak:
     frontend:
       id: ormt-web  # this is the client id (name) of the frontend
       name: ormt-ms
-      root-url:  http://localhost:4200
+      root-url:  http://localhost:3000
       web-origins: "*"
       authorization: false
 
