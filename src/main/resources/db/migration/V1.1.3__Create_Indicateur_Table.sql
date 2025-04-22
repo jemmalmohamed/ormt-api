@@ -1,12 +1,10 @@
--- Enable CITEXT extension for case-insensitive text fields
-CREATE EXTENSION IF NOT EXISTS citext;
-
+ 
 
 -- acteur
 CREATE TABLE
     IF NOT EXISTS source (
         id BIGSERIAL PRIMARY KEY,
-        nom CITEXT NOT NULL,
+        nom varchar(255) NOT NULL UNIQUE,
         description TEXT, 
         role VARCHAR(20) NOT NULL, 
         statut varchar(255) NOT NULL,
@@ -23,7 +21,7 @@ CREATE TABLE
 CREATE TABLE
     IF NOT EXISTS indicateur (
         id BIGSERIAL PRIMARY KEY,
-        nom CITEXT NOT NULL,
+        nom  varchar(255) NOT NULL UNIQUE,
         description TEXT,
         abreviation VARCHAR(10),
         role VARCHAR(20) NOT NULL,
@@ -45,7 +43,7 @@ CREATE TABLE
 CREATE TABLE
     IF NOT EXISTS dimension (
         id BIGSERIAL PRIMARY KEY,
-        nom CITEXT NOT NULL,
+        nom varchar(255) NOT NULL UNIQUE,
         type VARCHAR(30),
         description TEXT,
         libelle VARCHAR(100),

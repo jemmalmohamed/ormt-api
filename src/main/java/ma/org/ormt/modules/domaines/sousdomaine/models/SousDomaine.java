@@ -3,7 +3,6 @@ package ma.org.ormt.modules.domaines.sousdomaine.models;
 import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
@@ -31,7 +30,6 @@ import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 @Table(name = "sous_domaine")
 public class SousDomaine extends BaseEntity {
 
-    @Column(columnDefinition = "CITEXT")
     private String nom;
 
     private String description;

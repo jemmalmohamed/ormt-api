@@ -104,8 +104,6 @@ public class EspaceSeeder implements CommandLineRunner {
 
             espaceList.forEach(this::createEspace);
 
-            espaceList.forEach(this::createEspace);
-
         } catch (Exception e) {
             log.error("Error processing espaces file {}: {}", file.getName(), e.getMessage());
         }

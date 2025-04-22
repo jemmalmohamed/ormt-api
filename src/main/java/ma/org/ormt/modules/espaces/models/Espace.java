@@ -26,7 +26,7 @@ import ma.org.ormt.modules.espaces.association.domaine.EspaceDomaine;
 @Table(name = "espace")
 public class Espace extends BaseEntity {
 
-    @Column(columnDefinition = "CITEXT", unique = true)
+    @Column(unique = true)
     private String nom;
 
     private String image;

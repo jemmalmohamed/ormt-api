@@ -28,7 +28,7 @@ import ma.org.ormt.modules.indicateurs.indicateur.models.IndicateurDimension;
 @Table(name = "dimension")
 public class Dimension extends BaseEntity {
 
-    @Column(columnDefinition = "CITEXT", unique = true)
+    @Column(unique = true)
     private String nom;
 
     private String type;

@@ -12,7 +12,6 @@ import ma.org.ormt.security.dtos.AuthorisationDto;
 import ma.org.ormt.security.dtos.PermissionDto;
 import ma.org.ormt.security.dtos.RoleDto;
 import ma.org.ormt.security.keycloak.config.KeycloakService;
-import ma.org.ormt.security.keycloak.services.client.KeycloakClientService;
 import ma.org.ormt.security.keycloak.services.realm.KeycloakRealmService;
 import ma.org.ormt.security.services.AuthService;
 

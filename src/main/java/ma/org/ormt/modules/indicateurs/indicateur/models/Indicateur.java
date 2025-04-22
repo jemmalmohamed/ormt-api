@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
@@ -37,7 +36,6 @@ import ma.org.ormt.modules.indicateurs.source.models.Source;
 @Table(name = "indicateur")
 public class Indicateur extends BaseEntity {
 
-    @Column(columnDefinition = "CITEXT")
     private String nom;
 
     private String description;

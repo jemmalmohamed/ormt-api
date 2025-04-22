@@ -25,7 +25,7 @@ import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 @Table(name = "source")
 public class Source extends BaseEntity {
 
-    @Column(columnDefinition = "CITEXT", unique = true)
+    @Column(unique = true)
     private String nom;
 
     private String description;
