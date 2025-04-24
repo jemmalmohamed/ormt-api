@@ -20,9 +20,10 @@ services:
     labels:
       # Console routing (port 9001)
       - "traefik.enable=true"
-      - "traefik.http.routers.minio.service=minio-ormt"
+      - "traefik.http.routers.minio-ormt.service=minio-ormt"
       - "traefik.http.routers.minio-ormt.entrypoints=web"
       - "traefik.http.services.minio-ormt.loadbalancer.server.port=9000"
+
       - "traefik.http.routers.minio-console.service=minio-console"
       - "traefik.http.routers.minio-console.entrypoints=web"
       - "traefik.http.routers.minio-console.rule=Host(`${MINIO_CONSOLE_HOST_URL}`)"
