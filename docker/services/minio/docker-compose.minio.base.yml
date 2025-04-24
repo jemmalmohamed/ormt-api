@@ -19,6 +19,7 @@ services:
       - "traefik.http.routers.minio-ormt.entrypoints=web"
       - "traefik.http.routers.minio-ormt.rule=Host(`${MINIO_CONSOLE_HOST_URL}`)"
       - "traefik.http.services.minio-ormt.loadbalancer.server.port=${MINIO_CONSOLE_PORT}"
+      - "traefik.http.services.minio-ormt.loadbalancer.server.port=${MINIO_API_PORT}"
 
     healthcheck:
       # Use curl to check the Minio health endpoint
