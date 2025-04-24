@@ -1,4 +1,3 @@
-
 // Define methods for common tasks
 def toolVerification() {
   try {
@@ -43,6 +42,37 @@ def runKeycloakContainer() {
     throw e
   }
 }
+
+// minio containers
+def pruneMinioContainers() {
+  try {
+    sh '''
+      # Prune minio containers
+      docker compose --env-file ./docker/services/minio/env/.env.stage \
+      -f ./docker/services/minio/docker-compose.minio.base.yml \
+      -f ./docker/services/minio/docker-compose.minio.stage.yml \
+      down -v
+    '''
+  } catch (Exception e) {
+    echo "Error in pruning MinIO containers: ${e.getMessage()}"
+    throw e
+  }
+}
+def runMinioContainer() {
+  try {
+    sh '''
+      # Build minio image
+      docker compose --env-file ./docker/services/minio/env/.env.stage \
+      -f ./docker/services/minio/docker-compose.minio.base.yml \
+      -f ./docker/services/minio/docker-compose.minio.stage.yml \
+      up -d
+    '''
+  } catch (Exception e) {
+    echo "Error in building MinIO image: ${e.getMessage()}"
+    throw e
+  }
+}
+
 // keycloak containers
 def pruneNextCloudContainer() {
   try {
@@ -171,6 +201,8 @@ pipeline {
     booleanParam(name: 'run_nextcloud', defaultValue: false, description: 'Run nextcloud container individually')
     booleanParam(name: 'prune_postgres', defaultValue: false, description: 'Prune Postgres container individually')
     booleanParam(name: 'run_postgres', defaultValue: false, description: 'Run Postgres container individually')
+    booleanParam(name: 'prune_minio', defaultValue: false, description: 'Prune MinIO containers individually')
+    booleanParam(name: 'run_minio', defaultValue: false, description: 'Run MinIO container individually')
     booleanParam(name: 'prune_ormt_api', defaultValue: false, description: 'Prune ormt-api container before building and deploying')
     booleanParam(name: 'build_ormt_api', defaultValue: false, description: 'Build ormt-api before building and deploying')
     booleanParam(name: 'build_ormt_api_image', defaultValue: false, description: 'Build ormt-api image before building and deploying')
@@ -230,6 +262,19 @@ pipeline {
               }
               if (params.run_postgres) {
                 runApiDatabaseContainer()
+              }
+            }
+          }
+        }
+        stage('Build MinIO container') {
+          when {  expression {  params.prune_minio || params.run_minio  }  }
+          steps {
+            script {
+              if (params.prune_minio) {
+                pruneMinioContainers()
+              }
+              if (params.run_minio) {
+                runMinioContainer()
               }
             }
           }

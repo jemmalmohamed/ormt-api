@@ -1,5 +1,3 @@
-
-
 // Define methods for common tasks
 def toolVerification() {
   try {
@@ -45,10 +43,35 @@ def runKeycloakContainer() {
   }
 }
 
- 
-
- 
-
+// minio containers
+def pruneMinioContainers() {
+  try {
+    sh '''
+      # Prune minio containers
+      docker compose --env-file ./docker/services/minio/env/.env.prod \
+      -f ./docker/services/minio/docker-compose.minio.base.yml \
+      -f ./docker/services/minio/docker-compose.minio.prod.yml \
+      down -v
+    '''
+  } catch (Exception e) {
+     echo "Error in pruning MinIO containers: ${e.getMessage()}"
+     throw e
+  }
+}
+def runMinioContainer() {
+  try {
+    sh '''
+      # Build minio image
+      docker compose --env-file  ./docker/services/minio/env/.env.prod \
+      -f ./docker/services/minio/docker-compose.minio.base.yml \
+      -f ./docker/services/minio/docker-compose.minio.prod.yml \
+      up -d
+    '''
+  } catch (Exception e) {
+     echo "Error in building MinIO image: ${e.getMessage()}"
+     throw e
+  }
+}
 
 // api database containers
 def pruneApiDatabaseContainer() {
@@ -144,7 +167,9 @@ pipeline {
     booleanParam(name: 'verify_tooling', defaultValue: false, description: 'verify tooling')
     booleanParam(name: 'prune_keycloak', defaultValue: false, description: 'Prune Keycloak containers individually')
     booleanParam(name: 'run_keycloak', defaultValue: false, description: 'Run Keycloak container individually')
-     booleanParam(name: 'prune_postgres', defaultValue: false, description: 'Prune Postgres container individually')
+    booleanParam(name: 'prune_minio', defaultValue: false, description: 'Prune MinIO containers individually')
+    booleanParam(name: 'run_minio', defaultValue: false, description: 'Run MinIO container individually')
+    booleanParam(name: 'prune_postgres', defaultValue: false, description: 'Prune Postgres container individually')
     booleanParam(name: 'run_postgres', defaultValue: false, description: 'Run Postgres container individually')
     booleanParam(name: 'prune_ormt_api', defaultValue: true, description: 'Prune ormt-api container before building and deploying')
     booleanParam(name: 'build_ormt_api', defaultValue: true, description: 'Build ormt-api before building and deploying')
@@ -187,6 +212,19 @@ pipeline {
       }
     }
 
+          stage("Build MinIO containers"){
+           when {  expression {  params.prune_minio || params.run_minio  }  }
+           steps{
+             script {
+               if (params.prune_minio) {
+                 pruneMinioContainers()
+               }
+               if (params.run_minio) {
+                 runMinioContainer()
+               }
+             }
+      }
+    }
   
        
         stage("Build Postgres container"){

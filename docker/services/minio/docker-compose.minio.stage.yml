@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  minio-ormt:
+    restart: on-failure
+    labels:
+      - "traefik.http.routers.minio-api.entrypoints=web"
+      - "traefik.http.routers.minio-api.tls=false"
+      - "traefik.http.routers.minio-console.entrypoints=web"
+      - "traefik.http.routers.minio-console.tls=false"
+    environment:
+      # HTTP URLs for stage environment
+      MINIO_BROWSER_REDIRECT_URL: http://${MINIO_HOST_URL}:9001
+      MINIO_SERVER_URL: http://${MINIO_HOST_URL}:9000
+    deploy:
+      resources:
+        limits:
+          memory: 1G
