@@ -1,4 +1,4 @@
-package ma.org.ormt.core.flyway;
+package ma.org.ormt.config.flyway;
 
 import org.springframework.boot.autoconfigure.flyway.FlywayMigrationStrategy;
 import org.springframework.context.annotation.Bean;

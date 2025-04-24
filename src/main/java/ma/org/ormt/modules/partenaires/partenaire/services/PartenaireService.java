@@ -21,6 +21,4 @@ public interface PartenaireService extends BaseService<Partenaire> {
 
     boolean existsById(Long id);
 
-    void addSousPartenaire(Long partenaireId, Long sousPartenaireId);
-
 }

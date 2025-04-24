@@ -19,12 +19,8 @@ public class PartenaireDto extends BaseDto {
 
     private String nom;
 
+    private String photoUrl;
+
     private String description;
-
-    private String role;
-
-    private String statut;
-
-    private String apropos;
 
 }

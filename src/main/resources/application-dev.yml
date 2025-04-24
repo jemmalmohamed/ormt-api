@@ -32,6 +32,13 @@ flyway:
   repair-on-validate: true
   out-of-order: true
 
+minio:
+  endpoint: http://localhost:9000
+  access-key: minioadmin
+  secret-key: minioadmin
+  bucket: ormt
+  initialize: true
+
 
 keycloak:
   host: localhost:8092

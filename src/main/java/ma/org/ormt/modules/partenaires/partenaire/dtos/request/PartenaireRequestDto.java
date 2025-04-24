@@ -24,15 +24,6 @@ public class PartenaireRequestDto extends Dto {
     private String nom;
 
     @NotBlank(message = "Ce champ est requis.")
-    private String role;
-
-    @NotBlank(message = "Ce champ est requis.")
-    private String statut;
-
-    @NotBlank(message = "Ce champ est requis.")
     private String description;
-
-    @NotBlank(message = "Ce champ est requis.")
-    private String apropos;
 
 }

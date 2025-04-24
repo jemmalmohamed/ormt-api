@@ -12,8 +12,6 @@ import jakarta.persistence.EntityNotFoundException;
 import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
 import ma.org.ormt.core.commun.base.service.SpecificationService;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
-import ma.org.ormt.core.commun.rest.responses.MessageResponse;
-import ma.org.ormt.core.exceptions.handlers.CannotDeleteException;
 import ma.org.ormt.core.utilities.EntityInspector;
 import ma.org.ormt.core.utilities.PaginationUtils;
 import ma.org.ormt.core.validators.ObjectsValidator;
@@ -22,16 +20,12 @@ import ma.org.ormt.modules.partenaires.partenaire.dtos.request.PartenaireRequest
 import ma.org.ormt.modules.partenaires.partenaire.models.Partenaire;
 import ma.org.ormt.modules.partenaires.partenaire.repositories.PartenaireRepository;
 import ma.org.ormt.modules.partenaires.partenaire.services.PartenaireService;
-import ma.org.ormt.modules.partenaires.souspartenaire.models.SousPartenaire;
-import ma.org.ormt.modules.partenaires.souspartenaire.repositories.SousPartenaireRepository;
 
 @Service
 public class PartenaireServiceImpl extends BaseServiceImpl<Partenaire> implements PartenaireService {
 
     @Autowired
     private PartenaireRepository partenaireRepository;
-    @Autowired
-    private SousPartenaireRepository sousPartenaireRepository;
 
     @Autowired
     private ObjectsValidator<PartenaireRequestDto> validator;
@@ -90,16 +84,6 @@ public class PartenaireServiceImpl extends BaseServiceImpl<Partenaire> implement
     }
 
     @Override
-    public void addSousPartenaire(Long partenaireId, Long sousPartenaireId) {
-        Partenaire partenaire = partenaireRepository.findById(partenaireId)
-                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
-        SousPartenaire sousPartenaire = sousPartenaireRepository.findById(sousPartenaireId)
-                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
-        partenaire.getSousPartenaires().add(sousPartenaire);
-        partenaireRepository.save(partenaire);
-    }
-
-    @Override
     public void validateBeforeDelete(Long id) {
         validatePartenaireDependencies(id);
     }
@@ -107,27 +91,12 @@ public class PartenaireServiceImpl extends BaseServiceImpl<Partenaire> implement
     private void updateFields(Partenaire partenaire, Partenaire entityToUpdate) {
         partenaire.setNom(entityToUpdate.getNom());
         partenaire.setDescription(entityToUpdate.getDescription());
-        partenaire.setRole(entityToUpdate.getRole());
-        partenaire.setStatut(entityToUpdate.getStatut());
-        partenaire.setApropos(entityToUpdate.getApropos());
+        partenaire.setPhotoUrl(entityToUpdate.getPhotoUrl()); // Updated to use getPhotoUrl()
 
     }
 
     private void validatePartenaireDependencies(Long id) {
-        Partenaire partenaire = partenaireRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
-        if (!partenaire.getSousPartenaires().isEmpty()) {
 
-            String message = MessageResponse.builder()
-                    .title("Suppression impossible ")
-                    .mainMessage("Impossible de supprimer le partenaire  car il est associé aux sous partenaires.")
-
-                    .build()
-                    .format();
-
-            throw new CannotDeleteException(message);
-
-        }
     }
 
 }
