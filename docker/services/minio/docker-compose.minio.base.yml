@@ -14,12 +14,20 @@ services:
     command: server /data --console-address ":9001"
     volumes:
       - minio_data:/data
+    ports:
+      - "${MINIO_API_PORT}:9000"
+      - "${MINIO_CONSOLE_PORT}:9001"
     labels:
+      # Console routing (port 9001)
       - "traefik.enable=true"
-      - "traefik.http.routers.minio-ormt.entrypoints=web"
-      - "traefik.http.routers.minio-ormt.rule=Host(`${MINIO_CONSOLE_HOST_URL}`)"
-      - "traefik.http.services.minio-ormt.loadbalancer.server.port=${MINIO_CONSOLE_PORT}"
-      - "traefik.http.services.minio-ormt.loadbalancer.server.port=${MINIO_API_PORT}"
+      - "traefik.http.routers.minio-console.entrypoints=web"
+      - "traefik.http.routers.minio-console.rule=Host(`${MINIO_CONSOLE_HOST_URL}`)"
+      - "traefik.http.services.minio-console.loadbalancer.server.port=9001"
+
+      # API routing (port 9000)
+      - "traefik.http.routers.minio-api.entrypoints=web"
+      - "traefik.http.routers.minio-api.rule=Host(`${MINIO_API_HOST_URL:-minio-api.localhost}`)"
+      - "traefik.http.services.minio-api.loadbalancer.server.port=9000"
 
     healthcheck:
       # Use curl to check the Minio health endpoint
