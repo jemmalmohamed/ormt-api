@@ -9,6 +9,9 @@ services:
       MINIO_PROMETHEUS_AUTH_TYPE: "public"
       MINIO_BROWSER: "on"
       MINIO_DOMAIN: ${MINIO_API_HOST_URL:-minio.local}
+      MINIO_API_HOST_URL: ${MINIO_API_HOST_URL:-minio.local}
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY}
     command: server /data --console-address ":9001"
     volumes:
       - minio_data:/data
