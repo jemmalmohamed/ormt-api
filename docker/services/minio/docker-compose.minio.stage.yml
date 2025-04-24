@@ -2,10 +2,5 @@ version: "3.9"
 
 services:
   minio-ormt:
-    ports:
-      - "7000:9000" # Minio API
-      - "7001:9001" # Minio Console
-    deploy:
-      resources:
-        limits:
-          memory: 1G
+
+

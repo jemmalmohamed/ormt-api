@@ -39,7 +39,6 @@ minio:
   bucket: ormt
   initialize: true
 
-
 keycloak:
   host: localhost:8092
   auth-server-url: http://${keycloak.host}
