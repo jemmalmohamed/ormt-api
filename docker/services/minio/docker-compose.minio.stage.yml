@@ -3,6 +3,9 @@ version: "3.9"
 services:
   minio-ormt:
     restart: on-failure
+    ports:
+      - "9000:9000" # Minio API
+      - "9001:9001" # Minio Console
     labels:
       - "traefik.http.routers.minio-api.entrypoints=web"
       - "traefik.http.routers.minio-api.tls=false"
