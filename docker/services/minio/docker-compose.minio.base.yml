@@ -17,7 +17,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.minio-ormt.entrypoints=web"
-      - "traefik.http.routers.minio-ormt.rule=Host(`${MINIO_API_HOST_URL}`)"
+      - "traefik.http.routers.minio-ormt.rule=Host(`${MINIO_CONSOLE_HOST_URL}`)"
       - "traefik.http.services.minio-ormt.loadbalancer.server.port=${MINIO_CONSOLE_PORT}"
 
     healthcheck:
