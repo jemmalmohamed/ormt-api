@@ -8,7 +8,7 @@
     "enabled": true,
     "password": "ormt",
     "clientRoles": [
-      "role_admin"
+      "admin"
     ]
   },
   {
@@ -20,7 +20,7 @@
     "password": "ormt",
     "enabled": true,
     "clientRoles": [
-      "role_decideur"
+      "decideur"
     ]
   },
   {
@@ -32,7 +32,7 @@
     "password": "ormt",
     "enabled": true,
     "clientRoles": [
-      "role_public"
+      "public"
     ]
   }
 ]

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <property name="LOG_TEMP" value="./logs"/>
+    <property name="LOG_TEMP" value="./logs" />
     <include resource="org/springframework/boot/logging/logback/base.xml" />
 
     <!-- Define the file appender -->
@@ -50,6 +50,11 @@
     <logger name="org.springframework" level="WARN" />
     <logger name="org.hibernate" level="WARN" />
     <logger name="ma.org.ormt" level="INFO" />
+
+    <!-- Specifically set authentication logging to higher level to reduce noise -->
+    <logger name="org.springframework.security.authentication" level="ERROR" />
+    <logger name="org.springframework.security.web.authentication.AnonymousAuthenticationFilter"
+        level="ERROR" />
 
     <!-- Root logger -->
     <root level="INFO">

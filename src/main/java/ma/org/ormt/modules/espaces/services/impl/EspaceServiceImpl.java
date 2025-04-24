@@ -1,5 +1,6 @@
 package ma.org.ormt.modules.espaces.services.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,6 +72,37 @@ public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements Espace
         Specification<Espace> specification = specificationService
                 .createSpecificationWithDynamicGlobalFilter(requestParams.getFilters(),
                         requestParams.getGlobalFilter(), Espace.class);
+        return findAll(specification, pageable);
+    }
+
+    @Override
+    public Page<Espace> getEntitiesByIds(List<Long> ids, QueryParams requestParams) {
+        if (requestParams.getPageSize() == -1) {
+            requestParams.setPageSize(Integer.MAX_VALUE);
+        }
+        Pageable pageable = PaginationUtils.createPageable(requestParams);
+
+        if (!EntityInspector.isFieldPresentInEntity(pageable.getSort().toString(), Espace.class)) {
+            pageable = PaginationUtils.createPageable(requestParams);
+        }
+
+        // If no IDs are provided or empty list, return empty page
+        if (ids == null || ids.isEmpty()) {
+            return Page.empty(pageable);
+        }
+        // Create specification for filtering by IDs
+        Specification<Espace> idSpecification = (root, query, criteriaBuilder) -> root.get("id").in(ids);
+
+        // Get filter specification and handle null case
+        Specification<Espace> filterSpecification = specificationService
+                .createSpecificationWithDynamicGlobalFilter(requestParams.getFilters(),
+                        requestParams.getGlobalFilter(), Espace.class);
+        
+        // Combine specifications, handling null case
+        Specification<Espace> specification = filterSpecification != null 
+                ? filterSpecification.and(idSpecification) 
+                : idSpecification;
+
         return findAll(specification, pageable);
     }
 

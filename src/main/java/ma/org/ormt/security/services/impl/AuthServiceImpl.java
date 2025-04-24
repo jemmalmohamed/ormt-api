@@ -60,7 +60,7 @@ public class AuthServiceImpl implements AuthService {
                 parts[1]);
     }
 
-    public AuthorisationDto getRoles() {
+    public AuthorisationDto getAppRoles() {
         List<RoleDto> roles = new ArrayList<>();
         Keycloak keycloak = keycloakService.getKeyCloakAdminCli();
         keycloakRealmService.getClientResource(keycloak, "ormt", "ormt-api")

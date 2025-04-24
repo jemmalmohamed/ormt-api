@@ -6,6 +6,6 @@ public interface AuthService {
 
     AuthorisationDto getCurrentUserAuth();
 
-    AuthorisationDto getRoles();
+    AuthorisationDto getAppRoles();
 
 }

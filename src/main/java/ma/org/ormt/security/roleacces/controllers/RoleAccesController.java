@@ -1,4 +1,4 @@
-package ma.org.ormt.security.roles.controllers;
+package ma.org.ormt.security.roleacces.controllers;
 
 import java.util.List;
 
@@ -11,17 +11,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import ma.org.ormt.security.roleacces.models.RoleAcces;
+import ma.org.ormt.security.roleacces.services.RoleAccesService;
+
 import org.springframework.security.core.Authentication;
 
-import ma.org.ormt.security.roles.models.RoleAcces;
-import ma.org.ormt.security.roles.services.PermissionService;
-
 @RestController
-@RequestMapping("/api/permissions")
-public class PermissionController {
+@RequestMapping("/api/acces")
+public class RoleAccesController {
 
     @Autowired
-    private PermissionService permissionService;
+    private RoleAccesService permissionService;
 
     @GetMapping("/role/{roleCode}/type/{typeRessource}")
     public List<Long> getAccessibleResources(

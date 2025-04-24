@@ -10,7 +10,7 @@
         "name": "read",
         "roles": [
           {
-            "name": "role_admin",
+            "name": "admin",
             "required": false
           }
         ]
@@ -19,7 +19,7 @@
         "name": "delete",
         "roles": [
           {
-            "name": "role_admin",
+            "name": "admin",
             "required": false
           }
         ]
@@ -28,7 +28,7 @@
         "name": "list",
         "roles": [
           {
-            "name": "role_admin",
+            "name": "admin",
             "required": false
           }
         ]
@@ -37,7 +37,7 @@
         "name": "edit",
         "roles": [
           {
-            "name": "role_admin",
+            "name": "admin",
             "required": false
           }
         ]
@@ -46,7 +46,7 @@
         "name": "create",
         "roles": [
           {
-            "name": "role_admin",
+            "name": "admin",
             "required": false
           }
         ]

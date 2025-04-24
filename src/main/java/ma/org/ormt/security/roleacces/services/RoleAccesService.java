@@ -1,21 +1,47 @@
-package ma.org.ormt.security.roles.services;
+package ma.org.ormt.security.roleacces.services;
 
 import java.time.LocalDateTime;
+import java.util.Collection;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
-import ma.org.ormt.security.roles.models.RoleAcces;
-import ma.org.ormt.security.roles.repositories.RoleAccesRepository;
+import ma.org.ormt.security.roleacces.models.RoleAcces;
+import ma.org.ormt.security.roleacces.repositories.RoleAccesRepository;
 
 @Service
 @Transactional
-public class PermissionService {
+public class RoleAccesService {
 
     @Autowired
     private RoleAccesRepository roleAccesRepository;
+
+    /**
+     * Gets the current user's role from security context
+     */
+    public String getCurrentUserRole() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication == null) {
+            return "role_public"; // Default role if no authentication
+        }
+
+        Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
+        for (GrantedAuthority authority : authorities) {
+            String authorityName = authority.getAuthority();
+            // Assuming roles are prefixed with "ROLE_" in your system
+            if (authorityName.startsWith("ROLE_")) {
+                return authorityName.replace("ROLE_", "role_").toLowerCase();
+            }
+        }
+
+        // Fallback to public role if no appropriate role found
+        return "role_public";
+    }
 
     /**
      * Vérifie si un rôle a accès à une ressource
@@ -43,10 +69,6 @@ public class PermissionService {
         acces.setTypeRessource(typeRessource);
         acces.setRessourceId(ressourceId);
         acces.setNiveauAcces(niveauAcces);
-        acces.setCreatedBy(username);
-        acces.setCreatedDate(LocalDateTime.now());
-        acces.setStatusCode(1);
-        acces.setVersion(0L);
 
         return roleAccesRepository.save(acces);
     }

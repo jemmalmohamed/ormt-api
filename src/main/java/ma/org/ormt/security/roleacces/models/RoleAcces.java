@@ -1,4 +1,4 @@
-package ma.org.ormt.security.roles.models;
+package ma.org.ormt.security.roleacces.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

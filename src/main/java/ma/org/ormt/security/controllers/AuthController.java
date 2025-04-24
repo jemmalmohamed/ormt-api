@@ -63,9 +63,9 @@ public class AuthController {
         })
         @GetMapping("/autorities/roles")
         @PreAuthorize("hasAuthority('auth:read')")
-        public ResponseEntity<RestResponse<AuthorisationDto>> getRoles() {
+        public ResponseEntity<RestResponse<AuthorisationDto>> getAppRoles() {
 
-                AuthorisationDto authorisationDto = authService.getRoles();
+                AuthorisationDto authorisationDto = authService.getAppRoles();
 
                 RestResponse<AuthorisationDto> restResponse = RestResponse.<AuthorisationDto>builder()
                                 .status(HttpStatus.OK)

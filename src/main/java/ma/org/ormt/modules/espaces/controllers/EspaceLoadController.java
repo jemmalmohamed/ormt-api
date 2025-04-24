@@ -30,6 +30,7 @@ import ma.org.ormt.modules.espaces.dtos.details.EspaceDetailsDto;
 import ma.org.ormt.modules.espaces.dtos.details.EspaceDetailsDtoMapper;
 import ma.org.ormt.modules.espaces.models.Espace;
 import ma.org.ormt.modules.espaces.services.EspaceService;
+import ma.org.ormt.security.roleacces.services.RoleAccesService;
 
 @RestController
 @RequestMapping("api/v1/espaces")
@@ -39,6 +40,7 @@ public class EspaceLoadController extends BaseController<Espace> {
         private static final String ENTITY_NAME = "espace";
 
         private final EspaceService espaceService;
+        private final RoleAccesService roleAccesService;
         private final EspaceDtoMapper espaceDtoMapper;
         private final EspaceDetailsDtoMapper espaceDetailMapper;
 
@@ -59,10 +61,16 @@ public class EspaceLoadController extends BaseController<Espace> {
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
+                // Get the current user's role and retrieve accessible resources based on that
+                // role
+                String currentUserRole = roleAccesService.getCurrentUserRole();
+                List<Long> accessibleEspaceIds = roleAccesService.getAccessibleResources(
+                                currentUserRole, "espace", "lecture");
+
                 QueryParams requestParams = createQueryParams(pageIndex, pageSize, sortField, direction, filters,
                                 globalFilter);
 
-                Page<Espace> espacePage = espaceService.getEntityList(requestParams);
+                Page<Espace> espacePage = espaceService.getEntitiesByIds(accessibleEspaceIds, requestParams);
 
                 List<EspaceDto> dtos = espaceDtoMapper.mapToDto(espacePage.getContent());
 
@@ -74,7 +82,7 @@ public class EspaceLoadController extends BaseController<Espace> {
         @Operation(summary = "Get " + ENTITY_NAME + " by id")
         @ApiResponses(value = {
                         @ApiResponse(responseCode = "200", description = "Ok", content = {
-                                        @Content(mediaType = "application/json", schema = @Schema(implementation = EspaceDto.class)) }),
+                                        @Content(mediaType = "application/json", schema = @Schema(implementation = EspaceDetailsDto.class)) }),
                         @ApiResponse(responseCode = "404", description = ENTITY_NAME
                                         + " not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
@@ -82,8 +90,28 @@ public class EspaceLoadController extends BaseController<Espace> {
         @GetMapping("/{id}")
         @PreAuthorize("hasAuthority('espace:read')")
         public ResponseEntity<RestResponse<EspaceDetailsDto>> getEspace(@PathVariable("id") Long id) {
-                Espace espace = espaceService.findById(id).orElseThrow(EntityNotFoundException::new);
-                return buildResponseEntity(espace, EspaceDetailsDto.class, HttpStatus.OK);
+                // Get current user's role and accessible resources
+                String currentUserRole = roleAccesService.getCurrentUserRole();
+                List<Long> accessibleEspaceIds = roleAccesService.getAccessibleResources(
+                                currentUserRole, "espace", "lecture");
+                
+                // Check permissions
+                if (!accessibleEspaceIds.contains(id)) {
+                        return ResponseEntity.status(HttpStatus.FORBIDDEN)
+                                        .body(new RestResponse<EspaceDetailsDto>(HttpStatus.FORBIDDEN, "Permission denied", false, null, null));
+                }
+                
+                try {
+                        // Fetch the espace
+                        Espace espace = espaceService.findById(id)
+                                .orElseThrow(() -> new EntityNotFoundException("Espace with id " + id + " not found"));
+                        
+                        // Map and return the entity
+                        return buildResponseEntity(espace, EspaceDetailsDto.class, HttpStatus.OK);
+                } catch (EntityNotFoundException e) {
+                        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                                .body(new RestResponse<EspaceDetailsDto>(HttpStatus.NOT_FOUND, e.getMessage(), false, null, null));
+                }
         }
 
         @Override

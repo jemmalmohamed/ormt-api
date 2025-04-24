@@ -1,5 +1,6 @@
 package ma.org.ormt.modules.espaces.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.domain.Page;
@@ -14,6 +15,8 @@ public interface EspaceService extends BaseService<Espace> {
     Optional<Espace> findByNom(String nom);
 
     Page<Espace> getEntityList(QueryParams requestParams);
+
+    public Page<Espace> getEntitiesByIds(List<Long> ids, QueryParams params);
 
     Espace create(EspaceRequestDto requestDto);
 
