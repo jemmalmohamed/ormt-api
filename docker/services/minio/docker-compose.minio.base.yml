@@ -9,7 +9,7 @@ services:
       # Better security defaults
       MINIO_PROMETHEUS_AUTH_TYPE: "public"
       MINIO_BROWSER: "on"
-      MINIO_DOMAIN: ${MINIO_API_HOST_URL}
+      MINIO_DOMAIN: ${MINIO_API_HOST_URL:-minio.local}
     # Command to start Minio server and expose console on port 9001
     command: server /data --console-address ":9001"
     volumes:
@@ -18,7 +18,7 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.minio-ormt.entrypoints=web"
       - "traefik.http.routers.minio-ormt.rule=Host(`${MINIO_API_HOST_URL}`)"
-      - "traefik.http.services.minio-ormt.loadbalancer.server.port=${MINIO_PORT}"
+      - "traefik.http.services.minio-ormt.loadbalancer.server.port=${MINIO_CONSOLE_PORT}"
 
     healthcheck:
       # Use curl to check the Minio health endpoint
