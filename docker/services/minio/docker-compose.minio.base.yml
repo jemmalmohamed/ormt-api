@@ -17,16 +17,16 @@ services:
     labels:
       - "traefik.enable=true"
       # Traefik router for Minio API (port 9000)
-      - "traefik.http.routers.minio-api.entrypoints=web"
-      - "traefik.http.routers.minio-api.rule=Host(`${MINIO_API_HOST_URL}`)"
-      - "traefik.http.services.minio-api.loadbalancer.server.port=9000"
-      # Traefik router for Minio Console (port 9001)
-      - "traefik.http.routers.minio-console.entrypoints=web"
-      - "traefik.http.routers.minio-console.rule=Host(`${MINIO_CONSOLE_HOST_URL}`)"
-      - "traefik.http.services.minio-console.loadbalancer.server.port=9001"
+      - "traefik.http.routers.minio-ormt.entrypoints=web"
+      - "traefik.http.routers.minio-ormt.rule=Host(`${MINIO_API_HOST_URL}`)"
+      - "traefik.http.services.minio-ormt.loadbalancer.server.port=9000"
+      # # Traefik router for Minio Console (port 9001)
+      # - "traefik.http.routers.minio-console.entrypoints=web"
+      # - "traefik.http.routers.minio-console.rule=Host(`${MINIO_CONSOLE_HOST_URL}`)"
+      # - "traefik.http.services.minio-console.loadbalancer.server.port=9001"
     healthcheck:
       # Use curl to check the Minio health endpoint
-      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      test: [ "CMD", "curl", "-f", "http://localhost:9000/minio/health/live" ]
       interval: 30s
       timeout: 20s
       retries: 3
@@ -35,7 +35,8 @@ services:
       - proxy
 
 volumes:
-  minio_data:     # Define the volume for Minio data persistence
+  minio_data:
+    # Define the volume for Minio data persistence
 
 networks:
   proxy:
