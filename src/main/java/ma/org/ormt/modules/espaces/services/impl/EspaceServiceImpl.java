@@ -14,6 +14,7 @@ import jakarta.persistence.EntityNotFoundException;
 import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
 import ma.org.ormt.core.commun.base.service.SpecificationService;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
+import ma.org.ormt.core.minio.MinioService;
 import ma.org.ormt.core.utilities.EntityInspector;
 import ma.org.ormt.core.utilities.PaginationUtils;
 import ma.org.ormt.core.validators.ObjectsValidator;
@@ -37,6 +38,9 @@ public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements Espace
     private EspaceRepository espaceRepository;
     @Autowired
     private DomaineService domaineService;
+
+    @Autowired
+    private MinioService minioService;
 
     @Autowired
     private ObjectsValidator<EspaceRequestDto> validator;
@@ -97,10 +101,10 @@ public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements Espace
         Specification<Espace> filterSpecification = specificationService
                 .createSpecificationWithDynamicGlobalFilter(requestParams.getFilters(),
                         requestParams.getGlobalFilter(), Espace.class);
-        
+
         // Combine specifications, handling null case
-        Specification<Espace> specification = filterSpecification != null 
-                ? filterSpecification.and(idSpecification) 
+        Specification<Espace> specification = filterSpecification != null
+                ? filterSpecification.and(idSpecification)
                 : idSpecification;
 
         return findAll(specification, pageable);
@@ -115,7 +119,10 @@ public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements Espace
     public Espace create(EspaceRequestDto requestDto) {
         try {
             validator.validate(requestDto);
+            String imageFileName = minioService.uploadFile(requestDto.getImageFile());
+
             Espace espaceToCreate = espaceRequestMapper.mapToEntity(requestDto);
+            espaceToCreate.setImageUrl(imageFileName); // Store just the filename
             return espaceRepository.save(espaceToCreate);
         } catch (Exception e) {
             throw new IllegalArgumentException("Erreur lors de la création de la espace: " + e.getMessage());
@@ -126,22 +133,36 @@ public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements Espace
     public Espace update(Long id, EspaceRequestDto requestDto) {
         try {
             validator.validate(requestDto);
+
             Espace espaceToUpdate = espaceRequestMapper.mapToEntity(requestDto);
+
             checkPathId(id, espaceToUpdate.getId());
 
             Espace espace = espaceRepository.findById(id)
                     .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
 
-            updateFields(espace, espaceToUpdate);
+            espace.setNom(requestDto.getNom());
+            espace.setDescription(requestDto.getDescription());
+            try {
+                if (requestDto.getImageFile() != null && !requestDto.getImageFile().isEmpty()) {
+                    // If old photo exists, delete it (optional enhancement)
+                    // String oldFileName = extractFileNameFromUrl(partenaire.getimageUrl());
+                    // minioService.deleteFile(oldFileName);
+
+                    // Upload the new file
+                    String imageFileName = minioService.uploadFile(requestDto.getImageFile());
+
+                    // Store just the filename, not the full URL
+                    espace.setImageUrl(imageFileName);
+                }
+                // If no new photo is provided, keep the existing one
+            } catch (Exception e) {
+                throw new RuntimeException("Error updating partenaire photo: " + e.getMessage(), e);
+            }
             return espaceRepository.save(espace);
         } catch (Exception e) {
             throw new IllegalArgumentException("Erreur lors de la mise à jour de la espace: " + e.getMessage());
         }
-    }
-
-    private void updateFields(Espace espace, Espace entityToUpdate) {
-        espace.setNom(entityToUpdate.getNom());
-        espace.setDescription(entityToUpdate.getDescription());
     }
 
     public void attachDomaine(Long espaceId, Long domaineId) {

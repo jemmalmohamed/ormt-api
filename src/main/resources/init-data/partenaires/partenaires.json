@@ -1,0 +1,14 @@
+[
+    {
+        "nom": "cnss",
+        "description": "caise nationale de sécurité sociale",
+        "imageUrl": "/images/cnss-logo.jpg",
+        "siteWebUrl": "https://www.cnss.ma/"
+    },
+    {
+        "nom": "anapec",
+        "description": "agence nationale de promotion de l'emploi et des compétences",
+        "imageUrl": "/images/anapec-logo.png",
+        "siteWebUrl": "https://anapec.ma/"
+    }
+]

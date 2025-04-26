@@ -60,7 +60,8 @@ public class KeycloakAuthorizationResourceSetupRunner implements CommandLineRunn
                 "domaine",
                 "espace",
                 "indicateur",
-                "dimension"
+                "dimension",
+                "partenaire"
 
         );
 

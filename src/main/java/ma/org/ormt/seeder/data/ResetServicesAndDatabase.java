@@ -49,6 +49,8 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
         truncateTable("indicateur_dimension");
         truncateTable("dimension");
         truncateTable("indicateur");
+        truncateTable("partenaire");
+
     }
 
     @Transactional

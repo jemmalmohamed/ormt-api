@@ -1,0 +1,72 @@
+[
+  {
+    "name": "partenaire",
+    "displayName": "Partenaire",
+    "uris": [
+      "/partenaires/*"
+    ],
+    "scopes": [
+      {
+        "name": "edit",
+        "roles": [
+          {
+            "name": "admin",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "create",
+        "roles": [
+          {
+            "name": "admin",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "delete",
+        "roles": [
+          {
+            "name": "admin",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "read",
+        "roles": [
+          {
+            "name": "admin",
+            "required": false
+          },
+          {
+            "name": "decideur",
+            "required": false
+          },
+          {
+            "name": "public",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "list",
+        "roles": [
+          {
+            "name": "admin",
+            "required": false
+          },
+          {
+            "name": "decideur",
+            "required": false
+          },
+          {
+            "name": "public",
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+]

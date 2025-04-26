@@ -22,7 +22,9 @@ public class Partenaire extends BaseEntity {
 
     private String nom;
 
-    private String photoUrl;
+    private String imageUrl;
+
+    private String siteWebUrl;
 
     private String description;
 

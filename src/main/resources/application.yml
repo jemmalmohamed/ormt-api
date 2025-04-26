@@ -12,7 +12,6 @@ spring:
       ddl-auto: validate
       format_sql: true
     database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: false
   sql:
     init:
@@ -46,6 +45,12 @@ springdoc:
     path: /swagger-ui.html 
     filter: false
  
-# logging:
-#   level:
-#     com.zaxxer.hikari: DEBUG
+logging:
+  level:
+    com.zaxxer.hikari: DEBUG
+
+# File security settings
+file:
+  token:
+    secret: ${FILE_TOKEN_SECRET:OrmtFileSecurityTokenSecretKey}
+    validitySeconds: ${FILE_TOKEN_VALIDITY:300}  # 5 minutes by default

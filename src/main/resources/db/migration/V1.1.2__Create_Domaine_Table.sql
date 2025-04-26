@@ -5,7 +5,7 @@ CREATE TABLE
         nom varchar(255) NOT NULL UNIQUE,
         role varchar(255) NOT NULL,
         statut varchar(255) NOT NULL,
-        image varchar(255) NULL,
+        image_url VARCHAR(255) NOT NULL,
         apropos TEXT NULL,
         description varchar(255) NULL,
         status_code INT NULL,

@@ -6,10 +6,12 @@ import java.util.Map;
 
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -27,6 +29,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.core.commun.base.controller.BaseController;
 import ma.org.ormt.core.commun.rest.responses.RestResponse;
+import ma.org.ormt.core.minio.MinioService;
 import ma.org.ormt.core.validators.groups.OnCreate;
 import ma.org.ormt.core.validators.groups.OnUpdate;
 import ma.org.ormt.modules.partenaires.partenaire.dtos.PartenaireDto;
@@ -45,7 +48,6 @@ public class PartenaireCrudController extends BaseController<Partenaire> {
         private static final String ENTITY_NAME = "partenaire";
 
         private final PartenaireService partenaireService;
-
         private final PartenaireDtoMapper partenaireDtoMapper;
 
         @Operation(summary = "create " + ENTITY_NAME, responses = {
@@ -53,13 +55,19 @@ public class PartenaireCrudController extends BaseController<Partenaire> {
                         @ApiResponse(responseCode = "402", description = "Unprocessable entity", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
-        @PostMapping("")
+        @PostMapping(value = "", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
         @PreAuthorize("hasAuthority('partenaire:create')")
         public ResponseEntity<RestResponse<PartenaireDto>> createPartenaire(
-                        @Validated(OnCreate.class) @RequestBody PartenaireRequestDto requestDto) {
-                Partenaire partenaire = partenaireService.create(requestDto);
-                return buildResponseEntity(partenaire, PartenaireDto.class, HttpStatus.CREATED);
+                        @Validated(OnCreate.class) @ModelAttribute PartenaireRequestDto requestDto) {
+                try {
 
+                        // Create the partenaire with the photo URL
+                        Partenaire partenaire = partenaireService.create(requestDto);
+                        return buildResponseEntity(partenaire, PartenaireDto.class, HttpStatus.CREATED);
+                } catch (Exception e) {
+                        log.error("Error creating partenaire: ", e);
+                        throw new RuntimeException("Failed to create partenaire", e);
+                }
         }
 
         // *********** UPDATE OPERATIONS ***********
@@ -73,10 +81,12 @@ public class PartenaireCrudController extends BaseController<Partenaire> {
         @PutMapping("{id}")
         @PreAuthorize("hasAuthority('partenaire:edit')")
         public ResponseEntity<RestResponse<PartenaireDto>> updatePartenaire(@PathVariable Long id,
-                        @Validated(OnUpdate.class) @RequestBody PartenaireRequestDto partenaireRequestDto) {
+                        @Validated(OnUpdate.class) @ModelAttribute PartenaireRequestDto partenaireRequestDto) {
                 Partenaire partenaire = partenaireService.update(id, partenaireRequestDto);
                 return buildResponseEntity(partenaire, PartenaireDto.class, HttpStatus.OK);
         }
+
+        // *********** DELETE OPERATIONS ***********
 
         @Operation(summary = "Delete " + ENTITY_NAME, responses = {
                         @ApiResponse(responseCode = "204", description = "No content"),

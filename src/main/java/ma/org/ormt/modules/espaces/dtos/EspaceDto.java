@@ -19,7 +19,7 @@ public class EspaceDto extends Dto {
 
     private String nom;
 
-    private String image;
+    private String imageUrl;
 
     private String apropos;
 

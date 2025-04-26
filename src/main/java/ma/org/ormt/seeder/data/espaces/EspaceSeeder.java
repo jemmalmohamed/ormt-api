@@ -1,6 +1,7 @@
 package ma.org.ormt.seeder.data.espaces;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -12,17 +13,22 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import ma.org.ormt.core.utilities.FileToMultipartFileConverter;
 import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
 import ma.org.ormt.modules.espaces.dtos.request.EspaceRequestDto;
 import ma.org.ormt.modules.espaces.models.Espace;
 import ma.org.ormt.modules.espaces.services.EspaceService;
+import ma.org.ormt.modules.partenaires.partenaire.models.Partenaire;
+import ma.org.ormt.security.roleacces.services.RoleAccesService;
 
 @Log4j2
 @Component
@@ -36,6 +42,8 @@ public class EspaceSeeder implements CommandLineRunner {
     private final EspaceService espaceService;
 
     private final DomaineService domaineService;
+
+    private final RoleAccesService roleAccesService;
 
     private final ObjectMapper objectMapper;
 
@@ -94,36 +102,57 @@ public class EspaceSeeder implements CommandLineRunner {
     }
 
     @Transactional
-    private void createEspacesFromJsonFile(File file) {
+    private void createEspacesFromJsonFile(File jsonFile) {
 
-        try (InputStream inputStream = Files.newInputStream(file.toPath())) {
-            log.info("Processing espaces file: {}", file.getName());
-            List<EspaceRequestDto> espaceList = objectMapper.readValue(inputStream,
-                    new TypeReference<List<EspaceRequestDto>>() {
+        try (InputStream inputStream = Files.newInputStream(jsonFile.toPath())) {
+            log.info("Processing espaces file: {}", jsonFile.getName());
+            List<Espace> espaceList = objectMapper.readValue(inputStream,
+                    new TypeReference<List<Espace>>() {
                     });
+            if (espaceList == null || espaceList.isEmpty()) {
+                log.warn("No espaces found in file: {}", jsonFile.getName());
+                return;
+            }
+            for (Espace espace : espaceList) {
+                try {
 
-            espaceList.forEach(this::createEspace);
+                    createEspace(espace);
+
+                } catch (Exception e) {
+
+                    log.error("Error creating espace {}: {}",
+                            espace != null ? espace.getNom() : "unknown", e.getMessage(), e);
+                }
+            }
 
         } catch (Exception e) {
-            log.error("Error processing espaces file {}: {}", file.getName(), e.getMessage());
+            log.error("Error processing espaces file {}: {}", jsonFile.getName(), e.getMessage());
         }
     }
 
-    private void createEspace(EspaceRequestDto espaceRequestDto) {
-        Espace espace = new Espace();
-        espace.setNom(espaceRequestDto.getNom());
-        espace.setDescription(espaceRequestDto.getDescription());
-        espace.setApropos(espaceRequestDto.getApropos());
-        espace.setImage(espaceRequestDto.getImage());
-        espace.setRole(espaceRequestDto.getRole());
-        espace.setStatut(espaceRequestDto.getStatut());
+    private void createEspace(Espace espace) throws IOException {
+        EspaceRequestDto requestDto = new EspaceRequestDto();
+        requestDto.setNom(espace.getNom());
+        requestDto.setDescription(espace.getDescription());
+        requestDto.setApropos(espace.getApropos());
+        requestDto.setRole(espace.getRole());
+        requestDto.setStatut(espace.getStatut());
+        if (StringUtils.hasText(espace.getImageUrl())) {
+            // Fallback to the main directory if not found in images subdirectory
+            Path imagePath = Paths.get(INIT_DATA_PATH, espace.getImageUrl());
+            MultipartFile imageFile = FileToMultipartFileConverter.toMultipartFile(imagePath.toFile());
 
-        // Set up bidirectional relationships
-        List<Domaine> domaines = domaineService.findAll();
+            requestDto.setImageFile(imageFile);
+
+        }
 
         // Save the espace which will cascade the relationships
-        Espace createdEspace = espaceService.create(espace);
+        Espace createdEspace = espaceService.create(requestDto);
+        if (!roleAccesService.hasAccess(requestDto.getRole(), "espace", createdEspace.getId(), "lecture")) {
+            roleAccesService.addAccess(requestDto.getRole(), "espace", createdEspace.getId(), "lecture", "system");
+        }
 
+        List<Domaine> domaines = domaineService.findAll();
         domaines.forEach(domaine -> {
             espaceService.attachDomaine(createdEspace.getId(), domaine.getId());
         });

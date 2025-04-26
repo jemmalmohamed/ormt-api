@@ -12,6 +12,7 @@ import jakarta.persistence.EntityNotFoundException;
 import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
 import ma.org.ormt.core.commun.base.service.SpecificationService;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
+import ma.org.ormt.core.minio.MinioService;
 import ma.org.ormt.core.utilities.EntityInspector;
 import ma.org.ormt.core.utilities.PaginationUtils;
 import ma.org.ormt.core.validators.ObjectsValidator;
@@ -26,6 +27,9 @@ public class PartenaireServiceImpl extends BaseServiceImpl<Partenaire> implement
 
     @Autowired
     private PartenaireRepository partenaireRepository;
+
+    @Autowired
+    private MinioService minioService;
 
     @Autowired
     private ObjectsValidator<PartenaireRequestDto> validator;
@@ -65,34 +69,55 @@ public class PartenaireServiceImpl extends BaseServiceImpl<Partenaire> implement
     }
 
     @Override
-    public Partenaire create(PartenaireRequestDto requestDto) {
+    public Partenaire create(PartenaireRequestDto requestDto) throws Exception {
         validator.validate(requestDto);
+
+        // Upload the file to MinIO and get the file name
+        String imageFileName = minioService.uploadFile(requestDto.getImageFile());
+
+        // Create the partenaire with just the filename (not the full URL)
         Partenaire partenaireToCreate = partenaireRequestMapper.mapToEntity(requestDto);
+        partenaireToCreate.setImageUrl(imageFileName); // Store just the filename
+
         return partenaireRepository.save(partenaireToCreate);
     }
 
     @Override
     public Partenaire update(Long id, PartenaireRequestDto requestDto) {
-        // verify if id is the same as the one in the body
         validator.validate(requestDto);
-        Partenaire partenaireToUpdate = partenaireRequestMapper.mapToEntity(requestDto);
-        checkPathId(id, partenaireToUpdate.getId());
+
+        // Find the existing entity
         Partenaire partenaire = partenaireRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
-        updateFields(partenaire, partenaireToUpdate);
+
+        // Update basic fields
+        partenaire.setNom(requestDto.getNom());
+        partenaire.setDescription(requestDto.getDescription());
+        partenaire.setSiteWebUrl(requestDto.getSiteWebUrl());
+        // Check if a new photo file is provided
+        try {
+            if (requestDto.getImageFile() != null && !requestDto.getImageFile().isEmpty()) {
+                // If old photo exists, delete it (optional enhancement)
+                // String oldFileName = extractFileNameFromUrl(partenaire.getimageUrl());
+                // minioService.deleteFile(oldFileName);
+
+                // Upload the new file
+                String imageFileName = minioService.uploadFile(requestDto.getImageFile());
+
+                // Store just the filename, not the full URL
+                partenaire.setImageUrl(imageFileName);
+            }
+            // If no new photo is provided, keep the existing one
+        } catch (Exception e) {
+            throw new RuntimeException("Error updating partenaire photo: " + e.getMessage(), e);
+        }
+
         return partenaireRepository.save(partenaire);
     }
 
     @Override
     public void validateBeforeDelete(Long id) {
         validatePartenaireDependencies(id);
-    }
-
-    private void updateFields(Partenaire partenaire, Partenaire entityToUpdate) {
-        partenaire.setNom(entityToUpdate.getNom());
-        partenaire.setDescription(entityToUpdate.getDescription());
-        partenaire.setPhotoUrl(entityToUpdate.getPhotoUrl()); // Updated to use getPhotoUrl()
-
     }
 
     private void validatePartenaireDependencies(Long id) {

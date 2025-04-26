@@ -3,8 +3,8 @@ server:
 
 starter:
   database:
-    reset: false
-    seed: false
+    reset: true
+    seed: true
   keycloak: 
     reset: false
     seed: false
@@ -34,10 +34,12 @@ flyway:
 
 minio:
   endpoint: http://localhost:9000
-  access-key: minioadmin
-  secret-key: minioadmin
+  access-key: minio
+  secret-key: minio@ormt
   bucket: ormt
   initialize: true
+  reset: true
+  allowed-origins: http://localhost:3000
 
 keycloak:
   host: localhost:8092

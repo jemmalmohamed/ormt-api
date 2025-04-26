@@ -56,8 +56,9 @@ public class SecurityConfig {
 
         private static final String[] PUBLIC_ENDPOINTS = {
                         "/api/v1/public/**",
-                        "/api/v1/**" // Allow anonymous access to all API endpoints, method security will handle
-                                     // authorization
+                        "/api/v1/**", // Allow anonymous access to all API endpoints, method security will handle
+                                      // authorization
+                        "/api/v1/files/**" // Allow anonymous access to file endpoints
         };
 
         /**

@@ -29,15 +29,15 @@ public class Espace extends BaseEntity {
     @Column(unique = true)
     private String nom;
 
-    private String image;
+    private String imageUrl;
 
     private String apropos;
 
     private String description;
 
-    private String role;
-
     private String statut;
+
+    private String role;
 
     @OneToMany(mappedBy = "espace", fetch = FetchType.EAGER)
     private List<EspaceDomaine> espaceDomaines;

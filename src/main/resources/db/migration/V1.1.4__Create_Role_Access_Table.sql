@@ -8,9 +8,9 @@ CREATE TABLE
         description varchar(255) NULL, 
         status_code INT NULL,
         created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
-        last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+        last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP, 
         version BIGINT NOT NULL DEFAULT 0,
         created_by VARCHAR(50),
-        last_modified_by VARCHAR(50) ,
-        CONSTRAINT uk_role_ressource UNIQUE (role_code, type_ressource, ressource_id)
+        last_modified_by VARCHAR(50) 
+        -- CONSTRAINT uk_role_ressource UNIQUE (role_code, type_ressource, ressource_id)
     );

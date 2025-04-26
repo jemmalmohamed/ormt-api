@@ -15,7 +15,7 @@ public interface PartenaireService extends BaseService<Partenaire> {
 
     Page<Partenaire> getEntityList(QueryParams requestParams);
 
-    Partenaire create(PartenaireRequestDto requestDto);
+    Partenaire create(PartenaireRequestDto requestDto) throws Exception;
 
     Partenaire update(Long id, PartenaireRequestDto partenaireRequestDto);
 

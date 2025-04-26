@@ -8,6 +8,15 @@ starter:
   faker:
     seed: false
 
+# Added MinIO configuration for production
+minio:
+  endpoint: http://minio-ormt:9000
+  access-key: minioadmin
+  secret-key: minioadmin
+  bucket: ormt
+  initialize: true
+  allowed-origins: https://ormt-web.example.com,https://ormt.example.com
+
 spring:
   security:
     enabled: true
