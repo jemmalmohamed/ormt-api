@@ -61,22 +61,29 @@ public class EspaceLoadController extends BaseController<Espace> {
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
-                // Get the current user's role and retrieve accessible resources based on that
-                // role
-                String currentUserRole = roleAccesService.getCurrentUserRole();
-                List<Long> accessibleEspaceIds = roleAccesService.getAccessibleResources(
-                                currentUserRole, "espace", "lecture");
-
+                // Create query params
                 QueryParams requestParams = createQueryParams(pageIndex, pageSize, sortField, direction, filters,
                                 globalFilter);
 
-                Page<Espace> espacePage = espaceService.getEntitiesByIds(accessibleEspaceIds, requestParams);
+                // Check if user has admin role
+                String currentUserRole = roleAccesService.getCurrentUserRole();
+                Page<Espace> espacePage;
 
-                List<EspaceDto> dtos = espaceDtoMapper.mapToDto(espacePage.getContent());
+                if ("ROLE_ADMIN".equalsIgnoreCase(currentUserRole)) {
+                        // For admin, get all entities without ID filtering
+                        espacePage = espaceService.getEntityList(requestParams);
+                } else {
+                        // For non-admin users, get entities with restricted access
+                        List<Long> accessibleEspaceIds = roleAccesService.getAccessibleResources(
+                                        currentUserRole, "espace", "lecture");
 
-                QueryParams queryParams = adjustQueryParamsForAllRecords(requestParams, espacePage);
+                        espacePage = espaceService.getEntitiesByIds(accessibleEspaceIds, requestParams);
+                }
 
-                return buildResponseEntity(dtos, queryParams, HttpStatus.OK);
+                return buildResponseEntity(
+                                espacePage.getContent(), EspaceDto.class,
+                                adjustQueryParamsToGetAllRecords(requestParams, espacePage),
+                                HttpStatus.OK);
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id")
@@ -90,37 +97,61 @@ public class EspaceLoadController extends BaseController<Espace> {
         @GetMapping("/{id}")
         @PreAuthorize("hasAuthority('espace:read')")
         public ResponseEntity<RestResponse<EspaceDetailsDto>> getEspace(@PathVariable("id") Long id) {
-                // Get current user's role and accessible resources
-                String currentUserRole = roleAccesService.getCurrentUserRole();
-                List<Long> accessibleEspaceIds = roleAccesService.getAccessibleResources(
-                                currentUserRole, "espace", "lecture");
-                
-                // Check permissions
-                if (!accessibleEspaceIds.contains(id)) {
-                        return ResponseEntity.status(HttpStatus.FORBIDDEN)
-                                        .body(new RestResponse<EspaceDetailsDto>(HttpStatus.FORBIDDEN, "Permission denied", false, null, null));
+                if (!hasAccessToResource(id, "lecture")) {
+                        return createForbiddenResponse();
                 }
-                
+
                 try {
-                        // Fetch the espace
+
                         Espace espace = espaceService.findById(id)
-                                .orElseThrow(() -> new EntityNotFoundException("Espace with id " + id + " not found"));
-                        
-                        // Map and return the entity
+                                        .orElseThrow(() -> new EntityNotFoundException(
+                                                        "Espace with id " + id + " not found"));
                         return buildResponseEntity(espace, EspaceDetailsDto.class, HttpStatus.OK);
                 } catch (EntityNotFoundException e) {
-                        return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                                .body(new RestResponse<EspaceDetailsDto>(HttpStatus.NOT_FOUND, e.getMessage(), false, null, null));
+                        return createNotFoundResponse(e.getMessage());
                 }
         }
 
         @Override
         protected <DTO> DTO mapToDto(Espace entity, Class<DTO> dtoClass) {
                 if (dtoClass == EspaceDetailsDto.class) {
-                        return dtoClass.cast(espaceDetailMapper.mapToDto(entity));
+                        return dtoClass.cast(espaceDetailMapper.mapToDto(entity, roleAccesService));
                 } else if (dtoClass == EspaceDto.class) {
-                        return dtoClass.cast(espaceDtoMapper.mapToDto(entity));
+                        return dtoClass.cast(espaceDtoMapper.mapToDto(entity, roleAccesService));
                 }
                 throw new IllegalArgumentException("Unsupported DTO type: " + dtoClass.getName());
+        }
+
+        /**
+         * Check if current user has access to a specific resource
+         * Admin role always has access to all resources
+         */
+        private boolean hasAccessToResource(Long resourceId, String permission) {
+                String currentUserRole = roleAccesService.getCurrentUserRole();
+
+                // Admin role has access to everything
+                if ("ROLE_ADMIN".equalsIgnoreCase(currentUserRole)) {
+                        return true;
+                }
+
+                List<Long> accessibleIds = roleAccesService.getAccessibleResources(
+                                currentUserRole, "espace", permission);
+                return accessibleIds != null && accessibleIds.contains(resourceId);
+        }
+
+        /**
+         * Create a forbidden response with appropriate message
+         */
+        private <T> ResponseEntity<RestResponse<T>> createForbiddenResponse() {
+                return ResponseEntity.status(HttpStatus.FORBIDDEN)
+                                .body(new RestResponse<>(HttpStatus.FORBIDDEN, "Permission denied", false, null, null));
+        }
+
+        /**
+         * Create a not found response with error message
+         */
+        private <T> ResponseEntity<RestResponse<T>> createNotFoundResponse(String message) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                                .body(new RestResponse<>(HttpStatus.NOT_FOUND, message, false, null, null));
         }
 }

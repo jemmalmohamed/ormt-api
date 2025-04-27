@@ -49,9 +49,12 @@ public abstract class BaseController<T> {
                 .build());
     }
 
-    public <DTO> ResponseEntity<RestResponse<List<DTO>>> buildResponseEntity(List<DTO> dtos,
+    public <DTO> ResponseEntity<RestResponse<List<DTO>>> buildResponseEntity(List<T> entities, Class<DTO> dtoClass,
             QueryParams queryParams, HttpStatus status) {
-        RestResponse<List<DTO>> restResponse = RestResponseUtil.buildRestResponse(dtos, queryParams);
+        List<DTO> dtoList = entities.stream()
+                .map(entity -> mapToDto(entity, dtoClass))
+                .collect(Collectors.toList());
+        RestResponse<List<DTO>> restResponse = RestResponseUtil.buildRestResponse(dtoList, queryParams);
         return ResponseEntity.status(status).body(restResponse);
     }
 
@@ -68,7 +71,7 @@ public abstract class BaseController<T> {
         return new QueryParams(pageIndex, pageSize, sortField, direction, filters, globalFilter);
     }
 
-    public QueryParams adjustQueryParamsForAllRecords(QueryParams requestParams, Page<T> entitiesPage) {
+    public QueryParams adjustQueryParamsToGetAllRecords(QueryParams requestParams, Page<T> entitiesPage) {
         QueryParams queryParams = QueryParams.buildQueryParams(requestParams, entitiesPage);
         if (requestParams.getPageSize() == Integer.MAX_VALUE) {
             queryParams.setPageSize((int) queryParams.getTotalElements());

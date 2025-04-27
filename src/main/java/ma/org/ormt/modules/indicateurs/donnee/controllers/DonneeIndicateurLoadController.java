@@ -67,11 +67,10 @@ public class DonneeIndicateurLoadController extends BaseController<DonneeIndicat
                                 indicateurId,
                                 requestParams);
 
-                List<DonneeIndicateurDto> dtos = donneeIndicateurDtoMapper.mapToDto(donneeIndicateurPage.getContent());
+                QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, donneeIndicateurPage);
 
-                QueryParams queryParams = adjustQueryParamsForAllRecords(requestParams, donneeIndicateurPage);
-
-                return buildResponseEntity(dtos, queryParams, HttpStatus.OK);
+                return buildResponseEntity(donneeIndicateurPage.getContent(), DonneeIndicateurDto.class, queryParams,
+                                HttpStatus.OK);
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id")

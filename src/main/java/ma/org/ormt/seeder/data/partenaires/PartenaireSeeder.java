@@ -23,7 +23,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import ma.org.ormt.core.minio.MinioService;
 import ma.org.ormt.core.utilities.FileToMultipartFileConverter;
 import ma.org.ormt.modules.partenaires.partenaire.dtos.request.PartenaireRequestDto;
 import ma.org.ormt.modules.partenaires.partenaire.models.Partenaire;

@@ -24,10 +24,10 @@ import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.core.utilities.FileToMultipartFileConverter;
 import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
+import ma.org.ormt.modules.espaces.dtos.EspaceDto;
 import ma.org.ormt.modules.espaces.dtos.request.EspaceRequestDto;
 import ma.org.ormt.modules.espaces.models.Espace;
 import ma.org.ormt.modules.espaces.services.EspaceService;
-import ma.org.ormt.modules.partenaires.partenaire.models.Partenaire;
 import ma.org.ormt.security.roleacces.services.RoleAccesService;
 
 @Log4j2
@@ -106,14 +106,14 @@ public class EspaceSeeder implements CommandLineRunner {
 
         try (InputStream inputStream = Files.newInputStream(jsonFile.toPath())) {
             log.info("Processing espaces file: {}", jsonFile.getName());
-            List<Espace> espaceList = objectMapper.readValue(inputStream,
-                    new TypeReference<List<Espace>>() {
+            List<EspaceDto> espaceList = objectMapper.readValue(inputStream,
+                    new TypeReference<List<EspaceDto>>() {
                     });
             if (espaceList == null || espaceList.isEmpty()) {
                 log.warn("No espaces found in file: {}", jsonFile.getName());
                 return;
             }
-            for (Espace espace : espaceList) {
+            for (EspaceDto espace : espaceList) {
                 try {
 
                     createEspace(espace);
@@ -130,12 +130,12 @@ public class EspaceSeeder implements CommandLineRunner {
         }
     }
 
-    private void createEspace(Espace espace) throws IOException {
+    private void createEspace(EspaceDto espace) throws IOException {
         EspaceRequestDto requestDto = new EspaceRequestDto();
         requestDto.setNom(espace.getNom());
         requestDto.setDescription(espace.getDescription());
         requestDto.setApropos(espace.getApropos());
-        requestDto.setRole(espace.getRole());
+        // requestDto.setRole(espace.getRoleAcces().get(0).getRoleCode());
         requestDto.setStatut(espace.getStatut());
         if (StringUtils.hasText(espace.getImageUrl())) {
             // Fallback to the main directory if not found in images subdirectory
@@ -148,8 +148,18 @@ public class EspaceSeeder implements CommandLineRunner {
 
         // Save the espace which will cascade the relationships
         Espace createdEspace = espaceService.create(requestDto);
-        if (!roleAccesService.hasAccess(requestDto.getRole(), "espace", createdEspace.getId(), "lecture")) {
-            roleAccesService.addAccess(requestDto.getRole(), "espace", createdEspace.getId(), "lecture", "system");
+
+        // Handle multiple role accesses
+        if (espace.getRoleAcces() != null && !espace.getRoleAcces().isEmpty()) {
+            espace.getRoleAcces().forEach(roleAcces -> {
+                if (!roleAccesService.hasAccess(
+                        roleAcces.getRoleCode(), "espace", createdEspace.getId(),
+                        roleAcces.getNiveauAcces())) {
+                    roleAccesService.addAccess(
+                            roleAcces.getRoleCode(), "espace", createdEspace.getId(),
+                            roleAcces.getNiveauAcces(), "system");
+                }
+            });
         }
 
         List<Domaine> domaines = domaineService.findAll();

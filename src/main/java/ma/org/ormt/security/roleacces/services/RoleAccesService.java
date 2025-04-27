@@ -1,6 +1,5 @@
 package ma.org.ormt.security.roleacces.services;
 
-import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 
@@ -57,6 +56,13 @@ public class RoleAccesService {
     public List<Long> getAccessibleResources(String roleCode, String typeRessource, String niveauAcces) {
         return roleAccesRepository.findRessourceIdsByRoleCodeAndTypeRessourceAndNiveauAcces(
                 roleCode, typeRessource, niveauAcces);
+    }
+
+    /**
+     * Retourne tous les acces d une source
+     */
+    public List<RoleAcces> getAccesByRessource(String typeRessource, Long ressourceId) {
+        return roleAccesRepository.findByTypeRessourceAndRessourceId(typeRessource, ressourceId);
     }
 
     /**

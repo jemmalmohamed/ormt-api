@@ -64,11 +64,10 @@ public class IndicateurLoadController extends BaseController<Indicateur> {
 
                 Page<Indicateur> indicateurPage = indicateurService.getEntityList(requestParams);
 
-                List<IndicateurDto> dtos = indicateurDtoMapper.mapToDto(indicateurPage.getContent());
+                QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, indicateurPage);
 
-                QueryParams queryParams = adjustQueryParamsForAllRecords(requestParams, indicateurPage);
-
-                return buildResponseEntity(dtos, queryParams, HttpStatus.OK);
+                return buildResponseEntity(indicateurPage.getContent(), IndicateurDto.class, queryParams,
+                                HttpStatus.OK);
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id")

@@ -64,11 +64,9 @@ public class DomaineLoadController extends BaseController<Domaine> {
 
                 Page<Domaine> domainePage = domaineService.getEntityList(requestParams);
 
-                List<DomaineDto> dtos = domaineDtoMapper.mapToDto(domainePage.getContent());
+                QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, domainePage);
 
-                QueryParams queryParams = adjustQueryParamsForAllRecords(requestParams, domainePage);
-
-                return buildResponseEntity(dtos, queryParams, HttpStatus.OK);
+                return buildResponseEntity(domainePage.getContent(), DomaineDto.class, queryParams, HttpStatus.OK);
 
         }
 

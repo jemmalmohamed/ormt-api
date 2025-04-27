@@ -64,11 +64,10 @@ public class PartenaireLoadController extends BaseController<Partenaire> {
 
                 Page<Partenaire> partenairePage = partenaireService.getEntityList(requestParams);
 
-                List<PartenaireDto> dtos = partenaireDtoMapper.mapToDto(partenairePage.getContent());
+                QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, partenairePage);
 
-                QueryParams queryParams = adjustQueryParamsForAllRecords(requestParams, partenairePage);
-
-                return buildResponseEntity(dtos, queryParams, HttpStatus.OK);
+                return buildResponseEntity(partenairePage.getContent(), PartenaireDto.class, queryParams,
+                                HttpStatus.OK);
 
         }
 

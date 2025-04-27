@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -52,7 +53,7 @@ public class EspaceCrudController extends BaseController<Espace> {
         @PostMapping("")
         @PreAuthorize("hasAuthority('espace:create')")
         public ResponseEntity<RestResponse<EspaceDto>> createEspace(
-                        @Validated(OnCreate.class) @RequestBody EspaceRequestDto requestDto) {
+                        @Validated(OnCreate.class) @ModelAttribute EspaceRequestDto requestDto) {
                 Espace espace = espaceService.create(requestDto);
                 return buildResponseEntity(espace, EspaceDto.class, HttpStatus.CREATED);
         }
@@ -66,7 +67,7 @@ public class EspaceCrudController extends BaseController<Espace> {
         @PutMapping("{id}")
         @PreAuthorize("hasAuthority('espace:edit')")
         public ResponseEntity<RestResponse<EspaceDto>> updateEspace(@PathVariable Long id,
-                        @Validated(OnUpdate.class) @RequestBody EspaceRequestDto espaceRequestDto) {
+                        @Validated(OnUpdate.class) @ModelAttribute EspaceRequestDto espaceRequestDto) {
                 Espace espace = espaceService.update(id, espaceRequestDto);
                 return buildResponseEntity(espace, EspaceDto.class, HttpStatus.OK);
         }

@@ -29,7 +29,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.core.commun.base.controller.BaseController;
 import ma.org.ormt.core.commun.rest.responses.RestResponse;
-import ma.org.ormt.core.minio.MinioService;
 import ma.org.ormt.core.validators.groups.OnCreate;
 import ma.org.ormt.core.validators.groups.OnUpdate;
 import ma.org.ormt.modules.partenaires.partenaire.dtos.PartenaireDto;

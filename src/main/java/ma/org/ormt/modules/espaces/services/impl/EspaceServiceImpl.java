@@ -95,7 +95,7 @@ public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements Espace
             return Page.empty(pageable);
         }
         // Create specification for filtering by IDs
-        Specification<Espace> idSpecification = (root, query, criteriaBuilder) -> root.get("id").in(ids);
+        Specification<Espace> idSpecification = (root, _, _) -> root.get("id").in(ids);
 
         // Get filter specification and handle null case
         Specification<Espace> filterSpecification = specificationService
@@ -143,11 +143,10 @@ public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements Espace
 
             espace.setNom(requestDto.getNom());
             espace.setDescription(requestDto.getDescription());
+            espace.setApropos(requestDto.getApropos());
+            espace.setStatut(requestDto.getStatut());
             try {
                 if (requestDto.getImageFile() != null && !requestDto.getImageFile().isEmpty()) {
-                    // If old photo exists, delete it (optional enhancement)
-                    // String oldFileName = extractFileNameFromUrl(partenaire.getimageUrl());
-                    // minioService.deleteFile(oldFileName);
 
                     // Upload the new file
                     String imageFileName = minioService.uploadFile(requestDto.getImageFile());

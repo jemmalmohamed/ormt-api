@@ -3,7 +3,7 @@ CREATE TABLE
     IF NOT EXISTS espace (
         id BIGSERIAL PRIMARY KEY,
         nom varchar(255) NOT NULL UNIQUE,
-        role varchar(255) NOT NULL,
+        
         statut varchar(255) NOT NULL,
         image_url VARCHAR(255) NOT NULL,
         apropos TEXT NULL,

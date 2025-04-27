@@ -1,7 +1,5 @@
 package ma.org.ormt.seeder.data.roleacces;
 
-import java.util.List;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -9,7 +7,6 @@ import org.springframework.stereotype.Component;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import ma.org.ormt.modules.espaces.models.Espace;
 import ma.org.ormt.modules.espaces.repositories.EspaceRepository;
 import ma.org.ormt.security.roleacces.services.RoleAccesService;
 

@@ -64,11 +64,9 @@ public class SourceLoadController extends BaseController<Source> {
 
                 Page<Source> sourcePage = sourceService.getEntityList(requestParams);
 
-                List<SourceDto> dtos = sourceDtoMapper.mapToDto(sourcePage.getContent());
+                QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, sourcePage);
 
-                QueryParams queryParams = adjustQueryParamsForAllRecords(requestParams, sourcePage);
-
-                return buildResponseEntity(dtos, queryParams, HttpStatus.OK);
+                return buildResponseEntity(sourcePage.getContent(), SourceDto.class, queryParams, HttpStatus.OK);
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id")

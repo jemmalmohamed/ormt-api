@@ -1,23 +1,15 @@
 package ma.org.ormt.security.oauth;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 import org.keycloak.admin.client.Keycloak;
-import org.keycloak.admin.client.resource.ClientResource;
 import org.keycloak.admin.client.resource.RoleResource;
 import org.keycloak.representations.idm.ClientRepresentation;
-import org.keycloak.representations.idm.ManagementPermissionReference;
 import org.keycloak.representations.idm.RoleRepresentation;
 import org.keycloak.representations.idm.authorization.PolicyRepresentation;
-import org.keycloak.representations.idm.authorization.ResourceRepresentation;
-import org.keycloak.representations.idm.authorization.ScopeRepresentation;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -29,9 +21,6 @@ import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.security.keycloak.config.KeycloakService;
-import ma.org.ormt.security.keycloak.services.client.KeycloakClientService;
-import ma.org.ormt.security.keycloak.services.realm.KeycloakRealmService;
-import ma.org.ormt.security.keycloak.services.roles.client.KeycloakClientRoleService;
 
 @Component
 @RequiredArgsConstructor
@@ -39,8 +28,6 @@ import ma.org.ormt.security.keycloak.services.roles.client.KeycloakClientRoleSer
 public class PublicRoleProvider {
 
     private final KeycloakService keycloakService;
-    private final KeycloakRealmService keycloakRealmService;
-    private final KeycloakClientRoleService keycloakClientRoleService;
 
     @Value("${keycloak.realm}")
     private String realm;
@@ -161,10 +148,10 @@ public class PublicRoleProvider {
                         // Convert policies to proper permissions format instead of using POLICY_ prefix
                         for (PolicyRepresentation policy : allPolicies) {
                             if (policy.getType().equals("role") &&
-                                policy.getConfig() != null &&
-                                policy.getConfig().get("roles") != null &&
-                                policy.getConfig().get("roles").contains(publicRole.getId())) {
-                                
+                                    policy.getConfig() != null &&
+                                    policy.getConfig().get("roles") != null &&
+                                    policy.getConfig().get("roles").contains(publicRole.getId())) {
+
                                 String policyName = policy.getName();
                                 // Parse the policy name to extract resource and action
                                 // Assuming policy names are in format "RESOURCE ACTION" (e.g., "AUTH LIST")
@@ -172,14 +159,15 @@ public class PublicRoleProvider {
                                 if (parts.length >= 2) {
                                     String resource = parts[0].toLowerCase();
                                     String action = parts[1].toLowerCase();
-                                    
+
                                     // Convert to permission format: resource:action
                                     String permission = resource + ":" + action;
                                     authorities.add(new SimpleGrantedAuthority(permission));
                                     log.debug("Added permission: {} from policy: {}", permission, policyName);
                                 } else {
                                     // Fallback if policy name doesn't follow expected format
-                                    authorities.add(new SimpleGrantedAuthority(policyName.toLowerCase().replace(" ", ":")));
+                                    authorities.add(
+                                            new SimpleGrantedAuthority(policyName.toLowerCase().replace(" ", ":")));
                                     log.debug("Added fallback permission from policy: {}", policyName);
                                 }
                             }

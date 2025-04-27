@@ -1,16 +1,26 @@
 [
     {
         "nom": "espace institutions",
-        "role": "role_public",
-        "statut": "actif",
         "description": "institutions et services publics",
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ],
+        "statut": "actif",
         "imageUrl": "/images/institutions.jpg",
         "apropos": "espaces institutions"
     },
     {
         "nom": "espace partenaires économiques & sociaux",
         "description": "partenaires économiques et sociaux",
-        "role": "role_public",
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ],
         "statut": "actif",
         "imageUrl": "/images/partenaires.jpg",
         "apropos": "espaces partenaires économiques & sociaux"
@@ -20,23 +30,38 @@
         "description": "emploi et carrière",
         "imageUrl": "/images/chercheurs-emploi.jpg",
         "apropos": "espace chercheurs d'emploi",
-        "role": "role_public",
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ],
         "statut": "actif"
     },
     {
         "nom": "espace académiciens",
         "description": "académiciens et chercheurs",
-        "imageUrl": "/images/academiciens.jpg",
+        "imageUrl": "/images/academiciens.png",
         "apropos": "espace académiciens",
-        "role": "role_public",
+        "roleAcces": [
+            {
+                "roleCode": "role_admin",
+                "niveauAcces": "lecture"
+            }
+        ],
         "statut": "actif"
     },
     {
         "nom": "espace professionnels",
         "description": "professionnels et experts du marché",
-        "imageUrl": "/images/academiciens.jpg",
+        "imageUrl": "/images/espace-pro.png",
         "apropos": "espace professionnels",
-        "role": "role_admin",
-        "statut": "actif"
+        "roleAcces": [
+            {
+                "roleCode": "role_admin",
+                "niveauAcces": "lecture"
+            }
+        ],
+        "statut": "inactif"
     }
 ]

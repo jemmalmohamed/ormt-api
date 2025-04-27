@@ -1,5 +1,7 @@
 package ma.org.ormt.core.minio;
 
+import java.io.InputStream;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -12,8 +14,6 @@ import io.minio.MinioClient;
 import io.minio.PutObjectArgs;
 import io.minio.RemoveObjectArgs;
 import io.minio.SetBucketPolicyArgs;
-import java.io.InputStream;
-import java.util.List;
 
 @Service
 public class MinioService {

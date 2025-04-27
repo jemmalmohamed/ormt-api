@@ -1,6 +1,9 @@
 package ma.org.ormt.modules.espaces.dtos;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -8,6 +11,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.Dto;
+import ma.org.ormt.security.roleacces.dtos.summary.RoleAccesSummaryDto;
 
 @Setter
 @Getter
@@ -25,8 +29,9 @@ public class EspaceDto extends Dto {
 
     private String description;
 
-    private String role;
-
     private String statut;
+
+    @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = AdminRoleFilter.class)
+    private List<RoleAccesSummaryDto> roleAcces;
 
 }

@@ -66,11 +66,10 @@ public class SousDomaineLoadController extends BaseController<SousDomaine> {
                 Page<SousDomaine> sousDomainePage = sousDomaineService.getEntityListByDomaineId(domaineId,
                                 requestParams);
 
-                List<SousDomaineDto> dtos = sousDomaineDtoMapper.mapToDto(sousDomainePage.getContent());
+                QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, sousDomainePage);
 
-                QueryParams queryParams = adjustQueryParamsForAllRecords(requestParams, sousDomainePage);
-
-                return buildResponseEntity(dtos, queryParams, HttpStatus.OK);
+                return buildResponseEntity(sousDomainePage.getContent(), SousDomaineDto.class, queryParams,
+                                HttpStatus.OK);
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id")

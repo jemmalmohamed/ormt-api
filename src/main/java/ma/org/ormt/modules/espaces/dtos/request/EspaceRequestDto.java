@@ -35,8 +35,6 @@ public class EspaceRequestDto extends Dto {
     @NotBlank(message = "Ce champ est requis.")
     private String apropos;
 
-    private String role;
-
     @NotBlank(message = "Ce champ est requis.")
     private String statut;
 

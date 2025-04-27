@@ -64,11 +64,9 @@ public class DimensionLoadController extends BaseController<Dimension> {
 
                 Page<Dimension> dimensionPage = dimensionService.getEntityList(requestParams);
 
-                List<DimensionDto> dtos = dimensionDtoMapper.mapToDto(dimensionPage.getContent());
+                QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, dimensionPage);
 
-                QueryParams queryParams = adjustQueryParamsForAllRecords(requestParams, dimensionPage);
-
-                return buildResponseEntity(dtos, queryParams, HttpStatus.OK);
+                return buildResponseEntity(dimensionPage.getContent(), DimensionDto.class, queryParams, HttpStatus.OK);
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id")

@@ -13,6 +13,7 @@ import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.Dto;
 import ma.org.ormt.core.validators.groups.OnCreate;
 import ma.org.ormt.core.validators.unique.Unique;
+import ma.org.ormt.core.validators.file.FileSize;
 
 @Setter
 @Getter
@@ -28,6 +29,7 @@ public class PartenaireRequestDto extends Dto {
     private String nom;
 
     @NotNull(message = "Ce champ est requis.", groups = OnCreate.class)
+    @FileSize(max = 1 * 1024 * 1024, message = "La taille de l'image ne doit pas dépasser 1 Mo")
     private MultipartFile imageFile;
 
     @NotBlank(message = "Ce champ est requis.")
