@@ -2,4 +2,4 @@ services:
   ormt-api:
     env_file:
       - ../services/postgres/env/.env.stage
-      - ../services/keycloak/env/.env.stage
+      # - ../services/keycloak/env/.env.stage
