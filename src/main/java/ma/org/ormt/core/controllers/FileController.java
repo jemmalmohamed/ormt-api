@@ -137,8 +137,8 @@ public class FileController {
             headers.setContentType(MediaType.parseMediaType(contentType));
 
             // Prevent caching for authenticated content
-            headers.setCacheControl("no-store, no-cache, must-revalidate, max-age=0");
-            headers.setPragma("no-cache");
+            // headers.setCacheControl("no-store, no-cache, must-revalidate, max-age=0");
+            // headers.setPragma("no-cache");
             headers.setExpires(0);
 
             // Set strict security headers
@@ -238,7 +238,7 @@ public class FileController {
             // Let the token validation handle security in this case
             return true;
         }
-        
+
         // Otherwise, verify against our frontend URL
         return (origin != null && origin.equals(frontendUrl)) ||
                 (referer != null && referer.startsWith(frontendUrl));
