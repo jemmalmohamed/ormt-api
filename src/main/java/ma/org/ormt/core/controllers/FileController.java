@@ -26,7 +26,7 @@ import java.util.Base64;
 @Log4j2
 @RestController
 @RequestMapping("/api/v1/files")
-@CrossOrigin(origins = "${keycloak.clients.backend.root-url}", allowCredentials = "true")
+@CrossOrigin(origins = "${keycloak.clients.frontend.root-url}", allowCredentials = "true")
 public class FileController {
 
     @Autowired
@@ -38,7 +38,7 @@ public class FileController {
     @Value("${minio.bucket}")
     private String bucketName;
 
-    @Value("${keycloak.clients.backend.root-url}")
+    @Value("${keycloak.clients.frontend.root-url}")
     private String frontendUrl;
 
     /**
