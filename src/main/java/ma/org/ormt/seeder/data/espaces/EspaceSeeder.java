@@ -39,8 +39,8 @@ public class EspaceSeeder implements CommandLineRunner {
     @Value("${starter.database.seed}")
     private boolean seeding;
 
-    @Value("${data.external.data}")
-    private static String dataExternalPath;
+    @Value("${data.external.data_path}")
+    private String dataExternalPath;
 
     private final EspaceService espaceService;
 
@@ -50,7 +50,8 @@ public class EspaceSeeder implements CommandLineRunner {
 
     private final ObjectMapper objectMapper;
 
-    private static final String INIT_DATA_PATH = dataExternalPath + "/init-data/espaces";
+    private static final String IMAGES_SUBFOLDER = "images";
+    private static final String ESPACES_JSON_FILE = "espaces.json";
 
     /**
      * Executes the domain data seeding process when the application starts.
@@ -66,47 +67,36 @@ public class EspaceSeeder implements CommandLineRunner {
         }
 
         try {
-            Path resourcePath = Paths.get(INIT_DATA_PATH);
+            String initDataPath = dataExternalPath + "/init-data/espaces";
+            log.info("Using data path: {}", initDataPath);
+            
+            Path resourcePath = Paths.get(initDataPath);
             if (!Files.exists(resourcePath)) {
                 log.warn("Resource path {} does not exist. Skipping espace data seeding.", resourcePath);
                 return;
             }
 
-            processEpaceJsonFile(resourcePath.toFile());
+            File jsonFile = new File(resourcePath.toFile(), ESPACES_JSON_FILE);
+            if (!jsonFile.exists() || !jsonFile.isFile()) {
+                log.warn("Espaces JSON file not found at: {}", jsonFile.getAbsolutePath());
+                return;
+            }
+
+            createEspacesFromJsonFile(jsonFile, initDataPath);
             log.info("Espace data seeding completed successfully.");
         } catch (Exception e) {
-            log.error("Error during domain data seeding", e);
+            log.error("Error during espace data seeding: {}", e.getMessage(), e);
         }
     }
 
     /**
-     * Processes a single domain folder, creating the domain and its sub-domains.
+     * Creates spaces from a JSON file.
      *
-     * @param folder The domain folder to process
+     * @param jsonFile The JSON file containing espace data
+     * @param initDataPath The base path for initialization data
      */
-    private void processEpaceJsonFile(File folder) {
-        File[] jsonFiles = folder
-                .listFiles((dir, name) -> name.toLowerCase().endsWith(".json") && new File(dir, name).isFile());
-
-        if (jsonFiles != null && jsonFiles.length > 0) {
-            log.info("Found {} JSON files in folder: {}", jsonFiles.length, folder.getAbsolutePath());
-
-            for (File file : jsonFiles) {
-                try {
-                    createEspacesFromJsonFile(file);
-
-                } catch (Exception e) {
-                    log.error("Failed to process file {}: {}", file.getName(), e.getMessage(), e);
-                }
-            }
-        } else {
-            log.debug("No JSON files found in folder: {}", folder.getAbsolutePath());
-        }
-    }
-
     @Transactional
-    private void createEspacesFromJsonFile(File jsonFile) {
-
+    private void createEspacesFromJsonFile(File jsonFile, String initDataPath) {
         try (InputStream inputStream = Files.newInputStream(jsonFile.toPath())) {
             log.info("Processing espaces file: {}", jsonFile.getName());
             List<EspaceDto> espaceList = objectMapper.readValue(inputStream,
@@ -118,11 +108,8 @@ public class EspaceSeeder implements CommandLineRunner {
             }
             for (EspaceDto espace : espaceList) {
                 try {
-
-                    createEspace(espace);
-
+                    createEspace(espace, initDataPath);
                 } catch (Exception e) {
-
                     log.error("Error creating espace {}: {}",
                             espace != null ? espace.getNom() : "unknown", e.getMessage(), e);
                 }
@@ -133,20 +120,38 @@ public class EspaceSeeder implements CommandLineRunner {
         }
     }
 
-    private void createEspace(EspaceDto espace) throws IOException {
+    /**
+     * Creates a single espace in the database.
+     *
+     * @param espace The espace data from JSON
+     * @param initDataPath The base path for initialization data
+     * @throws IOException If there's an error processing the image file
+     */
+    private void createEspace(EspaceDto espace, String initDataPath) throws IOException {
         EspaceRequestDto requestDto = new EspaceRequestDto();
         requestDto.setNom(espace.getNom());
         requestDto.setDescription(espace.getDescription());
         requestDto.setApropos(espace.getApropos());
         // requestDto.setRole(espace.getRoleAcces().get(0).getRoleCode());
         requestDto.setStatut(espace.getStatut());
+        
+        // Process the image only if a imageUrl is provided
         if (StringUtils.hasText(espace.getImageUrl())) {
-            // Fallback to the main directory if not found in images subdirectory
-            Path imagePath = Paths.get(INIT_DATA_PATH, espace.getImageUrl());
-            MultipartFile imageFile = FileToMultipartFileConverter.toMultipartFile(imagePath.toFile());
-
-            requestDto.setImageFile(imageFile);
-
+            // Look for the image in the images subfolder
+            Path imagePath = Paths.get(initDataPath, IMAGES_SUBFOLDER, espace.getImageUrl());
+            if (!Files.exists(imagePath)) {
+                log.warn("Image not found at path: {}. Trying direct path.", imagePath);
+                // Fallback to the main directory if not found in images subdirectory
+                imagePath = Paths.get(initDataPath, espace.getImageUrl());
+            }
+            
+            if (Files.exists(imagePath)) {
+                MultipartFile imageFile = FileToMultipartFileConverter.toMultipartFile(imagePath.toFile());
+                requestDto.setImageFile(imageFile);
+                log.info("Found image for espace '{}' at: {}", espace.getNom(), imagePath);
+            } else {
+                log.warn("Image for espace '{}' not found at: {}", espace.getNom(), imagePath);
+            }
         }
 
         // Save the espace which will cascade the relationships
@@ -169,7 +174,5 @@ public class EspaceSeeder implements CommandLineRunner {
         domaines.forEach(domaine -> {
             espaceService.attachDomaine(createdEspace.getId(), domaine.getId());
         });
-
     }
-
 }

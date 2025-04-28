@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -44,7 +45,7 @@ public class DomaineSeeder implements CommandLineRunner {
     @Value("${starter.database.seed}")
     private boolean seeding;
 
-    @Value("${data.external.data}")
+    @Value("${data.external.data_path}")
     private String dataExternalPath;
 
     private final DomaineService domaineService;
@@ -62,63 +63,164 @@ public class DomaineSeeder implements CommandLineRunner {
         }
 
         try {
-            Path resourcePath = Paths.get(dataExternalPath + "/init-data/domaines");
-            if (!Files.exists(resourcePath)) {
-                log.warn("Resource path {} does not exist. Skipping domain data seeding.", resourcePath);
-                return;
-            }
-
-            File[] jsonFiles = resourcePath.toFile().listFiles((_, name) -> name.toLowerCase().endsWith(".json"));
-            if (jsonFiles == null || jsonFiles.length == 0) {
-                log.warn("No JSON files found in {}. Skipping domain data seeding.", resourcePath);
-                return;
-            }
-
-            log.info("Starting domain data seeding with {} files...", jsonFiles.length);
-            processJsonFiles(jsonFiles);
-            log.info("Domain data seeding completed successfully.");
+            // Process domains and their subdomains together
+            processDomainesAndSousDomaines();
 
         } catch (Exception e) {
             log.error("Error during domain data seeding", e);
         }
     }
 
-    private void processJsonFiles(File[] files) {
-        for (File file : files) {
-            processJsonFile(file);
+    private void processDomainesAndSousDomaines() {
+        try {
+            Path domainesPath = Paths.get(dataExternalPath + "/init-data/domaines/");
+            if (!Files.exists(domainesPath)) {
+                log.warn("Domaines path {} does not exist. Skipping domain data seeding.", domainesPath);
+                return;
+            }
+
+            log.info("Starting to scan domain directories at: {}", domainesPath);
+
+            // Get all subdirectories in the domaines folder - each represents a domain
+            List<Path> domaineDirs = Files.list(domainesPath)
+                    .filter(Files::isDirectory)
+                    .collect(Collectors.toList());
+
+            if (domaineDirs.isEmpty()) {
+                log.warn("No domain directories found in {}. Skipping domain data seeding.", domainesPath);
+                return;
+            }
+
+            // Process each domain directory
+            for (Path domaineDir : domaineDirs) {
+                String domaineDirName = domaineDir.getFileName().toString();
+                log.info("Processing domain directory: {}", domaineDirName);
+
+                // Find domain file (with .domaine.json extension)
+                List<File> domaineFiles = Files.list(domaineDir)
+                        .filter(path -> path.toString().toLowerCase().endsWith(".domaine.json"))
+                        .map(Path::toFile)
+                        .collect(Collectors.toList());
+
+                // If no file with .domaine.json extension is found, look for any JSON file that
+                // might be the domain file
+                if (domaineFiles.isEmpty()) {
+                    domaineFiles = Files.list(domaineDir)
+                            .filter(path -> path.toString().toLowerCase().endsWith(".json"))
+                            .filter(path -> !path.getParent().getFileName().toString().equals("sous-domaines"))
+                            .map(Path::toFile)
+                            .collect(Collectors.toList());
+                }
+
+                if (domaineFiles.isEmpty()) {
+                    log.warn("No domain JSON file found in directory: {}. Skipping this domain.", domaineDirName);
+                    continue;
+                }
+
+                // Process the first domain file found
+                File domaineFile = domaineFiles.get(0);
+                log.info("Found domain file: {}", domaineFile.getName());
+                Domaine createdDomaine = processDomaineJsonFile(domaineFile);
+
+                if (createdDomaine == null) {
+                    log.warn("Failed to create domain from file: {}. Skipping subdomains.", domaineFile.getName());
+                    continue;
+                }
+
+                // Look for sous-domaines folder
+                Path sousDomainesDir = domaineDir.resolve("sous-domaines");
+                if (Files.exists(sousDomainesDir) && Files.isDirectory(sousDomainesDir)) {
+                    log.info("Found sous-domaines folder in domain: {}", domaineDirName);
+
+                    // Get all subdirectories in the sous-domaines folder - each represents a
+                    // subdomain
+                    List<Path> sousDomaineDirs = Files.list(sousDomainesDir)
+                            .filter(Files::isDirectory)
+                            .collect(Collectors.toList());
+
+                    if (!sousDomaineDirs.isEmpty()) {
+                        log.info("Found {} subdomain directories in domain {}", sousDomaineDirs.size(), domaineDirName);
+
+                        // Process each subdomain directory
+                        for (Path sousDomainePath : sousDomaineDirs) {
+                            String sousDomaineName = sousDomainePath.getFileName().toString();
+                            log.info("Processing subdomain directory: {}", sousDomaineName);
+
+                            // Find subdomain JSON file in this directory
+                            List<File> sousDomaineFiles = Files.list(sousDomainePath)
+                                    .filter(path -> path.toString().toLowerCase().endsWith(".json"))
+                                    .map(Path::toFile)
+                                    .collect(Collectors.toList());
+
+                            if (!sousDomaineFiles.isEmpty()) {
+                                File sousDomaineFile = sousDomaineFiles.get(0);
+                                log.info("Found subdomain file: {}", sousDomaineFile.getName());
+                                processSousDomaineJsonFile(sousDomaineFile, createdDomaine);
+                            } else {
+                                log.warn("No JSON file found in subdomain directory: {}", sousDomaineName);
+                            }
+                        }
+                    } else {
+                        log.info("No subdomain directories found in sous-domaines folder of domain {}", domaineDirName);
+                    }
+                } else {
+                    log.info("No sous-domaines folder found in domain {}", domaineDirName);
+                }
+            }
+
+            log.info("Domain and subdomain data seeding completed successfully.");
+        } catch (Exception e) {
+            log.error("Error processing domains and subdomains", e);
         }
     }
 
     @Transactional
-    private void processJsonFile(File file) {
+    private Domaine processDomaineJsonFile(File file) {
         try (InputStream inputStream = Files.newInputStream(file.toPath())) {
-            log.info("Processing file: {}", file.getName());
+            log.info("Processing domain file: {}", file.getName());
             DomaineCreateRequestDto domaine = objectMapper.readValue(inputStream, DomaineCreateRequestDto.class);
 
             DomaineRequestDto requestDto = new DomaineRequestDto();
             requestDto.setNom(domaine.getNom());
             requestDto.setDescription(domaine.getDescription());
+            requestDto.setApropos(domaine.getApropos());
+            requestDto.setRole(domaine.getRole());
+            requestDto.setStatut(domaine.getStatut());
             Domaine createdDomaine = domaineService.create(requestDto);
 
-            // if (domaine.getSousDomaines() != null) {
-            // for (SousDomaineCreateRequestDto sousDomaineRequest :
-            // domaine.getSousDomaines()) {
-            // SousDomaine newSousDomaine = createSousDomaine(sousDomaineRequest,
-            // createdDomaine);
-            // processIndicateurs(sousDomaineRequest.getIndicateurs(), newSousDomaine);
-            // }
-            // }
+            log.info("Created domain: {} with ID: {}", createdDomaine.getNom(), createdDomaine.getId());
+            return createdDomaine;
         } catch (Exception e) {
-            log.error("Error processing file {}: {}", file.getName(), e.getMessage());
+            log.error("Error processing domain file {}: {}", file.getName(), e.getMessage());
+            return null;
         }
     }
 
-    private SousDomaine createSousDomaine(SousDomaineCreateRequestDto request, Domaine parentDomaine) {
-        SousDomaineRequestDto requestDto = new SousDomaineRequestDto();
-        requestDto.setNom(request.getNom());
-        requestDto.setDescription(request.getDescription());
+    @Transactional
+    private void processSousDomaineJsonFile(File file, Domaine parentDomaine) {
+        try (InputStream inputStream = Files.newInputStream(file.toPath())) {
+            log.info("Processing subdomain file: {}", file.getName());
+            SousDomaineCreateRequestDto sousDomaineData = objectMapper.readValue(inputStream,
+                    SousDomaineCreateRequestDto.class);
 
-        return sousDomaineService.create(parentDomaine.getId(), requestDto);
+            // Create the subdomain directly with the parent domain we already have
+            SousDomaineRequestDto requestDto = new SousDomaineRequestDto();
+            requestDto.setNom(sousDomaineData.getNom());
+            requestDto.setDescription(sousDomaineData.getDescription());
+            requestDto.setRole(sousDomaineData.getRole());
+            requestDto.setStatut(sousDomaineData.getStatut());
+
+            SousDomaine createdSousDomaine = sousDomaineService.create(parentDomaine.getId(), requestDto);
+            log.info("Created subdomain: {} with ID: {} under domain: {}",
+                    createdSousDomaine.getNom(), createdSousDomaine.getId(), parentDomaine.getNom());
+
+            // Process indicateurs if they exist in the subdomain data
+            if (sousDomaineData.getIndicateurs() != null && !sousDomaineData.getIndicateurs().isEmpty()) {
+                processIndicateurs(sousDomaineData.getIndicateurs(), createdSousDomaine);
+            }
+        } catch (Exception e) {
+            log.error("Error processing subdomain file {}: {}", file.getName(), e.getMessage());
+        }
     }
 
     private void processIndicateurs(List<IndicateurCreateRequestDto> indicateurs, SousDomaine parentSousDomaine) {
@@ -140,13 +242,14 @@ public class DomaineSeeder implements CommandLineRunner {
         try {
             Indicateur newIndicateur = new Indicateur();
             newIndicateur.setNom(indicateurRequest.getNom());
-            newIndicateur.setDescription(indicateurRequest.getDescription());
+            newIndicateur.setCategorie(indicateurRequest.getCategorie());
+            newIndicateur.setRole(indicateurRequest.getRole());
+            newIndicateur.setStatut(indicateurRequest.getStatut());
             newIndicateur.setAbreviation(indicateurRequest.getAbreviation());
             newIndicateur.setTypeTb(indicateurRequest.getTypeTb());
-            newIndicateur.setUnite(indicateurRequest.getUnite());
-            // newIndicateur.setSource(indicateurRequest.getSource());
             newIndicateur.setRegleCalcul(indicateurRequest.getRegleCalcul());
-            newIndicateur.setCategorie(indicateurRequest.getCategorie());
+            newIndicateur.setUnite(indicateurRequest.getUnite());
+            newIndicateur.setDescription(indicateurRequest.getDescription());
 
             newIndicateur.getSousDomaines().add(parentSousDomaine);
 
