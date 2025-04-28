@@ -26,7 +26,7 @@ import java.util.Base64;
 @Log4j2
 @RestController
 @RequestMapping("/api/v1/files")
-@CrossOrigin(origins = "${keycloak.clients.frontend.root-url}", allowCredentials = "true")
+@CrossOrigin(origins = "${keycloak.clients.backend.root-url}", allowCredentials = "true")
 public class FileController {
 
     @Autowired
@@ -72,7 +72,7 @@ public class FileController {
 
         // Create the secure URL with the encoded token
         String secureUrl = "/files/" + fileName + "?token=" + encodedToken;
-
+        log.debug("Generated secure URL: {}", secureUrl);
         return new ResponseEntity<>(secureUrl, HttpStatus.OK);
     }
 
