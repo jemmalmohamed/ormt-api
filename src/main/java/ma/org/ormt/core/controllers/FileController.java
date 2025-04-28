@@ -10,86 +10,148 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.core.minio.MinioService;
+import ma.org.ormt.core.services.FileSecurityService;
 
-/**
- * Simple FileController for accessing files stored in MinIO
- * Uses direct file access without complex security checks
- */
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
+
 @Log4j2
 @RestController
 @RequestMapping("/api/v1/files")
-@CrossOrigin(origins = "*", allowCredentials = "true")
+@CrossOrigin(origins = "${keycloak.clients.frontend.root-url}", allowCredentials = "true")
 public class FileController {
 
     @Autowired
     private MinioService minioService;
 
+    @Autowired
+    private FileSecurityService fileSecurityService;
+
     @Value("${minio.bucket}")
     private String bucketName;
 
+    @Value("${keycloak.clients.frontend.root-url}")
+    private String frontendUrl;
+
     /**
-     * Get a file from MinIO by its filename
-     * Simple, direct file access approach
+     * Generate a secure URL for accessing a file, including a time-limited token
+     */
+    @GetMapping("/secure-url/{fileName}")
+    public ResponseEntity<String> getSecureFileUrl(@PathVariable String fileName) {
+        // Generate a secure token (no browser fingerprint)
+        String token = fileSecurityService.generateFileToken(fileName, null);
+        if (token.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+        String encodedToken = java.net.URLEncoder.encode(token, java.nio.charset.StandardCharsets.UTF_8);
+        String secureUrl = "/files/" + fileName + "?token=" + encodedToken;
+        return new ResponseEntity<>(secureUrl, HttpStatus.OK);
+    }
+
+    /**
+     * Get a file from MinIO by its filename with token verification
      */
     @GetMapping("/{fileName}")
-    public ResponseEntity<byte[]> getFile(@PathVariable String fileName, HttpServletRequest request) {
+    public ResponseEntity<byte[]> getFile(
+            @PathVariable String fileName,
+            @RequestParam(required = true) String token) {
+        // Decode the token if present (it may be URL-encoded)
+        String decodedToken = null;
+        if (token != null) {
+            try {
+                decodedToken = java.net.URLDecoder.decode(token, java.nio.charset.StandardCharsets.UTF_8);
+            } catch (Exception e) {
+                log.warn("Error decoding token: {}", e.getMessage());
+                return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+            }
+        } else {
+            log.warn("No token provided for file: {}", fileName);
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        }
+        // Only check token validity (no browser fingerprint)
+        if (!fileSecurityService.validateFileToken(fileName, decodedToken, null)) {
+            log.warn("Invalid or expired token for file: {}", fileName);
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        }
         try {
-            log.debug("Retrieving file: {}", fileName);
             byte[] fileData = minioService.getFile(fileName);
-            
-            // Set appropriate content type based on file extension
             String contentType = determineContentType(fileName);
-            
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.parseMediaType(contentType));
-            
-            // Allow browser caching for better performance
-            headers.setCacheControl("public, max-age=86400"); // Cache for 1 day
-            
+            headers.setCacheControl("no-store, no-cache, must-revalidate, max-age=0");
+            headers.setPragma("no-cache");
+            headers.setExpires(0);
+            headers.add("Content-Security-Policy", "default-src 'self'");
+            headers.add("ETag", generateRandomETag());
             return new ResponseEntity<>(fileData, headers, HttpStatus.OK);
         } catch (Exception e) {
-            log.error("Error retrieving file {}: {}", fileName, e.getMessage());
+            log.error("Error retrieving file {}: {}", fileName, e.getMessage(), e);
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
     /**
-     * Get a file from MinIO by its URL path
-     * Compatibility method for existing URLs in the database
+     * Get a file from MinIO by its complete URL path
+     * This allows compatibility with existing URLs stored in the database
      */
     @GetMapping("/url")
-    public ResponseEntity<byte[]> getFileByUrl(String url, HttpServletRequest request) {
-        // Extract the filename from the URL
+    public ResponseEntity<byte[]> getFileByUrl(
+            @RequestParam("url") String url,
+            @RequestParam(required = true) String token) {
         String fileName = extractFilenameFromUrl(url);
         if (fileName == null) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-
+        String decodedToken = null;
+        if (token != null) {
+            try {
+                decodedToken = java.net.URLDecoder.decode(token, java.nio.charset.StandardCharsets.UTF_8);
+            } catch (Exception e) {
+                log.warn("Error decoding token: {}", e.getMessage());
+                return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+            }
+        } else {
+            log.warn("No token provided for file: {}", fileName);
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        }
+        if (!fileSecurityService.validateFileToken(fileName, decodedToken, null)) {
+            log.warn("Invalid or expired token for file: {}", fileName);
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        }
         try {
-            log.debug("Retrieving file by URL: {} -> filename: {}", url, fileName);
+            log.debug("Extracted filename: {} from URL: {}", fileName, url);
             byte[] fileData = minioService.getFile(fileName);
-            
-            // Set appropriate content type
             String contentType = determineContentType(fileName);
-            
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.parseMediaType(contentType));
-            headers.setCacheControl("public, max-age=86400"); // Cache for 1 day
-            
+            headers.setCacheControl("no-store, no-cache, must-revalidate, max-age=0");
+            headers.setPragma("no-cache");
+            headers.setExpires(0);
+            headers.add("Content-Security-Policy", "default-src 'self'");
+            headers.add("ETag", generateRandomETag());
             return new ResponseEntity<>(fileData, headers, HttpStatus.OK);
         } catch (Exception e) {
-            log.error("Error retrieving file from URL {}: {}", url, e.getMessage());
+            log.error("Error retrieving file from URL {}: {}", url, e.getMessage(), e);
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
+    // Generate a random ETag to prevent caching
+    private String generateRandomETag() {
+        return "\"" + java.util.UUID.randomUUID().toString() + "\"";
+    }
+
     /**
      * Extracts the filename from a MinIO URL
+     * Handles URLs like http://localhost:8093/bucket-name/filename.jpg
      */
     private String extractFilenameFromUrl(String url) {
         if (url == null || url.isEmpty()) {
@@ -112,9 +174,6 @@ public class FileController {
         return null;
     }
 
-    /**
-     * Determine the content type based on file extension
-     */
     private String determineContentType(String fileName) {
         if (fileName.endsWith(".pdf")) {
             return "application/pdf";
@@ -126,20 +185,6 @@ public class FileController {
             return "application/msword";
         } else if (fileName.endsWith(".xls") || fileName.endsWith(".xlsx")) {
             return "application/vnd.ms-excel";
-        } else if (fileName.endsWith(".svg")) {
-            return "image/svg+xml";
-        } else if (fileName.endsWith(".gif")) {
-            return "image/gif";
-        } else if (fileName.endsWith(".txt")) {
-            return "text/plain";
-        } else if (fileName.endsWith(".css")) {
-            return "text/css";
-        } else if (fileName.endsWith(".js")) {
-            return "application/javascript";
-        } else if (fileName.endsWith(".json")) {
-            return "application/json";
-        } else if (fileName.endsWith(".html") || fileName.endsWith(".htm")) {
-            return "text/html";
         } else {
             return "application/octet-stream";
         }
