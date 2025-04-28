@@ -14,7 +14,6 @@ services:
       - minio_data:/data
 
     labels:
-
       # Console routing (port 9001)
       - "traefik.http.routers.minio-console.service=minio-console"
       - "traefik.http.routers.minio-console.entrypoints=web"

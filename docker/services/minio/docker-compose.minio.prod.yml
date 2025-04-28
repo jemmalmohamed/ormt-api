@@ -3,14 +3,12 @@ services:
     restart: unless-stopped
     labels:
       # Update to use secure connections
-      - "traefik.http.routers.minio-api.entrypoints=websecure"
-      - "traefik.http.routers.minio-api.tls=true"
       - "traefik.http.routers.minio-console.entrypoints=websecure"
       - "traefik.http.routers.minio-console.tls=true"
     environment:
       # Additional production environment variables
-      MINIO_BROWSER_REDIRECT_URL: https://${MINIO_CONSOLE_HOST_URL}
-      MINIO_SERVER_URL: https://${MINIO_API_HOST_URL}
+      # MINIO_BROWSER_REDIRECT_URL: https://${MINIO_CONSOLE_HOST_URL}
+      # MINIO_SERVER_URL: https://${MINIO_API_HOST_URL}
     deploy:
       resources:
         limits:
