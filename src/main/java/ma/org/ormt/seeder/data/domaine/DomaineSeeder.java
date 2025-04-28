@@ -17,6 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import ma.org.ormt.core.utilities.FileUtils;
 import ma.org.ormt.modules.domaines.domaine.dtos.request.DomaineRequestDto;
 import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
@@ -43,6 +44,9 @@ public class DomaineSeeder implements CommandLineRunner {
     @Value("${starter.database.seed}")
     private boolean seeding;
 
+    @Value("${data.external.data}")
+    private String dataExternalPath;
+
     private final DomaineService domaineService;
     private final SousDomaineService sousDomaineService;
     private final IndicateurService indicateurService;
@@ -58,7 +62,7 @@ public class DomaineSeeder implements CommandLineRunner {
         }
 
         try {
-            Path resourcePath = Paths.get("src/main/resources/init-data/domaines");
+            Path resourcePath = Paths.get(dataExternalPath + "/init-data/domaines");
             if (!Files.exists(resourcePath)) {
                 log.warn("Resource path {} does not exist. Skipping domain data seeding.", resourcePath);
                 return;

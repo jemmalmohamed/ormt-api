@@ -54,3 +54,8 @@ file:
   token:
     secret: ${FILE_TOKEN_SECRET:OrmtFileSecurityTokenSecretKey}
     validitySeconds: ${FILE_TOKEN_VALIDITY:300}  # 5 minutes by default
+
+data:
+  external:
+    data_path: ./data/
+    

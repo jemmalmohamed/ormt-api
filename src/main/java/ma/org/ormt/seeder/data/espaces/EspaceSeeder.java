@@ -39,6 +39,9 @@ public class EspaceSeeder implements CommandLineRunner {
     @Value("${starter.database.seed}")
     private boolean seeding;
 
+    @Value("${data.external.data}")
+    private static String dataExternalPath;
+
     private final EspaceService espaceService;
 
     private final DomaineService domaineService;
@@ -47,7 +50,7 @@ public class EspaceSeeder implements CommandLineRunner {
 
     private final ObjectMapper objectMapper;
 
-    private static final String INIT_DATA_PATH = "src/main/resources/init-data/espaces";
+    private static final String INIT_DATA_PATH = dataExternalPath + "/init-data/espaces";
 
     /**
      * Executes the domain data seeding process when the application starts.

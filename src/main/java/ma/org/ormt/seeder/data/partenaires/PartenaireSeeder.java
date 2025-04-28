@@ -37,10 +37,13 @@ public class PartenaireSeeder implements CommandLineRunner {
     @Value("${starter.database.seed}")
     private boolean seeding;
 
+    @Value("${data.external.data}")
+    private static String dataExternalPath;
+
     private final PartenaireService partenaireService;
     private final ObjectMapper objectMapper;
 
-    private static final String INIT_DATA_PATH = "src/main/resources/init-data/partenaires";
+    private static final String INIT_DATA_PATH = dataExternalPath + "/init-data/partenaires";
 
     /**
      * Executes the partner data seeding process when the application starts.
