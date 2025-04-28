@@ -11,7 +11,7 @@ starter:
 # Added MinIO configuration for production
 
 minio:
-  endpoint: http://localhost:9000
+  endpoint: http://minio-ormt:9000
   access-key: minio
   secret-key: minio@ormt
   bucket: ormt
