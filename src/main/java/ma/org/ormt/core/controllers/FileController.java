@@ -227,7 +227,15 @@ public class FileController {
      * Checks both Origin and Referer headers
      */
     private boolean isValidOrigin(String origin, String referer) {
-        // Allow if at least one header matches our frontend URL
+        // For direct image requests in browser (no Origin but has token)
+        // This happens specifically with <img> tags in HTML
+        if (origin == null && referer == null) {
+            log.debug("Direct image request with no origin/referer - will verify via token");
+            // Let the token validation handle security in this case
+            return true;
+        }
+        
+        // Otherwise, verify against our frontend URL
         return (origin != null && origin.equals(frontendUrl)) ||
                 (referer != null && referer.startsWith(frontendUrl));
     }
