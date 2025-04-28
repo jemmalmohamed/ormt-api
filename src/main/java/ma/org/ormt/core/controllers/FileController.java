@@ -78,32 +78,19 @@ public class FileController {
 
     /**
      * Get a file from MinIO by its filename with token verification
+     * Supports both custom file tokens and Keycloak Bearer tokens
      */
     @GetMapping("/{fileName}")
     public ResponseEntity<byte[]> getFile(
             @PathVariable String fileName,
-            @RequestParam(required = true) String token, // Make token REQUIRED
+            @RequestParam(required = false) String token,
             HttpServletRequest request) {
         String origin = request.getHeader("Origin");
         String referer = request.getHeader("Referer");
+        String authHeader = request.getHeader("Authorization");
 
         if (!isValidOrigin(origin, referer)) {
-            log.warn("Unauthorized secure URL generation attempt from origin: {}, referer: {}", origin, referer);
-            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
-        }
-
-        // Decode the token if present (it may be URL-encoded)
-        String decodedToken = null;
-        if (token != null) {
-            try {
-                decodedToken = java.net.URLDecoder.decode(token, java.nio.charset.StandardCharsets.UTF_8);
-            } catch (Exception e) {
-                log.warn("Error decoding token: {}", e.getMessage());
-                return new ResponseEntity<>(HttpStatus.FORBIDDEN);
-            }
-        } else {
-            // Token is now required
-            log.warn("No token provided for file: {}", fileName);
+            log.warn("Unauthorized file access attempt from origin: {}, referer: {}", origin, referer);
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
 
@@ -112,9 +99,31 @@ public class FileController {
         String ipAddress = getClientIpAddress(request);
         String browserFingerprint = createBrowserFingerprint(userAgent, ipAddress);
 
-        // Always require valid token with matching fingerprint
-        if (!fileSecurityService.validateFileToken(fileName, decodedToken, browserFingerprint)) {
-            log.warn("Invalid or expired token for file: {}", fileName);
+        // Check if we have a Bearer token (Keycloak)
+        boolean isKeycloakAuthenticated = false;
+        if (authHeader != null && authHeader.startsWith("Bearer ")) {
+            // User is using Keycloak authentication
+            isKeycloakAuthenticated = true;
+            // We don't need to validate the token here as Spring Security already did that
+            log.debug("Using Keycloak authentication for file access: {}", fileName);
+        } else if (token != null && !token.isEmpty()) {
+            // User is using our custom file token system
+            String decodedToken;
+            try {
+                decodedToken = java.net.URLDecoder.decode(token, java.nio.charset.StandardCharsets.UTF_8);
+            } catch (Exception e) {
+                log.warn("Error decoding token: {}", e.getMessage());
+                return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+            }
+
+            // Validate the custom file token
+            if (!fileSecurityService.validateFileToken(fileName, decodedToken, browserFingerprint)) {
+                log.warn("Invalid or expired token for file: {}", fileName);
+                return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+            }
+        } else {
+            // No authentication provided
+            log.warn("No authentication provided for file: {}", fileName);
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
 
@@ -127,7 +136,7 @@ public class FileController {
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.parseMediaType(contentType));
 
-            // Prevent ALL caching
+            // Prevent caching for authenticated content
             headers.setCacheControl("no-store, no-cache, must-revalidate, max-age=0");
             headers.setPragma("no-cache");
             headers.setExpires(0);
@@ -143,11 +152,6 @@ public class FileController {
             log.error("Error retrieving file {}: {}", fileName, e.getMessage(), e);
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-    }
-
-    // Generate a random ETag to prevent caching
-    private String generateRandomETag() {
-        return "\"" + java.util.UUID.randomUUID().toString() + "\"";
     }
 
     /**
@@ -318,5 +322,10 @@ public class FileController {
             log.error("Error creating browser fingerprint: {}", e.getMessage(), e);
             return fingerprint; // Fallback to plain fingerprint
         }
+    }
+
+    // Generate a random ETag to prevent caching
+    private String generateRandomETag() {
+        return "\"" + java.util.UUID.randomUUID().toString() + "\"";
     }
 }
