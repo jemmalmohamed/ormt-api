@@ -160,6 +160,27 @@ def runOrmtApiContainer() {
   }
 }
 
+// Setup data volume with correct permissions
+def setupDataVolume() {
+  try {
+    sh '''
+      # Ensure volume exists
+      docker volume create ormt_api_data || true
+      
+      # Create a temporary container to set up permissions
+      docker run --rm -v ormt_api_data:/data alpine sh -c "mkdir -p /data/init-data && chmod 755 /data"
+      
+      # If there's existing data to migrate, copy it
+      if [ -d "./data" ] && [ -n "$(ls -A ./data)" ]; then
+        docker run --rm -v $(pwd)/data:/source -v ormt_api_data:/dest alpine sh -c "cp -r /source/* /dest/ || true"
+      fi
+    '''
+  } catch (Exception e) {
+     echo "Error in setting up data volume: ${e.getMessage()}"
+     throw e
+  }
+}
+
 pipeline {
   agent { node { label 'vps-84.247.134.226' } }  
   parameters {
@@ -175,6 +196,7 @@ pipeline {
     booleanParam(name: 'build_ormt_api', defaultValue: true, description: 'Build ormt-api before building and deploying')
     booleanParam(name: 'build_ormt_api_image', defaultValue: true, description: 'Build ormt-api image before building and deploying')
     booleanParam(name: 'run_ormt_api', defaultValue: true, description: 'Run ormt-api')
+    booleanParam(name: 'setup_data_volume', defaultValue: true, description: 'Setup data volume with correct permissions')
     }
   tools {
         maven 'maven' 
@@ -194,9 +216,16 @@ pipeline {
       }
     }
 
+    stage("Setup data volume") {
+      when { expression { params.setup_data_volume } }
+      steps {
+        script {
+          setupDataVolume()
+        }
+      }
+    }
 
     stage("Build and Deploy App Services") {
-      // when {  expression {  params.build_services  }  }
        parallel{
           stage("Build Keycloak containers"){
            when {  expression {  params.prune_keycloak || params.run_keycloak  }  }
