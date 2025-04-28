@@ -50,8 +50,9 @@ spring:
     ignore-future-migrations: false
 
 keycloak:
+  # host: ormt-kc:8080
   host: ormt-kc:8080
-  auth-server-url: http://${keycloak.host}
+  auth-server-url: https://users.ormt-ms.org
   admin:
     realm: master
     client: admin-cli
