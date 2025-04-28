@@ -38,7 +38,7 @@ public class FileController {
     @Value("${minio.bucket}")
     private String bucketName;
 
-    @Value("${keycloak.clients.frontend.root-url}")
+    @Value("${keycloak.clients.backend.root-url}")
     private String frontendUrl;
 
     /**
