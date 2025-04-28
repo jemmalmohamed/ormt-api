@@ -1,4 +1,10 @@
 services:
   minio-ormt:
-
+    labels:
+      # API routing (port 9000)
+      # - "traefik.enable=true"
+      # - "traefik.http.routers.minio-api.service=minio-api"
+      # - "traefik.http.routers.minio-api.entrypoints=web"
+      # - "traefik.http.routers.minio-api.rule=Host(`${MINIO_API_HOST_URL}`)"
+      # - "traefik.http.services.minio-api.loadbalancer.server.port=9000"
 
