@@ -181,42 +181,9 @@ pipeline {
     }
   environment {
         IMAGE_TAG = 'ormt/ormt-api:latest'
-        DATA_DIR = "${WORKSPACE}/data"
     }
-  
-  options {
-    // Skip the default checkout to ensure our workspace setup runs first
-    skipDefaultCheckout(true)
-  }
-  
   stages {
-    stage("Setup Workspace") {
-      steps {
-        script {
-          try {
-            // Create necessary directories with correct permissions
-            sh '''
-              # Make sure the data directory exists with proper permissions
-              mkdir -p ${DATA_DIR}
-              mkdir -p ${DATA_DIR}/init-data
-              
-              # Ensure the workspace and created directories have the right permissions
-              chmod -R 777 ${DATA_DIR}
-              chmod -R 777 ${WORKSPACE}
-              
-              echo "Created data directories with proper permissions"
-            '''
-            
-            // Perform checkout after directory setup
-            checkout scm
-            
-          } catch (Exception e) {
-            echo "Error in setting up workspace: ${e.getMessage()}"
-            throw e
-          }
-        }
-      }
-    }
+
     
     stage("Verify tooling"){
       when {  expression { params.verify_tooling }       }
@@ -314,11 +281,5 @@ pipeline {
         }
       }
       
-  }
-  
-  post {
-    always {
-      cleanWs()
-    }
   }
 }
