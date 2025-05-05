@@ -39,6 +39,7 @@ public class IndicateurLoadController extends BaseController<Indicateur> {
         private static final String ENTITY_NAME = "indicateur";
 
         private final IndicateurService indicateurService;
+
         private final IndicateurDtoMapper indicateurDtoMapper;
         private final IndicateurDetailDtoMapper indicateurDetailMapper;
 

@@ -147,7 +147,7 @@ public class PartenaireSeeder implements CommandLineRunner {
             // Look for the image in the images subfolder
             Path imagePath = Paths.get(initDataPath, IMAGES_SUBFOLDER, partenaire.getImageUrl());
             if (!Files.exists(imagePath)) {
-                log.warn("Image not found at path: {}. Trying direct path.", imagePath);
+                log.error("Image not found at path: {}. Trying direct path.", imagePath);
                 // Fallback to the main directory if not found in images subdirectory
                 imagePath = Paths.get(initDataPath, partenaire.getImageUrl());
             }

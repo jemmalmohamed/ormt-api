@@ -169,7 +169,7 @@ public class EspaceSeeder implements CommandLineRunner {
         if (StringUtils.hasText(espace.getImageUrl())) {
             Path imagePath = Paths.get(initDataPath, IMAGES_SUBFOLDER, espace.getImageUrl());
             if (!Files.exists(imagePath)) {
-                log.warn("Image not found at path: {}. Trying direct path.", imagePath);
+                log.error("Image not found at path: {}. Trying direct path.", imagePath);
                 // Fallback to the main directory if not found in images subdirectory
                 imagePath = Paths.get(initDataPath, espace.getImageUrl());
             }

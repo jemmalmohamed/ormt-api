@@ -27,7 +27,7 @@ import ma.org.ormt.core.minio.MinioService;
 @Log4j2
 @Configuration
 @RequiredArgsConstructor
-@Order(3)
+@Order(1)
 public class MinioInitilizer implements CommandLineRunner {
 
     private final MinioClient minioClient;
