@@ -21,7 +21,7 @@ public class ApplicationContextHolder implements ApplicationContextAware {
         factory.autowireBean(bean);
     }
 
-    @SuppressWarnings("null")
+    // @SuppressWarnings("null")
     @Override
     public void setApplicationContext(ApplicationContext applicationContext)
             throws BeansException {

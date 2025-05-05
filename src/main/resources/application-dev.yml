@@ -3,13 +3,17 @@ server:
 
 starter:
   database:
-    reset: true
-    seed: true
+    reset: false
+    seed: false
+  minio:
+    reset: false
+    seed: false
   keycloak: 
     reset: false
     seed: false
   faker :
     seed : false
+
  
 spring: 
   security:
@@ -37,8 +41,6 @@ minio:
   access-key: minio
   secret-key: minio@ormt
   bucket: ormt
-  initialize: true
-  reset: true
   allowed-origins: http://localhost:3000
 
 keycloak:

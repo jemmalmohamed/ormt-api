@@ -18,7 +18,7 @@ import org.springframework.core.annotation.Order;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import ma.org.ormt.security.keycloak.config.KeycloakService;
+import ma.org.ormt.security.keycloak.config.KeycloakConnectService;
 import ma.org.ormt.security.keycloak.services.realm.KeycloakRealmService;
 import ma.org.ormt.security.keycloak.services.roles.client.KeycloakClientRoleService;
 import ma.org.ormt.security.keycloak.services.roles.enums.KeycloakRole;
@@ -33,7 +33,7 @@ public class KeycloakUserSetupRunner implements CommandLineRunner {
     private final KeycloakRealmService keycloakRealmService;
 
     private final KeycloakUserService keycloakUserService;
-    private final KeycloakService keycloakService;
+    private final KeycloakConnectService keycloakService;
 
     private final KeycloakClientRoleService keycloakClientRoleService;
     @Value("${keycloak.realm}")
@@ -61,7 +61,7 @@ public class KeycloakUserSetupRunner implements CommandLineRunner {
         ClientResource backendClientResource = keycloakRealmService.getClientResource(keycloak, realmName,
                 backendClientName).orElse(null);
 
-        List<SimpleEntry<UserRepresentation, String>> usersWithRoles = keycloakUserService.getUsersWithRoles(
+        List<SimpleEntry<UserRepresentation, String>> usersWithRoles = keycloakUserService.getUsersWithRolesFromJson(
                 "init-data/authentication/users.json");
 
         Map<String, String> rolesMap = getRolesMap();
@@ -103,6 +103,7 @@ public class KeycloakUserSetupRunner implements CommandLineRunner {
 
             RoleRepresentation roleRepresentation = keycloakClientRoleService
                     .findRoleClientByName(clientResource, userWithRole.getValue()).get();
+
             assignRoleToUser(realmResource, clientResource, roleRepresentation, userRepresentation);
         }
     }

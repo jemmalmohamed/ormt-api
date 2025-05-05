@@ -1,6 +1,9 @@
 package ma.org.ormt.modules.domaines.domaine.dtos;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -8,6 +11,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.BaseDto;
+import ma.org.ormt.modules.users.AdminRoleFilter;
+import ma.org.ormt.modules.users.roleacces.dtos.summary.RoleAccesSummaryDto;
 
 @Setter
 @Getter
@@ -21,10 +26,12 @@ public class DomaineDto extends BaseDto {
 
     private String description;
 
-    private String role;
+    private String imageUrl;
 
-    private String statut;
+    private Boolean actif;
 
     private String apropos;
 
+    @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = AdminRoleFilter.class)
+    private List<RoleAccesSummaryDto> roleAcces;
 }

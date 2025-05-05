@@ -101,13 +101,12 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
     @Override
     public SousDomaine update(Long id, SousDomaineRequestDto requestDto) {
         validator.validate(requestDto);
-        SousDomaine sousDomaineToUpdate = sousDomaineRequestMapper.mapToEntity(requestDto);
-        checkPathId(id, sousDomaineToUpdate.getId());
+        checkPathId(id, requestDto.getId());
 
         SousDomaine sousDomaine = sousDomaineRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
 
-        updateFields(sousDomaine, sousDomaineToUpdate);
+        updateFields(sousDomaine, requestDto);
 
         return sousDomaineRepository.save(sousDomaine);
     }
@@ -154,9 +153,10 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
         validateSousDomaineDependencies(id);
     }
 
-    private void updateFields(SousDomaine sousDomaine, SousDomaine entityToUpdate) {
+    private void updateFields(SousDomaine sousDomaine, SousDomaineRequestDto entityToUpdate) {
         sousDomaine.setNom(entityToUpdate.getNom());
         sousDomaine.setDescription(entityToUpdate.getDescription());
+        sousDomaine.setActif(entityToUpdate.getActif());
     }
 
     private void validateSousDomaineDependencies(Long id) {

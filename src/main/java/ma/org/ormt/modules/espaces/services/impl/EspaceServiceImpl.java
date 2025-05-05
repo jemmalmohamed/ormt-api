@@ -116,51 +116,40 @@ public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements Espace
     }
 
     @Override
-    public Espace create(EspaceRequestDto requestDto) {
-        try {
-            validator.validate(requestDto);
-            String imageFileName = minioService.uploadFile(requestDto.getImageFile());
+    public Espace create(EspaceRequestDto requestDto) throws Exception {
 
-            Espace espaceToCreate = espaceRequestMapper.mapToEntity(requestDto);
-            espaceToCreate.setImageUrl(imageFileName); // Store just the filename
-            return espaceRepository.save(espaceToCreate);
-        } catch (Exception e) {
-            throw new IllegalArgumentException("Erreur lors de la création de la espace: " + e.getMessage());
-        }
+        validator.validate(requestDto);
+        Espace espaceToCreate = espaceRequestMapper.mapToEntity(requestDto);
+        String imageFileName = minioService.uploadFile(requestDto.getImageFile());
+        espaceToCreate.setImageUrl(imageFileName); // Store just the filename
+        return espaceRepository.save(espaceToCreate);
+
     }
 
     @Override
-    public Espace update(Long id, EspaceRequestDto requestDto) {
-        try {
-            validator.validate(requestDto);
+    public Espace update(Long id, EspaceRequestDto requestDto) throws Exception {
+        validator.validate(requestDto);
+        checkPathId(id, requestDto.getId());
+        Espace espace = espaceRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+        updateEspaceFields(espace, requestDto);
+        handleImageUpdate(espace, requestDto);
+        return espaceRepository.save(espace);
+    }
 
-            Espace espaceToUpdate = espaceRequestMapper.mapToEntity(requestDto);
+    private void updateEspaceFields(Espace espace, EspaceRequestDto dto) {
+        espace.setNom(dto.getNom());
+        espace.setDescription(dto.getDescription());
+        espace.setApropos(dto.getApropos());
+        espace.setActif(dto.getActif());
+    }
 
-            checkPathId(id, espaceToUpdate.getId());
+    private void handleImageUpdate(Espace espace, EspaceRequestDto dto) throws Exception {
+        if (dto.getImageFile() != null && !dto.getImageFile().isEmpty()) {
 
-            Espace espace = espaceRepository.findById(id)
-                    .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+            String imageFileName = minioService.uploadFile(dto.getImageFile());
+            espace.setImageUrl(imageFileName);
 
-            espace.setNom(requestDto.getNom());
-            espace.setDescription(requestDto.getDescription());
-            espace.setApropos(requestDto.getApropos());
-            espace.setStatut(requestDto.getStatut());
-            try {
-                if (requestDto.getImageFile() != null && !requestDto.getImageFile().isEmpty()) {
-
-                    // Upload the new file
-                    String imageFileName = minioService.uploadFile(requestDto.getImageFile());
-
-                    // Store just the filename, not the full URL
-                    espace.setImageUrl(imageFileName);
-                }
-                // If no new photo is provided, keep the existing one
-            } catch (Exception e) {
-                throw new RuntimeException("Error updating partenaire photo: " + e.getMessage(), e);
-            }
-            return espaceRepository.save(espace);
-        } catch (Exception e) {
-            throw new IllegalArgumentException("Erreur lors de la mise à jour de la espace: " + e.getMessage());
         }
     }
 

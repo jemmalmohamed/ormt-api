@@ -1,8 +1,13 @@
 {
   "nom": "qualité de l'emploi",
   "description": "étude des caractéristiques qualitatives du marché de l'emploi",
-  "role": "role_public",
-  "statut": "actif",
+  "roleacces": [
+    {
+      "rolecode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
   "indicateurs": [
     {
       "nom": "part de l'emploi informel par secteur d'activité",
@@ -13,8 +18,13 @@
       "reglecalcul": "et-s-idp",
       "unite": "pourcentage",
       "periode": "2023",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -45,8 +55,13 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2024",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -86,8 +101,13 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2024",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "milieu",
@@ -127,8 +147,13 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2024",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "diplome",
@@ -159,8 +184,13 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2024",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "milieu",
@@ -200,8 +230,13 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2024",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "milieu",
@@ -241,8 +276,13 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2024",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "genre",
@@ -273,8 +313,13 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2023",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -305,8 +350,13 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2023",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "secteur_activite",

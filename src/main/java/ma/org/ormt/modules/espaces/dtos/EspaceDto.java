@@ -11,7 +11,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.Dto;
-import ma.org.ormt.security.roleacces.dtos.summary.RoleAccesSummaryDto;
+import ma.org.ormt.modules.users.AdminRoleFilter;
+import ma.org.ormt.modules.users.roleacces.dtos.summary.RoleAccesSummaryDto;
 
 @Setter
 @Getter
@@ -29,7 +30,7 @@ public class EspaceDto extends Dto {
 
     private String description;
 
-    private String statut;
+    private Boolean actif;
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = AdminRoleFilter.class)
     private List<RoleAccesSummaryDto> roleAcces;

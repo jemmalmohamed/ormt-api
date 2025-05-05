@@ -20,14 +20,14 @@ import org.springframework.stereotype.Component;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import ma.org.ormt.security.keycloak.config.KeycloakService;
+import ma.org.ormt.security.keycloak.config.KeycloakConnectService;
 
 @Component
 @RequiredArgsConstructor
 @Log4j2
 public class PublicRoleProvider {
 
-    private final KeycloakService keycloakService;
+    private final KeycloakConnectService keycloakService;
 
     @Value("${keycloak.realm}")
     private String realm;

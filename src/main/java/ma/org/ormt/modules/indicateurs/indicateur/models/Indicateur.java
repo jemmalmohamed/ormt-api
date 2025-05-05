@@ -44,9 +44,7 @@ public class Indicateur extends BaseEntity {
 
     private String categorie;
 
-    private String role;
-
-    private String statut;
+    private Boolean actif;
 
     private String typeTb;
 

@@ -86,20 +86,19 @@ public class SourceServiceImpl extends BaseServiceImpl<Source> implements Source
     public Source update(Long id, SourceRequestDto requestDto) {
         try {
             validator.validate(requestDto);
-            Source sourceToUpdate = sourceRequestMapper.mapToEntity(requestDto);
-            checkPathId(id, sourceToUpdate.getId());
+            checkPathId(id, requestDto.getId());
 
             Source source = sourceRepository.findById(id)
                     .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
 
-            updateFields(source, sourceToUpdate);
+            updateFields(source, requestDto);
             return sourceRepository.save(source);
         } catch (Exception e) {
             throw new IllegalArgumentException("Erreur lors de la mise à jour de la source: " + e.getMessage());
         }
     }
 
-    private void updateFields(Source source, Source entityToUpdate) {
+    private void updateFields(Source source, SourceRequestDto entityToUpdate) {
         source.setNom(entityToUpdate.getNom());
         source.setDescription(entityToUpdate.getDescription());
     }

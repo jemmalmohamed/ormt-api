@@ -25,9 +25,7 @@ public class SousDomaineDto extends BaseDto {
 
     private String description;
 
-    private String role;
-
-    private String statut;
+    private Boolean actif;
 
     private List<IndicateurDto> indicateurs;
 

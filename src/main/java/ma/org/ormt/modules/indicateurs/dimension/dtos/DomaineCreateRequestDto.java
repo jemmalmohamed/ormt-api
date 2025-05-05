@@ -10,16 +10,16 @@ public class DomaineCreateRequestDto {
     private String nom;
     private String description;
     private String apropos;
-    private String role;
-    private String statut;
+
+    private Boolean actif;
 
     @Data
     @NoArgsConstructor
     public static class SousDomaineCreateRequestDto {
         private String nom;
         private String description;
-        private String role;
-        private String statut;
+
+        private Boolean actif;
         private List<IndicateurCreateRequestDto> indicateurs;
     }
 
@@ -28,8 +28,8 @@ public class DomaineCreateRequestDto {
     public static class IndicateurCreateRequestDto {
         private String nom;
         private String categorie;
-        private String role;
-        private String statut;
+
+        private Boolean actif;
         private String abreviation;
         private String description;
         private String typeTb;

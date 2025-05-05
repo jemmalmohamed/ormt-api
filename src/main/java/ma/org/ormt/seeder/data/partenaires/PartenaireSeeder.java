@@ -61,7 +61,7 @@ public class PartenaireSeeder implements CommandLineRunner {
         try {
             String initDataPath = dataExternalPath + "/init-data/partenaires";
             log.info("Using data path: {}", initDataPath);
-            
+
             Path resourcePath = Paths.get(initDataPath);
             if (!Files.exists(resourcePath)) {
                 log.warn("Resource path {} does not exist. Skipping partenaire data seeding.", resourcePath);
@@ -84,7 +84,7 @@ public class PartenaireSeeder implements CommandLineRunner {
     /**
      * Creates partners from a JSON file.
      *
-     * @param jsonFile The JSON file containing partner data
+     * @param jsonFile     The JSON file containing partner data
      * @param initDataPath The base path for initialization data
      */
     @Transactional
@@ -120,7 +120,7 @@ public class PartenaireSeeder implements CommandLineRunner {
     /**
      * Creates a single partner in the database.
      *
-     * @param partenaire The partner data from JSON
+     * @param partenaire   The partner data from JSON
      * @param initDataPath The base path for initialization data
      * @throws IOException If there's an error processing the image file
      */
@@ -141,7 +141,7 @@ public class PartenaireSeeder implements CommandLineRunner {
         requestDto.setNom(partenaire.getNom());
         requestDto.setDescription(partenaire.getDescription());
         requestDto.setSiteWebUrl(partenaire.getSiteWebUrl());
-        
+
         // Process the image only if a imageUrl is provided
         if (StringUtils.hasText(partenaire.getImageUrl())) {
             // Look for the image in the images subfolder
@@ -151,13 +151,13 @@ public class PartenaireSeeder implements CommandLineRunner {
                 // Fallback to the main directory if not found in images subdirectory
                 imagePath = Paths.get(initDataPath, partenaire.getImageUrl());
             }
-            
+
             if (Files.exists(imagePath)) {
                 MultipartFile imageFile = FileToMultipartFileConverter.toMultipartFile(imagePath.toFile());
                 requestDto.setImageFile(imageFile);
                 log.info("Found image for partenaire '{}' at: {}", partenaire.getNom(), imagePath);
             } else {
-                log.warn("Image for partenaire '{}' not found at: {}", partenaire.getNom(), imagePath);
+                log.error("Image for partenaire '{}' not found at: {}", partenaire.getNom(), imagePath);
             }
         }
 

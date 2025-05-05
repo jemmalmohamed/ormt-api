@@ -1,15 +1,25 @@
 {
   "nom": "création d'emploi",
   "description": "étude de la création d'emplois sur le marché",
-  "role": "role_public",
-  "statut": "actif",
+  "roleacces": [
+    {
+      "rolecode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
   "indicateurs": [
     {
       "nom": "création d'emploi par genre",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
@@ -51,8 +61,13 @@
       "abreviation": "",
       "typetb": "décisionnel / grand public",
       "source": "hcp",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
@@ -90,8 +105,13 @@
       "nom": "création d'emploi par statut professionnel",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
@@ -131,8 +151,13 @@
       "nom": "création d'emploi par secteur d'activité -7p",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
@@ -172,8 +197,13 @@
       "nom": "création d'emploi par secteur d'activité -2p",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
@@ -213,8 +243,13 @@
       "nom": "création d'emploi par secteur d'emploi",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
@@ -254,8 +289,13 @@
       "nom": "création d'emploi par type d'emploi",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
@@ -295,8 +335,13 @@
       "nom": "création d'emploi par région",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
@@ -327,8 +372,13 @@
       "nom": "création d'emploi salariés par secteur d'activité- cnss",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel / grand public",
       "source": "cnss",
       "reglecalcul": "",
@@ -368,8 +418,13 @@
       "nom": "création d'emploi salariés par région",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel / grand public",
       "source": "cnss",
       "reglecalcul": "",
@@ -409,8 +464,13 @@
       "nom": "création d'emploi eqtp par secteur d'activité",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel",
       "source": "cnss",
       "reglecalcul": "",
@@ -441,8 +501,13 @@
       "nom": "création d'emploi indépendants déclaré à la cnss par secteur d'activité",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel",
       "source": "cnss",
       "reglecalcul": "",
@@ -482,8 +547,13 @@
       "nom": "création d'emploi indépendants déclaré à la cnss par région",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel",
       "source": "cnss",
       "reglecalcul": "",
@@ -523,8 +593,13 @@
       "nom": "création d'emploi informel estimé",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel",
       "source": "hcp-cnss",
       "reglecalcul": "et-s-idp",

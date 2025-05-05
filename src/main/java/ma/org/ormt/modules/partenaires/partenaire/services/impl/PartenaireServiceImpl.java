@@ -71,11 +71,7 @@ public class PartenaireServiceImpl extends BaseServiceImpl<Partenaire> implement
     @Override
     public Partenaire create(PartenaireRequestDto requestDto) throws Exception {
         validator.validate(requestDto);
-
-        // Upload the file to MinIO and get the file name
         String imageFileName = minioService.uploadFile(requestDto.getImageFile());
-
-        // Create the partenaire with just the filename (not the full URL)
         Partenaire partenaireToCreate = partenaireRequestMapper.mapToEntity(requestDto);
         partenaireToCreate.setImageUrl(imageFileName); // Store just the filename
 
@@ -83,36 +79,29 @@ public class PartenaireServiceImpl extends BaseServiceImpl<Partenaire> implement
     }
 
     @Override
-    public Partenaire update(Long id, PartenaireRequestDto requestDto) {
+    public Partenaire update(Long id, PartenaireRequestDto requestDto) throws Exception {
         validator.validate(requestDto);
-
-        // Find the existing entity
+        checkPathId(id, requestDto.getId());
         Partenaire partenaire = partenaireRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+        updatePartenaireFields(partenaire, requestDto);
+        handleImageUpdate(partenaire, requestDto);
+        return partenaireRepository.save(partenaire);
+    }
 
-        // Update basic fields
+    private void updatePartenaireFields(Partenaire partenaire, PartenaireRequestDto requestDto) {
         partenaire.setNom(requestDto.getNom());
         partenaire.setDescription(requestDto.getDescription());
         partenaire.setSiteWebUrl(requestDto.getSiteWebUrl());
-        // Check if a new photo file is provided
-        try {
-            if (requestDto.getImageFile() != null && !requestDto.getImageFile().isEmpty()) {
-                // If old photo exists, delete it (optional enhancement)
-                // String oldFileName = extractFileNameFromUrl(partenaire.getimageUrl());
-                // minioService.deleteFile(oldFileName);
+    }
 
-                // Upload the new file
-                String imageFileName = minioService.uploadFile(requestDto.getImageFile());
+    private void handleImageUpdate(Partenaire partenaire, PartenaireRequestDto dto) throws Exception {
+        if (dto.getImageFile() != null && !dto.getImageFile().isEmpty()) {
 
-                // Store just the filename, not the full URL
-                partenaire.setImageUrl(imageFileName);
-            }
-            // If no new photo is provided, keep the existing one
-        } catch (Exception e) {
-            throw new RuntimeException("Error updating partenaire photo: " + e.getMessage(), e);
+            String imageFileName = minioService.uploadFile(dto.getImageFile());
+            partenaire.setImageUrl(imageFileName);
+
         }
-
-        return partenaireRepository.save(partenaire);
     }
 
     @Override

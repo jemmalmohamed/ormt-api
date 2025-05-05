@@ -30,10 +30,6 @@ public class Source extends BaseEntity {
 
     private String description;
 
-    private String role;
-
-    private String statut;
-
     @OneToMany(mappedBy = "source")
     private List<Indicateur> indicateurs;
 

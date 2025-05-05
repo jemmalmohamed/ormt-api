@@ -1,6 +1,7 @@
 package ma.org.ormt.seeder.data.domaine;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -18,14 +19,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import ma.org.ormt.core.utilities.FileUtils;
+import ma.org.ormt.modules.domaines.domaine.dtos.DomaineDto;
 import ma.org.ormt.modules.domaines.domaine.dtos.request.DomaineRequestDto;
 import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestDto;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
-import ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto;
 import ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto.IndicateurCreateRequestDto;
 import ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto.IndicateurCreateRequestDto.DimensionCreateRequestDto;
 import ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto.SousDomaineCreateRequestDto;
@@ -35,6 +35,9 @@ import ma.org.ormt.modules.indicateurs.indicateur.association.repository.Indicat
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurService;
+import ma.org.ormt.core.utilities.FileToMultipartFileConverter;
+import org.springframework.util.StringUtils;
+import org.springframework.web.multipart.MultipartFile;
 
 @Log4j2
 @Component
@@ -178,14 +181,16 @@ public class DomaineSeeder implements CommandLineRunner {
     private Domaine processDomaineJsonFile(File file) {
         try (InputStream inputStream = Files.newInputStream(file.toPath())) {
             log.info("Processing domain file: {}", file.getName());
-            DomaineCreateRequestDto domaine = objectMapper.readValue(inputStream, DomaineCreateRequestDto.class);
+            DomaineDto domaine = objectMapper.readValue(inputStream, DomaineDto.class);
 
             DomaineRequestDto requestDto = new DomaineRequestDto();
             requestDto.setNom(domaine.getNom());
             requestDto.setDescription(domaine.getDescription());
             requestDto.setApropos(domaine.getApropos());
-            requestDto.setRole(domaine.getRole());
-            requestDto.setStatut(domaine.getStatut());
+            requestDto.setActif(domaine.getActif());
+
+            handleDomaineImage(domaine, requestDto, file.getParent());
+
             Domaine createdDomaine = domaineService.create(requestDto);
 
             log.info("Created domain: {} with ID: {}", createdDomaine.getNom(), createdDomaine.getId());
@@ -193,6 +198,24 @@ public class DomaineSeeder implements CommandLineRunner {
         } catch (Exception e) {
             log.error("Error processing domain file {}: {}", file.getName(), e.getMessage());
             return null;
+        }
+    }
+
+    private void handleDomaineImage(DomaineDto domaine, DomaineRequestDto requestDto,
+            String domaineDirPath) throws IOException {
+        if (StringUtils.hasText(domaine.getImageUrl())) {
+            Path imagePath = Paths.get(domaineDirPath, domaine.getImageUrl());
+            if (!Files.exists(imagePath)) {
+                log.warn("Image not found at path: {}. Trying direct path.", imagePath);
+                imagePath = Paths.get(domaineDirPath, domaine.getImageUrl());
+            }
+            if (Files.exists(imagePath)) {
+                MultipartFile imageFile = FileToMultipartFileConverter.toMultipartFile(imagePath.toFile());
+                requestDto.setImageFile(imageFile);
+                log.info("Found image for domaine '{}' at: {}", domaine.getNom(), imagePath);
+            } else {
+                log.error("Image for domaine '{}' not found at: {}", domaine.getNom(), imagePath);
+            }
         }
     }
 
@@ -207,8 +230,7 @@ public class DomaineSeeder implements CommandLineRunner {
             SousDomaineRequestDto requestDto = new SousDomaineRequestDto();
             requestDto.setNom(sousDomaineData.getNom());
             requestDto.setDescription(sousDomaineData.getDescription());
-            requestDto.setRole(sousDomaineData.getRole());
-            requestDto.setStatut(sousDomaineData.getStatut());
+            requestDto.setActif(sousDomaineData.getActif());
 
             SousDomaine createdSousDomaine = sousDomaineService.create(parentDomaine.getId(), requestDto);
             log.info("Created subdomain: {} with ID: {} under domain: {}",
@@ -243,8 +265,7 @@ public class DomaineSeeder implements CommandLineRunner {
             Indicateur newIndicateur = new Indicateur();
             newIndicateur.setNom(indicateurRequest.getNom());
             newIndicateur.setCategorie(indicateurRequest.getCategorie());
-            newIndicateur.setRole(indicateurRequest.getRole());
-            newIndicateur.setStatut(indicateurRequest.getStatut());
+            newIndicateur.setActif(indicateurRequest.getActif());
             newIndicateur.setAbreviation(indicateurRequest.getAbreviation());
             newIndicateur.setTypeTb(indicateurRequest.getTypeTb());
             newIndicateur.setRegleCalcul(indicateurRequest.getRegleCalcul());

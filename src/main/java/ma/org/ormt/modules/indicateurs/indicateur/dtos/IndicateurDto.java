@@ -3,6 +3,7 @@ package ma.org.ormt.modules.indicateurs.indicateur.dtos;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -16,6 +17,8 @@ import ma.org.ormt.modules.domaines.sousdomaine.dtos.summary.SousDomaineSummaryD
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
 import ma.org.ormt.modules.indicateurs.indicateur.association.dtos.IndicateurDimensionDto;
 import ma.org.ormt.modules.indicateurs.source.dtos.summary.SourceSummaryDto;
+import ma.org.ormt.modules.users.AdminRoleFilter;
+import ma.org.ormt.modules.users.roleacces.dtos.summary.RoleAccesSummaryDto;
 
 @Setter
 @Getter
@@ -29,9 +32,7 @@ public class IndicateurDto extends BaseDto {
 
     private String regleCalcul;
 
-    private String role;
-
-    private String statut;
+    private Boolean actif;
 
     private String categorie;
 
@@ -47,4 +48,7 @@ public class IndicateurDto extends BaseDto {
     private List<DonneeIndicateurDto> donnees;
 
     private List<SousDomaineSummaryDto> sousDomaines;
+
+    @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = AdminRoleFilter.class)
+    private List<RoleAccesSummaryDto> roleAcces;
 }

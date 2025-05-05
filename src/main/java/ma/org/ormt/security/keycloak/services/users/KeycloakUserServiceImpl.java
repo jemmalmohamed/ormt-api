@@ -36,7 +36,7 @@ public class KeycloakUserServiceImpl implements KeycloakUserService {
 
         try (Response response = realmResource.users().create(userRepresentation)) {
             if (response.getStatus() != 201) {
-                throw new KeycloakException("Failed to create user");
+                throw new KeycloakException(response.getStatusInfo().getReasonPhrase());
             } else {
                 Optional<UserRepresentation> optionalUser = this.findUserByUserName(realmResource,
                         userRepresentation.getUsername());
@@ -90,7 +90,7 @@ public class KeycloakUserServiceImpl implements KeycloakUserService {
     }
 
     @Override
-    public List<UserJsonRepresentation> getUsersRepresentation(String usersJsonResources) {
+    public List<UserJsonRepresentation> getUsersRepresentationFromJson(String usersJsonResources) {
         ObjectMapper mapper = new ObjectMapper();
         try {
             InputStream inputStream = getClass().getClassLoader()
@@ -105,11 +105,12 @@ public class KeycloakUserServiceImpl implements KeycloakUserService {
     }
 
     @Override
-    public List<SimpleEntry<UserRepresentation, String>> getUsersWithRoles(String usersJsonResources) {
+    public List<SimpleEntry<UserRepresentation, String>> getUsersWithRolesFromJson(String usersJsonResources) {
         try {
-            List<UserJsonRepresentation> users = getUsersRepresentation(usersJsonResources);
+            List<UserJsonRepresentation> users = getUsersRepresentationFromJson(usersJsonResources);
 
             List<SimpleEntry<UserRepresentation, String>> userEntries = new ArrayList<>();
+
             for (UserJsonRepresentation userJson : users) {
                 UserRepresentation userRepresentation = mapToUserRepresentation(userJson);
                 SimpleEntry<UserRepresentation, String> userEntry = new SimpleEntry<>(

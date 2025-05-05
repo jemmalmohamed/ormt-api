@@ -1,13 +1,23 @@
 {
   "nom": "volume d'emploi",
-  "role": "role_public",
-  "statut": "actif",
+  "roleacces": [
+    {
+      "rolecode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
   "description": "étude du volume d'emplois disponibles sur le marché",
   "indicateurs": [
     {
       "nom": "emploi par genre",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "categorie": "emploi",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
@@ -48,8 +58,13 @@
     {
       "nom": "emploi par âge",
       "categorie": "emploi",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "abreviation": "",
       "typetb": "décisionnel / grand public",
       "source": "hcp",
@@ -89,8 +104,13 @@
     {
       "nom": "emploi par diplôme",
       "categorie": "emploi",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "abreviation": "",
       "typetb": "décisionnel / grand public",
       "source": "hcp",
@@ -131,8 +151,13 @@
       "nom": "emploi par secteur d'activité",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
@@ -172,8 +197,13 @@
       "nom": "emploi par statut professionnel",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "grand public",
       "source": "hcp",
       "reglecalcul": "",
@@ -213,8 +243,13 @@
       "nom": "emploi par type d'emploi",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "grand public",
       "source": "hcp",
       "reglecalcul": "",
@@ -245,8 +280,13 @@
       "nom": "emploi par secteur d'emploi",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "grand public",
       "source": "hcp",
       "reglecalcul": "",
@@ -278,8 +318,13 @@
       "categorie": "emploi",
       "abreviation": "",
       "typetb": "grand public",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "source": "hcp",
       "reglecalcul": "",
       "unite": "milliers",
@@ -309,8 +354,13 @@
       "nom": "emploi indépendants déclarés à la cnss par secteur d'activité",
       "categorie": "emploi",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel",
       "source": "cnss",
       "reglecalcul": "",
@@ -349,8 +399,13 @@
     {
       "nom": "emploi indépendants déclarés à la cnss par région",
       "categorie": "emploi",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "abreviation": "",
       "typetb": "décisionnel",
       "source": "cnss",
@@ -391,8 +446,13 @@
       "nom": "salariés déclarés à la cnss par secteur d'activité",
       "categorie": "salariés",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel / grand public",
       "source": "cnss",
       "reglecalcul": "",
@@ -432,8 +492,13 @@
       "nom": "salariés déclarés à la cnss par région",
       "categorie": "salariés",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel / grand public",
       "source": "cnss",
       "reglecalcul": "",
@@ -464,8 +529,13 @@
       "nom": "emploi salarié eqtp par secteur d'activité",
       "categorie": "salariés",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel",
       "source": "cnss",
       "reglecalcul": "",
@@ -498,8 +568,13 @@
       "abreviation": "",
       "typetb": "décisionnel",
       "source": "cnss",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
@@ -529,8 +604,13 @@
       "categorie": "salariés",
       "abreviation": "",
       "typetb": "décisionnel",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "source": "cnss",
       "reglecalcul": "dec/eqtp",
       "unite": "milliers",
@@ -562,8 +642,13 @@
       "abreviation": "",
       "typetb": "décisionnel",
       "source": "hcp-cnss",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "reglecalcul": "et-p-s-idp",
       "unite": "milliers",
       "periode": "2019-2024",
@@ -592,8 +677,13 @@
       "nom": "salarié public par secteur",
       "categorie": "salariés",
       "abreviation": "",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "typetb": "décisionnel",
       "source": "mef",
       "reglecalcul": "",

@@ -17,7 +17,7 @@ public interface PartenaireService extends BaseService<Partenaire> {
 
     Partenaire create(PartenaireRequestDto requestDto) throws Exception;
 
-    Partenaire update(Long id, PartenaireRequestDto partenaireRequestDto);
+    Partenaire update(Long id, PartenaireRequestDto partenaireRequestDto) throws Exception;
 
     boolean existsById(Long id);
 

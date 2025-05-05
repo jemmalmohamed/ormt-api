@@ -2,6 +2,12 @@
   "nom": "Offre de formation",
   "description": "Analyse du système de formation professionnelle, son accès et ses programmes",
   "apropos": "Analyse du système de formation professionnelle, son accès et ses programmes",
-  "role": "role_public",
-  "statut": "actif"
+  "imageUrl": "/images/offre-de-formation.png",
+  "roleacces": [
+    {
+      "rolecode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true
 }

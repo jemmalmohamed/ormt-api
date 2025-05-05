@@ -36,10 +36,10 @@ public class MinioInitilizer implements CommandLineRunner {
     @Value("${minio.bucket}")
     private String bucketName;
 
-    @Value("${minio.initialize}")
+    @Value("${starter.minio.seed}")
     private boolean initializeMinio;
 
-    @Value("${minio.reset:false}")
+    @Value("${starter.minio.reset}")
     private boolean resetBucket;
 
     @Override

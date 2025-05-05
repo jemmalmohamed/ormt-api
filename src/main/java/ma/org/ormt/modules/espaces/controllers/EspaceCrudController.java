@@ -53,7 +53,7 @@ public class EspaceCrudController extends BaseController<Espace> {
         @PostMapping("")
         @PreAuthorize("hasAuthority('espace:create')")
         public ResponseEntity<RestResponse<EspaceDto>> createEspace(
-                        @Validated(OnCreate.class) @ModelAttribute EspaceRequestDto requestDto) {
+                        @Validated(OnCreate.class) @ModelAttribute EspaceRequestDto requestDto) throws Exception {
                 Espace espace = espaceService.create(requestDto);
                 return buildResponseEntity(espace, EspaceDto.class, HttpStatus.CREATED);
         }
@@ -67,7 +67,7 @@ public class EspaceCrudController extends BaseController<Espace> {
         @PutMapping("{id}")
         @PreAuthorize("hasAuthority('espace:edit')")
         public ResponseEntity<RestResponse<EspaceDto>> updateEspace(@PathVariable Long id,
-                        @Validated(OnUpdate.class) @ModelAttribute EspaceRequestDto espaceRequestDto) {
+                        @Validated(OnUpdate.class) @ModelAttribute EspaceRequestDto espaceRequestDto) throws Exception {
                 Espace espace = espaceService.update(id, espaceRequestDto);
                 return buildResponseEntity(espace, EspaceDto.class, HttpStatus.OK);
         }
@@ -158,38 +158,6 @@ public class EspaceCrudController extends BaseController<Espace> {
                                 Espace.class, ids);
                 return buildResponseEntity(deletedIds, HttpStatus.OK);
         }
-
-        // @Operation(summary = "Associate espace with indicateur", responses = {
-        // @ApiResponse(responseCode = "204", description = "No content"),
-        // @ApiResponse(responseCode = "404", description = "Not found", content =
-        // @Content(mediaType = "ErrorResponse")),
-        // @ApiResponse(responseCode = "403", description = "Permission denied", content
-        // = @Content(mediaType = "ErrorResponse"))
-        // })
-        // @PostMapping("/associate")
-        // @PreAuthorize("hasAuthority('espace:edit')")
-        // public ResponseEntity<Void> associateWithIndicateur(@RequestBody
-        // IndicateurEspaceDto associationDto) {
-        // espaceService.associateWithIndicateur(associationDto.getIdEspace(),
-        // associationDto.getIdIndicateur());
-        // return ResponseEntity.noContent().build();
-        // }
-
-        // @Operation(summary = "Dissociate espace from indicateur", responses = {
-        // @ApiResponse(responseCode = "204", description = "No content"),
-        // @ApiResponse(responseCode = "404", description = "Not found", content =
-        // @Content(mediaType = "ErrorResponse")),
-        // @ApiResponse(responseCode = "403", description = "Permission denied", content
-        // = @Content(mediaType = "ErrorResponse"))
-        // })
-        // @DeleteMapping("/dissociate")
-        // @PreAuthorize("hasAuthority('espace:edit')")
-        // public ResponseEntity<Void> dissociateFromIndicateur(@RequestBody
-        // IndicateurEspaceDto associationDto) {
-        // espaceService.dissociateFromIndicateur(associationDto.getIdEspace(),
-        // associationDto.getIdIndicateur());
-        // return ResponseEntity.noContent().build();
-        // }
 
         @Override
         protected <DTO> DTO mapToDto(Espace entity, Class<DTO> dtoClass) {

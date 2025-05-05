@@ -14,7 +14,7 @@ import org.springframework.core.annotation.Order;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import ma.org.ormt.security.keycloak.config.KeycloakService;
+import ma.org.ormt.security.keycloak.config.KeycloakConnectService;
 import ma.org.ormt.security.keycloak.services.client.KeycloakClientService;
 import ma.org.ormt.security.keycloak.services.realm.KeycloakRealmService;
 
@@ -25,7 +25,7 @@ import ma.org.ormt.security.keycloak.services.realm.KeycloakRealmService;
 public class KeycloakClientSetupRunner implements CommandLineRunner {
 
     private final KeycloakRealmService keycloakRealmService;
-    private final KeycloakService keycloakService;
+    private final KeycloakConnectService keycloakService;
     private final KeycloakClientService keycloakClientService;
 
     @Value("${keycloak.secret}")

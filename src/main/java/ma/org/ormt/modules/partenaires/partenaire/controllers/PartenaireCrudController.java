@@ -80,7 +80,8 @@ public class PartenaireCrudController extends BaseController<Partenaire> {
         @PutMapping("{id}")
         @PreAuthorize("hasAuthority('partenaire:edit')")
         public ResponseEntity<RestResponse<PartenaireDto>> updatePartenaire(@PathVariable Long id,
-                        @Validated(OnUpdate.class) @ModelAttribute PartenaireRequestDto partenaireRequestDto) {
+                        @Validated(OnUpdate.class) @ModelAttribute PartenaireRequestDto partenaireRequestDto)
+                        throws Exception {
                 Partenaire partenaire = partenaireService.update(id, partenaireRequestDto);
                 return buildResponseEntity(partenaire, PartenaireDto.class, HttpStatus.OK);
         }

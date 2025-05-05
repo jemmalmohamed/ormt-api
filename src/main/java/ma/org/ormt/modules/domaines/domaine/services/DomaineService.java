@@ -1,5 +1,6 @@
 package ma.org.ormt.modules.domaines.domaine.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.domain.Page;
@@ -15,9 +16,11 @@ public interface DomaineService extends BaseService<Domaine> {
 
     Page<Domaine> getEntityList(QueryParams requestParams);
 
-    Domaine create(DomaineRequestDto requestDto);
+    Page<Domaine> getEntitiesByIds(List<Long> ids, QueryParams requestParams);
 
-    Domaine update(Long id, DomaineRequestDto domaineRequestDto);
+    Domaine create(DomaineRequestDto requestDto) throws Exception;
+
+    Domaine update(Long id, DomaineRequestDto domaineRequestDto) throws Exception;
 
     boolean existsById(Long id);
 

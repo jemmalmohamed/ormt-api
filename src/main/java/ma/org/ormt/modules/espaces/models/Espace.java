@@ -35,7 +35,7 @@ public class Espace extends BaseEntity {
 
     private String description;
 
-    private String statut;
+    private Boolean actif;
 
     @OneToMany(mappedBy = "espace", fetch = FetchType.EAGER)
     private List<EspaceDomaine> espaceDomaines;

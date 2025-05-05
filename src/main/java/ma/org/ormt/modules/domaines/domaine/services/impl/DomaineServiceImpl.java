@@ -1,5 +1,6 @@
 package ma.org.ormt.modules.domaines.domaine.services.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import ma.org.ormt.core.commun.base.service.SpecificationService;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
 import ma.org.ormt.core.commun.rest.responses.MessageResponse;
 import ma.org.ormt.core.exceptions.handlers.CannotDeleteException;
+import ma.org.ormt.core.minio.MinioService;
 import ma.org.ormt.core.utilities.EntityInspector;
 import ma.org.ormt.core.utilities.PaginationUtils;
 import ma.org.ormt.core.validators.ObjectsValidator;
@@ -35,6 +37,9 @@ public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements Doma
 
     @Autowired
     private ObjectsValidator<DomaineRequestDto> validator;
+
+    @Autowired
+    private MinioService minioService;
 
     @Autowired
     private DomaineRequestDtoMapper domaineRequestMapper;
@@ -71,21 +76,55 @@ public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements Doma
     }
 
     @Override
-    public Domaine create(DomaineRequestDto requestDto) {
-        validator.validate(requestDto);
-        Domaine domaineToCreate = domaineRequestMapper.mapToEntity(requestDto);
-        return domaineRepository.save(domaineToCreate);
+    public Page<Domaine> getEntitiesByIds(List<Long> ids, QueryParams requestParams) {
+        if (requestParams.getPageSize() == -1) {
+            requestParams.setPageSize(Integer.MAX_VALUE);
+        }
+        Pageable pageable = PaginationUtils.createPageable(requestParams);
+
+        if (!EntityInspector.isFieldPresentInEntity(pageable.getSort().toString(), Domaine.class)) {
+            pageable = PaginationUtils.createPageable(requestParams);
+        }
+
+        // If no IDs are provided or empty list, return empty page
+        if (ids == null || ids.isEmpty()) {
+            return Page.empty(pageable);
+        }
+        // Create specification for filtering by IDs
+        Specification<Domaine> idSpecification = (root, _, _) -> root.get("id").in(ids);
+
+        // Get filter specification and handle null case
+        Specification<Domaine> filterSpecification = specificationService
+                .createSpecificationWithDynamicGlobalFilter(requestParams.getFilters(),
+                        requestParams.getGlobalFilter(), Domaine.class);
+
+        // Combine specifications, handling null case
+        Specification<Domaine> specification = filterSpecification != null
+                ? filterSpecification.and(idSpecification)
+                : idSpecification;
+
+        return findAll(specification, pageable);
     }
 
     @Override
-    public Domaine update(Long id, DomaineRequestDto requestDto) {
-        // verify if id is the same as the one in the body
+    public Domaine create(DomaineRequestDto requestDto) throws Exception {
+
         validator.validate(requestDto);
-        Domaine domaineToUpdate = domaineRequestMapper.mapToEntity(requestDto);
-        checkPathId(id, domaineToUpdate.getId());
+        String imageFileName = minioService.uploadFile(requestDto.getImageFile());
+        Domaine domaineToCreate = domaineRequestMapper.mapToEntity(requestDto);
+        domaineToCreate.setImageUrl(imageFileName); // Store just the filename
+        return domaineRepository.save(domaineToCreate);
+
+    }
+
+    @Override
+    public Domaine update(Long id, DomaineRequestDto requestDto) throws Exception {
+        validator.validate(requestDto);
+        checkPathId(id, requestDto.getId());
         Domaine domaine = domaineRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
-        updateFields(domaine, domaineToUpdate);
+        updateDomaineFields(domaine, requestDto);
+        handleImageUpdate(domaine, requestDto);
         return domaineRepository.save(domaine);
     }
 
@@ -104,13 +143,21 @@ public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements Doma
         validateDomaineDependencies(id);
     }
 
-    private void updateFields(Domaine domaine, Domaine entityToUpdate) {
+    private void updateDomaineFields(Domaine domaine, DomaineRequestDto entityToUpdate) {
         domaine.setNom(entityToUpdate.getNom());
         domaine.setDescription(entityToUpdate.getDescription());
-        domaine.setRole(entityToUpdate.getRole());
-        domaine.setStatut(entityToUpdate.getStatut());
+        domaine.setActif(entityToUpdate.getActif());
         domaine.setApropos(entityToUpdate.getApropos());
 
+    }
+
+    private void handleImageUpdate(Domaine domaine, DomaineRequestDto dto) throws Exception {
+        if (dto.getImageFile() != null && !dto.getImageFile().isEmpty()) {
+
+            String imageFileName = minioService.uploadFile(dto.getImageFile());
+            domaine.setImageUrl(imageFileName);
+
+        }
     }
 
     private void validateDomaineDependencies(Long id) {

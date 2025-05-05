@@ -31,7 +31,7 @@ flyway:
 
 data:
   external:
-    data_path: ./data/
+    data_path: ./data
 
 jwt:
   auth:
@@ -45,9 +45,9 @@ springdoc:
     path: /swagger-ui.html 
     filter: false
  
-logging:
-  level:
-    com.zaxxer.hikari: DEBUG
+# logging:
+#   level:
+#     com.zaxxer.hikari: DEBUG
 
 # File security settings
 file:

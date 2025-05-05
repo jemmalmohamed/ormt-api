@@ -92,13 +92,12 @@ public class DimensionServiceImpl extends BaseServiceImpl<Dimension> implements 
     public Dimension update(Long id, DimensionRequestDto requestDto) {
         try {
             validator.validate(requestDto);
-            Dimension dimensionToUpdate = dimensionRequestMapper.mapToEntity(requestDto);
-            checkPathId(id, dimensionToUpdate.getId());
+            checkPathId(id, requestDto.getId());
 
             Dimension dimension = dimensionRepository.findById(id)
                     .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
 
-            updateFields(dimension, dimensionToUpdate);
+            updateFields(dimension, requestDto);
             return dimensionRepository.save(dimension);
         } catch (Exception e) {
             throw new IllegalArgumentException("Erreur lors de la mise à jour de la dimension: " + e.getMessage());
@@ -149,7 +148,7 @@ public class DimensionServiceImpl extends BaseServiceImpl<Dimension> implements 
         }
     }
 
-    private void updateFields(Dimension dimension, Dimension entityToUpdate) {
+    private void updateFields(Dimension dimension, DimensionRequestDto entityToUpdate) {
         dimension.setNom(entityToUpdate.getNom());
         dimension.setLibelle(entityToUpdate.getLibelle());
         dimension.setType(entityToUpdate.getType());

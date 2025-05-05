@@ -1,8 +1,13 @@
 {
   "nom": "salaires & productivité",
   "description": "étude des salaires et de la productivité dans l'économie",
-  "role": "role_public",
-  "statut": "actif",
+  "roleacces": [
+    {
+      "rolecode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
   "indicateurs": [
     {
       "nom": "productivité par secteur d'activité",
@@ -13,8 +18,13 @@
       "reglecalcul": "",
       "unite": "dh",
       "periode": "2019-2024",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -54,8 +64,13 @@
       "reglecalcul": "",
       "unite": "million dh",
       "periode": "2019-2024",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -95,8 +110,13 @@
       "reglecalcul": "",
       "unite": "million dh",
       "periode": "2019-2024",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -136,8 +156,13 @@
       "reglecalcul": "",
       "unite": "dh",
       "periode": "2019-2024",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -177,8 +202,13 @@
       "reglecalcul": "",
       "unite": "dh",
       "periode": "2019-2024",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "annee",
@@ -200,8 +230,13 @@
       "reglecalcul": "",
       "unite": "dh",
       "periode": "2019-2024",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "annee",
@@ -223,8 +258,13 @@
       "reglecalcul": "",
       "unite": "dh",
       "periode": "a partir de 2023",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -264,8 +304,13 @@
       "reglecalcul": "",
       "unite": "dh",
       "periode": "a partir de 2024",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -305,8 +350,13 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "a partir de 2023",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "annee",
@@ -328,8 +378,13 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "a partir de 2023",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "annee",
@@ -351,8 +406,13 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2023",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "secteur_activite",

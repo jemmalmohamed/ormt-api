@@ -17,7 +17,7 @@ import org.keycloak.representations.idm.authorization.ScopeRepresentation;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
-import ma.org.ormt.security.keycloak.config.KeycloakService;
+import ma.org.ormt.security.keycloak.config.KeycloakConnectService;
 import ma.org.ormt.security.keycloak.representation.ResourceJsonRepresentation;
 import ma.org.ormt.security.keycloak.representation.ScopeJsonRepresentation;
 import ma.org.ormt.security.keycloak.services.authorization.permission.KeycloakPermissionService;
@@ -36,7 +36,7 @@ public class KeycloakStarterService {
 
     private final KeycloakScopeService keycloakScopeService;
 
-    private final KeycloakService keycloakService;
+    private final KeycloakConnectService keycloakService;
 
     private final KeycloakPolicyService keycloakPolicyService;
 

@@ -16,7 +16,7 @@ import org.springframework.security.oauth2.server.resource.authentication.JwtGra
 import org.springframework.stereotype.Component;
 
 import lombok.extern.log4j.Log4j2;
-import ma.org.ormt.security.keycloak.config.KeycloakService;
+import ma.org.ormt.security.keycloak.config.KeycloakConnectService;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -35,7 +35,7 @@ public class JwtAuthResourceConverter implements Converter<Jwt, AbstractAuthenti
     // @Autowired
     // private AuthzClient authzClient;
     @Autowired
-    private KeycloakService keycloakService;
+    private KeycloakConnectService keycloakService;
 
     @Autowired
     private JwtDecoder jwtDecoder;
@@ -59,7 +59,7 @@ public class JwtAuthResourceConverter implements Converter<Jwt, AbstractAuthenti
     private String adminPassword;
 
     @Override
-    public AbstractAuthenticationToken convert(@SuppressWarnings("null") Jwt jwt) {
+    public AbstractAuthenticationToken convert(Jwt jwt) {
 
         Collection<GrantedAuthority> authorities = Stream.concat(
                 jwtGrantedAuthoritiesConverter.convert(jwt).stream(),

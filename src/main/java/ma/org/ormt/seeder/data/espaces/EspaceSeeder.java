@@ -2,7 +2,6 @@ package ma.org.ormt.seeder.data.espaces;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -17,18 +16,18 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.core.utilities.FileToMultipartFileConverter;
+import ma.org.ormt.core.utilities.FileDataService;
 import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
 import ma.org.ormt.modules.espaces.dtos.EspaceDto;
 import ma.org.ormt.modules.espaces.dtos.request.EspaceRequestDto;
 import ma.org.ormt.modules.espaces.models.Espace;
 import ma.org.ormt.modules.espaces.services.EspaceService;
-import ma.org.ormt.security.roleacces.services.RoleAccesService;
+import ma.org.ormt.modules.users.roleacces.services.RoleAccesService;
 
 @Log4j2
 @Component
@@ -48,7 +47,7 @@ public class EspaceSeeder implements CommandLineRunner {
 
     private final RoleAccesService roleAccesService;
 
-    private final ObjectMapper objectMapper;
+    private final FileDataService fileDataService;
 
     private static final String IMAGES_SUBFOLDER = "images";
     private static final String ESPACES_JSON_FILE = "espaces.json";
@@ -69,7 +68,7 @@ public class EspaceSeeder implements CommandLineRunner {
         try {
             String initDataPath = dataExternalPath + "/init-data/espaces";
             log.info("Using data path: {}", initDataPath);
-            
+
             Path resourcePath = Paths.get(initDataPath);
             if (!Files.exists(resourcePath)) {
                 log.warn("Resource path {} does not exist. Skipping espace data seeding.", resourcePath);
@@ -77,7 +76,7 @@ public class EspaceSeeder implements CommandLineRunner {
             }
 
             File jsonFile = new File(resourcePath.toFile(), ESPACES_JSON_FILE);
-            if (!jsonFile.exists() || !jsonFile.isFile()) {
+            if (!fileDataService.fileExists(jsonFile)) {
                 log.warn("Espaces JSON file not found at: {}", jsonFile.getAbsolutePath());
                 return;
             }
@@ -92,14 +91,13 @@ public class EspaceSeeder implements CommandLineRunner {
     /**
      * Creates spaces from a JSON file.
      *
-     * @param jsonFile The JSON file containing espace data
+     * @param jsonFile     The JSON file containing espace data
      * @param initDataPath The base path for initialization data
      */
     @Transactional
     private void createEspacesFromJsonFile(File jsonFile, String initDataPath) {
-        try (InputStream inputStream = Files.newInputStream(jsonFile.toPath())) {
-            log.info("Processing espaces file: {}", jsonFile.getName());
-            List<EspaceDto> espaceList = objectMapper.readValue(inputStream,
+        try {
+            List<EspaceDto> espaceList = fileDataService.readJsonFileAsList(jsonFile,
                     new TypeReference<List<EspaceDto>>() {
                     });
             if (espaceList == null || espaceList.isEmpty()) {
@@ -123,36 +121,18 @@ public class EspaceSeeder implements CommandLineRunner {
     /**
      * Creates a single espace in the database.
      *
-     * @param espace The espace data from JSON
+     * @param espace       The espace data from JSON
      * @param initDataPath The base path for initialization data
-     * @throws IOException If there's an error processing the image file
+     * @throws Exception
      */
-    private void createEspace(EspaceDto espace, String initDataPath) throws IOException {
+    private void createEspace(EspaceDto espace, String initDataPath) throws Exception {
         EspaceRequestDto requestDto = new EspaceRequestDto();
         requestDto.setNom(espace.getNom());
         requestDto.setDescription(espace.getDescription());
         requestDto.setApropos(espace.getApropos());
-        // requestDto.setRole(espace.getRoleAcces().get(0).getRoleCode());
-        requestDto.setStatut(espace.getStatut());
-        
-        // Process the image only if a imageUrl is provided
-        if (StringUtils.hasText(espace.getImageUrl())) {
-            // Look for the image in the images subfolder
-            Path imagePath = Paths.get(initDataPath, IMAGES_SUBFOLDER, espace.getImageUrl());
-            if (!Files.exists(imagePath)) {
-                log.warn("Image not found at path: {}. Trying direct path.", imagePath);
-                // Fallback to the main directory if not found in images subdirectory
-                imagePath = Paths.get(initDataPath, espace.getImageUrl());
-            }
-            
-            if (Files.exists(imagePath)) {
-                MultipartFile imageFile = FileToMultipartFileConverter.toMultipartFile(imagePath.toFile());
-                requestDto.setImageFile(imageFile);
-                log.info("Found image for espace '{}' at: {}", espace.getNom(), imagePath);
-            } else {
-                log.warn("Image for espace '{}' not found at: {}", espace.getNom(), imagePath);
-            }
-        }
+        requestDto.setActif(espace.getActif());
+
+        handleEspaceImage(espace, requestDto, initDataPath);
 
         // Save the espace which will cascade the relationships
         Espace createdEspace = espaceService.create(requestDto);
@@ -174,5 +154,33 @@ public class EspaceSeeder implements CommandLineRunner {
         domaines.forEach(domaine -> {
             espaceService.attachDomaine(createdEspace.getId(), domaine.getId());
         });
+    }
+
+    /**
+     * Handles the image processing for an espace.
+     *
+     * @param espace       The espace data from JSON
+     * @param requestDto   The request DTO to populate
+     * @param initDataPath The base path for initialization data
+     * @throws IOException
+     */
+    private void handleEspaceImage(EspaceDto espace, EspaceRequestDto requestDto, String initDataPath)
+            throws IOException {
+        if (StringUtils.hasText(espace.getImageUrl())) {
+            Path imagePath = Paths.get(initDataPath, IMAGES_SUBFOLDER, espace.getImageUrl());
+            if (!Files.exists(imagePath)) {
+                log.warn("Image not found at path: {}. Trying direct path.", imagePath);
+                // Fallback to the main directory if not found in images subdirectory
+                imagePath = Paths.get(initDataPath, espace.getImageUrl());
+            }
+
+            if (Files.exists(imagePath)) {
+                MultipartFile imageFile = FileToMultipartFileConverter.toMultipartFile(imagePath.toFile());
+                requestDto.setImageFile(imageFile);
+                log.info("Found image for espace '{}' at: {}", espace.getNom(), imagePath);
+            } else {
+                log.error("Image for espace '{}' not found at: {}", espace.getNom(), imagePath);
+            }
+        }
     }
 }

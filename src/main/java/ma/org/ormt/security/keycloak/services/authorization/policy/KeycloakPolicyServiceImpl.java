@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
-import ma.org.ormt.security.keycloak.config.KeycloakService;
+import ma.org.ormt.security.keycloak.config.KeycloakConnectService;
 import ma.org.ormt.security.keycloak.representation.ResourceJsonRepresentation;
 import ma.org.ormt.security.keycloak.representation.RoleJsonConfig;
 import ma.org.ormt.security.keycloak.services.realm.KeycloakRealmService;
@@ -25,7 +25,7 @@ import ma.org.ormt.security.keycloak.services.realm.KeycloakRealmService;
 @RequiredArgsConstructor
 public class KeycloakPolicyServiceImpl implements KeycloakPolicyService {
 
-    private final KeycloakService keycloakService;
+    private final KeycloakConnectService keycloakService;
     private final KeycloakRealmService keycloakRealmService;
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 

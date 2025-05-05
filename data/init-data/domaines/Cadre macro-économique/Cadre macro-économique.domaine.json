@@ -2,6 +2,12 @@
     "nom": "cadre macro-économique",
     "description": "analyse des indicateurs économiques régionaux incluant la croissance, la pauvreté et le tissu économique",
     "apropos": "analyse des indicateurs économiques régionaux incluant la croissance, la pauvreté et le tissu économique",
-    "role": "role_public",
-    "statut": "actif"
+    "imageUrl": "/images/cadre-macro-economique.png",
+    "roleAcces": [
+      {
+        "roleCode": "role_public",
+        "niveauAcces": "lecture"
+      }
+    ],
+    "actif": true
   }

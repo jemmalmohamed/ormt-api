@@ -1,8 +1,13 @@
 {
   "nom": "tissu économique",
   "description": "étude des entreprises et de leur dynamique sur le marché",
-  "role": "role_public",
-  "statut": "actif",
+  "roleacces": [
+    {
+      "rolecode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
   "indicateurs": [
     {
       "nom": "nombre d'entreprises",
@@ -13,8 +18,13 @@
       "reglecalcul": "",
       "unite": "nombre",
       "periode": "2019-2023",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -63,8 +73,13 @@
       "reglecalcul": "",
       "unite": "nombre",
       "periode": "2019-2023",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -113,8 +128,13 @@
       "reglecalcul": "",
       "unite": "nombre",
       "periode": "2019-2023",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -163,8 +183,13 @@
       "reglecalcul": "",
       "unite": "pourcentage",
       "periode": "2019-2023",
-      "role": "role_public",
-      "statut": "actif",
+      "roleacces": [
+        {
+          "rolecode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
       "dimensions": [
         {
           "nom": "secteur_activite",

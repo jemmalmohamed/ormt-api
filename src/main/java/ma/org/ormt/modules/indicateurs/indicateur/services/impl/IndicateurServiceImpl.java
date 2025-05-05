@@ -77,13 +77,12 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
     @Override
     public Indicateur update(Long id, IndicateurRequestDto requestDto) {
         validator.validate(requestDto);
-        Indicateur indicateurToUpdate = indicateurRequestMapper.mapToEntity(requestDto);
-        checkPathId(id, indicateurToUpdate.getId());
+        checkPathId(id, requestDto.getId());
 
         Indicateur indicateur = indicateurRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
 
-        updateFields(indicateur, indicateurToUpdate);
+        updateFields(indicateur, requestDto);
 
         return indicateurRepository.save(indicateur);
     }
@@ -93,12 +92,11 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
         return indicateurRepository.save(indicateur);
     }
 
-    private void updateFields(Indicateur indicateur, Indicateur entityToUpdate) {
+    private void updateFields(Indicateur indicateur, IndicateurRequestDto entityToUpdate) {
         indicateur.setNom(entityToUpdate.getNom());
         indicateur.setDescription(entityToUpdate.getDescription());
         indicateur.setAbreviation(entityToUpdate.getAbreviation());
-        indicateur.setRole(entityToUpdate.getRole());
-        indicateur.setStatut(entityToUpdate.getStatut());
+        indicateur.setActif(entityToUpdate.getActif());
         indicateur.setTypeTb(entityToUpdate.getTypeTb());
         indicateur.setUnite(entityToUpdate.getUnite());
         indicateur.setSource(entityToUpdate.getSource());

@@ -31,8 +31,8 @@ public interface KeycloakUserService {
 
     void deleteUser(RealmResource realmResource, String userName);
 
-    List<SimpleEntry<UserRepresentation, String>> getUsersWithRoles(String usersJsonResources);
+    List<SimpleEntry<UserRepresentation, String>> getUsersWithRolesFromJson(String usersJsonResources);
 
-    List<UserJsonRepresentation> getUsersRepresentation(String usersJsonResources);
+    List<UserJsonRepresentation> getUsersRepresentationFromJson(String usersJsonResources);
 
 }

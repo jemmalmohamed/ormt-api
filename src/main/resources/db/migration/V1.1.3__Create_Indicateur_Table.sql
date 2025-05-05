@@ -6,8 +6,6 @@ CREATE TABLE
         id BIGSERIAL PRIMARY KEY,
         nom varchar(255) NOT NULL UNIQUE,
         description TEXT, 
-        role VARCHAR(20) NOT NULL, 
-        statut varchar(255) NOT NULL,
         status_code INT NULL,
         created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
         last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
@@ -24,8 +22,7 @@ CREATE TABLE
         nom  varchar(255) NOT NULL UNIQUE,
         description TEXT,
         abreviation VARCHAR(10),
-        role VARCHAR(20) NOT NULL,
-         statut varchar(255) NOT NULL,
+        actif BOOLEAN NOT NULL DEFAULT TRUE,
         categorie VARCHAR(30),
         type_tb VARCHAR(30),
         unite VARCHAR(20),
@@ -135,16 +132,4 @@ CREATE INDEX idx_indicateur_sous_domaine_sous_domaine ON indicateur_sous_domaine
 CREATE INDEX idx_indicateur_sous_domaine_composite ON indicateur_sous_domaine (id_indicateur, id_sous_domaine);
 
  
-
--- Add column comments
-COMMENT ON TABLE indicateur IS 'Table storing indicator definitions and metadata';
-
-COMMENT ON COLUMN indicateur.nom IS 'The unique name of the indicator';
-
-COMMENT ON COLUMN indicateur.role IS 'Role classification: PRIMAIRE, SECONDAIRE, or TERTIAIRE';
-
-COMMENT ON COLUMN indicateur.type_tb IS 'Dashboard type: PERFORMANCE, PILOTAGE, or RESULTAT';
-
-COMMENT ON TABLE dimension IS 'Table storing dimension definitions for indicators';
-
-COMMENT ON COLUMN dimension.type IS 'Dimension type: TEMPORELLE, SPATIALE, or ORGANISATIONNELLE';
+ 

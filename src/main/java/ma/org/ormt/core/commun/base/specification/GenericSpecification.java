@@ -25,7 +25,7 @@ public class GenericSpecification<T> implements Specification<T> {
     private transient Object value;
     private transient Object upperValue;
 
-    @SuppressWarnings("null")
+    // @SuppressWarnings("null")
     @Override
     public Predicate toPredicate(@NonNull Root<T> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
         List<String> keys = Arrays.asList(key.split("\\."));

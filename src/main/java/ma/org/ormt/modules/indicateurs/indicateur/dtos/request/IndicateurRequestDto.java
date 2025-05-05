@@ -3,6 +3,7 @@ package ma.org.ormt.modules.indicateurs.indicateur.dtos.request;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,6 +28,11 @@ public class IndicateurRequestDto extends Dto {
     private String nom;
 
     private String description;
+
+    private String abreviation;
+
+    @NotNull(message = "Ce champ est requis.")
+    private Boolean actif;
 
     @NotBlank(message = "Ce champ est requis.")
     private Source source;

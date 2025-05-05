@@ -3,6 +3,7 @@ package ma.org.ormt.modules.domaines.sousdomaine.dtos.request;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -25,11 +26,8 @@ public class SousDomaineRequestDto extends Dto {
     @NotBlank(message = "Ce champ est requis.")
     private String nom;
 
-    @NotBlank(message = "Ce champ est requis.")
-    private String role;
-
-    @NotBlank(message = "Ce champ est requis.")
-    private String statut;
+    @NotNull(message = "Ce champ est requis.")
+    private Boolean actif;
 
     @NotBlank(message = "Ce champ est requis.")
     private String description;

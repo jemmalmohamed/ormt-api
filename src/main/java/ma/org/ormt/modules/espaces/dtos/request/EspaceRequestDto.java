@@ -6,7 +6,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -32,11 +34,12 @@ public class EspaceRequestDto extends Dto {
     @NotNull(message = "Ce champ est requis.", groups = OnCreate.class)
     private MultipartFile imageFile;
 
-    @NotBlank(message = "Ce champ est requis.")
+    @NotEmpty(message = "Ce champ est requis.")
+    @Size(min = 200, max = 2000, message = "Le texte doit contenir au moins 300 caractères.")
     private String apropos;
 
-    @NotBlank(message = "Ce champ est requis.")
-    private String statut;
+    @NotNull(message = "Ce champ est requis.")
+    private Boolean actif;
 
     private String description;
 

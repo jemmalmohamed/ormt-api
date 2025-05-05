@@ -16,9 +16,9 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import ma.org.ormt.core.commun.rest.responses.RestResponse;
+import ma.org.ormt.modules.users.auth.AuthService;
 import ma.org.ormt.security.dtos.AuthorisationDto;
 import ma.org.ormt.security.dtos.PermissionDto;
-import ma.org.ormt.security.services.AuthService;
 
 @RestController
 @RequestMapping(value = "/api/v1/auth")
