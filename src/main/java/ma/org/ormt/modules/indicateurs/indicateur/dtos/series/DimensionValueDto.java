@@ -19,6 +19,7 @@ import lombok.Setter;
 public class DimensionValueDto {
 
     private String dimensionName; // Name of the dimension (e.g., "Region", "Année")
+    private String dimensionLibelle; // Name of the dimension (e.g., "Region", "Année")
     private Boolean isPrincipal; // Whether this is the principal dimension
     private Boolean isTemporal; // Whether this is the temporal dimension
     private List<String> availableValues; // Available values for this dimension

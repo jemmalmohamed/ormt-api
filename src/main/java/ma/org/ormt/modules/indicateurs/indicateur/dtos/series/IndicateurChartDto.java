@@ -26,6 +26,8 @@ public class IndicateurChartDto extends Dto {
 
     private String nom;
 
+    private String description;
+
     private String regleCalcul;
 
     private Boolean actif;

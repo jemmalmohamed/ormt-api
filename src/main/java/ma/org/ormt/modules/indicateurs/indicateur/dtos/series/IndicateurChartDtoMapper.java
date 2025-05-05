@@ -165,6 +165,7 @@ public interface IndicateurChartDtoMapper extends BaseDtoMapper<Indicateur, Indi
             // Create filter option
             DimensionValueDto filterOption = DimensionValueDto.builder()
                     .dimensionName(dimension.getNom())
+                    .dimensionLibelle(dimension.getLibelle())
                     .isPrincipal(Boolean.TRUE.equals(indicateurDimension.getPrincipale()))
                     .isTemporal(Boolean.TRUE.equals(indicateurDimension.getTemporelle()))
                     .availableValues(values)

@@ -25,6 +25,7 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Données détaillées sur la répartition de l'emploi par genre",
       "dimensions": [
         {
           "nom": "genre",
@@ -71,6 +72,7 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Données détaillées sur la répartition de l'emploi par tranches d'âge",
       "dimensions": [
         {
           "nom": "age",
@@ -117,6 +119,7 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Données détaillées sur la répartition de l'emploi selon le niveau d'éducation",
       "dimensions": [
         {
           "nom": "diplome",
@@ -163,6 +166,7 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Répartition de l'emploi dans divers secteurs économiques",
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -209,6 +213,7 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Statut professionnel incluant salarié ou indépendant",
       "dimensions": [
         {
           "nom": "statut",
@@ -255,6 +260,7 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Variations de postes ou statuts au sein de la population active",
       "dimensions": [
         {
           "nom": "type_emploi",
@@ -292,6 +298,7 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Répartition des emplois dans différents secteurs d'activité",
       "dimensions": [
         {
           "nom": "secteur_emploi",
@@ -329,6 +336,7 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Répartition de l'emploi à travers les différentes régions",
       "dimensions": [
         {
           "nom": "region",
@@ -366,6 +374,7 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Travailleurs indépendants déclarés à la CNSS selon le secteur",
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -412,6 +421,7 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Travailleurs indépendants déclarés à la CNSS selon la région",
       "dimensions": [
         {
           "nom": "region",
@@ -458,6 +468,7 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Salariés déclarés à la CNSS dans différents secteurs d'activité",
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -504,6 +515,7 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Salariés déclarés à la CNSS dans les différentes régions",
       "dimensions": [
         {
           "nom": "region",
@@ -541,6 +553,7 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Emplois en équivalent temps plein par secteur d'activité",
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -578,6 +591,7 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Nombre de déclarations à la CNSS selon le secteur d'activité",
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -615,6 +629,7 @@
       "reglecalcul": "dec/eqtp",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Indice de rotation des salariés par poste et par secteur",
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -652,6 +667,7 @@
       "reglecalcul": "et-p-s-idp",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Données sur l'emploi informel dans chaque secteur économique",
       "dimensions": [
         {
           "nom": "secteur_activite",
@@ -689,6 +705,7 @@
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2024",
+      "description": "Répartition des salariés du secteur public par secteur d'activité",
       "dimensions": [
         {
           "nom": "secteur_activite",
