@@ -2,6 +2,9 @@ starter:
   database:
     reset: true
     seed: true
+  minio:
+    reset: false
+    seed: false
   keycloak:
     reset: true
     seed: true
@@ -15,8 +18,6 @@ minio:
   access-key: minio
   secret-key: minio@ormt
   bucket: ormt
-  initialize: true
-  reset: true
   allowed-origins: https://ormt-ms.org
  
 spring:
