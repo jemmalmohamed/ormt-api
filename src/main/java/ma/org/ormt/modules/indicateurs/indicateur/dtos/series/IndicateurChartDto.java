@@ -1,6 +1,7 @@
 package ma.org.ormt.modules.indicateurs.indicateur.dtos.series;
 
 import java.util.List;
+import java.util.Map;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -51,7 +52,14 @@ public class IndicateurChartDto extends Dto {
     private List<String> availableDimensions; // All dimensions names available for this indicator
 
     // Chart data
-    private List<ChartSeriesDto> series; // The actual series data for charting
+    private List<ChartSeriesDto> series; // The default series data (typically principal dimension)
+
+    private List<EnhancedChartSeriesDto> enhancedSeries;
+    // All series for every dimension
+    private Map<String, List<ChartSeriesDto>> allDimensionSeries;
+
+    // Combined series for multi-dimension visualization
+    private List<ChartSeriesDto> combinedSeries;
 
     // Filter options
     private List<DimensionValueDto> filterOptions; // Available dimension values for filtering

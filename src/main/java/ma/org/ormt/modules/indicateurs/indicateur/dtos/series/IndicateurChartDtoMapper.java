@@ -28,106 +28,257 @@ public interface IndicateurChartDtoMapper extends BaseDtoMapper<Indicateur, Indi
             return;
         }
 
-        // Find principal and temporal dimensions
-        IndicateurDimension principalDim = source.getIndicateurDimensions().stream()
-                .filter(id -> Boolean.TRUE.equals(id.getPrincipale()))
-                .findFirst()
-                .orElse(null);
-
+        // Find temporal dimension
         IndicateurDimension temporalDim = source.getIndicateurDimensions().stream()
                 .filter(id -> Boolean.TRUE.equals(id.getTemporelle()))
                 .findFirst()
                 .orElse(null);
 
-        if (principalDim == null || temporalDim == null) {
+        // Find non-temporal dimensions - these are all potential series dimensions
+        List<IndicateurDimension> nonTemporalDims = source.getIndicateurDimensions().stream()
+                .filter(id -> !Boolean.TRUE.equals(id.getTemporelle()))
+                .collect(Collectors.toList());
+
+        // Find principal dimension among non-temporal dimensions
+        IndicateurDimension principalDim = nonTemporalDims.stream()
+                .filter(id -> Boolean.TRUE.equals(id.getPrincipale()))
+                .findFirst()
+                .orElse(nonTemporalDims.isEmpty() ? null : nonTemporalDims.get(0));
+
+        // Find secondary dimension (non-temporal and non-principal)
+        IndicateurDimension secondaryDim = nonTemporalDims.stream()
+                .filter(id -> !Boolean.TRUE.equals(id.getPrincipale()))
+                .findFirst()
+                .orElse(null);
+
+        if (temporalDim == null || principalDim == null) {
             return;
         }
 
         // Set dimension metadata
-        target.setPrincipalDimension(principalDim.getDimension().getNom());
         target.setTemporalDimension(temporalDim.getDimension().getNom());
-        target.setAvailableDimensions(source.getIndicateurDimensions().stream()
+        target.setPrincipalDimension(principalDim.getDimension().getNom());
+        target.setAvailableDimensions(nonTemporalDims.stream()
                 .map(id -> id.getDimension().getNom())
                 .collect(Collectors.toList()));
 
-        // Process data and create series
-        processSeriesData(target, source, principalDim, temporalDim);
+        // Get sorted temporal values for consistent x-axis
+        List<String> temporalValues = extractSortedTemporalValues(source, temporalDim);
 
-        // Create filter options
+        // Generate enhanced series with multi-dimension support
+        List<EnhancedChartSeriesDto> enhancedSeries = createEnhancedSeries(
+                source,
+                temporalDim,
+                principalDim,
+                secondaryDim,
+                temporalValues);
+
+        target.setEnhancedSeries(enhancedSeries);
+
+        // For backward compatibility, also set the regular series
+        target.setSeries(convertToLegacySeries(enhancedSeries));
+
+        // Create filter options for all dimensions
         createFilterOptions(target, source);
     }
 
-    default void processSeriesData(IndicateurChartDto target, Indicateur source,
-            IndicateurDimension principalDim, IndicateurDimension temporalDim) {
-        // Map to store data by principal dimension value and temporal dimension value
-        Map<String, Map<String, Number>> seriesDataMap = new HashMap<>();
-        List<String> allTemporalValues = new ArrayList<>();
+    default List<EnhancedChartSeriesDto> createEnhancedSeries(
+            Indicateur source,
+            IndicateurDimension temporalDim,
+            IndicateurDimension principalDim,
+            IndicateurDimension secondaryDim,
+            List<String> sortedTemporalValues) {
 
-        // Process each data point
-        for (DonneeIndicateur donnee : source.getDonnees()) {
-            // Find principal dimension value for this data point
-            String principalValue = findDimensionValue(donnee, principalDim.getDimension());
-            if (principalValue == null)
-                continue;
+        List<EnhancedChartSeriesDto> result = new ArrayList<>();
 
-            // Find temporal dimension value for this data point
-            String temporalValue = findDimensionValue(donnee, temporalDim.getDimension());
-            if (temporalValue == null)
-                continue;
+        // Get all unique values for principal dimension
+        List<String> principalValues = source.getDonnees().stream()
+                .flatMap(d -> d.getValeurDimensions().stream())
+                .filter(vd -> vd.getDimension().getId().equals(principalDim.getDimension().getId()))
+                .map(ValeurDimension::getValeur)
+                .distinct()
+                .collect(Collectors.toList());
 
-            // Add to temporal values list (for later sorting)
-            if (!allTemporalValues.contains(temporalValue)) {
-                allTemporalValues.add(temporalValue);
-            }
+        // Get all unique values for secondary dimension (if it exists)
+        List<String> secondaryValues = new ArrayList<>();
+        if (secondaryDim != null) {
+            secondaryValues = source.getDonnees().stream()
+                    .flatMap(d -> d.getValeurDimensions().stream())
+                    .filter(vd -> vd.getDimension().getId().equals(secondaryDim.getDimension().getId()))
+                    .map(ValeurDimension::getValeur)
+                    .distinct()
+                    .collect(Collectors.toList());
+        }
 
-            // Parse the string value to a Number before adding to the map
-            try {
-                String valeurStr = donnee.getValeur();
-                Number valeurNum;
-                if (valeurStr != null && !valeurStr.isEmpty()) {
-                    // Try to parse as double first (handles decimal values)
-                    valeurNum = Double.parseDouble(valeurStr);
-                } else {
-                    valeurNum = null;
+        // For each principal value, create an enhanced series
+        for (String principalValue : principalValues) {
+            Map<String, Map<String, Number>> valuesBySecondaryAndTemporal = new HashMap<>();
+
+            // If there's a secondary dimension, organize data by secondary dimension
+            if (secondaryDim != null && !secondaryValues.isEmpty()) {
+                for (String secondaryValue : secondaryValues) {
+                    Map<String, Number> temporalMap = new HashMap<>();
+
+                    // For each temporal value, find the data point
+                    for (String temporalValue : sortedTemporalValues) {
+                        Number value = findDataValue(
+                                source,
+                                temporalDim.getDimension(), temporalValue,
+                                principalDim.getDimension(), principalValue,
+                                secondaryDim.getDimension(), secondaryValue);
+
+                        if (value != null) {
+                            temporalMap.put(temporalValue, value);
+                        }
+                    }
+
+                    valuesBySecondaryAndTemporal.put(secondaryValue, temporalMap);
                 }
-                seriesDataMap.computeIfAbsent(principalValue, k -> new HashMap<>())
-                        .put(temporalValue, valeurNum);
-            } catch (NumberFormatException e) {
-                // If parsing fails, we can either log a warning or use null
-                seriesDataMap.computeIfAbsent(principalValue, k -> new HashMap<>())
-                        .put(temporalValue, null);
+            } else {
+                // No secondary dimension, just organize by temporal
+                Map<String, Number> temporalMap = new HashMap<>();
+                for (String temporalValue : sortedTemporalValues) {
+                    Number value = findDataValue(
+                            source,
+                            temporalDim.getDimension(), temporalValue,
+                            principalDim.getDimension(), principalValue,
+                            null, null);
+
+                    if (value != null) {
+                        temporalMap.put(temporalValue, value);
+                    }
+                }
+
+                // Use "default" as key when no secondary dimension exists
+                valuesBySecondaryAndTemporal.put("default", temporalMap);
+            }
+
+            // Create the enhanced chart series
+            EnhancedChartSeriesDto series = new EnhancedChartSeriesDto();
+            series.setName(principalValue);
+            series.setCategory(principalDim.getDimension().getNom());
+            series.setLabels(new ArrayList<>(sortedTemporalValues));
+
+            // If there's a secondary dimension, set secondary dimension info
+            if (secondaryDim != null && !secondaryValues.isEmpty()) {
+                series.setSecondaryDimension(secondaryDim.getDimension().getNom());
+                series.setSecondaryValues(secondaryValues);
+
+                // For each secondary value, construct a values array matching temporal order
+                Map<String, List<Number>> valuesBySecondary = new HashMap<>();
+                for (String secondaryValue : secondaryValues) {
+                    List<Number> values = new ArrayList<>();
+                    Map<String, Number> temporalMap = valuesBySecondaryAndTemporal.get(secondaryValue);
+
+                    // Ensure values are in same order as temporal labels
+                    for (String temporalValue : sortedTemporalValues) {
+                        values.add(temporalMap != null ? temporalMap.get(temporalValue) : null);
+                    }
+
+                    valuesBySecondary.put(secondaryValue, values);
+                }
+
+                series.setValuesBySecondary(valuesBySecondary);
+            } else {
+                // No secondary dimension, just set regular values
+                List<Number> values = new ArrayList<>();
+                Map<String, Number> temporalMap = valuesBySecondaryAndTemporal.get("default");
+
+                // Ensure values are in same order as temporal labels
+                for (String temporalValue : sortedTemporalValues) {
+                    values.add(temporalMap != null ? temporalMap.get(temporalValue) : null);
+                }
+
+                series.setValues(values);
+            }
+
+            result.add(series);
+        }
+
+        return result;
+    }
+
+    default Number findDataValue(
+            Indicateur source,
+            Dimension temporalDim, String temporalValue,
+            Dimension principalDim, String principalValue,
+            Dimension secondaryDim, String secondaryValue) {
+
+        // Find the data point that matches all dimension values
+        for (DonneeIndicateur donnee : source.getDonnees()) {
+            boolean temporalMatch = false;
+            boolean principalMatch = false;
+            boolean secondaryMatch = secondaryDim == null || secondaryValue == null; // If no secondary dim, always
+                                                                                     // match
+
+            // Check all value dimensions for matches
+            for (ValeurDimension vd : donnee.getValeurDimensions()) {
+                if (vd.getDimension().getId().equals(temporalDim.getId()) &&
+                        vd.getValeur().equals(temporalValue)) {
+                    temporalMatch = true;
+                } else if (vd.getDimension().getId().equals(principalDim.getId()) &&
+                        vd.getValeur().equals(principalValue)) {
+                    principalMatch = true;
+                } else if (secondaryDim != null &&
+                        vd.getDimension().getId().equals(secondaryDim.getId()) &&
+                        vd.getValeur().equals(secondaryValue)) {
+                    secondaryMatch = true;
+                }
+            }
+
+            // If all dimensions match, return the value
+            if (temporalMatch && principalMatch && secondaryMatch) {
+                return parseDataValue(donnee.getValeur());
             }
         }
 
-        // Sort temporal values (assuming they can be naturally ordered)
-        allTemporalValues.sort(String::compareTo); // For proper ordering, may need custom comparator
+        return null;
+    }
 
-        // Create series for each principal dimension value
-        List<ChartSeriesDto> series = new ArrayList<>();
-        for (Map.Entry<String, Map<String, Number>> entry : seriesDataMap.entrySet()) {
-            String principalValue = entry.getKey();
-            Map<String, Number> temporalData = entry.getValue();
+    default List<ChartSeriesDto> convertToLegacySeries(List<EnhancedChartSeriesDto> enhancedSeries) {
+        // Convert enhanced series to legacy format for backward compatibility
+        List<ChartSeriesDto> legacySeries = new ArrayList<>();
 
-            List<Object> labels = new ArrayList<>(allTemporalValues);
-            List<Number> values = new ArrayList<>();
+        for (EnhancedChartSeriesDto enhanced : enhancedSeries) {
+            ChartSeriesDto legacy = new ChartSeriesDto();
+            legacy.setName(enhanced.getName());
+            legacy.setCategory(enhanced.getCategory());
+            legacy.setLabels(enhanced.getLabels());
 
-            // Create values list in same order as labels
-            for (String temporalValue : allTemporalValues) {
-                values.add(temporalData.getOrDefault(temporalValue, null));
+            // If there are secondary values, flatten them
+            if (enhanced.getValuesBySecondary() != null && !enhanced.getValuesBySecondary().isEmpty()) {
+                // Just use the first secondary value for the legacy format
+                String firstSecondaryKey = enhanced.getValuesBySecondary().keySet().iterator().next();
+                legacy.setValues(enhanced.getValuesBySecondary().get(firstSecondaryKey));
+            } else {
+                legacy.setValues(enhanced.getValues());
             }
 
-            // Create series
-            ChartSeriesDto chartSeries = ChartSeriesDto.builder()
-                    .name(principalValue)
-                    .category(principalDim.getDimension().getNom())
-                    .labels(labels)
-                    .values(values)
-                    .build();
-
-            series.add(chartSeries);
+            legacySeries.add(legacy);
         }
 
-        target.setSeries(series);
+        return legacySeries;
+    }
+
+    default List<String> extractSortedTemporalValues(Indicateur source, IndicateurDimension temporalDim) {
+        // Extract all temporal values and sort them
+        return source.getDonnees().stream()
+                .map(donnee -> findDimensionValue(donnee, temporalDim.getDimension()))
+                .filter(value -> value != null)
+                .distinct()
+                .sorted() // Natural sorting, might need custom comparator for special formats
+                .collect(Collectors.toList());
+    }
+
+    default Number parseDataValue(String value) {
+        if (value == null || value.isEmpty())
+            return null;
+
+        try {
+            return Double.parseDouble(value);
+        } catch (NumberFormatException e) {
+            return null;
+        }
     }
 
     default String findDimensionValue(DonneeIndicateur donnee, Dimension dimension) {
