@@ -20,8 +20,8 @@ import lombok.NoArgsConstructor;
 public class EnhancedChartSeriesDto {
 
     // Basic series information
-    private String name; // Name of the series (value of principal dimension)
     private String category; // Category of the series (name of principal dimension)
+    private String name; // Name of the series (value of principal dimension)
     private List<Object> labels; // Temporal labels (x-axis values)
 
     // Simple values for single-dimension visualization
