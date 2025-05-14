@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "productivité par secteur d'activité",
+      "description": "productivité par secteur d'activité",
       "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
@@ -57,6 +58,7 @@
     },
     {
       "nom": "valeur ajoutée par secteur d'activité",
+      "description": "valeur ajoutée par secteur d'activité",
       "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
@@ -103,6 +105,7 @@
     },
     {
       "nom": "masse salariale par secteur d'activité",
+      "description": "masse salariale par secteur d'activité",
       "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
@@ -149,6 +152,7 @@
     },
     {
       "nom": "salaire moyen par secteur d'activité",
+      "description": "salaire moyen par secteur d'activité",
       "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
@@ -195,6 +199,7 @@
     },
     {
       "nom": "smig journalier",
+      "description": "smig journalier",
       "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel",
@@ -223,6 +228,7 @@
     },
     {
       "nom": "smag journalier",
+      "description": "smag journalier",
       "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel",
@@ -251,6 +257,7 @@
     },
     {
       "nom": "salaire moyen à l'année n par secteur d'activité",
+      "description": "salaire moyen à l'année n par secteur d'activité",
       "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel",
@@ -297,6 +304,7 @@
     },
     {
       "nom": "salaire moyen n-10 par secteur d'activité",
+      "description": "salaire moyen n-10 par secteur d'activité",
       "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel",
@@ -343,6 +351,7 @@
     },
     {
       "nom": "variation productivité",
+      "description": "variation productivité",
       "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel",
@@ -371,6 +380,7 @@
     },
     {
       "nom": "variation valeur ajoutée",
+      "description": "variation valeur ajoutée",
       "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel",
@@ -399,6 +409,7 @@
     },
     {
       "nom": "variation de la masse salariale en %",
+      "description": "variation de la masse salariale en %",
       "categorie": "économie",
       "abreviation": "",
       "typetb": "grand public",

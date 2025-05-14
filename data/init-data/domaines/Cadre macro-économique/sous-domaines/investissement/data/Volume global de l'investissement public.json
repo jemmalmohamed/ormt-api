@@ -1,0 +1,26 @@
+{
+    "indicateur": "Volume global de l'investissement public",
+    "unite": "milliards de DH",
+    "data": [
+        {
+            "annee": 2021,
+            "valeur": 230
+        },
+        {
+            "annee": 2022,
+            "valeur": 245
+        },
+        {
+            "annee": 2023,
+            "valeur": 300
+        },
+        {
+            "annee": 2024,
+            "valeur": 335
+        },
+        {
+            "annee": 2025,
+            "valeur": 340
+        }
+    ]
+}

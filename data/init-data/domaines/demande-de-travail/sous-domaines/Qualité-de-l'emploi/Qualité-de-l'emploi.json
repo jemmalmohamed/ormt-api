@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "part de l'emploi informel par secteur d'activité",
+      "description": "part de l'emploi informel par secteur d'activité",
       "categorie": "emploi",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
@@ -48,6 +49,7 @@
     },
     {
       "nom": "part de l'emploi rémunéré par secteur d'activité",
+      "description": "part de l'emploi rémunéré par secteur d'activité",
       "categorie": "emploi",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
@@ -94,6 +96,7 @@
     },
     {
       "nom": "part des actifs occupés bénéficiant d'une couverture médicale",
+      "description": "part des actifs occupés bénéficiant d'une couverture médicale",
       "categorie": "emploi",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
@@ -140,6 +143,7 @@
     },
     {
       "nom": "part des salariés disposant d'un contrat de travail",
+      "description": "part des salariés disposant d'un contrat de travail",
       "categorie": "emploi",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
@@ -177,6 +181,7 @@
     },
     {
       "nom": "part de l'emploi de type occasionnel ou saisonnier",
+      "description": "part de l'emploi de type occasionnel ou saisonnier",
       "categorie": "emploi",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
@@ -223,6 +228,7 @@
     },
     {
       "nom": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive)",
+      "description": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive)",
       "categorie": "emploi",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
@@ -269,6 +275,7 @@
     },
     {
       "nom": "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle",
+      "description": "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle",
       "categorie": "emploi",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
@@ -306,6 +313,7 @@
     },
     {
       "nom": "part des salariés touchant un salaire inférieur au smig par secteur d'activité- cnss",
+      "description": "part des salariés touchant un salaire inférieur au smig par secteur d'activité- cnss",
       "categorie": "emploi",
       "abreviation": "",
       "typetb": "décisionnel",
@@ -343,6 +351,7 @@
     },
     {
       "nom": "salariés (stables) déclarés à la cnss par secteur d'activité-cnss",
+      "description": "salariés (stables) déclarés à la cnss par secteur d'activité-cnss",
       "categorie": "emploi",
       "abreviation": "",
       "typetb": "grand public",

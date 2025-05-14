@@ -1,0 +1,135 @@
+{
+    "indicateur": "Taux de vulnérabilité à la pauvreté par région",
+    "data": [
+        {
+            "region": "Dakhla - Oued Ed-Dahab",
+            "annee": "2014",
+            "valeur": 0.5
+        },
+        {
+            "region": "Dakhla - Oued Ed-Dahab",
+            "annee": "2022",
+            "valeur": 2.9
+        },
+        {
+            "region": "Casablanca - Settat",
+            "annee": "2014",
+            "valeur": 8.9
+        },
+        {
+            "region": "Casablanca - Settat",
+            "annee": "2022",
+            "valeur": 7.9
+        },
+        {
+            "region": "Tanger - Tétouan - Al Hoceima",
+            "annee": "2014",
+            "valeur": 9
+        },
+        {
+            "region": "Tanger - Tétouan - Al Hoceima",
+            "annee": "2022",
+            "valeur": 8.4
+        },
+        {
+            "region": "Guelmim - Oued Noun",
+            "annee": "2014",
+            "valeur": 13.4
+        },
+        {
+            "region": "Guelmim - Oued Noun",
+            "annee": "2022",
+            "valeur": 10.4
+        },
+        {
+            "region": "Laâyoune - Sakia El Hamra",
+            "annee": "2014",
+            "valeur": 10.8
+        },
+        {
+            "region": "Laâyoune - Sakia El Hamra",
+            "annee": "2022",
+            "valeur": 10.5
+        },
+        {
+            "region": "Marrakech - Safi",
+            "annee": "2014",
+            "valeur": 13.5
+        },
+        {
+            "region": "Marrakech - Safi",
+            "annee": "2022",
+            "valeur": 11.6
+        },
+        {
+            "region": "L’Oriental",
+            "annee": "2014",
+            "valeur": 10.4
+        },
+        {
+            "region": "L’Oriental",
+            "annee": "2022",
+            "valeur": 11.9
+        },
+        {
+            "region": "Rabat - Salé - Kénitra",
+            "annee": "2014",
+            "valeur": 12.9
+        },
+        {
+            "region": "Rabat - Salé - Kénitra",
+            "annee": "2022",
+            "valeur": 12.8
+        },
+        {
+            "region": "Souss - Massa",
+            "annee": "2014",
+            "valeur": 17.4
+        },
+        {
+            "region": "Souss - Massa",
+            "annee": "2022",
+            "valeur": 14.5
+        },
+        {
+            "region": "Drâa - Tafilalet",
+            "annee": "2014",
+            "valeur": 16.2
+        },
+        {
+            "region": "Drâa - Tafilalet",
+            "annee": "2022",
+            "valeur": 17.3
+        },
+        {
+            "region": "Fès - Meknès",
+            "annee": "2014",
+            "valeur": 13.7
+        },
+        {
+            "region": "Fès - Meknès",
+            "annee": "2022",
+            "valeur": 19
+        },
+        {
+            "region": "Béni Mellal - Khénifra",
+            "annee": "2014",
+            "valeur": 17.3
+        },
+        {
+            "region": "Béni Mellal - Khénifra",
+            "annee": "2022",
+            "valeur": 24.5
+        },
+        {
+            "region": "National",
+            "annee": "2014",
+            "valeur": 12.5
+        },
+        {
+            "region": "National",
+            "annee": "2022",
+            "valeur": 12.9
+        }
+    ]
+}

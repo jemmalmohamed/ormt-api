@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "nombre d'entreprises",
+      "description": "nombre d'entreprises",
       "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
@@ -66,6 +67,7 @@
     },
     {
       "nom": "nombre d'entreprises entrantes",
+      "description": "nombre d'entreprises entrantes",
       "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
@@ -121,6 +123,7 @@
     },
     {
       "nom": "nombre d'entreprises sortantes",
+      "description": "nombre d'entreprises sortantes",
       "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
@@ -176,6 +179,7 @@
     },
     {
       "nom": "taux de survie des entreprises",
+      "description": "taux de survie des entreprises",
       "categorie": "économie",
       "abreviation": "",
       "typetb": "décisionnel / grand public",

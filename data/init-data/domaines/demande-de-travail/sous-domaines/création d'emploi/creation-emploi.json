@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "création d'emploi par genre",
+      "description": "création d'emploi par genre",
       "categorie": "emploi",
       "abreviation": "",
       "roleacces": [
@@ -57,6 +58,7 @@
     },
     {
       "nom": "création d'emploi par diplôme",
+      "description": "création d'emploi par diplôme",
       "categorie": "emploi",
       "abreviation": "",
       "typetb": "décisionnel / grand public",
@@ -103,6 +105,7 @@
     },
     {
       "nom": "création d'emploi par statut professionnel",
+      "description": "création d'emploi par statut professionnel",
       "categorie": "emploi",
       "abreviation": "",
       "roleacces": [
@@ -149,6 +152,7 @@
     },
     {
       "nom": "création d'emploi par secteur d'activité -7p",
+      "description": "création d'emploi par secteur d'activité -7p",
       "categorie": "emploi",
       "abreviation": "",
       "roleacces": [
@@ -195,6 +199,7 @@
     },
     {
       "nom": "création d'emploi par secteur d'activité -2p",
+      "description": "création d'emploi par secteur d'activité -2p",
       "categorie": "emploi",
       "abreviation": "",
       "roleacces": [
@@ -241,6 +246,7 @@
     },
     {
       "nom": "création d'emploi par secteur d'emploi",
+      "description": "création d'emploi par secteur d'emploi",
       "categorie": "emploi",
       "abreviation": "",
       "roleacces": [
@@ -287,6 +293,7 @@
     },
     {
       "nom": "création d'emploi par type d'emploi",
+      "description": "création d'emploi par type d'emploi",
       "categorie": "emploi",
       "abreviation": "",
       "roleacces": [
@@ -333,6 +340,7 @@
     },
     {
       "nom": "création d'emploi par région",
+      "description": "création d'emploi par région",
       "categorie": "emploi",
       "abreviation": "",
       "roleacces": [
@@ -370,6 +378,7 @@
     },
     {
       "nom": "création d'emploi salariés par secteur d'activité- cnss",
+      "description": "création d'emploi salariés par secteur d'activité- cnss",
       "categorie": "emploi",
       "abreviation": "",
       "roleacces": [
@@ -416,6 +425,7 @@
     },
     {
       "nom": "création d'emploi salariés par région",
+      "description": "création d'emploi salariés par région",
       "categorie": "emploi",
       "abreviation": "",
       "roleacces": [
@@ -462,6 +472,7 @@
     },
     {
       "nom": "création d'emploi eqtp par secteur d'activité",
+      "description": "création d'emploi eqtp par secteur d'activité",
       "categorie": "emploi",
       "abreviation": "",
       "roleacces": [
@@ -499,6 +510,7 @@
     },
     {
       "nom": "création d'emploi indépendants déclaré à la cnss par secteur d'activité",
+      "description": "création d'emploi indépendants déclaré à la cnss par secteur d'activité",
       "categorie": "emploi",
       "abreviation": "",
       "roleacces": [
@@ -545,6 +557,7 @@
     },
     {
       "nom": "création d'emploi indépendants déclaré à la cnss par région",
+      "description": "création d'emploi indépendants déclaré à la cnss par région",
       "categorie": "emploi",
       "abreviation": "",
       "roleacces": [
@@ -591,6 +604,7 @@
     },
     {
       "nom": "création d'emploi informel estimé",
+      "description": "création d'emploi informel estimé",
       "categorie": "emploi",
       "abreviation": "",
       "roleacces": [

@@ -1,0 +1,590 @@
+{
+    "indicateur": "Produit intérieur brut par habitant (aux prix courants) par région en DH",
+    "data": [
+        {
+            "region": "Tanger-Tétouan-Al Hoceima",
+            "annee": "2014",
+            "valeur": 25964
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceima",
+            "annee": "2015",
+            "valeur": 29037
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceima",
+            "annee": "2016",
+            "valeur": 30435
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceima",
+            "annee": "2017",
+            "valeur": 32882
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceima",
+            "annee": "2018",
+            "valeur": 35119
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceima",
+            "annee": "2019",
+            "valeur": 36080
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceima",
+            "annee": "2020",
+            "valeur": 32050
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceima",
+            "annee": "2021",
+            "valeur": 34853
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceima",
+            "annee": "2022",
+            "valeur": 35641
+        },
+        {
+            "region": "Oriental",
+            "annee": "2014",
+            "valeur": 23696
+        },
+        {
+            "region": "Oriental",
+            "annee": "2015",
+            "valeur": 23536
+        },
+        {
+            "region": "Oriental",
+            "annee": "2016",
+            "valeur": 24243
+        },
+        {
+            "region": "Oriental",
+            "annee": "2017",
+            "valeur": 24615
+        },
+        {
+            "region": "Oriental",
+            "annee": "2018",
+            "valeur": 26488
+        },
+        {
+            "region": "Oriental",
+            "annee": "2019",
+            "valeur": 27219
+        },
+        {
+            "region": "Oriental",
+            "annee": "2020",
+            "valeur": 25061
+        },
+        {
+            "region": "Oriental",
+            "annee": "2021",
+            "valeur": 27282
+        },
+        {
+            "region": "Oriental",
+            "annee": "2022",
+            "valeur": 27304
+        },
+        {
+            "region": "Fès-Meknès",
+            "annee": "2014",
+            "valeur": 21184
+        },
+        {
+            "region": "Fès-Meknès",
+            "annee": "2015",
+            "valeur": 22483
+        },
+        {
+            "region": "Fès-Meknès",
+            "annee": "2016",
+            "valeur": 22246
+        },
+        {
+            "region": "Fès-Meknès",
+            "annee": "2017",
+            "valeur": 22272
+        },
+        {
+            "region": "Fès-Meknès",
+            "annee": "2018",
+            "valeur": 22028
+        },
+        {
+            "region": "Fès-Meknès",
+            "annee": "2019",
+            "valeur": 22676
+        },
+        {
+            "region": "Fès-Meknès",
+            "annee": "2020",
+            "valeur": 20659
+        },
+        {
+            "region": "Fès-Meknès",
+            "annee": "2021",
+            "valeur": 23554
+        },
+        {
+            "region": "Fès-Meknès",
+            "annee": "2022",
+            "valeur": 23707
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annee": "2014",
+            "valeur": 36931
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annee": "2015",
+            "valeur": 37724
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annee": "2016",
+            "valeur": 37265
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annee": "2017",
+            "valeur": 39776
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annee": "2018",
+            "valeur": 39905
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annee": "2019",
+            "valeur": 40718
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annee": "2020",
+            "valeur": 38589
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annee": "2021",
+            "valeur": 41234
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annee": "2022",
+            "valeur": 43124
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annee": "2014",
+            "valeur": 24576
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annee": "2015",
+            "valeur": 26612
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annee": "2016",
+            "valeur": 25707
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annee": "2017",
+            "valeur": 24691
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annee": "2018",
+            "valeur": 25341
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annee": "2019",
+            "valeur": 26578
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annee": "2020",
+            "valeur": 23857
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annee": "2021",
+            "valeur": 27530
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annee": "2022",
+            "valeur": 30960
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annee": "2014",
+            "valeur": 44863
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annee": "2015",
+            "valeur": 48854
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annee": "2016",
+            "valeur": 49273
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annee": "2017",
+            "valeur": 51668
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annee": "2018",
+            "valeur": 53653
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annee": "2019",
+            "valeur": 54644
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annee": "2020",
+            "valeur": 50755
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annee": "2021",
+            "valeur": 55081
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annee": "2022",
+            "valeur": 54997
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annee": "2014",
+            "valeur": 20763
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annee": "2015",
+            "valeur": 21599
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annee": "2016",
+            "valeur": 20698
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annee": "2017",
+            "valeur": 21294
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annee": "2018",
+            "valeur": 21920
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annee": "2019",
+            "valeur": 22319
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annee": "2020",
+            "valeur": 18675
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annee": "2021",
+            "valeur": 20930
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annee": "2022",
+            "valeur": 22730
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annee": "2014",
+            "valeur": 17784
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annee": "2015",
+            "valeur": 19572
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annee": "2016",
+            "valeur": 18811
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annee": "2017",
+            "valeur": 19764
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annee": "2018",
+            "valeur": 18031
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annee": "2019",
+            "valeur": 20380
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annee": "2020",
+            "valeur": 19713
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annee": "2021",
+            "valeur": 22203
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annee": "2022",
+            "valeur": 22973
+        },
+        {
+            "region": "Souss-Massa",
+            "annee": "2014",
+            "valeur": 25198
+        },
+        {
+            "region": "Souss-Massa",
+            "annee": "2015",
+            "valeur": 25887
+        },
+        {
+            "region": "Souss-Massa",
+            "annee": "2016",
+            "valeur": 26899
+        },
+        {
+            "region": "Souss-Massa",
+            "annee": "2017",
+            "valeur": 26216
+        },
+        {
+            "region": "Souss-Massa",
+            "annee": "2018",
+            "valeur": 27222
+        },
+        {
+            "region": "Souss-Massa",
+            "annee": "2019",
+            "valeur": 27707
+        },
+        {
+            "region": "Souss-Massa",
+            "annee": "2020",
+            "valeur": 24552
+        },
+        {
+            "region": "Souss-Massa",
+            "annee": "2021",
+            "valeur": 27324
+        },
+        {
+            "region": "Souss-Massa",
+            "annee": "2022",
+            "valeur": 29425
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annee": "2014",
+            "valeur": 28023
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annee": "2015",
+            "valeur": 30946
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annee": "2016",
+            "valeur": 33428
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annee": "2017",
+            "valeur": 35564
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annee": "2018",
+            "valeur": 37126
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annee": "2019",
+            "valeur": 39487
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annee": "2020",
+            "valeur": 40369
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annee": "2021",
+            "valeur": 43021
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annee": "2022",
+            "valeur": 44432
+        },
+        {
+            "region": "Laâyoune-Saguia al Hamra",
+            "annee": "2014",
+            "valeur": 40493
+        },
+        {
+            "region": "Laâyoune-Saguia al Hamra",
+            "annee": "2015",
+            "valeur": 44757
+        },
+        {
+            "region": "Laâyoune-Saguia al Hamra",
+            "annee": "2016",
+            "valeur": 45899
+        },
+        {
+            "region": "Laâyoune-Saguia al Hamra",
+            "annee": "2017",
+            "valeur": 48349
+        },
+        {
+            "region": "Laâyoune-Saguia al Hamra",
+            "annee": "2018",
+            "valeur": 52081
+        },
+        {
+            "region": "Laâyoune-Saguia al Hamra",
+            "annee": "2019",
+            "valeur": 53631
+        },
+        {
+            "region": "Laâyoune-Saguia al Hamra",
+            "annee": "2020",
+            "valeur": 60458
+        },
+        {
+            "region": "Laâyoune-Saguia al Hamra",
+            "annee": "2021",
+            "valeur": 65339
+        },
+        {
+            "region": "Laâyoune-Saguia al Hamra",
+            "annee": "2022",
+            "valeur": 71246
+        },
+        {
+            "region": "Dakhla-Oued ed Dahab",
+            "annee": "2014",
+            "valeur": 64032
+        },
+        {
+            "region": "Dakhla-Oued ed Dahab",
+            "annee": "2015",
+            "valeur": 72324
+        },
+        {
+            "region": "Dakhla-Oued ed Dahab",
+            "annee": "2016",
+            "valeur": 77279
+        },
+        {
+            "region": "Dakhla-Oued ed Dahab",
+            "annee": "2017",
+            "valeur": 86828
+        },
+        {
+            "region": "Dakhla-Oued ed Dahab",
+            "annee": "2018",
+            "valeur": 86364
+        },
+        {
+            "region": "Dakhla-Oued ed Dahab",
+            "annee": "2019",
+            "valeur": 83860
+        },
+        {
+            "region": "Dakhla-Oued ed Dahab",
+            "annee": "2020",
+            "valeur": 79643
+        },
+        {
+            "region": "Dakhla-Oued ed Dahab",
+            "annee": "2021",
+            "valeur": 84090
+        },
+        {
+            "region": "Dakhla-Oued ed Dahab",
+            "annee": "2022",
+            "valeur": 80996
+        },
+        {
+            "region": "National",
+            "annee": "2014",
+            "valeur": 29656
+        },
+        {
+            "region": "National",
+            "annee": "2015",
+            "valeur": 31593
+        },
+        {
+            "region": "National",
+            "annee": "2016",
+            "valeur": 31730
+        },
+        {
+            "region": "National",
+            "annee": "2017",
+            "valeur": 32965
+        },
+        {
+            "region": "National",
+            "annee": "2018",
+            "valeur": 33937
+        },
+        {
+            "region": "National",
+            "annee": "2019",
+            "valeur": 34840
+        },
+        {
+            "region": "National",
+            "annee": "2020",
+            "valeur": 32056
+        },
+        {
+            "region": "National",
+            "annee": "2021",
+            "valeur": 35154
+        },
+        {
+            "region": "National",
+            "annee": "2022",
+            "valeur": 36284
+        }
+    ]
+}

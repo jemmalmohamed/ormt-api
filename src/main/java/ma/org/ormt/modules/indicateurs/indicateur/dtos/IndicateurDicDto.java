@@ -12,7 +12,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.BaseDto;
-
+import ma.org.ormt.core.commun.base.dto.Dto;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.summary.SousDomaineSummaryDto;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
 import ma.org.ormt.modules.indicateurs.indicateur.association.dtos.IndicateurDimensionDto;
@@ -26,7 +26,7 @@ import ma.org.ormt.modules.users.roleacces.dtos.summary.RoleAccesSummaryDto;
 @JsonIgnoreProperties(value = { "indicateur.id" }, allowGetters = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class IndicateurDto extends BaseDto {
+public class IndicateurDicDto extends Dto {
 
     private String nom;
 
@@ -47,9 +47,9 @@ public class IndicateurDto extends BaseDto {
     @JsonProperty("dimensions")
     private List<IndicateurDimensionDto> indicateurDimensions;
 
-    private List<DonneeIndicateurDto> donnees;
+    // private List<DonneeIndicateurDto> donnees;
 
-    private List<SousDomaineSummaryDto> sousDomaines;
+    // private List<SousDomaineSummaryDto> sousDomaines;
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = AdminRoleFilter.class)
     private List<RoleAccesSummaryDto> roleAcces;

@@ -1,0 +1,221 @@
+{
+    "indicateur": "Population municipale (Effectif)",
+    "data": [
+        {
+            "region": "Casablanca-Settat",
+            "annee": "2024",
+            "genre": "ensemble",
+            "valeur": 7651096
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annee": "2024",
+            "genre": "féminin",
+            "valeur": 3834806
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annee": "2024",
+            "genre": "masculin",
+            "valeur": 3816290
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annee": "2024",
+            "genre": "ensemble",
+            "valeur": 5088656
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annee": "2024",
+            "genre": "féminin",
+            "valeur": 2560370
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annee": "2024",
+            "genre": "masculin",
+            "valeur": 2528286
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annee": "2024",
+            "genre": "ensemble",
+            "valeur": 4864187
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annee": "2024",
+            "genre": "féminin",
+            "valeur": 2411225
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annee": "2024",
+            "genre": "masculin",
+            "valeur": 2452962
+        },
+        {
+            "region": "Fès-Meknès",
+            "annee": "2024",
+            "genre": "ensemble",
+            "valeur": 4436873
+        },
+        {
+            "region": "Fès-Meknès",
+            "annee": "2024",
+            "genre": "féminin",
+            "valeur": 2232578
+        },
+        {
+            "region": "Fès-Meknès",
+            "annee": "2024",
+            "genre": "masculin",
+            "valeur": 2204295
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceima",
+            "annee": "2024",
+            "genre": "ensemble",
+            "valeur": 4008655
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceima",
+            "annee": "2024",
+            "genre": "féminin",
+            "valeur": 1973161
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceima",
+            "annee": "2024",
+            "genre": "masculin",
+            "valeur": 2035494
+        },
+        {
+            "region": "Souss-Massa",
+            "annee": "2024",
+            "genre": "ensemble",
+            "valeur": 2994360
+        },
+        {
+            "region": "Souss-Massa",
+            "annee": "2024",
+            "genre": "féminin",
+            "valeur": 1509876
+        },
+        {
+            "region": "Souss-Massa",
+            "annee": "2024",
+            "genre": "masculin",
+            "valeur": 1484484
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annee": "2024",
+            "genre": "ensemble",
+            "valeur": 2510799
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annee": "2024",
+            "genre": "féminin",
+            "valeur": 1283936
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annee": "2024",
+            "genre": "masculin",
+            "valeur": 1226863
+        },
+        {
+            "region": "l'Oriental",
+            "annee": "2024",
+            "genre": "ensemble",
+            "valeur": 2269378
+        },
+        {
+            "region": "l'Oriental",
+            "annee": "2024",
+            "genre": "féminin",
+            "valeur": 1159757
+        },
+        {
+            "region": "l'Oriental",
+            "annee": "2024",
+            "genre": "masculin",
+            "valeur": 1109621
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annee": "2024",
+            "genre": "ensemble",
+            "valeur": 1643144
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annee": "2024",
+            "genre": "féminin",
+            "valeur": 834796
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annee": "2024",
+            "genre": "masculin",
+            "valeur": 808348
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annee": "2024",
+            "genre": "ensemble",
+            "valeur": 419169
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annee": "2024",
+            "genre": "féminin",
+            "valeur": 211832
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annee": "2024",
+            "genre": "masculin",
+            "valeur": 213976
+        },
+        {
+            "region": "Laâyoune-Sakia El Hamra",
+            "annee": "2024",
+            "genre": "ensemble",
+            "valeur": 417663
+        },
+        {
+            "region": "Laâyoune-Sakia El Hamra",
+            "annee": "2024",
+            "genre": "féminin",
+            "valeur": 205193
+        },
+        {
+            "region": "Laâyoune-Sakia El Hamra",
+            "annee": "2024",
+            "genre": "masculin",
+            "valeur": 205831
+        },
+        {
+            "region": "Dakhla-Oued Ed-Dahab",
+            "annee": "2024",
+            "genre": "ensemble",
+            "valeur": 186611
+        },
+        {
+            "region": "Dakhla-Oued Ed-Dahab",
+            "annee": "2024",
+            "genre": "féminin",
+            "valeur": 77573
+        },
+        {
+            "region": "Dakhla-Oued Ed-Dahab",
+            "annee": "2024",
+            "genre": "masculin",
+            "valeur": 109038
+        }
+    ]
+}

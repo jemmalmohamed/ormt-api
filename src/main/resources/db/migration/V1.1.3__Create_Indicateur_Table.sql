@@ -25,6 +25,7 @@ CREATE TABLE
         actif BOOLEAN NOT NULL DEFAULT TRUE,
         categorie VARCHAR(30),
         type_tb VARCHAR(30),
+        type_graphe VARCHAR(30),
         unite VARCHAR(20),
         source_id BIGINT,
         regle_calcul TEXT,
