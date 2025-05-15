@@ -1,0 +1,155 @@
+{
+    "indicateur": "Population active en chômage selon les causes (en milliers)",
+    "data": [
+        {
+            "cause": "Arrêt de l’activité de l’établissement, licenciement",
+            "annee": "2019",
+            "valeur": 200
+        },
+        {
+            "cause": "Arrêt de l’activité de l’établissement, licenciement",
+            "annee": "2020",
+            "valeur": 372
+        },
+        {
+            "cause": "Arrêt de l’activité de l’établissement, licenciement",
+            "annee": "2021",
+            "valeur": 437
+        },
+        {
+            "cause": "Arrêt de l’activité de l’établissement, licenciement",
+            "annee": "2022",
+            "valeur": 375
+        },
+        {
+            "cause": "Arrêt de l’activité de l’établissement, licenciement",
+            "annee": "2023",
+            "valeur": 427
+        },
+        {
+            "cause": "Cessation d’activité indépendante, saisonnière ou pour raison de revenu",
+            "annee": "2019",
+            "valeur": 200
+        },
+        {
+            "cause": "Cessation d’activité indépendante, saisonnière ou pour raison de revenu",
+            "annee": "2020",
+            "valeur": 269
+        },
+        {
+            "cause": "Cessation d’activité indépendante, saisonnière ou pour raison de revenu",
+            "annee": "2021",
+            "valeur": 284
+        },
+        {
+            "cause": "Cessation d’activité indépendante, saisonnière ou pour raison de revenu",
+            "annee": "2022",
+            "valeur": 273
+        },
+        {
+            "cause": "Cessation d’activité indépendante, saisonnière ou pour raison de revenu",
+            "annee": "2023",
+            "valeur": 332
+        },
+        {
+            "cause": "Fin d’études ou de formation",
+            "annee": "2019",
+            "valeur": 496
+        },
+        {
+            "cause": "Fin d’études ou de formation",
+            "annee": "2020",
+            "valeur": 480
+        },
+        {
+            "cause": "Fin d’études ou de formation",
+            "annee": "2021",
+            "valeur": 550
+        },
+        {
+            "cause": "Fin d’études ou de formation",
+            "annee": "2022",
+            "valeur": 585
+        },
+        {
+            "cause": "Fin d’études ou de formation",
+            "annee": "2023",
+            "valeur": 605
+        },
+        {
+            "cause": "Arrivée à l’âge de travailler",
+            "annee": "2019",
+            "valeur": 112
+        },
+        {
+            "cause": "Arrivée à l’âge de travailler",
+            "annee": "2020",
+            "valeur": 114
+        },
+        {
+            "cause": "Arrivée à l’âge de travailler",
+            "annee": "2021",
+            "valeur": 140
+        },
+        {
+            "cause": "Arrivée à l’âge de travailler",
+            "annee": "2022",
+            "valeur": 143
+        },
+        {
+            "cause": "Arrivée à l’âge de travailler",
+            "annee": "2023",
+            "valeur": 174
+        },
+        {
+            "cause": "Autres causes",
+            "annee": "2019",
+            "valeur": 95
+        },
+        {
+            "cause": "Autres causes",
+            "annee": "2020",
+            "valeur": 189
+        },
+        {
+            "cause": "Autres causes",
+            "annee": "2021",
+            "valeur": 98
+        },
+        {
+            "cause": "Autres causes",
+            "annee": "2022",
+            "valeur": 68
+        },
+        {
+            "cause": "Autres causes",
+            "annee": "2023",
+            "valeur": 44
+        },
+        {
+            "cause": "Ensemble",
+            "annee": "2019",
+            "valeur": 1107
+        },
+        {
+            "cause": "Ensemble",
+            "annee": "2020",
+            "valeur": 1429
+        },
+        {
+            "cause": "Ensemble",
+            "annee": "2021",
+            "valeur": 1508
+        },
+        {
+            "cause": "Ensemble",
+            "annee": "2022",
+            "valeur": 1442
+        },
+        {
+            "cause": "Ensemble",
+            "annee": "2023",
+            "valeur": 1580
+        }
+    ]
+}

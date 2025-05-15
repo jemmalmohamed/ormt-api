@@ -1,0 +1,55 @@
+{
+    "indicateur": "Taux d’activité selon le genre (en %)",
+    "data": [
+        {
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 71.0
+        },
+        {
+            "genre": "Masculin",
+            "annee": "2020",
+            "valeur": 70.4
+        },
+        {
+            "genre": "Masculin",
+            "annee": "2021",
+            "valeur": 70.4
+        },
+        {
+            "genre": "Masculin",
+            "annee": "2022",
+            "valeur": 69.6
+        },
+        {
+            "genre": "Masculin",
+            "annee": "2023",
+            "valeur": 69.0
+        },
+        {
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 21.5
+        },
+        {
+            "genre": "Féminin",
+            "annee": "2020",
+            "valeur": 19.9
+        },
+        {
+            "genre": "Féminin",
+            "annee": "2021",
+            "valeur": 20.9
+        },
+        {
+            "genre": "Féminin",
+            "annee": "2022",
+            "valeur": 19.8
+        },
+        {
+            "genre": "Féminin",
+            "annee": "2023",
+            "valeur": 19.0
+        }
+    ]
+}

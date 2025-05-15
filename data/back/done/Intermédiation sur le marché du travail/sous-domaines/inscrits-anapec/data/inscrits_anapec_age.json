@@ -1,0 +1,23 @@
+{
+    "indicateur": "Inscrits à l’ANAPEC par âge",
+    "data": [
+        { "annee": "2019", "age": "Moins de 20 ans", "valeur": 5 },
+        { "annee": "2019", "age": "20 à moins de 25 ans", "valeur": 20 },
+        { "annee": "2019", "age": "25 à moins de 35 ans", "valeur": 45 },
+        { "annee": "2019", "age": "35 à moins de 45 ans", "valeur": 21 },
+        { "annee": "2019", "age": "45 et Plus", "valeur": 8 },
+        { "annee": "2019", "age": "Non renseigné", "valeur": 1 },
+        { "annee": "2022", "age": "Moins de 20 ans", "valeur": 3 },
+        { "annee": "2022", "age": "20 à moins de 25 ans", "valeur": 8 },
+        { "annee": "2022", "age": "25 à moins de 35 ans", "valeur": 46 },
+        { "annee": "2022", "age": "35 à moins de 45 ans", "valeur": 28 },
+        { "annee": "2022", "age": "45 et Plus", "valeur": 15 },
+        { "annee": "2022", "age": "Non renseigné", "valeur": 0 },
+        { "annee": "2024", "age": "Moins de 20 ans", "valeur": 2 },
+        { "annee": "2024", "age": "20 à moins de 25 ans", "valeur": 14 },
+        { "annee": "2024", "age": "25 à moins de 35 ans", "valeur": 41 },
+        { "annee": "2024", "age": "35 à moins de 45 ans", "valeur": 29 },
+        { "annee": "2024", "age": "45 et Plus", "valeur": 15 },
+        { "annee": "2024", "age": "Non renseigné", "valeur": 0 }
+    ]
+}

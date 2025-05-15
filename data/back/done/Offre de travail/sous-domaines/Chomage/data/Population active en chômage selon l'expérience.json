@@ -1,0 +1,80 @@
+{
+    "indicateur": "Population active en chômage selon l'expérience (en milliers)",
+    "data": [
+        {
+            "experience": "Ayant déjà travaillé",
+            "annee": "2019",
+            "valeur": 474
+        },
+        {
+            "experience": "Ayant déjà travaillé",
+            "annee": "2020",
+            "valeur": 803
+        },
+        {
+            "experience": "Ayant déjà travaillé",
+            "annee": "2021",
+            "valeur": 781
+        },
+        {
+            "experience": "Ayant déjà travaillé",
+            "annee": "2022",
+            "valeur": 673
+        },
+        {
+            "experience": "Ayant déjà travaillé",
+            "annee": "2023",
+            "valeur": 771
+        },
+        {
+            "experience": "N'ayant jamais travaillé",
+            "annee": "2019",
+            "valeur": 633
+        },
+        {
+            "experience": "N'ayant jamais travaillé",
+            "annee": "2020",
+            "valeur": 626
+        },
+        {
+            "experience": "N'ayant jamais travaillé",
+            "annee": "2021",
+            "valeur": 727
+        },
+        {
+            "experience": "N'ayant jamais travaillé",
+            "annee": "2022",
+            "valeur": 769
+        },
+        {
+            "experience": "N'ayant jamais travaillé",
+            "annee": "2023",
+            "valeur": 809
+        },
+        {
+            "experience": "Ensemble",
+            "annee": "2019",
+            "valeur": 1107
+        },
+        {
+            "experience": "Ensemble",
+            "annee": "2020",
+            "valeur": 1429
+        },
+        {
+            "experience": "Ensemble",
+            "annee": "2021",
+            "valeur": 1508
+        },
+        {
+            "experience": "Ensemble",
+            "annee": "2022",
+            "valeur": 1442
+        },
+        {
+            "experience": "Ensemble",
+            "annee": "2023",
+            "valeur": 1580
+        }
+    ]
+}

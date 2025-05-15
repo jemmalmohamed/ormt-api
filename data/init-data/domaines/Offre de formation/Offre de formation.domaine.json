@@ -3,9 +3,9 @@
   "description": "Analyse du système de formation professionnelle, son accès et ses programmes",
   "apropos": "Analyse du système de formation professionnelle, son accès et ses programmes",
   "imageUrl": "/images/offre-de-formation.png",
-  "roleacces": [
+  "roleAcces": [
     {
-      "rolecode": "role_public",
+      "roleCode": "role_public",
       "niveauacces": "lecture"
     }
   ],

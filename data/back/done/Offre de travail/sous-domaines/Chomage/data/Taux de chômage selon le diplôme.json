@@ -1,0 +1,80 @@
+{
+    "indicateur": "Taux de chômage selon le diplôme (en %)",
+    "data": [
+        {
+            "diplome": "Sans diplôme",
+            "annee": "2019",
+            "valeur": 3.1
+        },
+        {
+            "diplome": "Sans diplôme",
+            "annee": "2020",
+            "valeur": 5.6
+        },
+        {
+            "diplome": "Sans diplôme",
+            "annee": "2021",
+            "valeur": 4.6
+        },
+        {
+            "diplome": "Sans diplôme",
+            "annee": "2022",
+            "valeur": 4.2
+        },
+        {
+            "diplome": "Sans diplôme",
+            "annee": "2023",
+            "valeur": 4.9
+        },
+        {
+            "diplome": "Niveau moyen",
+            "annee": "2019",
+            "valeur": 12.4
+        },
+        {
+            "diplome": "Niveau moyen",
+            "annee": "2020",
+            "valeur": 15.5
+        },
+        {
+            "diplome": "Niveau moyen",
+            "annee": "2021",
+            "valeur": 15.9
+        },
+        {
+            "diplome": "Niveau moyen",
+            "annee": "2022",
+            "valeur": 14.1
+        },
+        {
+            "diplome": "Niveau moyen",
+            "annee": "2023",
+            "valeur": 15.8
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "annee": "2019",
+            "valeur": 21.6
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "annee": "2020",
+            "valeur": 23.9
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "annee": "2021",
+            "valeur": 25.9
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "annee": "2022",
+            "valeur": 25.8
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "annee": "2023",
+            "valeur": 25.9
+        }
+    ]
+}

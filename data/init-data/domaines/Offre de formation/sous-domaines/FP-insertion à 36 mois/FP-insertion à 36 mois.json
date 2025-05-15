@@ -1,0 +1,161 @@
+{
+    "nom": "FP-insertion à 36 mois",
+    "description": "Indicateurs relatifs à l'insertion des lauréats de la formation professionnelle à 36 mois par mode de formation, genre, niveau de formation et région.",
+    "roleAcces": [
+        {
+            "roleCode": "role_public",
+            "niveauacces": "lecture"
+        }
+    ],
+    "actif": true,
+    "indicateurs": [
+        {
+            "nom": "Taux d'insertion des lauréats de la FP à 36 mois par mode de formation",
+            "description": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par mode de formation.",
+            "categorie": "FP-insertion à 36 mois",
+            "abreviation": "FP",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand Public / Décisionnel",
+            "source": "DFP",
+            "reglecalcul": "",
+            "periode": "2016",
+            "dimensions": [
+                {
+                    "nom": "mode_formation",
+                    "libelle": "Mode de formation",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "Année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Taux d'insertion des lauréats de la FP à 36 mois par genre",
+            "description": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par genre.",
+            "categorie": "FP-insertion à 36 mois",
+            "abreviation": "FP",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand Public / Décisionnel",
+            "source": "DFP",
+            "reglecalcul": "",
+            "periode": "2006-2016",
+            "dimensions": [
+                {
+                    "nom": "genre",
+                    "libelle": "Genre",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "Année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Taux d'insertion des lauréats de la FP à 36 mois par niveau de formation",
+            "description": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par niveau de formation.",
+            "categorie": "FP-insertion à 36 mois",
+            "abreviation": "FP",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand Public / Décisionnel",
+            "source": "DFP",
+            "reglecalcul": "",
+            "periode": "2006-2016",
+            "dimensions": [
+                {
+                    "nom": "niveau_formation",
+                    "libelle": "Niveau de formation",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "Année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Taux d'insertion des lauréats de la FP à 36 mois par région",
+            "description": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par région.",
+            "categorie": "FP-insertion à 36 mois",
+            "abreviation": "FP",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand Public / Décisionnel",
+            "source": "DFP",
+            "reglecalcul": "",
+            "periode": "2016",
+            "dimensions": [
+                {
+                    "nom": "region",
+                    "libelle": "Région",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "Année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        }
+    ]
+}

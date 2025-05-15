@@ -1,0 +1,29 @@
+{
+    "indicateur": "Nombre des bénéficiaires IDMAJ, y compris le PI (en milliers)",
+    "data": [
+        {
+            "annee": 2019,
+            "valeur": 109
+        },
+        {
+            "annee": 2020,
+            "valeur": 76
+        },
+        {
+            "annee": 2021,
+            "valeur": 97
+        },
+        {
+            "annee": 2022,
+            "valeur": 114
+        },
+        {
+            "annee": 2023,
+            "valeur": 120
+        },
+        {
+            "annee": 2024,
+            "valeur": 125
+        }
+    ]
+}

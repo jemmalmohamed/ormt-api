@@ -1,0 +1,11 @@
+{
+    "indicateur": "Nombre d'entretiens de positionnement (en milliers)",
+    "data": [
+        { "annee": "2019", "valeur": 69 },
+        { "annee": "2020", "valeur": 72 },
+        { "annee": "2021", "valeur": 79 },
+        { "annee": "2022", "valeur": 75 },
+        { "annee": "2023", "valeur": 86 },
+        { "annee": "2024", "valeur": 89 }
+    ]
+}

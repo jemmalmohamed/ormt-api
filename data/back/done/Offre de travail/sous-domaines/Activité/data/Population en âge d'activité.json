@@ -1,0 +1,383 @@
+{
+    "indicateur": "Population en âge d'activité",
+    "data": [
+        {
+            "groupe_age": "15-24 ans",
+            "milieu": "Urbain",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 1761352
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "milieu": "Urbain",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 1762092
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "milieu": "Urbain",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 3523444
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "milieu": "Rural",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 1229002
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "milieu": "Rural",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 1150661
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "milieu": "Rural",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 2379662
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "milieu": "National",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 2990354
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "milieu": "National",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 2912753
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "milieu": "National",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 5903106
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "milieu": "Urbain",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 1819546
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "milieu": "Urbain",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 1964725
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "milieu": "Urbain",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 3784271
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "milieu": "Rural",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 999407
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "milieu": "Rural",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 925270
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "milieu": "Rural",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 1924677
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "milieu": "National",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 2818954
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "milieu": "National",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 2889995
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "milieu": "National",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 5708948
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "milieu": "Urbain",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 1548516
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "milieu": "Urbain",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 1691597
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "milieu": "Urbain",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 3240112
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "milieu": "Rural",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 832138
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "milieu": "Rural",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 807466
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "milieu": "Rural",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 1639605
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "milieu": "National",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 2380654
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "milieu": "National",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 2499065
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "milieu": "National",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 4879718
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "milieu": "Urbain",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 1845870
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "milieu": "Urbain",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 1975925
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "milieu": "Urbain",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 3821795
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "milieu": "Rural",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 914292
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "milieu": "Rural",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 912563
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "milieu": "Rural",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 1826855
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "milieu": "National",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 2760162
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "milieu": "National",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 2888488
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "milieu": "National",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 5648650
+        },
+        {
+            "groupe_age": "60 ans ou plus",
+            "milieu": "Urbain",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 1283085
+        },
+        {
+            "groupe_age": "60 ans ou plus",
+            "milieu": "Urbain",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 1363608
+        },
+        {
+            "groupe_age": "60 ans ou plus",
+            "milieu": "Urbain",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 2646696
+        },
+        {
+            "groupe_age": "60 ans ou plus",
+            "milieu": "Rural",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 727894
+        },
+        {
+            "groupe_age": "60 ans ou plus",
+            "milieu": "Rural",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 844374
+        },
+        {
+            "groupe_age": "60 ans ou plus",
+            "milieu": "Rural",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 1572268
+        },
+        {
+            "groupe_age": "60 ans ou plus",
+            "milieu": "National",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 2010981
+        },
+        {
+            "groupe_age": "60 ans ou plus",
+            "milieu": "National",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 2207983
+        },
+        {
+            "groupe_age": "60 ans ou plus",
+            "milieu": "National",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 4218964
+        },
+        {
+            "groupe_age": "Total",
+            "milieu": "Urbain",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 8258369
+        },
+        {
+            "groupe_age": "Total",
+            "milieu": "Urbain",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 8757947
+        },
+        {
+            "groupe_age": "Total",
+            "milieu": "Urbain",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 17016318
+        },
+        {
+            "groupe_age": "Total",
+            "milieu": "Rural",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 4702733
+        },
+        {
+            "groupe_age": "Total",
+            "milieu": "Rural",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 4640334
+        },
+        {
+            "groupe_age": "Total",
+            "milieu": "Rural",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 9343067
+        },
+        {
+            "groupe_age": "Total",
+            "milieu": "National",
+            "genre": "Masculin",
+            "annee": "2019",
+            "valeur": 12961105
+        },
+        {
+            "groupe_age": "Total",
+            "milieu": "National",
+            "genre": "Féminin",
+            "annee": "2019",
+            "valeur": 13398284
+        },
+        {
+            "groupe_age": "Total",
+            "milieu": "National",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 26359386
+        }
+    ]
+}

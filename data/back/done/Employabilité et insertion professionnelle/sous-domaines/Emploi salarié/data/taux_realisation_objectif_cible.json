@@ -1,0 +1,29 @@
+{
+    "indicateur": "Taux de réalisation de l’objectif ciblé",
+    "data": [
+        {
+            "annee": 2019,
+            "valeur": 124.5
+        },
+        {
+            "annee": 2020,
+            "valeur": 71.6
+        },
+        {
+            "annee": 2021,
+            "valeur": 98.0
+        },
+        {
+            "annee": 2022,
+            "valeur": 111.0
+        },
+        {
+            "annee": 2023,
+            "valeur": 98.9
+        },
+        {
+            "annee": 2024,
+            "valeur": 91.7
+        }
+    ]
+}

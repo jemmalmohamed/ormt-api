@@ -1,0 +1,995 @@
+{
+    "indicateur": "Taux de chômage par région et genre (en %)",
+    "data": [
+        {
+            "region": "Tanger-Tétouan- Al Hoceima",
+            "genre": "Homme",
+            "annee": "2019",
+            "valeur": 7.1
+        },
+        {
+            "region": "Tanger-Tétouan- Al Hoceima",
+            "genre": "Femme",
+            "annee": "2019",
+            "valeur": 14.7
+        },
+        {
+            "region": "Tanger-Tétouan- Al Hoceima",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 8.6
+        },
+        {
+            "region": "Tanger-Tétouan- Al Hoceima",
+            "genre": "Homme",
+            "annee": "2020",
+            "valeur": 8.9
+        },
+        {
+            "region": "Tanger-Tétouan- Al Hoceima",
+            "genre": "Femme",
+            "annee": "2020",
+            "valeur": 16.1
+        },
+        {
+            "region": "Tanger-Tétouan- Al Hoceima",
+            "genre": "Ensemble",
+            "annee": "2020",
+            "valeur": 10.4
+        },
+        {
+            "region": "Tanger-Tétouan- Al Hoceima",
+            "genre": "Homme",
+            "annee": "2021",
+            "valeur": 9.6
+        },
+        {
+            "region": "Tanger-Tétouan- Al Hoceima",
+            "genre": "Femme",
+            "annee": "2021",
+            "valeur": 12.5
+        },
+        {
+            "region": "Tanger-Tétouan- Al Hoceima",
+            "genre": "Ensemble",
+            "annee": "2021",
+            "valeur": 10.4
+        },
+        {
+            "region": "Tanger-Tétouan- Al Hoceima",
+            "genre": "Homme",
+            "annee": "2022",
+            "valeur": 8.8
+        },
+        {
+            "region": "Tanger-Tétouan- Al Hoceima",
+            "genre": "Femme",
+            "annee": "2022",
+            "valeur": 12.0
+        },
+        {
+            "region": "Tanger-Tétouan- Al Hoceima",
+            "genre": "Ensemble",
+            "annee": "2022",
+            "valeur": 9.7
+        },
+        {
+            "region": "Tanger-Tétouan- Al Hoceima",
+            "genre": "Homme",
+            "annee": "2023",
+            "valeur": 9.4
+        },
+        {
+            "region": "Tanger-Tétouan- Al Hoceima",
+            "genre": "Femme",
+            "annee": "2023",
+            "valeur": 12.3
+        },
+        {
+            "region": "Tanger-Tétouan- Al Hoceima",
+            "genre": "Ensemble",
+            "annee": "2023",
+            "valeur": 10.1
+        },
+        {
+            "region": "Oriental",
+            "genre": "Homme",
+            "annee": "2019",
+            "valeur": 12.4
+        },
+        {
+            "region": "Oriental",
+            "genre": "Femme",
+            "annee": "2019",
+            "valeur": 19.8
+        },
+        {
+            "region": "Oriental",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 13.8
+        },
+        {
+            "region": "Oriental",
+            "genre": "Homme",
+            "annee": "2020",
+            "valeur": 19.7
+        },
+        {
+            "region": "Oriental",
+            "genre": "Femme",
+            "annee": "2020",
+            "valeur": 25.4
+        },
+        {
+            "region": "Oriental",
+            "genre": "Ensemble",
+            "annee": "2020",
+            "valeur": 20.7
+        },
+        {
+            "region": "Oriental",
+            "genre": "Homme",
+            "annee": "2021",
+            "valeur": 16.7
+        },
+        {
+            "region": "Oriental",
+            "genre": "Femme",
+            "annee": "2021",
+            "valeur": 24.7
+        },
+        {
+            "region": "Oriental",
+            "genre": "Ensemble",
+            "annee": "2021",
+            "valeur": 18.1
+        },
+        {
+            "region": "Oriental",
+            "genre": "Homme",
+            "annee": "2022",
+            "valeur": 15.3
+        },
+        {
+            "region": "Oriental",
+            "genre": "Femme",
+            "annee": "2022",
+            "valeur": 27.1
+        },
+        {
+            "region": "Oriental",
+            "genre": "Ensemble",
+            "annee": "2022",
+            "valeur": 17.4
+        },
+        {
+            "region": "Oriental",
+            "genre": "Homme",
+            "annee": "2023",
+            "valeur": 17.9
+        },
+        {
+            "region": "Oriental",
+            "genre": "Femme",
+            "annee": "2023",
+            "valeur": 28.1
+        },
+        {
+            "region": "Oriental",
+            "genre": "Ensemble",
+            "annee": "2023",
+            "valeur": 19.6
+        },
+        {
+            "region": "Fès-Meknès",
+            "genre": "Homme",
+            "annee": "2019",
+            "valeur": 7.5
+        },
+        {
+            "region": "Fès-Meknès",
+            "genre": "Femme",
+            "annee": "2019",
+            "valeur": 13.2
+        },
+        {
+            "region": "Fès-Meknès",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 8.7
+        },
+        {
+            "region": "Fès-Meknès",
+            "genre": "Homme",
+            "annee": "2020",
+            "valeur": 11.3
+        },
+        {
+            "region": "Fès-Meknès",
+            "genre": "Femme",
+            "annee": "2020",
+            "valeur": 16.7
+        },
+        {
+            "region": "Fès-Meknès",
+            "genre": "Ensemble",
+            "annee": "2020",
+            "valeur": 12.5
+        },
+        {
+            "region": "Fès-Meknès",
+            "genre": "Homme",
+            "annee": "2021",
+            "valeur": 11.5
+        },
+        {
+            "region": "Fès-Meknès",
+            "genre": "Femme",
+            "annee": "2021",
+            "valeur": 19.7
+        },
+        {
+            "region": "Fès-Meknès",
+            "genre": "Ensemble",
+            "annee": "2021",
+            "valeur": 13.4
+        },
+        {
+            "region": "Fès-Meknès",
+            "genre": "Homme",
+            "annee": "2022",
+            "valeur": 11.6
+        },
+        {
+            "region": "Fès-Meknès",
+            "genre": "Femme",
+            "annee": "2022",
+            "valeur": 19.9
+        },
+        {
+            "region": "Fès-Meknès",
+            "genre": "Ensemble",
+            "annee": "2022",
+            "valeur": 13.5
+        },
+        {
+            "region": "Fès-Meknès",
+            "genre": "Homme",
+            "annee": "2023",
+            "valeur": 12.4
+        },
+        {
+            "region": "Fès-Meknès",
+            "genre": "Femme",
+            "annee": "2023",
+            "valeur": 20.4
+        },
+        {
+            "region": "Fès-Meknès",
+            "genre": "Ensemble",
+            "annee": "2023",
+            "valeur": 14.2
+        },
+        {
+            "region": "Rabat-Salé- Kénitra",
+            "genre": "Homme",
+            "annee": "2019",
+            "valeur": 8.2
+        },
+        {
+            "region": "Rabat-Salé- Kénitra",
+            "genre": "Femme",
+            "annee": "2019",
+            "valeur": 17.7
+        },
+        {
+            "region": "Rabat-Salé- Kénitra",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 10.7
+        },
+        {
+            "region": "Rabat-Salé- Kénitra",
+            "genre": "Homme",
+            "annee": "2020",
+            "valeur": 10.5
+        },
+        {
+            "region": "Rabat-Salé- Kénitra",
+            "genre": "Femme",
+            "annee": "2020",
+            "valeur": 19.7
+        },
+        {
+            "region": "Rabat-Salé- Kénitra",
+            "genre": "Ensemble",
+            "annee": "2020",
+            "valeur": 12.7
+        },
+        {
+            "region": "Rabat-Salé- Kénitra",
+            "genre": "Homme",
+            "annee": "2021",
+            "valeur": 10.1
+        },
+        {
+            "region": "Rabat-Salé- Kénitra",
+            "genre": "Femme",
+            "annee": "2021",
+            "valeur": 18.8
+        },
+        {
+            "region": "Rabat-Salé- Kénitra",
+            "genre": "Ensemble",
+            "annee": "2021",
+            "valeur": 12.2
+        },
+        {
+            "region": "Rabat-Salé- Kénitra",
+            "genre": "Homme",
+            "annee": "2022",
+            "valeur": 8.9
+        },
+        {
+            "region": "Rabat-Salé- Kénitra",
+            "genre": "Femme",
+            "annee": "2022",
+            "valeur": 17.7
+        },
+        {
+            "region": "Rabat-Salé- Kénitra",
+            "genre": "Ensemble",
+            "annee": "2022",
+            "valeur": 11.0
+        },
+        {
+            "region": "Rabat-Salé- Kénitra",
+            "genre": "Homme",
+            "annee": "2023",
+            "valeur": 9.7
+        },
+        {
+            "region": "Rabat-Salé- Kénitra",
+            "genre": "Femme",
+            "annee": "2023",
+            "valeur": 17.6
+        },
+        {
+            "region": "Rabat-Salé- Kénitra",
+            "genre": "Ensemble",
+            "annee": "2023",
+            "valeur": 11.6
+        },
+        {
+            "region": "Béni Mellal- Khénifra",
+            "genre": "Homme",
+            "annee": "2019",
+            "valeur": 4.6
+        },
+        {
+            "region": "Béni Mellal- Khénifra",
+            "genre": "Femme",
+            "annee": "2019",
+            "valeur": 7.8
+        },
+        {
+            "region": "Béni Mellal- Khénifra",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 5.4
+        },
+        {
+            "region": "Béni Mellal- Khénifra",
+            "genre": "Homme",
+            "annee": "2020",
+            "valeur": 6.9
+        },
+        {
+            "region": "Béni Mellal- Khénifra",
+            "genre": "Femme",
+            "annee": "2020",
+            "valeur": 9.2
+        },
+        {
+            "region": "Béni Mellal- Khénifra",
+            "genre": "Ensemble",
+            "annee": "2020",
+            "valeur": 7.4
+        },
+        {
+            "region": "Béni Mellal- Khénifra",
+            "genre": "Homme",
+            "annee": "2021",
+            "valeur": 9.3
+        },
+        {
+            "region": "Béni Mellal- Khénifra",
+            "genre": "Femme",
+            "annee": "2021",
+            "valeur": 10.4
+        },
+        {
+            "region": "Béni Mellal- Khénifra",
+            "genre": "Ensemble",
+            "annee": "2021",
+            "valeur": 9.6
+        },
+        {
+            "region": "Béni Mellal- Khénifra",
+            "genre": "Homme",
+            "annee": "2022",
+            "valeur": 10.2
+        },
+        {
+            "region": "Béni Mellal- Khénifra",
+            "genre": "Femme",
+            "annee": "2022",
+            "valeur": 11.9
+        },
+        {
+            "region": "Béni Mellal- Khénifra",
+            "genre": "Ensemble",
+            "annee": "2022",
+            "valeur": 10.5
+        },
+        {
+            "region": "Béni Mellal- Khénifra",
+            "genre": "Homme",
+            "annee": "2023",
+            "valeur": 12.0
+        },
+        {
+            "region": "Béni Mellal- Khénifra",
+            "genre": "Femme",
+            "annee": "2023",
+            "valeur": 16.6
+        },
+        {
+            "region": "Béni Mellal- Khénifra",
+            "genre": "Ensemble",
+            "annee": "2023",
+            "valeur": 12.8
+        },
+        {
+            "region": "Grand Casablanca-Settat",
+            "genre": "Homme",
+            "annee": "2019",
+            "valeur": 8.8
+        },
+        {
+            "region": "Grand Casablanca-Settat",
+            "genre": "Femme",
+            "annee": "2019",
+            "valeur": 13.1
+        },
+        {
+            "region": "Grand Casablanca-Settat",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 10.0
+        },
+        {
+            "region": "Grand Casablanca-Settat",
+            "genre": "Homme",
+            "annee": "2020",
+            "valeur": 12.1
+        },
+        {
+            "region": "Grand Casablanca-Settat",
+            "genre": "Femme",
+            "annee": "2020",
+            "valeur": 16.9
+        },
+        {
+            "region": "Grand Casablanca-Settat",
+            "genre": "Ensemble",
+            "annee": "2020",
+            "valeur": 13.4
+        },
+        {
+            "region": "Grand Casablanca-Settat",
+            "genre": "Homme",
+            "annee": "2021",
+            "valeur": 13.2
+        },
+        {
+            "region": "Grand Casablanca-Settat",
+            "genre": "Femme",
+            "annee": "2021",
+            "valeur": 18.2
+        },
+        {
+            "region": "Grand Casablanca-Settat",
+            "genre": "Ensemble",
+            "annee": "2021",
+            "valeur": 14.6
+        },
+        {
+            "region": "Grand Casablanca-Settat",
+            "genre": "Homme",
+            "annee": "2022",
+            "valeur": 12.3
+        },
+        {
+            "region": "Grand Casablanca-Settat",
+            "genre": "Femme",
+            "annee": "2022",
+            "valeur": 17.8
+        },
+        {
+            "region": "Grand Casablanca-Settat",
+            "genre": "Ensemble",
+            "annee": "2022",
+            "valeur": 13.8
+        },
+        {
+            "region": "Grand Casablanca-Settat",
+            "genre": "Homme",
+            "annee": "2023",
+            "valeur": 13.9
+        },
+        {
+            "region": "Grand Casablanca-Settat",
+            "genre": "Femme",
+            "annee": "2023",
+            "valeur": 18.3
+        },
+        {
+            "region": "Grand Casablanca-Settat",
+            "genre": "Ensemble",
+            "annee": "2023",
+            "valeur": 15.0
+        },
+        {
+            "region": "Marrakech-Safi",
+            "genre": "Homme",
+            "annee": "2019",
+            "valeur": 5.3
+        },
+        {
+            "region": "Marrakech-Safi",
+            "genre": "Femme",
+            "annee": "2019",
+            "valeur": 7.2
+        },
+        {
+            "region": "Marrakech-Safi",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 5.7
+        },
+        {
+            "region": "Marrakech-Safi",
+            "genre": "Homme",
+            "annee": "2020",
+            "valeur": 6.5
+        },
+        {
+            "region": "Marrakech-Safi",
+            "genre": "Femme",
+            "annee": "2020",
+            "valeur": 8.3
+        },
+        {
+            "region": "Marrakech-Safi",
+            "genre": "Ensemble",
+            "annee": "2020",
+            "valeur": 6.9
+        },
+        {
+            "region": "Marrakech-Safi",
+            "genre": "Homme",
+            "annee": "2021",
+            "valeur": 6.8
+        },
+        {
+            "region": "Marrakech-Safi",
+            "genre": "Femme",
+            "annee": "2021",
+            "valeur": 11.0
+        },
+        {
+            "region": "Marrakech-Safi",
+            "genre": "Ensemble",
+            "annee": "2021",
+            "valeur": 7.6
+        },
+        {
+            "region": "Marrakech-Safi",
+            "genre": "Homme",
+            "annee": "2022",
+            "valeur": 5.7
+        },
+        {
+            "region": "Marrakech-Safi",
+            "genre": "Femme",
+            "annee": "2022",
+            "valeur": 11.7
+        },
+        {
+            "region": "Marrakech-Safi",
+            "genre": "Ensemble",
+            "annee": "2022",
+            "valeur": 6.9
+        },
+        {
+            "region": "Marrakech-Safi",
+            "genre": "Homme",
+            "annee": "2023",
+            "valeur": 6.4
+        },
+        {
+            "region": "Marrakech-Safi",
+            "genre": "Femme",
+            "annee": "2023",
+            "valeur": 13.0
+        },
+        {
+            "region": "Marrakech-Safi",
+            "genre": "Ensemble",
+            "annee": "2023",
+            "valeur": 7.7
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "genre": "Homme",
+            "annee": "2019",
+            "valeur": 5.0
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "genre": "Femme",
+            "annee": "2019",
+            "valeur": 7.2
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 5.6
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "genre": "Homme",
+            "annee": "2020",
+            "valeur": 9.0
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "genre": "Femme",
+            "annee": "2020",
+            "valeur": 8.9
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "genre": "Ensemble",
+            "annee": "2020",
+            "valeur": 8.9
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "genre": "Homme",
+            "annee": "2021",
+            "valeur": 9.7
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "genre": "Femme",
+            "annee": "2021",
+            "valeur": 9.3
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "genre": "Ensemble",
+            "annee": "2021",
+            "valeur": 9.6
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "genre": "Homme",
+            "annee": "2022",
+            "valeur": 9.2
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "genre": "Femme",
+            "annee": "2022",
+            "valeur": 11.3
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "genre": "Ensemble",
+            "annee": "2022",
+            "valeur": 9.7
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "genre": "Homme",
+            "annee": "2023",
+            "valeur": 10.7
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "genre": "Femme",
+            "annee": "2023",
+            "valeur": 15.5
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "genre": "Ensemble",
+            "annee": "2023",
+            "valeur": 11.9
+        },
+        {
+            "region": "Souss-Massa",
+            "genre": "Homme",
+            "annee": "2019",
+            "valeur": 9.6
+        },
+        {
+            "region": "Souss-Massa",
+            "genre": "Femme",
+            "annee": "2019",
+            "valeur": 12.4
+        },
+        {
+            "region": "Souss-Massa",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 10.3
+        },
+        {
+            "region": "Souss-Massa",
+            "genre": "Homme",
+            "annee": "2020",
+            "valeur": 11.1
+        },
+        {
+            "region": "Souss-Massa",
+            "genre": "Femme",
+            "annee": "2020",
+            "valeur": 14.4
+        },
+        {
+            "region": "Souss-Massa",
+            "genre": "Ensemble",
+            "annee": "2020",
+            "valeur": 11.8
+        },
+        {
+            "region": "Souss-Massa",
+            "genre": "Homme",
+            "annee": "2021",
+            "valeur": 9.9
+        },
+        {
+            "region": "Souss-Massa",
+            "genre": "Femme",
+            "annee": "2021",
+            "valeur": 16.6
+        },
+        {
+            "region": "Souss-Massa",
+            "genre": "Ensemble",
+            "annee": "2021",
+            "valeur": 11.3
+        },
+        {
+            "region": "Souss-Massa",
+            "genre": "Homme",
+            "annee": "2022",
+            "valeur": 9.6
+        },
+        {
+            "region": "Souss-Massa",
+            "genre": "Femme",
+            "annee": "2022",
+            "valeur": 20.4
+        },
+        {
+            "region": "Souss-Massa",
+            "genre": "Ensemble",
+            "annee": "2022",
+            "valeur": 11.4
+        },
+        {
+            "region": "Souss-Massa",
+            "genre": "Homme",
+            "annee": "2023",
+            "valeur": 11.4
+        },
+        {
+            "region": "Souss-Massa",
+            "genre": "Femme",
+            "annee": "2023",
+            "valeur": 23.7
+        },
+        {
+            "region": "Souss-Massa",
+            "genre": "Ensemble",
+            "annee": "2023",
+            "valeur": 13.5
+        },
+        {
+            "region": "Régions du Sud",
+            "genre": "Homme",
+            "annee": "2019",
+            "valeur": 10.7
+        },
+        {
+            "region": "Régions du Sud",
+            "genre": "Femme",
+            "annee": "2019",
+            "valeur": 39.8
+        },
+        {
+            "region": "Régions du Sud",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 16.3
+        },
+        {
+            "region": "Régions du Sud",
+            "genre": "Homme",
+            "annee": "2020",
+            "valeur": 13.9
+        },
+        {
+            "region": "Régions du Sud",
+            "genre": "Femme",
+            "annee": "2020",
+            "valeur": 47.5
+        },
+        {
+            "region": "Régions du Sud",
+            "genre": "Ensemble",
+            "annee": "2020",
+            "valeur": 19.8
+        },
+        {
+            "region": "Régions du Sud",
+            "genre": "Homme",
+            "annee": "2021",
+            "valeur": 14.2
+        },
+        {
+            "region": "Régions du Sud",
+            "genre": "Femme",
+            "annee": "2021",
+            "valeur": 45.9
+        },
+        {
+            "region": "Régions du Sud",
+            "genre": "Ensemble",
+            "annee": "2021",
+            "valeur": 20.1
+        },
+        {
+            "region": "Régions du Sud",
+            "genre": "Homme",
+            "annee": "2022",
+            "valeur": 14.4
+        },
+        {
+            "region": "Régions du Sud",
+            "genre": "Femme",
+            "annee": "2022",
+            "valeur": 48.7
+        },
+        {
+            "region": "Régions du Sud",
+            "genre": "Ensemble",
+            "annee": "2022",
+            "valeur": 20.1
+        },
+        {
+            "region": "Régions du Sud",
+            "genre": "Homme",
+            "annee": "2023",
+            "valeur": 14.5
+        },
+        {
+            "region": "Régions du Sud",
+            "genre": "Femme",
+            "annee": "2023",
+            "valeur": 49.1
+        },
+        {
+            "region": "Régions du Sud",
+            "genre": "Ensemble",
+            "annee": "2023",
+            "valeur": 20.3
+        },
+        {
+            "region": "Ensemble",
+            "genre": "Homme",
+            "annee": "2019",
+            "valeur": 7.8
+        },
+        {
+            "region": "Ensemble",
+            "genre": "Femme",
+            "annee": "2019",
+            "valeur": 13.5
+        },
+        {
+            "region": "Ensemble",
+            "genre": "Ensemble",
+            "annee": "2019",
+            "valeur": 9.2
+        },
+        {
+            "region": "Ensemble",
+            "genre": "Homme",
+            "annee": "2020",
+            "valeur": 10.7
+        },
+        {
+            "region": "Ensemble",
+            "genre": "Femme",
+            "annee": "2020",
+            "valeur": 16.2
+        },
+        {
+            "region": "Ensemble",
+            "genre": "Ensemble",
+            "annee": "2020",
+            "valeur": 11.9
+        },
+        {
+            "region": "Ensemble",
+            "genre": "Homme",
+            "annee": "2021",
+            "valeur": 10.9
+        },
+        {
+            "region": "Ensemble",
+            "genre": "Femme",
+            "annee": "2021",
+            "valeur": 16.8
+        },
+        {
+            "region": "Ensemble",
+            "genre": "Ensemble",
+            "annee": "2021",
+            "valeur": 12.3
+        },
+        {
+            "region": "Ensemble",
+            "genre": "Homme",
+            "annee": "2022",
+            "valeur": 10.3
+        },
+        {
+            "region": "Ensemble",
+            "genre": "Femme",
+            "annee": "2022",
+            "valeur": 17.2
+        },
+        {
+            "region": "Ensemble",
+            "genre": "Ensemble",
+            "annee": "2022",
+            "valeur": 11.8
+        },
+        {
+            "region": "Ensemble",
+            "genre": "Homme",
+            "annee": "2023",
+            "valeur": 11.5
+        },
+        {
+            "region": "Ensemble",
+            "genre": "Femme",
+            "annee": "2023",
+            "valeur": 18.3
+        },
+        {
+            "region": "Ensemble",
+            "genre": "Ensemble",
+            "annee": "2023",
+            "valeur": 13.0
+        }
+    ]
+}

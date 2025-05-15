@@ -1,0 +1,20 @@
+{
+    "indicateur": "Inscrits à l’ANAPEC par diplôme",
+    "data": [
+        { "annee": "2019", "diplome": "Bac", "valeur": 17.5 },
+        { "annee": "2019", "diplome": "Diplômés de la FP", "valeur": 26.8 },
+        { "annee": "2019", "diplome": "Diplômés de l'enseignement supérieur", "valeur": 22.3 },
+        { "annee": "2019", "diplome": "Autre", "valeur": 13.4 },
+        { "annee": "2019", "diplome": "Non renseigné", "valeur": 20.0 },
+        { "annee": "2022", "diplome": "Bac", "valeur": 4.4 },
+        { "annee": "2022", "diplome": "Diplômés de la FP", "valeur": 8.6 },
+        { "annee": "2022", "diplome": "Diplômés de l'enseignement supérieur", "valeur": 62.3 },
+        { "annee": "2022", "diplome": "Autre", "valeur": 7.6 },
+        { "annee": "2022", "diplome": "Non renseigné", "valeur": 17.0 },
+        { "annee": "2024", "diplome": "Bac", "valeur": 20.1 },
+        { "annee": "2024", "diplome": "Diplômés de la FP", "valeur": 30.2 },
+        { "annee": "2024", "diplome": "Diplômés de l'enseignement supérieur", "valeur": 20.1 },
+        { "annee": "2024", "diplome": "Autre", "valeur": 0.5 },
+        { "annee": "2024", "diplome": "Non renseigné", "valeur": 29.1 }
+    ]
+}

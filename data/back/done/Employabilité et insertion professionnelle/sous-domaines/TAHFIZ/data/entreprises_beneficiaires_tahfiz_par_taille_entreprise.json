@@ -1,0 +1,110 @@
+{
+    "indicateur": "Entreprises bénéficiaires Tahfiz par taille d’entreprise",
+    "data": [
+        {
+            "annee": 2022,
+            "taille_entreprise": "1 à 5",
+            "valeur": 60.1
+        },
+        {
+            "annee": 2022,
+            "taille_entreprise": "6 à 10",
+            "valeur": 22.5
+        },
+        {
+            "annee": 2022,
+            "taille_entreprise": "11 à 50",
+            "valeur": 5.6
+        },
+        {
+            "annee": 2022,
+            "taille_entreprise": "51 à 100",
+            "valeur": 0.4
+        },
+        {
+            "annee": 2022,
+            "taille_entreprise": "Plus de 100",
+            "valeur": 0.1
+        },
+        {
+            "annee": 2022,
+            "taille_entreprise": "Non renseigné",
+            "valeur": 11.3
+        },
+        {
+            "annee": 2022,
+            "taille_entreprise": "Ensemble",
+            "valeur": 100.0
+        },
+        {
+            "annee": 2023,
+            "taille_entreprise": "1 à 5",
+            "valeur": 59.6
+        },
+        {
+            "annee": 2023,
+            "taille_entreprise": "6 à 10",
+            "valeur": 22.4
+        },
+        {
+            "annee": 2023,
+            "taille_entreprise": "11 à 50",
+            "valeur": 5.2
+        },
+        {
+            "annee": 2023,
+            "taille_entreprise": "51 à 100",
+            "valeur": 0.4
+        },
+        {
+            "annee": 2023,
+            "taille_entreprise": "Plus de 100",
+            "valeur": 0.2
+        },
+        {
+            "annee": 2023,
+            "taille_entreprise": "Non renseigné",
+            "valeur": 12.2
+        },
+        {
+            "annee": 2023,
+            "taille_entreprise": "Ensemble",
+            "valeur": 100.0
+        },
+        {
+            "annee": 2024,
+            "taille_entreprise": "1 à 5",
+            "valeur": 59.3
+        },
+        {
+            "annee": 2024,
+            "taille_entreprise": "6 à 10",
+            "valeur": 20.7
+        },
+        {
+            "annee": 2024,
+            "taille_entreprise": "11 à 50",
+            "valeur": 5.6
+        },
+        {
+            "annee": 2024,
+            "taille_entreprise": "51 à 100",
+            "valeur": 0.4
+        },
+        {
+            "annee": 2024,
+            "taille_entreprise": "Plus de 100",
+            "valeur": 0.2
+        },
+        {
+            "annee": 2024,
+            "taille_entreprise": "Non renseigné",
+            "valeur": 13.7
+        },
+        {
+            "annee": 2024,
+            "taille_entreprise": "Ensemble",
+            "valeur": 100.0
+        }
+    ]
+}

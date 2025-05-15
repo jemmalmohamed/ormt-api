@@ -1,0 +1,23 @@
+{
+    "indicateur": "Entretiens de positionnement par genre",
+    "data": [
+        { "annee": "2019", "genre": "Homme", "valeur": 56.8 },
+        { "annee": "2019", "genre": "Femme", "valeur": 43.2 },
+        { "annee": "2019", "genre": "Non renseigné", "valeur": 0.0 },
+        { "annee": "2020", "genre": "Homme", "valeur": 56.0 },
+        { "annee": "2020", "genre": "Femme", "valeur": 44.0 },
+        { "annee": "2020", "genre": "Non renseigné", "valeur": 0.0 },
+        { "annee": "2021", "genre": "Homme", "valeur": 53.1 },
+        { "annee": "2021", "genre": "Femme", "valeur": 46.9 },
+        { "annee": "2021", "genre": "Non renseigné", "valeur": 0.0 },
+        { "annee": "2022", "genre": "Homme", "valeur": 51.2 },
+        { "annee": "2022", "genre": "Femme", "valeur": 48.8 },
+        { "annee": "2022", "genre": "Non renseigné", "valeur": 0.0 },
+        { "annee": "2023", "genre": "Homme", "valeur": 51.4 },
+        { "annee": "2023", "genre": "Femme", "valeur": 48.6 },
+        { "annee": "2023", "genre": "Non renseigné", "valeur": 0.0 },
+        { "annee": "2024", "genre": "Homme", "valeur": 50.4 },
+        { "annee": "2024", "genre": "Femme", "valeur": 49.6 },
+        { "annee": "2024", "genre": "Non renseigné", "valeur": 0.0 }
+    ]
+}

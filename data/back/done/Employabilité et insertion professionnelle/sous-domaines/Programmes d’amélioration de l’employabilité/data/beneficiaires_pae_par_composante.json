@@ -1,0 +1,185 @@
+{
+    "indicateur": "Bénéficiaires des PAE par composante",
+    "data": [
+        {
+            "annee": 2019,
+            "composante": "FCE",
+            "valeur": 18.1
+        },
+        {
+            "annee": 2019,
+            "composante": "FSE",
+            "valeur": 47.7
+        },
+        {
+            "annee": 2019,
+            "composante": "FQR",
+            "valeur": 8.0
+        },
+        {
+            "annee": 2019,
+            "composante": "Partenariat national",
+            "valeur": 9.0
+        },
+        {
+            "annee": 2019,
+            "composante": "Partenariat régional",
+            "valeur": 5.8
+        },
+        {
+            "annee": 2019,
+            "composante": "Formation en ligne",
+            "valeur": 11.4
+        },
+        {
+            "annee": 2020,
+            "composante": "FCE",
+            "valeur": 10.3
+        },
+        {
+            "annee": 2020,
+            "composante": "FSE",
+            "valeur": 42.4
+        },
+        {
+            "annee": 2020,
+            "composante": "FQR",
+            "valeur": 16.7
+        },
+        {
+            "annee": 2020,
+            "composante": "Partenariat national",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2020,
+            "composante": "Partenariat régional",
+            "valeur": 5.0
+        },
+        {
+            "annee": 2020,
+            "composante": "Formation en ligne",
+            "valeur": 25.6
+        },
+        {
+            "annee": 2021,
+            "composante": "FCE",
+            "valeur": 24.1
+        },
+        {
+            "annee": 2021,
+            "composante": "FSE",
+            "valeur": 36.7
+        },
+        {
+            "annee": 2021,
+            "composante": "FQR",
+            "valeur": 10.1
+        },
+        {
+            "annee": 2021,
+            "composante": "Partenariat national",
+            "valeur": 7.2
+        },
+        {
+            "annee": 2021,
+            "composante": "Partenariat régional",
+            "valeur": 3.1
+        },
+        {
+            "annee": 2021,
+            "composante": "Formation en ligne",
+            "valeur": 18.8
+        },
+        {
+            "annee": 2022,
+            "composante": "FCE",
+            "valeur": 2.9
+        },
+        {
+            "annee": 2022,
+            "composante": "FSE",
+            "valeur": 6.9
+        },
+        {
+            "annee": 2022,
+            "composante": "FQR",
+            "valeur": 1.1
+        },
+        {
+            "annee": 2022,
+            "composante": "Partenariat national",
+            "valeur": 2.3
+        },
+        {
+            "annee": 2022,
+            "composante": "Partenariat régional",
+            "valeur": 2.0
+        },
+        {
+            "annee": 2022,
+            "composante": "Formation en ligne",
+            "valeur": 84.9
+        },
+        {
+            "annee": 2023,
+            "composante": "FCE",
+            "valeur": 10.4
+        },
+        {
+            "annee": 2023,
+            "composante": "FSE",
+            "valeur": 6.5
+        },
+        {
+            "annee": 2023,
+            "composante": "FQR",
+            "valeur": 0.5
+        },
+        {
+            "annee": 2023,
+            "composante": "Partenariat national",
+            "valeur": 2.2
+        },
+        {
+            "annee": 2023,
+            "composante": "Partenariat régional",
+            "valeur": 1.7
+        },
+        {
+            "annee": 2023,
+            "composante": "Formation en ligne",
+            "valeur": 78.6
+        },
+        {
+            "annee": 2024,
+            "composante": "FCE",
+            "valeur": 43.2
+        },
+        {
+            "annee": 2024,
+            "composante": "FSE",
+            "valeur": 21.4
+        },
+        {
+            "annee": 2024,
+            "composante": "FQR",
+            "valeur": 0.2
+        },
+        {
+            "annee": 2024,
+            "composante": "Partenariat national",
+            "valeur": 6.8
+        },
+        {
+            "annee": 2024,
+            "composante": "Partenariat régional",
+            "valeur": 4.4
+        },
+        {
+            "annee": 2024,
+            "composante": "Formation en ligne",
+            "valeur": 24.1
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+  "nom": "intermédiation sur le marché du travail",
+  "description": "services d'intermédiation publique et privée sur le marché du travail",
+  "apropos": "services d'intermédiation publique et privée sur le marché du travail",
+  "imageUrl": "/images/intermédiation-travail.png",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauAcces": "lecture"
+    }
+  ],
+  "actif": true
+}

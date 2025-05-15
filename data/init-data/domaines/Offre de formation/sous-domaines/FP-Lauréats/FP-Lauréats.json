@@ -1,0 +1,161 @@
+{
+    "nom": "FP-Lauréats",
+    "description": "Indicateurs relatifs aux lauréats de la formation professionnelle par mode de formation, opérateur, niveau de formation et région.",
+    "roleAcces": [
+        {
+            "roleCode": "role_public",
+            "niveauacces": "lecture"
+        }
+    ],
+    "actif": true,
+    "indicateurs": [
+        {
+            "nom": "Nombre de lauréats de la FP par mode de formation",
+            "description": "Nombre de lauréats de la formation professionnelle par mode de formation.",
+            "categorie": "FP-Lauréats",
+            "abreviation": "FP",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand Public / Décisionnel",
+            "source": "DFP",
+            "reglecalcul": "",
+            "periode": "2016-2022",
+            "dimensions": [
+                {
+                    "nom": "mode_formation",
+                    "libelle": "Mode de formation",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "Année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Nombre de lauréats de la FP par opérateur de formation",
+            "description": "Nombre de lauréats de la formation professionnelle par opérateur de formation.",
+            "categorie": "FP-Lauréats",
+            "abreviation": "FP",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand Public / Décisionnel",
+            "source": "DFP",
+            "reglecalcul": "",
+            "periode": "2016-2022",
+            "dimensions": [
+                {
+                    "nom": "operateur_formation",
+                    "libelle": "Opérateur de formation",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "Année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Nombre de lauréats de la FP par niveau de formation",
+            "description": "Nombre de lauréats de la formation professionnelle par niveau de formation.",
+            "categorie": "FP-Lauréats",
+            "abreviation": "FP",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand Public / Décisionnel",
+            "source": "DFP",
+            "reglecalcul": "",
+            "periode": "2016-2022",
+            "dimensions": [
+                {
+                    "nom": "niveau_formation",
+                    "libelle": "Niveau de formation",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "Année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Nombre de lauréats de la FP par région",
+            "description": "Nombre de lauréats de la formation professionnelle par région.",
+            "categorie": "FP-Lauréats",
+            "abreviation": "FP",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand Public / Décisionnel",
+            "source": "DFP",
+            "reglecalcul": "",
+            "periode": "2016-2022",
+            "dimensions": [
+                {
+                    "nom": "region",
+                    "libelle": "Région",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "Année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        }
+    ]
+}

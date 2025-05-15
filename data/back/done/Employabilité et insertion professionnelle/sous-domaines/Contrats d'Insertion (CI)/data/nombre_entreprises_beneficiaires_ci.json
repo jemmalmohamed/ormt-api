@@ -1,0 +1,29 @@
+{
+    "indicateur": "Nombre d'entreprises bénéficiaires du CI",
+    "data": [
+        {
+            "annee": 2019,
+            "valeur": 7224
+        },
+        {
+            "annee": 2020,
+            "valeur": 6001
+        },
+        {
+            "annee": 2021,
+            "valeur": 7541
+        },
+        {
+            "annee": 2022,
+            "valeur": 8472
+        },
+        {
+            "annee": 2023,
+            "valeur": 8419
+        },
+        {
+            "annee": 2024,
+            "valeur": 9463
+        }
+    ]
+}

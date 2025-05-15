@@ -1,0 +1,199 @@
+{
+    "nom": "NEET",
+    "description": "Indicateurs relatifs aux jeunes NEET (ni en emploi, ni en études, ni en formation)",
+    "roleAcces": [
+        {
+            "roleCode": "role_public",
+            "niveauacces": "lecture"
+        }
+    ],
+    "actif": true,
+    "indicateurs": [
+        {
+            "nom": "Effectif des jeunes NEET par milieu de résidence",
+            "description": "Effectif des jeunes NEET selon le milieu de résidence",
+            "categorie": "NEET",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand public / Décisionnel",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2024",
+            "dimensions": [
+                {
+                    "nom": "milieu",
+                    "libelle": "milieu de résidence",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "annuel",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Effectif des jeunes NEET par genre",
+            "description": "Effectif des jeunes NEET selon le genre",
+            "categorie": "NEET",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand public / Décisionnel",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2025",
+            "dimensions": [
+                {
+                    "nom": "genre",
+                    "libelle": "genre",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "annuel",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Taux de NEET par milieu de résidence (en %)",
+            "description": "Taux de NEET selon le milieu de résidence (en %)",
+            "categorie": "NEET",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand public / Décisionnel",
+            "source": "HCP",
+            "reglecalcul": "",
+            "unite": "%",
+            "periode": "2019-2024",
+            "dimensions": [
+                {
+                    "nom": "milieu",
+                    "libelle": "milieu de résidence",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "annuel",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Taux de NEET par genre (en %)",
+            "description": "Taux de NEET selon le genre",
+            "categorie": "NEET",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand public / Décisionnel",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2024",
+            "dimensions": [
+                {
+                    "nom": "genre",
+                    "libelle": "genre",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "annuel",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Taux de NEET par région (en %)",
+            "description": "Taux de NEET selon la région",
+            "categorie": "NEET",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand public / Décisionnel",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2025",
+            "dimensions": [
+                {
+                    "nom": "region",
+                    "libelle": "région",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "annuel",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        }
+    ]
+}

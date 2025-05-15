@@ -1,0 +1,29 @@
+{
+    "indicateur": "objectif ciblé d’entretiens de positionnement (en milliers)",
+    "data": [
+        {
+            "annee": "2019",
+            "valeur": 120
+        },
+        {
+            "annee": "2020",
+            "valeur": 140
+        },
+        {
+            "annee": "2021",
+            "valeur": 140
+        },
+        {
+            "annee": "2022",
+            "valeur": 150
+        },
+        {
+            "annee": "2023",
+            "valeur": 165
+        },
+        {
+            "annee": "2024",
+            "valeur": 180
+        }
+    ]
+}

@@ -1,0 +1,280 @@
+{
+    "indicateur": "Taux d’insertion à 3 ans par diplôme",
+    "data": [
+        {
+            "annee": 2019,
+            "diplome": "Baccalauréat",
+            "valeur": 60.3
+        },
+        {
+            "annee": 2019,
+            "diplome": "Certificat de spécialisation professionnelle",
+            "valeur": 60.1
+        },
+        {
+            "annee": 2019,
+            "diplome": "Qualification professionnelle",
+            "valeur": 65.5
+        },
+        {
+            "annee": 2019,
+            "diplome": "Technicien",
+            "valeur": 67.7
+        },
+        {
+            "annee": 2019,
+            "diplome": "Cycle 1",
+            "valeur": 56.5
+        },
+        {
+            "annee": 2019,
+            "diplome": "Cycle 2",
+            "valeur": 52.2
+        },
+        {
+            "annee": 2019,
+            "diplome": "Cycle 3",
+            "valeur": 60.3
+        },
+        {
+            "annee": 2019,
+            "diplome": "Ingénieur",
+            "valeur": 74.1
+        },
+        {
+            "annee": 2019,
+            "diplome": "Autres Bac+2/3",
+            "valeur": 67.7
+        },
+        {
+            "annee": 2019,
+            "diplome": "Autres Bac+4 et plus",
+            "valeur": 68.1
+        },
+        {
+            "annee": 2019,
+            "diplome": "Ensemble",
+            "valeur": 63.4
+        },
+        {
+            "annee": 2020,
+            "diplome": "Baccalauréat",
+            "valeur": 55.2
+        },
+        {
+            "annee": 2020,
+            "diplome": "Certificat de spécialisation professionnelle",
+            "valeur": 56.3
+        },
+        {
+            "annee": 2020,
+            "diplome": "Qualification professionnelle",
+            "valeur": 63.0
+        },
+        {
+            "annee": 2020,
+            "diplome": "Technicien",
+            "valeur": 65.6
+        },
+        {
+            "annee": 2020,
+            "diplome": "Cycle 1",
+            "valeur": 53.5
+        },
+        {
+            "annee": 2020,
+            "diplome": "Cycle 2",
+            "valeur": 54.3
+        },
+        {
+            "annee": 2020,
+            "diplome": "Cycle 3",
+            "valeur": 56.3
+        },
+        {
+            "annee": 2020,
+            "diplome": "Ingénieur",
+            "valeur": 72.7
+        },
+        {
+            "annee": 2020,
+            "diplome": "Autres Bac+2/3",
+            "valeur": 62.3
+        },
+        {
+            "annee": 2020,
+            "diplome": "Autres Bac+4 et plus",
+            "valeur": 68.8
+        },
+        {
+            "annee": 2020,
+            "diplome": "Ensemble",
+            "valeur": 60.7
+        },
+        {
+            "annee": 2021,
+            "diplome": "Baccalauréat",
+            "valeur": 54.4
+        },
+        {
+            "annee": 2021,
+            "diplome": "Certificat de spécialisation professionnelle",
+            "valeur": 57.1
+        },
+        {
+            "annee": 2021,
+            "diplome": "Qualification professionnelle",
+            "valeur": 59.7
+        },
+        {
+            "annee": 2021,
+            "diplome": "Technicien",
+            "valeur": 65.7
+        },
+        {
+            "annee": 2021,
+            "diplome": "Cycle 1",
+            "valeur": 59.2
+        },
+        {
+            "annee": 2021,
+            "diplome": "Cycle 2",
+            "valeur": 57.4
+        },
+        {
+            "annee": 2021,
+            "diplome": "Cycle 3",
+            "valeur": 59.3
+        },
+        {
+            "annee": 2021,
+            "diplome": "Ingénieur",
+            "valeur": 74.2
+        },
+        {
+            "annee": 2021,
+            "diplome": "Autres Bac+2/3",
+            "valeur": 64.7
+        },
+        {
+            "annee": 2021,
+            "diplome": "Autres Bac+4 et plus",
+            "valeur": 71.5
+        },
+        {
+            "annee": 2021,
+            "diplome": "Ensemble",
+            "valeur": 60.8
+        },
+        {
+            "annee": 2022,
+            "diplome": "Baccalauréat",
+            "valeur": 59.9
+        },
+        {
+            "annee": 2022,
+            "diplome": "Certificat de spécialisation professionnelle",
+            "valeur": 63.3
+        },
+        {
+            "annee": 2022,
+            "diplome": "Qualification professionnelle",
+            "valeur": 67.4
+        },
+        {
+            "annee": 2022,
+            "diplome": "Technicien",
+            "valeur": 69.7
+        },
+        {
+            "annee": 2022,
+            "diplome": "Cycle 1",
+            "valeur": 60.9
+        },
+        {
+            "annee": 2022,
+            "diplome": "Cycle 2",
+            "valeur": 63.3
+        },
+        {
+            "annee": 2022,
+            "diplome": "Cycle 3",
+            "valeur": 62.9
+        },
+        {
+            "annee": 2022,
+            "diplome": "Ingénieur",
+            "valeur": 75.9
+        },
+        {
+            "annee": 2022,
+            "diplome": "Autres Bac+2/3",
+            "valeur": 67.7
+        },
+        {
+            "annee": 2022,
+            "diplome": "Autres Bac+4 et plus",
+            "valeur": 72.1
+        },
+        {
+            "annee": 2022,
+            "diplome": "Ensemble",
+            "valeur": 65.3
+        },
+        {
+            "annee": 2023,
+            "diplome": "Baccalauréat",
+            "valeur": 60.4
+        },
+        {
+            "annee": 2023,
+            "diplome": "Certificat de spécialisation professionnelle",
+            "valeur": 62.7
+        },
+        {
+            "annee": 2023,
+            "diplome": "Qualification professionnelle",
+            "valeur": 65.4
+        },
+        {
+            "annee": 2023,
+            "diplome": "Technicien",
+            "valeur": 68.6
+        },
+        {
+            "annee": 2023,
+            "diplome": "Cycle 1",
+            "valeur": 63.4
+        },
+        {
+            "annee": 2023,
+            "diplome": "Cycle 2",
+            "valeur": 63.3
+        },
+        {
+            "annee": 2023,
+            "diplome": "Cycle 3",
+            "valeur": 66.1
+        },
+        {
+            "annee": 2023,
+            "diplome": "Ingénieur",
+            "valeur": 77.1
+        },
+        {
+            "annee": 2023,
+            "diplome": "Autres Bac+2/3",
+            "valeur": 65.3
+        },
+        {
+            "annee": 2023,
+            "diplome": "Autres Bac+4 et plus",
+            "valeur": 70.7
+        },
+        {
+            "annee": 2023,
+            "diplome": "Ensemble",
+            "valeur": 64.4
+        }
+    ]
+}

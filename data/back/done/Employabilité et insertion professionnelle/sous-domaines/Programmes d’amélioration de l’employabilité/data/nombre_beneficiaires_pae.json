@@ -1,0 +1,29 @@
+{
+    "indicateur": "Nombre de bénéficiaires des Programmes d’amélioration de l’employabilité (en milliers)",
+    "data": [
+        {
+            "annee": 2019,
+            "valeur": 37
+        },
+        {
+            "annee": 2020,
+            "valeur": 28
+        },
+        {
+            "annee": 2021,
+            "valeur": 29
+        },
+        {
+            "annee": 2022,
+            "valeur": 125
+        },
+        {
+            "annee": 2023,
+            "valeur": 134
+        },
+        {
+            "annee": 2024,
+            "valeur": 42
+        }
+    ]
+}
