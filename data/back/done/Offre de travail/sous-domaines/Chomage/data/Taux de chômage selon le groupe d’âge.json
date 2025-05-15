@@ -1,0 +1,130 @@
+{
+    "indicateur": "Taux de chômage selon le groupe d’âge (en %)",
+    "data": [
+        {
+            "groupe_age": "15-24 ans",
+            "annee": "2019",
+            "valeur": 24.9
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "annee": "2020",
+            "valeur": 31.2
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "annee": "2021",
+            "valeur": 31.8
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "annee": "2022",
+            "valeur": 32.7
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "annee": "2023",
+            "valeur": 35.8
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "annee": "2019",
+            "valeur": 15.1
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "annee": "2020",
+            "valeur": 18.5
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "annee": "2021",
+            "valeur": 19.6
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "annee": "2022",
+            "valeur": 19.2
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "annee": "2023",
+            "valeur": 20.6
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "annee": "2019",
+            "valeur": 4.5
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "annee": "2020",
+            "valeur": 6.9
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "annee": "2021",
+            "valeur": 7
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "annee": "2022",
+            "valeur": 6.4
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "annee": "2023",
+            "valeur": 7.4
+        },
+        {
+            "groupe_age": "45 ans et plus",
+            "annee": "2019",
+            "valeur": 2.1
+        },
+        {
+            "groupe_age": "45 ans et plus",
+            "annee": "2020",
+            "valeur": 4
+        },
+        {
+            "groupe_age": "45 ans et plus",
+            "annee": "2021",
+            "valeur": 3.8
+        },
+        {
+            "groupe_age": "45 ans et plus",
+            "annee": "2022",
+            "valeur": 3.3
+        },
+        {
+            "groupe_age": "45 ans et plus",
+            "annee": "2023",
+            "valeur": 4.3
+        },
+        {
+            "groupe_age": "Ensemble",
+            "annee": "2019",
+            "valeur": 9.2
+        },
+        {
+            "groupe_age": "Ensemble",
+            "annee": "2020",
+            "valeur": 11.9
+        },
+        {
+            "groupe_age": "Ensemble",
+            "annee": "2021",
+            "valeur": 12.3
+        },
+        {
+            "groupe_age": "Ensemble",
+            "annee": "2022",
+            "valeur": 11.8
+        },
+        {
+            "groupe_age": "Ensemble",
+            "annee": "2023",
+            "valeur": 13
+        }
+    ]
+}

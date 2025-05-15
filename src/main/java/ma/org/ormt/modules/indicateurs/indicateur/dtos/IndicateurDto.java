@@ -34,6 +34,8 @@ public class IndicateurDto extends BaseDto {
 
     private Boolean actif;
 
+    private String typeGraphe;
+
     private String categorie;
 
     private String unite;

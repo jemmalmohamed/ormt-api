@@ -1,0 +1,155 @@
+{
+    "indicateur": "Bénéficiaires du CI par diplôme",
+    "data": [
+        {
+            "annee": 2019,
+            "diplome": "Bac",
+            "valeur": 41.6
+        },
+        {
+            "annee": 2019,
+            "diplome": "Formation professionnelle",
+            "valeur": 33.1
+        },
+        {
+            "annee": 2019,
+            "diplome": "Supérieur",
+            "valeur": 18.2
+        },
+        {
+            "annee": 2019,
+            "diplome": "Autre",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2019,
+            "diplome": "Non renseigné",
+            "valeur": 7.1
+        },
+        {
+            "annee": 2020,
+            "diplome": "Bac",
+            "valeur": 36.3
+        },
+        {
+            "annee": 2020,
+            "diplome": "Formation professionnelle",
+            "valeur": 44.5
+        },
+        {
+            "annee": 2020,
+            "diplome": "Supérieur",
+            "valeur": 19.1
+        },
+        {
+            "annee": 2020,
+            "diplome": "Autre",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2020,
+            "diplome": "Non renseigné",
+            "valeur": 0.1
+        },
+        {
+            "annee": 2021,
+            "diplome": "Bac",
+            "valeur": 35.3
+        },
+        {
+            "annee": 2021,
+            "diplome": "Formation professionnelle",
+            "valeur": 42.7
+        },
+        {
+            "annee": 2021,
+            "diplome": "Supérieur",
+            "valeur": 21.9
+        },
+        {
+            "annee": 2021,
+            "diplome": "Autre",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2021,
+            "diplome": "Non renseigné",
+            "valeur": 0.1
+        },
+        {
+            "annee": 2022,
+            "diplome": "Bac",
+            "valeur": 35.9
+        },
+        {
+            "annee": 2022,
+            "diplome": "Formation professionnelle",
+            "valeur": 41.9
+        },
+        {
+            "annee": 2022,
+            "diplome": "Supérieur",
+            "valeur": 22.1
+        },
+        {
+            "annee": 2022,
+            "diplome": "Autre",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2022,
+            "diplome": "Non renseigné",
+            "valeur": 0.1
+        },
+        {
+            "annee": 2023,
+            "diplome": "Bac",
+            "valeur": 39.2
+        },
+        {
+            "annee": 2023,
+            "diplome": "Formation professionnelle",
+            "valeur": 37.8
+        },
+        {
+            "annee": 2023,
+            "diplome": "Supérieur",
+            "valeur": 22.8
+        },
+        {
+            "annee": 2023,
+            "diplome": "Autre",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2023,
+            "diplome": "Non renseigné",
+            "valeur": 0.1
+        },
+        {
+            "annee": 2024,
+            "diplome": "Bac",
+            "valeur": 43.2
+        },
+        {
+            "annee": 2024,
+            "diplome": "Formation professionnelle",
+            "valeur": 38.0
+        },
+        {
+            "annee": 2024,
+            "diplome": "Supérieur",
+            "valeur": 18.7
+        },
+        {
+            "annee": 2024,
+            "diplome": "Autre",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2024,
+            "diplome": "Non renseigné",
+            "valeur": 0.0
+        }
+    ]
+}

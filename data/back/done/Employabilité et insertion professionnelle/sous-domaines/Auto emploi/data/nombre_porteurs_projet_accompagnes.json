@@ -1,0 +1,29 @@
+{
+    "indicateur": "Nombre de porteurs de projet accompagnés",
+    "data": [
+        {
+            "annee": 2019,
+            "valeur": 4806
+        },
+        {
+            "annee": 2020,
+            "valeur": 6864
+        },
+        {
+            "annee": 2021,
+            "valeur": 5544
+        },
+        {
+            "annee": 2022,
+            "valeur": 4339
+        },
+        {
+            "annee": 2023,
+            "valeur": 7976
+        },
+        {
+            "annee": 2024,
+            "valeur": 8733
+        }
+    ]
+}

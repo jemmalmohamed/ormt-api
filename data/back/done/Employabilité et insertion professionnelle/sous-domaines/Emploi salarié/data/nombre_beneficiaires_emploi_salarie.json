@@ -1,0 +1,29 @@
+{
+    "indicateur": "Nombre des bénéficiaires de l'emploi salarié (en milliers)",
+    "data": [
+        {
+            "annee": 2019,
+            "valeur": 1183
+        },
+        {
+            "annee": 2020,
+            "valeur": 859
+        },
+        {
+            "annee": 2021,
+            "valeur": 1127
+        },
+        {
+            "annee": 2022,
+            "valeur": 1332
+        },
+        {
+            "annee": 2023,
+            "valeur": 1385
+        },
+        {
+            "annee": 2024,
+            "valeur": 1467
+        }
+    ]
+}

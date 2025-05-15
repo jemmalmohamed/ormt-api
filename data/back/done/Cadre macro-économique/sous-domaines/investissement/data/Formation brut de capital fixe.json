@@ -1,0 +1,49 @@
+{
+    "indicateur": "Formation brut de capital fixe",
+    "data": [
+        {
+            "annee": 2013,
+            "valeur": 263272
+        },
+        {
+            "annee": 2014,
+            "valeur": 270552
+        },
+        {
+            "annee": 2015,
+            "valeur": 278907
+        },
+        {
+            "annee": 2016,
+            "valeur": 313870
+        },
+        {
+            "annee": 2017,
+            "valeur": 323247
+        },
+        {
+            "annee": 2018,
+            "valeur": 332976
+        },
+        {
+            "annee": 2019,
+            "valeur": 337145
+        },
+        {
+            "annee": 2020,
+            "valeur": 302245
+        },
+        {
+            "annee": 2021,
+            "valeur": 335583
+        },
+        {
+            "annee": 2022,
+            "valeur": 354939
+        },
+        {
+            "annee": 2023,
+            "valeur": 371966
+        }
+    ]
+}

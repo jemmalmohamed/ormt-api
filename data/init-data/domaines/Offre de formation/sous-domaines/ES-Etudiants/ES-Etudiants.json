@@ -1,0 +1,309 @@
+{
+    "nom": "ES-Etudiants",
+    "description": "Indicateurs relatifs aux étudiants de l'enseignement supérieur (public, privé, formation des cadres) par genre, composante et domaine d'études.",
+    "roleAcces": [
+        {
+            "roleCode": "role_public",
+            "niveauacces": "lecture"
+        }
+    ],
+    "actif": true,
+    "indicateurs": [
+        {
+            "nom": "Nombre d'étudiants de l'ES par composante",
+            "description": "Nombre d'étudiants de l'enseignement supérieur par composante.",
+            "categorie": "ES-Etudiants",
+            "abreviation": "ES",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand Public / Décisionnel",
+            "source": "MESRSI",
+            "reglecalcul": "",
+            "periode": "2015-2024",
+            "dimensions": [
+                {
+                    "nom": "composante",
+                    "libelle": "Composante",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "Année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Nombre d'étudiants de l'ES par genre",
+            "description": "Nombre d'étudiants de l'enseignement supérieur par genre.",
+            "categorie": "ES-Etudiants",
+            "abreviation": "ES",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand Public / Décisionnel",
+            "source": "MESRSI",
+            "reglecalcul": "",
+            "periode": "2015-2024",
+            "dimensions": [
+                {
+                    "nom": "genre",
+                    "libelle": "Genre",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "Année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Nombre d'étudiants de l'enseignement universitaire public par domaine d'études",
+            "description": "Nombre d'étudiants de l'enseignement universitaire public par domaine d'études.",
+            "categorie": "ES-Etudiants",
+            "abreviation": "ES",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand Public / Décisionnel",
+            "source": "MESRSI",
+            "reglecalcul": "",
+            "periode": "2015-2024",
+            "dimensions": [
+                {
+                    "nom": "domaine_etudes",
+                    "libelle": "Domaine d'études",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "Année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Nombre d'étudiants de l'enseignement universitaire public par genre",
+            "description": "Nombre d'étudiants de l'enseignement universitaire public par genre.",
+            "categorie": "ES-Etudiants",
+            "abreviation": "ES",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand Public / Décisionnel",
+            "source": "MESRSI",
+            "reglecalcul": "",
+            "periode": "2015-2024",
+            "dimensions": [
+                {
+                    "nom": "genre",
+                    "libelle": "Genre",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "Année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Nombre d'étudiants de l'enseignement supérieur privé par domaine d'études",
+            "description": "Nombre d'étudiants de l'enseignement supérieur privé par domaine d'études.",
+            "categorie": "ES-Etudiants",
+            "abreviation": "ES",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand Public / Décisionnel",
+            "source": "MESRSI",
+            "reglecalcul": "",
+            "periode": "2015-2024",
+            "dimensions": [
+                {
+                    "nom": "domaine_etudes",
+                    "libelle": "Domaine d'études",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "Année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Nombre d'étudiants de l'enseignement supérieur privé par genre",
+            "description": "Nombre d'étudiants de l'enseignement supérieur privé par genre.",
+            "categorie": "ES-Etudiants",
+            "abreviation": "ES",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand Public / Décisionnel",
+            "source": "MESRSI",
+            "reglecalcul": "",
+            "periode": "2015-2024",
+            "dimensions": [
+                {
+                    "nom": "genre",
+                    "libelle": "Genre",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "Année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Nombre d'étudiants de la formation des cadres par domaine d'études",
+            "description": "Nombre d'étudiants de la formation des cadres par domaine d'études.",
+            "categorie": "ES-Etudiants",
+            "abreviation": "ES",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand Public / Décisionnel",
+            "source": "MESRSI",
+            "reglecalcul": "",
+            "periode": "2015-2024",
+            "dimensions": [
+                {
+                    "nom": "domaine_etudes",
+                    "libelle": "Domaine d'études",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "Année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Nombre d'étudiants de la formation des cadres par genre",
+            "description": "Nombre d'étudiants de la formation des cadres par genre.",
+            "categorie": "ES-Etudiants",
+            "abreviation": "ES",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Grand Public / Décisionnel",
+            "source": "MESRSI",
+            "reglecalcul": "",
+            "periode": "2015-2024",
+            "dimensions": [
+                {
+                    "nom": "genre",
+                    "libelle": "Genre",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annee",
+                    "libelle": "Année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        }
+    ]
+}

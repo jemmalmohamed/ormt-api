@@ -1,0 +1,455 @@
+{
+    "indicateur": "Population active par diplôme et genre",
+    "data": [
+        {
+            "diplome": "Sans diplôme",
+            "genre": "Urbain",
+            "annee": "2019",
+            "valeur": 2637
+        },
+        {
+            "diplome": "Sans diplôme",
+            "genre": "Rural",
+            "annee": "2019",
+            "valeur": 3639
+        },
+        {
+            "diplome": "Sans diplôme",
+            "genre": "National",
+            "annee": "2019",
+            "valeur": 6283
+        },
+        {
+            "diplome": "Sans diplôme",
+            "genre": "Urbain",
+            "annee": "2020",
+            "valeur": 2625
+        },
+        {
+            "diplome": "Sans diplôme",
+            "genre": "Rural",
+            "annee": "2020",
+            "valeur": 3430
+        },
+        {
+            "diplome": "Sans diplôme",
+            "genre": "National",
+            "annee": "2020",
+            "valeur": 6057
+        },
+        {
+            "diplome": "Sans diplôme",
+            "genre": "Urbain",
+            "annee": "2021",
+            "valeur": 2561
+        },
+        {
+            "diplome": "Sans diplôme",
+            "genre": "Rural",
+            "annee": "2021",
+            "valeur": 3406
+        },
+        {
+            "diplome": "Sans diplôme",
+            "genre": "National",
+            "annee": "2021",
+            "valeur": 5968
+        },
+        {
+            "diplome": "Sans diplôme",
+            "genre": "Urbain",
+            "annee": "2022",
+            "valeur": 2543
+        },
+        {
+            "diplome": "Sans diplôme",
+            "genre": "Rural",
+            "annee": "2022",
+            "valeur": 3196
+        },
+        {
+            "diplome": "Sans diplôme",
+            "genre": "National",
+            "annee": "2022",
+            "valeur": 5742
+        },
+        {
+            "diplome": "Sans diplôme",
+            "genre": "Urbain",
+            "annee": "2023",
+            "valeur": 2520
+        },
+        {
+            "diplome": "Sans diplôme",
+            "genre": "Rural",
+            "annee": "2023",
+            "valeur": 3038
+        },
+        {
+            "diplome": "Sans diplôme",
+            "genre": "National",
+            "annee": "2023",
+            "valeur": 5550
+        },
+        {
+            "diplome": "Niveau moyen",
+            "genre": "Urbain",
+            "annee": "2019",
+            "valeur": 2622
+        },
+        {
+            "diplome": "Niveau moyen",
+            "genre": "Rural",
+            "annee": "2019",
+            "valeur": 1083
+        },
+        {
+            "diplome": "Niveau moyen",
+            "genre": "National",
+            "annee": "2019",
+            "valeur": 3709
+        },
+        {
+            "diplome": "Niveau moyen",
+            "genre": "Urbain",
+            "annee": "2020",
+            "valeur": 2720
+        },
+        {
+            "diplome": "Niveau moyen",
+            "genre": "Rural",
+            "annee": "2020",
+            "valeur": 1081
+        },
+        {
+            "diplome": "Niveau moyen",
+            "genre": "National",
+            "annee": "2020",
+            "valeur": 3807
+        },
+        {
+            "diplome": "Niveau moyen",
+            "genre": "Urbain",
+            "annee": "2021",
+            "valeur": 2832
+        },
+        {
+            "diplome": "Niveau moyen",
+            "genre": "Rural",
+            "annee": "2021",
+            "valeur": 1169
+        },
+        {
+            "diplome": "Niveau moyen",
+            "genre": "National",
+            "annee": "2021",
+            "valeur": 4003
+        },
+        {
+            "diplome": "Niveau moyen",
+            "genre": "Urbain",
+            "annee": "2022",
+            "valeur": 2793
+        },
+        {
+            "diplome": "Niveau moyen",
+            "genre": "Rural",
+            "annee": "2022",
+            "valeur": 1187
+        },
+        {
+            "diplome": "Niveau moyen",
+            "genre": "National",
+            "annee": "2022",
+            "valeur": 3986
+        },
+        {
+            "diplome": "Niveau moyen",
+            "genre": "Urbain",
+            "annee": "2023",
+            "valeur": 2860
+        },
+        {
+            "diplome": "Niveau moyen",
+            "genre": "Rural",
+            "annee": "2023",
+            "valeur": 1164
+        },
+        {
+            "diplome": "Niveau moyen",
+            "genre": "National",
+            "annee": "2023",
+            "valeur": 4029
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "genre": "Urbain",
+            "annee": "2019",
+            "valeur": 1931
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "genre": "Rural",
+            "annee": "2019",
+            "valeur": 151
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "genre": "National",
+            "annee": "2019",
+            "valeur": 2090
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "genre": "Urbain",
+            "annee": "2020",
+            "valeur": 1939
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "genre": "Rural",
+            "annee": "2020",
+            "valeur": 164
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "genre": "National",
+            "annee": "2020",
+            "valeur": 2107
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "genre": "Urbain",
+            "annee": "2021",
+            "valeur": 2111
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "genre": "Rural",
+            "annee": "2021",
+            "valeur": 196
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "genre": "National",
+            "annee": "2021",
+            "valeur": 2309
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "genre": "Urbain",
+            "annee": "2022",
+            "valeur": 2255
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "genre": "Rural",
+            "annee": "2022",
+            "valeur": 212
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "genre": "National",
+            "annee": "2022",
+            "valeur": 2463
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "genre": "Urbain",
+            "annee": "2023",
+            "valeur": 2350
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "genre": "Rural",
+            "annee": "2023",
+            "valeur": 240
+        },
+        {
+            "diplome": "Niveau supérieur",
+            "genre": "National",
+            "annee": "2023",
+            "valeur": 2592
+        },
+        {
+            "diplome": "Non déclaré",
+            "genre": "Urbain",
+            "annee": "2019",
+            "valeur": 7
+        },
+        {
+            "diplome": "Non déclaré",
+            "genre": "Rural",
+            "annee": "2019",
+            "valeur": 0
+        },
+        {
+            "diplome": "Non déclaré",
+            "genre": "National",
+            "annee": "2019",
+            "valeur": 12
+        },
+        {
+            "diplome": "Non déclaré",
+            "genre": "Urbain",
+            "annee": "2020",
+            "valeur": 7
+        },
+        {
+            "diplome": "Non déclaré",
+            "genre": "Rural",
+            "annee": "2020",
+            "valeur": 0
+        },
+        {
+            "diplome": "Non déclaré",
+            "genre": "National",
+            "annee": "2020",
+            "valeur": 12
+        },
+        {
+            "diplome": "Non déclaré",
+            "genre": "Urbain",
+            "annee": "2021",
+            "valeur": 0
+        },
+        {
+            "diplome": "Non déclaré",
+            "genre": "Rural",
+            "annee": "2021",
+            "valeur": 0
+        },
+        {
+            "diplome": "Non déclaré",
+            "genre": "National",
+            "annee": "2021",
+            "valeur": 0
+        },
+        {
+            "diplome": "Non déclaré",
+            "genre": "Urbain",
+            "annee": "2022",
+            "valeur": 0
+        },
+        {
+            "diplome": "Non déclaré",
+            "genre": "Rural",
+            "annee": "2022",
+            "valeur": 0
+        },
+        {
+            "diplome": "Non déclaré",
+            "genre": "National",
+            "annee": "2022",
+            "valeur": 0
+        },
+        {
+            "diplome": "Non déclaré",
+            "genre": "Urbain",
+            "annee": "2023",
+            "valeur": 0
+        },
+        {
+            "diplome": "Non déclaré",
+            "genre": "Rural",
+            "annee": "2023",
+            "valeur": 0
+        },
+        {
+            "diplome": "Non déclaré",
+            "genre": "National",
+            "annee": "2023",
+            "valeur": 0
+        },
+        {
+            "diplome": "Total",
+            "genre": "Urbain",
+            "annee": "2019",
+            "valeur": 7204
+        },
+        {
+            "diplome": "Total",
+            "genre": "Rural",
+            "annee": "2019",
+            "valeur": 4878
+        },
+        {
+            "diplome": "Total",
+            "genre": "National",
+            "annee": "2019",
+            "valeur": 12082
+        },
+        {
+            "diplome": "Total",
+            "genre": "Urbain",
+            "annee": "2020",
+            "valeur": 7291
+        },
+        {
+            "diplome": "Total",
+            "genre": "Rural",
+            "annee": "2020",
+            "valeur": 4680
+        },
+        {
+            "diplome": "Total",
+            "genre": "National",
+            "annee": "2020",
+            "valeur": 11971
+        },
+        {
+            "diplome": "Total",
+            "genre": "Urbain",
+            "annee": "2021",
+            "valeur": 7511
+        },
+        {
+            "diplome": "Total",
+            "genre": "Rural",
+            "annee": "2021",
+            "valeur": 4770
+        },
+        {
+            "diplome": "Total",
+            "genre": "National",
+            "annee": "2021",
+            "valeur": 12280
+        },
+        {
+            "diplome": "Total",
+            "genre": "Urbain",
+            "annee": "2022",
+            "valeur": 7591
+        },
+        {
+            "diplome": "Total",
+            "genre": "Rural",
+            "annee": "2022",
+            "valeur": 4599
+        },
+        {
+            "diplome": "Total",
+            "genre": "National",
+            "annee": "2022",
+            "valeur": 12191
+        },
+        {
+            "diplome": "Total",
+            "genre": "Urbain",
+            "annee": "2023",
+            "valeur": 7731
+        },
+        {
+            "diplome": "Total",
+            "genre": "Rural",
+            "annee": "2023",
+            "valeur": 4441
+        },
+        {
+            "diplome": "Total",
+            "genre": "National",
+            "annee": "2023",
+            "valeur": 12171
+        }
+    ]
+}

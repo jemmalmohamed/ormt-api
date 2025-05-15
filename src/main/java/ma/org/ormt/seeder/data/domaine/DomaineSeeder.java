@@ -193,7 +193,7 @@ public class DomaineSeeder implements CommandLineRunner {
             DomaineDto domaine = objectMapper.readValue(inputStream, DomaineDto.class);
 
             DomaineRequestDto requestDto = new DomaineRequestDto();
-            requestDto.setNom(domaine.getNom());
+            requestDto.setNom(domaine.getNom().toLowerCase());
             requestDto.setDescription(domaine.getDescription());
             requestDto.setApropos(domaine.getApropos());
             requestDto.setActif(domaine.getActif());
@@ -237,7 +237,7 @@ public class DomaineSeeder implements CommandLineRunner {
 
             // Create the subdomain directly with the parent domain we already have
             SousDomaineRequestDto requestDto = new SousDomaineRequestDto();
-            requestDto.setNom(sousDomaineData.getNom());
+            requestDto.setNom(sousDomaineData.getNom().toLowerCase());
             requestDto.setDescription(sousDomaineData.getDescription());
             requestDto.setActif(sousDomaineData.getActif());
 
@@ -274,14 +274,14 @@ public class DomaineSeeder implements CommandLineRunner {
     private void createIndicateur(IndicateurCreateRequestDto indicateurRequest, SousDomaine parentSousDomaine) {
         try {
             Indicateur newIndicateur = new Indicateur();
-            newIndicateur.setNom(indicateurRequest.getNom());
-            newIndicateur.setCategorie(indicateurRequest.getCategorie());
+            newIndicateur.setNom(indicateurRequest.getNom().toLowerCase());
+            newIndicateur.setCategorie(indicateurRequest.getCategorie().toLowerCase());
             newIndicateur.setActif(indicateurRequest.getActif());
-            newIndicateur.setAbreviation(indicateurRequest.getAbreviation());
+            newIndicateur.setAbreviation(indicateurRequest.getAbreviation().toLowerCase());
             newIndicateur.setTypeTb(indicateurRequest.getTypeTb());
             newIndicateur.setRegleCalcul(indicateurRequest.getRegleCalcul());
             newIndicateur.setUnite(indicateurRequest.getUnite());
-            newIndicateur.setDescription(indicateurRequest.getDescription());
+            newIndicateur.setDescription(indicateurRequest.getDescription().toLowerCase());
 
             newIndicateur.getSousDomaines().add(parentSousDomaine);
 
@@ -314,10 +314,10 @@ public class DomaineSeeder implements CommandLineRunner {
             Dimension dimension = dimensionService.findByNom(dimensionRequest.getNom())
                     .orElseGet(() -> {
                         Dimension newDimension = new Dimension();
-                        newDimension.setNom(dimensionRequest.getNom());
-                        newDimension.setType(dimensionRequest.getType());
+                        newDimension.setNom(dimensionRequest.getNom().toLowerCase());
+                        newDimension.setType(dimensionRequest.getType().toLowerCase());
                         newDimension.setDescription("");
-                        newDimension.setLibelle(dimensionRequest.getLibelle());
+                        newDimension.setLibelle(dimensionRequest.getLibelle().toLowerCase());
 
                         return dimensionService.save(newDimension);
                     });
@@ -374,7 +374,7 @@ public class DomaineSeeder implements CommandLineRunner {
 
     private void proccessDonneeIndicateur(IndicateurDonneeRequestDto dataIndicareur) {
         try {
-            Indicateur indicateur = indicateurService.findByNom(dataIndicareur.getIndicateur())
+            Indicateur indicateur = indicateurService.findByNom(dataIndicareur.getIndicateur().toLowerCase())
                     .orElseThrow(() -> new RuntimeException("Indicateur not found: " + dataIndicareur.getIndicateur()));
 
             List<Object> dataList = dataIndicareur.getData();
@@ -489,7 +489,7 @@ public class DomaineSeeder implements CommandLineRunner {
         Dimension dimension = dimensionService.findByNom(dimensionName)
                 .orElseGet(() -> {
                     Dimension newDimension = new Dimension();
-                    newDimension.setNom(dimensionName);
+                    newDimension.setNom(dimensionName.toLowerCase());
                     newDimension.setType("string");
                     newDimension.setDescription("Created automatically during data import");
                     newDimension.setLibelle(dimensionName);

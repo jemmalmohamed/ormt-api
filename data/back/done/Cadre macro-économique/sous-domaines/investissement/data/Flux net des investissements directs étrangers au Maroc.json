@@ -1,0 +1,41 @@
+{
+    "indicateur": "Flux net des investissements directs étrangers au Maroc",
+    "data": [
+        {
+            "annee": 2014,
+            "valeur": 29934
+        },
+        {
+            "annee": 2015,
+            "valeur": 31781
+        },
+        {
+            "annee": 2016,
+            "valeur": 21156
+        },
+        {
+            "annee": 2017,
+            "valeur": 26033
+        },
+        {
+            "annee": 2018,
+            "valeur": 33404
+        },
+        {
+            "annee": 2019,
+            "valeur": 16541
+        },
+        {
+            "annee": 2020,
+            "valeur": 13478
+        },
+        {
+            "annee": 2021,
+            "valeur": 20372
+        },
+        {
+            "annee": 2022,
+            "valeur": 22964
+        }
+    ]
+}

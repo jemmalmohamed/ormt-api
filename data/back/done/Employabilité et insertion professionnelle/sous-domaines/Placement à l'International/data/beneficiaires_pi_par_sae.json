@@ -1,0 +1,305 @@
+{
+    "indicateur": "Bénéficiaires du PI par SAE",
+    "data": [
+        {
+            "annee": 2019,
+            "sae_pi": "Agriculture",
+            "valeur": 96.8
+        },
+        {
+            "annee": 2019,
+            "sae_pi": "Hôtellerie et restauration",
+            "valeur": 1.0
+        },
+        {
+            "annee": 2019,
+            "sae_pi": "Grande distribution",
+            "valeur": 2.1
+        },
+        {
+            "annee": 2019,
+            "sae_pi": "Boulangerie pâtisserie",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2019,
+            "sae_pi": "Autres services",
+            "valeur": 0.1
+        },
+        {
+            "annee": 2019,
+            "sae_pi": "BTP",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2019,
+            "sae_pi": "Transport",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2019,
+            "sae_pi": "Génie civil",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2019,
+            "sae_pi": "Industrie",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2019,
+            "sae_pi": "Autre",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2020,
+            "sae_pi": "Agriculture",
+            "valeur": 97.6
+        },
+        {
+            "annee": 2020,
+            "sae_pi": "Hôtellerie et restauration",
+            "valeur": 0.6
+        },
+        {
+            "annee": 2020,
+            "sae_pi": "Grande distribution",
+            "valeur": 1.0
+        },
+        {
+            "annee": 2020,
+            "sae_pi": "Boulangerie pâtisserie",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2020,
+            "sae_pi": "Autres services",
+            "valeur": 0.9
+        },
+        {
+            "annee": 2020,
+            "sae_pi": "BTP",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2020,
+            "sae_pi": "Transport",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2020,
+            "sae_pi": "Génie civil",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2020,
+            "sae_pi": "Industrie",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2020,
+            "sae_pi": "Autre",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2021,
+            "sae_pi": "Agriculture",
+            "valeur": 98.8
+        },
+        {
+            "annee": 2021,
+            "sae_pi": "Hôtellerie et restauration",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2021,
+            "sae_pi": "Grande distribution",
+            "valeur": 0.4
+        },
+        {
+            "annee": 2021,
+            "sae_pi": "Boulangerie pâtisserie",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2021,
+            "sae_pi": "Autres services",
+            "valeur": 0.7
+        },
+        {
+            "annee": 2021,
+            "sae_pi": "BTP",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2021,
+            "sae_pi": "Transport",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2021,
+            "sae_pi": "Génie civil",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2021,
+            "sae_pi": "Industrie",
+            "valeur": 0.1
+        },
+        {
+            "annee": 2021,
+            "sae_pi": "Autre",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2022,
+            "sae_pi": "Agriculture",
+            "valeur": 97.6
+        },
+        {
+            "annee": 2022,
+            "sae_pi": "Hôtellerie et restauration",
+            "valeur": 0.5
+        },
+        {
+            "annee": 2022,
+            "sae_pi": "Grande distribution",
+            "valeur": 0.1
+        },
+        {
+            "annee": 2022,
+            "sae_pi": "Boulangerie pâtisserie",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2022,
+            "sae_pi": "Autres services",
+            "valeur": 1.2
+        },
+        {
+            "annee": 2022,
+            "sae_pi": "BTP",
+            "valeur": 0.3
+        },
+        {
+            "annee": 2022,
+            "sae_pi": "Transport",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2022,
+            "sae_pi": "Génie civil",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2022,
+            "sae_pi": "Industrie",
+            "valeur": 0.3
+        },
+        {
+            "annee": 2022,
+            "sae_pi": "Autre",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2023,
+            "sae_pi": "Agriculture",
+            "valeur": 98.6
+        },
+        {
+            "annee": 2023,
+            "sae_pi": "Hôtellerie et restauration",
+            "valeur": 0.1
+        },
+        {
+            "annee": 2023,
+            "sae_pi": "Grande distribution",
+            "valeur": 0.1
+        },
+        {
+            "annee": 2023,
+            "sae_pi": "Boulangerie pâtisserie",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2023,
+            "sae_pi": "Autres services",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2023,
+            "sae_pi": "BTP",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2023,
+            "sae_pi": "Transport",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2023,
+            "sae_pi": "Génie civil",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2023,
+            "sae_pi": "Industrie",
+            "valeur": 0.4
+        },
+        {
+            "annee": 2023,
+            "sae_pi": "Autre",
+            "valeur": 0.8
+        },
+        {
+            "annee": 2024,
+            "sae_pi": "Agriculture",
+            "valeur": 98.1
+        },
+        {
+            "annee": 2024,
+            "sae_pi": "Hôtellerie et restauration",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2024,
+            "sae_pi": "Grande distribution",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2024,
+            "sae_pi": "Boulangerie pâtisserie",
+            "valeur": 0.2
+        },
+        {
+            "annee": 2024,
+            "sae_pi": "Autres services",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2024,
+            "sae_pi": "BTP",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2024,
+            "sae_pi": "Transport",
+            "valeur": 0.3
+        },
+        {
+            "annee": 2024,
+            "sae_pi": "Génie civil",
+            "valeur": 0.3
+        },
+        {
+            "annee": 2024,
+            "sae_pi": "Industrie",
+            "valeur": 0.9
+        },
+        {
+            "annee": 2024,
+            "sae_pi": "Autre",
+            "valeur": 0.2
+        }
+    ]
+}

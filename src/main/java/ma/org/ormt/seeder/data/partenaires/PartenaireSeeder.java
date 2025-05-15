@@ -42,7 +42,6 @@ public class PartenaireSeeder implements CommandLineRunner {
     private final PartenaireService partenaireService;
     private final ObjectMapper objectMapper;
 
-    private static final String IMAGES_SUBFOLDER = "images";
     private static final String PARTENAIRES_JSON_FILE = "partenaires.json";
 
     /**
@@ -145,7 +144,7 @@ public class PartenaireSeeder implements CommandLineRunner {
         // Process the image only if a imageUrl is provided
         if (StringUtils.hasText(partenaire.getImageUrl())) {
             // Look for the image in the images subfolder
-            Path imagePath = Paths.get(initDataPath, IMAGES_SUBFOLDER, partenaire.getImageUrl());
+            Path imagePath = Paths.get(initDataPath, partenaire.getImageUrl());
             if (!Files.exists(imagePath)) {
                 log.error("Image not found at path: {}. Trying direct path.", imagePath);
                 // Fallback to the main directory if not found in images subdirectory

@@ -1,0 +1,270 @@
+{
+  "nom": "IDMAJ",
+  "description": "Sous domaine du domaine Employabilité et insertion professionnelle.",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "indicateurs": [
+    {
+      "nom": "Nombre des bénéficiaires IDMAJ, y compris le PI (en milliers)",
+      "categorie": "IDMAJ",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Nombre total des bénéficiaires IDMAJ, y compris le PI.",
+      "dimensions": [
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires IDMAJ par genre (y compris le PI)",
+      "categorie": "IDMAJ",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires IDMAJ ventilés par genre (y compris le PI).",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "Genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires IDMAJ par âge (hors PI)",
+      "categorie": "IDMAJ",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires IDMAJ ventilés par âge (hors PI).",
+      "dimensions": [
+        {
+          "nom": "age",
+          "libelle": "Age",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires IDMAJ par diplôme (hors PI)",
+      "categorie": "IDMAJ",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires IDMAJ ventilés par diplôme (hors PI).",
+      "dimensions": [
+        {
+          "nom": "diplome",
+          "libelle": "Diplôme",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires IDMAJ par type de contrat (hors PI)",
+      "categorie": "IDMAJ",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires IDMAJ ventilés par type de contrat (hors PI).",
+      "dimensions": [
+        {
+          "nom": "type_contrat",
+          "libelle": "Type de Contrat",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires IDMAJ par secteur d’activité (hors PI)",
+      "categorie": "IDMAJ",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires IDMAJ ventilés par secteur d’activité (hors PI).",
+      "dimensions": [
+        {
+          "nom": "sae_idmaj",
+          "libelle": "SAE_IDMAJ",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires IDMAJ par région (hors PI)",
+      "categorie": "IDMAJ",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires IDMAJ ventilés par région (hors PI).",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annee",
+          "libelle": "annuel",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+    "indicateur": "Inscrits à l’ANAPEC par genre",
+    "data": [
+        { "annee": "2019", "genre": "Hommes", "valeur": 55 },
+        { "annee": "2019", "genre": "Femmes", "valeur": 44 },
+        { "annee": "2019", "genre": "Non renseigné", "valeur": 1 },
+        { "annee": "2022", "genre": "Hommes", "valeur": 61 },
+        { "annee": "2022", "genre": "Femmes", "valeur": 39 },
+        { "annee": "2022", "genre": "Non renseigné", "valeur": 0 },
+        { "annee": "2024", "genre": "Hommes", "valeur": 57 },
+        { "annee": "2024", "genre": "Femmes", "valeur": 43 },
+        { "annee": "2024", "genre": "Non renseigné", "valeur": 0 }
+    ]
+}

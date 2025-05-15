@@ -1,0 +1,135 @@
+{
+    "indicateur": "incidence de la pauvreté absolue par région",
+    "data": [
+        {
+            "region": "dakhla - oued ed-dahab",
+            "annee": "2014",
+            "valeur": 0.3
+        },
+        {
+            "region": "dakhla - oued ed-dahab",
+            "annee": "2022",
+            "valeur": 0.5
+        },
+        {
+            "region": "laâyoune - sakia el hamra",
+            "annee": "2014",
+            "valeur": 0.7
+        },
+        {
+            "region": "laâyoune - sakia el hamra",
+            "annee": "2022",
+            "valeur": 0.7
+        },
+        {
+            "region": "casablanca - settat",
+            "annee": "2014",
+            "valeur": 2
+        },
+        {
+            "region": "casablanca - settat",
+            "annee": "2022",
+            "valeur": 1.6
+        },
+        {
+            "region": "rabat - salé - kénitra",
+            "annee": "2014",
+            "valeur": 3.8
+        },
+        {
+            "region": "rabat - salé - kénitra",
+            "annee": "2022",
+            "valeur": 2.4
+        },
+        {
+            "region": "tanger - tétouan - al hoceima",
+            "annee": "2014",
+            "valeur": 2.2
+        },
+        {
+            "region": "tanger - tétouan - al hoceima",
+            "annee": "2022",
+            "valeur": 2.9
+        },
+        {
+            "region": "marrakech - safi",
+            "annee": "2014",
+            "valeur": 5.4
+        },
+        {
+            "region": "marrakech - safi",
+            "annee": "2022",
+            "valeur": 3.2
+        },
+        {
+            "region": "souss - massa",
+            "annee": "2014",
+            "valeur": 5.1
+        },
+        {
+            "region": "souss - massa",
+            "annee": "2022",
+            "valeur": 3.6
+        },
+        {
+            "region": "l’oriental",
+            "annee": "2014",
+            "valeur": 5.3
+        },
+        {
+            "region": "l’oriental",
+            "annee": "2022",
+            "valeur": 4.2
+        },
+        {
+            "region": "drâa - tafilalet",
+            "annee": "2014",
+            "valeur": 4.9
+        },
+        {
+            "region": "drâa - tafilalet",
+            "annee": "2022",
+            "valeur": 14.6
+        },
+        {
+            "region": "béni mellal - khénifra",
+            "annee": "2014",
+            "valeur": 6.6
+        },
+        {
+            "region": "béni mellal - khénifra",
+            "annee": "2022",
+            "valeur": 9.3
+        },
+        {
+            "region": "guelmim - oued noun",
+            "annee": "2014",
+            "valeur": 6.5
+        },
+        {
+            "region": "guelmim - oued noun",
+            "annee": "2022",
+            "valeur": 7.6
+        },
+        {
+            "region": "fès - meknès",
+            "annee": "2014",
+            "valeur": 5.2
+        },
+        {
+            "region": "fès - meknès",
+            "annee": "2022",
+            "valeur": 9
+        },
+        {
+            "region": "national",
+            "annee": "2014",
+            "valeur": 4.8
+        },
+        {
+            "region": "national",
+            "annee": "2022",
+            "valeur": 3.9
+        }
+    ]
+}

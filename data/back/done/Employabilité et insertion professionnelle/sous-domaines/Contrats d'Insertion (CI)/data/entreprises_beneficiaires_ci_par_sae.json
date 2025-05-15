@@ -1,0 +1,110 @@
+{
+    "indicateur": "Entreprises bénéficiaires du CI par SAE",
+    "data": [
+        {
+            "annee": 2022,
+            "sae_ci": "Industrie",
+            "valeur": 9.5
+        },
+        {
+            "annee": 2022,
+            "sae_ci": "BTP",
+            "valeur": 3.2
+        },
+        {
+            "annee": 2022,
+            "sae_ci": "Services",
+            "valeur": 57.4
+        },
+        {
+            "annee": 2022,
+            "sae_ci": "Hôtellerie",
+            "valeur": 4.2
+        },
+        {
+            "annee": 2022,
+            "sae_ci": "Agriculture et pêche",
+            "valeur": 0.9
+        },
+        {
+            "annee": 2022,
+            "sae_ci": "Éducation",
+            "valeur": 12.9
+        },
+        {
+            "annee": 2022,
+            "sae_ci": "Autres",
+            "valeur": 11.8
+        },
+        {
+            "annee": 2023,
+            "sae_ci": "Industrie",
+            "valeur": 9.0
+        },
+        {
+            "annee": 2023,
+            "sae_ci": "BTP",
+            "valeur": 3.0
+        },
+        {
+            "annee": 2023,
+            "sae_ci": "Services",
+            "valeur": 58.0
+        },
+        {
+            "annee": 2023,
+            "sae_ci": "Hôtellerie",
+            "valeur": 4.0
+        },
+        {
+            "annee": 2023,
+            "sae_ci": "Agriculture et pêche",
+            "valeur": 1.0
+        },
+        {
+            "annee": 2023,
+            "sae_ci": "Éducation",
+            "valeur": 12.0
+        },
+        {
+            "annee": 2023,
+            "sae_ci": "Autres",
+            "valeur": 13.0
+        },
+        {
+            "annee": 2024,
+            "sae_ci": "Industrie",
+            "valeur": 8.0
+        },
+        {
+            "annee": 2024,
+            "sae_ci": "BTP",
+            "valeur": 4.0
+        },
+        {
+            "annee": 2024,
+            "sae_ci": "Services",
+            "valeur": 55.0
+        },
+        {
+            "annee": 2024,
+            "sae_ci": "Hôtellerie",
+            "valeur": 4.0
+        },
+        {
+            "annee": 2024,
+            "sae_ci": "Agriculture et pêche",
+            "valeur": 1.0
+        },
+        {
+            "annee": 2024,
+            "sae_ci": "Éducation",
+            "valeur": 10.0
+        },
+        {
+            "annee": 2024,
+            "sae_ci": "Autres",
+            "valeur": 17.0
+        }
+    ]
+}

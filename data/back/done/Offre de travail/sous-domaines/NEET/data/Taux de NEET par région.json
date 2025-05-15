@@ -1,0 +1,60 @@
+{
+    "indicateur": "Taux de NEET par région (en %)",
+    "data": [
+        {
+            "region": "Tanger-Tétouan-Al Hoceïma",
+            "annee": "2022",
+            "valeur": 21.0
+        },
+        {
+            "region": "Régions du Sud",
+            "annee": "2022",
+            "valeur": 22.6
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annee": "2022",
+            "valeur": 23.2
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annee": "2022",
+            "valeur": 23.5
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annee": "2022",
+            "valeur": 23.5
+        },
+        {
+            "region": "Souss-Massa",
+            "annee": "2022",
+            "valeur": 25.8
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annee": "2022",
+            "valeur": 27.3
+        },
+        {
+            "region": "Fès-Meknès",
+            "annee": "2022",
+            "valeur": 27.4
+        },
+        {
+            "region": "L'Oriental",
+            "annee": "2022",
+            "valeur": 28.1
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annee": "2022",
+            "valeur": 30.6
+        },
+        {
+            "region": "National",
+            "annee": "2022",
+            "valeur": 25.2
+        }
+    ]
+}

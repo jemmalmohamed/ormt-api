@@ -49,7 +49,6 @@ public class EspaceSeeder implements CommandLineRunner {
 
     private final FileDataService fileDataService;
 
-    private static final String IMAGES_SUBFOLDER = "images";
     private static final String ESPACES_JSON_FILE = "espaces.json";
 
     /**
@@ -167,7 +166,7 @@ public class EspaceSeeder implements CommandLineRunner {
     private void handleEspaceImage(EspaceDto espace, EspaceRequestDto requestDto, String initDataPath)
             throws IOException {
         if (StringUtils.hasText(espace.getImageUrl())) {
-            Path imagePath = Paths.get(initDataPath, IMAGES_SUBFOLDER, espace.getImageUrl());
+            Path imagePath = Paths.get(initDataPath, espace.getImageUrl());
             if (!Files.exists(imagePath)) {
                 log.error("Image not found at path: {}. Trying direct path.", imagePath);
                 // Fallback to the main directory if not found in images subdirectory

@@ -1,0 +1,80 @@
+{
+    "indicateur": "Population active en chômage par milieu de résidence (en milliers)",
+    "data": [
+        {
+            "milieu": "urbain",
+            "annee": "2019",
+            "valeur": 928
+        },
+        {
+            "milieu": "urbain",
+            "annee": "2020",
+            "valeur": 1152
+        },
+        {
+            "milieu": "urbain",
+            "annee": "2021",
+            "valeur": 1271
+        },
+        {
+            "milieu": "urbain",
+            "annee": "2022",
+            "valeur": 1201
+        },
+        {
+            "milieu": "urbain",
+            "annee": "2023",
+            "valeur": 1300
+        },
+        {
+            "milieu": "rural",
+            "annee": "2019",
+            "valeur": 179
+        },
+        {
+            "milieu": "rural",
+            "annee": "2020",
+            "valeur": 277
+        },
+        {
+            "milieu": "rural",
+            "annee": "2021",
+            "valeur": 237
+        },
+        {
+            "milieu": "rural",
+            "annee": "2022",
+            "valeur": 241
+        },
+        {
+            "milieu": "rural",
+            "annee": "2023",
+            "valeur": 280
+        },
+        {
+            "milieu": "Ensemble",
+            "annee": "2019",
+            "valeur": 1107
+        },
+        {
+            "milieu": "Ensemble",
+            "annee": "2020",
+            "valeur": 1429
+        },
+        {
+            "milieu": "Ensemble",
+            "annee": "2021",
+            "valeur": 1508
+        },
+        {
+            "milieu": "Ensemble",
+            "annee": "2022",
+            "valeur": 1442
+        },
+        {
+            "milieu": "Ensemble",
+            "annee": "2023",
+            "valeur": 1580
+        }
+    ]
+}

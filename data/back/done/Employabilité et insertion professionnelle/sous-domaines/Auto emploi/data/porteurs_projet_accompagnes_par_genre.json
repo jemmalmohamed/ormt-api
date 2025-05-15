@@ -1,0 +1,95 @@
+{
+    "indicateur": "Porteurs de projet accompagnés par genre",
+    "data": [
+        {
+            "annee": 2019,
+            "genre": "masculin",
+            "valeur": 52.7
+        },
+        {
+            "annee": 2019,
+            "genre": "feminin",
+            "valeur": 25.4
+        },
+        {
+            "annee": 2019,
+            "genre": "non renseigné",
+            "valeur": 21.8
+        },
+        {
+            "annee": 2020,
+            "genre": "masculin",
+            "valeur": 77.9
+        },
+        {
+            "annee": 2020,
+            "genre": "feminin",
+            "valeur": 22.1
+        },
+        {
+            "annee": 2020,
+            "genre": "non renseigné",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2021,
+            "genre": "masculin",
+            "valeur": 72.6
+        },
+        {
+            "annee": 2021,
+            "genre": "feminin",
+            "valeur": 27.4
+        },
+        {
+            "annee": 2021,
+            "genre": "non renseigné",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2022,
+            "genre": "masculin",
+            "valeur": 69.3
+        },
+        {
+            "annee": 2022,
+            "genre": "feminin",
+            "valeur": 30.7
+        },
+        {
+            "annee": 2022,
+            "genre": "non renseigné",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2023,
+            "genre": "masculin",
+            "valeur": 64.0
+        },
+        {
+            "annee": 2023,
+            "genre": "feminin",
+            "valeur": 36.0
+        },
+        {
+            "annee": 2023,
+            "genre": "non renseigné",
+            "valeur": 0.0
+        },
+        {
+            "annee": 2024,
+            "genre": "masculin",
+            "valeur": 59.8
+        },
+        {
+            "annee": 2024,
+            "genre": "feminin",
+            "valeur": 40.2
+        },
+        {
+            "annee": 2024,
+            "genre": "non renseigné",
+            "valeur": 0.0
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "indicateur": "Population active en chômage selon la durée (en milliers)",
+    "data": [
+        {
+            "duree": "12 mois et plus",
+            "annee": "2019",
+            "valeur": 751
+        },
+        {
+            "duree": "12 mois et plus",
+            "annee": "2020",
+            "valeur": 805
+        },
+        {
+            "duree": "12 mois et plus",
+            "annee": "2021",
+            "valeur": 1093
+        },
+        {
+            "duree": "12 mois et plus",
+            "annee": "2022",
+            "valeur": 988
+        },
+        {
+            "duree": "12 mois et plus",
+            "annee": "2023",
+            "valeur": 1049
+        },
+        {
+            "duree": "moins de 12 mois",
+            "annee": "2019",
+            "valeur": 356
+        },
+        {
+            "duree": "moins de 12 mois",
+            "annee": "2020",
+            "valeur": 624
+        },
+        {
+            "duree": "moins de 12 mois",
+            "annee": "2021",
+            "valeur": 415
+        },
+        {
+            "duree": "moins de 12 mois",
+            "annee": "2022",
+            "valeur": 454
+        },
+        {
+            "duree": "moins de 12 mois",
+            "annee": "2023",
+            "valeur": 531
+        },
+        {
+            "duree": "Ensemble",
+            "annee": "2019",
+            "valeur": 1107
+        },
+        {
+            "duree": "Ensemble",
+            "annee": "2020",
+            "valeur": 1429
+        },
+        {
+            "duree": "Ensemble",
+            "annee": "2021",
+            "valeur": 1508
+        },
+        {
+            "duree": "Ensemble",
+            "annee": "2022",
+            "valeur": 1442
+        },
+        {
+            "duree": "Ensemble",
+            "annee": "2023",
+            "valeur": 1580
+        }
+    ]
+}

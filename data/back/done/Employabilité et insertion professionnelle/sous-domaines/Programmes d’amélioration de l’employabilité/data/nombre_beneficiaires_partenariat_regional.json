@@ -1,0 +1,29 @@
+{
+    "indicateur": "Nombre des bénéficiaires du partenariat régional",
+    "data": [
+        {
+            "annee": 2019,
+            "valeur": 2119
+        },
+        {
+            "annee": 2020,
+            "valeur": 1397
+        },
+        {
+            "annee": 2021,
+            "valeur": 914
+        },
+        {
+            "annee": 2022,
+            "valeur": 2465
+        },
+        {
+            "annee": 2023,
+            "valeur": 2246
+        },
+        {
+            "annee": 2024,
+            "valeur": 1834
+        }
+    ]
+}

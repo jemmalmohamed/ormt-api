@@ -1,0 +1,280 @@
+{
+    "indicateur": "Nouveaux entrants potentiels sur le MT par composante",
+    "data": [
+        {
+            "composante": "Enseignement universitaire public (EUP)",
+            "annee": "2012",
+            "valeur": 58061
+        },
+        {
+            "composante": "Enseignement universitaire public (EUP)",
+            "annee": "2013",
+            "valeur": 62931
+        },
+        {
+            "composante": "Enseignement universitaire public (EUP)",
+            "annee": "2014",
+            "valeur": 71486
+        },
+        {
+            "composante": "Enseignement universitaire public (EUP)",
+            "annee": "2015",
+            "valeur": 87857
+        },
+        {
+            "composante": "Enseignement universitaire public (EUP)",
+            "annee": "2016",
+            "valeur": 95167
+        },
+        {
+            "composante": "Enseignement universitaire public (EUP)",
+            "annee": "2017",
+            "valeur": 103173
+        },
+        {
+            "composante": "Enseignement universitaire public (EUP)",
+            "annee": "2018",
+            "valeur": 111843
+        },
+        {
+            "composante": "Enseignement universitaire public (EUP)",
+            "annee": "2019",
+            "valeur": 119263
+        },
+        {
+            "composante": "Enseignement universitaire public (EUP)",
+            "annee": "2020",
+            "valeur": 126764
+        },
+        {
+            "composante": "Enseignement universitaire public (EUP)",
+            "annee": "2021",
+            "valeur": 143242
+        },
+        {
+            "composante": "Enseignement universitaire public (EUP)",
+            "annee": "2022",
+            "valeur": 140227
+        },
+        {
+            "composante": "Enseignement supérieur privé (EP)",
+            "annee": "2012",
+            "valeur": 5821
+        },
+        {
+            "composante": "Enseignement supérieur privé (EP)",
+            "annee": "2013",
+            "valeur": 11339
+        },
+        {
+            "composante": "Enseignement supérieur privé (EP)",
+            "annee": "2014",
+            "valeur": 8957
+        },
+        {
+            "composante": "Enseignement supérieur privé (EP)",
+            "annee": "2015",
+            "valeur": 8186
+        },
+        {
+            "composante": "Enseignement supérieur privé (EP)",
+            "annee": "2016",
+            "valeur": 7840
+        },
+        {
+            "composante": "Enseignement supérieur privé (EP)",
+            "annee": "2017",
+            "valeur": 9814
+        },
+        {
+            "composante": "Enseignement supérieur privé (EP)",
+            "annee": "2018",
+            "valeur": 10184
+        },
+        {
+            "composante": "Enseignement supérieur privé (EP)",
+            "annee": "2019",
+            "valeur": 11624
+        },
+        {
+            "composante": "Enseignement supérieur privé (EP)",
+            "annee": "2020",
+            "valeur": 11762
+        },
+        {
+            "composante": "Enseignement supérieur privé (EP)",
+            "annee": "2021",
+            "valeur": 13236
+        },
+        {
+            "composante": "Enseignement supérieur privé (EP)",
+            "annee": "2022",
+            "valeur": 14394
+        },
+        {
+            "composante": "Foramation des cadres (FC)",
+            "annee": "2012",
+            "valeur": 8891
+        },
+        {
+            "composante": "Foramation des cadres (FC)",
+            "annee": "2013",
+            "valeur": 12721
+        },
+        {
+            "composante": "Foramation des cadres (FC)",
+            "annee": "2014",
+            "valeur": 12885
+        },
+        {
+            "composante": "Foramation des cadres (FC)",
+            "annee": "2015",
+            "valeur": 15905
+        },
+        {
+            "composante": "Foramation des cadres (FC)",
+            "annee": "2016",
+            "valeur": 7572
+        },
+        {
+            "composante": "Foramation des cadres (FC)",
+            "annee": "2017",
+            "valeur": 8479
+        },
+        {
+            "composante": "Foramation des cadres (FC)",
+            "annee": "2018",
+            "valeur": 10682
+        },
+        {
+            "composante": "Foramation des cadres (FC)",
+            "annee": "2019",
+            "valeur": 10671
+        },
+        {
+            "composante": "Foramation des cadres (FC)",
+            "annee": "2020",
+            "valeur": 12789
+        },
+        {
+            "composante": "Foramation des cadres (FC)",
+            "annee": "2021",
+            "valeur": 24911
+        },
+        {
+            "composante": "Foramation des cadres (FC)",
+            "annee": "2022",
+            "valeur": 27245
+        },
+        {
+            "composante": "Foramation professionnelle (FP)",
+            "annee": "2012",
+            "valeur": 148061
+        },
+        {
+            "composante": "Foramation professionnelle (FP)",
+            "annee": "2013",
+            "valeur": 150529
+        },
+        {
+            "composante": "Foramation professionnelle (FP)",
+            "annee": "2014",
+            "valeur": 158972
+        },
+        {
+            "composante": "Foramation professionnelle (FP)",
+            "annee": "2015",
+            "valeur": 169128
+        },
+        {
+            "composante": "Foramation professionnelle (FP)",
+            "annee": "2016",
+            "valeur": 182093
+        },
+        {
+            "composante": "Foramation professionnelle (FP)",
+            "annee": "2017",
+            "valeur": 186333
+        },
+        {
+            "composante": "Foramation professionnelle (FP)",
+            "annee": "2018",
+            "valeur": 195594
+        },
+        {
+            "composante": "Foramation professionnelle (FP)",
+            "annee": "2019",
+            "valeur": 191122
+        },
+        {
+            "composante": "Foramation professionnelle (FP)",
+            "annee": "2020",
+            "valeur": 177526
+        },
+        {
+            "composante": "Foramation professionnelle (FP)",
+            "annee": "2021",
+            "valeur": 179979
+        },
+        {
+            "composante": "Foramation professionnelle (FP)",
+            "annee": "2022",
+            "valeur": 146861
+        },
+        {
+            "composante": "Total",
+            "annee": "2012",
+            "valeur": 220834
+        },
+        {
+            "composante": "Total",
+            "annee": "2013",
+            "valeur": 237520
+        },
+        {
+            "composante": "Total",
+            "annee": "2014",
+            "valeur": 252300
+        },
+        {
+            "composante": "Total",
+            "annee": "2015",
+            "valeur": 281076
+        },
+        {
+            "composante": "Total",
+            "annee": "2016",
+            "valeur": 292672
+        },
+        {
+            "composante": "Total",
+            "annee": "2017",
+            "valeur": 307799
+        },
+        {
+            "composante": "Total",
+            "annee": "2018",
+            "valeur": 328303
+        },
+        {
+            "composante": "Total",
+            "annee": "2019",
+            "valeur": 332680
+        },
+        {
+            "composante": "Total",
+            "annee": "2020",
+            "valeur": 328841
+        },
+        {
+            "composante": "Total",
+            "annee": "2021",
+            "valeur": 361368
+        },
+        {
+            "composante": "Total",
+            "annee": "2022",
+            "valeur": 328727
+        }
+    ]
+}

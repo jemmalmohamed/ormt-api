@@ -1,0 +1,29 @@
+{
+    "indicateur": "Nombre d'entreprises crées",
+    "data": [
+        {
+            "annee": 2019,
+            "valeur": 2066
+        },
+        {
+            "annee": 2020,
+            "valeur": 2063
+        },
+        {
+            "annee": 2021,
+            "valeur": 2079
+        },
+        {
+            "annee": 2022,
+            "valeur": 1836
+        },
+        {
+            "annee": 2023,
+            "valeur": 2728
+        },
+        {
+            "annee": 2024,
+            "valeur": 2838
+        }
+    ]
+}

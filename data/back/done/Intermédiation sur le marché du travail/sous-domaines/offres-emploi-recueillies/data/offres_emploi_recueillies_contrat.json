@@ -1,0 +1,125 @@
+{
+    "indicateur": "offre d'emploi recueillies par contrat",
+    "data": [
+        {
+            "annee": "2019",
+            "type_contrat": "CDD",
+            "valeur": 41.4
+        },
+        {
+            "annee": "2019",
+            "type_contrat": "CDI",
+            "valeur": 6.0
+        },
+        {
+            "annee": "2019",
+            "type_contrat": "CI",
+            "valeur": 47.9
+        },
+        {
+            "annee": "2019",
+            "type_contrat": "Choix Multiple",
+            "valeur": 4.7
+        },
+        {
+            "annee": "2020",
+            "type_contrat": "CDD",
+            "valeur": 30.6
+        },
+        {
+            "annee": "2020",
+            "type_contrat": "CDI",
+            "valeur": 5.8
+        },
+        {
+            "annee": "2020",
+            "type_contrat": "CI",
+            "valeur": 58.3
+        },
+        {
+            "annee": "2020",
+            "type_contrat": "Choix Multiple",
+            "valeur": 5.4
+        },
+        {
+            "annee": "2021",
+            "type_contrat": "CDD",
+            "valeur": 36.7
+        },
+        {
+            "annee": "2021",
+            "type_contrat": "CDI",
+            "valeur": 5.3
+        },
+        {
+            "annee": "2021",
+            "type_contrat": "CI",
+            "valeur": 54.4
+        },
+        {
+            "annee": "2021",
+            "type_contrat": "Choix Multiple",
+            "valeur": 3.6
+        },
+        {
+            "annee": "2022",
+            "type_contrat": "CDD",
+            "valeur": 32.8
+        },
+        {
+            "annee": "2022",
+            "type_contrat": "CDI",
+            "valeur": 4.8
+        },
+        {
+            "annee": "2022",
+            "type_contrat": "CI",
+            "valeur": 57.8
+        },
+        {
+            "annee": "2022",
+            "type_contrat": "Choix Multiple",
+            "valeur": 4.5
+        },
+        {
+            "annee": "2023",
+            "type_contrat": "CDD",
+            "valeur": 42.6
+        },
+        {
+            "annee": "2023",
+            "type_contrat": "CDI",
+            "valeur": 4.8
+        },
+        {
+            "annee": "2023",
+            "type_contrat": "CI",
+            "valeur": 48.8
+        },
+        {
+            "annee": "2023",
+            "type_contrat": "Choix Multiple",
+            "valeur": 3.9
+        },
+        {
+            "annee": "2024",
+            "type_contrat": "CDD",
+            "valeur": 26.6
+        },
+        {
+            "annee": "2024",
+            "type_contrat": "CDI",
+            "valeur": 4.9
+        },
+        {
+            "annee": "2024",
+            "type_contrat": "CI",
+            "valeur": 64.8
+        },
+        {
+            "annee": "2024",
+            "type_contrat": "Choix Multiple",
+            "valeur": 3.7
+        }
+    ]
+}
