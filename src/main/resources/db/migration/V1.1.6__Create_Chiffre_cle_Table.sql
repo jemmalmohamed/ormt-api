@@ -2,6 +2,7 @@ CREATE TABLE IF NOT EXISTS chiffre_cle (
     id BIGSERIAL PRIMARY KEY,
     libelle VARCHAR(255) NOT NULL,
     valeur VARCHAR(255) NOT NULL,
+    unite VARCHAR(50),
     description VARCHAR(255),
     actif BOOLEAN NOT NULL DEFAULT TRUE,
     donnee_indicateur_id BIGINT,

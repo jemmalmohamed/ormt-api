@@ -1,0 +1,37 @@
+[
+    {
+        "libelle": "taux de chômage",
+        "valeur": "9.2",
+        "unite": "%",
+        "description": " taux de chômage  en 2024",
+        "actif": true
+    },
+    {
+        "libelle": "taux d'emplois",
+        "valeur": "38.0",
+        "unite": "%",
+        "description": " taux d'emplois  en 2024",
+        "actif": true
+    },
+    {
+        "libelle": "taux d'activité",
+        "valeur": "45.5",
+        "unite": "%",
+        "description": "taux d'activité  en 2024",
+        "actif": true
+    },
+    {
+        "libelle": "creation d'emplois",
+        "valeur": "41000",
+        "unite": "",
+        "description": "nombre d'emplois créés  en 2024",
+        "actif": true
+    },
+    {
+        "libelle": "Entreprises affiliées",
+        "valeur": "332000",
+        "unite": "",
+        "description": "nombre d'entreprises affiliées  en 2024",
+        "actif": true
+    }
+]

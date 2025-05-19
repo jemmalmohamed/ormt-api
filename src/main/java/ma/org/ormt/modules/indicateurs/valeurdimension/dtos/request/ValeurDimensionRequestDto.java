@@ -23,9 +23,6 @@ public class ValeurDimensionRequestDto extends Dto {
     @NotBlank(message = "Ce champ est requis.")
     private String valeur;
 
-    // @NotNull(message = "Le sous-domaine est requis.")
-    // private Long idDimension;
-
     @NotNull(message = "Le sous-domaine est requis.")
     private Dimension dimension;
 }

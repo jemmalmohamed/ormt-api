@@ -59,6 +59,7 @@ public class KeycloakAuthorizationResourceSetupRunner implements CommandLineRunn
 
                 "domaine",
                 "espace",
+                "chiffrecle",
                 "indicateur",
                 "dimension",
                 "partenaire"
