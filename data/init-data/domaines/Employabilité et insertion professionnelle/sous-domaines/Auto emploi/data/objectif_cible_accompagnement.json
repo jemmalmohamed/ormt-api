@@ -1,0 +1,29 @@
+{
+    "indicateur": "Objectif ciblé (accompagnement)",
+    "data": [
+        {
+            "annuel": 2019,
+            "valeur": 4800
+        },
+        {
+            "annuel": 2020,
+            "valeur": 6000
+        },
+        {
+            "annuel": 2021,
+            "valeur": 6000
+        },
+        {
+            "annuel": 2022,
+            "valeur": 6500
+        },
+        {
+            "annuel": 2023,
+            "valeur": 6000
+        },
+        {
+            "annuel": 2024,
+            "valeur": 7000
+        }
+    ]
+}

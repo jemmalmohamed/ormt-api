@@ -1,0 +1,29 @@
+{
+    "indicateur": "Nombre des bénéficiaires du CI (en milliers)",
+    "data": [
+        {
+            "annuel": 2019,
+            "valeur": 69
+        },
+        {
+            "annuel": 2020,
+            "valeur": 58
+        },
+        {
+            "annuel": 2021,
+            "valeur": 69
+        },
+        {
+            "annuel": 2022,
+            "valeur": 83
+        },
+        {
+            "annuel": 2023,
+            "valeur": 84
+        },
+        {
+            "annuel": 2024,
+            "valeur": 86
+        }
+    ]
+}

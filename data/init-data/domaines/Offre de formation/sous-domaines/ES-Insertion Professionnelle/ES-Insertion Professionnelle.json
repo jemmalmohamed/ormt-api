@@ -36,8 +36,8 @@
                     }
                 },
                 {
-                    "nom": "annee",
-                    "libelle": "annuel",
+                    "nom": "annuel",
+                    "libelle": "année",
                     "type": "texte",
                     "association": {
                         "principale": false,
@@ -73,8 +73,8 @@
                     }
                 },
                 {
-                    "nom": "annee",
-                    "libelle": "annuel",
+                    "nom": "annuel",
+                    "libelle": "année",
                     "type": "texte",
                     "association": {
                         "principale": false,
@@ -110,8 +110,8 @@
                     }
                 },
                 {
-                    "nom": "annee",
-                    "libelle": "annuel",
+                    "nom": "annuel",
+                    "libelle": "année",
                     "type": "texte",
                     "association": {
                         "principale": false,
@@ -147,8 +147,8 @@
                     }
                 },
                 {
-                    "nom": "annee",
-                    "libelle": "annuel",
+                    "nom": "annuel",
+                    "libelle": "année",
                     "type": "texte",
                     "association": {
                         "principale": false,
@@ -184,8 +184,8 @@
                     }
                 },
                 {
-                    "nom": "annee",
-                    "libelle": "annuel",
+                    "nom": "annuel",
+                    "libelle": "année",
                     "type": "texte",
                     "association": {
                         "principale": false,
@@ -230,8 +230,8 @@
                     }
                 },
                 {
-                    "nom": "annee",
-                    "libelle": "annuel",
+                    "nom": "annuel",
+                    "libelle": "année",
                     "type": "texte",
                     "association": {
                         "principale": false,
@@ -276,8 +276,8 @@
                     }
                 },
                 {
-                    "nom": "annee",
-                    "libelle": "annuel",
+                    "nom": "annuel",
+                    "libelle": "année",
                     "type": "texte",
                     "association": {
                         "principale": false,
@@ -322,8 +322,8 @@
                     }
                 },
                 {
-                    "nom": "annee",
-                    "libelle": "annuel",
+                    "nom": "annuel",
+                    "libelle": "année",
                     "type": "texte",
                     "association": {
                         "principale": false,

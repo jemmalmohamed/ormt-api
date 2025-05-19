@@ -1,0 +1,337 @@
+{
+  "nom": "Contrats d'Insertion (CI)",
+  "description": "Sous domaine du domaine Employabilité et insertion professionnelle.",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "indicateurs": [
+    {
+      "nom": "Nombre des bénéficiaires du CI (en milliers)",
+      "categorie": "Contrats d'Insertion (CI)",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Nombre total des bénéficiaires du Contrat d'Insertion.",
+      "dimensions": [
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires du CI par genre",
+      "categorie": "Contrats d'Insertion (CI)",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires du CI ventilés par genre.",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "Genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires du CI par diplôme",
+      "categorie": "Contrats d'Insertion (CI)",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires du CI ventilés par diplôme.",
+      "dimensions": [
+        {
+          "nom": "diplome",
+          "libelle": "Diplôme",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires du CI par SAE",
+      "categorie": "Contrats d'Insertion (CI)",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires du CI ventilés par SAE.",
+      "dimensions": [
+        {
+          "nom": "sae",
+          "libelle": "SAE",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires du CI par région",
+      "categorie": "Contrats d'Insertion (CI)",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires du CI ventilés par région.",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "Nombre d'entreprises bénéficiaires du CI",
+      "categorie": "Contrats d'Insertion (CI)",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2024",
+      "description": "Nombre total d'entreprises bénéficiaires du CI.",
+      "dimensions": [
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "Entreprises bénéficiaires du CI par taille d'entreprise",
+      "categorie": "Contrats d'Insertion (CI)",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2022-2024",
+      "description": "Entreprises bénéficiaires du CI ventilées par taille d'entreprise.",
+      "dimensions": [
+        {
+          "nom": "taille_entreprise",
+          "libelle": "Taille d'entreprise",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "Entreprises bénéficiaires du CI par SAE",
+      "categorie": "Contrats d'Insertion (CI)",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2022-2024",
+      "description": "Entreprises bénéficiaires du CI ventilées par SAE.",
+      "dimensions": [
+        {
+          "nom": "sae_ci",
+          "libelle": "SAE_CI",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "Entreprises bénéficiaires du CI par région",
+      "categorie": "Contrats d'Insertion (CI)",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "pourcentage",
+      "periode": "2022-2024",
+      "description": "Entreprises bénéficiaires du CI ventilées par région.",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    }
+  ]
+}

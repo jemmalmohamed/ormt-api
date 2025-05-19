@@ -1,0 +1,29 @@
+{
+    "indicateur": "Nombre d'offre d'emploi recueillies (en milliers)",
+    "data": [
+        {
+            "annuel": "2019",
+            "valeur": 137
+        },
+        {
+            "annuel": "2020",
+            "valeur": 98
+        },
+        {
+            "annuel": "2021",
+            "valeur": 112
+        },
+        {
+            "annuel": "2022",
+            "valeur": 126
+        },
+        {
+            "annuel": "2023",
+            "valeur": 143
+        },
+        {
+            "annuel": "2024",
+            "valeur": 206
+        }
+    ]
+}

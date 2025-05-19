@@ -1,0 +1,530 @@
+{
+    "nom": "Chomage",
+    "description": "Indicateurs relatifs au chômage sur le marché du travail (population active en chômage, taux de chômage, etc.)",
+    "roleAcces": [
+        {
+            "roleCode": "role_public",
+            "niveauacces": "lecture"
+        }
+    ],
+    "actif": true,
+    "indicateurs": [
+        {
+            "nom": "Population active en chômage par milieu de résidence (en milliers)",
+            "description": "Population active en chômage selon le milieu de résidence (en milliers)",
+            "categorie": "Chomage",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Décisionnel / GP",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2023",
+            "dimensions": [
+                {
+                    "nom": "milieu",
+                    "libelle": "milieu de résidence",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Population active en chômage par diplôme et genre (en milliers)",
+            "description": "Population active en chômage selon diplôme et genre (en milliers)",
+            "categorie": "Chomage",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Décisionnel / GP",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2023",
+            "dimensions": [
+                {
+                    "nom": "diplome",
+                    "libelle": "diplôme",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "genre",
+                    "libelle": "genre",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Population active en chômage par diplôme et milieu de résidence (en milliers)",
+            "description": "Population active en chômage selon diplôme et milieu de résidence (en milliers)",
+            "categorie": "Chomage",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Décisionnel / GP",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2023",
+            "dimensions": [
+                {
+                    "nom": "diplome",
+                    "libelle": "diplôme",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "milieu",
+                    "libelle": "milieu de résidence",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Population active en chômage par genre (en milliers)",
+            "description": "Population active en chômage selon le genre (en milliers)",
+            "categorie": "Chomage",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Décisionnel / GP",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2023",
+            "dimensions": [
+                {
+                    "nom": "genre",
+                    "libelle": "genre",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Population active en chômage selon la durée (en milliers)",
+            "description": "Population active en chômage selon la durée du chômage (en milliers)",
+            "categorie": "Chomage",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Décisionnel / GP",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2023",
+            "dimensions": [
+                {
+                    "nom": "duree",
+                    "libelle": "Durée",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Population active en chômage selon l'expérience (en milliers)",
+            "description": "Population active en chômage selon l'expérience professionnelle (en milliers)",
+            "categorie": "Chomage",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Décisionnel / GP",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2023",
+            "dimensions": [
+                {
+                    "nom": "experience",
+                    "libelle": "Expérience",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Population active en chômage selon les causes (en milliers)",
+            "description": "Population active en chômage selon les causes du chômage (en milliers)",
+            "categorie": "Chomage",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Décisionnel / GP",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2023",
+            "dimensions": [
+                {
+                    "nom": "cause",
+                    "libelle": "Cause",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Taux de chômage selon le milieu de résidence (en %)",
+            "description": "Taux de chômage selon le milieu de résidence (en %)",
+            "categorie": "Chomage",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Décisionnel / GP",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2023",
+            "dimensions": [
+                {
+                    "nom": "milieu",
+                    "libelle": "milieu de résidence",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Taux de chômage par région et genre (en %)",
+            "description": "Taux de chômage par région et genre (en %)",
+            "categorie": "Chomage",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Décisionnel / GP",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2023",
+            "dimensions": [
+                {
+                    "nom": "region",
+                    "libelle": "Région",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "genre",
+                    "libelle": "genre",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Taux de chômage par région et milieu de résidence (en %)",
+            "description": "Taux de chômage par région et milieu de résidence (en %)",
+            "categorie": "Chomage",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Décisionnel / GP",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2023",
+            "dimensions": [
+                {
+                    "nom": "region",
+                    "libelle": "Région",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "milieu",
+                    "libelle": "milieu de résidence",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Taux de chômage selon le groupe d’âge (en %)",
+            "description": "Taux de chômage selon le groupe d’âge (en %)",
+            "categorie": "Chomage",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Décisionnel / GP",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2023",
+            "dimensions": [
+                {
+                    "nom": "groupe_age",
+                    "libelle": "groupe d’âge",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Taux de chômage selon le diplôme (en %)",
+            "description": "Taux de chômage selon le diplôme (en %)",
+            "categorie": "Chomage",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Décisionnel / GP",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2023",
+            "dimensions": [
+                {
+                    "nom": "diplome",
+                    "libelle": "diplôme",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Taux de chômage selon le genre (en %)",
+            "description": "Taux de chômage selon le genre (en %)",
+            "categorie": "Chomage",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "Décisionnel / GP",
+            "source": "HCP",
+            "reglecalcul": "",
+            "periode": "2019-2023",
+            "dimensions": [
+                {
+                    "nom": "genre",
+                    "libelle": "genre",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,731 @@
+{
+  "nom": "volume d'emploi",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "description": "étude du volume d'emplois disponibles sur le marché",
+  "indicateurs": [
+    {
+      "nom": "emploi par genre",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "categorie": "emploi",
+      "abreviation": "",
+      "typetb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Données détaillées sur la répartition de l'emploi par genre",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "emploi par âge",
+      "categorie": "emploi",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "abreviation": "",
+      "typetb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Données détaillées sur la répartition de l'emploi par tranches d'âge",
+      "dimensions": [
+        {
+          "nom": "age",
+          "libelle": "âge",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "emploi par diplôme",
+      "categorie": "emploi",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "abreviation": "",
+      "typetb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Données détaillées sur la répartition de l'emploi selon le niveau d'éducation",
+      "dimensions": [
+        {
+          "nom": "diplome",
+          "libelle": "diplôme",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "emploi par secteur d'activité",
+      "categorie": "emploi",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Répartition de l'emploi dans divers secteurs économiques",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "emploi par statut professionnel",
+      "categorie": "emploi",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Statut professionnel incluant salarié ou indépendant",
+      "dimensions": [
+        {
+          "nom": "statut",
+          "libelle": "statut",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "emploi par type d'emploi",
+      "categorie": "emploi",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Variations de postes ou statuts au sein de la population active",
+      "dimensions": [
+        {
+          "nom": "type_emploi",
+          "libelle": "type d'emploi",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "emploi par secteur d'emploi",
+      "categorie": "emploi",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Répartition des emplois dans différents secteurs d'activité",
+      "dimensions": [
+        {
+          "nom": "secteur_emploi",
+          "libelle": "secteur d'emploi",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "emploi par région",
+      "categorie": "emploi",
+      "abreviation": "",
+      "typetb": "grand public",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Répartition de l'emploi à travers les différentes régions",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "emploi indépendants déclarés à la cnss par secteur d'activité",
+      "categorie": "emploi",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "cnss",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Travailleurs indépendants déclarés à la CNSS selon le secteur",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "emploi indépendants déclarés à la cnss par région",
+      "categorie": "emploi",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "abreviation": "",
+      "typetb": "décisionnel",
+      "source": "cnss",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Travailleurs indépendants déclarés à la CNSS selon la région",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "salariés déclarés à la cnss par secteur d'activité",
+      "categorie": "salariés",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel / grand public",
+      "source": "cnss",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Salariés déclarés à la CNSS dans différents secteurs d'activité",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "salariés déclarés à la cnss par région",
+      "categorie": "salariés",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel / grand public",
+      "source": "cnss",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Salariés déclarés à la CNSS dans les différentes régions",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "emploi salarié eqtp par secteur d'activité",
+      "categorie": "salariés",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "cnss",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Emplois en équivalent temps plein par secteur d'activité",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "nombre de déclaration cnss par secteur d'activité",
+      "categorie": "salariés",
+      "abreviation": "",
+      "typetb": "décisionnel",
+      "source": "cnss",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Nombre de déclarations à la CNSS selon le secteur d'activité",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "indice de rotation de salariés par poste par secteur d'activité",
+      "categorie": "salariés",
+      "abreviation": "",
+      "typetb": "décisionnel",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "source": "cnss",
+      "reglecalcul": "dec/eqtp",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Indice de rotation des salariés par poste et par secteur",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité_cnss",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "emploi informel par secteur d'activité",
+      "categorie": "emploi",
+      "abreviation": "",
+      "typetb": "décisionnel",
+      "source": "hcp-cnss",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "reglecalcul": "et-p-s-idp",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Données sur l'emploi informel dans chaque secteur économique",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité_hcp",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "salarié public par secteur",
+      "categorie": "salariés",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typetb": "décisionnel",
+      "source": "mef",
+      "reglecalcul": "",
+      "unite": "milliers",
+      "periode": "2019-2024",
+      "description": "Répartition des salariés du secteur public par secteur d'activité",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité_hcp",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    }
+  ]
+}

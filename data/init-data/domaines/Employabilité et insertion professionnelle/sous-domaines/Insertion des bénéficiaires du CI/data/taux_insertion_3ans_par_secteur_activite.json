@@ -1,0 +1,305 @@
+{
+    "indicateur": "Taux d’insertion à 3 ans par secteur d'activité économique",
+    "data": [
+        {
+            "annuel": 2019,
+            "sae_insertion": "Agriculture",
+            "valeur": 73.0
+        },
+        {
+            "annuel": 2019,
+            "sae_insertion": "Industrie manufacturière",
+            "valeur": 64.6
+        },
+        {
+            "annuel": 2019,
+            "sae_insertion": "Autres industries",
+            "valeur": 67.7
+        },
+        {
+            "annuel": 2019,
+            "sae_insertion": "BTP",
+            "valeur": 53.8
+        },
+        {
+            "annuel": 2019,
+            "sae_insertion": "Commerce",
+            "valeur": 64.9
+        },
+        {
+            "annuel": 2019,
+            "sae_insertion": "Transports",
+            "valeur": 60.4
+        },
+        {
+            "annuel": 2019,
+            "sae_insertion": "Hébergement",
+            "valeur": 59.6
+        },
+        {
+            "annuel": 2019,
+            "sae_insertion": "Finances",
+            "valeur": 79.2
+        },
+        {
+            "annuel": 2019,
+            "sae_insertion": "Services administratifs",
+            "valeur": 64.0
+        },
+        {
+            "annuel": 2019,
+            "sae_insertion": "Enseignement",
+            "valeur": 49.7
+        },
+        {
+            "annuel": 2019,
+            "sae_insertion": "Autres services",
+            "valeur": 61.8
+        },
+        {
+            "annuel": 2019,
+            "sae_insertion": "Ensemble",
+            "valeur": 63.4
+        },
+        {
+            "annuel": 2020,
+            "sae_insertion": "Agriculture",
+            "valeur": 63.2
+        },
+        {
+            "annuel": 2020,
+            "sae_insertion": "Industrie manufacturière",
+            "valeur": 59.9
+        },
+        {
+            "annuel": 2020,
+            "sae_insertion": "Autres industries",
+            "valeur": 62.1
+        },
+        {
+            "annuel": 2020,
+            "sae_insertion": "BTP",
+            "valeur": 63.9
+        },
+        {
+            "annuel": 2020,
+            "sae_insertion": "Commerce",
+            "valeur": 60.6
+        },
+        {
+            "annuel": 2020,
+            "sae_insertion": "Transports",
+            "valeur": 63.5
+        },
+        {
+            "annuel": 2020,
+            "sae_insertion": "Hébergement",
+            "valeur": 53.2
+        },
+        {
+            "annuel": 2020,
+            "sae_insertion": "Finances",
+            "valeur": 80.0
+        },
+        {
+            "annuel": 2020,
+            "sae_insertion": "Services administratifs",
+            "valeur": 62.4
+        },
+        {
+            "annuel": 2020,
+            "sae_insertion": "Enseignement",
+            "valeur": 50.9
+        },
+        {
+            "annuel": 2020,
+            "sae_insertion": "Autres services",
+            "valeur": 63.0
+        },
+        {
+            "annuel": 2020,
+            "sae_insertion": "Ensemble",
+            "valeur": 60.7
+        },
+        {
+            "annuel": 2021,
+            "sae_insertion": "Agriculture",
+            "valeur": 70.8
+        },
+        {
+            "annuel": 2021,
+            "sae_insertion": "Industrie manufacturière",
+            "valeur": 58.2
+        },
+        {
+            "annuel": 2021,
+            "sae_insertion": "Autres industries",
+            "valeur": 60.4
+        },
+        {
+            "annuel": 2021,
+            "sae_insertion": "BTP",
+            "valeur": 63.7
+        },
+        {
+            "annuel": 2021,
+            "sae_insertion": "Commerce",
+            "valeur": 63.8
+        },
+        {
+            "annuel": 2021,
+            "sae_insertion": "Transports",
+            "valeur": 65.2
+        },
+        {
+            "annuel": 2021,
+            "sae_insertion": "Hébergement",
+            "valeur": 51.6
+        },
+        {
+            "annuel": 2021,
+            "sae_insertion": "Finances",
+            "valeur": 80.3
+        },
+        {
+            "annuel": 2021,
+            "sae_insertion": "Services administratifs",
+            "valeur": 63.0
+        },
+        {
+            "annuel": 2021,
+            "sae_insertion": "Enseignement",
+            "valeur": 51.6
+        },
+        {
+            "annuel": 2021,
+            "sae_insertion": "Autres services",
+            "valeur": 65.1
+        },
+        {
+            "annuel": 2021,
+            "sae_insertion": "Ensemble",
+            "valeur": 60.8
+        },
+        {
+            "annuel": 2022,
+            "sae_insertion": "Agriculture",
+            "valeur": 70.1
+        },
+        {
+            "annuel": 2022,
+            "sae_insertion": "Industrie manufacturière",
+            "valeur": 63.6
+        },
+        {
+            "annuel": 2022,
+            "sae_insertion": "Autres industries",
+            "valeur": 42.6
+        },
+        {
+            "annuel": 2022,
+            "sae_insertion": "BTP",
+            "valeur": 68.2
+        },
+        {
+            "annuel": 2022,
+            "sae_insertion": "Commerce",
+            "valeur": 65.8
+        },
+        {
+            "annuel": 2022,
+            "sae_insertion": "Transports",
+            "valeur": 66.6
+        },
+        {
+            "annuel": 2022,
+            "sae_insertion": "Hébergement",
+            "valeur": 57.5
+        },
+        {
+            "annuel": 2022,
+            "sae_insertion": "Finances",
+            "valeur": 82.1
+        },
+        {
+            "annuel": 2022,
+            "sae_insertion": "Services administratifs",
+            "valeur": 67.9
+        },
+        {
+            "annuel": 2022,
+            "sae_insertion": "Enseignement",
+            "valeur": 60.3
+        },
+        {
+            "annuel": 2022,
+            "sae_insertion": "Autres services",
+            "valeur": 68.2
+        },
+        {
+            "annuel": 2022,
+            "sae_insertion": "Ensemble",
+            "valeur": 65.3
+        },
+        {
+            "annuel": 2023,
+            "sae_insertion": "Agriculture",
+            "valeur": 73.1
+        },
+        {
+            "annuel": 2023,
+            "sae_insertion": "Industrie manufacturière",
+            "valeur": 64.5
+        },
+        {
+            "annuel": 2023,
+            "sae_insertion": "Autres industries",
+            "valeur": 29.8
+        },
+        {
+            "annuel": 2023,
+            "sae_insertion": "BTP",
+            "valeur": 63.4
+        },
+        {
+            "annuel": 2023,
+            "sae_insertion": "Commerce",
+            "valeur": 61.8
+        },
+        {
+            "annuel": 2023,
+            "sae_insertion": "Transports",
+            "valeur": 85.4
+        },
+        {
+            "annuel": 2023,
+            "sae_insertion": "Hébergement",
+            "valeur": 58.6
+        },
+        {
+            "annuel": 2023,
+            "sae_insertion": "Finances",
+            "valeur": 74.5
+        },
+        {
+            "annuel": 2023,
+            "sae_insertion": "Services administratifs",
+            "valeur": 62.3
+        },
+        {
+            "annuel": 2023,
+            "sae_insertion": "Enseignement",
+            "valeur": 64.4
+        },
+        {
+            "annuel": 2023,
+            "sae_insertion": "Autres services",
+            "valeur": 68.4
+        },
+        {
+            "annuel": 2023,
+            "sae_insertion": "Ensemble",
+            "valeur": 64.4
+        }
+    ]
+}

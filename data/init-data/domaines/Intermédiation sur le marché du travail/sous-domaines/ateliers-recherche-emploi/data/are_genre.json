@@ -1,0 +1,95 @@
+{
+    "indicateur": "Bénéficiaires d'ARE par genre",
+    "data": [
+        {
+            "annuel": "2019",
+            "genre": "Homme",
+            "valeur": 43.9
+        },
+        {
+            "annuel": "2019",
+            "genre": "Femme",
+            "valeur": 48.8
+        },
+        {
+            "annuel": "2019",
+            "genre": "NR",
+            "valeur": 7.3
+        },
+        {
+            "annuel": "2020",
+            "genre": "Homme",
+            "valeur": 49.2
+        },
+        {
+            "annuel": "2020",
+            "genre": "Femme",
+            "valeur": 50.8
+        },
+        {
+            "annuel": "2020",
+            "genre": "NR",
+            "valeur": 0.0
+        },
+        {
+            "annuel": "2021",
+            "genre": "Homme",
+            "valeur": 47.8
+        },
+        {
+            "annuel": "2021",
+            "genre": "Femme",
+            "valeur": 52.2
+        },
+        {
+            "annuel": "2021",
+            "genre": "NR",
+            "valeur": 0.0
+        },
+        {
+            "annuel": "2022",
+            "genre": "Homme",
+            "valeur": 42.9
+        },
+        {
+            "annuel": "2022",
+            "genre": "Femme",
+            "valeur": 57.1
+        },
+        {
+            "annuel": "2022",
+            "genre": "NR",
+            "valeur": 0.0
+        },
+        {
+            "annuel": "2023",
+            "genre": "Homme",
+            "valeur": 48.4
+        },
+        {
+            "annuel": "2023",
+            "genre": "Femme",
+            "valeur": 51.6
+        },
+        {
+            "annuel": "2023",
+            "genre": "NR",
+            "valeur": 0.0
+        },
+        {
+            "annuel": "2024",
+            "genre": "Homme",
+            "valeur": 46.0
+        },
+        {
+            "annuel": "2024",
+            "genre": "Femme",
+            "valeur": 53.9
+        },
+        {
+            "annuel": "2024",
+            "genre": "NR",
+            "valeur": 0.1
+        }
+    ]
+}

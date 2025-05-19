@@ -1,0 +1,185 @@
+{
+    "indicateur": "Bénéficiaires IDMAJ par âge (hors PI)",
+    "data": [
+        {
+            "annuel": 2019,
+            "age": "Moins de 20",
+            "valeur": 9.5
+        },
+        {
+            "annuel": 2019,
+            "age": "20 à 25",
+            "valeur": 49.3
+        },
+        {
+            "annuel": 2019,
+            "age": "25 à 35",
+            "valeur": 34.4
+        },
+        {
+            "annuel": 2019,
+            "age": "35 à 45",
+            "valeur": 4.7
+        },
+        {
+            "annuel": 2019,
+            "age": "Plus de 45",
+            "valeur": 2.1
+        },
+        {
+            "annuel": 2019,
+            "age": "Non renseigné",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2020,
+            "age": "Moins de 20",
+            "valeur": 11.6
+        },
+        {
+            "annuel": 2020,
+            "age": "20 à 25",
+            "valeur": 50.0
+        },
+        {
+            "annuel": 2020,
+            "age": "25 à 35",
+            "valeur": 32.9
+        },
+        {
+            "annuel": 2020,
+            "age": "35 à 45",
+            "valeur": 3.8
+        },
+        {
+            "annuel": 2020,
+            "age": "Plus de 45",
+            "valeur": 1.7
+        },
+        {
+            "annuel": 2020,
+            "age": "Non renseigné",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2021,
+            "age": "Moins de 20",
+            "valeur": 9.5
+        },
+        {
+            "annuel": 2021,
+            "age": "20 à 25",
+            "valeur": 51.4
+        },
+        {
+            "annuel": 2021,
+            "age": "25 à 35",
+            "valeur": 32.4
+        },
+        {
+            "annuel": 2021,
+            "age": "35 à 45",
+            "valeur": 4.4
+        },
+        {
+            "annuel": 2021,
+            "age": "Plus de 45",
+            "valeur": 2.3
+        },
+        {
+            "annuel": 2021,
+            "age": "Non renseigné",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2022,
+            "age": "Moins de 20",
+            "valeur": null
+        },
+        {
+            "annuel": 2022,
+            "age": "20 à 25",
+            "valeur": null
+        },
+        {
+            "annuel": 2022,
+            "age": "25 à 35",
+            "valeur": null
+        },
+        {
+            "annuel": 2022,
+            "age": "35 à 45",
+            "valeur": null
+        },
+        {
+            "annuel": 2022,
+            "age": "Plus de 45",
+            "valeur": null
+        },
+        {
+            "annuel": 2022,
+            "age": "Non renseigné",
+            "valeur": null
+        },
+        {
+            "annuel": 2023,
+            "age": "Moins de 20",
+            "valeur": null
+        },
+        {
+            "annuel": 2023,
+            "age": "20 à 25",
+            "valeur": null
+        },
+        {
+            "annuel": 2023,
+            "age": "25 à 35",
+            "valeur": null
+        },
+        {
+            "annuel": 2023,
+            "age": "35 à 45",
+            "valeur": null
+        },
+        {
+            "annuel": 2023,
+            "age": "Plus de 45",
+            "valeur": null
+        },
+        {
+            "annuel": 2023,
+            "age": "Non renseigné",
+            "valeur": null
+        },
+        {
+            "annuel": 2024,
+            "age": "Moins de 20",
+            "valeur": 4.9
+        },
+        {
+            "annuel": 2024,
+            "age": "20 à 25",
+            "valeur": 48.7
+        },
+        {
+            "annuel": 2024,
+            "age": "25 à 35",
+            "valeur": 38.5
+        },
+        {
+            "annuel": 2024,
+            "age": "35 à 45",
+            "valeur": 4.3
+        },
+        {
+            "annuel": 2024,
+            "age": "Plus de 45",
+            "valeur": 2.4
+        },
+        {
+            "annuel": 2024,
+            "age": "Non renseigné",
+            "valeur": 1.2
+        }
+    ]
+}

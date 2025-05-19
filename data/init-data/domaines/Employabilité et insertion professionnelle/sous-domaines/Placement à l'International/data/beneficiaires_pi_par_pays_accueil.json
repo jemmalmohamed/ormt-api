@@ -1,0 +1,215 @@
+{
+    "indicateur": "Bénéficiaires du PI par pays d’accueil",
+    "data": [
+        {
+            "annuel": 2019,
+            "pays_accueil": "Espagne",
+            "valeur": 96.8
+        },
+        {
+            "annuel": 2019,
+            "pays_accueil": "Émirats Arabes Unis",
+            "valeur": 2.0
+        },
+        {
+            "annuel": 2019,
+            "pays_accueil": "Canada",
+            "valeur": 1.0
+        },
+        {
+            "annuel": 2019,
+            "pays_accueil": "Qatar",
+            "valeur": 0.3
+        },
+        {
+            "annuel": 2019,
+            "pays_accueil": "France",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2019,
+            "pays_accueil": "Allemagne",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2019,
+            "pays_accueil": "Autre",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2020,
+            "pays_accueil": "Espagne",
+            "valeur": 97.6
+        },
+        {
+            "annuel": 2020,
+            "pays_accueil": "Émirats Arabes Unis",
+            "valeur": 1.1
+        },
+        {
+            "annuel": 2020,
+            "pays_accueil": "Canada",
+            "valeur": 0.7
+        },
+        {
+            "annuel": 2020,
+            "pays_accueil": "Qatar",
+            "valeur": 0.6
+        },
+        {
+            "annuel": 2020,
+            "pays_accueil": "France",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2020,
+            "pays_accueil": "Allemagne",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2020,
+            "pays_accueil": "Autre",
+            "valeur": 0.1
+        },
+        {
+            "annuel": 2021,
+            "pays_accueil": "Espagne",
+            "valeur": 98.5
+        },
+        {
+            "annuel": 2021,
+            "pays_accueil": "Émirats Arabes Unis",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2021,
+            "pays_accueil": "Canada",
+            "valeur": 0.1
+        },
+        {
+            "annuel": 2021,
+            "pays_accueil": "Qatar",
+            "valeur": 1.1
+        },
+        {
+            "annuel": 2021,
+            "pays_accueil": "France",
+            "valeur": 0.3
+        },
+        {
+            "annuel": 2021,
+            "pays_accueil": "Allemagne",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2021,
+            "pays_accueil": "Autre",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2022,
+            "pays_accueil": "Espagne",
+            "valeur": 95.3
+        },
+        {
+            "annuel": 2022,
+            "pays_accueil": "Émirats Arabes Unis",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2022,
+            "pays_accueil": "Canada",
+            "valeur": 0.8
+        },
+        {
+            "annuel": 2022,
+            "pays_accueil": "Qatar",
+            "valeur": 0.9
+        },
+        {
+            "annuel": 2022,
+            "pays_accueil": "France",
+            "valeur": 2.4
+        },
+        {
+            "annuel": 2022,
+            "pays_accueil": "Allemagne",
+            "valeur": 0.7
+        },
+        {
+            "annuel": 2022,
+            "pays_accueil": "Autre",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2023,
+            "pays_accueil": "Espagne",
+            "valeur": 98.4
+        },
+        {
+            "annuel": 2023,
+            "pays_accueil": "Émirats Arabes Unis",
+            "valeur": 0.1
+        },
+        {
+            "annuel": 2023,
+            "pays_accueil": "Canada",
+            "valeur": 0.8
+        },
+        {
+            "annuel": 2023,
+            "pays_accueil": "Qatar",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2023,
+            "pays_accueil": "France",
+            "valeur": 0.3
+        },
+        {
+            "annuel": 2023,
+            "pays_accueil": "Allemagne",
+            "valeur": 0.3
+        },
+        {
+            "annuel": 2023,
+            "pays_accueil": "Autre",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2024,
+            "pays_accueil": "Espagne",
+            "valeur": 96.2
+        },
+        {
+            "annuel": 2024,
+            "pays_accueil": "Émirats Arabes Unis",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2024,
+            "pays_accueil": "Canada",
+            "valeur": 0.1
+        },
+        {
+            "annuel": 2024,
+            "pays_accueil": "Qatar",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2024,
+            "pays_accueil": "France",
+            "valeur": 2.2
+        },
+        {
+            "annuel": 2024,
+            "pays_accueil": "Allemagne",
+            "valeur": 1.2
+        },
+        {
+            "annuel": 2024,
+            "pays_accueil": "Autre",
+            "valeur": 0.1
+        }
+    ]
+}

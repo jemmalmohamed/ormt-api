@@ -1,0 +1,30 @@
+{
+    "indicateur": "Nombre des agences de recrutement privé par région",
+    "data": [
+        {
+            "annuel": "2019",
+            "region": "Non renseigné",
+            "valeur": 68
+        },
+        {
+            "annuel": "2020",
+            "region": "Non renseigné",
+            "valeur": 73
+        },
+        {
+            "annuel": "2021",
+            "region": "Non renseigné",
+            "valeur": 74
+        },
+        {
+            "annuel": "2022",
+            "region": "Non renseigné",
+            "valeur": 75
+        },
+        {
+            "annuel": "2023",
+            "region": "Non renseigné",
+            "valeur": 74
+        }
+    ]
+}

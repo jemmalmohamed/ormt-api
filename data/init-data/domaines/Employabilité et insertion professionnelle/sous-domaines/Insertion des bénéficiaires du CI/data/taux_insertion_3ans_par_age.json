@@ -1,0 +1,130 @@
+{
+    "indicateur": "Taux d’insertion à 3 ans par âge",
+    "data": [
+        {
+            "annuel": 2019,
+            "age_insertion": "Moins de 25 ans",
+            "valeur": 63.2
+        },
+        {
+            "annuel": 2019,
+            "age_insertion": "25 à 29 ans",
+            "valeur": 64.2
+        },
+        {
+            "annuel": 2019,
+            "age_insertion": "30 à 34 ans",
+            "valeur": 62.0
+        },
+        {
+            "annuel": 2019,
+            "age_insertion": "35 ans et plus",
+            "valeur": 60.1
+        },
+        {
+            "annuel": 2019,
+            "age_insertion": "Ensemble",
+            "valeur": 63.4
+        },
+        {
+            "annuel": 2020,
+            "age_insertion": "Moins de 25 ans",
+            "valeur": 59.9
+        },
+        {
+            "annuel": 2020,
+            "age_insertion": "25 à 29 ans",
+            "valeur": 61.9
+        },
+        {
+            "annuel": 2020,
+            "age_insertion": "30 à 34 ans",
+            "valeur": 61.4
+        },
+        {
+            "annuel": 2020,
+            "age_insertion": "35 ans et plus",
+            "valeur": 62.2
+        },
+        {
+            "annuel": 2020,
+            "age_insertion": "Ensemble",
+            "valeur": 60.7
+        },
+        {
+            "annuel": 2021,
+            "age_insertion": "Moins de 25 ans",
+            "valeur": 59.6
+        },
+        {
+            "annuel": 2021,
+            "age_insertion": "25 à 29 ans",
+            "valeur": 62.1
+        },
+        {
+            "annuel": 2021,
+            "age_insertion": "30 à 34 ans",
+            "valeur": 61.0
+        },
+        {
+            "annuel": 2021,
+            "age_insertion": "35 ans et plus",
+            "valeur": 64.1
+        },
+        {
+            "annuel": 2021,
+            "age_insertion": "Ensemble",
+            "valeur": 60.8
+        },
+        {
+            "annuel": 2022,
+            "age_insertion": "Moins de 25 ans",
+            "valeur": 64.3
+        },
+        {
+            "annuel": 2022,
+            "age_insertion": "25 à 29 ans",
+            "valeur": 67.0
+        },
+        {
+            "annuel": 2022,
+            "age_insertion": "30 à 34 ans",
+            "valeur": 66.9
+        },
+        {
+            "annuel": 2022,
+            "age_insertion": "35 ans et plus",
+            "valeur": 68.6
+        },
+        {
+            "annuel": 2022,
+            "age_insertion": "Ensemble",
+            "valeur": 65.3
+        },
+        {
+            "annuel": 2023,
+            "age_insertion": "Moins de 25 ans",
+            "valeur": 62.6
+        },
+        {
+            "annuel": 2023,
+            "age_insertion": "25 à 29 ans",
+            "valeur": 67.1
+        },
+        {
+            "annuel": 2023,
+            "age_insertion": "30 à 34 ans",
+            "valeur": 67.5
+        },
+        {
+            "annuel": 2023,
+            "age_insertion": "35 ans et plus",
+            "valeur": 68.6
+        },
+        {
+            "annuel": 2023,
+            "age_insertion": "Ensemble",
+            "valeur": 64.4
+        }
+    ]
+}

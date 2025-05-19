@@ -1,0 +1,205 @@
+{
+    "indicateur": "Agences de recrutement privé par région",
+    "data": [
+        {
+            "annuel": "2019",
+            "region": "Casablanca SETTAT",
+            "valeur": 71
+        },
+        {
+            "annuel": "2019",
+            "region": "Dakhla - Oued Ed Dahab",
+            "valeur": 1
+        },
+        {
+            "annuel": "2019",
+            "region": "Fès - Meknès",
+            "valeur": 3
+        },
+        {
+            "annuel": "2019",
+            "region": "Laâyoune-Sakia El Hamra",
+            "valeur": 0
+        },
+        {
+            "annuel": "2019",
+            "region": "Marrakech - Safi",
+            "valeur": 9
+        },
+        {
+            "annuel": "2019",
+            "region": "Rabat - Salé - Kénitra",
+            "valeur": 12
+        },
+        {
+            "annuel": "2019",
+            "region": "Souss - Massa",
+            "valeur": 3
+        },
+        {
+            "annuel": "2019",
+            "region": "Tanger - Tétouan - Al Houceima",
+            "valeur": 1
+        },
+        {
+            "annuel": "2020",
+            "region": "Casablanca SETTAT",
+            "valeur": 71
+        },
+        {
+            "annuel": "2020",
+            "region": "Dakhla - Oued Ed Dahab",
+            "valeur": 1
+        },
+        {
+            "annuel": "2020",
+            "region": "Fès - Meknès",
+            "valeur": 3
+        },
+        {
+            "annuel": "2020",
+            "region": "Laâyoune-Sakia El Hamra",
+            "valeur": 0
+        },
+        {
+            "annuel": "2020",
+            "region": "Marrakech - Safi",
+            "valeur": 8
+        },
+        {
+            "annuel": "2020",
+            "region": "Rabat - Salé - Kénitra",
+            "valeur": 12
+        },
+        {
+            "annuel": "2020",
+            "region": "Souss - Massa",
+            "valeur": 3
+        },
+        {
+            "annuel": "2020",
+            "region": "Tanger - Tétouan - Al Houceima",
+            "valeur": 1
+        },
+        {
+            "annuel": "2021",
+            "region": "Casablanca SETTAT",
+            "valeur": 68
+        },
+        {
+            "annuel": "2021",
+            "region": "Dakhla - Oued Ed Dahab",
+            "valeur": 1
+        },
+        {
+            "annuel": "2021",
+            "region": "Fès - Meknès",
+            "valeur": 3
+        },
+        {
+            "annuel": "2021",
+            "region": "Laâyoune-Sakia El Hamra",
+            "valeur": 1
+        },
+        {
+            "annuel": "2021",
+            "region": "Marrakech - Safi",
+            "valeur": 9
+        },
+        {
+            "annuel": "2021",
+            "region": "Rabat - Salé - Kénitra",
+            "valeur": 12
+        },
+        {
+            "annuel": "2021",
+            "region": "Souss - Massa",
+            "valeur": 3
+        },
+        {
+            "annuel": "2021",
+            "region": "Tanger - Tétouan - Al Houceima",
+            "valeur": 1
+        },
+        {
+            "annuel": "2022",
+            "region": "Casablanca SETTAT",
+            "valeur": 69
+        },
+        {
+            "annuel": "2022",
+            "region": "Dakhla - Oued Ed Dahab",
+            "valeur": 1
+        },
+        {
+            "annuel": "2022",
+            "region": "Fès - Meknès",
+            "valeur": 3
+        },
+        {
+            "annuel": "2022",
+            "region": "Laâyoune-Sakia El Hamra",
+            "valeur": 1
+        },
+        {
+            "annuel": "2022",
+            "region": "Marrakech - Safi",
+            "valeur": 8
+        },
+        {
+            "annuel": "2022",
+            "region": "Rabat - Salé - Kénitra",
+            "valeur": 13
+        },
+        {
+            "annuel": "2022",
+            "region": "Souss - Massa",
+            "valeur": 3
+        },
+        {
+            "annuel": "2022",
+            "region": "Tanger - Tétouan - Al Houceima",
+            "valeur": 1
+        },
+        {
+            "annuel": "2023",
+            "region": "Casablanca SETTAT",
+            "valeur": 69
+        },
+        {
+            "annuel": "2023",
+            "region": "Dakhla - Oued Ed Dahab",
+            "valeur": 1
+        },
+        {
+            "annuel": "2023",
+            "region": "Fès - Meknès",
+            "valeur": 3
+        },
+        {
+            "annuel": "2023",
+            "region": "Laâyoune-Sakia El Hamra",
+            "valeur": 1
+        },
+        {
+            "annuel": "2023",
+            "region": "Marrakech - Safi",
+            "valeur": 7
+        },
+        {
+            "annuel": "2023",
+            "region": "Rabat - Salé - Kénitra",
+            "valeur": 12
+        },
+        {
+            "annuel": "2023",
+            "region": "Souss - Massa",
+            "valeur": 4
+        },
+        {
+            "annuel": "2023",
+            "region": "Tanger - Tétouan - Al Houceima",
+            "valeur": 1
+        }
+    ]
+}
