@@ -1,0 +1,70 @@
+{
+    "indicateur": "Nouveaux inscrits à l’ANAPEC par genre",
+    "data": [
+        {
+            "annuel": "2019",
+            "genre": "Homme",
+            "valeur": 55.1
+        },
+        {
+            "annuel": "2019",
+            "genre": "Femme",
+            "valeur": 41.0
+        },
+        {
+            "annuel": "2019",
+            "genre": "Non renseigné",
+            "valeur": 3.9
+        },
+        {
+            "annuel": "2020",
+            "genre": "Homme",
+            "valeur": 55.5
+        },
+        {
+            "annuel": "2020",
+            "genre": "Femme",
+            "valeur": 44.5
+        },
+        {
+            "annuel": "2021",
+            "genre": "Homme",
+            "valeur": 53.5
+        },
+        {
+            "annuel": "2021",
+            "genre": "Femme",
+            "valeur": 46.5
+        },
+        {
+            "annuel": "2022",
+            "genre": "Homme",
+            "valeur": 57.5
+        },
+        {
+            "annuel": "2022",
+            "genre": "Femme",
+            "valeur": 42.5
+        },
+        {
+            "annuel": "2023",
+            "genre": "Homme",
+            "valeur": 55.6
+        },
+        {
+            "annuel": "2023",
+            "genre": "Femme",
+            "valeur": 44.4
+        },
+        {
+            "annuel": "2024",
+            "genre": "Homme",
+            "valeur": 51.5
+        },
+        {
+            "annuel": "2024",
+            "genre": "Femme",
+            "valeur": 48.5
+        }
+    ]
+}

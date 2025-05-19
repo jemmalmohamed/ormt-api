@@ -1,0 +1,125 @@
+{
+    "indicateur": "Salariés bénéficiaires Tahfiz par genre",
+    "data": [
+        {
+            "annuel": 2019,
+            "genre": "Hommes",
+            "valeur": 64.8
+        },
+        {
+            "annuel": 2019,
+            "genre": "Femmes",
+            "valeur": 35.2
+        },
+        {
+            "annuel": 2019,
+            "genre": "Non renseigné",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2019,
+            "genre": "Ensemble",
+            "valeur": 100.0
+        },
+        {
+            "annuel": 2020,
+            "genre": "Hommes",
+            "valeur": 68.3
+        },
+        {
+            "annuel": 2020,
+            "genre": "Femmes",
+            "valeur": 31.7
+        },
+        {
+            "annuel": 2020,
+            "genre": "Non renseigné",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2020,
+            "genre": "Ensemble",
+            "valeur": 100.0
+        },
+        {
+            "annuel": 2021,
+            "genre": "Hommes",
+            "valeur": 68.7
+        },
+        {
+            "annuel": 2021,
+            "genre": "Femmes",
+            "valeur": 31.3
+        },
+        {
+            "annuel": 2021,
+            "genre": "Non renseigné",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2021,
+            "genre": "Ensemble",
+            "valeur": 100.0
+        },
+        {
+            "annuel": 2022,
+            "genre": "Hommes",
+            "valeur": 68.7
+        },
+        {
+            "annuel": 2022,
+            "genre": "Femmes",
+            "valeur": 31.3
+        },
+        {
+            "annuel": 2022,
+            "genre": "Non renseigné",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2022,
+            "genre": "Ensemble",
+            "valeur": 100.0
+        },
+        {
+            "annuel": 2023,
+            "genre": "Hommes",
+            "valeur": 68.0
+        },
+        {
+            "annuel": 2023,
+            "genre": "Femmes",
+            "valeur": 32.0
+        },
+        {
+            "annuel": 2023,
+            "genre": "Non renseigné",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2023,
+            "genre": "Ensemble",
+            "valeur": 100.0
+        },
+        {
+            "annuel": 2024,
+            "genre": "Hommes",
+            "valeur": 66.8
+        },
+        {
+            "annuel": 2024,
+            "genre": "Femmes",
+            "valeur": 31.5
+        },
+        {
+            "annuel": 2024,
+            "genre": "Non renseigné",
+            "valeur": 1.7
+        },
+        {
+            "annuel": 2024,
+            "genre": "Ensemble",
+            "valeur": 100.0
+        }
+    ]
+}

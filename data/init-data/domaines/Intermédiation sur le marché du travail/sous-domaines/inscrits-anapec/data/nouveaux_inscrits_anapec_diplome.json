@@ -1,0 +1,155 @@
+{
+    "indicateur": "Nouveaux inscrits à l’ANAPEC par diplôme",
+    "data": [
+        {
+            "annuel": "2019",
+            "diplome": "Bac",
+            "valeur": 19.3
+        },
+        {
+            "annuel": "2019",
+            "diplome": "Diplômés de la FP",
+            "valeur": 23.2
+        },
+        {
+            "annuel": "2019",
+            "diplome": "Diplômés de l'enseignement supérieur",
+            "valeur": 18.7
+        },
+        {
+            "annuel": "2019",
+            "diplome": "Autre",
+            "valeur": 19.4
+        },
+        {
+            "annuel": "2019",
+            "diplome": "Non renseigné",
+            "valeur": 19.3
+        },
+        {
+            "annuel": "2020",
+            "diplome": "Bac",
+            "valeur": 25.1
+        },
+        {
+            "annuel": "2020",
+            "diplome": "Diplômés de la FP",
+            "valeur": 19.8
+        },
+        {
+            "annuel": "2020",
+            "diplome": "Diplômés de l'enseignement supérieur",
+            "valeur": 19.6
+        },
+        {
+            "annuel": "2020",
+            "diplome": "Autre",
+            "valeur": 20.6
+        },
+        {
+            "annuel": "2020",
+            "diplome": "Non renseigné",
+            "valeur": 14.9
+        },
+        {
+            "annuel": "2021",
+            "diplome": "Bac",
+            "valeur": 23.8
+        },
+        {
+            "annuel": "2021",
+            "diplome": "Diplômés de la FP",
+            "valeur": 21.9
+        },
+        {
+            "annuel": "2021",
+            "diplome": "Diplômés de l'enseignement supérieur",
+            "valeur": 21.2
+        },
+        {
+            "annuel": "2021",
+            "diplome": "Autre",
+            "valeur": 17.7
+        },
+        {
+            "annuel": "2021",
+            "diplome": "Non renseigné",
+            "valeur": 15.4
+        },
+        {
+            "annuel": "2022",
+            "diplome": "Bac",
+            "valeur": 20.6
+        },
+        {
+            "annuel": "2022",
+            "diplome": "Diplômés de la FP",
+            "valeur": 14.7
+        },
+        {
+            "annuel": "2022",
+            "diplome": "Diplômés de l'enseignement supérieur",
+            "valeur": 8.8
+        },
+        {
+            "annuel": "2022",
+            "diplome": "Autre",
+            "valeur": 22.0
+        },
+        {
+            "annuel": "2022",
+            "diplome": "Non renseigné",
+            "valeur": 33.9
+        },
+        {
+            "annuel": "2023",
+            "diplome": "Bac",
+            "valeur": 22.2
+        },
+        {
+            "annuel": "2023",
+            "diplome": "Diplômés de la FP",
+            "valeur": 12.2
+        },
+        {
+            "annuel": "2023",
+            "diplome": "Diplômés de l'enseignement supérieur",
+            "valeur": 7.4
+        },
+        {
+            "annuel": "2023",
+            "diplome": "Autre",
+            "valeur": 23.6
+        },
+        {
+            "annuel": "2023",
+            "diplome": "Non renseigné",
+            "valeur": 34.6
+        },
+        {
+            "annuel": "2024",
+            "diplome": "Bac",
+            "valeur": 28.6
+        },
+        {
+            "annuel": "2024",
+            "diplome": "Diplômés de la FP",
+            "valeur": 18.2
+        },
+        {
+            "annuel": "2024",
+            "diplome": "Diplômés de l'enseignement supérieur",
+            "valeur": 9.2
+        },
+        {
+            "annuel": "2024",
+            "diplome": "Autre",
+            "valeur": 24.0
+        },
+        {
+            "annuel": "2024",
+            "diplome": "Non renseigné",
+            "valeur": 20.0
+        }
+    ]
+}

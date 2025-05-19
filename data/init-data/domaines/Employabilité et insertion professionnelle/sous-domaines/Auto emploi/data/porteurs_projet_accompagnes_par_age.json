@@ -1,0 +1,155 @@
+{
+    "indicateur": "Porteurs de projet accompagnés par âge",
+    "data": [
+        {
+            "annuel": 2019,
+            "age_autoemploi": "moins 20",
+            "valeur": 0.3
+        },
+        {
+            "annuel": 2019,
+            "age_autoemploi": "entre 20 et 30",
+            "valeur": 23.3
+        },
+        {
+            "annuel": 2019,
+            "age_autoemploi": "entre 30 et 40",
+            "valeur": 21.0
+        },
+        {
+            "annuel": 2019,
+            "age_autoemploi": "plus 40",
+            "valeur": 33.5
+        },
+        {
+            "annuel": 2019,
+            "age_autoemploi": "nr",
+            "valeur": 21.8
+        },
+        {
+            "annuel": 2020,
+            "age_autoemploi": "moins 20",
+            "valeur": 0.7
+        },
+        {
+            "annuel": 2020,
+            "age_autoemploi": "entre 20 et 30",
+            "valeur": 28.4
+        },
+        {
+            "annuel": 2020,
+            "age_autoemploi": "entre 30 et 40",
+            "valeur": 28.9
+        },
+        {
+            "annuel": 2020,
+            "age_autoemploi": "plus 40",
+            "valeur": 42.1
+        },
+        {
+            "annuel": 2020,
+            "age_autoemploi": "nr",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2021,
+            "age_autoemploi": "moins 20",
+            "valeur": 0.6
+        },
+        {
+            "annuel": 2021,
+            "age_autoemploi": "entre 20 et 30",
+            "valeur": 23.6
+        },
+        {
+            "annuel": 2021,
+            "age_autoemploi": "entre 30 et 40",
+            "valeur": 28.5
+        },
+        {
+            "annuel": 2021,
+            "age_autoemploi": "plus 40",
+            "valeur": 43.2
+        },
+        {
+            "annuel": 2021,
+            "age_autoemploi": "nr",
+            "valeur": 4.1
+        },
+        {
+            "annuel": 2022,
+            "age_autoemploi": "moins 20",
+            "valeur": 0.9
+        },
+        {
+            "annuel": 2022,
+            "age_autoemploi": "entre 20 et 30",
+            "valeur": 31.2
+        },
+        {
+            "annuel": 2022,
+            "age_autoemploi": "entre 30 et 40",
+            "valeur": 29.9
+        },
+        {
+            "annuel": 2022,
+            "age_autoemploi": "plus 40",
+            "valeur": 38.0
+        },
+        {
+            "annuel": 2022,
+            "age_autoemploi": "nr",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2023,
+            "age_autoemploi": "moins 20",
+            "valeur": 1.3
+        },
+        {
+            "annuel": 2023,
+            "age_autoemploi": "entre 20 et 30",
+            "valeur": 25.4
+        },
+        {
+            "annuel": 2023,
+            "age_autoemploi": "entre 30 et 40",
+            "valeur": 29.6
+        },
+        {
+            "annuel": 2023,
+            "age_autoemploi": "plus 40",
+            "valeur": 43.7
+        },
+        {
+            "annuel": 2023,
+            "age_autoemploi": "nr",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2024,
+            "age_autoemploi": "moins 20",
+            "valeur": 2.9
+        },
+        {
+            "annuel": 2024,
+            "age_autoemploi": "entre 20 et 30",
+            "valeur": 31.8
+        },
+        {
+            "annuel": 2024,
+            "age_autoemploi": "entre 30 et 40",
+            "valeur": 28.3
+        },
+        {
+            "annuel": 2024,
+            "age_autoemploi": "plus 40",
+            "valeur": 21.1
+        },
+        {
+            "annuel": 2024,
+            "age_autoemploi": "nr",
+            "valeur": 16.0
+        }
+    ]
+}

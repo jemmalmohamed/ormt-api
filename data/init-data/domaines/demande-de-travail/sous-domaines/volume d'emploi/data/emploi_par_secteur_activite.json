@@ -1,0 +1,815 @@
+{
+  "indicateur": "emploi par secteur d'activité",
+  "data": [
+    {
+      "secteur_activite": "agriculture, forêt et pêche",
+      "annuel": "2019",
+      "milieu": "urbain",
+      "valeur": 308
+    },
+    {
+      "secteur_activite": "agriculture, forêt et pêche",
+      "annuel": "2019",
+      "milieu": "rural",
+      "valeur": 3260
+    },
+    {
+      "secteur_activite": "agriculture, forêt et pêche",
+      "annuel": "2019",
+      "milieu": "national",
+      "valeur": 3567
+    },
+    {
+      "secteur_activite": "agriculture, forêt et pêche",
+      "annuel": "2020",
+      "milieu": "urbain",
+      "valeur": 301
+    },
+    {
+      "secteur_activite": "agriculture, forêt et pêche",
+      "annuel": "2020",
+      "milieu": "rural",
+      "valeur": 2994
+    },
+    {
+      "secteur_activite": "agriculture, forêt et pêche",
+      "annuel": "2020",
+      "milieu": "national",
+      "valeur": 3300
+    },
+    {
+      "secteur_activite": "agriculture, forêt et pêche",
+      "annuel": "2021",
+      "milieu": "urbain",
+      "valeur": 287
+    },
+    {
+      "secteur_activite": "agriculture, forêt et pêche",
+      "annuel": "2021",
+      "milieu": "rural",
+      "valeur": 3073
+    },
+    {
+      "secteur_activite": "agriculture, forêt et pêche",
+      "annuel": "2021",
+      "milieu": "national",
+      "valeur": 3361
+    },
+    {
+      "secteur_activite": "agriculture, forêt et pêche",
+      "annuel": "2022",
+      "milieu": "urbain",
+      "valeur": 281
+    },
+    {
+      "secteur_activite": "agriculture, forêt et pêche",
+      "annuel": "2022",
+      "milieu": "rural",
+      "valeur": 2868
+    },
+    {
+      "secteur_activite": "agriculture, forêt et pêche",
+      "annuel": "2022",
+      "milieu": "national",
+      "valeur": 3149
+    },
+    {
+      "secteur_activite": "agriculture, forêt et pêche",
+      "annuel": "2023",
+      "milieu": "urbain",
+      "valeur": 283
+    },
+    {
+      "secteur_activite": "agriculture, forêt et pêche",
+      "annuel": "2023",
+      "milieu": "rural",
+      "valeur": 2662
+    },
+    {
+      "secteur_activite": "agriculture, forêt et pêche",
+      "annuel": "2023",
+      "milieu": "national",
+      "valeur": 2955
+    },
+    {
+      "secteur_activite": "industrie (y compris l'artisanat)",
+      "annuel": "2019",
+      "milieu": "urbain",
+      "valeur": 1098
+    },
+    {
+      "secteur_activite": "industrie (y compris l'artisanat)",
+      "annuel": "2019",
+      "milieu": "rural",
+      "valeur": 221
+    },
+    {
+      "secteur_activite": "industrie (y compris l'artisanat)",
+      "annuel": "2019",
+      "milieu": "national",
+      "valeur": 1317
+    },
+    {
+      "secteur_activite": "industrie (y compris l'artisanat)",
+      "annuel": "2020",
+      "milieu": "urbain",
+      "valeur": 1075
+    },
+    {
+      "secteur_activite": "industrie (y compris l'artisanat)",
+      "annuel": "2020",
+      "milieu": "rural",
+      "valeur": 207
+    },
+    {
+      "secteur_activite": "industrie (y compris l'artisanat)",
+      "annuel": "2020",
+      "milieu": "national",
+      "valeur": 1276
+    },
+    {
+      "secteur_activite": "industrie (y compris l'artisanat)",
+      "annuel": "2021",
+      "milieu": "urbain",
+      "valeur": 1061
+    },
+    {
+      "secteur_activite": "industrie (y compris l'artisanat)",
+      "annuel": "2021",
+      "milieu": "rural",
+      "valeur": 199
+    },
+    {
+      "secteur_activite": "industrie (y compris l'artisanat)",
+      "annuel": "2021",
+      "milieu": "national",
+      "valeur": 1260
+    },
+    {
+      "secteur_activite": "industrie (y compris l'artisanat)",
+      "annuel": "2022",
+      "milieu": "urbain",
+      "valeur": 1080
+    },
+    {
+      "secteur_activite": "industrie (y compris l'artisanat)",
+      "annuel": "2022",
+      "milieu": "rural",
+      "valeur": 214
+    },
+    {
+      "secteur_activite": "industrie (y compris l'artisanat)",
+      "annuel": "2022",
+      "milieu": "national",
+      "valeur": 1290
+    },
+    {
+      "secteur_activite": "industrie (y compris l'artisanat)",
+      "annuel": "2023",
+      "milieu": "urbain",
+      "valeur": 1080
+    },
+    {
+      "secteur_activite": "industrie (y compris l'artisanat)",
+      "annuel": "2023",
+      "milieu": "rural",
+      "valeur": 216
+    },
+    {
+      "secteur_activite": "industrie (y compris l'artisanat)",
+      "annuel": "2023",
+      "milieu": "national",
+      "valeur": 1292
+    },
+    {
+      "secteur_activite": "bâtiments et travaux publics",
+      "annuel": "2019",
+      "milieu": "urbain",
+      "valeur": 734
+    },
+    {
+      "secteur_activite": "bâtiments et travaux publics",
+      "annuel": "2019",
+      "milieu": "rural",
+      "valeur": 413
+    },
+    {
+      "secteur_activite": "bâtiments et travaux publics",
+      "annuel": "2019",
+      "milieu": "national",
+      "valeur": 1152
+    },
+    {
+      "secteur_activite": "bâtiments et travaux publics",
+      "annuel": "2020",
+      "milieu": "urbain",
+      "valeur": 725
+    },
+    {
+      "secteur_activite": "bâtiments et travaux publics",
+      "annuel": "2020",
+      "milieu": "rural",
+      "valeur": 414
+    },
+    {
+      "secteur_activite": "bâtiments et travaux publics",
+      "annuel": "2020",
+      "milieu": "national",
+      "valeur": 1139
+    },
+    {
+      "secteur_activite": "bâtiments et travaux publics",
+      "annuel": "2021",
+      "milieu": "urbain",
+      "valeur": 780
+    },
+    {
+      "secteur_activite": "bâtiments et travaux publics",
+      "annuel": "2021",
+      "milieu": "rural",
+      "valeur": 431
+    },
+    {
+      "secteur_activite": "bâtiments et travaux publics",
+      "annuel": "2021",
+      "milieu": "national",
+      "valeur": 1206
+    },
+    {
+      "secteur_activite": "bâtiments et travaux publics",
+      "annuel": "2022",
+      "milieu": "urbain",
+      "valeur": 786
+    },
+    {
+      "secteur_activite": "bâtiments et travaux publics",
+      "annuel": "2022",
+      "milieu": "rural",
+      "valeur": 423
+    },
+    {
+      "secteur_activite": "bâtiments et travaux publics",
+      "annuel": "2022",
+      "milieu": "national",
+      "valeur": 1204
+    },
+    {
+      "secteur_activite": "bâtiments et travaux publics",
+      "annuel": "2023",
+      "milieu": "urbain",
+      "valeur": 785
+    },
+    {
+      "secteur_activite": "bâtiments et travaux publics",
+      "annuel": "2023",
+      "milieu": "rural",
+      "valeur": 445
+    },
+    {
+      "secteur_activite": "bâtiments et travaux publics",
+      "annuel": "2023",
+      "milieu": "national",
+      "valeur": 1229
+    },
+    {
+      "secteur_activite": "commerce",
+      "annuel": "2019",
+      "milieu": "urbain",
+      "valeur": 1513
+    },
+    {
+      "secteur_activite": "commerce",
+      "annuel": "2019",
+      "milieu": "rural",
+      "valeur": 362
+    },
+    {
+      "secteur_activite": "commerce",
+      "annuel": "2019",
+      "milieu": "national",
+      "valeur": 1877
+    },
+    {
+      "secteur_activite": "commerce",
+      "annuel": "2020",
+      "milieu": "urbain",
+      "valeur": 1320
+    },
+    {
+      "secteur_activite": "commerce",
+      "annuel": "2020",
+      "milieu": "rural",
+      "valeur": 313
+    },
+    {
+      "secteur_activite": "commerce",
+      "annuel": "2020",
+      "milieu": "national",
+      "valeur": 1634
+    },
+    {
+      "secteur_activite": "commerce",
+      "annuel": "2021",
+      "milieu": "urbain",
+      "valeur": 1329
+    },
+    {
+      "secteur_activite": "commerce",
+      "annuel": "2021",
+      "milieu": "rural",
+      "valeur": 322
+    },
+    {
+      "secteur_activite": "commerce",
+      "annuel": "2021",
+      "milieu": "national",
+      "valeur": 1648
+    },
+    {
+      "secteur_activite": "commerce",
+      "annuel": "2022",
+      "milieu": "urbain",
+      "valeur": 1361
+    },
+    {
+      "secteur_activite": "commerce",
+      "annuel": "2022",
+      "milieu": "rural",
+      "valeur": 314
+    },
+    {
+      "secteur_activite": "commerce",
+      "annuel": "2022",
+      "milieu": "national",
+      "valeur": 1677
+    },
+    {
+      "secteur_activite": "commerce",
+      "annuel": "2023",
+      "milieu": "urbain",
+      "valeur": 1305
+    },
+    {
+      "secteur_activite": "commerce",
+      "annuel": "2023",
+      "milieu": "rural",
+      "valeur": 295
+    },
+    {
+      "secteur_activite": "commerce",
+      "annuel": "2023",
+      "milieu": "national",
+      "valeur": 1599
+    },
+    {
+      "secteur_activite": "transport, entrepôts et communication",
+      "annuel": "2019",
+      "milieu": "urbain",
+      "valeur": 439
+    },
+    {
+      "secteur_activite": "transport, entrepôts et communication",
+      "annuel": "2019",
+      "milieu": "rural",
+      "valeur": 127
+    },
+    {
+      "secteur_activite": "transport, entrepôts et communication",
+      "annuel": "2019",
+      "milieu": "national",
+      "valeur": 571
+    },
+    {
+      "secteur_activite": "transport, entrepôts et communication",
+      "annuel": "2020",
+      "milieu": "urbain",
+      "valeur": 436
+    },
+    {
+      "secteur_activite": "transport, entrepôts et communication",
+      "annuel": "2020",
+      "milieu": "rural",
+      "valeur": 119
+    },
+    {
+      "secteur_activite": "transport, entrepôts et communication",
+      "annuel": "2020",
+      "milieu": "national",
+      "valeur": 559
+    },
+    {
+      "secteur_activite": "transport, entrepôts et communication",
+      "annuel": "2021",
+      "milieu": "urbain",
+      "valeur": 455
+    },
+    {
+      "secteur_activite": "transport, entrepôts et communication",
+      "annuel": "2021",
+      "milieu": "rural",
+      "valeur": 127
+    },
+    {
+      "secteur_activite": "transport, entrepôts et communication",
+      "annuel": "2021",
+      "milieu": "national",
+      "valeur": 582
+    },
+    {
+      "secteur_activite": "transport, entrepôts et communication",
+      "annuel": "2022",
+      "milieu": "urbain",
+      "valeur": 479
+    },
+    {
+      "secteur_activite": "transport, entrepôts et communication",
+      "annuel": "2022",
+      "milieu": "rural",
+      "valeur": 131
+    },
+    {
+      "secteur_activite": "transport, entrepôts et communication",
+      "annuel": "2022",
+      "milieu": "national",
+      "valeur": 613
+    },
+    {
+      "secteur_activite": "transport, entrepôts et communication",
+      "annuel": "2023",
+      "milieu": "urbain",
+      "valeur": 482
+    },
+    {
+      "secteur_activite": "transport, entrepôts et communication",
+      "annuel": "2023",
+      "milieu": "rural",
+      "valeur": 133
+    },
+    {
+      "secteur_activite": "transport, entrepôts et communication",
+      "annuel": "2023",
+      "milieu": "national",
+      "valeur": 614
+    },
+    {
+      "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
+      "annuel": "2019",
+      "milieu": "urbain",
+      "valeur": 1004
+    },
+    {
+      "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
+      "annuel": "2019",
+      "milieu": "rural",
+      "valeur": 150
+    },
+    {
+      "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
+      "annuel": "2019",
+      "milieu": "national",
+      "valeur": 1152
+    },
+    {
+      "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
+      "annuel": "2020",
+      "milieu": "urbain",
+      "valeur": 915
+    },
+    {
+      "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
+      "annuel": "2020",
+      "milieu": "rural",
+      "valeur": 141
+    },
+    {
+      "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
+      "annuel": "2020",
+      "milieu": "national",
+      "valeur": 1054
+    },
+    {
+      "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
+      "annuel": "2021",
+      "milieu": "urbain",
+      "valeur": 930
+    },
+    {
+      "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
+      "annuel": "2021",
+      "milieu": "rural",
+      "valeur": 154
+    },
+    {
+      "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
+      "annuel": "2021",
+      "milieu": "national",
+      "valeur": 1088
+    },
+    {
+      "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
+      "annuel": "2022",
+      "milieu": "urbain",
+      "valeur": 914
+    },
+    {
+      "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
+      "annuel": "2022",
+      "milieu": "rural",
+      "valeur": 161
+    },
+    {
+      "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
+      "annuel": "2022",
+      "milieu": "national",
+      "valeur": 1075
+    },
+    {
+      "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
+      "annuel": "2023",
+      "milieu": "urbain",
+      "valeur": 958
+    },
+    {
+      "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
+      "annuel": "2023",
+      "milieu": "rural",
+      "valeur": 154
+    },
+    {
+      "secteur_activite": "administration générale et services sociaux fournis à la collectivité",
+      "annuel": "2023",
+      "milieu": "national",
+      "valeur": 1112
+    },
+    {
+      "secteur_activite": "autres services",
+      "annuel": "2019",
+      "milieu": "urbain",
+      "valeur": 1168
+    },
+    {
+      "secteur_activite": "autres services",
+      "annuel": "2019",
+      "milieu": "rural",
+      "valeur": 160
+    },
+    {
+      "secteur_activite": "autres services",
+      "annuel": "2019",
+      "milieu": "national",
+      "valeur": 1328
+    },
+    {
+      "secteur_activite": "autres services",
+      "annuel": "2020",
+      "milieu": "urbain",
+      "valeur": 1363
+    },
+    {
+      "secteur_activite": "autres services",
+      "annuel": "2020",
+      "milieu": "rural",
+      "valeur": 216
+    },
+    {
+      "secteur_activite": "autres services",
+      "annuel": "2020",
+      "milieu": "national",
+      "valeur": 1581
+    },
+    {
+      "secteur_activite": "autres services",
+      "annuel": "2021",
+      "milieu": "urbain",
+      "valeur": 1391
+    },
+    {
+      "secteur_activite": "autres services",
+      "annuel": "2021",
+      "milieu": "rural",
+      "valeur": 227
+    },
+    {
+      "secteur_activite": "autres services",
+      "annuel": "2021",
+      "milieu": "national",
+      "valeur": 1616
+    },
+    {
+      "secteur_activite": "autres services",
+      "annuel": "2022",
+      "milieu": "urbain",
+      "valeur": 1482
+    },
+    {
+      "secteur_activite": "autres services",
+      "annuel": "2022",
+      "milieu": "rural",
+      "valeur": 248
+    },
+    {
+      "secteur_activite": "autres services",
+      "annuel": "2022",
+      "milieu": "national",
+      "valeur": 1731
+    },
+    {
+      "secteur_activite": "autres services",
+      "annuel": "2023",
+      "milieu": "urbain",
+      "valeur": 1531
+    },
+    {
+      "secteur_activite": "autres services",
+      "annuel": "2023",
+      "milieu": "rural",
+      "valeur": 254
+    },
+    {
+      "secteur_activite": "autres services",
+      "annuel": "2023",
+      "milieu": "national",
+      "valeur": 1779
+    },
+    {
+      "secteur_activite": "activités mal désignées",
+      "annuel": "2019",
+      "milieu": "urbain",
+      "valeur": 13
+    },
+    {
+      "secteur_activite": "activités mal désignées",
+      "annuel": "2019",
+      "milieu": "rural",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "activités mal désignées",
+      "annuel": "2019",
+      "milieu": "national",
+      "valeur": 11
+    },
+    {
+      "secteur_activite": "activités mal désignées",
+      "annuel": "2020",
+      "milieu": "urbain",
+      "valeur": 6
+    },
+    {
+      "secteur_activite": "activités mal désignées",
+      "annuel": "2020",
+      "milieu": "rural",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "activités mal désignées",
+      "annuel": "2020",
+      "milieu": "national",
+      "valeur": 11
+    },
+    {
+      "secteur_activite": "activités mal désignées",
+      "annuel": "2021",
+      "milieu": "urbain",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "activités mal désignées",
+      "annuel": "2021",
+      "milieu": "rural",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "activités mal désignées",
+      "annuel": "2021",
+      "milieu": "national",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "activités mal désignées",
+      "annuel": "2022",
+      "milieu": "urbain",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "activités mal désignées",
+      "annuel": "2022",
+      "milieu": "rural",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "activités mal désignées",
+      "annuel": "2022",
+      "milieu": "national",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "activités mal désignées",
+      "annuel": "2023",
+      "milieu": "urbain",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "activités mal désignées",
+      "annuel": "2023",
+      "milieu": "rural",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "activités mal désignées",
+      "annuel": "2023",
+      "milieu": "national",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "total",
+      "annuel": "2019",
+      "milieu": "urbain",
+      "valeur": 6277
+    },
+    {
+      "secteur_activite": "total",
+      "annuel": "2019",
+      "milieu": "rural",
+      "valeur": 4698
+    },
+    {
+      "secteur_activite": "total",
+      "annuel": "2019",
+      "milieu": "national",
+      "valeur": 10975
+    },
+    {
+      "secteur_activite": "total",
+      "annuel": "2020",
+      "milieu": "urbain",
+      "valeur": 6140
+    },
+    {
+      "secteur_activite": "total",
+      "annuel": "2020",
+      "milieu": "rural",
+      "valeur": 4403
+    },
+    {
+      "secteur_activite": "total",
+      "annuel": "2020",
+      "milieu": "national",
+      "valeur": 10542
+    },
+    {
+      "secteur_activite": "total",
+      "annuel": "2021",
+      "milieu": "urbain",
+      "valeur": 6239
+    },
+    {
+      "secteur_activite": "total",
+      "annuel": "2021",
+      "milieu": "rural",
+      "valeur": 4533
+    },
+    {
+      "secteur_activite": "total",
+      "annuel": "2021",
+      "milieu": "national",
+      "valeur": 10772
+    },
+    {
+      "secteur_activite": "total",
+      "annuel": "2022",
+      "milieu": "urbain",
+      "valeur": 6390
+    },
+    {
+      "secteur_activite": "total",
+      "annuel": "2022",
+      "milieu": "rural",
+      "valeur": 4359
+    },
+    {
+      "secteur_activite": "total",
+      "annuel": "2022",
+      "milieu": "national",
+      "valeur": 10749
+    },
+    {
+      "secteur_activite": "total",
+      "annuel": "2023",
+      "milieu": "urbain",
+      "valeur": 6431
+    },
+    {
+      "secteur_activite": "total",
+      "annuel": "2023",
+      "milieu": "rural",
+      "valeur": 4160
+    },
+    {
+      "secteur_activite": "total",
+      "annuel": "2023",
+      "milieu": "national",
+      "valeur": 10591
+    }
+  ]
+}

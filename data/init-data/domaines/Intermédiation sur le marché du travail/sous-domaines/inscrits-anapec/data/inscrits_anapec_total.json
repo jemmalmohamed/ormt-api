@@ -1,0 +1,29 @@
+{
+    "indicateur": "Nombre total des inscrits à l’ANAPEC (en milliers)",
+    "data": [
+        {
+            "annuel": "2019",
+            "valeur": 1655
+        },
+        {
+            "annuel": "2020",
+            "valeur": 1418
+        },
+        {
+            "annuel": "2021",
+            "valeur": 1586
+        },
+        {
+            "annuel": "2022",
+            "valeur": 1955
+        },
+        {
+            "annuel": "2023",
+            "valeur": 2637
+        },
+        {
+            "annuel": "2024",
+            "valeur": 3845
+        }
+    ]
+}

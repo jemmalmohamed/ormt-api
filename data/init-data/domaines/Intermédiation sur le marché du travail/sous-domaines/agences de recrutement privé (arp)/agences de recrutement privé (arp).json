@@ -1,0 +1,89 @@
+{
+    "nom": "agences de recrutement privé (arp)",
+    "description": "statistiques sur les agences de recrutement privé par région.",
+    "roleAcces": [
+        {
+            "roleCode": "role_public",
+            "niveauacces": "lecture"
+        }
+    ],
+    "actif": true,
+    "indicateurs": [
+        {
+            "nom": "nombre des agences de recrutement privé par région",
+            "description": "nombre des agences de recrutement privé par région",
+            "categorie": "agence",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "décisionnel / grand public",
+            "source": "miepeec",
+            "reglecalcul": "",
+            "unite": "",
+            "periode": "2019-2023",
+            "dimensions": [
+                {
+                    "nom": "region",
+                    "libelle": "région",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "agences de recrutement privé par région",
+            "description": "répartition des agences de recrutement privé par région",
+            "categorie": "agence",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "décisionnel / grand public",
+            "source": "miepeec",
+            "reglecalcul": "",
+            "unite": "",
+            "periode": "2019-2023",
+            "dimensions": [
+                {
+                    "nom": "region",
+                    "libelle": "région",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "indicateur": "emploi par secteur d'emploi",
+    "data": [
+        {
+            "secteur_emploi": "ensemble",
+            "annuel": "2019",
+            "valeur": 10975
+        },
+        {
+            "secteur_emploi": "ensemble",
+            "annuel": "2020",
+            "valeur": 10542
+        },
+        {
+            "secteur_emploi": "ensemble",
+            "annuel": "2021",
+            "valeur": 10772
+        },
+        {
+            "secteur_emploi": "ensemble",
+            "annuel": "2022",
+            "valeur": 10749
+        },
+        {
+            "secteur_emploi": "ensemble",
+            "annuel": "2023",
+            "valeur": 10591
+        },
+        {
+            "secteur_emploi": "ensemble",
+            "annuel": "2024",
+            "valeur": 10673
+        },
+        {
+            "secteur_emploi": "public - semi public",
+            "annuel": "2019",
+            "valeur": 955
+        },
+        {
+            "secteur_emploi": "public - semi public",
+            "annuel": "2020",
+            "valeur": 917
+        },
+        {
+            "secteur_emploi": "public - semi public",
+            "annuel": "2021",
+            "valeur": 937
+        },
+        {
+            "secteur_emploi": "public - semi public",
+            "annuel": "2022",
+            "valeur": 903
+        },
+        {
+            "secteur_emploi": "public - semi public",
+            "annuel": "2023",
+            "valeur": 911
+        },
+        {
+            "secteur_emploi": "public - semi public",
+            "annuel": "2024",
+            "valeur": 929
+        },
+        {
+            "secteur_emploi": "privé",
+            "annuel": "2019",
+            "valeur": 10020
+        },
+        {
+            "secteur_emploi": "privé",
+            "annuel": "2020",
+            "valeur": 9625
+        },
+        {
+            "secteur_emploi": "privé",
+            "annuel": "2021",
+            "valeur": 9835
+        },
+        {
+            "secteur_emploi": "privé",
+            "annuel": "2022",
+            "valeur": 9846
+        },
+        {
+            "secteur_emploi": "privé",
+            "annuel": "2023",
+            "valeur": 9680
+        },
+        {
+            "secteur_emploi": "privé",
+            "annuel": "2024",
+            "valeur": 9744
+        }
+    ]
+}

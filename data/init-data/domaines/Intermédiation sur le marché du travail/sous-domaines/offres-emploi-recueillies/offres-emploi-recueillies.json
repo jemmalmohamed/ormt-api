@@ -1,0 +1,156 @@
+{
+    "nom": "offres d’emploi recueillies",
+    "description": "statistiques sur les offres d’emploi recueillies par l’anapec.",
+    "roleAcces": [
+        {
+            "roleCode": "role_public",
+            "niveauacces": "lecture"
+        }
+    ],
+    "actif": true,
+    "indicateurs": [
+        {
+            "nom": "nombre d'offre d'emploi recueillies (en milliers)",
+            "description": "nombre d'offre d'emploi recueillies (en milliers)",
+            "categorie": "offre",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "décisionnel / grand public",
+            "source": "anapec",
+            "reglecalcul": "",
+            "unite": "milliers",
+            "periode": "2019-2024",
+            "dimensions": [
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "offre d'emploi recueillies par région",
+            "description": "répartition des offres d’emploi recueillies par région",
+            "categorie": "offre",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "décisionnel / grand public",
+            "source": "anapec",
+            "reglecalcul": "",
+            "unite": "pourcentage",
+            "periode": "2019-2024",
+            "dimensions": [
+                {
+                    "nom": "region",
+                    "libelle": "région-oer",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "offre d’emploi recueillies par taille d’entreprise",
+            "description": "répartition des offres d’emploi recueillies par taille d’entreprise",
+            "categorie": "offre",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "décisionnel / grand public",
+            "source": "anapec",
+            "reglecalcul": "",
+            "unite": "pourcentage",
+            "periode": "2019-2024",
+            "dimensions": [
+                {
+                    "nom": "taille",
+                    "libelle": "taille d'entreprise",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        },
+        {
+            "nom": "Offre d'emploi recueillies par contrat",
+            "description": "répartition des offres d’emploi recueillies par type de contrat",
+            "categorie": "offre",
+            "abreviation": "",
+            "roleAcces": [
+                {
+                    "roleCode": "role_public",
+                    "niveauacces": "lecture"
+                }
+            ],
+            "actif": true,
+            "typetb": "décisionnel / grand public",
+            "source": "anapec",
+            "reglecalcul": "",
+            "unite": "pourcentage",
+            "periode": "2019-2024",
+            "dimensions": [
+                {
+                    "nom": "type_contrat",
+                    "libelle": "type de contrat",
+                    "type": "texte",
+                    "association": {
+                        "principale": true,
+                        "temporelle": false
+                    }
+                },
+                {
+                    "nom": "annuel",
+                    "libelle": "année",
+                    "type": "texte",
+                    "association": {
+                        "principale": false,
+                        "temporelle": true
+                    }
+                }
+            ]
+        }
+    ]
+}
