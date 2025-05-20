@@ -1,4 +1,4 @@
-package ma.org.ormt.modules.indicateurs.indicateur.services;
+package ma.org.ormt.modules.indicateurs.indicateur.services.imports;
 
 import java.io.InputStream;
 

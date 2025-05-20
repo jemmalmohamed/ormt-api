@@ -21,7 +21,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel",
+            "typeTb": "décisionnel",
             "source": "",
             "reglecalcul": "",
             "unite": "",
@@ -68,7 +68,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel",
+            "typeTb": "décisionnel",
             "source": "",
             "reglecalcul": "",
             "unite": "%",
@@ -106,7 +106,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel",
+            "typeTb": "décisionnel",
             "source": "",
             "reglecalcul": "",
             "unite": "%",
@@ -144,7 +144,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel",
+            "typeTb": "décisionnel",
             "source": "",
             "reglecalcul": "",
             "unite": "%",

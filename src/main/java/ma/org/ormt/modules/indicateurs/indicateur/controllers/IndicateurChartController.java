@@ -15,7 +15,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.series.IndicateurChartDto;
-import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurChartService;
+import ma.org.ormt.modules.indicateurs.indicateur.services.charts.IndicateurChartService;
 
 @RestController
 @RequiredArgsConstructor

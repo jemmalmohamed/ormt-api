@@ -1,4 +1,4 @@
-package ma.org.ormt.modules.indicateurs.indicateur.services.impl;
+package ma.org.ormt.modules.indicateurs.indicateur.services.indicateur;
 
 import java.util.Optional;
 
@@ -19,7 +19,6 @@ import ma.org.ormt.modules.indicateurs.indicateur.dtos.request.IndicateurRequest
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.request.IndicateurRequestDtoMapper;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.repositories.IndicateurRepository;
-import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurService;
 
 @Service
 public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implements IndicateurService {
@@ -47,7 +46,7 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
 
     @Override
     public Optional<Indicateur> findByNom(String nom) {
-        return indicateurRepository.findByNom(nom);
+        return indicateurRepository.findByNom(nom.toLowerCase());
     }
 
     @Override
@@ -101,5 +100,10 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
         indicateur.setUnite(entityToUpdate.getUnite());
         indicateur.setSource(entityToUpdate.getSource());
         indicateur.setRegleCalcul(entityToUpdate.getRegleCalcul());
+    }
+
+    @Override
+    public Optional<Indicateur> findByNomWithDonnees(String nom) {
+        return indicateurRepository.findByNomWithDonnees(nom.toLowerCase());
     }
 }

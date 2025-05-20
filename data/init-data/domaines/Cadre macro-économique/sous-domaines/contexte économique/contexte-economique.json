@@ -10,7 +10,7 @@
     "actif": true,
     "indicateurs": [
         {
-            "nom": "produit intérieur brut aux prix courants (en millions de dh)",
+            "nom": "produit intérieur brut aux prix courants",
             "categorie": "macroéconomie",
             "abreviation": "",
             "roleAcces": [
@@ -20,12 +20,12 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel",
+            "typeTb": "décisionnel",
             "source": "hcp",
             "reglecalcul": "",
             "unite": "millions de dh",
             "periode": "2015-2023",
-            "description": "produit intérieur brut aux prix courants (en millions de dh)",
+            "description": "produit intérieur brut aux prix courants",
             "dimensions": [
                 {
                     "nom": "region",
@@ -58,12 +58,12 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel",
+            "typeTb": "décisionnel",
             "source": "hcp",
             "reglecalcul": "",
             "unite": "%",
             "periode": "2015-2024",
-            "description": "variation annuelle en pourcentage du pib  ",
+            "description": "variation annuelle en pourcentage du pib",
             "dimensions": [
                 {
                     "nom": "region",
@@ -96,7 +96,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel",
+            "typeTb": "décisionnel",
             "source": "hcp",
             "reglecalcul": "",
             "unite": "dh",
@@ -124,7 +124,7 @@
             ]
         },
         {
-            "nom": "valeur ajoutée par branche d'activité aux prix courants (en millions de dh)",
+            "nom": "valeur ajoutée par branche d'activité aux prix courants",
             "categorie": "macroéconomie",
             "abreviation": "",
             "roleAcces": [
@@ -134,7 +134,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel",
+            "typeTb": "décisionnel",
             "source": "hcp",
             "reglecalcul": "",
             "unite": "millions de dh",

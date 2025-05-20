@@ -14,10 +14,10 @@
       "description": "nombre d'entreprises",
       "categorie": "économie",
       "abreviation": "",
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "cnss",
       "reglecalcul": "",
-      "unite": "nombre",
+      "unite": "",
       "periode": "2019-2023",
       "roleAcces": [
         {
@@ -70,10 +70,10 @@
       "description": "nombre d'entreprises entrantes",
       "categorie": "économie",
       "abreviation": "",
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "cnss",
       "reglecalcul": "",
-      "unite": "nombre",
+      "unite": "",
       "periode": "2019-2023",
       "roleAcces": [
         {
@@ -126,10 +126,10 @@
       "description": "nombre d'entreprises sortantes",
       "categorie": "économie",
       "abreviation": "",
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "cnss",
       "reglecalcul": "",
-      "unite": "nombre",
+      "unite": "",
       "periode": "2019-2023",
       "roleAcces": [
         {
@@ -182,10 +182,10 @@
       "description": "taux de survie des entreprises",
       "categorie": "économie",
       "abreviation": "",
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "cnss",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2023",
       "roleAcces": [
         {

@@ -21,7 +21,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel",
+            "typeTb": "décisionnel",
             "source": "HCP",
             "reglecalcul": "",
             "unite": "",
@@ -50,7 +50,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel",
+            "typeTb": "décisionnel",
             "source": "MEF",
             "reglecalcul": "",
             "unite": "",
@@ -79,7 +79,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel",
+            "typeTb": "décisionnel",
             "source": "OC",
             "reglecalcul": "",
             "unite": "",
@@ -108,7 +108,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel",
+            "typeTb": "décisionnel",
             "source": "OC",
             "reglecalcul": "",
             "unite": "",

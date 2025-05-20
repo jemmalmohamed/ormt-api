@@ -10,8 +10,8 @@
     "actif": true,
     "indicateurs": [
         {
-            "nom": "objectif ciblé d’ateliers de recherche d’emploi (en milliers)",
-            "description": "objectif ciblé d’ateliers de recherche d’emploi (en milliers)",
+            "nom": "objectif ciblé d’ateliers de recherche d’emploi",
+            "description": "objectif ciblé d’ateliers de recherche d’emploi",
             "categorie": "atelier",
             "abreviation": "",
             "roleAcces": [
@@ -21,7 +21,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
             "unite": "milliers",
@@ -39,8 +39,8 @@
             ]
         },
         {
-            "nom": "nombre de bénéficiaires d'ateliers de recherche d'emploi (en milliers)",
-            "description": "nombre de bénéficiaires d'ateliers de recherche d'emploi (en milliers)",
+            "nom": "nombre de bénéficiaires d'ateliers de recherche d'emploi",
+            "description": "nombre de bénéficiaires d'ateliers de recherche d'emploi",
             "categorie": "atelier",
             "abreviation": "",
             "roleAcces": [
@@ -50,7 +50,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
             "unite": "milliers",
@@ -79,10 +79,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
-            "unite": "pourcentage",
+            "unite": "%",
             "periode": "2019-2024",
             "dimensions": [
                 {
@@ -117,10 +117,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
-            "unite": "pourcentage",
+            "unite": "%",
             "periode": "2019-2024",
             "dimensions": [
                 {
@@ -155,10 +155,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
-            "unite": "pourcentage",
+            "unite": "%",
             "periode": "2019-2024",
             "dimensions": [
                 {
@@ -193,10 +193,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
-            "unite": "pourcentage",
+            "unite": "%",
             "periode": "2019-2024",
             "dimensions": [
                 {

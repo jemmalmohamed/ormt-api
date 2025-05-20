@@ -21,7 +21,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "miepeec",
             "reglecalcul": "",
             "unite": "",
@@ -59,7 +59,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "miepeec",
             "reglecalcul": "",
             "unite": "",

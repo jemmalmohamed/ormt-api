@@ -10,8 +10,8 @@
     "actif": true,
     "indicateurs": [
         {
-            "nom": "Population active en chômage par milieu de résidence (en milliers)",
-            "description": "Population active en chômage selon le milieu de résidence (en milliers)",
+            "nom": "Population active en chômage par milieu de résidence",
+            "description": "Population active en chômage selon le milieu de résidence",
             "categorie": "Chomage",
             "abreviation": "",
             "roleAcces": [
@@ -21,8 +21,9 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel / GP",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
+            "unite": "milliers",
             "reglecalcul": "",
             "periode": "2019-2023",
             "dimensions": [
@@ -47,8 +48,8 @@
             ]
         },
         {
-            "nom": "Population active en chômage par diplôme et genre (en milliers)",
-            "description": "Population active en chômage selon diplôme et genre (en milliers)",
+            "nom": "Population active en chômage par diplôme et genre",
+            "description": "Population active en chômage selon diplôme et genre",
             "categorie": "Chomage",
             "abreviation": "",
             "roleAcces": [
@@ -58,9 +59,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel / GP",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
+            "unite": "milliers",
             "periode": "2019-2023",
             "dimensions": [
                 {
@@ -93,8 +95,8 @@
             ]
         },
         {
-            "nom": "Population active en chômage par diplôme et milieu de résidence (en milliers)",
-            "description": "Population active en chômage selon diplôme et milieu de résidence (en milliers)",
+            "nom": "Population active en chômage par diplôme et milieu de résidence",
+            "description": "Population active en chômage selon diplôme et milieu de résidence",
             "categorie": "Chomage",
             "abreviation": "",
             "roleAcces": [
@@ -104,9 +106,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel / GP",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
+            "unite": "milliers",
             "periode": "2019-2023",
             "dimensions": [
                 {
@@ -139,8 +142,8 @@
             ]
         },
         {
-            "nom": "Population active en chômage par genre (en milliers)",
-            "description": "Population active en chômage selon le genre (en milliers)",
+            "nom": "Population active en chômage par genre",
+            "description": "Population active en chômage selon le genre",
             "categorie": "Chomage",
             "abreviation": "",
             "roleAcces": [
@@ -150,9 +153,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel / GP",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
+            "unite": "milliers",
             "periode": "2019-2023",
             "dimensions": [
                 {
@@ -176,8 +180,8 @@
             ]
         },
         {
-            "nom": "Population active en chômage selon la durée (en milliers)",
-            "description": "Population active en chômage selon la durée du chômage (en milliers)",
+            "nom": "Population active en chômage selon la durée",
+            "description": "Population active en chômage selon la durée du chômage",
             "categorie": "Chomage",
             "abreviation": "",
             "roleAcces": [
@@ -187,8 +191,9 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel / GP",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
+            "unite": "milliers",
             "reglecalcul": "",
             "periode": "2019-2023",
             "dimensions": [
@@ -213,8 +218,8 @@
             ]
         },
         {
-            "nom": "Population active en chômage selon l'expérience (en milliers)",
-            "description": "Population active en chômage selon l'expérience professionnelle (en milliers)",
+            "nom": "Population active en chômage selon l'expérience",
+            "description": "Population active en chômage selon l'expérience professionnelle",
             "categorie": "Chomage",
             "abreviation": "",
             "roleAcces": [
@@ -224,10 +229,11 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel / GP",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2023",
+            "unite": "milliers",
             "dimensions": [
                 {
                     "nom": "experience",
@@ -250,8 +256,8 @@
             ]
         },
         {
-            "nom": "Population active en chômage selon les causes (en milliers)",
-            "description": "Population active en chômage selon les causes du chômage (en milliers)",
+            "nom": "Population active en chômage selon les causes",
+            "description": "Population active en chômage selon les causes du chômage",
             "categorie": "Chomage",
             "abreviation": "",
             "roleAcces": [
@@ -261,9 +267,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel / GP",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
+            "unite": "milliers",
             "periode": "2019-2023",
             "dimensions": [
                 {
@@ -298,7 +305,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel / GP",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2023",
@@ -335,7 +342,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel / GP",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2023",
@@ -381,7 +388,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel / GP",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2023",
@@ -427,7 +434,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel / GP",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2023",
@@ -464,7 +471,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel / GP",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2023",
@@ -501,7 +508,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel / GP",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2023",

@@ -20,7 +20,7 @@
         }
       ],
       "actif": true,
-      "typetb": "Décisionnel / GP",
+      "typeTb": "décisionnel / grand public",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "nom": "Nombre de bénéficiaires des Programmes d’amélioration de l’employabilité (en milliers)",
+      "nom": "Nombre de bénéficiaires des Programmes d’amélioration de l’employabilité",
       "categorie": "Programmes d’amélioration de l’employabilité",
       "abreviation": "",
       "roleAcces": [
@@ -49,10 +49,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel/grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "",
+      "unite": "milliers",
       "periode": "2019-2024",
       "description": "Nombre total de bénéficiaires des Programmes d’amélioration de l’employabilité.",
       "dimensions": [
@@ -78,7 +78,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel/grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",
@@ -116,7 +116,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel/grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",
@@ -154,7 +154,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel/grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",
@@ -192,7 +192,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel/grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",
@@ -230,7 +230,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel/grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",
@@ -268,7 +268,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel/grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",
@@ -297,7 +297,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel/grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",
@@ -326,7 +326,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel/grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",

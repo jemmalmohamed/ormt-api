@@ -21,7 +21,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2024",
@@ -76,7 +76,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2024",
@@ -131,7 +131,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2024",
@@ -186,7 +186,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2024",
@@ -232,7 +232,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2025",
@@ -278,7 +278,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2024",
@@ -333,7 +333,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2024",
@@ -379,7 +379,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel",
+            "typeTb": "Décisionnel",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2024",
@@ -425,7 +425,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel",
+            "typeTb": "Décisionnel",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2024",
@@ -471,7 +471,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel",
+            "typeTb": "Décisionnel",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2024",
@@ -517,7 +517,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel",
+            "typeTb": "Décisionnel",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2024",
@@ -563,7 +563,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel",
+            "typeTb": "Décisionnel",
             "source": "HCP",
             "reglecalcul": "",
             "unite": "%",
@@ -601,7 +601,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel",
+            "typeTb": "Décisionnel",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2024",
@@ -647,7 +647,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Décisionnel",
+            "typeTb": "Décisionnel",
             "source": "HCP",
             "reglecalcul": "",
             "periode": "2019-2024",

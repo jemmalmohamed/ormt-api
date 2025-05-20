@@ -10,8 +10,8 @@
     "actif": true,
     "indicateurs": [
         {
-            "nom": "nombre d'offre d'emploi recueillies (en milliers)",
-            "description": "nombre d'offre d'emploi recueillies (en milliers)",
+            "nom": "nombre d'offre d'emploi recueillies",
+            "description": "nombre d'offre d'emploi recueillies",
             "categorie": "offre",
             "abreviation": "",
             "roleAcces": [
@@ -21,7 +21,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
             "unite": "milliers",
@@ -50,10 +50,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
-            "unite": "pourcentage",
+            "unite": "%",
             "periode": "2019-2024",
             "dimensions": [
                 {
@@ -88,10 +88,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
-            "unite": "pourcentage",
+            "unite": "%",
             "periode": "2019-2024",
             "dimensions": [
                 {
@@ -126,10 +126,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
-            "unite": "pourcentage",
+            "unite": "%",
             "periode": "2019-2024",
             "dimensions": [
                 {

@@ -1,4 +1,4 @@
-package ma.org.ormt.modules.indicateurs.indicateur.services;
+package ma.org.ormt.modules.indicateurs.indicateur.services.indicateur;
 
 import java.util.Optional;
 import org.springframework.data.domain.Page;
@@ -20,4 +20,6 @@ public interface IndicateurService extends BaseService<Indicateur> {
     Indicateur update(Long id, IndicateurRequestDto indicateurRequestDto);
 
     boolean existsById(Long id);
+
+    Optional<Indicateur> findByNomWithDonnees(String nom);
 }

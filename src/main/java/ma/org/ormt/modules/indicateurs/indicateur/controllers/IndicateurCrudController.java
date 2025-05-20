@@ -32,7 +32,7 @@ import ma.org.ormt.modules.indicateurs.indicateur.dtos.request.IndicateurRequest
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDto;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDtoMapper;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
-import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurService;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @RestController
 @RequestMapping(value = "/api/v1/indicateurs")

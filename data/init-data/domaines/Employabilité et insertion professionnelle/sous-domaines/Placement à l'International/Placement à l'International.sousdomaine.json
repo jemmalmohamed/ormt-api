@@ -20,7 +20,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",
@@ -49,10 +49,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Bénéficiaires du PI ventilés par genre.",
       "dimensions": [
@@ -87,10 +87,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Bénéficiaires du PI ventilés par pays d’accueil.",
       "dimensions": [
@@ -125,10 +125,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Bénéficiaires du PI ventilés par SAE.",
       "dimensions": [
@@ -163,10 +163,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Bénéficiaires du PI ventilés par type de contrat.",
       "dimensions": [
@@ -201,10 +201,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Bénéficiaires du PI ventilés par région.",
       "dimensions": [

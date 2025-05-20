@@ -20,7 +20,7 @@
       "actif": true,
       "categorie": "emploi",
       "abreviation": "",
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
       "unite": "milliers",
@@ -67,7 +67,7 @@
       ],
       "actif": true,
       "abreviation": "",
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
       "unite": "milliers",
@@ -114,7 +114,7 @@
       ],
       "actif": true,
       "abreviation": "",
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
       "unite": "milliers",
@@ -161,7 +161,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
       "unite": "milliers",
@@ -208,7 +208,7 @@
         }
       ],
       "actif": true,
-      "typetb": "grand public",
+      "typeTb": "grand public",
       "source": "hcp",
       "reglecalcul": "",
       "unite": "milliers",
@@ -255,7 +255,7 @@
         }
       ],
       "actif": true,
-      "typetb": "grand public",
+      "typeTb": "grand public",
       "source": "hcp",
       "reglecalcul": "",
       "unite": "milliers",
@@ -293,7 +293,7 @@
         }
       ],
       "actif": true,
-      "typetb": "grand public",
+      "typeTb": "grand public",
       "source": "hcp",
       "reglecalcul": "",
       "unite": "milliers",
@@ -324,7 +324,7 @@
       "nom": "emploi par région",
       "categorie": "emploi",
       "abreviation": "",
-      "typetb": "grand public",
+      "typeTb": "grand public",
       "roleAcces": [
         {
           "roleCode": "role_public",
@@ -369,7 +369,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "cnss",
       "reglecalcul": "",
       "unite": "milliers",
@@ -416,7 +416,7 @@
       ],
       "actif": true,
       "abreviation": "",
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "cnss",
       "reglecalcul": "",
       "unite": "milliers",
@@ -463,7 +463,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "cnss",
       "reglecalcul": "",
       "unite": "milliers",
@@ -510,7 +510,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "cnss",
       "reglecalcul": "",
       "unite": "milliers",
@@ -548,7 +548,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "cnss",
       "reglecalcul": "",
       "unite": "milliers",
@@ -579,7 +579,7 @@
       "nom": "nombre de déclaration cnss par secteur d'activité",
       "categorie": "salariés",
       "abreviation": "",
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "cnss",
       "roleAcces": [
         {
@@ -617,7 +617,7 @@
       "nom": "indice de rotation de salariés par poste par secteur d'activité",
       "categorie": "salariés",
       "abreviation": "",
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "roleAcces": [
         {
           "roleCode": "role_public",
@@ -655,7 +655,7 @@
       "nom": "emploi informel par secteur d'activité",
       "categorie": "emploi",
       "abreviation": "",
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "hcp-cnss",
       "roleAcces": [
         {
@@ -700,7 +700,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "mef",
       "reglecalcul": "",
       "unite": "milliers",

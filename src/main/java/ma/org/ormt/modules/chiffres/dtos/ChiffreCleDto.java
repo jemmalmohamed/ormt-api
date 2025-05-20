@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.Dto;
+import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
 
 @Setter
 @Getter
@@ -26,5 +27,7 @@ public class ChiffreCleDto extends Dto {
     private String description;
 
     private Boolean actif;
+
+    private DonneeIndicateurDto donneeIndicateur;
 
 }

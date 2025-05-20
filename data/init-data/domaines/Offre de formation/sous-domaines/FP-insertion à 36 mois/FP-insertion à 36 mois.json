@@ -21,7 +21,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "DFP",
             "reglecalcul": "",
             "periode": "2016",
@@ -58,7 +58,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "DFP",
             "reglecalcul": "",
             "periode": "2006-2016",
@@ -95,7 +95,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "DFP",
             "reglecalcul": "",
             "periode": "2006-2016",
@@ -132,7 +132,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "DFP",
             "reglecalcul": "",
             "periode": "2016",

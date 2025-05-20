@@ -1,4 +1,4 @@
-package ma.org.ormt.modules.indicateurs.indicateur.services;
+package ma.org.ormt.modules.indicateurs.indicateur.services.charts;
 
 import java.util.List;
 import java.util.Map;

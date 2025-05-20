@@ -25,7 +25,7 @@ import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.repositories.SousDomaineRepository;
 import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
-import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurService;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @Service
 public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> implements SousDomaineService {

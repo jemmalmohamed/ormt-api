@@ -10,8 +10,8 @@
     "actif": true,
     "indicateurs": [
         {
-            "nom": "nombre total des inscrits à l’anapec (en milliers)",
-            "description": "nombre total des inscrits à l’anapec (en milliers)",
+            "nom": "nombre total des inscrits à l’anapec",
+            "description": "nombre total des inscrits à l’anapec",
             "categorie": "inscription",
             "abreviation": "",
             "roleAcces": [
@@ -21,7 +21,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
             "unite": "milliers",
@@ -50,10 +50,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
-            "unite": "pourcentage",
+            "unite": "%",
             "periode": "2019, 2022 et 2024",
             "dimensions": [
                 {
@@ -88,10 +88,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
-            "unite": "pourcentage",
+            "unite": "%",
             "periode": "2019, 2022 et 2024",
             "dimensions": [
                 {
@@ -126,10 +126,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
-            "unite": "pourcentage",
+            "unite": "%",
             "periode": "2019, 2022 et 2024",
             "dimensions": [
                 {
@@ -164,10 +164,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
-            "unite": "pourcentage",
+            "unite": "%",
             "periode": "2019-2024",
             "dimensions": [
                 {
@@ -191,8 +191,8 @@
             ]
         },
         {
-            "nom": "nombre de nouveaux inscrits à l’anapec (en milliers)",
-            "description": "nombre de nouveaux inscrits à l’anapec (en milliers)",
+            "nom": "nombre de nouveaux inscrits à l’anapec",
+            "description": "nombre de nouveaux inscrits à l’anapec",
             "categorie": "inscription",
             "abreviation": "",
             "roleAcces": [
@@ -202,10 +202,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
-            "unite": "pourcentage",
+            "unite": "milliers",
             "periode": "2019-2024",
             "dimensions": [
                 {
@@ -231,10 +231,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
-            "unite": "pourcentage",
+            "unite": "%",
             "periode": "2019-2024",
             "dimensions": [
                 {
@@ -269,10 +269,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
-            "unite": "pourcentage",
+            "unite": "%",
             "periode": "2019-2024",
             "dimensions": [
                 {
@@ -307,10 +307,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
-            "unite": "pourcentage",
+            "unite": "%",
             "periode": "2019-2024",
             "dimensions": [
                 {
@@ -345,10 +345,10 @@
                 }
             ],
             "actif": true,
-            "typetb": "décisionnel / grand public",
+            "typeTb": "décisionnel / grand public",
             "source": "anapec",
             "reglecalcul": "",
-            "unite": "pourcentage",
+            "unite": "%",
             "periode": "2019-2024",
             "dimensions": [
                 {

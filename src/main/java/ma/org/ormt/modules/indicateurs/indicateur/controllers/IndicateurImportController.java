@@ -23,7 +23,7 @@ import ma.org.ormt.core.commun.rest.responses.RestResponse;
 
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.imports.ImportOrganizedRequest;
 import ma.org.ormt.modules.indicateurs.indicateur.helpers.ImportXlsResult;
-import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurImportService;
+import ma.org.ormt.modules.indicateurs.indicateur.services.imports.IndicateurImportService;
 
 @RestController
 @RequestMapping("/api/v1/indicateurs")

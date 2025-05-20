@@ -22,7 +22,7 @@ import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
 import ma.org.ormt.modules.indicateurs.dimension.repositories.DimensionRepository;
 import ma.org.ormt.modules.indicateurs.dimension.services.DimensionService;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
-import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurService;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @Service
 @Transactional

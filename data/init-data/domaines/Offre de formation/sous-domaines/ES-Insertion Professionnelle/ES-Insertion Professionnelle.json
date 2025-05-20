@@ -21,7 +21,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "MESRSI",
             "reglecalcul": "",
             "periode": "2014",
@@ -58,7 +58,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "MESRSI",
             "reglecalcul": "",
             "periode": "2014",
@@ -95,7 +95,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "MESRSI",
             "reglecalcul": "",
             "periode": "2014",
@@ -132,7 +132,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "MESRSI",
             "reglecalcul": "",
             "periode": "2014",
@@ -169,7 +169,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "MESRSI",
             "reglecalcul": "",
             "periode": "2014",
@@ -206,7 +206,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "MESRSI",
             "reglecalcul": "",
             "periode": "2014",
@@ -252,7 +252,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "MESRSI",
             "reglecalcul": "",
             "periode": "2014",
@@ -298,7 +298,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "MESRSI",
             "reglecalcul": "",
             "periode": "2014",

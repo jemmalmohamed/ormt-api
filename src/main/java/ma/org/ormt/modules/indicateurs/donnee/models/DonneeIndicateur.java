@@ -34,7 +34,7 @@ public class DonneeIndicateur extends BaseEntity {
     @JoinColumn(name = "id_indicateur")
     private Indicateur indicateur;
 
-    @OneToMany(mappedBy = "donneeIndicateur", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "donneeIndicateur", fetch = FetchType.EAGER)
     private List<ValeurDimension> valeurDimensions;
 
 }

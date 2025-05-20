@@ -20,10 +20,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "donmt",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2023",
       "description": "Taux d’insertion à 3 ans ventilé par genre.",
       "dimensions": [
@@ -58,10 +58,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "donmt",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2023",
       "description": "Taux d’insertion à 3 ans ventilé par âge.",
       "dimensions": [
@@ -96,10 +96,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "donmt",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2023",
       "description": "Taux d’insertion à 3 ans ventilé par diplôme.",
       "dimensions": [
@@ -134,10 +134,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "donmt",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2023",
       "description": "Taux d’insertion à 3 ans ventilé par taille d’entreprise.",
       "dimensions": [
@@ -172,10 +172,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "donmt",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2023",
       "description": "Taux d’insertion à 3 ans ventilé par secteur d'activité économique.",
       "dimensions": [
@@ -210,10 +210,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "donmt",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2023",
       "description": "Taux d’insertion à 3 ans ventilé par région.",
       "dimensions": [
@@ -248,10 +248,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "donmt",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2021et 2023",
       "description": "Taux d’insertion à 3 ans ventilé selon la période de stage.",
       "dimensions": [
@@ -286,10 +286,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "donmt",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2023",
       "description": "Taux d’insertion à l'issue de stage ventilé par taille d’entreprise.",
       "dimensions": [
@@ -324,10 +324,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "donmt",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2023",
       "description": "Taux d’insertion à l'issue de stage ventilé par secteur d'activité économique.",
       "dimensions": [

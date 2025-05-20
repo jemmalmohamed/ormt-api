@@ -14,10 +14,10 @@
       "description": "part de l'emploi informel par secteur d'activité",
       "categorie": "emploi",
       "abreviation": "",
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp-cnss",
       "reglecalcul": "et-s-idp",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2023",
       "roleAcces": [
         {
@@ -52,10 +52,10 @@
       "description": "part de l'emploi rémunéré par secteur d'activité",
       "categorie": "emploi",
       "abreviation": "",
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "roleAcces": [
         {
@@ -99,10 +99,10 @@
       "description": "part des actifs occupés bénéficiant d'une couverture médicale",
       "categorie": "emploi",
       "abreviation": "",
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "roleAcces": [
         {
@@ -146,10 +146,10 @@
       "description": "part des salariés disposant d'un contrat de travail",
       "categorie": "emploi",
       "abreviation": "",
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "roleAcces": [
         {
@@ -184,10 +184,10 @@
       "description": "part de l'emploi de type occasionnel ou saisonnier",
       "categorie": "emploi",
       "abreviation": "",
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "roleAcces": [
         {
@@ -231,10 +231,10 @@
       "description": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive)",
       "categorie": "emploi",
       "abreviation": "",
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "roleAcces": [
         {
@@ -278,10 +278,10 @@
       "description": "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle",
       "categorie": "emploi",
       "abreviation": "",
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "roleAcces": [
         {
@@ -316,10 +316,10 @@
       "description": "part des salariés touchant un salaire inférieur au smig par secteur d'activité- cnss",
       "categorie": "emploi",
       "abreviation": "",
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "cnss",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2023",
       "roleAcces": [
         {
@@ -350,11 +350,11 @@
       ]
     },
     {
-      "nom": "salariés (stables) déclarés à la cnss par secteur d'activité-cnss",
-      "description": "salariés (stables) déclarés à la cnss par secteur d'activité-cnss",
+      "nom": "salariés (stables) déclarés à la cnss par secteur d'activité",
+      "description": "salariés (stables) déclarés à la cnss par secteur d'activit - cnss",
       "categorie": "emploi",
       "abreviation": "",
-      "typetb": "grand public",
+      "typeTb": "grand public",
       "source": "cnss",
       "reglecalcul": "",
       "unite": "milliers",
@@ -368,7 +368,7 @@
       "actif": true,
       "dimensions": [
         {
-          "nom": "secteur_activite",
+          "nom": "secteur_activite_cnss",
           "libelle": "secteur d'activité-cnss",
           "type": "texte",
           "association": {

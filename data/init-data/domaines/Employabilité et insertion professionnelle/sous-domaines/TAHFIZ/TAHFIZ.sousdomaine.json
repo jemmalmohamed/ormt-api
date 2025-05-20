@@ -20,7 +20,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",
@@ -49,10 +49,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Salariés bénéficiaires TAHFIZ ventilés par genre.",
       "dimensions": [
@@ -87,10 +87,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2023",
       "description": "Salariés bénéficiaires TAHFIZ ventilés par âge.",
       "dimensions": [
@@ -125,10 +125,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Salariés bénéficiaires TAHFIZ ventilés par diplôme.",
       "dimensions": [
@@ -163,10 +163,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Salariés bénéficiaires TAHFIZ ventilés par secteur d'activité économique (SAE).",
       "dimensions": [
@@ -201,10 +201,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2022-2024",
       "description": "Salariés bénéficiaires TAHFIZ ventilés par taille d’entreprise.",
       "dimensions": [
@@ -239,10 +239,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Salariés bénéficiaires TAHFIZ ventilés par région.",
       "dimensions": [
@@ -277,7 +277,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",
@@ -306,10 +306,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2022-2024",
       "description": "Entreprises bénéficiaires TAHFIZ ventilées par taille d’entreprise.",
       "dimensions": [
@@ -344,10 +344,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2022 et 2024",
       "description": "Entreprises bénéficiaires TAHFIZ ventilées par secteur d'activité économique (SAE).",
       "dimensions": [
@@ -382,10 +382,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Entreprises bénéficiaires TAHFIZ ventilées par région.",
       "dimensions": [

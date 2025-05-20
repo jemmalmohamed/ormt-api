@@ -1,5 +1,5 @@
 {
-    "indicateur": "valeur ajoutée par branche d'activité aux prix courants (en millions de dh)",
+    "indicateur": "valeur ajoutée par branche d'activité aux prix courants",
     "data": [
         {
             "branche_activite": "agriculture",

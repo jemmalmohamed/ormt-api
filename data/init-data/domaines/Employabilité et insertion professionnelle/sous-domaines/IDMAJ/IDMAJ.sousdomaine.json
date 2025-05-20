@@ -10,7 +10,7 @@
   "actif": true,
   "indicateurs": [
     {
-      "nom": "Nombre des bénéficiaires IDMAJ, y compris le PI (en milliers)",
+      "nom": "Nombre des bénéficiaires IDMAJ, y compris le PI",
       "categorie": "IDMAJ",
       "abreviation": "",
       "roleAcces": [
@@ -20,7 +20,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "milliers",
@@ -49,10 +49,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Bénéficiaires IDMAJ ventilés par genre (y compris le PI).",
       "dimensions": [
@@ -87,10 +87,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Bénéficiaires IDMAJ ventilés par âge (hors PI).",
       "dimensions": [
@@ -125,10 +125,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Bénéficiaires IDMAJ ventilés par diplôme (hors PI).",
       "dimensions": [
@@ -163,10 +163,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Bénéficiaires IDMAJ ventilés par type de contrat (hors PI).",
       "dimensions": [
@@ -201,10 +201,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Bénéficiaires IDMAJ ventilés par secteur d’activité (hors PI).",
       "dimensions": [
@@ -239,10 +239,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Bénéficiaires IDMAJ ventilés par région (hors PI).",
       "dimensions": [

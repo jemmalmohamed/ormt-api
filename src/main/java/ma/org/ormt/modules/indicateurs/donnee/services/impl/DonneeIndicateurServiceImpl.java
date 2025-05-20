@@ -29,7 +29,7 @@ import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
 import ma.org.ormt.modules.indicateurs.donnee.repositories.DonneeIndicateurRepository;
 import ma.org.ormt.modules.indicateurs.donnee.services.DonneeIndicateurService;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
-import ma.org.ormt.modules.indicateurs.indicateur.services.IndicateurService;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 import ma.org.ormt.modules.indicateurs.valeurdimension.dtos.request.ValeurDimensionRequestDto;
 import ma.org.ormt.modules.indicateurs.valeurdimension.models.ValeurDimension;
 import ma.org.ormt.modules.indicateurs.valeurdimension.repositories.ValeurDimensionRepository;

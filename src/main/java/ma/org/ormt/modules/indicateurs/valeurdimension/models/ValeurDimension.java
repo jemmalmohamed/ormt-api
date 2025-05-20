@@ -27,11 +27,11 @@ public class ValeurDimension extends BaseEntity {
 
     private String valeur;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_dimension")
     private Dimension dimension;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_donnee_indicateur")
     private DonneeIndicateur donneeIndicateur;
 

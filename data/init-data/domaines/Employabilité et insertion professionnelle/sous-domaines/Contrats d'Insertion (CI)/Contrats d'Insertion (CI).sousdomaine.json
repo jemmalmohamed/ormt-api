@@ -10,7 +10,7 @@
   "actif": true,
   "indicateurs": [
     {
-      "nom": "Nombre des bénéficiaires du CI (en milliers)",
+      "nom": "Nombre des bénéficiaires du contrats d'insertion",
       "categorie": "Contrats d'Insertion (CI)",
       "abreviation": "",
       "roleAcces": [
@@ -20,7 +20,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "milliers",
@@ -49,10 +49,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Bénéficiaires du CI ventilés par genre.",
       "dimensions": [
@@ -87,10 +87,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Bénéficiaires du CI ventilés par diplôme.",
       "dimensions": [
@@ -125,10 +125,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Bénéficiaires du CI ventilés par SAE.",
       "dimensions": [
@@ -163,10 +163,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Bénéficiaires du CI ventilés par région.",
       "dimensions": [
@@ -201,7 +201,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",
@@ -230,10 +230,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2022-2024",
       "description": "Entreprises bénéficiaires du CI ventilées par taille d'entreprise.",
       "dimensions": [
@@ -268,10 +268,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2022-2024",
       "description": "Entreprises bénéficiaires du CI ventilées par SAE.",
       "dimensions": [
@@ -306,10 +306,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2022-2024",
       "description": "Entreprises bénéficiaires du CI ventilées par région.",
       "dimensions": [

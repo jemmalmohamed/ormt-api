@@ -21,7 +21,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "MESRSI",
             "reglecalcul": "",
             "periode": "2016-2023",
@@ -58,7 +58,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "MESRSI",
             "reglecalcul": "",
             "periode": "2016-2023",
@@ -95,7 +95,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "MESRSI",
             "reglecalcul": "",
             "periode": "2016-2023",
@@ -132,7 +132,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "MESRSI",
             "reglecalcul": "",
             "periode": "2016-2023",
@@ -169,7 +169,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "MESRSI",
             "reglecalcul": "",
             "periode": "2016-2023",
@@ -206,7 +206,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "MESRSI",
             "reglecalcul": "",
             "periode": "2016-2023",
@@ -243,7 +243,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "MESRSI",
             "reglecalcul": "",
             "periode": "2016-2023",
@@ -280,7 +280,7 @@
                 }
             ],
             "actif": true,
-            "typetb": "Grand Public / Décisionnel",
+            "typeTb": "décisionnel / grand public",
             "source": "MESRSI",
             "reglecalcul": "",
             "periode": "2016-2023",

@@ -20,7 +20,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",
@@ -49,7 +49,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",
@@ -78,10 +78,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Porteurs de projet accompagnés ventilés par genre.",
       "dimensions": [
@@ -116,10 +116,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Porteurs de projet accompagnés ventilés par âge.",
       "dimensions": [
@@ -154,10 +154,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Porteurs de projet accompagnés ventilés par région.",
       "dimensions": [
@@ -192,7 +192,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",
@@ -221,10 +221,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Entreprises crées ventilées par genre.",
       "dimensions": [
@@ -259,10 +259,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Entreprises crées ventilées par région.",
       "dimensions": [
@@ -297,7 +297,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
       "unite": "",
@@ -326,10 +326,10 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "pourcentage",
+      "unite": "%",
       "periode": "2019-2024",
       "description": "Emplois crées ventilés par région.",
       "dimensions": [

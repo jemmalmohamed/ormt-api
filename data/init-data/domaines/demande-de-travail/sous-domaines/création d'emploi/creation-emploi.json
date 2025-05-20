@@ -21,7 +21,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
       "unite": "milliers",
@@ -61,7 +61,7 @@
       "description": "création d'emploi par diplôme",
       "categorie": "emploi",
       "abreviation": "",
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "roleAcces": [
         {
@@ -115,7 +115,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
       "unite": "milliers",
@@ -162,7 +162,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
       "unite": "milliers",
@@ -209,7 +209,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
       "unite": "milliers",
@@ -256,7 +256,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
       "unite": "milliers",
@@ -303,7 +303,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
       "unite": "milliers",
@@ -350,7 +350,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
       "unite": "milliers",
@@ -377,8 +377,8 @@
       ]
     },
     {
-      "nom": "création d'emploi salariés par secteur d'activité- cnss",
-      "description": "création d'emploi salariés par secteur d'activité- cnss",
+      "nom": "création d'emploi salariés par secteur d'activité",
+      "description": "création d'emploi salariés par secteur d'activité - cnss",
       "categorie": "emploi",
       "abreviation": "",
       "roleAcces": [
@@ -388,15 +388,15 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "cnss",
       "reglecalcul": "",
       "unite": "milliers",
       "periode": "2019-2023",
       "dimensions": [
         {
-          "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "nom": "secteur_activite_cnss",
+          "libelle": "secteur d'activité cnss",
           "type": "texte",
           "association": {
             "principale": true,
@@ -435,7 +435,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel / grand public",
+      "typeTb": "décisionnel / grand public",
       "source": "cnss",
       "reglecalcul": "",
       "unite": "milliers",
@@ -482,7 +482,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "cnss",
       "reglecalcul": "",
       "unite": "milliers",
@@ -520,7 +520,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "cnss",
       "reglecalcul": "",
       "unite": "milliers",
@@ -567,7 +567,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "cnss",
       "reglecalcul": "",
       "unite": "milliers",
@@ -614,7 +614,7 @@
         }
       ],
       "actif": true,
-      "typetb": "décisionnel",
+      "typeTb": "décisionnel",
       "source": "hcp-cnss",
       "reglecalcul": "et-s-idp",
       "unite": "milliers",

@@ -24,10 +24,14 @@ import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.modules.chiffres.dtos.request.ChiffreCleRequestDto;
 import ma.org.ormt.modules.chiffres.models.ChiffreCle;
 import ma.org.ormt.modules.chiffres.services.ChiffreCleService;
+import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.models.IndicateurDimension;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @Log4j2
 @Component
-@Order(4)
+@Order(5)
 @RequiredArgsConstructor
 public class ChiffreCleSeeder implements CommandLineRunner {
 
@@ -38,6 +42,9 @@ public class ChiffreCleSeeder implements CommandLineRunner {
     private String dataExternalPath;
 
     private final ChiffreCleService chiffreCleService;
+
+    private final IndicateurService indicateurService;
+
     private final ObjectMapper objectMapper;
 
     private static final String CHIFFRE_CLE_JSON_FILE = "chiffre_cle.json";
@@ -72,9 +79,78 @@ public class ChiffreCleSeeder implements CommandLineRunner {
             }
 
             createChiffreClesFromJsonFile(jsonFile, initDataPath);
+
+            createChiffreCleFromIndicateurDonnee();
+
             log.info("ChiffreCle data seeding completed successfully.");
         } catch (Exception e) {
             log.error("Error during chiffreCle data seeding: {}", e.getMessage(), e);
+        }
+    }
+
+    @Transactional
+    private void createChiffreCleFromIndicateurDonnee() {
+
+        Indicateur indicateur = indicateurService
+                .findByNomWithDonnees("Nombre d'offre d'emploi recueillies")
+                .orElse(null);
+        if (indicateur == null) {
+            log.warn("Indicateur not found: {}", "Nombre d'offre d'emploi recueillies");
+            return;
+        }
+
+        // Find the temporal dimension for this indicateur
+        IndicateurDimension temporelleIndDim = indicateur.getIndicateurDimensions().stream()
+                .filter(idim -> Boolean.TRUE.equals(idim.getTemporelle()))
+                .findFirst()
+                .orElse(null);
+        if (temporelleIndDim == null) {
+            log.warn("No temporal dimension found for Indicateur: {}", indicateur.getNom());
+            return;
+        }
+        Long temporelleDimensionId = temporelleIndDim.getDimension().getId();
+        // For each DonneeIndicateur, get the temporal value (e.g., year)
+        DonneeIndicateur latestDonnee = indicateur.getDonnees().stream()
+                .filter(donnee -> donnee.getValeurDimensions() != null)
+                .filter(donnee -> donnee.getValeurDimensions().stream()
+                        .anyMatch(vd -> vd.getDimension() != null
+                                && vd.getDimension().getId().equals(temporelleDimensionId)))
+                .max((d1, d2) -> {
+                    String v1 = d1.getValeurDimensions().stream()
+                            .filter(vd -> vd.getDimension() != null
+                                    && vd.getDimension().getId().equals(temporelleDimensionId))
+                            .map(vd -> vd.getValeur())
+                            .findFirst().orElse("");
+                    String v2 = d2.getValeurDimensions().stream()
+                            .filter(vd -> vd.getDimension() != null
+                                    && vd.getDimension().getId().equals(temporelleDimensionId))
+                            .map(vd -> vd.getValeur())
+                            .findFirst().orElse("");
+                    // Try to compare as integer (e.g., year), fallback to string
+                    try {
+                        return Integer.compare(Integer.parseInt(v1), Integer.parseInt(v2));
+                    } catch (NumberFormatException e) {
+                        return v1.compareTo(v2);
+                    }
+                })
+                .orElse(null);
+        if (latestDonnee == null) {
+            log.warn("No DonneeIndicateur with temporal value found for Indicateur: {}", indicateur.getNom());
+            return;
+        }
+        // Create ChiffreCle from latestDonnee
+        ChiffreCleRequestDto requestDto = new ChiffreCleRequestDto();
+        requestDto.setLibelle(indicateur.getNom());
+        requestDto.setDescription(indicateur.getDescription());
+        requestDto.setValeur(latestDonnee.getValeur());
+        requestDto.setUnite(indicateur.getUnite());
+        requestDto.setActif(Boolean.TRUE);
+        requestDto.setDonneeIndicateurId(latestDonnee.getId());
+        try {
+            chiffreCleService.create(requestDto);
+            log.info("Created chiffreCle from DonneeIndicateur: {}", requestDto.getLibelle());
+        } catch (Exception e) {
+            log.error("Error creating chiffreCle from DonneeIndicateur: {}", e.getMessage());
         }
     }
 
