@@ -1,4 +1,4 @@
-package ma.org.ormt.core.utilities;
+package ma.org.ormt.core.utilities.files;
 
 import java.io.File;
 import java.io.FileInputStream;

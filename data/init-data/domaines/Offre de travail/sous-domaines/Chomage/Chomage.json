@@ -22,7 +22,7 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "unite": "milliers",
             "reglecalcul": "",
             "periode": "2019-2023",
@@ -60,7 +60,7 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
             "unite": "milliers",
             "periode": "2019-2023",
@@ -107,7 +107,7 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
             "unite": "milliers",
             "periode": "2019-2023",
@@ -154,7 +154,7 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
             "unite": "milliers",
             "periode": "2019-2023",
@@ -192,7 +192,7 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "unite": "milliers",
             "reglecalcul": "",
             "periode": "2019-2023",
@@ -230,7 +230,7 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
             "periode": "2019-2023",
             "unite": "milliers",
@@ -268,7 +268,7 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
             "unite": "milliers",
             "periode": "2019-2023",
@@ -294,8 +294,8 @@
             ]
         },
         {
-            "nom": "Taux de chômage selon le milieu de résidence (en %)",
-            "description": "Taux de chômage selon le milieu de résidence (en %)",
+            "nom": "Taux de chômage selon le milieu de résidence",
+            "description": "Taux de chômage selon le milieu de résidence",
             "categorie": "Chomage",
             "abreviation": "",
             "roleAcces": [
@@ -306,8 +306,9 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
+            "unite": "%",
             "periode": "2019-2023",
             "dimensions": [
                 {
@@ -331,8 +332,8 @@
             ]
         },
         {
-            "nom": "Taux de chômage par région et genre (en %)",
-            "description": "Taux de chômage par région et genre (en %)",
+            "nom": "Taux de chômage par région et genre",
+            "description": "Taux de chômage par région et genre",
             "categorie": "Chomage",
             "abreviation": "",
             "roleAcces": [
@@ -343,8 +344,9 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
+            "unite": "%",
             "periode": "2019-2023",
             "dimensions": [
                 {
@@ -377,8 +379,8 @@
             ]
         },
         {
-            "nom": "Taux de chômage par région et milieu de résidence (en %)",
-            "description": "Taux de chômage par région et milieu de résidence (en %)",
+            "nom": "Taux de chômage par région et milieu de résidence",
+            "description": "Taux de chômage par région et milieu de résidence",
             "categorie": "Chomage",
             "abreviation": "",
             "roleAcces": [
@@ -389,7 +391,8 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
+            "unite": "%",
             "reglecalcul": "",
             "periode": "2019-2023",
             "dimensions": [
@@ -423,8 +426,8 @@
             ]
         },
         {
-            "nom": "Taux de chômage selon le groupe d’âge (en %)",
-            "description": "Taux de chômage selon le groupe d’âge (en %)",
+            "nom": "Taux de chômage selon le groupe d’âge",
+            "description": "Taux de chômage selon le groupe d’âge",
             "categorie": "Chomage",
             "abreviation": "",
             "roleAcces": [
@@ -435,8 +438,9 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
+            "unite": "%",
             "periode": "2019-2023",
             "dimensions": [
                 {
@@ -460,8 +464,8 @@
             ]
         },
         {
-            "nom": "Taux de chômage selon le diplôme (en %)",
-            "description": "Taux de chômage selon le diplôme (en %)",
+            "nom": "Taux de chômage selon le diplôme",
+            "description": "Taux de chômage selon le diplôme",
             "categorie": "Chomage",
             "abreviation": "",
             "roleAcces": [
@@ -472,9 +476,10 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
             "periode": "2019-2023",
+            "unite": "%",
             "dimensions": [
                 {
                     "nom": "diplome",
@@ -497,8 +502,8 @@
             ]
         },
         {
-            "nom": "Taux de chômage selon le genre (en %)",
-            "description": "Taux de chômage selon le genre (en %)",
+            "nom": "Taux de chômage selon le genre",
+            "description": "Taux de chômage selon le genre",
             "categorie": "Chomage",
             "abreviation": "",
             "roleAcces": [
@@ -509,8 +514,9 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
+            "unite": "%",
             "periode": "2019-2023",
             "dimensions": [
                 {

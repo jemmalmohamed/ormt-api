@@ -670,7 +670,7 @@
       "description": "Données sur l'emploi informel dans chaque secteur économique",
       "dimensions": [
         {
-          "nom": "secteur_activite",
+          "nom": "secteur_activite_hcp",
           "libelle": "secteur d'activité_hcp",
           "type": "texte",
           "association": {
@@ -708,7 +708,7 @@
       "description": "Répartition des salariés du secteur public par secteur d'activité",
       "dimensions": [
         {
-          "nom": "secteur_activite",
+          "nom": "secteur_activite_hcp",
           "libelle": "secteur d'activité_hcp",
           "type": "texte",
           "association": {

@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.persistence.EntityNotFoundException;
 import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
@@ -17,6 +18,7 @@ import ma.org.ormt.core.commun.rest.queries.QueryParams;
 import ma.org.ormt.core.minio.MinioService;
 import ma.org.ormt.core.utilities.EntityInspector;
 import ma.org.ormt.core.utilities.PaginationUtils;
+import ma.org.ormt.core.utilities.files.ImageUtils;
 import ma.org.ormt.core.validators.ObjectsValidator;
 import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
@@ -119,8 +121,15 @@ public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements Espace
     public Espace create(EspaceRequestDto requestDto) throws Exception {
 
         validator.validate(requestDto);
+
         Espace espaceToCreate = espaceRequestMapper.mapToEntity(requestDto);
-        String imageFileName = minioService.uploadFile(requestDto.getImageFile());
+        MultipartFile optimizedImage = requestDto.getImageFile();
+        if (optimizedImage != null && !optimizedImage.isEmpty()) {
+            optimizedImage = ImageUtils.optimizeImageWithConverter(
+                    optimizedImage, 1024, 1024, 0.8);
+        }
+
+        String imageFileName = minioService.uploadFile(optimizedImage);
         espaceToCreate.setImageUrl(imageFileName); // Store just the filename
         return espaceRepository.save(espaceToCreate);
 
@@ -147,7 +156,9 @@ public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements Espace
     private void handleImageUpdate(Espace espace, EspaceRequestDto dto) throws Exception {
         if (dto.getImageFile() != null && !dto.getImageFile().isEmpty()) {
 
-            String imageFileName = minioService.uploadFile(dto.getImageFile());
+            MultipartFile optimizedImage = ImageUtils.optimizeImageWithConverter(
+                    dto.getImageFile(), 1024, 1024, 0.8);
+            String imageFileName = minioService.uploadFile(optimizedImage);
             espace.setImageUrl(imageFileName);
 
         }

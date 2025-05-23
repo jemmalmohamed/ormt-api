@@ -48,7 +48,7 @@
             ]
         },
         {
-            "nom": "taux de croissance du pib en volume (%)",
+            "nom": "taux de croissance du pib en volume",
             "categorie": "macroéconomie",
             "abreviation": "",
             "roleAcces": [

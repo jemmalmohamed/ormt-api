@@ -133,8 +133,8 @@
             ]
         },
         {
-            "nom": "taux de vulnérabilité à la pauvreté par région (en %)",
-            "description": "taux de vulnérabilité à la pauvreté par région (en %)",
+            "nom": "taux de vulnérabilité à la pauvreté par région",
+            "description": "taux de vulnérabilité à la pauvreté par région",
             "categorie": "population et conditions de vie",
             "abreviation": "",
             "roleAcces": [

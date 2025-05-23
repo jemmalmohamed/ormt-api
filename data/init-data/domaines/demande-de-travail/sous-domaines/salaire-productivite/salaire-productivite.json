@@ -408,8 +408,8 @@
       ]
     },
     {
-      "nom": "variation de la masse salariale en %",
-      "description": "variation de la masse salariale en %",
+      "nom": "variation de la masse salariale",
+      "description": "variation de la masse salariale",
       "categorie": "économie",
       "abreviation": "",
       "typeTb": "grand public",

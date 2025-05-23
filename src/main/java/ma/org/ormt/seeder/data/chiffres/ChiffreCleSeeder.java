@@ -31,7 +31,7 @@ import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.Indicateur
 
 @Log4j2
 @Component
-@Order(5)
+@Order(6)
 @RequiredArgsConstructor
 public class ChiffreCleSeeder implements CommandLineRunner {
 

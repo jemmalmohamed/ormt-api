@@ -22,7 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import ma.org.ormt.core.utilities.FileToMultipartFileConverter;
+import ma.org.ormt.core.utilities.files.FileToMultipartFileConverter;
 import ma.org.ormt.modules.partenaires.partenaire.dtos.request.PartenaireRequestDto;
 import ma.org.ormt.modules.partenaires.partenaire.models.Partenaire;
 import ma.org.ormt.modules.partenaires.partenaire.services.PartenaireService;

@@ -1,5 +1,5 @@
 {
-    "indicateur": "Taux de chômage selon le groupe d’âge (en %)",
+    "indicateur": "Taux de chômage selon le groupe d’âge",
     "data": [
         {
             "groupe_age": "15-24 ans",

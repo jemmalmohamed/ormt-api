@@ -22,7 +22,7 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
             "periode": "2019-2024",
             "dimensions": [
@@ -77,7 +77,7 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
             "periode": "2019-2024",
             "dimensions": [
@@ -132,7 +132,7 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
             "periode": "2019-2024",
             "dimensions": [
@@ -187,7 +187,7 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
             "periode": "2019-2024",
             "dimensions": [
@@ -233,7 +233,7 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
             "periode": "2019-2025",
             "dimensions": [
@@ -267,8 +267,8 @@
             ]
         },
         {
-            "nom": "Taux d’activité selon le genre et le milieu de résidence (en %)",
-            "description": "Taux d’activité selon le genre et le milieu de résidence (en %)",
+            "nom": "Taux d’activité selon le genre et le milieu de résidence",
+            "description": "Taux d’activité selon le genre et le milieu de résidence",
             "categorie": "Activité",
             "abreviation": "",
             "roleAcces": [
@@ -279,8 +279,9 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
+            "unite": "%",
             "periode": "2019-2024",
             "dimensions": [
                 {
@@ -322,8 +323,8 @@
             ]
         },
         {
-            "nom": "Taux d’activité selon le genre (en %)",
-            "description": "Taux d’activité selon le genre (en %)",
+            "nom": "Taux d’activité selon le genre",
+            "description": "Taux d’activité selon le genre",
             "categorie": "Activité",
             "abreviation": "",
             "roleAcces": [
@@ -334,8 +335,9 @@
             ],
             "actif": true,
             "typeTb": "décisionnel / grand public",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
+            "unite": "%",
             "periode": "2019-2024",
             "dimensions": [
                 {
@@ -380,7 +382,7 @@
             ],
             "actif": true,
             "typeTb": "Décisionnel",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
             "periode": "2019-2024",
             "dimensions": [
@@ -426,7 +428,7 @@
             ],
             "actif": true,
             "typeTb": "Décisionnel",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
             "periode": "2019-2024",
             "dimensions": [
@@ -460,8 +462,8 @@
             ]
         },
         {
-            "nom": "Taux d’activité selon le diplôme et le milieu de résidence (en %)",
-            "description": "Taux d’activité selon le diplôme et le milieu de résidence (en %)",
+            "nom": "Taux d’activité selon le diplôme et le milieu de résidence",
+            "description": "Taux d’activité selon le diplôme et le milieu de résidence",
             "categorie": "Activité",
             "abreviation": "",
             "roleAcces": [
@@ -472,7 +474,8 @@
             ],
             "actif": true,
             "typeTb": "Décisionnel",
-            "source": "HCP",
+            "source": "hcp",
+            "unite": "%",
             "reglecalcul": "",
             "periode": "2019-2024",
             "dimensions": [
@@ -506,8 +509,8 @@
             ]
         },
         {
-            "nom": "Taux d’activité selon le diplôme et le genre (en %)",
-            "description": "Taux d’activité selon le diplôme et le genre (en %)",
+            "nom": "Taux d’activité selon le diplôme et le genre",
+            "description": "Taux d’activité selon le diplôme et le genre",
             "categorie": "Activité",
             "abreviation": "",
             "roleAcces": [
@@ -518,9 +521,10 @@
             ],
             "actif": true,
             "typeTb": "Décisionnel",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
             "periode": "2019-2024",
+            "unite": "%",
             "dimensions": [
                 {
                     "nom": "diplome",
@@ -552,8 +556,8 @@
             ]
         },
         {
-            "nom": "Taux d’activité selon le milieu de résidence (en %)",
-            "description": "Taux d’activité selon le milieu de résidence (en %)",
+            "nom": "Taux d’activité selon le milieu de résidence",
+            "description": "Taux d’activité selon le milieu de résidence",
             "categorie": "Activité",
             "abreviation": "",
             "roleAcces": [
@@ -564,7 +568,7 @@
             ],
             "actif": true,
             "typeTb": "Décisionnel",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
             "unite": "%",
             "periode": "2019-2024",
@@ -590,8 +594,8 @@
             ]
         },
         {
-            "nom": "Taux d’activité par région et le milieu de résidence (en %)",
-            "description": "Taux d’activité par région et le milieu de résidence (en %)",
+            "nom": "Taux d’activité par région et le milieu de résidence",
+            "description": "Taux d’activité par région et le milieu de résidence",
             "categorie": "Activité",
             "abreviation": "",
             "roleAcces": [
@@ -602,8 +606,9 @@
             ],
             "actif": true,
             "typeTb": "Décisionnel",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
+            "unite": "%",
             "periode": "2019-2024",
             "dimensions": [
                 {
@@ -636,8 +641,8 @@
             ]
         },
         {
-            "nom": "Taux d’activité par région et genre (en %)",
-            "description": "Taux d’activité par région et le genre (en %)",
+            "nom": "Taux d’activité par région et genre",
+            "description": "Taux d’activité par région et le genre",
             "categorie": "Activité",
             "abreviation": "",
             "roleAcces": [
@@ -648,8 +653,9 @@
             ],
             "actif": true,
             "typeTb": "Décisionnel",
-            "source": "HCP",
+            "source": "hcp",
             "reglecalcul": "",
+            "unite": "%",
             "periode": "2019-2024",
             "dimensions": [
                 {

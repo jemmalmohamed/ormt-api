@@ -21,7 +21,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import ma.org.ormt.core.utilities.FileToMultipartFileConverter;
+import ma.org.ormt.core.utilities.files.FileToMultipartFileConverter;
 import ma.org.ormt.modules.domaines.domaine.dtos.DomaineDto;
 import ma.org.ormt.modules.domaines.domaine.dtos.request.DomaineRequestDto;
 import ma.org.ormt.modules.domaines.domaine.models.Domaine;
@@ -224,10 +224,13 @@ public class DomaineSeeder implements CommandLineRunner {
                     createdSousDomaine.getNom(), createdSousDomaine.getId(), parentDomaine.getNom());
 
             // Process indicateurs if they exist in the subdomain data
-            if (sousDomaineData.getIndicateurs() != null && !sousDomaineData.getIndicateurs().isEmpty()) {
-                indicateurSeeder.processIndicateurs(sousDomaineData.getIndicateurs(), createdSousDomaine);
-            }
-            donneeIndicateurSeeder.createIndicateurDonnee(file);
+            // if (sousDomaineData.getIndicateurs() != null &&
+            // !sousDomaineData.getIndicateurs().isEmpty()) {
+            // indicateurSeeder.processIndicateurs(sousDomaineData.getIndicateurs(),
+            // createdSousDomaine);
+            // }
+
+            // donneeIndicateurSeeder.createIndicateurDonnee(file);
 
         } catch (Exception e) {
             log.error("Error processing subdomain file {}: {}", file.getName(), e.getMessage());

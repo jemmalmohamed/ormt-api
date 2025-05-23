@@ -19,8 +19,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import ma.org.ormt.core.utilities.FileToMultipartFileConverter;
-import ma.org.ormt.core.utilities.FileDataService;
+import ma.org.ormt.core.utilities.files.FileDataService;
+import ma.org.ormt.core.utilities.files.FileToMultipartFileConverter;
 import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
 import ma.org.ormt.modules.espaces.dtos.EspaceDto;
