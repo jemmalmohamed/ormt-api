@@ -224,13 +224,11 @@ public class DomaineSeeder implements CommandLineRunner {
                     createdSousDomaine.getNom(), createdSousDomaine.getId(), parentDomaine.getNom());
 
             // Process indicateurs if they exist in the subdomain data
-            // if (sousDomaineData.getIndicateurs() != null &&
-            // !sousDomaineData.getIndicateurs().isEmpty()) {
-            // indicateurSeeder.processIndicateurs(sousDomaineData.getIndicateurs(),
-            // createdSousDomaine);
-            // }
+            if (sousDomaineData.getIndicateurs() != null && !sousDomaineData.getIndicateurs().isEmpty()) {
+                indicateurSeeder.processIndicateurs(sousDomaineData.getIndicateurs(), createdSousDomaine);
+            }
 
-            // donneeIndicateurSeeder.createIndicateurDonnee(file);
+            donneeIndicateurSeeder.createIndicateurDonnee(file);
 
         } catch (Exception e) {
             log.error("Error processing subdomain file {}: {}", file.getName(), e.getMessage());

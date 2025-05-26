@@ -21,6 +21,8 @@ public interface KeycloakUserService {
 
     Optional<UserRepresentation> findUserByUserName(RealmResource realmResource, String userName);
 
+    public Optional<UserRepresentation> findUserById(RealmResource realmResource, String userId);
+
     void enableUser(RealmResource realmResource, String userName);
 
     void addClientRoleToUser(UserResource userResource, String clientId, RoleRepresentation roleRepresentation);

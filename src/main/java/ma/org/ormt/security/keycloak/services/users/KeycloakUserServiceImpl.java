@@ -32,6 +32,16 @@ public class KeycloakUserServiceImpl implements KeycloakUserService {
     }
 
     @Override
+    public Optional<UserRepresentation> findUserById(RealmResource realmResource, String userId) {
+        try {
+            UserRepresentation userRepresentation = realmResource.users().get(userId).toRepresentation();
+            return Optional.ofNullable(userRepresentation);
+        } catch (Exception e) {
+            return Optional.empty();
+        }
+    }
+
+    @Override
     public UserRepresentation createKeycloakUser(RealmResource realmResource, UserRepresentation userRepresentation) {
 
         try (Response response = realmResource.users().create(userRepresentation)) {

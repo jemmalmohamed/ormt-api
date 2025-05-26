@@ -43,12 +43,12 @@ import ma.org.ormt.security.keycloak.config.KeycloakConnectService;
 import ma.org.ormt.security.keycloak.services.realm.KeycloakRealmService;
 
 @RestController
-@RequestMapping(value = "/api/v1/users")
+@RequestMapping(value = "/api/v1/utilisateurs")
 @RequiredArgsConstructor
 @Tag(name = "User", description = "User API")
 public class UserCrudController extends BaseController<UserRepresentation> {
 
-        private static final String ENTITY_NAME = "user";
+        private static final String ENTITY_NAME = "utilisateur";
 
         @Value("${keycloak.realm}")
         private String realmName;

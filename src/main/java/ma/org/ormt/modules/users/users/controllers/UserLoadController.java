@@ -35,11 +35,11 @@ import ma.org.ormt.security.keycloak.services.realm.KeycloakRealmService;
 import ma.org.ormt.security.keycloak.services.users.KeycloakUserService;
 
 @RestController
-@RequestMapping("api/v1/users")
+@RequestMapping("api/v1/utilisateurs")
 @RequiredArgsConstructor
 public class UserLoadController extends BaseController<UserRepresentation> {
 
-        private static final String ENTITY_NAME = "users";
+        private static final String ENTITY_NAME = "utilisateurs";
 
         private final KeycloakUserService keycloakUserService;
         private final KeycloakConnectService keycloakConnectService;
@@ -111,9 +111,9 @@ public class UserLoadController extends BaseController<UserRepresentation> {
                                         + " not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
-        @GetMapping("/{username}")
+        @GetMapping("/{id}")
         @PreAuthorize("hasAuthority('user:read')")
-        public ResponseEntity<RestResponse<UserDetailsDto>> getUser(@PathVariable("username") String username) {
+        public ResponseEntity<RestResponse<UserDetailsDto>> getUser(@PathVariable("id") String id) {
                 try {
                         // Get Keycloak admin connection
                         Keycloak keycloak = keycloakConnectService.getKeyCloakAdminCli();
@@ -121,10 +121,10 @@ public class UserLoadController extends BaseController<UserRepresentation> {
                         RealmResource realmResource = keycloakRealmService.getRealmResource(keycloak,
                                         realmName);
 
-                        // Find user by username
-                        UserRepresentation user = keycloakUserService.findUserByUserName(realmResource, username)
+                        // Find user by id
+                        UserRepresentation user = keycloakUserService.findUserById(realmResource, id)
                                         .orElseThrow(() -> new EntityNotFoundException(
-                                                        "User with username " + username + " not found"));
+                                                        "User with id " + id + " not found"));
 
                         String clientUuid = realmResource.clients()
                                         .findByClientId(backendClientName)

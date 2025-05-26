@@ -1,9 +1,9 @@
 [
   {
     "username": "o.admin",
-    "firstName": "ormtAdmin",
-    "lastName": "ormtAdmin",
-    "email": "ormt@gmail.com",
+    "firstName": "mohamed",
+    "lastName": "jemmal",
+    "email": "jemmalmohamed@gmail.com",
     "emailVerified": true,
     "enabled": true,
     "password": "ormt",
@@ -13,8 +13,8 @@
   },
   {
     "username": "o.decision",
-    "firstName": "ormtDecideur",
-    "lastName": "ormtDecideur",
+    "firstName": "aomar",
+    "lastName": "ibourk",
     "email": "",
     "emailVerified": true,
     "password": "ormt",
@@ -25,8 +25,8 @@
   },
   {
     "username": "o.public",
-    "firstName": "ormtPublic",
-    "lastName": "ormtPublic",
+    "firstName": "abdessadik",
+    "lastName": "faouzi",
     "email": "",
     "emailVerified": true,
     "password": "ormt",
