@@ -26,7 +26,7 @@ import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import ma.org.ormt.core.commun.base.controller.BaseController;
 import ma.org.ormt.core.commun.rest.responses.RestResponse;
-import ma.org.ormt.security.keycloak.config.KeycloakConnectService;
+import ma.org.ormt.security.keycloak.services.KeycloakConnectService;
 import ma.org.ormt.security.keycloak.services.realm.KeycloakRealmService;
 import ma.org.ormt.security.keycloak.services.users.KeycloakUserService;
 import ma.org.ormt.security.users.users.dtos.UserDto;

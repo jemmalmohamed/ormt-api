@@ -12,7 +12,7 @@ import org.keycloak.representations.idm.RoleRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
 import org.springframework.stereotype.Service;
 
-import ma.org.ormt.security.keycloak.representation.UserJsonRepresentation;
+import ma.org.ormt.security.keycloak.dto.UserJsonRepresentation;
 
 @Service
 public interface KeycloakUserService {

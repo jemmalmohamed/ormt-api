@@ -11,9 +11,9 @@ import org.mapstruct.MappingTarget;
 import ma.org.ormt.core.commun.base.mapper.BaseDtoMapper;
 import ma.org.ormt.modules.espaces.dtos.EspaceDto;
 import ma.org.ormt.modules.espaces.models.Espace;
-import ma.org.ormt.security.users.roleacces.dtos.summary.RoleAccesSummaryDto;
-import ma.org.ormt.security.users.roleacces.models.RoleAcces;
-import ma.org.ormt.security.users.roleacces.services.RoleAccesService;
+import ma.org.ormt.modules.roleacces.dtos.summary.RoleAccesSummaryDto;
+import ma.org.ormt.modules.roleacces.models.RoleAcces;
+import ma.org.ormt.modules.roleacces.services.RoleAccesService;
 
 @Mapper
 public interface EspaceDetailsDtoMapper extends BaseDtoMapper<Espace, EspaceDetailsDto> {

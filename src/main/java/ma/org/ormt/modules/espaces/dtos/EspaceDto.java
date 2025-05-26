@@ -11,8 +11,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.Dto;
+import ma.org.ormt.modules.roleacces.dtos.summary.RoleAccesSummaryDto;
 import ma.org.ormt.security.users.AdminRoleFilter;
-import ma.org.ormt.security.users.roleacces.dtos.summary.RoleAccesSummaryDto;
 
 @Setter
 @Getter

@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.core.exceptions.handlers.KeycloakException;
 import ma.org.ormt.core.validators.ObjectsValidator;
-import ma.org.ormt.security.keycloak.config.KeycloakConnectService;
+import ma.org.ormt.security.keycloak.services.KeycloakConnectService;
 import ma.org.ormt.security.keycloak.services.realm.KeycloakRealmService;
 import ma.org.ormt.security.keycloak.services.roles.client.KeycloakClientRoleService;
 import ma.org.ormt.security.keycloak.services.users.KeycloakUserService;

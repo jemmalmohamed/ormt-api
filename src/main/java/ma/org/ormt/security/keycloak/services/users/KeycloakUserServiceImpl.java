@@ -20,7 +20,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.ws.rs.core.Response;
 import lombok.RequiredArgsConstructor;
 import ma.org.ormt.core.exceptions.handlers.KeycloakException;
-import ma.org.ormt.security.keycloak.representation.UserJsonRepresentation;
+import ma.org.ormt.security.keycloak.dto.UserJsonRepresentation;
 
 @Service
 @RequiredArgsConstructor

@@ -6,7 +6,7 @@ import org.keycloak.representations.idm.authorization.ScopePermissionRepresentat
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
-import ma.org.ormt.security.keycloak.config.KeycloakConnectService;
+import ma.org.ormt.security.keycloak.services.KeycloakConnectService;
 import ma.org.ormt.security.keycloak.services.realm.KeycloakRealmService;
 
 @Service

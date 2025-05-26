@@ -1,4 +1,4 @@
-package ma.org.ormt.security.oauth;
+package ma.org.ormt.security.core.config;
 
 import java.util.Arrays;
 
@@ -22,6 +22,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import ma.org.ormt.security.authentication.filters.PublicRoleAuthenticationFilter;
+import ma.org.ormt.security.oauth.converters.JwtAuthResourceConverter;
+import ma.org.ormt.security.oauth.providers.PublicRoleProvider;
 
 import java.io.IOException;
 

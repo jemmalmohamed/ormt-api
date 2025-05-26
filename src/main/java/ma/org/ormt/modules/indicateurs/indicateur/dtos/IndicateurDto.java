@@ -17,8 +17,8 @@ import ma.org.ormt.modules.domaines.sousdomaine.dtos.summary.SousDomaineSummaryD
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
 import ma.org.ormt.modules.indicateurs.indicateur.association.dtos.IndicateurDimensionDto;
 import ma.org.ormt.modules.indicateurs.source.dtos.summary.SourceSummaryDto;
+import ma.org.ormt.modules.roleacces.dtos.summary.RoleAccesSummaryDto;
 import ma.org.ormt.security.users.AdminRoleFilter;
-import ma.org.ormt.security.users.roleacces.dtos.summary.RoleAccesSummaryDto;
 
 @Setter
 @Getter

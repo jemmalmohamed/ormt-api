@@ -35,7 +35,7 @@ import ma.org.ormt.core.commun.rest.responses.RestResponse;
 import ma.org.ormt.core.exceptions.handlers.KeycloakException;
 import ma.org.ormt.core.validators.groups.OnCreate;
 import ma.org.ormt.core.validators.groups.OnUpdate;
-import ma.org.ormt.security.keycloak.config.KeycloakConnectService;
+import ma.org.ormt.security.keycloak.services.KeycloakConnectService;
 import ma.org.ormt.security.keycloak.services.realm.KeycloakRealmService;
 import ma.org.ormt.security.users.users.dtos.UserDto;
 import ma.org.ormt.security.users.users.dtos.UserDtoMapper;

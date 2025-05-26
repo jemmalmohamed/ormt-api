@@ -1,33 +1,31 @@
 package ma.org.ormt.security.keycloak.services.authorization.resource;
 
-import java.io.InputStream;
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.resource.ClientResource;
 import org.keycloak.admin.client.resource.ResourceResource;
 import org.keycloak.representations.idm.authorization.ResourceRepresentation;
 import org.keycloak.representations.idm.authorization.ScopeRepresentation;
 import org.springframework.stereotype.Service;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import lombok.RequiredArgsConstructor;
-import ma.org.ormt.security.keycloak.representation.ResourceJsonRepresentation;
+import ma.org.ormt.security.authorization.dto.ResourceDto;
+import ma.org.ormt.security.keycloak.services.KeycloakConnectService;
 
 @Service
 @RequiredArgsConstructor
 public class KeycloakResourceServiceImpl implements KeycloakResourceService {
 
-    private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
+    private final KeycloakConnectService keycloakService;
 
     @Override
     public boolean resourceExists(ClientResource clientResource, String resourceName) {
         try {
-            return !clientResource.authorization().resources().resources().stream()
-                    .filter(resource -> resource.getName().equals(resourceName)).findFirst().isEmpty();
+            return clientResource.authorization().resources().resources().stream()
+                    .filter(resource -> resource.getName().equals(resourceName)).findFirst().isPresent();
         } catch (Exception e) {
             return false;
         }
@@ -79,26 +77,6 @@ public class KeycloakResourceServiceImpl implements KeycloakResourceService {
             throw new IllegalStateException("Resource not found for deletion");
         }
 
-    }
-
-    @Override
-    public ScopeRepresentation createScope(ClientResource clientResource, ScopeRepresentation scopeRepresentation,
-            boolean suppress) {
-
-        clientResource.authorization().scopes().create(scopeRepresentation);
-        return scopeRepresentation;
-    }
-
-    @Override
-    public List<ResourceJsonRepresentation> getJsonResourceRepresentations(String resourceNameFile) {
-        try {
-            InputStream inputStream = getClass().getClassLoader()
-                    .getResourceAsStream("init-data/authentication/resources/" + resourceNameFile + ".json");
-            return OBJECT_MAPPER.readValue(inputStream, new TypeReference<List<ResourceJsonRepresentation>>() {
-            });
-        } catch (Exception e) {
-            return Collections.emptyList();
-        }
     }
 
 }
