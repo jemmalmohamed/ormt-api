@@ -27,7 +27,7 @@ import ma.org.ormt.modules.espaces.dtos.EspaceDto;
 import ma.org.ormt.modules.espaces.dtos.request.EspaceRequestDto;
 import ma.org.ormt.modules.espaces.models.Espace;
 import ma.org.ormt.modules.espaces.services.EspaceService;
-import ma.org.ormt.modules.users.roleacces.services.RoleAccesService;
+import ma.org.ormt.security.users.roleacces.services.RoleAccesService;
 
 @Log4j2
 @Component

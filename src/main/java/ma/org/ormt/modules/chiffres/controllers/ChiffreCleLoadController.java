@@ -30,7 +30,7 @@ import ma.org.ormt.modules.chiffres.dtos.details.ChiffreCleDetailsDto;
 import ma.org.ormt.modules.chiffres.dtos.details.ChiffreCleDetailsDtoMapper;
 import ma.org.ormt.modules.chiffres.models.ChiffreCle;
 import ma.org.ormt.modules.chiffres.services.ChiffreCleService;
-import ma.org.ormt.modules.users.roleacces.services.RoleAccesService;
+import ma.org.ormt.security.users.roleacces.services.RoleAccesService;
 
 @RestController
 @RequestMapping("api/v1/chiffrecles")
