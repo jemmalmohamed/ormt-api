@@ -37,7 +37,7 @@ import ma.org.ormt.modules.espaces.services.EspaceService;
 @Slf4j
 @Validated
 @RestController
-@RequestMapping("api/v1/admin/espaces")
+@RequestMapping("api/v1/espaces")
 @RequiredArgsConstructor
 public class EspaceLoadController extends BaseController<Espace> {
 
