@@ -59,7 +59,7 @@ public class PartenaireLoadController extends BaseController<Partenaire> {
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
-                QueryParams requestParams = createQueryParams(pageIndex, pageSize, sortField, direction, filters,
+                QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField, direction, filters,
                                 globalFilter);
 
                 Page<Partenaire> partenairePage = partenaireService.getEntityList(requestParams);

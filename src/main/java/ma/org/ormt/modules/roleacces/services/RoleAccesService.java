@@ -1,125 +1,65 @@
 package ma.org.ormt.modules.roleacces.services;
 
-import java.util.Collection;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Page;
 
-import jakarta.transaction.Transactional;
+import ma.org.ormt.core.commun.base.service.BaseService;
+import ma.org.ormt.core.commun.rest.queries.QueryParams;
+import ma.org.ormt.modules.roleacces.dtos.request.RoleAccesRequestDto;
 import ma.org.ormt.modules.roleacces.models.RoleAcces;
-import ma.org.ormt.modules.roleacces.repositories.RoleAccesRepository;
 
-@Service
-@Transactional
-public class RoleAccesService {
+public interface RoleAccesService extends BaseService<RoleAcces> {
 
-    @Autowired
-    private RoleAccesRepository roleAccesRepository;
+        Page<RoleAcces> getEntityList(QueryParams requestParams);
 
-    /**
-     * Gets the current user's role from security context
-     */
-    public String getCurrentUserRole() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication == null) {
-            return "role_public"; // Default role if no authentication
-        }
+        public Page<RoleAcces> getEntitiesByIds(List<Long> ids, QueryParams params);
 
-        Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
-        for (GrantedAuthority authority : authorities) {
-            String authorityName = authority.getAuthority();
-            // Assuming roles are prefixed with "ROLE_" in your system
-            if (authorityName.startsWith("ROLE_")) {
-                return authorityName.replace("ROLE_", "role_").toLowerCase();
-            }
-        }
+        RoleAcces create(RoleAccesRequestDto requestDto);
 
-        // Fallback to public role if no appropriate role found
-        return "role_public";
-    }
+        RoleAcces update(Long id, RoleAccesRequestDto roleAccRoleAccesRequestDto);
 
-    /**
-     * Vérifie si un rôle a accès à une ressource
-     */
-    public boolean hasAccess(String roleCode, String typeRessource, Long ressourceId, String niveauAcces) {
-        return roleAccesRepository.existsByRoleCodeAndTypeRessourceAndRessourceIdAndNiveauAcces(
-                roleCode, typeRessource, ressourceId, niveauAcces);
-    }
+        RoleAcces save(RoleAcces roleAccRoleAcces);
 
-    /**
-     * Retourne toutes les ressources accessibles pour un rôle
-     */
-    public List<Long> getAccessibleResources(String roleCode, String typeRessource, String niveauAcces) {
-        return roleAccesRepository.findRessourceIdsByRoleCodeAndTypeRessourceAndNiveauAcces(
-                roleCode, typeRessource, niveauAcces);
-    }
+        boolean existsById(Long id);
 
-    /**
-     * Retourne tous les acces d une source
-     */
-    public List<RoleAcces> getAccesByRessource(String typeRessource, Long ressourceId) {
-        return roleAccesRepository.findByTypeRessourceAndRessourceId(typeRessource, ressourceId);
-    }
+        public boolean hasAccessToResource(Long resourceId, String resourceName, String permission);
 
-    /**
-     * Ajoute un accès pour un rôle sur une ressource
-     */
-    public RoleAcces addAccess(String roleCode, String typeRessource, Long ressourceId, String niveauAcces,
-            String username) {
-        RoleAcces acces = new RoleAcces();
-        acces.setRoleCode(roleCode);
-        acces.setTypeRessource(typeRessource);
-        acces.setRessourceId(ressourceId);
-        acces.setNiveauAcces(niveauAcces);
+        /**
+         * Get accessible resource IDs for current user
+         */
+        public List<Long> getAccessibleResourceIdsForCurrentUser(String resourceType, String permission);
 
-        return roleAccesRepository.save(acces);
-    }
+        /**
+         * Vérifie si un rôle a accès à une ressource
+         */
+        public boolean hasAccess(String roleCode, String typeRessource, Long ressourceId, String niveauAcces);
 
-    /**
-     * Supprime un accès
-     */
-    public void removeAccess(String roleCode, String typeRessource, Long ressourceId) {
-        roleAccesRepository.deleteByRoleCodeAndTypeRessourceAndRessourceId(roleCode, typeRessource, ressourceId);
-    }
+        /**
+         * Retourne toutes les ressources accessibles pour un rôle
+         */
+        public List<Long> getAccessibleResourceIds(String roleCode, String typeRessource, String niveauAcces);
 
-    /**
-     * Gère les accès en cascade (ex: donner accès à un domaine et tous ses
-     * sous-domaines)
-     */
-    public void setHierarchicalAccess(String roleCode, String typeRessource, Long ressourceId,
-            String niveauAcces, boolean applyToChildren, String username) {
-        // Ajout de l'accès au niveau spécifié
-        addAccess(roleCode, typeRessource, ressourceId, niveauAcces, username);
+        /**
+         * Retourne tous les acces d une source
+         */
+        public List<RoleAcces> getAccesByRessource(String typeRessource, Long ressourceId);
 
-        // Si on doit appliquer aux enfants
-        if (applyToChildren) {
-            // if ("espace".equals(typeRessource)) {
-            // // Trouver tous les domaines de cet espace et leur donner accès
-            // List<Long> domaineIds = domaineRepository.findIdsByEspaceId(ressourceId);
-            // for (Long domaineId : domaineIds) {
-            // setHierarchicalAccess(roleCode, "domaine", domaineId, niveauAcces, true,
-            // username);
-            // }
-            // } else if ("domaine".equals(typeRessource)) {
-            // // Trouver tous les sous-domaines de ce domaine et leur donner accès
-            // List<Long> sousDomaineIds =
-            // sousDomaineRepository.findIdsByDomaineId(ressourceId);
-            // for (Long sousDomaineId : sousDomaineIds) {
-            // setHierarchicalAccess(roleCode, "sous_domaine", sousDomaineId, niveauAcces,
-            // true, username);
-            // }
-            // } else if ("sous_domaine".equals(typeRessource)) {
-            // // Trouver tous les indicateurs de ce sous-domaine et leur donner accès
-            // List<Long> indicateurIds =
-            // indicateurRepository.findIdsBySousDomaineId(ressourceId);
-            // for (Long indicateurId : indicateurIds) {
-            // addAccess(roleCode, "indicateur", indicateurId, niveauAcces, username);
-            // }
-            // }
-        }
-    }
+        /**
+         * Ajoute un accès pour un rôle sur une ressource
+         */
+        public RoleAcces addAccess(String roleCode, String typeRessource, Long ressourceId, String niveauAcces,
+                        String username);
+
+        /**
+         * Supprime un accès
+         */
+        public void removeAccess(String roleCode, String typeRessource, Long ressourceId);
+
+        /**
+         * Gère les accès en cascade (ex: donner accès à un domaine et tous ses
+         * sous-domaines)
+         */
+        public void setHierarchicalAccess(String roleCode, String typeRessource, Long ressourceId,
+                        String niveauAcces, boolean applyToChildren, String username);
 }

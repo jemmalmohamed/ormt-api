@@ -60,7 +60,7 @@ public class IndicateurLoadController extends BaseController<Indicateur> {
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
-                QueryParams requestParams = createQueryParams(pageIndex, pageSize, sortField, direction, filters,
+                QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField, direction, filters,
                                 globalFilter);
 
                 Page<Indicateur> indicateurPage = indicateurService.getEntityList(requestParams);

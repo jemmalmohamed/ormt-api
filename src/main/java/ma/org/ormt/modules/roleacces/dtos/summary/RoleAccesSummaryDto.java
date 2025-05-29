@@ -19,4 +19,8 @@ public class RoleAccesSummaryDto extends Dto {
 
     private String niveauAcces;
 
+    public String getRoleCode() {
+        return roleCode.split("_")[1];
+    }
+
 }

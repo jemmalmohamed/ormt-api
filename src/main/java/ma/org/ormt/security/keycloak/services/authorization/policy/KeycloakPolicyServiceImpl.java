@@ -19,10 +19,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import ma.org.ormt.security.keycloak.dto.request.KeycloakResourceRequestDto;
 import ma.org.ormt.security.keycloak.dto.request.KeycloakRoleRequestDto;
 import ma.org.ormt.security.keycloak.dto.request.KeycloakScopeRequestDto;
 import ma.org.ormt.security.keycloak.services.KeycloakConnectService;
 import ma.org.ormt.security.keycloak.services.realm.KeycloakRealmService;
+import ma.org.ormt.security.policy.dto.PolicyDto;
+import ma.org.ormt.security.policy.dto.PolicyRoleDto;
+import ma.org.ormt.security.policy.dto.RolePoliciesRequestDto;
 
 @Log4j2
 @Service
@@ -46,10 +50,12 @@ public class KeycloakPolicyServiceImpl implements KeycloakPolicyService {
 
     @Override
     public void createPolicy(PolicyRepresentation policy, String realmName, String client) {
+
         Keycloak keycloak = keycloakService.getKeyCloakAdminCli();
         ClientResource clientResource = keycloakRealmService
                 .getClientResource(keycloak, realmName, client)
                 .orElse(null);
+
         if (clientResource != null) {
             clientResource.authorization().policies().create(policy);
         }
@@ -79,15 +85,16 @@ public class KeycloakPolicyServiceImpl implements KeycloakPolicyService {
 
     @Override
     public List<PolicyRepresentation> mapPolicyRequestListToPolicyRepresentation(String realmName, String clientName,
-            List<KeycloakScopeRequestDto> scopes, String prefixName) {
+            KeycloakResourceRequestDto request) {
+
         List<PolicyRepresentation> policies = new ArrayList<>();
 
-        scopes.forEach(scope -> {
+        request.getScopes().forEach(scope -> {
             PolicyRepresentation policy = new PolicyRepresentation();
-            String policyName = prefixName + " " + scope.getName();
+            String policyName = request.getName() + " " + scope.getName();
             policy.setName(policyName);
             policy.setType("role");
-            policy.setDescription(policyName + " policy");
+            policy.setDescription(scope.getDisplayName() + " " + request.getDisplayName());
 
             Map<String, String> policyConfigMap = setupPolicyConfig(realmName,
                     clientName,
@@ -143,38 +150,87 @@ public class KeycloakPolicyServiceImpl implements KeycloakPolicyService {
     }
 
     @Override
-    public List<Map<String, Object>> getAllPolicies(ClientResource clientResource) {
-        List<Map<String, Object>> policies = new ArrayList<>();
+    public List<PolicyDto> getAllPolicies() {
+        Keycloak keycloak = keycloakService.getKeyCloakAdminCli();
+        try {
+            return keycloakRealmService.getClientResource(keycloak, realmName, backendClientName)
+                    .map(clientResource -> mapPolicyRepresentationsToPolicyDtos(getAllPolicies(clientResource)))
+                    .orElse(new ArrayList<>());
+        } finally {
+            keycloak.tokenManager().logout();
+            keycloak.close();
+        }
+    }
+
+    @Override
+    public List<PolicyDto> mapPolicyRepresentationsToPolicyDtos(List<PolicyRepresentation> policyRepresentations) {
+        List<PolicyDto> policyDtos = new ArrayList<>();
+
+        // Filter only for policies with type "role"
+        List<PolicyRepresentation> rolePolicies = policyRepresentations.stream()
+                .filter(policy -> "role".equals(policy.getType()))
+                .collect(Collectors.toList());
+
+        for (PolicyRepresentation policy : rolePolicies) {
+            PolicyDto dto = new PolicyDto();
+            dto.setId(policy.getId());
+            dto.setName(policy.getName());
+            dto.setDescription(policy.getDescription());
+            dto.setType(policy.getType());
+
+            // Process roles using the approach from getAllPoliciesO
+            List<PolicyRoleDto> roleDtos = new ArrayList<>();
+
+            if (policy.getConfig() != null) {
+                roleDtos = extractRoleReferences(policy.getConfig());
+
+            }
+
+            dto.setRoles(roleDtos);
+            policyDtos.add(dto);
+        }
+
+        return policyDtos;
+    }
+
+    private List<PolicyRoleDto> extractRoleReferences(Map<String, String> roleConfig) {
         ObjectMapper objectMapper = new ObjectMapper();
-        List<?> allPolicies = clientResource.authorization().policies().policies();
-        for (Object policy : allPolicies) {
-            if (policy instanceof org.keycloak.representations.idm.authorization.PolicyRepresentation pol) {
-                if ("role".equals(pol.getType())) {
-                    Map<String, Object> map = objectMapper.convertValue(pol,
-                            new TypeReference<Map<String, Object>>() {
-                            });
-                    // Parse config.roles JSON if present
-                    Object configObj = map.get("config");
-                    if (configObj instanceof Map) {
-                        Map<String, Object> config = (Map<String, Object>) configObj;
-                        Object rolesObj = config.get("roles");
-                        if (rolesObj instanceof String) {
-                            String rolesJson = (String) rolesObj;
-                            try {
-                                List<Map<String, Object>> rolesList = objectMapper.readValue(rolesJson,
-                                        new TypeReference<List<Map<String, Object>>>() {
-                                        });
-                                map.put("roleReferences", rolesList);
-                            } catch (Exception e) {
-                                map.put("roleReferences", new ArrayList<>());
-                            }
-                        }
+
+        List<PolicyRoleDto> roleDtos = new ArrayList<>();
+
+        Object rolesObj = roleConfig.get("roles");
+        if (rolesObj instanceof String) {
+            String rolesJson = (String) rolesObj;
+            try {
+                List<Map<String, Object>> rolesList = objectMapper.readValue(rolesJson,
+                        new TypeReference<List<Map<String, Object>>>() {
+                        });
+
+                // Convert each role map to PolicyRoleDto
+                for (Map<String, Object> role : rolesList) {
+                    String id = (String) role.get("id");
+                    Boolean required = false;
+                    if (role.containsKey("required")) {
+                        required = (Boolean) role.get("required");
                     }
-                    policies.add(map);
+
+                    if (id != null) {
+                        roleDtos.add(new PolicyRoleDto(id, required));
+                    }
                 }
+
+            } catch (Exception e) {
+                // Just create empty list - no error logging
             }
         }
-        return policies;
+        return roleDtos;
+
+    }
+
+    @Override
+    public List<PolicyRepresentation> getAllPolicies(ClientResource clientResource) {
+        return clientResource.authorization().policies().policies();
+
     }
 
     /**
@@ -215,29 +271,97 @@ public class KeycloakPolicyServiceImpl implements KeycloakPolicyService {
     /**
      * Assign a role to multiple policies (role policy type) in Keycloak.
      * 
-     * @param policyIds the list of policy IDs
-     * @param roleName  the name of the role to assign
+     * @param policiesIds the list of policy IDs
+     * @param roleName    the name of the role to assign
      * @return true if all assignments succeed, false otherwise
      */
-    public boolean assignRoleToPolicies(List<String> policyIds, String roleName) {
+    public boolean assignRoleToPolicies(RolePoliciesRequestDto requestDto) {
+        List<String> policiesIds = requestDto.getPoliciesIds();
+        String roleName = requestDto.getRoleName();
         boolean allSuccess = true;
-        for (String policyId : policyIds) {
-            boolean result = assignRoleToPolicy(policyId, roleName);
-            if (!result) {
-                allSuccess = false;
+        Keycloak keycloak = keycloakService.getKeyCloakAdminCli();
+        try {
+            Optional<ClientResource> clientResourceOpt = keycloakRealmService.getClientResource(keycloak, realmName,
+                    backendClientName);
+            if (clientResourceOpt.isEmpty()) {
+                log.error("Client resource not found");
+                return false;
             }
+            ClientResource clientResource = clientResourceOpt.get();
+            List<PolicyRepresentation> allPolicies = clientResource.authorization().policies().policies();
+
+            if (policiesIds == null || policiesIds.isEmpty()) {
+                // Detach role from all policies
+                for (PolicyRepresentation policy : allPolicies) {
+                    if ("role".equals(policy.getType())) {
+                        boolean result = detachRoleFromPolicy(policy.getId(), roleName);
+                        if (!result)
+                            allSuccess = false;
+                    }
+                }
+                return allSuccess;
+            }
+
+            // For each policy, if it exists in policiesIds, assign; if not, detach
+            for (PolicyRepresentation policy : allPolicies) {
+                if ("role".equals(policy.getType())) {
+                    if (policiesIds.contains(policy.getId())) {
+                        boolean result = assignRoleToPolicy(policy.getId(), roleName);
+                        if (!result)
+                            allSuccess = false;
+                    } else {
+                        boolean result = detachRoleFromPolicy(policy.getId(), roleName);
+                        if (!result)
+                            allSuccess = false;
+                    }
+                }
+            }
+            return allSuccess;
+        } finally {
+            keycloak.tokenManager().logout();
+            keycloak.close();
         }
-        return allSuccess;
     }
 
-    @Override
-    public boolean assignRoleToPolicy(String policyId, String roleName) {
+    private boolean detachRoleFromPolicy(String policyId, String roleName) {
         Keycloak keycloak = keycloakService.getKeyCloakAdminCli();
         boolean result = false;
         try {
             result = keycloakRealmService.getClientResource(keycloak, realmName, backendClientName)
-                    .map(clientResource -> assignRoleToPolicy(clientResource, policyId, roleName))
-                    .orElse(false);
+                    .map(clientResource -> {
+                        try {
+                            var policy = clientResource.authorization().policies().policy(policyId).toRepresentation();
+                            if (policy == null || !"role".equals(policy.getType())) {
+                                log.error("Policy '{}' is null or not of type 'role' for detach", policyId);
+                                return false;
+                            }
+                            Map<String, String> config = policy.getConfig();
+                            String rolesJson = config.getOrDefault("roles", "[]");
+                            ObjectMapper objectMapper = new ObjectMapper();
+                            List<Map<String, Object>> rolesList = objectMapper.readValue(rolesJson,
+                                    new TypeReference<List<Map<String, Object>>>() {
+                                    });
+                            // Fetch the role
+                            RoleRepresentation roleRep = clientResource.roles().get(roleName).toRepresentation();
+                            if (roleRep == null) {
+                                log.error("Role '{}' not found for detach", roleName);
+                                return false;
+                            }
+                            // Remove role by ID
+                            boolean removed = rolesList.removeIf(r -> roleRep.getId().equals(r.get("id")));
+                            if (!removed) {
+                                log.info("Role '{}' not present in policy '{}', nothing to detach.", roleName,
+                                        policyId);
+                                return true;
+                            }
+                            String updatedRolesJson = objectMapper.writeValueAsString(rolesList);
+                            config.put("roles", updatedRolesJson);
+                            return assignRoleToPolicyConfig(policyId, config);
+                        } catch (Exception e) {
+                            log.error("Error detaching role from policy '{}': {}", policyId, e.getMessage(), e);
+                            return false;
+                        }
+                    }).orElse(false);
         } finally {
             keycloak.tokenManager().logout();
             keycloak.close();
@@ -245,9 +369,55 @@ public class KeycloakPolicyServiceImpl implements KeycloakPolicyService {
         return result;
     }
 
-    private boolean assignRoleToPolicy(ClientResource clientResource, String policyId, String roleName) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'assignRoleToPolicy'");
+    private boolean assignRoleToPolicy(String policyId, String roleName) {
+        Keycloak keycloak = keycloakService.getKeyCloakAdminCli();
+        boolean result = false;
+        try {
+            result = keycloakRealmService.getClientResource(keycloak, realmName, backendClientName)
+                    .map(clientResource -> {
+                        try {
+                            var policy = clientResource.authorization().policies().policy(policyId).toRepresentation();
+                            if (policy == null || !"role".equals(policy.getType())) {
+                                log.error("Policy '{}' is null or not of type 'role'", policyId);
+                                return false;
+                            }
+                            Map<String, String> config = policy.getConfig();
+                            String rolesJson = config.getOrDefault("roles", "[]");
+                            ObjectMapper objectMapper = new ObjectMapper();
+                            List<Map<String, Object>> rolesList = objectMapper.readValue(rolesJson,
+                                    new com.fasterxml.jackson.core.type.TypeReference<List<Map<String, Object>>>() {
+                                    });
+                            // Fetch the role
+                            RoleRepresentation roleRep = clientResource.roles().get(roleName).toRepresentation();
+                            if (roleRep == null) {
+                                log.error("Role '{}' not found", roleName);
+                                return false;
+                            }
+                            // Check if already present by ID
+                            boolean alreadyPresent = rolesList.stream()
+                                    .anyMatch(r -> roleRep.getId().equals(r.get("id")));
+                            if (alreadyPresent) {
+                                log.info("Role '{}' already present in policy '{}', skipping update.", roleName,
+                                        policyId);
+                                return true;
+                            }
+                            // Add new role
+                            Map<String, Object> newRole = new java.util.HashMap<>();
+                            newRole.put("id", roleRep.getId());
+                            newRole.put("required", Boolean.FALSE);
+                            rolesList.add(newRole);
+                            String updatedRolesJson = objectMapper.writeValueAsString(rolesList);
+                            config.put("roles", updatedRolesJson);
+                            return assignRoleToPolicyConfig(policyId, config);
+                        } catch (Exception e) {
+                            log.error("Error updating policy '{}': {}", policyId, e.getMessage(), e);
+                            return false;
+                        }
+                    }).orElse(false);
+        } finally {
+            keycloak.tokenManager().logout();
+            keycloak.close();
+        }
+        return result;
     }
-
 }

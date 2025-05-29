@@ -38,6 +38,7 @@ import ma.org.ormt.modules.roleacces.services.RoleAccesService;
 public class ChiffreCleLoadController extends BaseController<ChiffreCle> {
 
         private static final String ENTITY_NAME = "chiffrecle";
+        private static final String RESOURCE_TYPE = "chiffrecle";
 
         private final ChiffreCleService chiffrecleService;
         private final RoleAccesService roleAccesService;
@@ -62,23 +63,17 @@ public class ChiffreCleLoadController extends BaseController<ChiffreCle> {
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
                 // Create query params
-                QueryParams requestParams = createQueryParams(pageIndex, pageSize, sortField, direction, filters,
+                QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField, direction, filters,
                                 globalFilter);
 
                 // Check if user has admin role
-                String currentUserRole = roleAccesService.getCurrentUserRole();
-                Page<ChiffreCle> chiffreclePage;
-
-                if ("ROLE_ADMIN".equalsIgnoreCase(currentUserRole)) {
-                        // For admin, get all entities without ID filtering
-                        chiffreclePage = chiffrecleService.getEntityList(requestParams);
-                } else {
-                        // For non-admin users, get entities with restricted access
-                        List<Long> accessibleChiffreCleIds = roleAccesService.getAccessibleResources(
-                                        currentUserRole, "chiffrecle", "lecture");
-
-                        chiffreclePage = chiffrecleService.getEntitiesByIds(accessibleChiffreCleIds, requestParams);
-                }
+                Page<ChiffreCle> chiffreclePage = getEntitiesWithAccessControl(
+                                RESOURCE_TYPE,
+                                "lecture",
+                                requestParams,
+                                chiffrecleService::getEntityList, // Function<QueryParams, Page<T>>
+                                chiffrecleService::getEntitiesByIds // BiFunction<List<Long>, QueryParams, Page<T>>
+                );
 
                 return buildResponseEntity(
                                 chiffreclePage.getContent(), ChiffreCleDto.class,
@@ -97,7 +92,7 @@ public class ChiffreCleLoadController extends BaseController<ChiffreCle> {
         @GetMapping("/{id}")
         @PreAuthorize("hasAuthority('chiffrecle:read')")
         public ResponseEntity<RestResponse<ChiffreCleDetailsDto>> getChiffreCle(@PathVariable("id") Long id) {
-                if (!hasAccessToResource(id, "lecture")) {
+                if (!hasResourceAccess(id, RESOURCE_TYPE, "lecture")) {
                         return createForbiddenResponse();
                 }
 
@@ -122,36 +117,4 @@ public class ChiffreCleLoadController extends BaseController<ChiffreCle> {
                 throw new IllegalArgumentException("Unsupported DTO type: " + dtoClass.getName());
         }
 
-        /**
-         * Check if current user has access to a specific resource
-         * Admin role always has access to all resources
-         */
-        private boolean hasAccessToResource(Long resourceId, String permission) {
-                String currentUserRole = roleAccesService.getCurrentUserRole();
-
-                // Admin role has access to everything
-                if ("ROLE_ADMIN".equalsIgnoreCase(currentUserRole)) {
-                        return true;
-                }
-
-                List<Long> accessibleIds = roleAccesService.getAccessibleResources(
-                                currentUserRole, "chiffrecle", permission);
-                return accessibleIds != null && accessibleIds.contains(resourceId);
-        }
-
-        /**
-         * Create a forbidden response with appropriate message
-         */
-        private <T> ResponseEntity<RestResponse<T>> createForbiddenResponse() {
-                return ResponseEntity.status(HttpStatus.FORBIDDEN)
-                                .body(new RestResponse<>(HttpStatus.FORBIDDEN, "Permission denied", false, null, null));
-        }
-
-        /**
-         * Create a not found response with error message
-         */
-        private <T> ResponseEntity<RestResponse<T>> createNotFoundResponse(String message) {
-                return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                                .body(new RestResponse<>(HttpStatus.NOT_FOUND, message, false, null, null));
-        }
 }

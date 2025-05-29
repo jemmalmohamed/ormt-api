@@ -1,9 +1,21 @@
 [
   {
+    "username": "o.master",
+    "firstName": "super",
+    "lastName": "admin",
+    "email": "jemmalmohamed@gmail.com",
+    "emailVerified": true,
+    "enabled": true,
+    "password": "ormt",
+    "clientRoles": [
+      "master"
+    ]
+  },
+  {
     "username": "o.admin",
     "firstName": "mohamed",
     "lastName": "jemmal",
-    "email": "jemmalmohamed@gmail.com",
+    "email": "admin@gmail.com",
     "emailVerified": true,
     "enabled": true,
     "password": "ormt",

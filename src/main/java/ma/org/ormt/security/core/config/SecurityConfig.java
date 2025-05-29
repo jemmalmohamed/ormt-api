@@ -1,7 +1,5 @@
 package ma.org.ormt.security.core.config;
 
-import java.util.Arrays;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,24 +7,14 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.AnonymousAuthenticationFilter;
-import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.security.authentication.filters.PublicRoleAuthenticationFilter;
 import ma.org.ormt.security.oauth.converters.JwtAuthResourceConverter;
-import ma.org.ormt.security.oauth.providers.PublicRoleProvider;
-
-import java.io.IOException;
 
 @Configuration
 @EnableWebSecurity
@@ -42,98 +30,44 @@ public class SecurityConfig {
         private boolean securityEnabled;
 
         private final JwtAuthResourceConverter jwtAuthResourceConverter;
-        private final PublicRoleProvider publicRoleProvider;
+        private final CorsConfigurationSource corsConfigurationSource;
+        private final CustomAuthenticationEntryPoint customAuthenticationEntryPoint;
         private final PublicRoleAuthenticationFilter publicRoleAuthenticationFilter;
-
-        private static final String[] AUTH_SWAGGER_WHITELIST = {
-                        "/v2/api-docs",
-                        "/v3/api-docs",
-                        "/v3/api-docs/**",
-                        "/swagger-resources",
-                        "/swagger-resources/**",
-                        "/configuration/ui",
-                        "/configuration/security",
-                        "/webjars/**",
-                        "/swagger-ui/**",
-                        "/swagger-ui.html" };
-
-        private static final String[] PUBLIC_ENDPOINTS = {
-                        "/api/v1/public/**",
-                        "/api/v1/**", // Allow anonymous access to all API endpoints, method security will handle
-                                      // authorization
-                        "/api/v1/files/**" // Allow anonymous access to file endpoints
-        };
-
-        /**
-         * Custom AuthenticationEntryPoint to handle unauthenticated requests
-         * This ensures anonymous users still get proper access while logging the
-         * authentication failure
-         */
-        @Bean
-        public AuthenticationEntryPoint customAuthenticationEntryPoint() {
-                return new AuthenticationEntryPoint() {
-                        @Override
-                        public void commence(HttpServletRequest request, HttpServletResponse response,
-                                        AuthenticationException authException) throws IOException, ServletException {
-                                log.debug("Authentication failed: {}", authException.getMessage());
-                                // For API endpoints that require authentication, return 401
-                                // But let Spring Security's anonymous authentication handle permitted endpoints
-                                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                        }
-                };
-        }
 
         @Bean
         public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
                 if (securityEnabled) {
-                        http
-                                        .cors(cors -> cors.configurationSource(corsConfigurationSource()))
-                                        .csrf(csrf -> csrf.disable())
-                                        // Configure anonymous authentication with public role permissions
-                                        .anonymous(anonymous -> {
-                                                // Get all public authorities from our provider
-                                                String[] authorities = publicRoleProvider.getPublicAuthorities()
-                                                                .stream()
-                                                                .map(auth -> auth.getAuthority())
-                                                                .toArray(String[]::new);
-
-                                                anonymous.authorities(authorities)
-                                                                .principal("anonymousUser");
-                                        })
-                                        // Add our public role filter to handle anonymous requests correctly
-                                        .addFilterBefore(publicRoleAuthenticationFilter,
-                                                        AnonymousAuthenticationFilter.class)
-                                        .authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
-                                                        .requestMatchers(AUTH_SWAGGER_WHITELIST).permitAll()
-                                                        .requestMatchers(PUBLIC_ENDPOINTS).permitAll()
-                                                        .anyRequest()
-                                                        .authenticated())
-                                        .oauth2ResourceServer(oauth2ResourceServer -> oauth2ResourceServer
-                                                        .jwt(jwt -> jwt.jwtAuthenticationConverter(
-                                                                        jwtAuthResourceConverter))
-                                                        .authenticationEntryPoint(customAuthenticationEntryPoint()))
-                                        .sessionManagement(sessionManagement -> sessionManagement
-                                                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+                        return buildSecureFilterChain(http);
                 } else {
-                        http
-                                        .cors(cors -> cors.configurationSource(corsConfigurationSource()))
-                                        .csrf(csrf -> csrf.disable())
-                                        .authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
-                                                        .anyRequest().permitAll());
+                        return buildDevelopmentFilterChain(http);
                 }
-                return http.build();
         }
 
-        CorsConfigurationSource corsConfigurationSource() {
-                CorsConfiguration configuration = new CorsConfiguration();
-                configuration.setAllowedOrigins(Arrays.asList(originFrontendUrl));
-                configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-                configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));
-                configuration.setAllowCredentials(true);
+        private SecurityFilterChain buildSecureFilterChain(HttpSecurity http) throws Exception {
+                return http
+                                .cors(cors -> cors.configurationSource(corsConfigurationSource))
+                                .csrf(csrf -> csrf.disable())
+                                .sessionManagement(session -> session
+                                                .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                                .addFilterBefore(publicRoleAuthenticationFilter, AnonymousAuthenticationFilter.class)
+                                .oauth2ResourceServer(oauth2 -> oauth2
+                                                .jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthResourceConverter))
+                                                .authenticationEntryPoint(customAuthenticationEntryPoint))
+                                .authorizeHttpRequests(auth -> auth
+                                                .requestMatchers(SecurityEndpoints.DOCUMENTATION_ENDPOINTS).permitAll()
+                                                .requestMatchers(SecurityEndpoints.TRULY_PUBLIC_ENDPOINTS).permitAll()
+                                                .requestMatchers("/api/v1/files/**").authenticated()
+                                                .requestMatchers("/api/v1/**").authenticated()
+                                                .anyRequest().authenticated())
+                                .build();
+        }
 
-                UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-                source.registerCorsConfiguration("/**", configuration);
-                return source;
+        private SecurityFilterChain buildDevelopmentFilterChain(HttpSecurity http) throws Exception {
+                return http
+                                .cors(cors -> cors.configurationSource(corsConfigurationSource))
+                                .csrf(csrf -> csrf.disable())
+                                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
+                                .build();
         }
 
 }

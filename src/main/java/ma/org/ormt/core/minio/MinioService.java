@@ -64,7 +64,7 @@ public class MinioService {
         return minioEndpoint + "/" + bucketName + "/" + fileName;
     }
 
-    public byte[] getFile(String fileName) throws Exception {
+    public byte[] getMinioFile(String fileName) throws Exception {
         InputStream stream = minioClient.getObject(
                 GetObjectArgs.builder()
                         .bucket(bucketName)

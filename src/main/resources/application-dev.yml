@@ -9,13 +9,13 @@ starter:
     reset: false
     seed: false
   keycloak: 
-    reset: true
-    seed: true
+    reset: false
+    seed: false
   faker :
     seed : false
 
  
-spring: 
+spring:  
   security:
     enabled: true
   datasource:

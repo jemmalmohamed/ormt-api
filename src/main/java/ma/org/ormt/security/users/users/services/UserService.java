@@ -9,28 +9,10 @@ import ma.org.ormt.security.users.users.dtos.request.UserRequestDto;
 
 public interface UserService {
 
-    // Optional<UserRepresentation> findByNom(String nom);
-
-    // Page<UserRepresentation> getEntityList(QueryParams requestParams);
-
-    // public Page<UserRepresentation> getEntitiesByIds(List<Long> ids, QueryParams
-    // params);
-
     UserRepresentation create(UserRequestDto requestDto) throws Exception;
 
     void assignRoleToUser(RealmResource realmResource,
             ClientResource clientResource, RoleRepresentation roleRepresentation,
             UserRepresentation userRepresentation);
-
-    // UserRepresentation update(Long id, UserRequestDto userRequestDto) throws
-    // Exception;
-
-    // UserRepresentation save(UserRepresentation user);
-
-    // boolean existsById(Long id);
-
-    // void attachDomaine(Long userId, Long domaineId);
-
-    // void detachDomaine(Long eppaceDomaineId);
 
 }

@@ -20,14 +20,15 @@ public class KeycloakScopeServiceImpl implements KeycloakScopeService {
         return clientResource.authorization().scopes().findByName(scopeName) != null;
     }
 
-    @Override
-    public ScopeRepresentation createScope(ClientResource clientResource, ScopeRepresentation scopeRepresentation) {
-        if (scopeExists(clientResource, scopeRepresentation.getName())) {
-            return null;
-        }
-        clientResource.authorization().scopes().create(scopeRepresentation);
-        return scopeRepresentation;
-    };
+    // @Override
+    // public ScopeRepresentation createScope(ClientResource clientResource,
+    // ScopeRepresentation scopeRepresentation) {
+    // if (scopeExists(clientResource, scopeRepresentation.getName())) {
+    // return null;
+    // }
+    // clientResource.authorization().scopes().create(scopeRepresentation);
+    // return scopeRepresentation;
+    // };
 
     @Override
     public Optional<ScopeRepresentation> findByName(ClientResource clientResource, String scopeName) {

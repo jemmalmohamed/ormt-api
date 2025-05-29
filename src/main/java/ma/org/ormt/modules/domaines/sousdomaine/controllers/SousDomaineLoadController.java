@@ -63,7 +63,7 @@ public class SousDomaineLoadController extends BaseController<SousDomaine> {
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
-                QueryParams requestParams = createQueryParams(pageIndex, pageSize, sortField, direction, filters,
+                QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField, direction, filters,
                                 globalFilter);
 
                 Page<SousDomaine> sousDomainePage = sousDomaineService.getEntityListByDomaineId(domaineId,

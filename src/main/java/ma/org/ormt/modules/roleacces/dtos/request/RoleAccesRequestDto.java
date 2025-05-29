@@ -24,7 +24,7 @@ public class RoleAccesRequestDto extends Dto {
     private String typeRessource;
 
     @NotEmpty(message = "Ce champ est requis.")
-    private Long ressourceId;
+    private String ressourceId;
 
     @NotBlank(message = "Ce champ est requis.")
     private String niveauAcces;

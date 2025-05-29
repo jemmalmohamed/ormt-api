@@ -12,7 +12,8 @@ public interface KeycloakScopeService {
 
     Optional<ScopeRepresentation> findByName(ClientResource clientResource, String scopeName);
 
-    ScopeRepresentation createScope(ClientResource clientResource, ScopeRepresentation scopeRepresentation);
+    // ScopeRepresentation createScope(ClientResource clientResource,
+    // ScopeRepresentation scopeRepresentation);
 
     void deleteScope(ClientResource clientResource, String scopeName);
 

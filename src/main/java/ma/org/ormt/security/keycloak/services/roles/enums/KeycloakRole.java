@@ -5,9 +5,10 @@ import java.util.List;
 
 public enum KeycloakRole {
 
+    role_master("master"),
     role_admin("admin"),
     role_decideur("decideur"),
-    role_public("public"),;
+    role_public("public");
 
     private final String roleName;
 

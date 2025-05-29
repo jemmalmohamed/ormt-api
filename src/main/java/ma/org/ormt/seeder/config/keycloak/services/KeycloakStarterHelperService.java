@@ -87,8 +87,7 @@ public class KeycloakStarterHelperService {
         return resourceRequestList.stream()
                 .flatMap(resourceRequest -> keycloakPolicyService
                         .mapPolicyRequestListToPolicyRepresentation(realmName, backendClientName,
-                                resourceRequest.getScopes(),
-                                resourceRequest.getName())
+                                resourceRequest)
                         .stream())
                 .collect(Collectors.toList());
 
@@ -109,6 +108,7 @@ public class KeycloakStarterHelperService {
             resourceRequest.getScopes().forEach(scope -> {
                 ScopeRepresentation scopeRepresentation = new ScopeRepresentation();
                 scopeRepresentation.setName(scope.getName());
+                scopeRepresentation.setDisplayName(scope.getDisplayName());
                 scopesJson.add(scopeRepresentation);
             });
             scopes = scopesJson;

@@ -60,7 +60,7 @@ public class DonneeIndicateurLoadController extends BaseController<DonneeIndicat
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
-                QueryParams requestParams = createQueryParams(pageIndex, pageSize, sortField, direction, filters,
+                QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField, direction, filters,
                                 globalFilter);
 
                 Page<DonneeIndicateur> donneeIndicateurPage = donneeIndicateurService.getEntityListByIndicateurId(

@@ -6,6 +6,7 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema.AccessMode;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -14,6 +15,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.validators.groups.OnCreate;
+import ma.org.ormt.core.validators.groups.OnUpdate;
 
 @Setter
 @Getter
@@ -23,6 +25,8 @@ import ma.org.ormt.core.validators.groups.OnCreate;
 @JsonIgnoreProperties(value = { "user.id" }, allowGetters = true)
 public class UserRequestDto {
 
+    @Schema(accessMode = AccessMode.READ_ONLY)
+    @NotNull(groups = { OnUpdate.class })
     private String id;
 
     @NotBlank(message = "Ce champ est requis.")

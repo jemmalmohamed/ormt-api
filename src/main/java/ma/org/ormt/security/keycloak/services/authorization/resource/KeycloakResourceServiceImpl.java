@@ -1,25 +1,17 @@
 package ma.org.ormt.security.keycloak.services.authorization.resource;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
-import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.resource.ClientResource;
 import org.keycloak.admin.client.resource.ResourceResource;
 import org.keycloak.representations.idm.authorization.ResourceRepresentation;
-import org.keycloak.representations.idm.authorization.ScopeRepresentation;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
-import ma.org.ormt.security.authorization.dto.ResourceDto;
-import ma.org.ormt.security.keycloak.services.KeycloakConnectService;
 
 @Service
 @RequiredArgsConstructor
 public class KeycloakResourceServiceImpl implements KeycloakResourceService {
-
-    private final KeycloakConnectService keycloakService;
 
     @Override
     public boolean resourceExists(ClientResource clientResource, String resourceName) {

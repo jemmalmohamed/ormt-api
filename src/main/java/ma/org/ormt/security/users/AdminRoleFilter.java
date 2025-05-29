@@ -28,11 +28,12 @@ public class AdminRoleFilter {
 
         // Check if user has ROLE_ADMIN authority - try different forms of admin role
         boolean isAdmin = authorities.contains(new SimpleGrantedAuthority("ROLE_ADMIN"));
+        boolean isMaster = authorities.contains(new SimpleGrantedAuthority("ROLE_MASTER"));
 
-        if (isAdmin) {
-            return false; // Return false to include the field for admins
+        if (isAdmin || isMaster) {
+            return false; // Return false to include the field for admins and masters
         }
 
-        return true; // Return true to exclude the field for non-admins
+        return true; // Return true to exclude the field for non-admins and non-masters
     }
 }

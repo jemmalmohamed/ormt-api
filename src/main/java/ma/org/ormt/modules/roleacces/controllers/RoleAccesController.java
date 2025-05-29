@@ -22,15 +22,25 @@ import org.springframework.security.core.Authentication;
 public class RoleAccesController {
 
     @Autowired
-    private RoleAccesService permissionService;
+    private RoleAccesService roleAccesService;
 
-    @GetMapping("/role/{roleCode}/type/{typeRessource}")
+    @GetMapping("role/{roleCode}/type/{typeRessource}")
     public List<Long> getAccessibleResources(
             @PathVariable String roleCode,
             @PathVariable String typeRessource,
             @RequestParam(defaultValue = "lecture") String niveauAcces) {
 
-        return permissionService.getAccessibleResources(roleCode, typeRessource,
+        return roleAccesService.getAccessibleResourceIds(roleCode, typeRessource,
+                niveauAcces);
+    }
+
+    @GetMapping("role/{roleCode}")
+    public List<Long> getAccessibleResourcesByRole(
+            @PathVariable String roleCode,
+
+            @RequestParam(defaultValue = "lecture") String niveauAcces) {
+
+        return roleAccesService.getAccessibleResourceIds(roleCode, "espace",
                 niveauAcces);
     }
 
@@ -46,11 +56,11 @@ public class RoleAccesController {
         String username = authentication.getName();
 
         if (applyToChildren) {
-            permissionService.setHierarchicalAccess(roleCode, typeRessource, ressourceId,
+            roleAccesService.setHierarchicalAccess(roleCode, typeRessource, ressourceId,
                     niveauAcces, true, username);
             return ResponseEntity.ok("Accès hiérarchique ajouté avec succès");
         } else {
-            RoleAcces acces = permissionService.addAccess(roleCode, typeRessource,
+            RoleAcces acces = roleAccesService.addAccess(roleCode, typeRessource,
                     ressourceId, niveauAcces, username);
             return ResponseEntity.ok(acces);
         }
@@ -62,7 +72,7 @@ public class RoleAccesController {
             @PathVariable String typeRessource,
             @PathVariable Long ressourceId) {
 
-        permissionService.removeAccess(roleCode, typeRessource, ressourceId);
+        roleAccesService.removeAccess(roleCode, typeRessource, ressourceId);
         return ResponseEntity.ok("Accès supprimé avec succès");
     }
 
@@ -73,7 +83,7 @@ public class RoleAccesController {
             @RequestParam Long ressourceId,
             @RequestParam(defaultValue = "lecture") String niveauAcces) {
 
-        boolean hasAccess = permissionService.hasAccess(roleCode, typeRessource,
+        boolean hasAccess = roleAccesService.hasAccess(roleCode, typeRessource,
                 ressourceId, niveauAcces);
         return ResponseEntity.ok(hasAccess);
     }

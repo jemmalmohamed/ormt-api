@@ -37,6 +37,7 @@ import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
 public class DomaineLoadController extends BaseController<Domaine> {
 
         private static final String ENTITY_NAME = "domaine";
+        private static final String RESOURCE_TYPE = "domaine";
 
         private final DomaineService domaineService;
         private final DomaineDtoMapper domaineDtoMapper;
@@ -59,15 +60,26 @@ public class DomaineLoadController extends BaseController<Domaine> {
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
-                QueryParams requestParams = createQueryParams(pageIndex, pageSize, sortField, direction, filters,
+                List<String> effectiveFilters = (filters == null) ? new java.util.ArrayList<>()
+                                : new java.util.ArrayList<>(filters);
+                effectiveFilters.add("actif:like:true");
+
+                QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField, direction,
+                                effectiveFilters,
                                 globalFilter);
 
-                Page<Domaine> domainePage = domaineService.getEntityList(requestParams);
+                Page<Domaine> domainePage = getEntitiesWithAccessControl(
+                                RESOURCE_TYPE,
+                                "lecture",
+                                requestParams,
+                                domaineService::getEntityList, // Function<QueryParams, Page<T>>
+                                domaineService::getEntitiesByIds // BiFunction<List<Long>, QueryParams, Page<T>>
+                );
 
-                QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, domainePage);
-
-                return buildResponseEntity(domainePage.getContent(), DomaineDto.class, queryParams, HttpStatus.OK);
-
+                return buildResponseEntity(
+                                domainePage.getContent(), DomaineDto.class,
+                                adjustQueryParamsToGetAllRecords(requestParams, domainePage),
+                                HttpStatus.OK);
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id")

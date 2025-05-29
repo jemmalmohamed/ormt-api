@@ -7,8 +7,11 @@ import java.util.Optional;
 import org.keycloak.admin.client.resource.ClientResource;
 import org.keycloak.representations.idm.authorization.PolicyRepresentation;
 
+import ma.org.ormt.security.keycloak.dto.request.KeycloakResourceRequestDto;
 import ma.org.ormt.security.keycloak.dto.request.KeycloakRoleRequestDto;
 import ma.org.ormt.security.keycloak.dto.request.KeycloakScopeRequestDto;
+import ma.org.ormt.security.policy.dto.PolicyDto;
+import ma.org.ormt.security.policy.dto.RolePoliciesRequestDto;
 
 public interface KeycloakPolicyService {
 
@@ -25,11 +28,13 @@ public interface KeycloakPolicyService {
     Map<String, String> setupPolicyConfig(String realm, String client, List<KeycloakRoleRequestDto> roles);
 
     List<PolicyRepresentation> mapPolicyRequestListToPolicyRepresentation(String realmName, String clientName,
-            List<KeycloakScopeRequestDto> scopes, String prefixName);
+            KeycloakResourceRequestDto request);
 
-    List<Map<String, Object>> getAllPolicies(ClientResource clientResource);
+    List<PolicyDto> mapPolicyRepresentationsToPolicyDtos(List<PolicyRepresentation> policyRepresentations);
 
-    boolean assignRoleToPolicy(String policyId, String roleName);
+    List<PolicyDto> getAllPolicies();
 
-    boolean assignRoleToPolicies(List<String> policyIds, String roleName);
+    List<PolicyRepresentation> getAllPolicies(ClientResource clientResource);
+
+    boolean assignRoleToPolicies(RolePoliciesRequestDto requestDto);
 }

@@ -16,7 +16,7 @@ public interface EspaceService extends BaseService<Espace> {
 
     Page<Espace> getEntityList(QueryParams requestParams);
 
-    public Page<Espace> getEntitiesByIds(List<Long> ids, QueryParams params);
+    public Page<Espace> getEntitiesByIds(List<Long> ids, QueryParams requestParams);
 
     Espace create(EspaceRequestDto requestDto) throws Exception;
 

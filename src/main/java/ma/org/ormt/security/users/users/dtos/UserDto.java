@@ -26,5 +26,6 @@ public class UserDto {
     private String email;
     private boolean enabled;
     private Map<String, List<String>> clientRoles;
+    private List<String> roles;
 
 }
