@@ -24,13 +24,11 @@ public class SourceRequestDto extends Dto {
 
     @NotBlank(message = "Ce champ est requis.")
     private String nom;
-    @NotBlank(message = "Ce champ est requis.")
 
     @NotBlank(message = "Ce champ est requis.")
-    private String libelle;
+    private String abreviation;
 
-    @NotBlank(message = "Ce champ est requis.")
-    private String type;
+    private String url;
 
     private String description;
 

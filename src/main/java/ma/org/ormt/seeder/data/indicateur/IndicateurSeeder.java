@@ -7,9 +7,9 @@ import ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto.In
 import ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto.IndicateurCreateRequestDto.DimensionCreateRequestDto;
 import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
 import ma.org.ormt.modules.indicateurs.dimension.services.DimensionService;
-import ma.org.ormt.modules.indicateurs.indicateur.association.repository.IndicateurDimensionRepository;
+import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.models.IndicateurDimension;
+import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.repository.IndicateurDimensionRepository;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
-import ma.org.ormt.modules.indicateurs.indicateur.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 import ma.org.ormt.modules.indicateurs.source.models.Source;
 import ma.org.ormt.modules.indicateurs.source.services.SourceService;
@@ -58,7 +58,9 @@ public class IndicateurSeeder {
             newIndicateur.getSousDomaines().add(parentSousDomaine);
 
             Indicateur savedIndicateur = indicateurService.create(newIndicateur);
-            handleSourceIndicateur(indicateurRequest.getSource(), savedIndicateur);
+            if (indicateurRequest.getSource() != "") {
+                handleSourceIndicateur(indicateurRequest.getSource(), savedIndicateur);
+            }
             if (indicateurRequest.getDimensions() != null) {
                 for (DimensionCreateRequestDto dimensionRequest : indicateurRequest.getDimensions()) {
                     try {
@@ -134,7 +136,7 @@ public class IndicateurSeeder {
             String sourceKey = source.toLowerCase();
             Source sourceEntity;
             try {
-                sourceEntity = sourceService.findByNom(sourceKey)
+                sourceEntity = sourceService.findByAbreviation(sourceKey)
                         .orElseGet(() -> {
                             Source newSource = new Source();
                             newSource.setNom(sourceKey);
@@ -144,14 +146,14 @@ public class IndicateurSeeder {
             } catch (DataIntegrityViolationException | ConstraintViolationException ex) {
                 // Another thread/process created the source at the same time
                 log.warn("Source '{}' already exists (created concurrently). Fetching existing.", sourceKey);
-                sourceEntity = sourceService.findByNom(sourceKey)
+                sourceEntity = sourceService.findByAbreviation(sourceKey)
                         .orElseThrow(() -> new RuntimeException("Source not found after duplicate key: " + sourceKey));
             } catch (Exception ex) {
                 // Defensive: check if cause is constraint violation
                 Throwable cause = ex.getCause();
                 if (cause instanceof ConstraintViolationException) {
                     log.warn("Source '{}' already exists (created concurrently, cause). Fetching existing.", sourceKey);
-                    sourceEntity = sourceService.findByNom(sourceKey)
+                    sourceEntity = sourceService.findByAbreviation(sourceKey)
                             .orElseThrow(
                                     () -> new RuntimeException("Source not found after duplicate key: " + sourceKey));
                 } else {

@@ -19,13 +19,13 @@ import ma.org.ormt.core.validators.unique.Unique;
 
 @Setter
 @Getter
-@Schema(name = "DemensionRequest")
+@Schema(name = "espaceRequestDto", description = "Représente la requête pour créer ou mettre à jour un espace.")
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Unique.List({
         @Unique(message = "Le nom ${validatedValue.nom} existe déjà", fieldName = "nom", fieldId = "id", tableName = "espace"),
 })
-@JsonIgnoreProperties(value = { "indicateur.id" }, allowGetters = true)
+@JsonIgnoreProperties(value = { "espace.id" }, allowGetters = true)
 public class EspaceRequestDto extends Dto {
 
     @NotBlank(message = "Ce champ est requis.")
@@ -35,7 +35,7 @@ public class EspaceRequestDto extends Dto {
     private MultipartFile imageFile;
 
     @NotEmpty(message = "Ce champ est requis.")
-    @Size(min = 200, max = 2000, message = "Le texte doit contenir au moins 300 caractères.")
+    @Size(min = 200, max = 2000, message = "Le texte doit contenir au moins 200 caractères.")
     private String apropos;
 
     @NotNull(message = "Ce champ est requis.")

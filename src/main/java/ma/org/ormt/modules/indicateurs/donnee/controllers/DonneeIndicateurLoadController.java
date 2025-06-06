@@ -32,7 +32,7 @@ import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
 import ma.org.ormt.modules.indicateurs.donnee.services.DonneeIndicateurService;
 
 @RestController
-@RequestMapping("api/v1/indicateurs")
+@RequestMapping("api/v1/admin/indicateurs")
 @RequiredArgsConstructor
 public class DonneeIndicateurLoadController extends BaseController<DonneeIndicateur> {
 

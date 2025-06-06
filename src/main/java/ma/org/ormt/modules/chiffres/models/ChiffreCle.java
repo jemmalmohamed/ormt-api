@@ -40,6 +40,8 @@ public class ChiffreCle extends BaseEntity {
 
     private Boolean actif;
 
+    private String accessType;
+
     @ManyToOne
     @JoinColumn(name = "donnee_indicateur_id")
     private DonneeIndicateur donneeIndicateur;

@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import ma.org.ormt.core.validators.ObjectsValidator;
-import ma.org.ormt.modules.espaces.dtos.request.EspaceRequestDto;
 import ma.org.ormt.security.keycloak.services.KeycloakConnectService;
 import ma.org.ormt.security.keycloak.services.realm.KeycloakRealmService;
 import ma.org.ormt.security.roles.dto.RoleDto;

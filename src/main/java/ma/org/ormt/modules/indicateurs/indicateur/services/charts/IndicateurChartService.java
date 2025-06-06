@@ -9,10 +9,10 @@ import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.series.IndicateurChartDto;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.series.IndicateurChartDtoMapper;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
-import ma.org.ormt.modules.indicateurs.indicateur.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.indicateur.repositories.IndicateurRepository;
 
 @Service

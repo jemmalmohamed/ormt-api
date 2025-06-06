@@ -13,6 +13,8 @@ import jakarta.persistence.EntityNotFoundException;
 import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
 import ma.org.ormt.core.commun.base.service.SpecificationService;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
+import ma.org.ormt.core.commun.rest.responses.MessageResponse;
+import ma.org.ormt.core.exceptions.handlers.DependencyException;
 import ma.org.ormt.core.utilities.EntityInspector;
 import ma.org.ormt.core.utilities.PaginationUtils;
 import ma.org.ormt.core.validators.ObjectsValidator;
@@ -79,29 +81,21 @@ public class DimensionServiceImpl extends BaseServiceImpl<Dimension> implements 
 
     @Override
     public Dimension create(DimensionRequestDto requestDto) {
-        try {
-            validator.validate(requestDto);
-            Dimension dimensionToCreate = dimensionRequestMapper.mapToEntity(requestDto);
-            return dimensionRepository.save(dimensionToCreate);
-        } catch (Exception e) {
-            throw new IllegalArgumentException("Erreur lors de la création de la dimension: " + e.getMessage());
-        }
+        validator.validate(requestDto);
+        Dimension dimensionToCreate = dimensionRequestMapper.mapToEntity(requestDto);
+        return dimensionRepository.save(dimensionToCreate);
     }
 
     @Override
     public Dimension update(Long id, DimensionRequestDto requestDto) {
-        try {
-            validator.validate(requestDto);
-            checkPathId(id, requestDto.getId());
+        validator.validate(requestDto);
+        checkPathId(id, requestDto.getId());
 
-            Dimension dimension = dimensionRepository.findById(id)
-                    .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+        Dimension dimension = dimensionRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
 
-            updateFields(dimension, requestDto);
-            return dimensionRepository.save(dimension);
-        } catch (Exception e) {
-            throw new IllegalArgumentException("Erreur lors de la mise à jour de la dimension: " + e.getMessage());
-        }
+        updateFields(dimension, requestDto);
+        return dimensionRepository.save(dimension);
     }
 
     @Override
@@ -153,6 +147,28 @@ public class DimensionServiceImpl extends BaseServiceImpl<Dimension> implements 
         dimension.setLibelle(entityToUpdate.getLibelle());
         dimension.setType(entityToUpdate.getType());
         dimension.setDescription(entityToUpdate.getDescription());
+    }
+
+    @Override
+    public void validateBeforeDelete(Long id) {
+        validateDimensionDependencies(id);
+    }
+
+    private void validateDimensionDependencies(Long id) {
+        Dimension dimension = dimensionRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+        if (!dimension.getIndicateurDimensions().isEmpty()) {
+
+            String message = MessageResponse.builder()
+                    .title("Suppression impossible ")
+                    .mainMessage("Impossible de supprimer la dimension car elle est associée à des indicateurs.")
+
+                    .build()
+                    .format();
+
+            throw new DependencyException(message);
+
+        }
     }
 
 }

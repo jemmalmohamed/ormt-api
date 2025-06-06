@@ -26,7 +26,6 @@ import ma.org.ormt.core.validators.groups.OnUpdate;
 import ma.org.ormt.security.keycloak.services.roles.client.KeycloakClientRoleService;
 import ma.org.ormt.security.roles.dto.RoleDto;
 import ma.org.ormt.security.roles.dto.RoleDtoMapper;
-import ma.org.ormt.security.roles.dto.detail.RoleDetailsDtoMapper;
 import ma.org.ormt.security.roles.dto.request.RoleRequestDto;
 
 @RestController

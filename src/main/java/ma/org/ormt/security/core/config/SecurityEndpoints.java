@@ -27,10 +27,7 @@ public final class SecurityEndpoints {
         public static final String[] TRULY_PUBLIC_ENDPOINTS = {
                         "/api/v1/public/**",
                         "/api/v1/files/**",
-                        "/api/v1/espaces/**",
-                        "/api/v1/domaines/**",
-                        "/api/v1/partenaires/**",
-                        "/api/v1/chiffrecles/**"
+
         };
 
         /**

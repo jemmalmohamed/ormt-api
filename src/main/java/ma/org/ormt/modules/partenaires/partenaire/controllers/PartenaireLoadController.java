@@ -32,7 +32,7 @@ import ma.org.ormt.modules.partenaires.partenaire.models.Partenaire;
 import ma.org.ormt.modules.partenaires.partenaire.services.PartenaireService;
 
 @RestController
-@RequestMapping("api/v1/partenaires")
+@RequestMapping("api/v1/public/partenaires")
 @RequiredArgsConstructor
 public class PartenaireLoadController extends BaseController<Partenaire> {
 

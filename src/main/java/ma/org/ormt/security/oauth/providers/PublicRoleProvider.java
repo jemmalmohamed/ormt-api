@@ -1,6 +1,5 @@
 package ma.org.ormt.security.oauth.providers;
 
-import java.security.Policy;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -11,7 +10,6 @@ import java.util.concurrent.CompletableFuture;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.resource.ClientResource;
 import org.keycloak.representations.idm.RoleRepresentation;
-import org.keycloak.representations.idm.authorization.PolicyRepresentation;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;

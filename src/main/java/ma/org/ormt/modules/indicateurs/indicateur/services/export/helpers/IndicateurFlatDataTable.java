@@ -8,8 +8,8 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
-import ma.org.ormt.modules.indicateurs.indicateur.models.IndicateurDimension;
 
 public class IndicateurFlatDataTable {
 

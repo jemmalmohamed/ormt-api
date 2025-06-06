@@ -671,7 +671,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite_hcp",
-          "libelle": "secteur d'activité_hcp",
+          "libelle": "secteur d'activité hcp",
           "type": "texte",
           "association": {
             "principale": true,
@@ -709,7 +709,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite_hcp",
-          "libelle": "secteur d'activité_hcp",
+          "libelle": "secteur d'activité hcp",
           "type": "texte",
           "association": {
             "principale": true,

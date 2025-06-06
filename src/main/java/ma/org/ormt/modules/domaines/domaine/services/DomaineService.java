@@ -26,4 +26,14 @@ public interface DomaineService extends BaseService<Domaine> {
 
     void addSousDomaine(Long domaineId, Long sousDomaineId);
 
+    /**
+     * Vérifie si un domaine appartient à un espace spécifique
+     */
+    boolean existsInEspace(Long domaineId, Long espaceId);
+
+    /**
+     * Récupère les IDs des domaines d'un espace
+     */
+    List<Long> getDomaineIdsByEspaceId(Long espaceId);
+
 }

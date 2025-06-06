@@ -6,6 +6,8 @@ CREATE TABLE
         id BIGSERIAL PRIMARY KEY,
         nom varchar(255) NOT NULL UNIQUE,
         description TEXT, 
+        url VARCHAR(255),
+        abreviation VARCHAR(10),
         status_code INT NULL,
         created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
         last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,

@@ -1,8 +1,7 @@
 package ma.org.ormt.modules.roleacces.controllers;
 
 import java.util.List;
-import java.util.HashMap;
-import java.util.Map;
+
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -89,15 +88,19 @@ public class RoleAccesCrudController extends BaseController<RoleAcces> {
         })
         @DeleteMapping("/bulk")
         @PreAuthorize("hasAuthority('role:delete')")
-        public ResponseEntity<Map<String, String>> deleteMultiple(@RequestBody List<Long> ids) {
+        public ResponseEntity<RestResponse<List<Long>>> deleteMultiple(@RequestBody List<Long> ids) {
                 try {
                         roleAccesService.deleteAllById(ids);
-                        return ResponseEntity.noContent().build();
+                        return buildResponseEntity(ids, HttpStatus.OK);
+
                 } catch (DataIntegrityViolationException e) {
                         // Handle foreign key constraint violation
-                        Map<String, String> response = new HashMap<>();
-                        response.put("message", "Suppression impossible, les données sont utilisées ailleurs");
-                        return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
+                        RestResponse<List<Long>> errorResponse = RestResponse.<List<Long>>builder()
+                                        .success(false)
+                                        .message("Suppression impossible, les données sont utilisées ailleurs")
+                                        .data(ids)
+                                        .build();
+                        return ResponseEntity.status(HttpStatus.CONFLICT).body(errorResponse);
                 } catch (Exception e) {
                         // Handle other exceptions
                         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();

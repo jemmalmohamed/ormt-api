@@ -10,8 +10,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.BaseDto;
-import ma.org.ormt.core.commun.base.dto.Dto;
-import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDto;
+import ma.org.ormt.modules.domaines.domaine.dtos.summary.DomaineSummaryDto;
+import ma.org.ormt.modules.indicateurs.indicateur.dtos.detail.IndicateurDetailDto;
 
 @Setter
 @Getter
@@ -27,8 +27,7 @@ public class SousDomaineDto extends BaseDto {
 
     private Boolean actif;
 
-    private List<IndicateurDto> indicateurs;
-    // private List<IndicateurChartDto> indicateurs;
+    private List<IndicateurDetailDto> indicateurs;
 
-    private Dto domaine;
+    private DomaineSummaryDto domaine;
 }

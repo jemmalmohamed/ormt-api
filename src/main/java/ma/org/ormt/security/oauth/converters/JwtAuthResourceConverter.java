@@ -111,7 +111,6 @@ public class JwtAuthResourceConverter implements Converter<Jwt, AbstractAuthenti
                 .get("permissions");
 
         Collection<String> resourcePermissions = extractResourcePermissions(permissions);
-
         return combineResourceRolesAndPermissions(resourceRoles, resourcePermissions);
 
     }

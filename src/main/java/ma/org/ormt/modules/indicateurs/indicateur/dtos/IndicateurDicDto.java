@@ -12,7 +12,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.Dto;
-import ma.org.ormt.modules.indicateurs.indicateur.association.dtos.IndicateurDimensionDto;
+import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.dtos.IndicateurDimensionDto;
 import ma.org.ormt.modules.indicateurs.source.dtos.summary.SourceSummaryDto;
 import ma.org.ormt.modules.roleacces.dtos.summary.RoleAccesSummaryDto;
 import ma.org.ormt.security.users.AdminRoleFilter;

@@ -17,14 +17,13 @@ import ma.org.ormt.core.validators.unique.Unique;
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Unique.List({
-        @Unique(message = "Le nom ${validatedValue.nom} existe déjà", fieldName = "nom", fieldId = "id", tableName = "dimension"),
+        @Unique(message = "La dimension ${validatedValue.nom} existe déjà", fieldName = "nom", fieldId = "id", tableName = "dimension"),
 })
-@JsonIgnoreProperties(value = { "indicateur.id" }, allowGetters = true)
+@JsonIgnoreProperties(value = { "dimensions.id" }, allowGetters = true)
 public class DimensionRequestDto extends Dto {
 
     @NotBlank(message = "Ce champ est requis.")
     private String nom;
-    @NotBlank(message = "Ce champ est requis.")
 
     @NotBlank(message = "Ce champ est requis.")
     private String libelle;

@@ -9,7 +9,6 @@ import org.keycloak.representations.idm.authorization.PolicyRepresentation;
 
 import ma.org.ormt.security.keycloak.dto.request.KeycloakResourceRequestDto;
 import ma.org.ormt.security.keycloak.dto.request.KeycloakRoleRequestDto;
-import ma.org.ormt.security.keycloak.dto.request.KeycloakScopeRequestDto;
 import ma.org.ormt.security.policy.dto.PolicyDto;
 import ma.org.ormt.security.policy.dto.RolePoliciesRequestDto;
 

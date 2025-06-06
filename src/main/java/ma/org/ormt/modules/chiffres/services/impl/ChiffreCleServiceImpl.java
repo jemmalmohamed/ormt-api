@@ -158,6 +158,7 @@ public class ChiffreCleServiceImpl extends BaseServiceImpl<ChiffreCle> implement
         chiffrecle.setValeur(dto.getValeur());
         chiffrecle.setUnite(dto.getUnite());
         chiffrecle.setDescription(dto.getDescription());
+        chiffrecle.setAccessType(dto.getAccessType());
         chiffrecle.setActif(dto.getActif());
     }
 

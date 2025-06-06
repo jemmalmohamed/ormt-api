@@ -34,7 +34,7 @@ import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
 
 @RestController
-@RequestMapping("api/v1/domaines")
+@RequestMapping("api/v1/public/domaines")
 @RequiredArgsConstructor
 public class SousDomaineLoadController extends BaseController<SousDomaine> {
 

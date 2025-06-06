@@ -310,15 +310,6 @@
                         "principale": false,
                         "temporelle": true
                     }
-                },
-                {
-                    "nom": "annuel",
-                    "libelle": "année",
-                    "type": "texte",
-                    "association": {
-                        "principale": false,
-                        "temporelle": true
-                    }
                 }
             ]
         },
@@ -347,15 +338,6 @@
                     "association": {
                         "principale": true,
                         "temporelle": false
-                    }
-                },
-                {
-                    "nom": "annuel",
-                    "libelle": "année",
-                    "type": "texte",
-                    "association": {
-                        "principale": false,
-                        "temporelle": true
                     }
                 },
                 {

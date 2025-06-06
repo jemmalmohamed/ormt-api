@@ -42,7 +42,7 @@ public class KeycloakAuthorizationResourceSetupRunner implements CommandLineRunn
     private static final List<String> RESOURCES_GROUP_1 = Arrays.asList(
             "domaine", "espace", "chiffrecle", "indicateur", "dimension", "partenaire");
     private static final List<String> RESOURCES_GROUP_2 = Arrays.asList(
-            "auth", "user", "region", "province", "role");
+            "user", "region", "province", "role", "datasource");
 
     @Override
     public void run(String... args) {

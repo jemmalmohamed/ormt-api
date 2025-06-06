@@ -3,6 +3,7 @@ CREATE TABLE IF NOT EXISTS chiffre_cle (
     libelle VARCHAR(255) NOT NULL,
     valeur VARCHAR(255) NOT NULL,
     unite VARCHAR(50),
+    access_type  VARCHAR(50) , 
     description VARCHAR(255),
     actif BOOLEAN NOT NULL DEFAULT TRUE,
     donnee_indicateur_id BIGINT,

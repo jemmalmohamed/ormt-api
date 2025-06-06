@@ -24,6 +24,7 @@ import ma.org.ormt.core.commun.base.entity.BaseEntity;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
 import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.source.models.Source;
 
 @Setter

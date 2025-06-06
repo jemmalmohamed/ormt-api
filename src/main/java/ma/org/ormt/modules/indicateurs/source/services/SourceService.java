@@ -11,7 +11,7 @@ import ma.org.ormt.modules.indicateurs.source.models.Source;
 
 public interface SourceService extends BaseService<Source> {
 
-    Optional<Source> findByNom(String nom);
+    Optional<Source> findByAbreviation(String abreviation);
 
     Page<Source> getEntityList(QueryParams requestParams);
 

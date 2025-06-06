@@ -17,7 +17,6 @@ import ma.org.ormt.core.utilities.EntityInspector;
 import ma.org.ormt.core.utilities.PaginationUtils;
 import ma.org.ormt.core.validators.ObjectsValidator;
 import ma.org.ormt.modules.roleacces.dtos.request.RoleAccesRequestDto;
-import ma.org.ormt.modules.roleacces.dtos.request.RoleAccesRequestDtoMapper;
 import ma.org.ormt.modules.roleacces.models.RoleAcces;
 import ma.org.ormt.modules.roleacces.repositories.RoleAccesRepository;
 import ma.org.ormt.modules.roleacces.services.RoleAccesService;
@@ -29,9 +28,6 @@ public class RoleAccesServiceImpl extends BaseServiceImpl<RoleAcces> implements 
 
     @Autowired
     private RoleAccesRepository roleAccesRepository;
-
-    @Autowired
-    private RoleAccesRequestDtoMapper roleAccesRequestMapper;
 
     @Autowired
     private AuthService authService;
@@ -127,7 +123,7 @@ public class RoleAccesServiceImpl extends BaseServiceImpl<RoleAcces> implements 
             roleAcces = new RoleAcces();
         }
         roleAcces.setNiveauAcces(dto.getNiveauAcces());
-        roleAcces.setRoleCode("role_" + dto.getRoleCode().toLowerCase());
+        roleAcces.setRoleCode(dto.getRoleCode().toLowerCase());
         roleAcces.setDescription(dto.getDescription());
         roleAcces.setTypeRessource(dto.getTypeRessource());
         roleAcces.setRessourceId(Long.valueOf(dto.getRessourceId()));

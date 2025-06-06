@@ -137,7 +137,7 @@ public class UserCrudController extends BaseController<UserRepresentation> {
         })
         @DeleteMapping("/bulk")
         @PreAuthorize("hasAuthority('user:delete')")
-        public ResponseEntity<Map<String, String>> deleteMultiple(@RequestBody List<String> ids) {
+        public ResponseEntity<RestResponse<List<Long>>> deleteMultiple(@RequestBody List<String> ids) {
                 RealmResource realm = getRealmResource();
                 try {
                         // Verify all users exist first
@@ -154,7 +154,13 @@ public class UserCrudController extends BaseController<UserRepresentation> {
                                 Map<String, String> response = new HashMap<>();
                                 response.put("message", "Les utilisateurs suivants n'ont pas été trouvés: "
                                                 + String.join(", ", notFoundIds));
-                                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
+                                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
+                                                RestResponse.<List<Long>>builder()
+                                                                .success(false)
+                                                                .message(response.get("message"))
+                                                                .data(notFoundIds.stream().map(Long::valueOf)
+                                                                                .collect(Collectors.toList()))
+                                                                .build());
                         }
 
                         // Delete all users
@@ -163,13 +169,18 @@ public class UserCrudController extends BaseController<UserRepresentation> {
                         }
                         return ResponseEntity.noContent().build();
                 } catch (DataIntegrityViolationException e) {
-                        Map<String, String> response = new HashMap<>();
-                        response.put("message", "Suppression impossible, les données sont utilisées ailleurs");
-                        return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
+                        RestResponse<List<Long>> errorResponse = RestResponse.<List<Long>>builder()
+                                        .success(false)
+                                        .message("Suppression impossible, les données sont utilisées ailleurs")
+                                        .data(ids.stream().map(Long::valueOf).collect(Collectors.toList()))
+                                        .build();
+                        return ResponseEntity.status(HttpStatus.CONFLICT).body(errorResponse);
                 } catch (Exception e) {
-                        Map<String, String> response = new HashMap<>();
-                        response.put("message", "Une erreur est survenue lors de la suppression: " + e.getMessage());
-                        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+                        RestResponse<List<Long>> errorResponse = RestResponse.<List<Long>>builder()
+                                        .success(false)
+                                        .message("Une erreur est survenue lors de la suppression: " + e.getMessage())
+                                        .build();
+                        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponse);
                 }
         }
 

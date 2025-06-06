@@ -72,6 +72,7 @@ public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements Espace
             requestParams.setPageSize(Integer.MAX_VALUE);
         }
         Pageable pageable = PaginationUtils.createPageable(requestParams);
+
         if (!EntityInspector.isFieldPresentInEntity(pageable.getSort().toString(), Espace.class)) {
             pageable = PaginationUtils.createPageable(requestParams);
         }

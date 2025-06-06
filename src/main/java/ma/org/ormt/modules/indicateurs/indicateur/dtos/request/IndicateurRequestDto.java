@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.Dto;
 import ma.org.ormt.core.validators.unique.Unique;
+import ma.org.ormt.modules.indicateurs.source.dtos.SourceDto;
 import ma.org.ormt.modules.indicateurs.source.models.Source;
 
 @Setter
@@ -27,22 +28,27 @@ public class IndicateurRequestDto extends Dto {
     @NotBlank(message = "Ce champ est requis.")
     private String nom;
 
-    private String description;
-
-    private String abreviation;
+    @NotBlank(message = "Ce champ est requis.")
+    private String categorie;
 
     @NotNull(message = "Ce champ est requis.")
     private Boolean actif;
 
-    @NotBlank(message = "Ce champ est requis.")
-    private Source source;
+    @NotNull(message = "Ce champ est requis.")
+    private String typeGraphe;
 
-    private String regleCalcul;
-
-    @NotBlank(message = "Ce champ est requis.")
     private String unite;
 
-    @NotBlank(message = "Ce champ est requis.")
+    @NotNull(message = "Ce champ est requis.")
+    private SourceDto source;
+
     private String typeTb;
+
+    @NotNull(message = "Ce champ est requis.")
+    private String description;
+
+    private String abreviation;
+
+    private String regleCalcul;
 
 }

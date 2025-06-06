@@ -13,9 +13,12 @@ import jakarta.persistence.EntityNotFoundException;
 import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
 import ma.org.ormt.core.commun.base.service.SpecificationService;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
+import ma.org.ormt.core.commun.rest.responses.MessageResponse;
+import ma.org.ormt.core.exceptions.handlers.DependencyException;
 import ma.org.ormt.core.utilities.EntityInspector;
 import ma.org.ormt.core.utilities.PaginationUtils;
 import ma.org.ormt.core.validators.ObjectsValidator;
+import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 import ma.org.ormt.modules.indicateurs.source.dtos.request.SourceRequestDto;
 import ma.org.ormt.modules.indicateurs.source.dtos.request.SourceRequestDtoMapper;
 import ma.org.ormt.modules.indicateurs.source.models.Source;
@@ -47,8 +50,8 @@ public class SourceServiceImpl extends BaseServiceImpl<Source> implements Source
     }
 
     @Override
-    public Optional<Source> findByNom(String nom) {
-        return sourceRepository.findByNom(nom);
+    public Optional<Source> findByAbreviation(String abreviation) {
+        return sourceRepository.findByAbreviation(abreviation);
     }
 
     @Override
@@ -101,6 +104,28 @@ public class SourceServiceImpl extends BaseServiceImpl<Source> implements Source
     private void updateFields(Source source, SourceRequestDto entityToUpdate) {
         source.setNom(entityToUpdate.getNom());
         source.setDescription(entityToUpdate.getDescription());
+    }
+
+    @Override
+    public void validateBeforeDelete(Long id) {
+        validateSourceDependencies(id);
+    }
+
+    private void validateSourceDependencies(Long id) {
+        Source source = sourceRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+        if (!source.getIndicateurs().isEmpty()) {
+
+            String message = MessageResponse.builder()
+                    .title("Suppression impossible ")
+                    .mainMessage("Impossible de supprimer la source  car elle est associée aux indicateurs.")
+
+                    .build()
+                    .format();
+
+            throw new DependencyException(message);
+
+        }
     }
 
 }

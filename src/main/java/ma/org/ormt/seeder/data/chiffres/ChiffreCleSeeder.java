@@ -25,8 +25,8 @@ import ma.org.ormt.modules.chiffres.dtos.request.ChiffreCleRequestDto;
 import ma.org.ormt.modules.chiffres.models.ChiffreCle;
 import ma.org.ormt.modules.chiffres.services.ChiffreCleService;
 import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
-import ma.org.ormt.modules.indicateurs.indicateur.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @Log4j2
@@ -80,7 +80,9 @@ public class ChiffreCleSeeder implements CommandLineRunner {
 
             createChiffreClesFromJsonFile(jsonFile, initDataPath);
 
-            createChiffreCleFromIndicateurDonnee();
+            createChiffreCleFromIndicateurDonnee("Nombre d'offre d'emploi recueillies");
+            createChiffreCleFromIndicateurDonnee("ES-Chômage");
+            createChiffreCleFromIndicateurDonnee("ES-Insertion Professionnelle");
 
             log.info("ChiffreCle data seeding completed successfully.");
         } catch (Exception e) {
@@ -89,13 +91,13 @@ public class ChiffreCleSeeder implements CommandLineRunner {
     }
 
     @Transactional
-    private void createChiffreCleFromIndicateurDonnee() {
+    private void createChiffreCleFromIndicateurDonnee(String indicateurName) {
 
         Indicateur indicateur = indicateurService
-                .findByNomWithDonnees("Nombre d'offre d'emploi recueillies")
+                .findByNomWithDonnees(indicateurName)
                 .orElse(null);
         if (indicateur == null) {
-            log.warn("Indicateur not found: {}", "Nombre d'offre d'emploi recueillies");
+            log.warn("Indicateur not found: {}", indicateurName);
             return;
         }
 
@@ -215,6 +217,7 @@ public class ChiffreCleSeeder implements CommandLineRunner {
         requestDto.setDescription(chiffreCle.getDescription());
         requestDto.setValeur(chiffreCle.getValeur());
         requestDto.setUnite(chiffreCle.getUnite());
+        requestDto.setAccessType(chiffreCle.getAccessType());
         requestDto.setActif(chiffreCle.getActif());
 
         try {

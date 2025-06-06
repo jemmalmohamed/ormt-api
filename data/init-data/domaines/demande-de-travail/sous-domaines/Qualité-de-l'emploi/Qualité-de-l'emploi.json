@@ -331,7 +331,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite_cnss",
-          "libelle": "secteur d'activité-cnss",
+          "libelle": "secteur d'activité cnss",
           "type": "texte",
           "association": {
             "principale": true,
@@ -369,7 +369,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite_cnss",
-          "libelle": "secteur d'activité-cnss",
+          "libelle": "secteur d'activité cnss",
           "type": "texte",
           "association": {
             "principale": true,

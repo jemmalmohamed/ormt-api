@@ -35,7 +35,7 @@ import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
 import ma.org.ormt.modules.indicateurs.donnee.services.DonneeIndicateurService;
 
 @RestController
-@RequestMapping(value = "/api/v1/indicateurs")
+@RequestMapping(value = "/api/v1/admin/indicateurs")
 @RequiredArgsConstructor
 @Tag(name = "donnne", description = "donneeIndicateur API")
 public class DonneeIndicateurCrudController extends BaseController<DonneeIndicateur> {

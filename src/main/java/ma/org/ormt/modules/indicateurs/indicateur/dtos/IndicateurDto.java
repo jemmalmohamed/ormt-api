@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import io.minio.messages.Source;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,7 +16,7 @@ import ma.org.ormt.core.commun.base.dto.BaseDto;
 
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.summary.SousDomaineSummaryDto;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
-import ma.org.ormt.modules.indicateurs.indicateur.association.dtos.IndicateurDimensionDto;
+import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.dtos.IndicateurDimensionDto;
 import ma.org.ormt.modules.indicateurs.source.dtos.summary.SourceSummaryDto;
 import ma.org.ormt.modules.roleacces.dtos.summary.RoleAccesSummaryDto;
 import ma.org.ormt.security.users.AdminRoleFilter;
@@ -38,16 +39,13 @@ public class IndicateurDto extends BaseDto {
 
     private String categorie;
 
+    private String description;
+
     private String unite;
 
     private String typeTb;
 
     private SourceSummaryDto source;
-
-    @JsonProperty("dimensions")
-    private List<IndicateurDimensionDto> indicateurDimensions;
-
-    private List<DonneeIndicateurDto> donnees;
 
     private List<SousDomaineSummaryDto> sousDomaines;
 

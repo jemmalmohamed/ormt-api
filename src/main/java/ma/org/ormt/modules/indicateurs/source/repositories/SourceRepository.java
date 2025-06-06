@@ -7,5 +7,5 @@ import ma.org.ormt.modules.indicateurs.source.models.Source;
 
 @Repository
 public interface SourceRepository extends BaseRepository<Source> {
-    Optional<Source> findByNom(String nom);
+    Optional<Source> findByAbreviation(String abreviation);
 }

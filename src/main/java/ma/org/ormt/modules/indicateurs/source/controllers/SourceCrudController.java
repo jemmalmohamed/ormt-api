@@ -1,8 +1,7 @@
 package ma.org.ormt.modules.indicateurs.source.controllers;
 
 import java.util.List;
-import java.util.HashMap;
-import java.util.Map;
+
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,7 +33,7 @@ import ma.org.ormt.modules.indicateurs.source.models.Source;
 import ma.org.ormt.modules.indicateurs.source.services.SourceService;
 
 @RestController
-@RequestMapping(value = "/api/v1/sources")
+@RequestMapping(value = "/api/v1/admin/sources")
 @RequiredArgsConstructor
 @Tag(name = "Source", description = "Source API")
 public class SourceCrudController extends BaseController<Source> {
@@ -50,7 +49,7 @@ public class SourceCrudController extends BaseController<Source> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PostMapping("")
-        @PreAuthorize("hasAuthority('source:create')")
+        @PreAuthorize("hasAuthority('datasource:create')")
         public ResponseEntity<RestResponse<SourceDto>> createSource(
                         @Validated(OnCreate.class) @RequestBody SourceRequestDto requestDto) {
                 Source source = sourceService.create(requestDto);
@@ -64,7 +63,7 @@ public class SourceCrudController extends BaseController<Source> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PutMapping("{id}")
-        @PreAuthorize("hasAuthority('source:edit')")
+        @PreAuthorize("hasAuthority('datasource:edit')")
         public ResponseEntity<RestResponse<SourceDto>> updateSource(@PathVariable Long id,
                         @Validated(OnUpdate.class) @RequestBody SourceRequestDto sourceRequestDto) {
                 Source source = sourceService.update(id, sourceRequestDto);
@@ -77,7 +76,7 @@ public class SourceCrudController extends BaseController<Source> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/{id}")
-        @PreAuthorize("hasAuthority('source:delete')")
+        @PreAuthorize("hasAuthority('datasource:delete')")
         public ResponseEntity<Void> deleteById(@PathVariable Long id) {
                 return handleDelete(() -> sourceService.delete(id));
         }
@@ -88,16 +87,19 @@ public class SourceCrudController extends BaseController<Source> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/bulk")
-        @PreAuthorize("hasAuthority('source:delete')")
-        public ResponseEntity<Map<String, String>> deleteMultiple(@RequestBody List<Long> ids) {
+        @PreAuthorize("hasAuthority('datasource:delete')")
+        public ResponseEntity<RestResponse<List<Long>>> deleteMultiple(@RequestBody List<Long> ids) {
                 try {
                         sourceService.deleteAllById(ids);
-                        return ResponseEntity.noContent().build();
+                        return buildResponseEntity(ids, HttpStatus.OK);
                 } catch (DataIntegrityViolationException e) {
                         // Handle foreign key constraint violation
-                        Map<String, String> response = new HashMap<>();
-                        response.put("message", "Suppression impossible, les données sont utilisées ailleurs");
-                        return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
+                        RestResponse<List<Long>> errorResponse = RestResponse.<List<Long>>builder()
+                                        .success(false)
+                                        .message("Suppression impossible, les données sont utilisées ailleurs")
+                                        .data(ids)
+                                        .build();
+                        return ResponseEntity.status(HttpStatus.CONFLICT).body(errorResponse);
                 } catch (Exception e) {
                         // Handle other exceptions
                         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
@@ -111,7 +113,7 @@ public class SourceCrudController extends BaseController<Source> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/all")
-        @PreAuthorize("hasAuthority('source:delete')")
+        @PreAuthorize("hasAuthority('datasource:delete')")
         public ResponseEntity<Void> deleteAll() {
                 return handleDelete(sourceService::deleteAll);
         }
@@ -122,7 +124,7 @@ public class SourceCrudController extends BaseController<Source> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/exclude")
-        @PreAuthorize("hasAuthority('source:delete')")
+        @PreAuthorize("hasAuthority('datasource:delete')")
         public ResponseEntity<Void> deleteAllExcept(@RequestBody List<Long> ids) {
                 return handleDelete(() -> sourceService.deleteAllExceptIds(ids));
         }
@@ -133,7 +135,7 @@ public class SourceCrudController extends BaseController<Source> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/query")
-        @PreAuthorize("hasAuthority('source:delete')")
+        @PreAuthorize("hasAuthority('datasource:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParams(
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
@@ -148,7 +150,7 @@ public class SourceCrudController extends BaseController<Source> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/query-exclude")
-        @PreAuthorize("hasAuthority('source:delete')")
+        @PreAuthorize("hasAuthority('datasource:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParamsExceptIds(
                         @RequestBody List<Long> ids,
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
@@ -166,7 +168,7 @@ public class SourceCrudController extends BaseController<Source> {
         // = @Content(mediaType = "ErrorResponse"))
         // })
         // @PostMapping("/associate")
-        // @PreAuthorize("hasAuthority('source:edit')")
+        // @PreAuthorize("hasAuthority('datasource:edit')")
         // public ResponseEntity<Void> associateWithIndicateur(@RequestBody
         // IndicateurSourceDto associationDto) {
         // sourceService.associateWithIndicateur(associationDto.getIdSource(),
@@ -182,7 +184,7 @@ public class SourceCrudController extends BaseController<Source> {
         // = @Content(mediaType = "ErrorResponse"))
         // })
         // @DeleteMapping("/dissociate")
-        // @PreAuthorize("hasAuthority('source:edit')")
+        // @PreAuthorize("hasAuthority('datasource:edit')")
         // public ResponseEntity<Void> dissociateFromIndicateur(@RequestBody
         // IndicateurSourceDto associationDto) {
         // sourceService.dissociateFromIndicateur(associationDto.getIdSource(),

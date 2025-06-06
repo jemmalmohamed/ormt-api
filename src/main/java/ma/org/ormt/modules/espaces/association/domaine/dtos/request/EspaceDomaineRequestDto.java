@@ -15,7 +15,6 @@ import ma.org.ormt.modules.espaces.dtos.EspaceDto;
 @Getter
 @Schema(name = "EspaceDo")
 @RequiredArgsConstructor
-
 @JsonIgnoreProperties(value = { "espaceDo.id" }, allowGetters = true)
 public class EspaceDomaineRequestDto extends Dto {
 

@@ -15,7 +15,7 @@ import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
 import ma.org.ormt.core.commun.base.service.SpecificationService;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
 import ma.org.ormt.core.commun.rest.responses.MessageResponse;
-import ma.org.ormt.core.exceptions.handlers.CannotDeleteException;
+import ma.org.ormt.core.exceptions.handlers.DependencyException;
 import ma.org.ormt.core.minio.MinioService;
 import ma.org.ormt.core.utilities.EntityInspector;
 import ma.org.ormt.core.utilities.PaginationUtils;
@@ -179,9 +179,19 @@ public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements Doma
                     .build()
                     .format();
 
-            throw new CannotDeleteException(message);
+            throw new DependencyException(message);
 
         }
+    }
+
+    @Override
+    public boolean existsInEspace(Long domaineId, Long espaceId) {
+        return domaineRepository.existsByIdAndEspaceDomainesEspaceId(domaineId, espaceId);
+    }
+
+    @Override
+    public List<Long> getDomaineIdsByEspaceId(Long espaceId) {
+        return domaineRepository.findIdsByEspaceId(espaceId);
     }
 
 }

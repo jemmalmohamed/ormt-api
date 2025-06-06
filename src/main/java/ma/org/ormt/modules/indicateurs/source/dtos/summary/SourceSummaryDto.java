@@ -17,8 +17,6 @@ public class SourceSummaryDto extends Dto {
 
     private String nom;
 
-    private String type;
-
-    private String libelle;
+    private String abreviation;
 
 }

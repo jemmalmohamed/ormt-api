@@ -30,6 +30,10 @@ public class Source extends BaseEntity {
 
     private String description;
 
+    private String url;
+
+    private String abreviation;
+
     @OneToMany(mappedBy = "source")
     private List<Indicateur> indicateurs;
 

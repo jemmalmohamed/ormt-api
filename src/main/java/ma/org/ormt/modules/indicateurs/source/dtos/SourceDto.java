@@ -19,10 +19,10 @@ public class SourceDto extends Dto {
 
     private String nom;
 
-    private String type;
+    private String abreviation;
 
     private String description;
 
-    private String libelle;
+    private String url;
 
 }

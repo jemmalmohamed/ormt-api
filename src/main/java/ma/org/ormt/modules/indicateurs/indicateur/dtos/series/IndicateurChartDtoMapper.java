@@ -14,8 +14,8 @@ import org.mapstruct.MappingTarget;
 import ma.org.ormt.core.commun.base.mapper.BaseDtoMapper;
 import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
 import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
-import ma.org.ormt.modules.indicateurs.indicateur.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.valeurdimension.models.ValeurDimension;
 
 @Mapper(componentModel = "spring")

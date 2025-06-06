@@ -7,12 +7,16 @@ import lombok.AccessLevel;
 public class EntityInspector {
 
     public static boolean isFieldPresentInEntity(String field, Class<?> entityClass) {
-        try {
-            entityClass.getDeclaredField(field);
-            return true;
-        } catch (NoSuchFieldException e) {
-            return false;
+        Class<?> current = entityClass;
+        while (current != null) {
+            try {
+                current.getDeclaredField(field);
+                return true;
+            } catch (NoSuchFieldException e) {
+                current = current.getSuperclass();
+            }
         }
+        return false;
     }
 
 }

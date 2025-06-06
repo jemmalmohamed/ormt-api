@@ -1,6 +1,7 @@
 package ma.org.ormt.core.commun.base.dto;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema.AccessMode;
@@ -19,10 +20,10 @@ public class BaseDto extends Dto {
     private Integer statusCode;
 
     @Schema(accessMode = AccessMode.READ_ONLY)
-    private LocalDate createdDate;
+    private LocalDateTime createdDate;
 
     @Schema(accessMode = AccessMode.READ_ONLY)
-    private LocalDate lastModifiedDate;
+    private LocalDateTime lastModifiedDate;
 
     @Schema(accessMode = AccessMode.READ_ONLY)
     private String createdBy;

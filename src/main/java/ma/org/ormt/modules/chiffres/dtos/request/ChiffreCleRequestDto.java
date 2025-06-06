@@ -35,6 +35,8 @@ public class ChiffreCleRequestDto extends Dto {
 
     private String description;
 
+    private String accessType;
+
     private Long donneeIndicateurId;
 
 }

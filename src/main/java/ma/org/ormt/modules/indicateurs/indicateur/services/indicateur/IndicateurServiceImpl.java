@@ -19,12 +19,17 @@ import ma.org.ormt.modules.indicateurs.indicateur.dtos.request.IndicateurRequest
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.request.IndicateurRequestDtoMapper;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.repositories.IndicateurRepository;
+import ma.org.ormt.modules.indicateurs.source.models.Source;
+import ma.org.ormt.modules.indicateurs.source.services.SourceService;
 
 @Service
 public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implements IndicateurService {
 
     @Autowired
     private IndicateurRepository indicateurRepository;
+
+    @Autowired
+    private SourceService sourceService;
 
     @Autowired
     private ObjectsValidator<IndicateurRequestDto> validator;
@@ -69,7 +74,9 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
         validator.validate(requestDto);
 
         Indicateur indicateurToCreate = indicateurRequestMapper.mapToEntity(requestDto);
-
+        Source source = sourceService.findById(requestDto.getSource().getId())
+                .orElseThrow(() -> new EntityNotFoundException("Source not found"));
+        indicateurToCreate.setSource(source);
         return indicateurRepository.save(indicateurToCreate);
     }
 
@@ -98,7 +105,12 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
         indicateur.setActif(entityToUpdate.getActif());
         indicateur.setTypeTb(entityToUpdate.getTypeTb());
         indicateur.setUnite(entityToUpdate.getUnite());
-        indicateur.setSource(entityToUpdate.getSource());
+
+        Source source = sourceService.findById(entityToUpdate.getSource().getId())
+                .orElseThrow(() -> new EntityNotFoundException("Source not found"));
+        indicateur.setSource(source);
+        indicateur.setTypeGraphe(entityToUpdate.getTypeGraphe());
+        indicateur.setCategorie(entityToUpdate.getCategorie());
         indicateur.setRegleCalcul(entityToUpdate.getRegleCalcul());
     }
 

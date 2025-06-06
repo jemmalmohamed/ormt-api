@@ -21,7 +21,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.security.keycloak.dto.request.KeycloakResourceRequestDto;
 import ma.org.ormt.security.keycloak.dto.request.KeycloakRoleRequestDto;
-import ma.org.ormt.security.keycloak.dto.request.KeycloakScopeRequestDto;
 import ma.org.ormt.security.keycloak.services.KeycloakConnectService;
 import ma.org.ormt.security.keycloak.services.realm.KeycloakRealmService;
 import ma.org.ormt.security.policy.dto.PolicyDto;
