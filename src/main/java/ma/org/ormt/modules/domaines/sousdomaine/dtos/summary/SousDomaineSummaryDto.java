@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.Dto;
+import ma.org.ormt.modules.domaines.domaine.dtos.summary.DomaineSummaryDto;
 
 @Setter
 @Getter
@@ -18,5 +19,7 @@ import ma.org.ormt.core.commun.base.dto.Dto;
 public class SousDomaineSummaryDto extends Dto {
 
     private String nom;
+
+    private DomaineSummaryDto domaine;
 
 }

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -42,23 +43,30 @@ public class DonneeIndicateurLoadController extends BaseController<DonneeIndicat
         private final DonneeIndicateurDtoMapper donneeIndicateurDtoMapper;
         private final DonneeIndicateurDetailsDtoMapper donneeIndicateurDetailMapper;
 
-        @Operation(summary = "Get all " + ENTITY_NAME + "s")
-        @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Ok", content = {
-                        @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = DonneeIndicateurDto.class))) }),
+        @Operation(summary = "Get all " + ENTITY_NAME
+                        + "s", description = "Get all donnee indicateur for an indicateur with optional table data. " +
+                                        "Use tableFormat parameter: 'pivot' for pivot table, 'flat' for flat table, 'crud' for CRUD operations, "
+                                        +
+                                        "'create' for create template, 'both' for pivot+flat, 'all' for all formats")
+        @ApiResponses(value = {
+                        @ApiResponse(responseCode = "200", description = "Ok - Returns List<DonneeIndicateurDto> when tableFormat is not specified, or List<DonneeIndicateurDetailsDto> when tableFormat is specified", content = {
+                                        @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = DonneeIndicateurDto.class))),
+                                        @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = DonneeIndicateurDetailsDto.class))) }),
                         @ApiResponse(responseCode = "404", description = ENTITY_NAME
                                         + " not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{indicateurId}/donnees")
-        @PreAuthorize("hasAuthority('domaine:list')")
-        public ResponseEntity<RestResponse<List<DonneeIndicateurDto>>> getDonneeIndicateur(
+        @PreAuthorize("hasAuthority('indicateur:list')")
+        public ResponseEntity<RestResponse<?>> getDonneeIndicateur(
                         @PathVariable("indicateurId") Long indicateurId,
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
                         @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
                         @RequestParam(value = "sortField", defaultValue = "createdDate") String sortField,
                         @RequestParam(value = "sortDirection", defaultValue = "DESC") Direction direction,
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
-                        @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
+                        @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter,
+                        @Parameter(description = "Table format: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'", example = "crud") @RequestParam(value = "tableFormat", required = false) String tableFormat) {
 
                 QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField, direction, filters,
                                 globalFilter);
@@ -66,28 +74,69 @@ public class DonneeIndicateurLoadController extends BaseController<DonneeIndicat
                 Page<DonneeIndicateur> donneeIndicateurPage = donneeIndicateurService.getEntityListByIndicateurId(
                                 indicateurId,
                                 requestParams);
-
                 QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, donneeIndicateurPage);
 
-                return buildResponseEntity(donneeIndicateurPage.getContent(), DonneeIndicateurDto.class, queryParams,
+                // If tableFormat is requested, convert to details DTOs with table data
+                // if (tableFormat != null && !tableFormat.isEmpty()) {
+                // List<DonneeIndicateurDetailsDto> detailsList =
+                // donneeIndicateurPage.getContent().stream()
+                // .map(donnee -> donneeIndicateurService.getDonneeIndicateurWithTableData(
+                // indicateurId, donnee.getId(), tableFormat))
+                // .toList();
+
+                // return
+                // ResponseEntity.ok(RestResponse.<List<DonneeIndicateurDetailsDto>>builder()
+                // .data(detailsList)
+                // .queryParams(queryParams)
+                // .build());
+                // } else {
+                // Use existing logic for backward compatibility
+                ResponseEntity<RestResponse<List<DonneeIndicateurDto>>> response = buildResponseEntity(
+                                donneeIndicateurPage.getContent(), DonneeIndicateurDto.class, queryParams,
                                 HttpStatus.OK);
+                return ResponseEntity.ok(RestResponse.builder()
+                                .data(response.getBody().getData())
+                                .queryParams(queryParams)
+                                .build());
+                // }
         }
 
-        @Operation(summary = "Get " + ENTITY_NAME + " by id")
+        @Operation(summary = "Get " + ENTITY_NAME
+                        + " by id", description = "Get donnee indicateur details with optional table data. " +
+                                        "Use tableFormat parameter: 'pivot' for pivot table, 'flat' for flat table, 'crud' for CRUD operations, "
+                                        +
+                                        "'create' for create template, 'both' for pivot+flat, 'all' for all formats")
         @ApiResponses(value = {
                         @ApiResponse(responseCode = "200", description = "Ok", content = {
-                                        @Content(mediaType = "application/json", schema = @Schema(implementation = DonneeIndicateurDto.class)) }),
+                                        @Content(mediaType = "application/json", schema = @Schema(implementation = DonneeIndicateurDetailsDto.class)) }),
                         @ApiResponse(responseCode = "404", description = ENTITY_NAME
                                         + " not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{indicateurId}/donnees/{id}")
-        @PreAuthorize("hasAuthority('domaine:read')")
+        @PreAuthorize("hasAuthority('indicateur:read')")
         public ResponseEntity<RestResponse<DonneeIndicateurDetailsDto>> getDonneeIndicateur(
-                        @PathVariable("indicateurId") Long indicateurId, @PathVariable("id") Long id) {
+                        @PathVariable("indicateurId") Long indicateurId,
+                        @PathVariable("id") Long id,
+                        @Parameter(description = "Table format: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'", example = "crud") @RequestParam(value = "tableFormat", required = false) String tableFormat) {
+
+                DonneeIndicateurDetailsDto donneeDetail;
+
+                // if (tableFormat != null && !tableFormat.isEmpty()) {
+                // // Use service method that adds table data
+                // donneeDetail =
+                // donneeIndicateurService.getDonneeIndicateurWithTableData(indicateurId, id,
+                // tableFormat);
+                // } else {
+                // Use existing logic for backward compatibility
                 DonneeIndicateur donneeIndicateur = donneeIndicateurService.findById(id)
                                 .orElseThrow(EntityNotFoundException::new);
-                return buildResponseEntity(donneeIndicateur, DonneeIndicateurDetailsDto.class, HttpStatus.OK);
+                donneeDetail = donneeIndicateurDetailMapper.mapToDto(donneeIndicateur);
+                // }
+
+                return ResponseEntity.ok(RestResponse.<DonneeIndicateurDetailsDto>builder()
+                                .data(donneeDetail)
+                                .build());
         }
 
         @Override

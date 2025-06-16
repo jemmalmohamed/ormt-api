@@ -81,8 +81,9 @@ public class ChiffreCleSeeder implements CommandLineRunner {
             createChiffreClesFromJsonFile(jsonFile, initDataPath);
 
             createChiffreCleFromIndicateurDonnee("Nombre d'offre d'emploi recueillies");
-            createChiffreCleFromIndicateurDonnee("ES-Chômage");
-            createChiffreCleFromIndicateurDonnee("ES-Insertion Professionnelle");
+            createChiffreCleFromIndicateurDonnee(
+                    "Emploi par secteur d'emploi");
+            createChiffreCleFromIndicateurDonnee("Emploi par âge");
 
             log.info("ChiffreCle data seeding completed successfully.");
         } catch (Exception e) {
@@ -92,9 +93,8 @@ public class ChiffreCleSeeder implements CommandLineRunner {
 
     @Transactional
     private void createChiffreCleFromIndicateurDonnee(String indicateurName) {
-
         Indicateur indicateur = indicateurService
-                .findByNomWithDonnees(indicateurName)
+                .findByNomWithDonneesAndDimensions(indicateurName)
                 .orElse(null);
         if (indicateur == null) {
             log.warn("Indicateur not found: {}", indicateurName);
@@ -152,7 +152,8 @@ public class ChiffreCleSeeder implements CommandLineRunner {
             chiffreCleService.create(requestDto);
             log.info("Created chiffreCle from DonneeIndicateur: {}", requestDto.getLibelle());
         } catch (Exception e) {
-            log.error("Error creating chiffreCle from DonneeIndicateur: {}", e.getMessage());
+            log.error("Error creating chiffreCle from DonneeIndicateur: {}",
+                    e.getMessage() + " for Indicateur: " + indicateur.getNom(), e);
         }
     }
 

@@ -62,13 +62,20 @@ public abstract class BaseController<T> {
     protected abstract <DTO> DTO mapToDto(T entity, Class<DTO> dtoClass);
 
     public <DTO> ResponseEntity<RestResponse<DTO>> buildResponseEntity(T entity, Class<DTO> dtoClass,
-            HttpStatus status) {
+            HttpStatus status, Boolean success) {
         DTO dto = mapToDto(entity, dtoClass);
         RestResponse<DTO> restResponse = RestResponse.<DTO>builder()
+
                 .status(status)
                 .data(dto)
+                .success(success)
                 .build();
         return ResponseEntity.status(status).body(restResponse);
+    }
+
+    public <DTO> ResponseEntity<RestResponse<DTO>> buildResponseEntity(T entity, Class<DTO> dtoClass,
+            HttpStatus status) {
+        return buildResponseEntity(entity, dtoClass, status, true);
     }
 
     public <DTO> ResponseEntity<RestResponse<List<DTO>>> buildResponseEntity(List<T> entities, Class<DTO> dtoClass,

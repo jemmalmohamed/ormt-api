@@ -1,6 +1,5 @@
 package ma.org.ormt.core.commun.base.dto;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import io.swagger.v3.oas.annotations.media.Schema;

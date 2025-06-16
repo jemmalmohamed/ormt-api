@@ -18,7 +18,7 @@ import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.export.IndicateurExportRequest;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
-import ma.org.ormt.modules.indicateurs.indicateur.services.export.IndicateurExportService;
+import ma.org.ormt.modules.indicateurs.indicateur.services.export.single.IndicateurExportService;
 import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @RestController

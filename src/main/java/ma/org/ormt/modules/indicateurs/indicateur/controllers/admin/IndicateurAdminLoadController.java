@@ -1,3 +1,4 @@
+
 package ma.org.ormt.modules.indicateurs.indicateur.controllers.admin;
 
 import java.util.List;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -51,7 +53,7 @@ public class IndicateurAdminLoadController extends BaseController<Indicateur> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("")
-        @PreAuthorize("hasAuthority('domaine:list')")
+        @PreAuthorize("hasAuthority('indicateur:list')")
         public ResponseEntity<RestResponse<List<IndicateurDto>>> getIndicateurs(
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
                         @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
@@ -67,30 +69,51 @@ public class IndicateurAdminLoadController extends BaseController<Indicateur> {
 
                 QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, indicateurPage);
 
-                return buildResponseEntity(indicateurPage.getContent(), IndicateurDto.class, queryParams,
+                return buildResponseEntity(indicateurPage.getContent(),
+                                IndicateurDto.class, queryParams,
                                 HttpStatus.OK);
         }
 
-        @Operation(summary = "Get " + ENTITY_NAME + " by id")
+        @Operation(summary = "Get " + ENTITY_NAME
+                        + " by id", description = "Get indicateur details with optional table data. " +
+                                        "Use tableFormat parameter: 'pivot' for pivot table, 'flat' for flat table, 'both' for both formats")
         @ApiResponses(value = {
                         @ApiResponse(responseCode = "200", description = "Ok", content = {
-                                        @Content(mediaType = "application/json", schema = @Schema(implementation = IndicateurDto.class)) }),
+                                        @Content(mediaType = "application/json", schema = @Schema(implementation = IndicateurDetailDto.class)) }),
                         @ApiResponse(responseCode = "404", description = ENTITY_NAME
                                         + " not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{id}")
         @PreAuthorize("hasAuthority('domaine:read')")
-        public ResponseEntity<RestResponse<IndicateurDetailDto>> getIndicateur(@PathVariable("id") Long id) {
-                Indicateur indicateur = indicateurService.findById(id).orElseThrow(EntityNotFoundException::new);
-                return buildResponseEntity(indicateur, IndicateurDetailDto.class, HttpStatus.OK);
+        public ResponseEntity<RestResponse<IndicateurDetailDto>> getIndicateur(
+                        @PathVariable("id") Long id,
+                        @Parameter(description = "Table format: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'", example = "crud") @RequestParam(value = "tableFormat", required = false) String tableFormat) {
+
+                IndicateurDetailDto indicateurDetail;
+
+                if (tableFormat != null && !tableFormat.isEmpty()) {
+                        // Use service method that adds table data
+                        indicateurDetail = indicateurService.getIndicateurWithTableData(id, tableFormat);
+                } else {
+                        // Use existing logic for backward compatibility
+                        Indicateur indicateur = indicateurService.findById(id)
+                                        .orElseThrow(EntityNotFoundException::new);
+                        indicateurDetail = indicateurDetailMapper.mapToDto(indicateur);
+                }
+
+                return ResponseEntity.ok(RestResponse.<IndicateurDetailDto>builder()
+                                .data(indicateurDetail)
+                                .build());
         }
 
         @Override
         protected <DTO> DTO mapToDto(Indicateur entity, Class<DTO> dtoClass) {
                 if (dtoClass == IndicateurDetailDto.class) {
                         return dtoClass.cast(indicateurDetailMapper.mapToDto(entity));
-                } else if (dtoClass == IndicateurDto.class) {
+                }
+
+                else if (dtoClass == IndicateurDto.class) {
                         return dtoClass.cast(indicateurDtoMapper.mapToDto(entity));
                 }
                 throw new IllegalArgumentException("Unsupported DTO type: " + dtoClass.getName());

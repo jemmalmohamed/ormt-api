@@ -143,10 +143,10 @@ public class DimensionServiceImpl extends BaseServiceImpl<Dimension> implements 
     }
 
     private void updateFields(Dimension dimension, DimensionRequestDto entityToUpdate) {
-        dimension.setNom(entityToUpdate.getNom());
-        dimension.setLibelle(entityToUpdate.getLibelle());
-        dimension.setType(entityToUpdate.getType());
-        dimension.setDescription(entityToUpdate.getDescription());
+        dimension.setNom(entityToUpdate.getNom().toLowerCase());
+        dimension.setLibelle(entityToUpdate.getLibelle().toLowerCase());
+        dimension.setType(entityToUpdate.getType().toLowerCase());
+        dimension.setDescription(entityToUpdate.getDescription().toLowerCase());
     }
 
     @Override

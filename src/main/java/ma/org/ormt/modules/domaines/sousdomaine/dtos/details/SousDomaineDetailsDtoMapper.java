@@ -4,9 +4,8 @@ import org.mapstruct.Mapper;
 
 import ma.org.ormt.core.commun.base.mapper.BaseDtoMapper;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
-import ma.org.ormt.modules.indicateurs.indicateur.dtos.series.IndicateurChartDtoMapper;
 
-@Mapper(uses = { IndicateurChartDtoMapper.class })
+@Mapper()
 public interface SousDomaineDetailsDtoMapper extends BaseDtoMapper<SousDomaine, SousDomaineDetailsDto> {
 
 }

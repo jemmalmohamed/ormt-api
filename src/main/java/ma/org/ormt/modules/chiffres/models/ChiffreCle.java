@@ -46,10 +46,10 @@ public class ChiffreCle extends BaseEntity {
     @JoinColumn(name = "donnee_indicateur_id")
     private DonneeIndicateur donneeIndicateur;
 
-    @OneToMany(mappedBy = "chiffreCle", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "chiffreCle", fetch = FetchType.LAZY)
     private List<ChiffreCleDomaine> chiffrecleDomaines;
 
-    // @OneToMany(mappedBy = "chiffreCle", fetch = FetchType.EAGER)
+    // @OneToMany(mappedBy = "chiffreCle", fetch = FetchType.LAZY)
     // private List<ChiffreCleDomaine> chiffrecleEspaces;
 
 }

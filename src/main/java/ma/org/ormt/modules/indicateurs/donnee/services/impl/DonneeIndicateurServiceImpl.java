@@ -23,6 +23,7 @@ import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
 import ma.org.ormt.modules.indicateurs.dimension.services.DimensionService;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDtoMapper;
+import ma.org.ormt.modules.indicateurs.donnee.dtos.details.DonneeIndicateurDetailsDtoMapper;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.request.DonneeIndicateurRequestDto;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.request.DonneeIndicateurRequestDtoMapper;
 import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
@@ -59,6 +60,7 @@ public class DonneeIndicateurServiceImpl extends BaseServiceImpl<DonneeIndicateu
             IndicateurService indicateurService,
             ValeurDimensionRepository valeurDimensionRepository,
             DonneeIndicateurDtoMapper donneeIndicateurDtoMapper,
+            DonneeIndicateurDetailsDtoMapper donneeIndicateurDetailMapper,
             DimensionService dimensionService,
             ObjectsValidator<DonneeIndicateurRequestDto> validator,
             DonneeIndicateurRequestDtoMapper donneeIndicateurRequestMapper) {
@@ -247,4 +249,59 @@ public class DonneeIndicateurServiceImpl extends BaseServiceImpl<DonneeIndicateu
         // Update the relationship
         donneeIndicateur.setValeurDimensions(dimensions);
     }
+
+    // @Override
+    // public DonneeIndicateurDetailsDto getDonneeIndicateurWithTableData(Long
+    // indicateurId, Long id, String tableFormat) {
+    // // Get the donnee indicateur
+    // DonneeIndicateur donneeIndicateur = findById(id)
+    // .orElseThrow(() -> new EntityNotFoundException("DonneeIndicateur not found
+    // with id: " + id));
+
+    // // Verify it belongs to the specified indicateur
+    // if (!donneeIndicateur.getIndicateur().getId().equals(indicateurId)) {
+    // throw new EntityNotFoundException(
+    // "DonneeIndicateur with id " + id + " does not belong to indicateur " +
+    // indicateurId);
+    // }
+
+    // // Use the existing mapper to convert to DTO
+    // DonneeIndicateurDetailsDto dto =
+    // donneeIndicateurDetailMapper.mapToDto(donneeIndicateur);
+
+    // // Add table data based on request format if specified
+    // if (tableFormat != null && !tableFormat.trim().isEmpty()) {
+    // Indicateur indicateur = donneeIndicateur.getIndicateur();
+
+    // if ("pivot".equals(tableFormat)) {
+    // dto.setPivotTableData(
+    // IndicateurPivotDataTable.buildPivotSheetData(indicateur));
+    // } else if ("flat".equals(tableFormat)) {
+    // dto.setFlatTableData(
+    // IndicateurFlatDataTable.buildFlatTableData(indicateur));
+    // } else if ("crud".equals(tableFormat)) {
+    // dto.setCrudTableData(
+    // IndicateurCrudDataTable.buildCrudTableData(indicateur));
+    // } else if ("create".equals(tableFormat)) {
+    // dto.setCreateTemplateData(
+    // IndicateurCrudDataTable.buildCreateTemplateData(indicateur));
+    // } else if ("both".equals(tableFormat)) {
+    // dto.setPivotTableData(
+    // IndicateurPivotDataTable.buildPivotSheetData(indicateur));
+    // dto.setFlatTableData(
+    // IndicateurFlatDataTable.buildFlatTableData(indicateur));
+    // } else if ("all".equals(tableFormat)) {
+    // dto.setPivotTableData(
+    // IndicateurPivotDataTable.buildPivotSheetData(indicateur));
+    // dto.setFlatTableData(
+    // IndicateurFlatDataTable.buildFlatTableData(indicateur));
+    // dto.setCrudTableData(
+    // IndicateurCrudDataTable.buildCrudTableData(indicateur));
+    // dto.setCreateTemplateData(
+    // IndicateurCrudDataTable.buildCreateTemplateData(indicateur));
+    // }
+    // }
+
+    // return dto;
+    // }
 }

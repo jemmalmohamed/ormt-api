@@ -132,39 +132,56 @@ public class IndicateurSeeder {
 
     @Transactional
     public void handleSourceIndicateur(String source, Indicateur indicateur) {
+        if (source == null || source.trim().isEmpty()) {
+            log.warn("Source is null or empty for indicateur {}", indicateur.getNom());
+            return;
+        }
+
+        String sourceKey = source.toLowerCase().trim();
+        Source sourceEntity = null;
+
+        // First, try to find existing source
         try {
-            String sourceKey = source.toLowerCase();
-            Source sourceEntity;
-            try {
-                sourceEntity = sourceService.findByAbreviation(sourceKey)
-                        .orElseGet(() -> {
-                            Source newSource = new Source();
-                            newSource.setNom(sourceKey);
-                            newSource.setDescription("");
-                            return sourceService.save(newSource);
-                        });
-            } catch (DataIntegrityViolationException | ConstraintViolationException ex) {
-                // Another thread/process created the source at the same time
-                log.warn("Source '{}' already exists (created concurrently). Fetching existing.", sourceKey);
-                sourceEntity = sourceService.findByAbreviation(sourceKey)
-                        .orElseThrow(() -> new RuntimeException("Source not found after duplicate key: " + sourceKey));
-            } catch (Exception ex) {
-                // Defensive: check if cause is constraint violation
-                Throwable cause = ex.getCause();
-                if (cause instanceof ConstraintViolationException) {
-                    log.warn("Source '{}' already exists (created concurrently, cause). Fetching existing.", sourceKey);
-                    sourceEntity = sourceService.findByAbreviation(sourceKey)
-                            .orElseThrow(
-                                    () -> new RuntimeException("Source not found after duplicate key: " + sourceKey));
-                } else {
-                    throw ex;
-                }
-            }
-            indicateur.setSource(sourceEntity);
-            indicateurService.save(indicateur);
+            sourceEntity = sourceService.findByAbreviation(sourceKey).orElse(null);
         } catch (Exception e) {
-            log.error("Error handling source for indicateur {}: {}", indicateur.getNom(), e.getMessage());
-            throw e;
+            log.warn("Error finding source '{}': {}", sourceKey, e.getMessage());
+        }
+
+        // If source doesn't exist, try to create it
+        if (sourceEntity == null) {
+            try {
+                Source newSource = new Source();
+                newSource.setNom(sourceKey);
+                newSource.setAbreviation(sourceKey);
+                newSource.setDescription("");
+                sourceEntity = sourceService.save(newSource);
+                log.info("Created new source: {}", sourceKey);
+            } catch (DataIntegrityViolationException | ConstraintViolationException ex) {
+                // Source was created concurrently, fetch it
+                log.info("Source '{}' was created concurrently, fetching existing one", sourceKey);
+                try {
+                    sourceEntity = sourceService.findByAbreviation(sourceKey).orElse(null);
+                } catch (Exception e) {
+                    log.warn("Failed to fetch existing source '{}' after concurrent creation: {}", sourceKey,
+                            e.getMessage());
+                }
+            } catch (Exception ex) {
+                log.warn("Failed to create source '{}': {}", sourceKey, ex.getMessage());
+            }
+        }
+
+        // Associate source with indicateur if we have a valid source
+        if (sourceEntity != null) {
+            try {
+                indicateur.setSource(sourceEntity);
+                indicateurService.save(indicateur);
+                log.debug("Successfully associated source '{}' with indicateur '{}'", sourceKey, indicateur.getNom());
+            } catch (Exception e) {
+                log.warn("Failed to associate source '{}' with indicateur '{}': {}", sourceKey, indicateur.getNom(),
+                        e.getMessage());
+            }
+        } else {
+            log.warn("Could not find or create source '{}' for indicateur '{}'", sourceKey, indicateur.getNom());
         }
     }
 

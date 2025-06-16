@@ -45,7 +45,7 @@ public class Domaine extends BaseEntity {
     private List<SousDomaine> sousDomaines;
 
     @Builder.Default
-    @OneToMany(mappedBy = "domaine", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "domaine", fetch = FetchType.LAZY)
     private List<EspaceDomaine> espaceDomaines = new ArrayList<>();
 
 }

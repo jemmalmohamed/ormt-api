@@ -55,13 +55,6 @@ public class Indicateur extends BaseEntity {
 
     private String regleCalcul;
 
-    @OneToMany(mappedBy = "indicateur", fetch = FetchType.EAGER)
-    private List<IndicateurDimension> indicateurDimensions;
-
-    @ManyToOne
-    @JoinColumn(name = "source_id")
-    private Source source;
-
     @Transient
     public List<Dimension> getDimensions() {
         return indicateurDimensions.stream()
@@ -69,12 +62,29 @@ public class Indicateur extends BaseEntity {
                 .collect(Collectors.toList());
     }
 
+    @OneToMany(mappedBy = "indicateur", fetch = FetchType.LAZY)
+    private List<IndicateurDimension> indicateurDimensions;
+
+    @ManyToOne
+    @JoinColumn(name = "source_id")
+    private Source source;
+
     @Builder.Default
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "indicateur_sous_domaine", joinColumns = @JoinColumn(name = "id_indicateur", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "id_sous_domaine", referencedColumnName = "id"))
     private List<SousDomaine> sousDomaines = new ArrayList<>();
 
-    @OneToMany(mappedBy = "indicateur", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "indicateur", fetch = FetchType.LAZY)
     private List<DonneeIndicateur> donnees;
+
+    @Transient
+    public List<Dimension> hasDonnees() {
+        return donnees != null ? donnees.stream()
+                .flatMap(donnee -> donnee.getValeurDimensions().stream())
+                .map(vd -> vd.getDimension())
+                .distinct()
+                .collect(Collectors.toList())
+                : new ArrayList<>();
+    }
 
 }

@@ -1,5 +1,3 @@
- 
-
 -- acteur
 CREATE TABLE
     IF NOT EXISTS source (
@@ -7,7 +5,7 @@ CREATE TABLE
         nom varchar(255) NOT NULL UNIQUE,
         description TEXT, 
         url VARCHAR(255),
-        abreviation VARCHAR(10),
+        abreviation VARCHAR(100),
         status_code INT NULL,
         created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
         last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
@@ -85,7 +83,7 @@ CREATE TABLE
         version BIGINT NOT NULL DEFAULT 0,
         created_by VARCHAR(50),
         last_modified_by VARCHAR(50),
-        CONSTRAINT fk_indicateur_dimension_indicateur FOREIGN KEY (id_indicateur) REFERENCES indicateur (id),
+        CONSTRAINT fk_indicateur_dimension_indicateur FOREIGN KEY (id_indicateur) REFERENCES indicateur (id) ON DELETE CASCADE ,
         CONSTRAINT fk_indicateur_dimension_dimension FOREIGN KEY (id_dimension) REFERENCES dimension (id)
     );
 
@@ -134,5 +132,4 @@ CREATE INDEX idx_indicateur_sous_domaine_sous_domaine ON indicateur_sous_domaine
 
 CREATE INDEX idx_indicateur_sous_domaine_composite ON indicateur_sous_domaine (id_indicateur, id_sous_domaine);
 
- 
- 
+

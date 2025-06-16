@@ -154,10 +154,10 @@ public class ChiffreCleServiceImpl extends BaseServiceImpl<ChiffreCle> implement
     }
 
     private void updateChiffreCleFields(ChiffreCle chiffrecle, ChiffreCleRequestDto dto) {
-        chiffrecle.setLibelle(dto.getLibelle());
+        chiffrecle.setLibelle(dto.getLibelle().toLowerCase());
         chiffrecle.setValeur(dto.getValeur());
-        chiffrecle.setUnite(dto.getUnite());
-        chiffrecle.setDescription(dto.getDescription());
+        chiffrecle.setUnite(dto.getUnite().toLowerCase());
+        chiffrecle.setDescription(dto.getDescription().toLowerCase());
         chiffrecle.setAccessType(dto.getAccessType());
         chiffrecle.setActif(dto.getActif());
     }
