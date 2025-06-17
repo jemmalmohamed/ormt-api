@@ -1,4 +1,4 @@
-package ma.org.ormt.modules.domaines.sousdomaine.dtos.dic;
+package ma.org.ormt.modules.domaines.sousdomaine.dtos.publicdto;
 
 import java.util.List;
 
@@ -9,8 +9,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import ma.org.ormt.core.commun.base.dto.BaseDto;
 import ma.org.ormt.core.commun.base.dto.Dto;
-import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDicDto;
+import ma.org.ormt.modules.domaines.domaine.dtos.summary.DomaineSummaryDto;
+import ma.org.ormt.modules.indicateurs.indicateur.dtos.detail.IndicateurDetailDto;
 
 @Setter
 @Getter
@@ -18,7 +20,7 @@ import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDicDto;
 @JsonIgnoreProperties(value = { "sousDomaine.id" }, allowGetters = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class SousDomaineDicDto extends Dto {
+public class SousDomainePublicDto extends Dto {
 
     private String nom;
 
@@ -26,7 +28,7 @@ public class SousDomaineDicDto extends Dto {
 
     private Boolean actif;
 
-    private List<IndicateurDicDto> indicateurs;
+    private List<IndicateurDetailDto> indicateurs;
 
-    private Dto domaine;
+    // private DomaineSummaryDto domaine;
 }

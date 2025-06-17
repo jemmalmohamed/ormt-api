@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
 import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.dtos.IndicateurDimensionDto;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDto;
 
@@ -21,7 +22,7 @@ public class IndicateurDetailDto extends IndicateurDto {
 
     private List<IndicateurDimensionDto> indicateurDimensions;
 
-    // private List<DonneeIndicateurDto> donnees;
+    private List<DonneeIndicateurDto> donnees;
 
     // Add table data - only included when requested
     @JsonInclude(JsonInclude.Include.NON_NULL)

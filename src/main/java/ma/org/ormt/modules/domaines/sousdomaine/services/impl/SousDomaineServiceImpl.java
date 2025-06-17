@@ -21,11 +21,14 @@ import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestDto;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestDtoMapper;
+import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDto;
+import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDtoMapper;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.repositories.SousDomaineRepository;
 import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
+import ma.org.ormt.modules.indicateurs.indicateur.dtos.detail.IndicateurDetailDto;
 
 @Service
 public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> implements SousDomaineService {
@@ -44,6 +47,9 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
 
     @Autowired
     private SousDomaineRequestDtoMapper sousDomaineRequestMapper;
+
+    @Autowired
+    private SousDomaineDtoMapper sousDomaineDtoMapper;
 
     static final String NOT_FOUND_STRING = "SousDomaine not found";
     static final String DOMAINE_NOT_FOUND = "Domaine not found";
@@ -161,6 +167,33 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
 
     private void validateSousDomaineDependencies(Long id) {
 
+    }
+
+    @Override
+    public SousDomaineDto getSousDomaineWithIndicateurTableData(Long id, String tableFormat) {
+        SousDomaine sousDomaine = findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("SousDomaine not found with id: " + id));
+
+        // Map to DTO first (this will use the IndicateurDetailDtoMapper with
+        // @AfterMapping)
+        SousDomaineDto dto = sousDomaineDtoMapper.mapToDto(sousDomaine);
+
+        // Now add table data to each indicateur in the DTO
+        if (tableFormat != null && !tableFormat.isEmpty() && dto.getIndicateurs() != null) {
+            for (IndicateurDetailDto indicateurDto : dto.getIndicateurs()) {
+                // Get the full indicateur with table data
+                IndicateurDetailDto indicateurWithTableData = indicateurService
+                        .getIndicateurWithTableData(indicateurDto.getId(), tableFormat);
+
+                // Copy table data fields
+                indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
+                indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
+                indicateurDto.setCrudTableData(indicateurWithTableData.getCrudTableData());
+                indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
+            }
+        }
+
+        return dto;
     }
 
 }

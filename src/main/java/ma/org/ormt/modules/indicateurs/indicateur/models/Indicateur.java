@@ -74,7 +74,7 @@ public class Indicateur extends BaseEntity {
     @JoinTable(name = "indicateur_sous_domaine", joinColumns = @JoinColumn(name = "id_indicateur", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "id_sous_domaine", referencedColumnName = "id"))
     private List<SousDomaine> sousDomaines = new ArrayList<>();
 
-    @OneToMany(mappedBy = "indicateur", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "indicateur", fetch = FetchType.EAGER)
     private List<DonneeIndicateur> donnees;
 
     @Transient

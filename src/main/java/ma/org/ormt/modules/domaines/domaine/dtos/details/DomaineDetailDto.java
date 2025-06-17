@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.modules.domaines.domaine.dtos.DomaineDto;
-import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDto;
+import ma.org.ormt.modules.domaines.sousdomaine.dtos.publicdto.SousDomainePublicDto;
 
 @Setter
 @Getter
@@ -18,6 +18,6 @@ import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDto;
 @JsonIgnoreProperties(value = { "domaine.id" }, allowGetters = true)
 public class DomaineDetailDto extends DomaineDto {
 
-    List<SousDomaineDto> sousDomaines;
+    List<SousDomainePublicDto> sousDomaines;
 
 }

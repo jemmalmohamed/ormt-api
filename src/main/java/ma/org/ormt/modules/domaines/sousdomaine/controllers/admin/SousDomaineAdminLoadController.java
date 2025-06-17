@@ -28,8 +28,6 @@ import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDto;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDtoMapper;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.details.SousDomaineDetailsDto;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.details.SousDomaineDetailsDtoMapper;
-import ma.org.ormt.modules.domaines.sousdomaine.dtos.dic.SousDomaineDicDto;
-import ma.org.ormt.modules.domaines.sousdomaine.dtos.dic.SousDomaineDicDtoMapper;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
 
@@ -43,7 +41,6 @@ public class SousDomaineAdminLoadController extends BaseController<SousDomaine> 
         private final SousDomaineService sousDomaineService;
         private final SousDomaineDtoMapper sousDomaineDtoMapper;
         private final SousDomaineDetailsDtoMapper sousDomaineDetailMapper;
-        private final SousDomaineDicDtoMapper sousDomaineDicDtoMapper;
 
         @Operation(summary = "Get all " + ENTITY_NAME + "s")
         @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Ok", content = {
@@ -92,31 +89,12 @@ public class SousDomaineAdminLoadController extends BaseController<SousDomaine> 
 
         }
 
-        @Operation(summary = "Get " + ENTITY_NAME + " by id")
-        @ApiResponses(value = {
-                        @ApiResponse(responseCode = "200", description = "Ok", content = {
-                                        @Content(mediaType = "application/json", schema = @Schema(implementation = SousDomaineDto.class)) }),
-                        @ApiResponse(responseCode = "404", description = ENTITY_NAME
-                                        + " not found", content = @Content(mediaType = "ErrorResponse")),
-                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
-        })
-        @GetMapping("/{domaineId}/sous-domaines/{id}/dic")
-        @PreAuthorize("hasAuthority('domaine:read')")
-        public ResponseEntity<RestResponse<SousDomaineDicDto>> getSousDomaineDic(
-                        @PathVariable("domaineId") Long domaineId, @PathVariable("id") Long id) {
-                SousDomaine sousDomaine = sousDomaineService.findById(id).orElseThrow(EntityNotFoundException::new);
-                return buildResponseEntity(sousDomaine, SousDomaineDicDto.class, HttpStatus.OK);
-
-        }
-
         @Override
         protected <DTO> DTO mapToDto(SousDomaine entity, Class<DTO> dtoClass) {
                 if (dtoClass == SousDomaineDetailsDto.class) {
                         return dtoClass.cast(sousDomaineDetailMapper.mapToDto(entity));
                 } else if (dtoClass == SousDomaineDto.class) {
                         return dtoClass.cast(sousDomaineDtoMapper.mapToDto(entity));
-                } else if (dtoClass == SousDomaineDicDto.class) {
-                        return dtoClass.cast(sousDomaineDicDtoMapper.mapToDto(entity));
                 }
                 throw new IllegalArgumentException("Unsupported DTO type: " + dtoClass.getName());
         }

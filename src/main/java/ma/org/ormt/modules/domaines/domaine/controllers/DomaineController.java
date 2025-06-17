@@ -1,6 +1,7 @@
 package ma.org.ormt.modules.domaines.domaine.controllers;
 
 import java.util.List;
+import io.swagger.v3.oas.annotations.Parameter;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -93,7 +95,8 @@ public class DomaineController extends BaseController<Domaine> {
         @PreAuthorize("hasAuthority('domaine:read')")
         public ResponseEntity<RestResponse<DomaineDetailDto>> getDomaine(
                         @PathVariable("espaceId") Long espaceId,
-                        @PathVariable("id") Long id) {
+                        @PathVariable("id") Long id,
+                        @Parameter(description = "Table format for indicateurs: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'", example = "crud") @RequestParam(value = "tableFormat", required = false) String tableFormat) {
 
                 // Check if the user has access to the specified espace
                 boolean hasAccess = hasResourceAccess(espaceId, "espace", "lecture");
@@ -102,9 +105,20 @@ public class DomaineController extends BaseController<Domaine> {
                 if (!hasAccess || !existsInEspace) {
                         return createForbiddenResponse();
                 }
-                Domaine domaine = domaineService.findById(id).orElseThrow(EntityNotFoundException::new);
 
-                return buildResponseEntity(domaine, DomaineDetailDto.class, HttpStatus.OK);
+                DomaineDetailDto domaineDetail;
+                if (tableFormat != null && !tableFormat.isEmpty()) {
+                        // Use service method that adds table data
+                        domaineDetail = domaineService.getDomaineWithTableData(id, tableFormat);
+                } else {
+                        // Use existing logic for backward compatibility
+                        Domaine domaine = domaineService.findById(id).orElseThrow(EntityNotFoundException::new);
+                        domaineDetail = domaineDetailMapper.mapToDto(domaine);
+                }
+
+                return ResponseEntity.ok(RestResponse.<DomaineDetailDto>builder()
+                                .data(domaineDetail)
+                                .build());
         }
 
         @Override
