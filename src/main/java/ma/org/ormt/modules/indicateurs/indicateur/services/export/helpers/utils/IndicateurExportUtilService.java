@@ -23,7 +23,7 @@ public class IndicateurExportUtilService {
         DOMAINES("Domaines"),
         SOUS_DOMAINES("Sous domaines"),
         ID("id"),
-        INDICATEUR("Indicateur"),
+        NOM("Nom"),
         UNITE("Unité"),
         CATEGORIE("Catégorie"),
         SOURCE("Source"),

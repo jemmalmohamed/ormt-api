@@ -127,7 +127,7 @@ public class IndicateurExportSimpleService {
                             indicateur.getId() != null ? indicateur.getId().toString()
                                     : "");
                     break;
-                case INDICATEUR:
+                case NOM:
                     ExcelUtils.createCell(row, cellIndex,
                             StringUtils.hasText(indicateur.getNom()) ? indicateur.getNom()
                                     : "");

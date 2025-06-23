@@ -123,7 +123,7 @@ public class RoleAccesServiceImpl extends BaseServiceImpl<RoleAcces> implements 
             roleAcces = new RoleAcces();
         }
         roleAcces.setNiveauAcces(dto.getNiveauAcces());
-        roleAcces.setRoleCode(dto.getRoleCode().toLowerCase());
+        roleAcces.setRoleCode("role_" + dto.getRoleCode().toLowerCase());
         roleAcces.setDescription(dto.getDescription());
         roleAcces.setTypeRessource(dto.getTypeRessource());
         roleAcces.setRessourceId(Long.valueOf(dto.getRessourceId()));

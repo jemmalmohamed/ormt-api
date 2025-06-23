@@ -1,7 +1,6 @@
 package ma.org.ormt.modules.domaines.sousdomaine.dtos;
 
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
 import ma.org.ormt.core.commun.base.mapper.BaseDtoMapper;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;

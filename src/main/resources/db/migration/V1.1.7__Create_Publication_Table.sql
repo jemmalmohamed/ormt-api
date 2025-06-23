@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS publication (
+    id BIGSERIAL PRIMARY KEY,
+    titre VARCHAR(255) NOT NULL,
+    description TEXT,
+    auteur VARCHAR(255),
+    date_publication DATE,
+    fichier_url VARCHAR(500),
+    nom_fichier VARCHAR(255),
+    taille_fichier BIGINT,
+    categorie VARCHAR(100),
+    tags TEXT,
+    nombre_telechargements INTEGER DEFAULT 0,
+    status_code INT NULL,
+    created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+    version BIGINT NOT NULL DEFAULT 0,
+    created_by VARCHAR(50),
+    last_modified_by VARCHAR(50)
+);

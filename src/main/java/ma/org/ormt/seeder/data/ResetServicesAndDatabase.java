@@ -50,6 +50,7 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
         truncateTable("dimension");
         truncateTable("indicateur");
         truncateTable("partenaire");
+        truncateTable("publication");
 
     }
 

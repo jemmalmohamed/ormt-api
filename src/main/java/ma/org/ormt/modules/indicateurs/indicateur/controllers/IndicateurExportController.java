@@ -22,7 +22,7 @@ import ma.org.ormt.modules.indicateurs.indicateur.services.export.single.Indicat
 import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @RestController
-@RequestMapping("api/v1/indicateurs")
+@RequestMapping("api/v1/admin/indicateurs")
 @RequiredArgsConstructor
 public class IndicateurExportController {
 
