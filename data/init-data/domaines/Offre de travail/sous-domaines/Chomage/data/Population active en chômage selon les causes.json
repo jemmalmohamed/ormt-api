@@ -2,154 +2,154 @@
     "indicateur": "Population active en chômage selon les causes",
     "data": [
         {
-            "cause": "Arrêt de l’activité de l’établissement, licenciement",
+            "cause": "Arrêt de l'activité de l'établissement, licenciement",
             "annuel": "2019",
-            "valeur": 200
+            "valeur": 200000
         },
         {
-            "cause": "Arrêt de l’activité de l’établissement, licenciement",
+            "cause": "Arrêt de l'activité de l'établissement, licenciement",
             "annuel": "2020",
-            "valeur": 372
+            "valeur": 372000
         },
         {
-            "cause": "Arrêt de l’activité de l’établissement, licenciement",
+            "cause": "Arrêt de l'activité de l'établissement, licenciement",
             "annuel": "2021",
-            "valeur": 437
+            "valeur": 437000
         },
         {
-            "cause": "Arrêt de l’activité de l’établissement, licenciement",
+            "cause": "Arrêt de l'activité de l'établissement, licenciement",
             "annuel": "2022",
-            "valeur": 375
+            "valeur": 375000
         },
         {
-            "cause": "Arrêt de l’activité de l’établissement, licenciement",
+            "cause": "Arrêt de l'activité de l'établissement, licenciement",
             "annuel": "2023",
-            "valeur": 427
+            "valeur": 427000
         },
         {
-            "cause": "Cessation d’activité indépendante, saisonnière ou pour raison de revenu",
+            "cause": "Cessation d'activité indépendante, saisonnière ou pour raison de revenu",
             "annuel": "2019",
-            "valeur": 200
+            "valeur": 200000
         },
         {
-            "cause": "Cessation d’activité indépendante, saisonnière ou pour raison de revenu",
+            "cause": "Cessation d'activité indépendante, saisonnière ou pour raison de revenu",
             "annuel": "2020",
-            "valeur": 269
+            "valeur": 269000
         },
         {
-            "cause": "Cessation d’activité indépendante, saisonnière ou pour raison de revenu",
+            "cause": "Cessation d'activité indépendante, saisonnière ou pour raison de revenu",
             "annuel": "2021",
-            "valeur": 284
+            "valeur": 284000
         },
         {
-            "cause": "Cessation d’activité indépendante, saisonnière ou pour raison de revenu",
+            "cause": "Cessation d'activité indépendante, saisonnière ou pour raison de revenu",
             "annuel": "2022",
-            "valeur": 273
+            "valeur": 273000
         },
         {
-            "cause": "Cessation d’activité indépendante, saisonnière ou pour raison de revenu",
+            "cause": "Cessation d'activité indépendante, saisonnière ou pour raison de revenu",
             "annuel": "2023",
-            "valeur": 332
+            "valeur": 332000
         },
         {
-            "cause": "Fin d’études ou de formation",
+            "cause": "Fin d'études ou de formation",
             "annuel": "2019",
-            "valeur": 496
+            "valeur": 496000
         },
         {
-            "cause": "Fin d’études ou de formation",
+            "cause": "Fin d'études ou de formation",
             "annuel": "2020",
-            "valeur": 480
+            "valeur": 480000
         },
         {
-            "cause": "Fin d’études ou de formation",
+            "cause": "Fin d'études ou de formation",
             "annuel": "2021",
-            "valeur": 550
+            "valeur": 550000
         },
         {
-            "cause": "Fin d’études ou de formation",
+            "cause": "Fin d'études ou de formation",
             "annuel": "2022",
-            "valeur": 585
+            "valeur": 585000
         },
         {
-            "cause": "Fin d’études ou de formation",
+            "cause": "Fin d'études ou de formation",
             "annuel": "2023",
-            "valeur": 605
+            "valeur": 605000
         },
         {
-            "cause": "Arrivée à l’âge de travailler",
+            "cause": "Arrivée à l'âge de travailler",
             "annuel": "2019",
-            "valeur": 112
+            "valeur": 112000
         },
         {
-            "cause": "Arrivée à l’âge de travailler",
+            "cause": "Arrivée à l'âge de travailler",
             "annuel": "2020",
-            "valeur": 114
+            "valeur": 114000
         },
         {
-            "cause": "Arrivée à l’âge de travailler",
+            "cause": "Arrivée à l'âge de travailler",
             "annuel": "2021",
-            "valeur": 140
+            "valeur": 140000
         },
         {
-            "cause": "Arrivée à l’âge de travailler",
+            "cause": "Arrivée à l'âge de travailler",
             "annuel": "2022",
-            "valeur": 143
+            "valeur": 143000
         },
         {
-            "cause": "Arrivée à l’âge de travailler",
+            "cause": "Arrivée à l'âge de travailler",
             "annuel": "2023",
-            "valeur": 174
+            "valeur": 174000
         },
         {
             "cause": "Autres causes",
             "annuel": "2019",
-            "valeur": 95
+            "valeur": 95000
         },
         {
             "cause": "Autres causes",
             "annuel": "2020",
-            "valeur": 189
+            "valeur": 189000
         },
         {
             "cause": "Autres causes",
             "annuel": "2021",
-            "valeur": 98
+            "valeur": 98000
         },
         {
             "cause": "Autres causes",
             "annuel": "2022",
-            "valeur": 68
+            "valeur": 68000
         },
         {
             "cause": "Autres causes",
             "annuel": "2023",
-            "valeur": 44
+            "valeur": 44000
         },
         {
             "cause": "Ensemble",
             "annuel": "2019",
-            "valeur": 1107
+            "valeur": 1107000
         },
         {
             "cause": "Ensemble",
             "annuel": "2020",
-            "valeur": 1429
+            "valeur": 1429000
         },
         {
             "cause": "Ensemble",
             "annuel": "2021",
-            "valeur": 1508
+            "valeur": 1508000
         },
         {
             "cause": "Ensemble",
             "annuel": "2022",
-            "valeur": 1442
+            "valeur": 1442000
         },
         {
             "cause": "Ensemble",
             "annuel": "2023",
-            "valeur": 1580
+            "valeur": 1580000
         }
     ]
 }

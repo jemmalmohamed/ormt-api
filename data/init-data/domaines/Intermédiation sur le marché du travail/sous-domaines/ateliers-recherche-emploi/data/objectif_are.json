@@ -3,27 +3,27 @@
     "data": [
         {
             "annuel": "2019",
-            "valeur": 75
+            "valeur": 75000
         },
         {
             "annuel": "2020",
-            "valeur": 100
+            "valeur": 100000
         },
         {
             "annuel": "2021",
-            "valeur": 100
+            "valeur": 100000
         },
         {
             "annuel": "2022",
-            "valeur": 100
+            "valeur": 100000
         },
         {
             "annuel": "2023",
-            "valeur": 110
+            "valeur": 110000
         },
         {
             "annuel": "2024",
-            "valeur": 120
+            "valeur": 120000
         }
     ]
 }

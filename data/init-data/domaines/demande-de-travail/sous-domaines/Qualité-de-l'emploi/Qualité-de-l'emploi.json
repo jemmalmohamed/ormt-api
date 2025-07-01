@@ -351,13 +351,13 @@
     },
     {
       "nom": "salariés (stables) déclarés à la cnss par secteur d'activité",
-      "description": "salariés (stables) déclarés à la cnss par secteur d'activit - cnss",
+      "description": "salariés (stables) déclarés à la cnss par secteur d'activité - cnss",
       "categorie": "emploi",
       "abreviation": "",
       "typeTb": "grand public",
       "source": "cnss",
       "reglecalcul": "",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2019-2023",
       "roleAcces": [
         {

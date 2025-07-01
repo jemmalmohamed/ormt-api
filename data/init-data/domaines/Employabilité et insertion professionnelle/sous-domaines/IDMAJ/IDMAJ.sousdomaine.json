@@ -23,7 +23,7 @@
       "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2019-2024",
       "description": "Nombre total des bénéficiaires IDMAJ, y compris le PI.",
       "dimensions": [

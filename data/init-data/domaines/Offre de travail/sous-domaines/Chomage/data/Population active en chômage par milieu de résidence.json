@@ -4,77 +4,77 @@
         {
             "milieu": "urbain",
             "annuel": "2019",
-            "valeur": 928
+            "valeur": 928000
         },
         {
             "milieu": "urbain",
             "annuel": "2020",
-            "valeur": 1152
+            "valeur": 1152000
         },
         {
             "milieu": "urbain",
             "annuel": "2021",
-            "valeur": 1271
+            "valeur": 1271000
         },
         {
             "milieu": "urbain",
             "annuel": "2022",
-            "valeur": 1201
+            "valeur": 1201000
         },
         {
             "milieu": "urbain",
             "annuel": "2023",
-            "valeur": 1300
+            "valeur": 1300000
         },
         {
             "milieu": "rural",
             "annuel": "2019",
-            "valeur": 179
+            "valeur": 179000
         },
         {
             "milieu": "rural",
             "annuel": "2020",
-            "valeur": 277
+            "valeur": 277000
         },
         {
             "milieu": "rural",
             "annuel": "2021",
-            "valeur": 237
+            "valeur": 237000
         },
         {
             "milieu": "rural",
             "annuel": "2022",
-            "valeur": 241
+            "valeur": 241000
         },
         {
             "milieu": "rural",
             "annuel": "2023",
-            "valeur": 280
+            "valeur": 280000
         },
         {
             "milieu": "Ensemble",
             "annuel": "2019",
-            "valeur": 1107
+            "valeur": 1107000
         },
         {
             "milieu": "Ensemble",
             "annuel": "2020",
-            "valeur": 1429
+            "valeur": 1429000
         },
         {
             "milieu": "Ensemble",
             "annuel": "2021",
-            "valeur": 1508
+            "valeur": 1508000
         },
         {
             "milieu": "Ensemble",
             "annuel": "2022",
-            "valeur": 1442
+            "valeur": 1442000
         },
         {
             "milieu": "Ensemble",
             "annuel": "2023",
-            "valeur": 1580
+            "valeur": 1580000
         }
     ]
 }

@@ -24,7 +24,7 @@
       "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2019-2024",
       "dimensions": [
         {
@@ -71,7 +71,7 @@
       ],
       "actif": true,
       "reglecalcul": "",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2019-2024",
       "dimensions": [
         {
@@ -118,7 +118,7 @@
       "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2019-2024",
       "dimensions": [
         {
@@ -165,7 +165,7 @@
       "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2019-2024",
       "dimensions": [
         {
@@ -212,7 +212,7 @@
       "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2019-2024",
       "dimensions": [
         {
@@ -259,7 +259,7 @@
       "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2019-2024",
       "dimensions": [
         {
@@ -306,7 +306,7 @@
       "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2019-2024",
       "dimensions": [
         {
@@ -353,7 +353,7 @@
       "typeTb": "décisionnel / grand public",
       "source": "hcp",
       "reglecalcul": "",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2019-2024",
       "dimensions": [
         {
@@ -391,7 +391,7 @@
       "typeTb": "décisionnel / grand public",
       "source": "cnss",
       "reglecalcul": "",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2019-2023",
       "dimensions": [
         {
@@ -438,7 +438,7 @@
       "typeTb": "décisionnel / grand public",
       "source": "cnss",
       "reglecalcul": "",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2019-2023",
       "dimensions": [
         {
@@ -485,7 +485,7 @@
       "typeTb": "décisionnel",
       "source": "cnss",
       "reglecalcul": "",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2019-2023",
       "dimensions": [
         {
@@ -523,7 +523,7 @@
       "typeTb": "décisionnel",
       "source": "cnss",
       "reglecalcul": "",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2019-2023",
       "dimensions": [
         {
@@ -570,7 +570,7 @@
       "typeTb": "décisionnel",
       "source": "cnss",
       "reglecalcul": "",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2019-2023",
       "dimensions": [
         {
@@ -617,7 +617,7 @@
       "typeTb": "décisionnel",
       "source": "hcp-cnss",
       "reglecalcul": "et-s-idp",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2023",
       "dimensions": [
         {

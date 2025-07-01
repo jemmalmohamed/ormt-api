@@ -23,7 +23,7 @@
             "actif": true,
             "typeTb": "décisionnel / grand public",
             "source": "hcp",
-            "unite": "milliers",
+            "unite": "",
             "reglecalcul": "",
             "periode": "2019-2023",
             "dimensions": [
@@ -62,7 +62,7 @@
             "typeTb": "décisionnel / grand public",
             "source": "hcp",
             "reglecalcul": "",
-            "unite": "milliers",
+            "unite": "",
             "periode": "2019-2023",
             "dimensions": [
                 {
@@ -109,7 +109,7 @@
             "typeTb": "décisionnel / grand public",
             "source": "hcp",
             "reglecalcul": "",
-            "unite": "milliers",
+            "unite": "",
             "periode": "2019-2023",
             "dimensions": [
                 {
@@ -156,7 +156,7 @@
             "typeTb": "décisionnel / grand public",
             "source": "hcp",
             "reglecalcul": "",
-            "unite": "milliers",
+            "unite": "",
             "periode": "2019-2023",
             "dimensions": [
                 {
@@ -193,7 +193,7 @@
             "actif": true,
             "typeTb": "décisionnel / grand public",
             "source": "hcp",
-            "unite": "milliers",
+            "unite": "",
             "reglecalcul": "",
             "periode": "2019-2023",
             "dimensions": [
@@ -233,7 +233,7 @@
             "source": "hcp",
             "reglecalcul": "",
             "periode": "2019-2023",
-            "unite": "milliers",
+            "unite": "",
             "dimensions": [
                 {
                     "nom": "experience",
@@ -270,7 +270,7 @@
             "typeTb": "décisionnel / grand public",
             "source": "hcp",
             "reglecalcul": "",
-            "unite": "milliers",
+            "unite": "",
             "periode": "2019-2023",
             "dimensions": [
                 {

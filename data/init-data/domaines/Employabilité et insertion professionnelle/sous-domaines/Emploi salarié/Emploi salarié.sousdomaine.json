@@ -81,7 +81,7 @@
       "typeTb": "décisionnel",
       "source": "anapec",
       "reglecalcul": "",
-      "unite": "milliers",
+      "unite": "",
       "periode": "2019-2024",
       "description": "Nombre des bénéficiaires de l'emploi salarié.",
       "dimensions": [
