@@ -10,6 +10,7 @@ import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.detail.IndicateurDetailDto;
 
 public interface IndicateurService extends BaseService<Indicateur> {
+
     Optional<Indicateur> findByNom(String nom);
 
     Page<Indicateur> getEntityList(QueryParams requestParams);

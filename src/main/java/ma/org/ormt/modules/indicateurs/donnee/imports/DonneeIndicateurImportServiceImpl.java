@@ -1,4 +1,4 @@
-package ma.org.ormt.modules.indicateurs.indicateur.services.imports;
+package ma.org.ormt.modules.indicateurs.donnee.imports;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -20,10 +20,10 @@ import ma.org.ormt.modules.indicateurs.indicateur.helpers.ImportXlsResult;
 @Service
 @RequiredArgsConstructor
 @Log4j2
-public class IndicateurImportServiceImpl implements IndicateurImportService {
+public class DonneeIndicateurImportServiceImpl implements DonneeIndicateurImportService {
 
     @Override
-    public ImportXlsResult importIndicateurFromExcel(InputStream inputStream, String sheetName) {
+    public ImportXlsResult parseIndicateurDonneeFromExcel(InputStream inputStream, String sheetName) {
         List<String> errors = new ArrayList<>();
         List<ImportXlsResult.ImportedRow> rowDataList = new ArrayList<>();
         int successCount = 0;

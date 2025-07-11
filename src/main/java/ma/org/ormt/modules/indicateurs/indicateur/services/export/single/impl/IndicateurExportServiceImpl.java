@@ -9,23 +9,20 @@ import org.springframework.transaction.annotation.Transactional;
 
 import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
 import ma.org.ormt.core.commun.base.service.SpecificationService;
-import ma.org.ormt.core.validators.ObjectsValidator;
 import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
 import ma.org.ormt.modules.indicateurs.donnee.repositories.DonneeIndicateurRepository;
-import ma.org.ormt.modules.indicateurs.indicateur.dtos.export.IndicateurExportRequest;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
-import ma.org.ormt.modules.indicateurs.indicateur.services.export.single.IndicateurExportService;
-import ma.org.ormt.modules.indicateurs.indicateur.services.export.single.formats.xls.IndicateurExportExcelService;
+import ma.org.ormt.modules.indicateurs.indicateur.services.export.dtos.IndicateurExportRequestDto;
+import ma.org.ormt.modules.indicateurs.indicateur.services.export.single.IndicateurSingleExportService;
+import ma.org.ormt.modules.indicateurs.indicateur.services.export.single.formats.xls.IndicateurSingleExportExcelService;
 
 @Service
 @Transactional
-public class IndicateurExportServiceImpl extends BaseServiceImpl<DonneeIndicateur> implements IndicateurExportService {
+public class IndicateurExportServiceImpl extends BaseServiceImpl<DonneeIndicateur>
+        implements IndicateurSingleExportService {
 
     @Autowired
-    private IndicateurExportExcelService excelService;
-
-    @Autowired
-    private ObjectsValidator<IndicateurExportRequest> validator;
+    private IndicateurSingleExportExcelService excelService;
 
     @Autowired
     public IndicateurExportServiceImpl(
@@ -35,21 +32,26 @@ public class IndicateurExportServiceImpl extends BaseServiceImpl<DonneeIndicateu
     }
 
     /**
-     * Exporte les données d'un indicateur selon le format et les options de la
-     * requête
+     * Enhanced export method using advanced export options
      */
-    public ResponseEntity<byte[]> exportIndicateurDonnees(Indicateur indicateur,
-            IndicateurExportRequest request)
-            throws IOException {
-        validator.validate(request);
+    @Override
+    public ResponseEntity<byte[]> exportIndicateurWithOptions(Indicateur indicateur,
+            IndicateurExportRequestDto exportRequest) throws IOException {
+
         if (indicateur == null) {
             return ResponseEntity.badRequest().body(new byte[0]);
         }
 
-        switch (request.getFormat()) {
-            case "xlsx":
-                return excelService.export(indicateur, request);
+        // Validate export request
+        if (exportRequest.getFormat() == null) {
+            exportRequest.setFormat(IndicateurExportRequestDto.ExportFormat.EXCEL);
+        }
 
+        switch (exportRequest.getFormat()) {
+            case EXCEL:
+                return excelService.exportIndicateurWithOptions(indicateur, exportRequest);
+            case CSV:
+                throw new UnsupportedOperationException("CSV export not yet implemented for single indicateur");
             default:
                 return ResponseEntity.badRequest().body(new byte[0]);
         }

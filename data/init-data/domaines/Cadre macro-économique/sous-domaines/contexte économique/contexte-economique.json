@@ -11,7 +11,7 @@
     "indicateurs": [
         {
             "nom": "produit intérieur brut aux prix courants",
-            "categorie": "macroéconomie",
+            "categorie": "contexte économique",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -49,7 +49,7 @@
         },
         {
             "nom": "taux de croissance du pib en volume",
-            "categorie": "macroéconomie",
+            "categorie": "contexte économique",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -87,7 +87,7 @@
         },
         {
             "nom": "produit intérieur brut par habitant (aux prix courants) par région en dh",
-            "categorie": "macroéconomie",
+            "categorie": "contexte économique",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -125,7 +125,7 @@
         },
         {
             "nom": "valeur ajoutée par branche d'activité aux prix courants",
-            "categorie": "macroéconomie",
+            "categorie": "contexte économique",
             "abreviation": "",
             "roleAcces": [
                 {

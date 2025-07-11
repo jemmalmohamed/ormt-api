@@ -21,13 +21,13 @@ import ma.org.ormt.modules.indicateurs.indicateur.services.export.multiple.Indic
 import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @RestController
-@RequestMapping("api/v1/admin/indicateurs/audit")
+@RequestMapping("api/v1/admin/indicateurs")
 @RequiredArgsConstructor
-public class IndicateurAdminExportController {
+public class IndicateurAdminAuditExportController {
 
         private final IndicateurService indicateurService;
 
-        private final IndicateurExportMultipleService indicateurExportService;
+        private final IndicateurExportMultipleService indicateurExportMultipleService;
 
         @Operation(summary = "Exporter les indicateurs avec options personnalisées")
         @ApiResponses(value = {
@@ -38,11 +38,23 @@ public class IndicateurAdminExportController {
         @PostMapping("/export/with-options")
         @PreAuthorize("hasAuthority('indicateur:list')")
         @ResponseBody
-        public ResponseEntity<byte[]> exportIndicateursWithOptions(
+        public ResponseEntity<byte[]> exportIndicateurListWithOptions(
                         @RequestBody IndicateurExportRequestDto exportRequest) throws Exception {
-                List<Indicateur> indicateurs = indicateurService.findAll();
-                return indicateurExportService.exportIndicateursWithOptions(indicateurs, exportRequest);
+                List<Indicateur> indicateurs;
+
+                // Si des IDs spécifiques sont fournis, récupérer uniquement ces indicateurs
+                if (exportRequest.getIndicateurIds() != null && !exportRequest.getIndicateurIds().isEmpty()) {
+                        indicateurs = indicateurService.findAllById(exportRequest.getIndicateurIds());
+                } else {
+                        // Sinon, récupérer tous les indicateurs
+                        indicateurs = indicateurService.findAll();
+                }
+
+                return indicateurExportMultipleService.exportIndicateurListWithOptions(indicateurs, exportRequest);
         }
+
+        // Exporter les indicateurs avec options détaillées par sheet
+        // Cette méthode permet d'exporter les indicateurs avec des options détaillées
 
         @Operation(summary = "Exporter les indicateurs avec options détaillées par sheet")
         @ApiResponses(value = {
@@ -53,10 +65,18 @@ public class IndicateurAdminExportController {
         @PostMapping("/export/details/with-options")
         @PreAuthorize("hasAuthority('indicateur:list')")
         @ResponseBody
-        public ResponseEntity<byte[]> exportIndicateurParSheetWithOptions(
+        public ResponseEntity<byte[]> exportIndicateursParSheetWithOptions(
                         @RequestBody IndicateurExportRequestDto exportRequest) throws Exception {
-                List<Indicateur> indicateurs = indicateurService.findAll();
-                return indicateurExportService.exportIndicateursParSheetWithOptions(indicateurs, exportRequest);
+                List<Indicateur> indicateurs;
+                // Si des IDs spécifiques sont fournis, récupérer uniquement ces indicateurs
+                if (exportRequest.getIndicateurIds() != null && !exportRequest.getIndicateurIds().isEmpty()) {
+                        indicateurs = indicateurService.findAllById(exportRequest.getIndicateurIds());
+                } else {
+                        // Sinon, récupérer tous les indicateurs
+                        indicateurs = indicateurService.findAll();
+                }
+
+                return indicateurExportMultipleService.exportIndicateursParSheetWithOptions(indicateurs, exportRequest);
         }
 
 }

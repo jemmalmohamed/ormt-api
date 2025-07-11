@@ -7,74 +7,12 @@ import org.springframework.stereotype.Component;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.meta.models.MetaDataRow;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.meta.models.MetaDataSection;
-import ma.org.ormt.modules.indicateurs.indicateur.services.export.meta.models.MetaDataTable;
 
 /**
  * Builder for creating structured metadata tables from Indicateur data
  */
 @Component
 public class MetaDataTableBuilder {
-
-        /**
-         * Builds a complete metadata table with all sections
-         */
-        public MetaDataTable buildCompleteMetaDataTable(Indicateur indicateur) {
-                MetaDataTable table = new MetaDataTable();
-
-                table.addSection(buildInformationSection(indicateur));
-                table.addSection(buildConfigurationSection(indicateur));
-                table.addSection(buildDataStatsSection(indicateur));
-
-                return table;
-        }
-
-        /**
-         * Builds basic information section (merged with descriptive information)
-         */
-        public MetaDataSection buildInformationSection(Indicateur indicateur) {
-                MetaDataSection section = new MetaDataSection("Informations de base");
-
-                // Basic identification information
-                section.addRow(new MetaDataRow("ID",
-                                indicateur != null && indicateur.getId() != null ? String.valueOf(indicateur.getId())
-                                                : ""));
-
-                section.addRow(new MetaDataRow("Nom de l'indicateur",
-                                indicateur != null && indicateur.getNom() != null ? indicateur.getNom() : ""));
-
-                section.addRow(new MetaDataRow("Abréviation",
-                                indicateur != null && indicateur.getAbreviation() != null ? indicateur.getAbreviation()
-                                                : ""));
-
-                section.addRow(new MetaDataRow("Source",
-                                (indicateur != null && indicateur.getSource() != null &&
-                                                indicateur.getSource().getNom() != null)
-                                                                ? indicateur.getSource().getNom()
-                                                                : ""));
-
-                section.addRow(new MetaDataRow("Actif",
-                                (indicateur != null && indicateur.getActif() != null)
-                                                ? (indicateur.getActif() ? "Oui" : "Non")
-                                                : "Non défini"));
-
-                // Descriptive information (merged from descriptive section)
-                section.addRow(new MetaDataRow("Description",
-                                indicateur != null && indicateur.getDescription() != null ? indicateur.getDescription()
-                                                : ""));
-
-                section.addRow(new MetaDataRow("Règle de calcul",
-                                indicateur != null && indicateur.getRegleCalcul() != null ? indicateur.getRegleCalcul()
-                                                : ""));
-
-                section.addRow(new MetaDataRow("Unité",
-                                indicateur != null && indicateur.getUnite() != null ? indicateur.getUnite() : ""));
-
-                section.addRow(new MetaDataRow("Catégorie",
-                                indicateur != null && indicateur.getCategorie() != null ? indicateur.getCategorie()
-                                                : ""));
-
-                return section;
-        }
 
         /**
          * Builds configuration section
@@ -130,11 +68,13 @@ public class MetaDataTableBuilder {
          *                        "DESCRIPTION", "SOURCE", etc.)
          * @return MetaDataSection with only the requested fields
          */
-        public MetaDataSection buildSelectiveInformationSection(Indicateur indicateur, List<String> fieldsToInclude) {
+        public MetaDataSection buildInformationSection(Indicateur indicateur, List<String> fieldsToInclude) {
                 MetaDataSection section = new MetaDataSection("Informations de base");
 
+                // If no specific fields requested, include all fields by default
                 if (fieldsToInclude == null || fieldsToInclude.isEmpty()) {
-                        return buildInformationSection(indicateur);
+                        fieldsToInclude = List.of("ID", "NOM", "ABREVIATION", "SOURCE", "ACTIF",
+                                        "DESCRIPTION", "REGLE_CALCUL", "UNITE", "CATEGORIE");
                 }
 
                 // Add only requested fields
@@ -148,7 +88,7 @@ public class MetaDataTableBuilder {
                                         break;
                                 case "NOM":
                                 case "NAME":
-                                        section.addRow(new MetaDataRow("Nom de l'indicateur",
+                                        section.addRow(new MetaDataRow("Indicateur",
                                                         indicateur != null && indicateur.getNom() != null
                                                                         ? indicateur.getNom()
                                                                         : ""));

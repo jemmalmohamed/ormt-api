@@ -44,18 +44,10 @@ public class IndicateurExportMultipleServiceImpl implements IndicateurExportMult
     private IndicateurExportUtilService utilService;
 
     /**
-     * Export simple pour compatibilité
-     */
-    @Override
-    public ResponseEntity<byte[]> exportIndicateursAudit(List<Indicateur> indicateurs) throws IOException {
-        return exportIndicateursWithOptions(indicateurs, IndicateurExportRequestDto.builder().build());
-    }
-
-    /**
      * Exporte les indicateurs selon les options spécifiées (format tableau simple)
      */
     @Override
-    public ResponseEntity<byte[]> exportIndicateursWithOptions(List<Indicateur> indicateurs,
+    public ResponseEntity<byte[]> exportIndicateurListWithOptions(List<Indicateur> indicateurs,
             IndicateurExportRequestDto exportRequest) throws IOException {
 
         if (indicateurs == null || indicateurs.isEmpty()) {
@@ -65,14 +57,6 @@ public class IndicateurExportMultipleServiceImpl implements IndicateurExportMult
         }
 
         try {
-            // Filtrer les indicateurs
-            List<Indicateur> filteredIndicateurs = filterService.filterIndicateurs(indicateurs, exportRequest);
-
-            if (filterService.isEmpty(filteredIndicateurs)) {
-                log.warn("Aucun indicateur trouvé après filtrage");
-                return ExcelUtils.exportExcelFormat(new ByteArrayOutputStream(),
-                        exportRequest.getFileName() + "-empty");
-            }
 
             // Déterminer les colonnes à exporter
             List<IndicateurColumn> columnsToExport = utilService.getColumnsToExport(exportRequest.getColumnsToExport());
@@ -80,11 +64,12 @@ public class IndicateurExportMultipleServiceImpl implements IndicateurExportMult
             // Choisir la méthode d'export selon le type de groupement
             switch (exportRequest.getGroupBy()) {
                 case BY_DOMAINE:
-                    return exportByDomaine(filteredIndicateurs, columnsToExport, exportRequest.getFileName());
+                    return exportByDomaine(indicateurs, columnsToExport, exportRequest.getFileName());
                 case BY_SOURCE:
-                    return exportBySource(filteredIndicateurs, columnsToExport, exportRequest.getFileName());
+                    return exportBySource(indicateurs, columnsToExport, exportRequest.getFileName());
                 default:
-                    return simpleExportService.exportAllInSingleSheet(filteredIndicateurs, columnsToExport,
+                    return simpleExportService.exportAllInSingleSheet(
+                            indicateurs, columnsToExport,
                             exportRequest.getFileName());
             }
         } catch (Exception e) {
@@ -129,10 +114,8 @@ public class IndicateurExportMultipleServiceImpl implements IndicateurExportMult
         }
 
         try {
-            // Filtrer les indicateurs
-            List<Indicateur> filteredIndicateurs = filterService.filterIndicateurs(indicateurs, exportRequest);
 
-            if (filterService.isEmpty(filteredIndicateurs)) {
+            if (filterService.isEmpty(indicateurs)) {
                 log.warn("Aucun indicateur trouvé après filtrage");
                 return ExcelUtils.exportExcelFormat(new ByteArrayOutputStream(),
                         exportRequest.getFileName() + "-empty");
@@ -141,7 +124,7 @@ public class IndicateurExportMultipleServiceImpl implements IndicateurExportMult
             // Déterminer les sections à exporter
             List<String> sectionsToExport = utilService.getSectionsToExport(exportRequest.getSectionsToExport());
 
-            return detailedExportService.createDetailedWorkbook(filteredIndicateurs, sectionsToExport, exportRequest);
+            return detailedExportService.createDetailedWorkbook(indicateurs, sectionsToExport, exportRequest);
 
         } catch (Exception e) {
             log.error("Erreur lors de l'export détaillé des indicateurs: {}", e.getMessage(), e);

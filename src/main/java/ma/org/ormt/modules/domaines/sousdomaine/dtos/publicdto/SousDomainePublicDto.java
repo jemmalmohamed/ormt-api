@@ -9,9 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ma.org.ormt.core.commun.base.dto.BaseDto;
 import ma.org.ormt.core.commun.base.dto.Dto;
-import ma.org.ormt.modules.domaines.domaine.dtos.summary.DomaineSummaryDto;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.detail.IndicateurDetailDto;
 
 @Setter

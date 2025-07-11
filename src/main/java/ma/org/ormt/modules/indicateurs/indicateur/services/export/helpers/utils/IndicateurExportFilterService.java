@@ -6,9 +6,8 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
-import ma.org.ormt.modules.indicateurs.indicateur.services.export.dtos.IndicateurExportRequestDto;
 import lombok.extern.slf4j.Slf4j;
+import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 
 /**
  * Service responsable du filtrage des indicateurs pour l'export
@@ -16,48 +15,6 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Slf4j
 public class IndicateurExportFilterService {
-
-    /**
-     * Filtre les indicateurs selon les critères spécifiés
-     */
-    public List<Indicateur> filterIndicateurs(List<Indicateur> indicateurs, IndicateurExportRequestDto exportRequest) {
-        if (indicateurs == null || indicateurs.isEmpty()) {
-            log.warn("Liste d'indicateurs vide ou null pour le filtrage");
-            return indicateurs;
-        }
-
-        List<Indicateur> filtered = indicateurs.stream()
-                .filter(this::isValidIndicateur)
-                .collect(Collectors.toList());
-
-        // Appliquer le filtre "actifs seulement" si demandé
-        if (exportRequest.isActiveOnly()) {
-            filtered = filtered.stream()
-                    .filter(ind -> Boolean.TRUE.equals(ind.getActif()))
-                    .collect(Collectors.toList());
-            log.debug("Filtrage des indicateurs actifs: {} indicateurs retenus sur {}",
-                    filtered.size(), indicateurs.size());
-        }
-
-        return filtered;
-    }
-
-    /**
-     * Valide qu'un indicateur est valide pour l'export
-     */
-    private boolean isValidIndicateur(Indicateur indicateur) {
-        if (indicateur == null) {
-            log.warn("Indicateur null trouvé dans la liste");
-            return false;
-        }
-
-        if (indicateur.getId() == null) {
-            log.warn("Indicateur sans ID trouvé: {}", indicateur.getNom());
-            return false;
-        }
-
-        return true;
-    }
 
     /**
      * Vérifie si la liste filtrée est vide

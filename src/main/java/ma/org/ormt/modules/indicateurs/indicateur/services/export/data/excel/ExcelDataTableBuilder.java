@@ -45,7 +45,7 @@ public class ExcelDataTableBuilder {
                 Row dataRow = sheet.createRow(startRowIdx++);
                 for (int i = 0; i < rowData.size() && i < 50; i++) { // Limiter à 50 colonnes pour éviter les problèmes
                     String cellValue = rowData.get(i) != null ? rowData.get(i) : "";
-                    ExcelUtils.createCell(dataRow, i, cellValue, borderStyle);
+                    ExcelUtils.createCellAutoType(dataRow, i, cellValue, borderStyle);
                 }
             }
 

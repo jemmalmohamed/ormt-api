@@ -1,0 +1,358 @@
+{
+    "formMetadata": {
+        "title": "Configuration de l'export des indicateurs",
+        "description": "Configurez les options d'export pour générer un fichier Excel ou CSV des indicateurs",
+        "sections": [
+            {
+                "id": "basic",
+                "title": "Configuration de base",
+                "fields": [
+                    {
+                        "name": "indicateurIds",
+                        "type": "multiselect",
+                        "label": "Indicateurs à exporter",
+                        "placeholder": "Tous les indicateurs (par défaut)",
+                        "required": false,
+                        "description": "Sélectionnez les indicateurs spécifiques ou laissez vide pour tous",
+                        "apiEndpoint": "/api/v1/indicateurs/list"
+                    },
+                    {
+                        "name": "format",
+                        "type": "radio",
+                        "label": "Format d'export",
+                        "required": true,
+                        "defaultValue": "EXCEL",
+                        "options": [
+                            {
+                                "value": "EXCEL",
+                                "label": "Excel (.xlsx)",
+                                "icon": "📊",
+                                "description": "Format Excel avec feuilles multiples"
+                            },
+                            {
+                                "value": "CSV",
+                                "label": "CSV (.csv)",
+                                "icon": "📄",
+                                "description": "Format CSV simple"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "fileName",
+                        "type": "text",
+                        "label": "Nom du fichier",
+                        "placeholder": "indicateurs-export",
+                        "required": true,
+                        "defaultValue": "indicateurs-export",
+                        "validation": {
+                            "pattern": "^[a-zA-Z0-9_-]+$",
+                            "message": "Seuls les lettres, chiffres, tirets et underscores sont autorisés"
+                        }
+                    },
+                    {
+                        "name": "groupBy",
+                        "type": "radio",
+                        "label": "Groupement des données",
+                        "required": true,
+                        "defaultValue": "NONE",
+                        "options": [
+                            {
+                                "value": "NONE",
+                                "label": "Tout dans une feuille",
+                                "description": "Tous les indicateurs dans un seul onglet"
+                            },
+                            {
+                                "value": "BY_DOMAINE",
+                                "label": "Grouper par domaine",
+                                "description": "Un onglet par domaine"
+                            },
+                            {
+                                "value": "BY_SOURCE",
+                                "label": "Grouper par source",
+                                "description": "Un onglet par source de données"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "columns",
+                "title": "Sélection des colonnes",
+                "description": "Choisissez les colonnes à inclure dans l'export",
+                "fields": [
+                    {
+                        "name": "columnsToExport",
+                        "type": "checkbox-group",
+                        "label": "Colonnes à exporter",
+                        "description": "Laissez vide pour inclure toutes les colonnes",
+                        "required": false,
+                        "options": [
+                            {
+                                "value": "Espaces",
+                                "label": "Espaces",
+                                "category": "Organisation"
+                            },
+                            {
+                                "value": "Domaines",
+                                "label": "Domaines",
+                                "category": "Organisation"
+                            },
+                            {
+                                "value": "Sous domaines",
+                                "label": "Sous-domaines",
+                                "category": "Organisation"
+                            },
+                            {
+                                "value": "id",
+                                "label": "ID",
+                                "category": "Identité"
+                            },
+                            {
+                                "value": "Nom",
+                                "label": "Nom",
+                                "category": "Identité"
+                            },
+                            {
+                                "value": "Abréviation",
+                                "label": "Abréviation",
+                                "category": "Identité"
+                            },
+                            {
+                                "value": "Description",
+                                "label": "Description",
+                                "category": "Identité"
+                            },
+                            {
+                                "value": "Unité",
+                                "label": "Unité",
+                                "category": "Métadonnées"
+                            },
+                            {
+                                "value": "Catégorie",
+                                "label": "Catégorie",
+                                "category": "Métadonnées"
+                            },
+                            {
+                                "value": "Source",
+                                "label": "Source",
+                                "category": "Métadonnées"
+                            },
+                            {
+                                "value": "Type TB",
+                                "label": "Type Tableau de Bord",
+                                "category": "Configuration"
+                            },
+                            {
+                                "value": "Type Graphe",
+                                "label": "Type de Graphique",
+                                "category": "Configuration"
+                            },
+                            {
+                                "value": "Règle de calcul",
+                                "label": "Règle de calcul",
+                                "category": "Configuration"
+                            },
+                            {
+                                "value": "Actif",
+                                "label": "Statut (Actif/Inactif)",
+                                "category": "État"
+                            },
+                            {
+                                "value": "A des données",
+                                "label": "Présence de données",
+                                "category": "État"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "advanced",
+                "title": "Options avancées",
+                "description": "Configuration détaillée pour l'export (optionnel)",
+                "collapsible": true,
+                "defaultOpen": false,
+                "fields": [
+                    {
+                        "name": "sectionsToExport",
+                        "type": "checkbox-group",
+                        "label": "Sections à inclure",
+                        "description": "Pour l'export détaillé par feuille. Laissez vide pour toutes les sections",
+                        "required": false,
+                        "dependsOn": {
+                            "field": "format",
+                            "value": "EXCEL"
+                        },
+                        "options": [
+                            {
+                                "value": "META",
+                                "label": "Informations générales",
+                                "icon": "📋",
+                                "description": "Métadonnées de base de l'indicateur"
+                            },
+                            {
+                                "value": "DOMAINES",
+                                "label": "Domaines et sous-domaines",
+                                "icon": "🏷️",
+                                "description": "Classification par domaines"
+                            },
+                            {
+                                "value": "DIMENSIONS",
+                                "label": "Dimensions de l'indicateur",
+                                "icon": "📐",
+                                "description": "Structure dimensionnelle"
+                            },
+                            {
+                                "label": "Statistiques des données",
+                                "icon": "📈",
+                                "description": "Résumé statistique"
+                            },
+                            {
+                                "value": "PIVOT_DATA",
+                                "label": "Données au format pivot",
+                                "icon": "🔄",
+                                "description": "Tableau croisé dynamique"
+                            },
+                            {
+                                "value": "FLAT_DATA",
+                                "label": "Données au format plat",
+                                "icon": "📝",
+                                "description": "Données linéaires"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "dataTableType",
+                        "type": "radio",
+                        "label": "Type de tables de données",
+                        "required": true,
+                        "defaultValue": "BOTH",
+                        "dependsOn": {
+                            "field": "format",
+                            "value": "EXCEL"
+                        },
+                        "options": [
+                            {
+                                "value": "BOTH",
+                                "label": "Les deux formats",
+                                "description": "Tableau croisé + format plat"
+                            },
+                            {
+                                "value": "PIVOT",
+                                "label": "Tableau croisé seulement",
+                                "description": "Données au format pivot"
+                            },
+                            {
+                                "value": "FLAT",
+                                "label": "Format plat seulement",
+                                "description": "Une ligne par combinaison"
+                            },
+                            {
+                                "value": "NONE",
+                                "label": "Aucune donnée",
+                                "description": "Métadonnées uniquement"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "includeDataStats",
+                        "type": "switch",
+                        "label": "Inclure les statistiques",
+                        "description": "Ajoute un résumé statistique des données",
+                        "required": false,
+                        "defaultValue": true,
+                        "dependsOn": {
+                            "field": "format",
+                            "value": "EXCEL"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "validation": {
+        "rules": [
+            {
+                "field": "fileName",
+                "required": true,
+                "pattern": "^[a-zA-Z0-9_-]+$",
+                "message": "Le nom du fichier ne peut contenir que des lettres, chiffres, tirets et underscores"
+            },
+            {
+                "field": "groupBy",
+                "required": true,
+                "enum": [
+                    "NONE",
+                    "BY_DOMAINE",
+                    "BY_SOURCE"
+                ]
+            },
+            {
+                "field": "format",
+                "required": true,
+                "enum": [
+                    "EXCEL",
+                    "CSV"
+                ]
+            }
+        ]
+    },
+    "presets": [
+        {
+            "name": "Export rapide",
+            "description": "Configuration basique pour un export simple",
+            "icon": "⚡",
+            "config": {
+                "format": "EXCEL",
+                "groupBy": "NONE",
+                "fileName": "indicateurs-rapide",
+                "columnsToExport": [
+                    "Nom",
+                    "Description",
+                    "Unité",
+                    "Source",
+                    "Actif"
+                ],
+                "dataTableType": "NONE",
+                "includeDataStats": false
+            }
+        },
+        {
+            "name": "Export complet",
+            "description": "Toutes les données avec détails",
+            "icon": "📊",
+            "config": {
+                "format": "EXCEL",
+                "groupBy": "BY_DOMAINE",
+                "fileName": "indicateurs-complet",
+                "dataTableType": "BOTH",
+                "includeDataStats": true
+            }
+        },
+        {
+            "name": "Export CSV simple",
+            "description": "Format CSV pour analyse externe",
+            "icon": "📄",
+            "config": {
+                "format": "CSV",
+                "groupBy": "NONE",
+                "fileName": "indicateurs-csv",
+                "columnsToExport": [
+                    "Nom",
+                    "Description",
+                    "Unité",
+                    "Catégorie",
+                    "Source",
+                    "Actif"
+                ]
+            }
+        }
+    ],
+    "endpoints": {
+        "exportWithOptions": "/api/v1/admin/indicateurs/audit/export/with-options",
+        "exportDetailedWithOptions": "/api/v1/admin/indicateurs/audit/export/details/with-options",
+        "getIndicateurs": "/api/v1/indicateurs/list",
+        "getDomaines": "/api/v1/domaines/list",
+        "getSources": "/api/v1/sources/list"
+    }
+}

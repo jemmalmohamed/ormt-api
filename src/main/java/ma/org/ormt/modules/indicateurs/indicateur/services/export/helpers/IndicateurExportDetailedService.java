@@ -3,6 +3,7 @@ package ma.org.ormt.modules.indicateurs.indicateur.services.export.helpers;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -28,7 +29,7 @@ import lombok.extern.slf4j.Slf4j;
 public class IndicateurExportDetailedService {
 
     @Autowired
-    private IndicateurExportExcelMetaDataService metaDataCreationService;
+    private IndicateurExportExcelMetaDataService indicateurExportExcelMetaDataService;
 
     @Autowired
     private IndicateurExcelExportDataTableService dataTableService;
@@ -43,7 +44,7 @@ public class IndicateurExportDetailedService {
             IndicateurExportRequestDto exportRequest) throws IOException {
 
         try (Workbook workbook = new XSSFWorkbook(); ByteArrayOutputStream out = new ByteArrayOutputStream()) {
-            java.util.Set<String> usedSheetNames = new java.util.HashSet<>();
+            Set<String> usedSheetNames = new java.util.HashSet<>();
             var borderStyle = ExcelUtils.createBorderedStyle(workbook);
             var headerStyle = ExcelUtils.createHeaderStyle(workbook);
 
@@ -88,27 +89,20 @@ public class IndicateurExportDetailedService {
         try {
             switch (section.toUpperCase()) {
                 case "META":
-                    return metaDataCreationService.createMetaTable(sheet, indicateur, rowIdx,
+                    return indicateurExportExcelMetaDataService.createMetaTable(sheet, indicateur, rowIdx,
                             headerStyle, borderStyle, exportRequest);
 
                 case "CONFIGURATION":
-                    return metaDataCreationService.createConfigurationTable(sheet, indicateur, rowIdx,
+                    return indicateurExportExcelMetaDataService.createConfigurationTable(sheet, indicateur, rowIdx,
                             headerStyle, borderStyle);
 
                 case "DOMAINES":
-                    return metaDataCreationService.createDomainesTable(sheet, indicateur, rowIdx,
+                    return indicateurExportExcelMetaDataService.createDomainesTable(sheet, indicateur, rowIdx,
                             headerStyle, borderStyle);
 
                 case "DIMENSIONS":
-                    return metaDataCreationService.createDimensionsTable(sheet, indicateur, rowIdx,
+                    return indicateurExportExcelMetaDataService.createDimensionsTable(sheet, indicateur, rowIdx,
                             headerStyle, borderStyle);
-
-                case "DATA_STATS":
-                    if (exportRequest.isIncludeDataStats()) {
-                        return metaDataCreationService.createDataStatsTable(sheet, indicateur, rowIdx,
-                                headerStyle, borderStyle);
-                    }
-                    break;
 
                 case "PIVOT_DATA":
                     if (utilService.shouldIncludeDataTable(exportRequest.getDataTableType(), "PIVOT")) {

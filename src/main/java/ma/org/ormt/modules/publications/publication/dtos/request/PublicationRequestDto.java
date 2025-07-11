@@ -1,15 +1,5 @@
 package ma.org.ormt.modules.publications.publication.dtos.request;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
-import ma.org.ormt.core.commun.base.dto.Dto;
-import ma.org.ormt.core.validators.file.FileSize;
-import ma.org.ormt.core.validators.groups.OnCreate;
-import ma.org.ormt.core.validators.unique.Unique;
-
 import java.time.LocalDate;
 
 import org.springframework.web.multipart.MultipartFile;
@@ -19,6 +9,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import ma.org.ormt.core.commun.base.dto.Dto;
+import ma.org.ormt.core.validators.file.FileSize;
+import ma.org.ormt.core.validators.groups.OnCreate;
+import ma.org.ormt.core.validators.unique.Unique;
 
 @Setter
 @Getter

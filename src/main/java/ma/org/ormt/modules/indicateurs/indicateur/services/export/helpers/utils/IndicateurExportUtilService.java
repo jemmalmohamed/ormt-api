@@ -82,7 +82,7 @@ public class IndicateurExportUtilService {
     public List<String> getSectionsToExport(List<String> requestedSections) {
         if (requestedSections == null || requestedSections.isEmpty()) {
             // Par défaut, toutes les sections sauf les tables de données
-            return Arrays.asList("META", "DOMAINES", "DIMENSIONS", "DATA_STATS");
+            return Arrays.asList("META", "DOMAINES", "DIMENSIONS");
         }
 
         return requestedSections.stream()

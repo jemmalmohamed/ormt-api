@@ -30,7 +30,7 @@ public class IndicateurCrudDataTable {
                         ? dim.getDimension().getLibelle().toLowerCase()
                         : dim.getDimension().getNom().toLowerCase())
                 .collect(Collectors.toList()));
-        header.add("valeur");
+        header.add(indicateur.getNom() != null ? indicateur.getNom().toLowerCase() : "valeur");
 
         List<List<String>> result = new ArrayList<>();
         result.add(header);
@@ -75,7 +75,7 @@ public class IndicateurCrudDataTable {
                         ? dim.getDimension().getLibelle().toLowerCase()
                         : dim.getDimension().getNom().toLowerCase())
                 .collect(Collectors.toList());
-        header.add("valeur");
+        header.add(indicateur.getNom() != null ? indicateur.getNom().toLowerCase() : "valeur");
 
         List<List<String>> result = new ArrayList<>();
         result.add(header);

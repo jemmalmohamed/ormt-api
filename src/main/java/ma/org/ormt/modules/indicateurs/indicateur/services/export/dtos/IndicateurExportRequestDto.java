@@ -1,9 +1,10 @@
 package ma.org.ormt.modules.indicateurs.indicateur.services.export.dtos;
 
 import java.util.List;
-import lombok.Data;
-import lombok.Builder;
+
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
@@ -15,6 +16,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class IndicateurExportRequestDto {
+
+    /**
+     * Liste des IDs des indicateurs à exporter
+     * Si null ou vide, tous les indicateurs seront exportés
+     */
+    private List<Long> indicateurIds;
 
     /**
      * Liste des colonnes à inclure dans l'export
@@ -38,18 +45,26 @@ public class IndicateurExportRequestDto {
     private String fileName = "indicateurs-export";
 
     /**
-     * Inclure seulement les indicateurs actifs
+     * Format de fichier pour l'export
+     * - EXCEL: Format Excel (.xlsx)
+     * - CSV: Format CSV (.csv)
      */
     @Builder.Default
-    private boolean activeOnly = false;
+    private ExportFormat format = ExportFormat.EXCEL;
 
     /**
      * Liste des sections à inclure dans l'export détaillé par sheet
-     * Valeurs possibles: META, DOMAINES, DIMENSIONS, DATA_STATS, PIVOT_DATA,
+     * Valeurs possibles: META, DOMAINES, DIMENSIONS, PIVOT_DATA,
      * FLAT_DATA
      * Si null ou vide, toutes les sections seront exportées
      */
-    private List<String> sectionsToExport;
+    @Builder.Default
+    private List<String> sectionsToExport = List.of(
+            ExportSection.META.getKey(),
+            ExportSection.DOMAINES.getKey(),
+            ExportSection.DIMENSIONS.getKey(),
+            ExportSection.PIVOT_DATA.getKey(),
+            ExportSection.FLAT_DATA.getKey());
 
     /**
      * Type de données à inclure dans l'export détaillé
@@ -60,12 +75,6 @@ public class IndicateurExportRequestDto {
      */
     @Builder.Default
     private DataTableType dataTableType = DataTableType.BOTH;
-
-    /**
-     * Inclure les statistiques des données
-     */
-    @Builder.Default
-    private boolean includeDataStats = true;
 
     public enum DataTableType {
         PIVOT("pivot"),
@@ -97,7 +106,7 @@ public class IndicateurExportRequestDto {
         META("META", "Informations générales"),
         DOMAINES("DOMAINES", "Domaines et sous-domaines"),
         DIMENSIONS("DIMENSIONS", "Dimensions de l'indicateur"),
-        DATA_STATS("DATA_STATS", "Statistiques des données"),
+        CONFIGURATION("CONFIGURATION", "Configuration de l'indicateur"),
         PIVOT_DATA("PIVOT_DATA", "Données au format pivot"),
         FLAT_DATA("FLAT_DATA", "Données au format plat");
 
@@ -140,6 +149,30 @@ public class IndicateurExportRequestDto {
                 }
             }
             return NONE;
+        }
+    }
+
+    public enum ExportFormat {
+        EXCEL("xlsx"),
+        CSV("csv");
+
+        private final String extension;
+
+        ExportFormat(String extension) {
+            this.extension = extension;
+        }
+
+        public String getExtension() {
+            return extension;
+        }
+
+        public static ExportFormat fromValue(String value) {
+            for (ExportFormat format : values()) {
+                if (format.name().equalsIgnoreCase(value)) {
+                    return format;
+                }
+            }
+            return EXCEL;
         }
     }
 }

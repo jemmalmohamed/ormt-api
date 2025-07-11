@@ -43,6 +43,17 @@ public class ExcelUtils {
     }
 
     /**
+     * Creates a cell with auto-type detection (numeric if possible, otherwise
+     * string) and applies a style if provided.
+     */
+    public static void createCellAutoType(Row row, int colIdx, String value, CellStyle style) {
+        Cell cell = row.createCell(colIdx);
+        setCellValueAutoType(cell, value);
+        if (style != null)
+            cell.setCellStyle(style);
+    }
+
+    /**
      * Creates a bordered cell style with the given border style.
      */
     public static CellStyle createBorderedCellStyle(Workbook workbook, BorderStyle borderStyle) {

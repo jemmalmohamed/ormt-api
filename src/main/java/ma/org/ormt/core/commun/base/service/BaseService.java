@@ -20,6 +20,8 @@ public interface BaseService<T> {
 
     public Optional<T> findById(Long id);
 
+    public List<T> findAllById(List<Long> ids);
+
     public List<Long> findAllIds();
 
     T create(@NonNull T entity);

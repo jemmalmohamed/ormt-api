@@ -57,6 +57,14 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
         return baseRepository.findAll();
     }
 
+    // READ all by ids
+    public List<T> findAllById(List<Long> ids) {
+        if (ids == null || ids.isEmpty()) {
+            return List.of();
+        }
+        return baseRepository.findAllById(ids);
+    }
+
     // @Cacheable(cacheResolver = "dynamicCacheNameResolver")
     public Page<T> findAll(Pageable pageable) {
         return baseRepository.findAll(pageable);

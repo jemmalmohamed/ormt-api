@@ -32,7 +32,7 @@ metaService.createDetailedMetaTable(sheet, indicateur, rowIdx, headerStyle, bord
 metaService.createCompactMetaTable(sheet, indicateur, rowIdx, headerStyle, borderStyle);
 
 // Original data stats and domaines formats (also preserved)
-metaService.createDataStatsTable(sheet, indicateur, rowIdx, headerStyle, borderStyle);
+ 
 metaService.createDomainesTable(sheet, indicateur, rowIdx, headerStyle, borderStyle);
 ```
 
@@ -55,8 +55,7 @@ meta/
 ```java
 // This continues to work exactly as before
 int nextRow = metaService.createDimensionsTable(sheet, indicateur, 0, headerStyle, borderStyle);
-nextRow = metaService.createDataStatsTable(sheet, indicateur, nextRow, headerStyle, borderStyle);
-nextRow = metaService.createDomainesTable(sheet, indicateur, nextRow, headerStyle, borderStyle);
+ nextRow = metaService.createDomainesTable(sheet, indicateur, nextRow, headerStyle, borderStyle);
 ```
 
 ### For New Features (Enhanced Options)
@@ -82,8 +81,7 @@ if (hasComplexDimensions) {
 
 if (hasSignificantData) {
     createDataStatsSheet(workbook, indicateur, headerStyle, borderStyle);
-    // ^ This uses the ORIGINAL createDataStatsTable() format
-}
+ }
 ```
 
 ## Benefits of This Hybrid Approach
@@ -109,8 +107,7 @@ if (hasSignificantData) {
 | Method | Description | Format |
 |--------|-------------|---------|
 | `createDimensionsTable()` | **Original horizontal dimensions layout** | Original |
-| `createDataStatsTable()` | Original data statistics format | Original |
-| `createDomainesTable()` | Original domaines/sous-domaines format | Original |
+ | `createDomainesTable()` | Original domaines/sous-domaines format | Original |
 | `createMetaTable()` | New organized basic metadata | New |
 | `createDetailedMetaTable()` | New comprehensive metadata | New |
 | `createCompactMetaTable()` | New quick overview metadata | New |

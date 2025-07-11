@@ -59,7 +59,7 @@ public class IndicateurExcelExportDataTableService {
 
                 if (flatData.isEmpty()) {
                         return excelDataTableBuilder.createNoDataMessage(sheet,
-                                        "Aucune donnée plate disponible", rowIdx, borderStyle);
+                                        "Aucune donnée disponible", rowIdx, borderStyle);
                 }
 
                 // Créer la table dans Excel

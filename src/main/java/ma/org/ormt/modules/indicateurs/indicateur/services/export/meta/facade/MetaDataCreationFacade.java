@@ -1,15 +1,16 @@
 package ma.org.ormt.modules.indicateurs.indicateur.services.export.meta.facade;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.meta.builders.MetaDataTableBuilder;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.meta.builders.specialized.DataStatsMetaDataBuilder;
-import ma.org.ormt.modules.indicateurs.indicateur.services.export.meta.builders.specialized.DimensionsMetaDataBuilder;
+import ma.org.ormt.modules.indicateurs.indicateur.services.export.meta.builders.specialized.DomainesMetaDataBuilder;
+import ma.org.ormt.modules.indicateurs.indicateur.services.export.meta.builders.specialized.HorizontalDimensionsMetaDataBuilder;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.meta.models.MetaDataTable;
-
-import java.util.List;
 
 /**
  * Facade service for metadata creation with various detail levels
@@ -21,64 +22,13 @@ public class MetaDataCreationFacade {
     private MetaDataTableBuilder metaDataTableBuilder;
 
     @Autowired
-    private DimensionsMetaDataBuilder dimensionsBuilder;
-
-    @Autowired
     private DataStatsMetaDataBuilder dataStatsBuilder;
 
-    /**
-     * Creates a basic metadata table with essential information
-     */
-    public MetaDataTable createCompleteMetaData(Indicateur indicateur) {
-        return metaDataTableBuilder.buildCompleteMetaDataTable(indicateur);
-    }
+    @Autowired
+    private DomainesMetaDataBuilder domainesBuilder;
 
-    /**
-     * Creates a detailed metadata table with comprehensive information
-     */
-    public MetaDataTable createDetailedMetaData(Indicateur indicateur) {
-        MetaDataTable table = new MetaDataTable();
-
-        // Add basic sections from the standard builder
-        MetaDataTable basicTable = metaDataTableBuilder.buildCompleteMetaDataTable(indicateur);
-        basicTable.getSections().forEach(table::addSection);
-
-        // Add detailed specialized sections
-        table.addSection(dimensionsBuilder.buildDetailedDimensionsSection(indicateur));
-        table.addSection(dataStatsBuilder.buildDetailedDataStatsSection(indicateur));
-
-        return table;
-    }
-
-    /**
-     * Creates a metadata table focused on dimensions
-     */
-    public MetaDataTable createDimensionsFocusedMetaData(Indicateur indicateur) {
-        MetaDataTable table = new MetaDataTable();
-
-        // Add basic info
-        table.addSection(metaDataTableBuilder.buildCompleteMetaDataTable(indicateur).getSections().get(0));
-
-        // Focus on dimensions
-        table.addSection(dimensionsBuilder.buildDetailedDimensionsSection(indicateur));
-
-        return table;
-    }
-
-    /**
-     * Creates a metadata table focused on data statistics
-     */
-    public MetaDataTable createDataStatsFocusedMetaData(Indicateur indicateur) {
-        MetaDataTable table = new MetaDataTable();
-
-        // Add basic info
-        table.addSection(metaDataTableBuilder.buildCompleteMetaDataTable(indicateur).getSections().get(0));
-
-        // Focus on data statistics
-        table.addSection(dataStatsBuilder.buildDetailedDataStatsSection(indicateur));
-
-        return table;
-    }
+    @Autowired
+    private HorizontalDimensionsMetaDataBuilder horizontalDimensionsBuilder;
 
     /**
      * Creates a selective metadata table with custom fields in the Information
@@ -90,17 +40,9 @@ public class MetaDataCreationFacade {
      * @return MetaDataTable with selective Information section plus all other
      *         standard sections
      */
-    public MetaDataTable createSelectiveMetaData(Indicateur indicateur, List<String> columnsToExport) {
+    public MetaDataTable createInformationMetaData(Indicateur indicateur, List<String> columnsToExport) {
         MetaDataTable table = new MetaDataTable();
-
-        // If no specific columns requested, return complete metadata
-        if (columnsToExport == null || columnsToExport.isEmpty()) {
-            return createCompleteMetaData(indicateur);
-        }
-
-        // Build selective Information section with only requested fields
-        table.addSection(metaDataTableBuilder.buildSelectiveInformationSection(indicateur, columnsToExport));
-
+        table.addSection(metaDataTableBuilder.buildInformationSection(indicateur, columnsToExport));
         return table;
     }
 
@@ -120,5 +62,41 @@ public class MetaDataCreationFacade {
         MetaDataTable table = new MetaDataTable();
         table.addSection(metaDataTableBuilder.buildDataStatsSection(indicateur));
         return table;
+    }
+
+    /**
+     * Creates a metadata table with detailed data statistics
+     */
+    public MetaDataTable createDataStatsFocusedMetaData(Indicateur indicateur) {
+        MetaDataTable table = new MetaDataTable();
+        table.addSection(dataStatsBuilder.buildDetailedDataStatsSection(indicateur));
+        return table;
+    }
+
+    /**
+     * Creates a metadata table with comprehensive domains information
+     * This replaces the old direct Excel rendering approach
+     */
+    public MetaDataTable createDomainesMetaData(Indicateur indicateur) {
+        MetaDataTable table = new MetaDataTable();
+        table.addSection(domainesBuilder.buildDomainesSection(indicateur));
+        return table;
+    }
+
+    /**
+     * Creates a metadata table with essential domains information only
+     */
+    public MetaDataTable createEssentialDomainesMetaData(Indicateur indicateur) {
+        MetaDataTable table = new MetaDataTable();
+        table.addSection(domainesBuilder.buildEssentialDomainesSection(indicateur));
+        return table;
+    }
+
+    /**
+     * Creates a metadata table with horizontal dimensions layout (original format)
+     * This preserves the original createDimensionsTable horizontal columns approach
+     */
+    public MetaDataTable createHorizontalDimensionsMetaData(Indicateur indicateur) {
+        return horizontalDimensionsBuilder.buildHorizontalDimensionsTable(indicateur);
     }
 }
