@@ -1,0 +1,73 @@
+package ma.org.ormt.modules.indicateurs.graphe.type.services.impl;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
+import ma.org.ormt.core.commun.base.service.SpecificationService;
+import ma.org.ormt.core.commun.rest.queries.QueryParams;
+import ma.org.ormt.core.utilities.EntityInspector;
+import ma.org.ormt.core.utilities.PaginationUtils;
+import ma.org.ormt.modules.indicateurs.graphe.type.models.GrapheType;
+import ma.org.ormt.modules.indicateurs.graphe.type.repositories.GrapheTypeRepository;
+import ma.org.ormt.modules.indicateurs.graphe.type.services.GrapheTypeService;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
+
+@Service
+@Transactional
+public class GrapheTypeServiceImpl extends BaseServiceImpl<GrapheType> implements GrapheTypeService {
+
+    @Autowired
+    private GrapheTypeRepository graphetypeRepository;
+
+    @Autowired
+    private IndicateurService indicateurService;
+
+    private static final String NOT_FOUND_STRING = "GrapheType non trouvée";
+    private static final String INDICATEUR_NOT_FOUND = "Indicateur non trouvé";
+
+    public GrapheTypeServiceImpl(GrapheTypeRepository graphetypeRepository, SpecificationService specificationService) {
+        super(graphetypeRepository, specificationService);
+    }
+
+    @Override
+    public boolean existsById(Long id) {
+        return graphetypeRepository.existsById(id);
+    }
+
+    @Override
+    public Optional<GrapheType> findByNom(String nom) {
+        return graphetypeRepository.findByNom(nom);
+    }
+
+    @Override
+    public Page<GrapheType> getEntityList(QueryParams requestParams) {
+        if (requestParams.getPageSize() == -1) {
+            requestParams.setPageSize(Integer.MAX_VALUE);
+        }
+        Pageable pageable = PaginationUtils.createPageable(requestParams);
+        if (!EntityInspector.isFieldPresentInEntity(pageable.getSort().toString(), GrapheType.class)) {
+            pageable = PaginationUtils.createPageable(requestParams);
+        }
+        Specification<GrapheType> specification = specificationService
+                .createSpecificationWithDynamicGlobalFilter(requestParams.getFilters(),
+                        requestParams.getGlobalFilter(), GrapheType.class);
+        return findAll(specification, pageable);
+    }
+
+    @Override
+    public void validateBeforeDelete(Long id) {
+        validateGrapheTypeDependencies(id);
+    }
+
+    private void validateGrapheTypeDependencies(Long id) {
+
+    }
+
+}
