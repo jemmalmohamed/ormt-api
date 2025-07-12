@@ -85,7 +85,7 @@ public class IndicateurAdminLoadController extends BaseController<Indicateur> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('domaine:read')")
+        @PreAuthorize("hasAuthority('indicateur:read')")
         public ResponseEntity<RestResponse<IndicateurDetailDto>> getIndicateur(
                         @PathVariable("id") Long id,
                         @Parameter(description = "Table format: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'", example = "crud") @RequestParam(value = "tableFormat", required = false) String tableFormat) {

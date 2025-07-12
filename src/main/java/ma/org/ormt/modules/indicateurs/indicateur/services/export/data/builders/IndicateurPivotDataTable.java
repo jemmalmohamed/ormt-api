@@ -13,8 +13,23 @@ import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.valeurdimension.models.ValeurDimension;
+import ma.org.ormt.modules.indicateurs.indicateur.services.export.data.dtos.PivotTableMetadataDto;
+import ma.org.ormt.modules.indicateurs.indicateur.services.export.data.dtos.PivotTableWithMetadataDto;
 
 public class IndicateurPivotDataTable {
+
+    /**
+     * Builds pivot table with complete metadata for chart mapping
+     */
+    public static PivotTableWithMetadataDto buildPivotTableWithMetadata(Indicateur indicateur) {
+        List<List<String>> pivotData = buildPivotTableData(indicateur);
+        PivotTableMetadataDto metadata = buildMetadata(indicateur);
+
+        return PivotTableWithMetadataDto.builder()
+                .data(pivotData)
+                .metadata(metadata)
+                .build();
+    }
 
     public static List<List<String>> buildPivotTableData(Indicateur indicateur) {
         // Early validation to prevent division by zero and null pointer exceptions
@@ -156,4 +171,144 @@ public class IndicateurPivotDataTable {
             current.remove(current.size() - 1);
         }
     }
+
+    /**
+     * Builds metadata information about the pivot table structure
+     */
+    public static PivotTableMetadataDto buildMetadata(Indicateur indicateur) {
+        if (indicateur == null || indicateur.getIndicateurDimensions() == null ||
+                indicateur.getIndicateurDimensions().isEmpty()) {
+            return PivotTableMetadataDto.builder().build();
+        }
+
+        List<IndicateurDimension> dims = indicateur.getIndicateurDimensions();
+        IndicateurDimension principale = dims.stream().filter(IndicateurDimension::getPrincipale).findFirst()
+                .orElse(null);
+
+        List<IndicateurDimension> autres = dims.stream()
+                .collect(Collectors.toList());
+        // List<IndicateurDimension> autres = dims.stream().filter(d ->
+        // !Boolean.TRUE.equals(d.getPrincipale()))
+        // .collect(Collectors.toList());
+
+        if (principale == null || autres.isEmpty()) {
+            return PivotTableMetadataDto.builder().build();
+        }
+
+        // Organize column dimensions (temporal first)
+        Optional<IndicateurDimension> temporelleOpt = autres.stream()
+                .filter(d -> Boolean.TRUE.equals(d.getTemporelle())).findFirst();
+        List<IndicateurDimension> columnDims = new ArrayList<>();
+        if (temporelleOpt.isPresent()) {
+            columnDims.add(temporelleOpt.get());
+            for (IndicateurDimension d : autres) {
+                if (!d.equals(temporelleOpt.get())) {
+                    columnDims.add(d);
+                }
+            }
+        } else {
+            columnDims.addAll(autres);
+        }
+
+        // Build principal dimension info
+        PivotTableMetadataDto.DimensionInfo principalInfo = buildDimensionInfo(indicateur, principale, "row", 0);
+
+        // Build column dimensions info
+        List<PivotTableMetadataDto.DimensionInfo> columnDimsInfo = new ArrayList<>();
+        List<List<String>> columnValues = columnDims.stream()
+                .map(dim -> getUniqueDimensionValues(indicateur, dim.getDimension().getNom()))
+                .collect(Collectors.toList());
+
+        int totalCombinations = columnValues.stream().mapToInt(List::size).reduce(1, (a, b) -> a * b);
+
+        for (int i = 0; i < columnDims.size(); i++) {
+            PivotTableMetadataDto.DimensionInfo dimInfo = buildColumnDimensionInfo(
+                    indicateur, columnDims.get(i), i, columnValues, totalCombinations);
+            columnDimsInfo.add(dimInfo);
+        }
+
+        // Build table structure info
+        PivotTableMetadataDto.TableStructure tableStructure = PivotTableMetadataDto.TableStructure.builder()
+                .dataStartRow(columnDims.size()) // Data starts after header rows
+                .dataStartColumn(1) // Data starts after principal dimension column
+                .totalRows(columnDims.size()
+                        + getUniqueDimensionValues(indicateur, principale.getDimension().getNom()).size())
+                .totalColumns(1 + totalCombinations) // Principal column + data columns
+                .build();
+
+        return PivotTableMetadataDto.builder()
+                .principalDimension(principalInfo)
+                .columnDimensions(columnDimsInfo)
+                .headerRowCount(columnDims.size())
+                .dataColumnCount(totalCombinations)
+                .tableStructure(tableStructure)
+                .build();
+    }
+
+    private static PivotTableMetadataDto.DimensionInfo buildDimensionInfo(
+            Indicateur indicateur, IndicateurDimension dimension, String axis, int headerRowIndex) {
+
+        List<String> values = getUniqueDimensionValues(indicateur, dimension.getDimension().getNom());
+
+        PivotTableMetadataDto.DimensionPosition position = PivotTableMetadataDto.DimensionPosition.builder()
+                .axis(axis)
+                .headerRowIndex(headerRowIndex)
+                .build();
+
+        return PivotTableMetadataDto.DimensionInfo.builder()
+                .dimensionId(dimension.getDimension().getId())
+                .dimensionNom(dimension.getDimension().getNom())
+                .dimensionLibelle(dimension.getDimension().getLibelle())
+                .dimensionType(getDimensionType(dimension))
+                .isTemporelle(Boolean.TRUE.equals(dimension.getTemporelle()))
+                .isPrincipale(Boolean.TRUE.equals(dimension.getPrincipale()))
+                .values(values)
+                .position(position)
+                .build();
+    }
+
+    private static PivotTableMetadataDto.DimensionInfo buildColumnDimensionInfo(
+            Indicateur indicateur, IndicateurDimension dimension, int headerRowIndex,
+            List<List<String>> allColumnValues, int totalCombinations) {
+
+        List<String> values = getUniqueDimensionValues(indicateur, dimension.getDimension().getNom());
+
+        // Calculate column span for this dimension
+        int valueSpan = 1;
+        for (int i = headerRowIndex + 1; i < allColumnValues.size(); i++) {
+            valueSpan *= allColumnValues.get(i).size();
+        }
+
+        PivotTableMetadataDto.ColumnRange columnRange = PivotTableMetadataDto.ColumnRange.builder()
+                .startColumn(1) // After principal dimension column
+                .endColumn(totalCombinations)
+                .valueSpan(valueSpan)
+                .build();
+
+        PivotTableMetadataDto.DimensionPosition position = PivotTableMetadataDto.DimensionPosition.builder()
+                .axis("column")
+                .headerRowIndex(headerRowIndex)
+                .columnRange(columnRange)
+                .build();
+
+        return PivotTableMetadataDto.DimensionInfo.builder()
+                .dimensionId(dimension.getDimension().getId())
+                .dimensionNom(dimension.getDimension().getNom())
+                .dimensionLibelle(dimension.getDimension().getLibelle())
+                .dimensionType(getDimensionType(dimension))
+                .isTemporelle(Boolean.TRUE.equals(dimension.getTemporelle()))
+                .isPrincipale(Boolean.TRUE.equals(dimension.getPrincipale()))
+                .values(values)
+                .position(position)
+                .build();
+    }
+
+    private static String getDimensionType(IndicateurDimension dimension) {
+        if (Boolean.TRUE.equals(dimension.getTemporelle())) {
+            return "temporal";
+        }
+        // Add more logic here based on your dimension types
+        return "categorical";
+    }
+
 }

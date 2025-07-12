@@ -12,6 +12,7 @@ import lombok.Setter;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
 import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.dtos.IndicateurDimensionDto;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDto;
+import ma.org.ormt.modules.indicateurs.indicateur.services.export.data.dtos.PivotTableWithMetadataDto;
 
 @Setter
 @Getter
@@ -25,9 +26,9 @@ public class IndicateurDetailDto extends IndicateurDto {
     private List<DonneeIndicateurDto> donnees;
 
     // Add table data - only included when requested
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    @Schema(description = "Pivot table format data for display purposes")
-    private List<List<String>> pivotTableData;
+    // @JsonInclude(JsonInclude.Include.NON_NULL)
+    // @Schema(description = "Pivot table format data for display purposes")
+    // private List<List<String>> pivotTableData;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(description = "Flat table format data for CRUD operations")
@@ -41,4 +42,9 @@ public class IndicateurDetailDto extends IndicateurDto {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(description = "Template data for create operations (missing combinations)")
     private List<List<String>> createTemplateData;
+
+    // Enhanced pivot table with metadata for chart mapping
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @Schema(description = "Pivot table data with metadata for chart mapping and dimension understanding")
+    private PivotTableWithMetadataDto pivotTableData;
 }

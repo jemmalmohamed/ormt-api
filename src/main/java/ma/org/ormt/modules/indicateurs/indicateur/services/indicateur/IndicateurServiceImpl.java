@@ -173,7 +173,7 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
         try {
             if ("pivot".equals(tableFormat)) {
                 dto.setPivotTableData(
-                        IndicateurPivotDataTable.buildPivotTableData(indicateur));
+                        IndicateurPivotDataTable.buildPivotTableWithMetadata(indicateur));
             } else if ("flat".equals(tableFormat)) {
                 dto.setFlatTableData(
                         IndicateurFlatDataTable.buildFlatTableData(indicateur));
@@ -185,12 +185,12 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
                         IndicateurCrudDataTable.buildCreateTemplateData(indicateur));
             } else if ("both".equals(tableFormat)) {
                 dto.setPivotTableData(
-                        IndicateurPivotDataTable.buildPivotTableData(indicateur));
+                        IndicateurPivotDataTable.buildPivotTableWithMetadata(indicateur));
                 dto.setFlatTableData(
                         IndicateurFlatDataTable.buildFlatTableData(indicateur));
             } else if ("all".equals(tableFormat)) {
                 dto.setPivotTableData(
-                        IndicateurPivotDataTable.buildPivotTableData(indicateur));
+                        IndicateurPivotDataTable.buildPivotTableWithMetadata(indicateur));
                 dto.setFlatTableData(
                         IndicateurFlatDataTable.buildFlatTableData(indicateur));
                 dto.setCrudTableData(
