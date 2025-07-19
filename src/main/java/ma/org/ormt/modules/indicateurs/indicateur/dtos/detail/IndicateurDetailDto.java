@@ -47,4 +47,6 @@ public class IndicateurDetailDto extends IndicateurDto {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(description = "Pivot table data with metadata for chart mapping and dimension understanding")
     private PivotTableWithMetadataDto pivotTableData;
+
+    private String chartConfig;
 }

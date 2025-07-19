@@ -50,4 +50,5 @@ public class IndicateurRequestDto extends Dto {
 
     private String regleCalcul;
 
+    private String chartConfig;
 }

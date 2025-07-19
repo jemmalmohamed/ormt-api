@@ -212,4 +212,14 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
 
         return dto;
     }
+
+    @Override
+    @Transactional
+    public Indicateur updateChartConfig(Long id, String chartConfig) {
+        Indicateur indicateur = indicateurRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+
+        indicateur.setChartConfig(chartConfig);
+        return indicateurRepository.save(indicateur);
+    }
 }

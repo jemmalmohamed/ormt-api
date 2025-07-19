@@ -28,6 +28,7 @@ import ma.org.ormt.core.validators.groups.OnCreate;
 import ma.org.ormt.core.validators.groups.OnUpdate;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDto;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDtoMapper;
+import ma.org.ormt.modules.indicateurs.indicateur.dtos.request.ChartConfigRequestDto;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.request.IndicateurRequestDto;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
@@ -158,6 +159,20 @@ public class IndicateurAdminCrudController extends BaseController<Indicateur> {
                 List<Long> deletedIds = indicateurService.deleteBySpecificationExceptIds(filters, globalFilter,
                                 Indicateur.class, ids);
                 return buildResponseEntity(deletedIds, HttpStatus.OK);
+        }
+
+        @Operation(summary = "Save chart configuration for " + ENTITY_NAME, responses = {
+                        @ApiResponse(responseCode = "200", description = "Success", content = @Content(mediaType = "application/json", schema = @Schema(implementation = IndicateurDto.class))),
+                        @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @PutMapping(value = "/{id}/chart-config", consumes = "text/plain")
+        @PreAuthorize("hasAuthority('indicateur:edit')")
+        public ResponseEntity<RestResponse<IndicateurDto>> saveChartConfig(
+                        @PathVariable Long id,
+                        @RequestBody String chartConfig) {
+                Indicateur indicateur = indicateurService.updateChartConfig(id, chartConfig);
+                return buildResponseEntity(indicateur, IndicateurDto.class, HttpStatus.OK);
         }
 
         @Override

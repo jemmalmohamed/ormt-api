@@ -2,6 +2,7 @@ package ma.org.ormt.modules.indicateurs.indicateur.services.export.data.builders
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Objects;
@@ -62,8 +63,16 @@ public class IndicateurPivotDataTable {
             columnDims.addAll(autres);
         }
 
+        // Sort temporal header values if temporal dimension exists
         List<List<String>> columnValues = columnDims.stream()
-                .map(dim -> getUniqueDimensionValues(indicateur, dim.getDimension().getNom().toLowerCase()))
+                .map(dim -> {
+                    List<String> values = getUniqueDimensionValues(indicateur,
+                            dim.getDimension().getNom().toLowerCase());
+                    if (Boolean.TRUE.equals(dim.getTemporelle())) {
+                        values.sort(Comparator.naturalOrder());
+                    }
+                    return values;
+                })
                 .collect(Collectors.toList());
         List<List<String>> columnCombinations = cartesianProduct(columnValues);
 
@@ -99,8 +108,9 @@ public class IndicateurPivotDataTable {
             headerRows.add(headerRow);
         }
 
-        // Build data rows
+        // Sort principal dimension values before building data rows
         List<String> valeursPrincipale = getUniqueDimensionValues(indicateur, principale.getDimension().getNom());
+        valeursPrincipale.sort(Comparator.naturalOrder());
         List<List<String>> data = new ArrayList<>();
         for (String valPrincipale : valeursPrincipale) {
             List<String> row = new ArrayList<>();
@@ -185,11 +195,8 @@ public class IndicateurPivotDataTable {
         IndicateurDimension principale = dims.stream().filter(IndicateurDimension::getPrincipale).findFirst()
                 .orElse(null);
 
-        List<IndicateurDimension> autres = dims.stream()
+        List<IndicateurDimension> autres = dims.stream().filter(d -> !Boolean.TRUE.equals(d.getPrincipale()))
                 .collect(Collectors.toList());
-        // List<IndicateurDimension> autres = dims.stream().filter(d ->
-        // !Boolean.TRUE.equals(d.getPrincipale()))
-        // .collect(Collectors.toList());
 
         if (principale == null || autres.isEmpty()) {
             return PivotTableMetadataDto.builder().build();
