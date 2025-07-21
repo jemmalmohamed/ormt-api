@@ -14,5 +14,7 @@ public interface IndicateurDtoMapper extends BaseDtoMapper<Indicateur, Indicateu
     default void setHasDonnees(Indicateur source, @MappingTarget IndicateurDto target) {
         // Set hasDonnees to true if the list is not null and not empty
         target.setHasDonnees(source.getDonnees() != null && !source.getDonnees().isEmpty());
+        // Set nombreDimensions to the size of the dimensions list
+        target.setNombreDimensions(source.getDimensions() != null ? source.getDimensions().size() : 0);
     }
 }

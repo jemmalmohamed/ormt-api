@@ -5,7 +5,7 @@ starter:
   database:
     reset: true
     seed: true
-  minio:
+  minio: 
     reset: true
     seed: true
   keycloak: 

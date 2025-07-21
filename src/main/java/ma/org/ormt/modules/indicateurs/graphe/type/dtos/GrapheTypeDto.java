@@ -25,12 +25,6 @@ public class GrapheTypeDto extends Dto {
 
     private String chartJsType;
 
-    private Integer minDimensions;
-
-    private Integer maxDimensions;
-
-    private Boolean requiresTemporal;
-
     private Boolean actif;
 
     // Relations will be added after creating other entities

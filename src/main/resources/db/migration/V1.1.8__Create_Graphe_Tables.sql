@@ -6,7 +6,6 @@ CREATE TABLE IF NOT EXISTS graphe_type (
     id BIGSERIAL PRIMARY KEY,
     code VARCHAR(50) UNIQUE NOT NULL,
     nom VARCHAR(100) NOT NULL,
-
     description TEXT,
     chart_js_type VARCHAR(50) NOT NULL,
     actif BOOLEAN DEFAULT TRUE,
@@ -45,13 +44,4 @@ CREATE INDEX IF NOT EXISTS idx_graphe_type_actif ON graphe_type(actif);
 CREATE INDEX IF NOT EXISTS idx_graphe_config_indicateur ON graphe_configuration(indicateur_id);
 CREATE INDEX IF NOT EXISTS idx_graphe_config_default ON graphe_configuration(is_default);
 
--- Insertion des types de graphiques de base
-INSERT INTO graphe_type (code, nom, description, chart_js_type,  actif) VALUES
-('CAMEMBERT', 'Camembert', 'Graphique circulaire pour représenter des proportions', 'pie',  TRUE),
-('HISTOGRAMME', 'Histogramme', 'Graphique en barres verticales', 'bar',  TRUE),
-('COURBES', 'Courbes', 'Graphique linéaire simple', 'line',  TRUE),
-('PYRAMIDE_AGES', 'Pyramide des âges', 'Graphique spécialisé pour la répartition par âge et genre', 'bar',  TRUE),
-('CARTE', 'Carte', 'Représentation géographique des données', 'choropleth',  TRUE),
-('COURBE_LINEAIRE', 'Courbe linéaire', 'Graphique linéaire pour évolutions temporelles', 'line',  TRUE),
-('HISTOGRAMME_EMPILTE_EVOLUTION', 'Histogramme empilé évolution', 'Histogramme empilé pour comparer évolutions', 'bar',  TRUE),
-('COURBE_EVOLUTION', 'Courbe linéaire évolution', 'Courbes multiples pour évolutions temporelles', 'line',  TRUE);
+ 

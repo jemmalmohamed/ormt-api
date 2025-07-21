@@ -33,7 +33,7 @@ import ma.org.ormt.modules.indicateurs.graphe.configuration.models.GrapheConfigu
 import ma.org.ormt.modules.indicateurs.graphe.configuration.services.GrapheConfigurationService;
 
 @RestController
-@RequestMapping(value = "/api/v1/admin/grapGrapheConfigurations")
+@RequestMapping(value = "/api/v1/admin/graphe-configuration")
 @RequiredArgsConstructor
 @Tag(name = "GrapheConfiguration", description = "GrapheConfiguration API")
 public class GrapheConfigurationCrudController extends BaseController<GrapheConfiguration> {

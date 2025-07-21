@@ -120,7 +120,7 @@ export interface GrapheConfigurationDto {
   name: string;
   configuration: string; // JSON stringifié
   isDefault: boolean;
-  isPublic: boolean;
+   : boolean;
 }
 
 @Injectable({
@@ -739,8 +739,7 @@ const customConfig = {
     }
   }),
   isDefault: false,
-  isPublic: true
-};
+ };
 
 this.grapheService.createConfiguration(customConfig).subscribe({
   next: (result) => console.log('Configuration créée:', result),

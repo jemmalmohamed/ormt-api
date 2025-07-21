@@ -17,7 +17,6 @@ import ma.org.ormt.core.utilities.PaginationUtils;
 import ma.org.ormt.modules.indicateurs.graphe.type.models.GrapheType;
 import ma.org.ormt.modules.indicateurs.graphe.type.repositories.GrapheTypeRepository;
 import ma.org.ormt.modules.indicateurs.graphe.type.services.GrapheTypeService;
-import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @Service
 @Transactional
@@ -25,12 +24,6 @@ public class GrapheTypeServiceImpl extends BaseServiceImpl<GrapheType> implement
 
     @Autowired
     private GrapheTypeRepository graphetypeRepository;
-
-    @Autowired
-    private IndicateurService indicateurService;
-
-    private static final String NOT_FOUND_STRING = "GrapheType non trouvée";
-    private static final String INDICATEUR_NOT_FOUND = "Indicateur non trouvé";
 
     public GrapheTypeServiceImpl(GrapheTypeRepository graphetypeRepository, SpecificationService specificationService) {
         super(graphetypeRepository, specificationService);

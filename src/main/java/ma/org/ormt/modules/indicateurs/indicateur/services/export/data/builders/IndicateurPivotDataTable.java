@@ -45,6 +45,12 @@ public class IndicateurPivotDataTable {
                 .orElse(null);
         List<IndicateurDimension> autres = dims.stream().filter(d -> !Boolean.TRUE.equals(d.getPrincipale()))
                 .collect(Collectors.toList());
+
+        // Handle single dimension case
+        if (dims.size() == 1) {
+            return buildSingleDimensionTable(indicateur, dims.get(0));
+        }
+
         if (principale == null || autres.isEmpty())
             return Collections.emptyList();
 
@@ -139,6 +145,47 @@ public class IndicateurPivotDataTable {
         return result;
     }
 
+    /**
+     * Builds a simple table for cases with only one dimension
+     */
+    private static List<List<String>> buildSingleDimensionTable(Indicateur indicateur, IndicateurDimension dimension) {
+        List<List<String>> result = new ArrayList<>();
+
+        // Create header row
+        List<String> headerRow = new ArrayList<>();
+        String dimensionLabel = dimension.getDimension().getLibelle() != null
+                ? dimension.getDimension().getLibelle().toLowerCase()
+                : dimension.getDimension().getNom().toLowerCase();
+        headerRow.add(dimensionLabel);
+        headerRow.add("Valeur"); // Column for the data values
+        result.add(headerRow);
+
+        // Get unique dimension values and sort them
+        List<String> dimensionValues = getUniqueDimensionValues(indicateur, dimension.getDimension().getNom());
+        if (Boolean.TRUE.equals(dimension.getTemporelle())) {
+            dimensionValues.sort(Comparator.naturalOrder());
+        }
+
+        // Create data rows
+        for (String dimValue : dimensionValues) {
+            List<String> dataRow = new ArrayList<>();
+            dataRow.add(dimValue);
+
+            // Find the corresponding data value
+            Optional<DonneeIndicateur> donneeOpt = indicateur.getDonnees().stream()
+                    .filter(d -> {
+                        String vd = getValeurDimension(d, dimension.getDimension().getNom());
+                        return Objects.equals(vd, dimValue);
+                    })
+                    .findFirst();
+
+            dataRow.add(donneeOpt.map(DonneeIndicateur::getValeur).orElse(""));
+            result.add(dataRow);
+        }
+
+        return result;
+    }
+
     public static List<String> getUniqueDimensionValues(Indicateur indicateur, String dimensionNom) {
         Set<String> values = new LinkedHashSet<>();
         for (DonneeIndicateur donnee : indicateur.getDonnees()) {
@@ -192,6 +239,12 @@ public class IndicateurPivotDataTable {
         }
 
         List<IndicateurDimension> dims = indicateur.getIndicateurDimensions();
+
+        // Handle single dimension case
+        if (dims.size() == 1) {
+            return buildSingleDimensionMetadata(indicateur, dims.get(0));
+        }
+
         IndicateurDimension principale = dims.stream().filter(IndicateurDimension::getPrincipale).findFirst()
                 .orElse(null);
 
@@ -316,6 +369,47 @@ public class IndicateurPivotDataTable {
         }
         // Add more logic here based on your dimension types
         return "categorical";
+    }
+
+    /**
+     * Builds metadata for single dimension tables
+     */
+    private static PivotTableMetadataDto buildSingleDimensionMetadata(Indicateur indicateur,
+            IndicateurDimension dimension) {
+        List<String> values = getUniqueDimensionValues(indicateur, dimension.getDimension().getNom());
+
+        // Build dimension info - treat single dimension as principal (row dimension)
+        PivotTableMetadataDto.DimensionPosition position = PivotTableMetadataDto.DimensionPosition.builder()
+                .axis("row")
+                .headerRowIndex(0)
+                .build();
+
+        PivotTableMetadataDto.DimensionInfo dimensionInfo = PivotTableMetadataDto.DimensionInfo.builder()
+                .dimensionId(dimension.getDimension().getId())
+                .dimensionNom(dimension.getDimension().getNom())
+                .dimensionLibelle(dimension.getDimension().getLibelle())
+                .dimensionType(getDimensionType(dimension))
+                .isTemporelle(Boolean.TRUE.equals(dimension.getTemporelle()))
+                .isPrincipale(true) // Treat as principal in single dimension case
+                .values(values)
+                .position(position)
+                .build();
+
+        // Build table structure info for single dimension table
+        PivotTableMetadataDto.TableStructure tableStructure = PivotTableMetadataDto.TableStructure.builder()
+                .dataStartRow(1) // Data starts after single header row
+                .dataStartColumn(1) // Data starts after dimension column
+                .totalRows(1 + values.size()) // Header row + data rows
+                .totalColumns(2) // Dimension column + value column
+                .build();
+
+        return PivotTableMetadataDto.builder()
+                .principalDimension(dimensionInfo)
+                .columnDimensions(new ArrayList<>()) // No column dimensions in single dimension case
+                .headerRowCount(1) // Single header row
+                .dataColumnCount(1) // Single data column
+                .tableStructure(tableStructure)
+                .build();
     }
 
 }

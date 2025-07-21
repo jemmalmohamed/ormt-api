@@ -29,5 +29,4 @@ public interface IndicateurService extends BaseService<Indicateur> {
 
     IndicateurDetailDto getIndicateurWithTableData(Long id, String tableFormat);
 
-    Indicateur updateChartConfig(Long id, String chartConfig);
 }

@@ -10,8 +10,8 @@
     "actif": true,
     "indicateurs": [
         {
-            "nom": "population municipale (effectif)",
-            "description": "population municipale (effectif)",
+            "nom": "population municipale",
+            "description": "population municipale",
             "categorie": "population et conditions de vie",
             "abreviation": "",
             "roleAcces": [

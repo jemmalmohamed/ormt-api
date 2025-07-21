@@ -4,12 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
-import jakarta.persistence.Lob;
+
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
@@ -26,6 +25,7 @@ import ma.org.ormt.core.commun.base.entity.BaseEntity;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
 import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
+import ma.org.ormt.modules.indicateurs.graphe.configuration.models.GrapheConfiguration;
 import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.source.models.Source;
 
@@ -66,6 +66,9 @@ public class Indicateur extends BaseEntity {
 
     @OneToMany(mappedBy = "indicateur", fetch = FetchType.LAZY)
     private List<IndicateurDimension> indicateurDimensions;
+
+    @OneToMany(mappedBy = "indicateur")
+    private List<GrapheConfiguration> grapheConfigurations;
 
     @ManyToOne
     @JoinColumn(name = "source_id")

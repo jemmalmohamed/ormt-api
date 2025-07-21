@@ -81,9 +81,9 @@ public class ChiffreCleSeeder implements CommandLineRunner {
             createChiffreClesFromJsonFile(jsonFile, initDataPath);
 
             createChiffreCleFromIndicateurDonnee("Nombre d'offre d'emploi recueillies");
-            createChiffreCleFromIndicateurDonnee(
-                    "Emploi par secteur d'emploi");
-            createChiffreCleFromIndicateurDonnee("Emploi par âge");
+            // createChiffreCleFromIndicateurDonnee(
+            // "Emploi par secteur d'emploi");
+            // createChiffreCleFromIndicateurDonnee("Emploi par âge");
 
             log.info("ChiffreCle data seeding completed successfully.");
         } catch (Exception e) {

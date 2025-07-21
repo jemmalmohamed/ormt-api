@@ -21,6 +21,8 @@ import ma.org.ormt.modules.indicateurs.graphe.configuration.dtos.request.GrapheC
 import ma.org.ormt.modules.indicateurs.graphe.configuration.models.GrapheConfiguration;
 import ma.org.ormt.modules.indicateurs.graphe.configuration.repositories.GrapheConfigurationRepository;
 import ma.org.ormt.modules.indicateurs.graphe.configuration.services.GrapheConfigurationService;
+import ma.org.ormt.modules.indicateurs.graphe.type.services.GrapheTypeService;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @Service
 @Transactional
@@ -28,7 +30,11 @@ public class GrapheConfigurationServiceImpl extends BaseServiceImpl<GrapheConfig
         implements GrapheConfigurationService {
 
     @Autowired
-    private GrapheConfigurationRepository gapheConfigurationRepository;
+    private GrapheConfigurationRepository grapheConfigurationRepository;
+    @Autowired
+    private IndicateurService indicateurService;
+    @Autowired
+    private GrapheTypeService grapheTypeService;
 
     @Autowired
     private ObjectsValidator<GrapheConfigurationRequestDto> validator;
@@ -38,19 +44,19 @@ public class GrapheConfigurationServiceImpl extends BaseServiceImpl<GrapheConfig
 
     private static final String NOT_FOUND_STRING = "GrapheConfiguration non trouvée";
 
-    public GrapheConfigurationServiceImpl(GrapheConfigurationRepository gapheConfigurationRepository,
+    public GrapheConfigurationServiceImpl(GrapheConfigurationRepository grapheConfigurationRepository,
             SpecificationService specificationService) {
-        super(gapheConfigurationRepository, specificationService);
+        super(grapheConfigurationRepository, specificationService);
     }
 
     @Override
     public boolean existsById(Long id) {
-        return gapheConfigurationRepository.existsById(id);
+        return grapheConfigurationRepository.existsById(id);
     }
 
     @Override
     public Optional<GrapheConfiguration> findByNom(String nom) {
-        return gapheConfigurationRepository.findByNom(nom);
+        return grapheConfigurationRepository.findByNom(nom);
     }
 
     @Override
@@ -70,7 +76,7 @@ public class GrapheConfigurationServiceImpl extends BaseServiceImpl<GrapheConfig
 
     @Override
     public GrapheConfiguration save(GrapheConfiguration grapheConfiguration) {
-        return gapheConfigurationRepository.save(grapheConfiguration);
+        return grapheConfigurationRepository.save(grapheConfiguration);
     }
 
     @Override
@@ -79,7 +85,19 @@ public class GrapheConfigurationServiceImpl extends BaseServiceImpl<GrapheConfig
             validator.validate(requestDto);
             GrapheConfiguration grapheConfigurationToCreate = grapheConfigurationRequestMapper
                     .mapToEntity(requestDto);
-            return gapheConfigurationRepository.save(grapheConfigurationToCreate);
+
+            grapheConfigurationToCreate.setIndicateur(
+                    indicateurService.findById(requestDto.getIndicateur().getId())
+                            .orElseThrow(() -> new EntityNotFoundException("Indicateur non trouvé")));
+
+            grapheConfigurationToCreate.setGrapheType(
+                    grapheTypeService.findById(requestDto.getGrapheType().getId())
+                            .orElseThrow(() -> new EntityNotFoundException("GrapheType non trouvé")));
+
+            grapheConfigurationToCreate.setDimensionMappingJson("{}");
+
+            return grapheConfigurationRepository.save(grapheConfigurationToCreate);
+
         } catch (Exception e) {
             throw new IllegalArgumentException(
                     "Erreur lors de la création de la grapheConfiguration: " + e.getMessage());
@@ -92,11 +110,12 @@ public class GrapheConfigurationServiceImpl extends BaseServiceImpl<GrapheConfig
             validator.validate(requestDto);
             checkPathId(id, requestDto.getId());
 
-            GrapheConfiguration grapheConfiguration = gapheConfigurationRepository.findById(id)
+            GrapheConfiguration grapheConfiguration = grapheConfigurationRepository.findById(id)
                     .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
 
             updateFields(grapheConfiguration, requestDto);
-            return gapheConfigurationRepository.save(grapheConfiguration);
+
+            return grapheConfigurationRepository.save(grapheConfiguration);
         } catch (Exception e) {
             throw new IllegalArgumentException(
                     "Erreur lors de la mise à jour de la grapheConfiguration: " + e.getMessage());
@@ -106,6 +125,15 @@ public class GrapheConfigurationServiceImpl extends BaseServiceImpl<GrapheConfig
     private void updateFields(GrapheConfiguration grapheConfiguration,
             GrapheConfigurationRequestDto entityToUpdate) {
         grapheConfiguration.setNom(entityToUpdate.getNom());
+        grapheConfiguration.setDimensionMappingJson("{}");
+        grapheConfiguration.setChartOptionsJson(entityToUpdate.getChartOptionsJson());
+        grapheConfiguration.setIsDefault(entityToUpdate.getIsDefault());
+        grapheConfiguration.setIndicateur(
+                indicateurService.findById(entityToUpdate.getIndicateur().getId())
+                        .orElseThrow(() -> new EntityNotFoundException("Indicateur non trouvé")));
+        grapheConfiguration.setGrapheType(
+                grapheTypeService.findById(entityToUpdate.getGrapheType().getId())
+                        .orElseThrow(() -> new EntityNotFoundException("GrapheType non trouvé")));
 
     }
 

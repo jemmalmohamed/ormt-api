@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.Dto;
 import ma.org.ormt.modules.indicateurs.graphe.type.dtos.GrapheTypeDto;
-import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDto;
 
 @Setter
 @Getter
@@ -19,7 +18,7 @@ import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDto;
 @NoArgsConstructor
 public class GrapheConfigurationDto extends Dto {
 
-    private IndicateurDto indicateur;
+    private Dto indicateur;
 
     private GrapheTypeDto grapheType;
 
@@ -29,12 +28,6 @@ public class GrapheConfigurationDto extends Dto {
 
     private String chartOptionsJson;
 
-    private String colorsJson;
-
     private Boolean isDefault;
-
-    private Boolean isPublic;
-
-    private Integer ordreAffichage;
 
 }
