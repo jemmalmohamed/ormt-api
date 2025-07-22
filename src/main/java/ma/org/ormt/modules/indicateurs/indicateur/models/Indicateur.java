@@ -59,6 +59,9 @@ public class Indicateur extends BaseEntity {
 
     @Transient
     public List<Dimension> getDimensions() {
+        if (indicateurDimensions == null) {
+            return new ArrayList<>();
+        }
         return indicateurDimensions.stream()
                 .map(IndicateurDimension::getDimension)
                 .collect(Collectors.toList());
