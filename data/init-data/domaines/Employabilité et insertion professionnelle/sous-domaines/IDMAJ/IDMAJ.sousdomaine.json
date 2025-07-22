@@ -11,7 +11,7 @@
   "indicateurs": [
     {
       "nom": "Nombre des bénéficiaires IDMAJ, y compris le PI",
-      "categorie": "IDMAJ",
+      "categorie": "Chercheurs d'emploi bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -40,7 +40,7 @@
     },
     {
       "nom": "Bénéficiaires IDMAJ par genre (y compris le PI)",
-      "categorie": "IDMAJ",
+      "categorie": "Chercheurs d'emploi bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -78,7 +78,7 @@
     },
     {
       "nom": "Bénéficiaires IDMAJ par âge (hors PI)",
-      "categorie": "IDMAJ",
+      "categorie": "Chercheurs d'emploi bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -116,7 +116,7 @@
     },
     {
       "nom": "Bénéficiaires IDMAJ par diplôme (hors PI)",
-      "categorie": "IDMAJ",
+      "categorie": "Chercheurs d'emploi bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -154,7 +154,7 @@
     },
     {
       "nom": "Bénéficiaires IDMAJ par type de contrat (hors PI)",
-      "categorie": "IDMAJ",
+      "categorie": "Chercheurs d'emploi bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -192,7 +192,7 @@
     },
     {
       "nom": "Bénéficiaires IDMAJ par secteur d’activité (hors PI)",
-      "categorie": "IDMAJ",
+      "categorie": "Chercheurs d'emploi bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -230,7 +230,7 @@
     },
     {
       "nom": "Bénéficiaires IDMAJ par région (hors PI)",
-      "categorie": "IDMAJ",
+      "categorie": "Chercheurs d'emploi bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {

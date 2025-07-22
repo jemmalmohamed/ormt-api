@@ -18,7 +18,7 @@
         }
       ],
       "actif": true,
-      "categorie": "emploi",
+      "categorie": "Emploi total",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
       "source": "hcp",
@@ -58,7 +58,7 @@
     },
     {
       "nom": "emploi par âge",
-      "categorie": "emploi",
+      "categorie": "Emploi total",
       "roleAcces": [
         {
           "roleCode": "role_public",
@@ -105,7 +105,7 @@
     },
     {
       "nom": "emploi par diplôme",
-      "categorie": "emploi",
+      "categorie": "Emploi total",
       "roleAcces": [
         {
           "roleCode": "role_public",
@@ -152,7 +152,7 @@
     },
     {
       "nom": "emploi par secteur d'activité",
-      "categorie": "emploi",
+      "categorie": "Emploi total",
       "abreviation": "",
       "roleAcces": [
         {
@@ -199,7 +199,7 @@
     },
     {
       "nom": "emploi par statut professionnel",
-      "categorie": "emploi",
+      "categorie": "Emploi total",
       "abreviation": "",
       "roleAcces": [
         {
@@ -246,7 +246,7 @@
     },
     {
       "nom": "emploi par type d'emploi",
-      "categorie": "emploi",
+      "categorie": "Emploi total",
       "abreviation": "",
       "roleAcces": [
         {
@@ -284,7 +284,7 @@
     },
     {
       "nom": "emploi par secteur d'emploi",
-      "categorie": "emploi",
+      "categorie": "Emploi total",
       "abreviation": "",
       "roleAcces": [
         {
@@ -322,7 +322,7 @@
     },
     {
       "nom": "emploi par région",
-      "categorie": "emploi",
+      "categorie": "Emploi indépendant",
       "abreviation": "",
       "typeTb": "grand public",
       "roleAcces": [
@@ -360,7 +360,7 @@
     },
     {
       "nom": "emploi indépendants déclarés à la cnss par secteur d'activité",
-      "categorie": "emploi",
+      "categorie": "Emploi indépendant",
       "abreviation": "",
       "roleAcces": [
         {
@@ -407,7 +407,7 @@
     },
     {
       "nom": "emploi indépendants déclarés à la cnss par région",
-      "categorie": "emploi",
+      "categorie": "Emploi salarié",
       "roleAcces": [
         {
           "roleCode": "role_public",
@@ -454,7 +454,7 @@
     },
     {
       "nom": "salariés déclarés à la cnss par secteur d'activité",
-      "categorie": "salariés",
+      "categorie": "Emploi salarié",
       "abreviation": "",
       "roleAcces": [
         {
@@ -501,7 +501,7 @@
     },
     {
       "nom": "salariés déclarés à la cnss par région",
-      "categorie": "salariés",
+      "categorie": "Emploi salarié",
       "abreviation": "",
       "roleAcces": [
         {
@@ -539,7 +539,7 @@
     },
     {
       "nom": "emploi salarié eqtp par secteur d'activité",
-      "categorie": "salariés",
+      "categorie": "Emploi salarié",
       "abreviation": "",
       "roleAcces": [
         {
@@ -577,7 +577,7 @@
     },
     {
       "nom": "nombre de déclaration cnss par secteur d'activité",
-      "categorie": "salariés",
+      "categorie": "Emploi salarié",
       "abreviation": "",
       "typeTb": "décisionnel",
       "source": "cnss",
@@ -615,7 +615,7 @@
     },
     {
       "nom": "indice de rotation de salariés par poste par secteur d'activité",
-      "categorie": "salariés",
+      "categorie": "Emploi salarié",
       "abreviation": "",
       "typeTb": "décisionnel",
       "roleAcces": [
@@ -653,7 +653,7 @@
     },
     {
       "nom": "emploi informel par secteur d'activité",
-      "categorie": "emploi",
+      "categorie": "Emploi informel",
       "abreviation": "",
       "typeTb": "décisionnel",
       "source": "hcp-cnss",
@@ -691,7 +691,7 @@
     },
     {
       "nom": "salarié public par secteur",
-      "categorie": "salariés",
+      "categorie": "Emploi public",
       "abreviation": "",
       "roleAcces": [
         {

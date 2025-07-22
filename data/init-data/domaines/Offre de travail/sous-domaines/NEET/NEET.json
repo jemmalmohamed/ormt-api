@@ -12,7 +12,7 @@
         {
             "nom": "Effectif des jeunes NEET par milieu de résidence",
             "description": "Effectif des jeunes NEET selon le milieu de résidence",
-            "categorie": "NEET",
+            "categorie": "Volume",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -49,7 +49,7 @@
         {
             "nom": "Effectif des jeunes NEET par genre",
             "description": "Effectif des jeunes NEET selon le genre",
-            "categorie": "NEET",
+            "categorie": "Volume",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -86,7 +86,7 @@
         {
             "nom": "Taux de NEET par milieu de résidence",
             "description": "Taux de NEET selon le milieu de résidence",
-            "categorie": "NEET",
+            "categorie": "Taux des NEET ",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -124,7 +124,7 @@
         {
             "nom": "Taux de NEET par genre",
             "description": "Taux de NEET selon le genre",
-            "categorie": "NEET",
+            "categorie": "Taux des NEET ",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -161,7 +161,7 @@
         {
             "nom": "Taux de NEET par région",
             "description": "Taux de NEET selon la région",
-            "categorie": "NEET",
+            "categorie": "Taux des NEET ",
             "abreviation": "",
             "roleAcces": [
                 {

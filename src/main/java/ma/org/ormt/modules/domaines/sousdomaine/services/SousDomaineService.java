@@ -9,6 +9,7 @@ import ma.org.ormt.core.commun.base.service.BaseService;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestDto;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDto;
+import ma.org.ormt.modules.domaines.sousdomaine.dtos.details.SousDomaineDetailsDto;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 
 public interface SousDomaineService extends BaseService<SousDomaine> {
@@ -31,5 +32,12 @@ public interface SousDomaineService extends BaseService<SousDomaine> {
 
     // New method to get SousDomaine with table data for indicateurs
     SousDomaineDto getSousDomaineWithIndicateurTableData(Long id, String tableFormat);
+
+    // New method to get SousDomaineDetailsDto with pivot table data
+    SousDomaineDetailsDto getSousDomaineWithPivotTable(Long id, String tableFormat);
+
+    // New method to get List of SousDomaineDetailsDto with pivot table data
+    List<SousDomaineDetailsDto> getSousDomainesWithPivotTable(Long domaineId, QueryParams requestParams,
+            String tableFormat);
 
 }

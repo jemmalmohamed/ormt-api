@@ -11,7 +11,7 @@
   "indicateurs": [
     {
       "nom": "Nombre des salariés bénéficiaires TAHFIZ",
-      "categorie": "TAHFIZ",
+      "categorie": "Salariés Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -40,7 +40,7 @@
     },
     {
       "nom": "Salariés bénéficiaires TAHFIZ par genre",
-      "categorie": "TAHFIZ",
+      "categorie": "Salariés Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -78,7 +78,7 @@
     },
     {
       "nom": "Salariés bénéficiaires TAHFIZ par âge",
-      "categorie": "TAHFIZ",
+      "categorie": "Salariés Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -116,7 +116,7 @@
     },
     {
       "nom": "Salariés bénéficiaires TAHFIZ par diplôme",
-      "categorie": "TAHFIZ",
+      "categorie": "Salariés Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -154,7 +154,7 @@
     },
     {
       "nom": "Salariés bénéficiaires TAHFIZ par SAE",
-      "categorie": "TAHFIZ",
+      "categorie": "Salariés Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -192,7 +192,7 @@
     },
     {
       "nom": "Salariés bénéficiaires TAHFIZ par taille d’entreprise",
-      "categorie": "TAHFIZ",
+      "categorie": "Salariés Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -230,7 +230,7 @@
     },
     {
       "nom": "Salariés bénéficiaires TAHFIZ par région",
-      "categorie": "TAHFIZ",
+      "categorie": "Salariés Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -268,7 +268,7 @@
     },
     {
       "nom": "Nombre d'entreprises bénéficiaires TAHFIZ",
-      "categorie": "TAHFIZ",
+      "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -297,7 +297,7 @@
     },
     {
       "nom": "Entreprises bénéficiaires TAHFIZ par taille d’entreprise",
-      "categorie": "TAHFIZ",
+      "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -335,7 +335,7 @@
     },
     {
       "nom": "Entreprises bénéficiaires TAHFIZ par SAE",
-      "categorie": "TAHFIZ",
+      "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -373,7 +373,7 @@
     },
     {
       "nom": "Entreprises bénéficiaires TAHFIZ par région",
-      "categorie": "TAHFIZ",
+      "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {

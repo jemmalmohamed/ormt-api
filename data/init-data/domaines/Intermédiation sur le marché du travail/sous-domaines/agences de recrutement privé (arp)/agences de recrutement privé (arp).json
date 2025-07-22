@@ -12,7 +12,7 @@
         {
             "nom": "nombre des agences de recrutement privé par région",
             "description": "nombre des agences de recrutement privé par région",
-            "categorie": "agence",
+            "categorie": "arp",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -50,7 +50,7 @@
         {
             "nom": "agences de recrutement privé par région",
             "description": "répartition des agences de recrutement privé par région",
-            "categorie": "agence",
+            "categorie": "arp",
             "abreviation": "",
             "roleAcces": [
                 {

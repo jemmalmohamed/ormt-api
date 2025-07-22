@@ -12,7 +12,7 @@
         {
             "nom": "Population active en chômage par milieu de résidence",
             "description": "Population active en chômage selon le milieu de résidence",
-            "categorie": "Chomage",
+            "categorie": "Volume",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -50,7 +50,7 @@
         {
             "nom": "Population active en chômage par diplôme et genre",
             "description": "Population active en chômage selon diplôme et genre",
-            "categorie": "Chomage",
+            "categorie": "Volume",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -97,7 +97,7 @@
         {
             "nom": "Population active en chômage par diplôme et milieu de résidence",
             "description": "Population active en chômage selon diplôme et milieu de résidence",
-            "categorie": "Chomage",
+            "categorie": "Volume",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -144,7 +144,7 @@
         {
             "nom": "Population active en chômage par genre",
             "description": "Population active en chômage selon le genre",
-            "categorie": "Chomage",
+            "categorie": "Volume",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -182,7 +182,7 @@
         {
             "nom": "Population active en chômage selon la durée",
             "description": "Population active en chômage selon la durée du chômage",
-            "categorie": "Chomage",
+            "categorie": "Volume",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -220,7 +220,7 @@
         {
             "nom": "Population active en chômage selon l'expérience",
             "description": "Population active en chômage selon l'expérience professionnelle",
-            "categorie": "Chomage",
+            "categorie": "Volume",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -258,7 +258,7 @@
         {
             "nom": "Population active en chômage selon les causes",
             "description": "Population active en chômage selon les causes du chômage",
-            "categorie": "Chomage",
+            "categorie": "Volume",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -296,7 +296,7 @@
         {
             "nom": "Taux de chômage selon le milieu de résidence",
             "description": "Taux de chômage selon le milieu de résidence",
-            "categorie": "Chomage",
+            "categorie": "Taux de chômage ",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -334,7 +334,7 @@
         {
             "nom": "Taux de chômage par région et genre",
             "description": "Taux de chômage par région et genre",
-            "categorie": "Chomage",
+            "categorie": "Taux de chômage ",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -381,7 +381,7 @@
         {
             "nom": "Taux de chômage par région et milieu de résidence",
             "description": "Taux de chômage par région et milieu de résidence",
-            "categorie": "Chomage",
+            "categorie": "Taux de chômage ",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -428,7 +428,7 @@
         {
             "nom": "Taux de chômage selon le groupe d’âge",
             "description": "Taux de chômage selon le groupe d’âge",
-            "categorie": "Chomage",
+            "categorie": "Taux de chômage ",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -466,7 +466,7 @@
         {
             "nom": "Taux de chômage selon le diplôme",
             "description": "Taux de chômage selon le diplôme",
-            "categorie": "Chomage",
+            "categorie": "Taux de chômage ",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -504,7 +504,7 @@
         {
             "nom": "Taux de chômage selon le genre",
             "description": "Taux de chômage selon le genre",
-            "categorie": "Chomage",
+            "categorie": "Taux de chômage ",
             "abreviation": "",
             "roleAcces": [
                 {

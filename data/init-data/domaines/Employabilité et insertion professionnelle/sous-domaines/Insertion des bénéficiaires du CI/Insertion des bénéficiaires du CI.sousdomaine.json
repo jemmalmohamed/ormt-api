@@ -11,7 +11,7 @@
   "indicateurs": [
     {
       "nom": "Taux d’insertion à 3 ans par genre",
-      "categorie": "Insertion des bénéficiaires du CI",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
       "abreviation": "",
       "roleAcces": [
         {
@@ -49,7 +49,7 @@
     },
     {
       "nom": "Taux d’insertion à 3 ans par âge",
-      "categorie": "Insertion des bénéficiaires du CI",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
       "abreviation": "",
       "roleAcces": [
         {
@@ -87,7 +87,7 @@
     },
     {
       "nom": "Taux d’insertion à 3 ans par diplôme",
-      "categorie": "Insertion des bénéficiaires du CI",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
       "abreviation": "",
       "roleAcces": [
         {
@@ -125,7 +125,7 @@
     },
     {
       "nom": "Taux d’insertion à 3 ans par taille d’entreprise",
-      "categorie": "Insertion des bénéficiaires du CI",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
       "abreviation": "",
       "roleAcces": [
         {
@@ -163,7 +163,7 @@
     },
     {
       "nom": "Taux d’insertion à 3 ans par secteur d'activité économique",
-      "categorie": "Insertion des bénéficiaires du CI",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
       "abreviation": "",
       "roleAcces": [
         {
@@ -201,7 +201,7 @@
     },
     {
       "nom": "Taux d’insertion à 3 ans par région",
-      "categorie": "Insertion des bénéficiaires du CI",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
       "abreviation": "",
       "roleAcces": [
         {
@@ -239,7 +239,7 @@
     },
     {
       "nom": "Taux d’insertion à 3 ans selon la période de stage",
-      "categorie": "Insertion des bénéficiaires du CI",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
       "abreviation": "",
       "roleAcces": [
         {
@@ -277,7 +277,7 @@
     },
     {
       "nom": "Taux d’insertion à l'issue de stage par taille d’entreprise",
-      "categorie": "Insertion des bénéficiaires du CI",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
       "abreviation": "",
       "roleAcces": [
         {
@@ -315,7 +315,7 @@
     },
     {
       "nom": "Taux d’insertion à l'issue de stage par secteur d'activité économique",
-      "categorie": "Insertion des bénéficiaires du CI",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
       "abreviation": "",
       "roleAcces": [
         {

@@ -11,7 +11,7 @@
   "indicateurs": [
     {
       "nom": "Nombre des bénéficiaires du contrats d'insertion",
-      "categorie": "Contrats d'Insertion (CI)",
+      "categorie": "Chercheurs d'emploi  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -40,7 +40,7 @@
     },
     {
       "nom": "Bénéficiaires du CI par genre",
-      "categorie": "Contrats d'Insertion (CI)",
+      "categorie": "Chercheurs d'emploi  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -78,7 +78,7 @@
     },
     {
       "nom": "Bénéficiaires du CI par diplôme",
-      "categorie": "Contrats d'Insertion (CI)",
+      "categorie": "Chercheurs d'emploi  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -116,7 +116,7 @@
     },
     {
       "nom": "Bénéficiaires du CI par SAE",
-      "categorie": "Contrats d'Insertion (CI)",
+      "categorie": "Chercheurs d'emploi  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -154,7 +154,7 @@
     },
     {
       "nom": "Bénéficiaires du CI par région",
-      "categorie": "Contrats d'Insertion (CI)",
+      "categorie": "Chercheurs d'emploi  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -192,7 +192,7 @@
     },
     {
       "nom": "Nombre d'entreprises bénéficiaires du CI",
-      "categorie": "Contrats d'Insertion (CI)",
+      "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -221,7 +221,7 @@
     },
     {
       "nom": "Entreprises bénéficiaires du CI par taille d'entreprise",
-      "categorie": "Contrats d'Insertion (CI)",
+      "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -259,7 +259,7 @@
     },
     {
       "nom": "Entreprises bénéficiaires du CI par SAE",
-      "categorie": "Contrats d'Insertion (CI)",
+      "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -297,7 +297,7 @@
     },
     {
       "nom": "Entreprises bénéficiaires du CI par région",
-      "categorie": "Contrats d'Insertion (CI)",
+      "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {

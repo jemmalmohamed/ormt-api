@@ -12,7 +12,7 @@
         {
             "nom": "objectif ciblé d’entretiens de positionnement",
             "description": "objectif ciblé d’entretiens de positionnement",
-            "categorie": "entretien",
+            "categorie": "entretiens de positionnement",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -41,7 +41,7 @@
         {
             "nom": "nombre d'entretiens de positionnement",
             "description": "nombre d'entretiens de positionnement",
-            "categorie": "entretien",
+            "categorie": "entretiens de positionnement",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -70,7 +70,7 @@
         {
             "nom": "entretiens de positionnement par genre",
             "description": "répartition des entretiens de positionnement par genre",
-            "categorie": "entretien",
+            "categorie": "entretiens de positionnement",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -108,7 +108,7 @@
         {
             "nom": "entretiens de positionnement par âge",
             "description": "répartition des entretiens de positionnement par âge",
-            "categorie": "entretien",
+            "categorie": "entretiens de positionnement",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -146,7 +146,7 @@
         {
             "nom": "entretiens de positionnement par diplôme",
             "description": "répartition des entretiens de positionnement par diplôme",
-            "categorie": "entretien",
+            "categorie": "entretiens de positionnement",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -184,7 +184,7 @@
         {
             "nom": "entretiens de positionnement par région",
             "description": "répartition des entretiens de positionnement par région",
-            "categorie": "entretien",
+            "categorie": "entretiens de positionnement",
             "abreviation": "",
             "roleAcces": [
                 {

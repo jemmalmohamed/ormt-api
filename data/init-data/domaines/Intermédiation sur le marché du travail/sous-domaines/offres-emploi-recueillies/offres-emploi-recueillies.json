@@ -12,7 +12,7 @@
         {
             "nom": "nombre d'offre d'emploi recueillies",
             "description": "nombre d'offre d'emploi recueillies",
-            "categorie": "offre",
+            "categorie": "offres d'emploi",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -41,7 +41,7 @@
         {
             "nom": "offre d'emploi recueillies par région",
             "description": "répartition des offres d’emploi recueillies par région",
-            "categorie": "offre",
+            "categorie": "offres d'emploi",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -79,7 +79,7 @@
         {
             "nom": "offre d’emploi recueillies par taille d’entreprise",
             "description": "répartition des offres d’emploi recueillies par taille d’entreprise",
-            "categorie": "offre",
+            "categorie": "offres d'emploi",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -117,7 +117,7 @@
         {
             "nom": "Offre d'emploi recueillies par contrat",
             "description": "répartition des offres d’emploi recueillies par type de contrat",
-            "categorie": "offre",
+            "categorie": "offres d'emploi",
             "abreviation": "",
             "roleAcces": [
                 {

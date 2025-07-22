@@ -95,7 +95,7 @@ public class DomaineController extends BaseController<Domaine> {
         public ResponseEntity<RestResponse<DomaineDetailDto>> getDomaine(
                         @PathVariable("espaceId") Long espaceId,
                         @PathVariable("id") Long id,
-                        @Parameter(description = "Table format for indicateurs: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'", example = "crud") @RequestParam(value = "tableFormat", required = false) String tableFormat) {
+                        @Parameter(description = "Table format for indicateurs: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'", example = "crud") @RequestParam(value = "tableFormat", defaultValue = "pivot", required = false) String tableFormat) {
 
                 // Check if the user has access to the specified espace
                 boolean hasAccess = hasResourceAccess(espaceId, "espace", "lecture");

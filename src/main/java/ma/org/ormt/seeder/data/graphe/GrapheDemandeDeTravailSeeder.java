@@ -176,6 +176,8 @@ public class GrapheDemandeDeTravailSeeder implements CommandLineRunner {
                 List<IndicateurMultipleGrapheMapping> mappings = Arrays.asList(
                                 new IndicateurMultipleGrapheMapping("objectif ciblé d'entretiens de positionnement",
                                                 Arrays.asList("HISTOGRAMME", "COURBE_LINEAIRE")),
+                                new IndicateurMultipleGrapheMapping("Objectif ciblé d’ateliers de recherche d’emploi",
+                                                Arrays.asList("COURBE_LINEAIRE", "HISTOGRAMME")),
                                 new IndicateurMultipleGrapheMapping("nombre d'entretiens de positionnement",
                                                 Arrays.asList("HISTOGRAMME", "COURBE_LINEAIRE")),
                                 new IndicateurMultipleGrapheMapping("entretiens de positionnement par genre",

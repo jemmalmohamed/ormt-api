@@ -12,7 +12,7 @@
         {
             "nom": "objectif ciblé d’ateliers de recherche d’emploi",
             "description": "objectif ciblé d’ateliers de recherche d’emploi",
-            "categorie": "atelier",
+            "categorie": "Ateliers de recherche d’emploi",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -41,7 +41,7 @@
         {
             "nom": "nombre de bénéficiaires d'ateliers de recherche d'emploi",
             "description": "nombre de bénéficiaires d'ateliers de recherche d'emploi",
-            "categorie": "atelier",
+            "categorie": "Ateliers de recherche d’emploi",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -70,7 +70,7 @@
         {
             "nom": "bénéficiaires d'are par genre",
             "description": "répartition des bénéficiaires d'ateliers de recherche d'emploi par genre",
-            "categorie": "atelier",
+            "categorie": "Ateliers de recherche d’emploi",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -108,7 +108,7 @@
         {
             "nom": "bénéficiaires d'are par âge",
             "description": "répartition des bénéficiaires d'ateliers de recherche d'emploi par âge",
-            "categorie": "atelier",
+            "categorie": "Ateliers de recherche d’emploi",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -146,7 +146,7 @@
         {
             "nom": "bénéficiaires d'are par diplôme",
             "description": "répartition des bénéficiaires d'ateliers de recherche d'emploi par diplôme",
-            "categorie": "atelier",
+            "categorie": "Ateliers de recherche d’emploi",
             "abreviation": "",
             "roleAcces": [
                 {
@@ -184,7 +184,7 @@
         {
             "nom": "bénéficiaires d'are par région",
             "description": "répartition des bénéficiaires d'ateliers de recherche d'emploi par région",
-            "categorie": "atelier",
+            "categorie": "Ateliers de recherche d’emploi",
             "abreviation": "",
             "roleAcces": [
                 {

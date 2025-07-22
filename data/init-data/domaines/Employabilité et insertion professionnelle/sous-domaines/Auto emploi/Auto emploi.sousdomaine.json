@@ -11,7 +11,7 @@
   "indicateurs": [
     {
       "nom": "Objectif ciblé (accompagnement)",
-      "categorie": "Auto emploi",
+      "categorie": "Porteurs de projet accompagnés",
       "abreviation": "",
       "roleAcces": [
         {
@@ -40,7 +40,7 @@
     },
     {
       "nom": "Nombre de porteurs de projet accompagnés",
-      "categorie": "Auto emploi",
+      "categorie": "Porteurs de projet accompagnés",
       "abreviation": "",
       "roleAcces": [
         {
@@ -69,7 +69,7 @@
     },
     {
       "nom": "Porteurs de projet accompagnés par genre",
-      "categorie": "Auto emploi",
+      "categorie": "Porteurs de projet accompagnés",
       "abreviation": "",
       "roleAcces": [
         {
@@ -107,7 +107,7 @@
     },
     {
       "nom": "Porteurs de projet accompagnés par âge",
-      "categorie": "Auto emploi",
+      "categorie": "Porteurs de projet accompagnés",
       "abreviation": "",
       "roleAcces": [
         {
@@ -145,7 +145,7 @@
     },
     {
       "nom": "Porteurs de projet accompagnés par région",
-      "categorie": "Auto emploi",
+      "categorie": "Entreprises crées",
       "abreviation": "",
       "roleAcces": [
         {
@@ -183,7 +183,7 @@
     },
     {
       "nom": "Nombre d'entreprises crées",
-      "categorie": "Auto emploi",
+      "categorie": "Entreprises crées",
       "abreviation": "",
       "roleAcces": [
         {
@@ -212,7 +212,7 @@
     },
     {
       "nom": "Entreprises crées par genre",
-      "categorie": "Auto emploi",
+      "categorie": "Entreprises crées",
       "abreviation": "",
       "roleAcces": [
         {
@@ -250,7 +250,7 @@
     },
     {
       "nom": "Entreprises crées par région",
-      "categorie": "Auto emploi",
+      "categorie": "Entreprises crées",
       "abreviation": "",
       "roleAcces": [
         {
@@ -288,7 +288,7 @@
     },
     {
       "nom": "Nombre des emplois crées",
-      "categorie": "Auto emploi",
+      "categorie": "Entreprises crées",
       "abreviation": "",
       "roleAcces": [
         {
@@ -317,7 +317,7 @@
     },
     {
       "nom": "Emplois crées par région",
-      "categorie": "Auto emploi",
+      "categorie": "Entreprises crées",
       "abreviation": "",
       "roleAcces": [
         {

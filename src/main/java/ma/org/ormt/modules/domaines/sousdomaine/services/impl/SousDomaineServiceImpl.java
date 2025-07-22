@@ -23,6 +23,8 @@ import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestD
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestDtoMapper;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDto;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDtoMapper;
+import ma.org.ormt.modules.domaines.sousdomaine.dtos.details.SousDomaineDetailsDto;
+import ma.org.ormt.modules.domaines.sousdomaine.dtos.details.SousDomaineDetailsDtoMapper;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.repositories.SousDomaineRepository;
 import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
@@ -50,6 +52,9 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
 
     @Autowired
     private SousDomaineDtoMapper sousDomaineDtoMapper;
+
+    @Autowired
+    private SousDomaineDetailsDtoMapper sousDomaineDetailsDtoMapper;
 
     static final String NOT_FOUND_STRING = "SousDomaine not found";
     static final String DOMAINE_NOT_FOUND = "Domaine not found";
@@ -194,6 +199,66 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
         }
 
         return dto;
+    }
+
+    @Override
+    public SousDomaineDetailsDto getSousDomaineWithPivotTable(Long id, String tableFormat) {
+        SousDomaine sousDomaine = findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("SousDomaine not found with id: " + id));
+
+        // Map to DetailsDto first
+        SousDomaineDetailsDto dto = sousDomaineDetailsDtoMapper.mapToDto(sousDomaine);
+
+        // Now enhance each indicateur with table data
+        if (tableFormat != null && !tableFormat.isEmpty() && dto.getIndicateurs() != null) {
+            for (IndicateurDetailDto indicateurDto : dto.getIndicateurs()) {
+                // Get the full indicateur with table data
+                IndicateurDetailDto indicateurWithTableData = indicateurService
+                        .getIndicateurWithTableData(indicateurDto.getId(), tableFormat);
+
+                // Copy the hasDonnees and table data fields
+                indicateurDto.setHasDonnees(indicateurWithTableData.isHasDonnees());
+                indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
+                indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
+                indicateurDto.setCrudTableData(indicateurWithTableData.getCrudTableData());
+                indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
+            }
+        }
+
+        return dto;
+    }
+
+    @Override
+    public List<SousDomaineDetailsDto> getSousDomainesWithPivotTable(Long domaineId, QueryParams requestParams,
+            String tableFormat) {
+        // Get the sous domaines for the domaine
+        Page<SousDomaine> sousDomainePage = getEntityListByDomaineId(domaineId, requestParams);
+
+        // Convert each SousDomaine to SousDomaineDetailsDto with pivot table data
+        return sousDomainePage.getContent().stream()
+                .map(sousDomaine -> {
+                    // Map to DetailsDto first
+                    SousDomaineDetailsDto dto = sousDomaineDetailsDtoMapper.mapToDto(sousDomaine);
+
+                    // Now enhance each indicateur with table data
+                    if (tableFormat != null && !tableFormat.isEmpty() && dto.getIndicateurs() != null) {
+                        for (IndicateurDetailDto indicateurDto : dto.getIndicateurs()) {
+                            // Get the full indicateur with table data
+                            IndicateurDetailDto indicateurWithTableData = indicateurService
+                                    .getIndicateurWithTableData(indicateurDto.getId(), tableFormat);
+
+                            // Copy the hasDonnees and table data fields
+                            indicateurDto.setHasDonnees(indicateurWithTableData.isHasDonnees());
+                            indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
+                            indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
+                            indicateurDto.setCrudTableData(indicateurWithTableData.getCrudTableData());
+                            indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
+                        }
+                    }
+
+                    return dto;
+                })
+                .collect(Collectors.toList());
     }
 
 }
