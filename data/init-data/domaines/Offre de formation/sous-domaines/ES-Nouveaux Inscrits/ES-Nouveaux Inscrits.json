@@ -1,5 +1,5 @@
 {
-    "nom": "ES-Nouveaux Inscrits",
+    "nom": "enseignement supérieur - Nouveaux inscrits",
     "description": "Indicateurs relatifs aux nouveaux inscrits dans l'enseignement supérieur (public, privé, formation des cadres) par genre et domaine d'études.",
     "roleAcces": [
         {
@@ -10,9 +10,9 @@
     "actif": true,
     "indicateurs": [
         {
-            "nom": "Nombre de nouveaux inscrits de l'ES par composante",
+            "nom": "Nombre de nouveaux inscrits de l'enseignement supérieur par composante",
             "description": "Nombre de nouveaux inscrits de l'enseignement supérieur par composante.",
-            "categorie": "ES-Nouveaux Inscrits",
+            "categorie": "Nouveaux inscrits",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -47,9 +47,9 @@
             ]
         },
         {
-            "nom": "Nombre de nouveaux inscrits de l'ES par genre",
+            "nom": "Nombre de nouveaux inscrits de l'enseignement supérieur par genre",
             "description": "Nombre de nouveaux inscrits de l'enseignement supérieur par genre.",
-            "categorie": "ES-Nouveaux Inscrits",
+            "categorie": "Nouveaux inscrits",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -86,7 +86,7 @@
         {
             "nom": "Nombre de nouveaux inscrits de l'enseignement universitaire public par domaine d'études",
             "description": "Nombre de nouveaux inscrits de l'enseignement universitaire public par domaine d'études.",
-            "categorie": "ES-Nouveaux Inscrits",
+            "categorie": "Nouveaux inscrits",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -123,7 +123,7 @@
         {
             "nom": "Nombre de nouveaux inscrits de l'enseignement supérieur privé par genre",
             "description": "Nombre de nouveaux inscrits de l'enseignement supérieur privé par genre.",
-            "categorie": "ES-Nouveaux Inscrits",
+            "categorie": "Nouveaux inscrits",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -160,7 +160,7 @@
         {
             "nom": "Nombre de nouveaux inscrits de l'enseignement supérieur privé par domaine d'études",
             "description": "Nombre de nouveaux inscrits de l'enseignement supérieur privé par domaine d'études.",
-            "categorie": "ES-Nouveaux Inscrits",
+            "categorie": "Nouveaux inscrits",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -197,7 +197,7 @@
         {
             "nom": "Nombre de nouveaux inscrits de la formation des cadres par domaine d'études",
             "description": "Nombre de nouveaux inscrits de la formation des cadres par domaine d'études.",
-            "categorie": "ES-Nouveaux Inscrits",
+            "categorie": "Nouveaux inscrits",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -234,7 +234,7 @@
         {
             "nom": "Nombre de nouveaux inscrits de la formation des cadres par genre",
             "description": "Nombre de nouveaux inscrits de la formation des cadres par genre.",
-            "categorie": "ES-Nouveaux Inscrits",
+            "categorie": "Nouveaux inscrits",
             "abreviation": "ES",
             "roleAcces": [
                 {

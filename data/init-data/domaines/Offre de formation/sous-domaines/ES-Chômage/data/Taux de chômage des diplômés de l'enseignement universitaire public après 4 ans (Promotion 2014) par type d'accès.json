@@ -1,0 +1,59 @@
+{
+    "indicateur": "Taux de chômage des diplômés de l'enseignement universitaire public après 4 ans (Promotion 2014) par type d'accès",
+    "data": [
+        {
+            "type_acces": "Université Accès ouvert",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 24.70
+        },
+        {
+            "type_acces": "Université Accès ouvert",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 13.90
+        },
+        {
+            "type_acces": "Université Accès ouvert",
+            "genre": "Taux de chômage",
+            "annuel": "2014",
+            "valeur": 18.70
+        },
+        {
+            "type_acces": "Université Accès régulé",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 10.50
+        },
+        {
+            "type_acces": "Université Accès régulé",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 6.50
+        },
+        {
+            "type_acces": "Université Accès régulé",
+            "genre": "Taux de chômage",
+            "annuel": "2014",
+            "valeur": 8.50
+        },
+        {
+            "type_acces": "Total",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 21.30
+        },
+        {
+            "type_acces": "Total",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 12.40
+        },
+        {
+            "type_acces": "Total",
+            "genre": "Taux de chômage",
+            "annuel": "2014",
+            "valeur": 16.40
+        }
+    ]
+}

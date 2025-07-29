@@ -1,0 +1,185 @@
+{
+    "indicateur": "Nombre d'étudiants de l'enseignement supérieur par composante",
+    "data": [
+        {
+            "composante": "Enseignement supérieur public",
+            "annuel": "2016",
+            "valeur": 750.1
+        },
+        {
+            "composante": "Enseignement supérieur public",
+            "annuel": "2017",
+            "valeur": 781.5
+        },
+        {
+            "composante": "Enseignement supérieur public",
+            "annuel": "2018",
+            "valeur": 820.4
+        },
+        {
+            "composante": "Enseignement supérieur public",
+            "annuel": "2019",
+            "valeur": 876
+        },
+        {
+            "composante": "Enseignement supérieur public",
+            "annuel": "2020",
+            "valeur": 921.9
+        },
+        {
+            "composante": "Enseignement supérieur public",
+            "annuel": "2021",
+            "valeur": 989.9
+        },
+        {
+            "composante": "Enseignement supérieur public",
+            "annuel": "2022",
+            "valeur": 1061.3
+        },
+        {
+            "composante": "Enseignement supérieur public",
+            "annuel": "2023",
+            "valeur": 1095.7
+        },
+        {
+            "composante": "Enseignement supérieur public",
+            "annuel": "2024",
+            "valeur": 1106.2
+        },
+        {
+            "composante": "Enseignement supérieur privé",
+            "annuel": "2016",
+            "valeur": 38.5
+        },
+        {
+            "composante": "Enseignement supérieur privé",
+            "annuel": "2017",
+            "valeur": 41.6
+        },
+        {
+            "composante": "Enseignement supérieur privé",
+            "annuel": "2018",
+            "valeur": 45.2
+        },
+        {
+            "composante": "Enseignement supérieur privé",
+            "annuel": "2019",
+            "valeur": 49.3
+        },
+        {
+            "composante": "Enseignement supérieur privé",
+            "annuel": "2020",
+            "valeur": 53.5
+        },
+        {
+            "composante": "Enseignement supérieur privé",
+            "annuel": "2021",
+            "valeur": 56.9
+        },
+        {
+            "composante": "Enseignement supérieur privé",
+            "annuel": "2022",
+            "valeur": 62.6
+        },
+        {
+            "composante": "Enseignement supérieur privé",
+            "annuel": "2023",
+            "valeur": 70.2
+        },
+        {
+            "composante": "Enseignement supérieur privé",
+            "annuel": "2024",
+            "valeur": 79.3
+        },
+        {
+            "composante": "Formation des cadres",
+            "annuel": "2016",
+            "valeur": 31.8
+        },
+        {
+            "composante": "Formation des cadres",
+            "annuel": "2017",
+            "valeur": 29.2
+        },
+        {
+            "composante": "Formation des cadres",
+            "annuel": "2018",
+            "valeur": 25.6
+        },
+        {
+            "composante": "Formation des cadres",
+            "annuel": "2019",
+            "valeur": 35.5
+        },
+        {
+            "composante": "Formation des cadres",
+            "annuel": "2020",
+            "valeur": 34.2
+        },
+        {
+            "composante": "Formation des cadres",
+            "annuel": "2021",
+            "valeur": 38.3
+        },
+        {
+            "composante": "Formation des cadres",
+            "annuel": "2022",
+            "valeur": 47
+        },
+        {
+            "composante": "Formation des cadres",
+            "annuel": "2023",
+            "valeur": 52.8
+        },
+        {
+            "composante": "Formation des cadres",
+            "annuel": "2024",
+            "valeur": 55.5
+        },
+        {
+            "composante": "Total",
+            "annuel": "2016",
+            "valeur": 821
+        },
+        {
+            "composante": "Total",
+            "annuel": "2017",
+            "valeur": 852
+        },
+        {
+            "composante": "Total",
+            "annuel": "2018",
+            "valeur": 891
+        },
+        {
+            "composante": "Total",
+            "annuel": "2019",
+            "valeur": 961
+        },
+        {
+            "composante": "Total",
+            "annuel": "2020",
+            "valeur": 1010
+        },
+        {
+            "composante": "Total",
+            "annuel": "2021",
+            "valeur": 1085
+        },
+        {
+            "composante": "Total",
+            "annuel": "2022",
+            "valeur": 1171
+        },
+        {
+            "composante": "Total",
+            "annuel": "2023",
+            "valeur": 1219
+        },
+        {
+            "composante": "Total",
+            "annuel": "2024",
+            "valeur": 1241
+        }
+    ]
+}

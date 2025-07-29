@@ -1,0 +1,150 @@
+{
+    "indicateur": "Nombre d'étudiants de la formation des cadres par domaine d'études",
+    "data": [
+        {
+            "domaine_etudes": "Management",
+            "annuel": "2015",
+            "valeur": 500000
+        },
+        {
+            "domaine_etudes": "Finance",
+            "annuel": "2015",
+            "valeur": 300000
+        },
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2016",
+            "valeur": 4000
+        },
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2017",
+            "valeur": 5000
+        },
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2018",
+            "valeur": 4000
+        },
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2019",
+            "valeur": 6000
+        },
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2020",
+            "valeur": 4000
+        },
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2021",
+            "valeur": 4000
+        },
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2022",
+            "valeur": 2000
+        },
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2023",
+            "valeur": 2000
+        },
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2024",
+            "valeur": 2000
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2016",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2017",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2018",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2019",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2020",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2021",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2022",
+            "valeur": 2000
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2023",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2024",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2016",
+            "valeur": 17000
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2017",
+            "valeur": 17000
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2018",
+            "valeur": 19000
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2019",
+            "valeur": 18000
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2020",
+            "valeur": 11000
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2021",
+            "valeur": 11000
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2022",
+            "valeur": 12000
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2023",
+            "valeur": 12000
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2024",
+            "valeur": 12000
+        }
+    ]
+}

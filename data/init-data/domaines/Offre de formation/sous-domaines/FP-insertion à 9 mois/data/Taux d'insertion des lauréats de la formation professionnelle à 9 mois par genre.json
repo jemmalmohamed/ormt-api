@@ -1,0 +1,15 @@
+{
+    "indicateur": "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par genre",
+    "data": [
+        {
+            "genre": "Homme",
+            "annuel": "2016",
+            "valeur": 80
+        },
+        {
+            "genre": "Femme",
+            "annuel": "2016",
+            "valeur": 75
+        }
+    ]
+}

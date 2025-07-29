@@ -1,6 +1,6 @@
 {
-    "nom": "ES-Insertion Professionnelle",
-    "description": "Indicateurs relatifs à l'insertion professionnelle des diplômés de l'enseignement supérieur par composante, type d'accès, genre, diplôme et domaine d'études.",
+    "nom": "enseignement supérieur - Insertion Professionnelle",
+    "description": "Indicateurs relatifs à l'insertion professionnelle des diplômés de l'enseignement supérieur par composante, type d'accès, genre, diplôme et domaine d'études",
     "roleAcces": [
         {
             "roleCode": "role_public",
@@ -10,9 +10,9 @@
     "actif": true,
     "indicateurs": [
         {
-            "nom": "Taux d'insertion des diplômés de l'ES après 4 ans (Promotion 2014) par composante",
+            "nom": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante",
             "description": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans par composante.",
-            "categorie": "ES-Insertion Professionnelle",
+            "categorie": "Insertion",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -47,9 +47,9 @@
             ]
         },
         {
-            "nom": "Taux d'insertion des diplômés de l'ES après 4 ans (Promotion 2014) par type d'accès",
+            "nom": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par type d'accès",
             "description": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans par type d'accès.",
-            "categorie": "ES-Insertion Professionnelle",
+            "categorie": "Insertion",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -84,9 +84,9 @@
             ]
         },
         {
-            "nom": "Taux d'insertion des diplômés de l'ES après 4 ans (Promotion 2014) par genre",
+            "nom": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par genre",
             "description": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans par genre.",
-            "categorie": "ES-Insertion Professionnelle",
+            "categorie": "Insertion",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -121,9 +121,9 @@
             ]
         },
         {
-            "nom": "Taux d'insertion des diplômés de l'ES après 4 ans (Promotion 2014) par diplôme",
+            "nom": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par diplôme",
             "description": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans par diplôme.",
-            "categorie": "ES-Insertion Professionnelle",
+            "categorie": "Insertion",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -158,9 +158,9 @@
             ]
         },
         {
-            "nom": "Taux d'insertion des diplômés de l'ES après 4 ans (Promotion 2014) par domaine d'études",
+            "nom": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par domaine d'études",
             "description": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans par domaine d'études.",
-            "categorie": "ES-Insertion Professionnelle",
+            "categorie": "Insertion",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -197,7 +197,7 @@
         {
             "nom": "Taux d'emploi des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante et par genre",
             "description": "Taux d'emploi des diplômés de l'enseignement supérieur après 4 ans par composante et par genre.",
-            "categorie": "ES-Insertion Professionnelle",
+            "categorie": "Insertion",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -243,7 +243,7 @@
         {
             "nom": "Taux d'emploi des diplômés de l'enseignement universitaire public après 4 ans (Promotion 2014) par diplôme et par genre",
             "description": "Taux d'emploi des diplômés de l'enseignement universitaire public après 4 ans par diplôme et par genre.",
-            "categorie": "ES-Insertion Professionnelle",
+            "categorie": "Insertion",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -289,7 +289,7 @@
         {
             "nom": "Taux d'emploi des diplômés de l'enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme et par genre",
             "description": "Taux d'emploi des diplômés de l'enseignement supérieur privé après 4 ans par diplôme et par genre.",
-            "categorie": "ES-Insertion Professionnelle",
+            "categorie": "Insertion",
             "abreviation": "ES",
             "roleAcces": [
                 {

@@ -1,0 +1,15 @@
+{
+  "indicateur": "Nombre de lauréats de la formation professionnelle par niveau de formation",
+  "data": [
+    {
+      "niveau_formation": "Niveau 1",
+      "annuel": "2016",
+      "valeur": 2500
+    },
+    {
+      "niveau_formation": "Niveau 2",
+      "annuel": "2016",
+      "valeur": 4500
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-    "nom": "FP-Lauréats",
+    "nom": "formation professionelle - Lauréats",
     "description": "Indicateurs relatifs aux lauréats de la formation professionnelle par mode de formation, opérateur, niveau de formation et région.",
     "roleAcces": [
         {
@@ -10,9 +10,9 @@
     "actif": true,
     "indicateurs": [
         {
-            "nom": "Nombre de lauréats de la FP par mode de formation",
+            "nom": "Nombre de lauréats de la formation professionnelle par mode de formation",
             "description": "Nombre de lauréats de la formation professionnelle par mode de formation.",
-            "categorie": "FP-Lauréats",
+            "categorie": "Lauréats",
             "abreviation": "FP",
             "roleAcces": [
                 {
@@ -47,9 +47,9 @@
             ]
         },
         {
-            "nom": "Nombre de lauréats de la FP par opérateur de formation",
+            "nom": "Nombre de lauréats de la formation professionnelle par opérateur de formation",
             "description": "Nombre de lauréats de la formation professionnelle par opérateur de formation.",
-            "categorie": "FP-Lauréats",
+            "categorie": "Lauréats",
             "abreviation": "FP",
             "roleAcces": [
                 {
@@ -84,9 +84,9 @@
             ]
         },
         {
-            "nom": "Nombre de lauréats de la FP par niveau de formation",
+            "nom": "Nombre de lauréats de la formation professionnelle par niveau de formation",
             "description": "Nombre de lauréats de la formation professionnelle par niveau de formation.",
-            "categorie": "FP-Lauréats",
+            "categorie": "Lauréats",
             "abreviation": "FP",
             "roleAcces": [
                 {
@@ -121,9 +121,9 @@
             ]
         },
         {
-            "nom": "Nombre de lauréats de la FP par région",
+            "nom": "Nombre de lauréats de la formation professionnelle par région",
             "description": "Nombre de lauréats de la formation professionnelle par région.",
-            "categorie": "FP-Lauréats",
+            "categorie": "Lauréats",
             "abreviation": "FP",
             "roleAcces": [
                 {

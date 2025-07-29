@@ -1,0 +1,15 @@
+{
+    "indicateur": "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par niveau de formation",
+    "data": [
+        {
+            "niveau_formation": "Bac+2",
+            "annuel": "2016",
+            "valeur": 82
+        },
+        {
+            "niveau_formation": "Bac+3",
+            "annuel": "2016",
+            "valeur": 79
+        }
+    ]
+}

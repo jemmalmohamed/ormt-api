@@ -1,0 +1,275 @@
+{
+    "indicateur": "Nombre de stagiaires de la formation professionnelle par région",
+    "data": [
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annuel": "2016",
+            "valeur": 27000
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annuel": "2017",
+            "valeur": 27000
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annuel": "2018",
+            "valeur": 27000
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annuel": "2019",
+            "valeur": 26000
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annuel": "2020",
+            "valeur": 24000
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annuel": "2021",
+            "valeur": 23000
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annuel": "2022",
+            "valeur": 24000
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annuel": "2023",
+            "valeur": 24000
+        },
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annuel": "2024",
+            "valeur": 26500
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annuel": "2016",
+            "valeur": 106000
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annuel": "2017",
+            "valeur": 103000
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annuel": "2018",
+            "valeur": 103000
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annuel": "2019",
+            "valeur": 100000
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annuel": "2020",
+            "valeur": 92000
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annuel": "2021",
+            "valeur": 80000
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annuel": "2022",
+            "valeur": 79000
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annuel": "2023",
+            "valeur": 81000
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annuel": "2024",
+            "valeur": 82900
+        },
+        {
+            "region": "Dakhla-Oued Ed-Dahab",
+            "annuel": "2016",
+            "valeur": 1000
+        },
+        {
+            "region": "Dakhla-Oued Ed-Dahab",
+            "annuel": "2017",
+            "valeur": 1000
+        },
+        {
+            "region": "Dakhla-Oued Ed-Dahab",
+            "annuel": "2018",
+            "valeur": 1000
+        },
+        {
+            "region": "Dakhla-Oued Ed-Dahab",
+            "annuel": "2019",
+            "valeur": 2000
+        },
+        {
+            "region": "Dakhla-Oued Ed-Dahab",
+            "annuel": "2020",
+            "valeur": 1000
+        },
+        {
+            "region": "Dakhla-Oued Ed-Dahab",
+            "annuel": "2021",
+            "valeur": 2000
+        },
+        {
+            "region": "Dakhla-Oued Ed-Dahab",
+            "annuel": "2022",
+            "valeur": 2000
+        },
+        {
+            "region": "Dakhla-Oued Ed-Dahab",
+            "annuel": "2023",
+            "valeur": 2000
+        },
+        {
+            "region": "Dakhla-Oued Ed-Dahab",
+            "annuel": "2024",
+            "valeur": 12300
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annuel": "2016",
+            "valeur": 12000
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annuel": "2017",
+            "valeur": 13000
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annuel": "2018",
+            "valeur": 13000
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annuel": "2019",
+            "valeur": 15000
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annuel": "2020",
+            "valeur": 14000
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annuel": "2021",
+            "valeur": 11000
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annuel": "2022",
+            "valeur": 12000
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annuel": "2023",
+            "valeur": 11000
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annuel": "2024",
+            "valeur": 1500
+        },
+        {
+            "region": "Fès-Meknès",
+            "annuel": "2016",
+            "valeur": 47000
+        },
+        {
+            "region": "Fès-Meknès",
+            "annuel": "2017",
+            "valeur": 49000
+        },
+        {
+            "region": "Fès-Meknès",
+            "annuel": "2018",
+            "valeur": 50000
+        },
+        {
+            "region": "Fès-Meknès",
+            "annuel": "2019",
+            "valeur": 50000
+        },
+        {
+            "region": "Fès-Meknès",
+            "annuel": "2020",
+            "valeur": 45000
+        },
+        {
+            "region": "Fès-Meknès",
+            "annuel": "2021",
+            "valeur": 40000
+        },
+        {
+            "region": "Fès-Meknès",
+            "annuel": "2022",
+            "valeur": 42000
+        },
+        {
+            "region": "Fès-Meknès",
+            "annuel": "2023",
+            "valeur": 44000
+        },
+        {
+            "region": "Fès-Meknès",
+            "annuel": "2024",
+            "valeur": 46100
+        },
+        {
+            "region": "TOTAL",
+            "annuel": "2016",
+            "valeur": 419000
+        },
+        {
+            "region": "TOTAL",
+            "annuel": "2017",
+            "valeur": 422000
+        },
+        {
+            "region": "TOTAL",
+            "annuel": "2018",
+            "valeur": 433000
+        },
+        {
+            "region": "TOTAL",
+            "annuel": "2019",
+            "valeur": 427000
+        },
+        {
+            "region": "TOTAL",
+            "annuel": "2020",
+            "valeur": 398000
+        },
+        {
+            "region": "TOTAL",
+            "annuel": "2021",
+            "valeur": 359000
+        },
+        {
+            "region": "TOTAL",
+            "annuel": "2022",
+            "valeur": 363000
+        },
+        {
+            "region": "TOTAL",
+            "annuel": "2023",
+            "valeur": 378000
+        },
+        {
+            "region": "TOTAL",
+            "annuel": "2024",
+            "valeur": 387200
+        }
+    ]
+}

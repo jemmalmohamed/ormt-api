@@ -1,0 +1,15 @@
+{
+  "indicateur": "Nombre de lauréats de la formation professionnelle par opérateur de formation",
+  "data": [
+    {
+      "operateur_formation": "Opérateur A",
+      "annuel": "2016",
+      "valeur": 3000
+    },
+    {
+      "operateur_formation": "Opérateur B",
+      "annuel": "2016",
+      "valeur": 4000
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "indicateur": "Nombre de lauréats de la formation professionnelle par mode de formation",
+  "data": [
+    {
+      "mode_formation": "Présentiel",
+      "annuel": "2016",
+      "valeur": 5000
+    },
+    {
+      "mode_formation": "En ligne",
+      "annuel": "2016",
+      "valeur": 2000
+    }
+  ]
+}

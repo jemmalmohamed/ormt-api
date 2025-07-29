@@ -1,0 +1,15 @@
+{
+  "indicateur": "Nombre de lauréats de la formation professionnelle par région",
+  "data": [
+    {
+      "region": "Région A",
+      "annuel": "2016",
+      "valeur": 6000
+    },
+    {
+      "region": "Région B",
+      "annuel": "2016",
+      "valeur": 3000
+    }
+  ]
+}

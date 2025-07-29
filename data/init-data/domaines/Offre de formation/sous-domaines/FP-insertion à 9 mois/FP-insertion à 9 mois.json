@@ -1,5 +1,5 @@
 {
-    "nom": "FP-insertion à 9 mois",
+    "nom": "formation professionelle - insertion à 9 mois",
     "description": "Indicateurs relatifs à l'insertion des lauréats de la formation professionnelle à 9 mois par mode de formation, genre, niveau de formation et région.",
     "roleAcces": [
         {
@@ -10,9 +10,9 @@
     "actif": true,
     "indicateurs": [
         {
-            "nom": "Taux d'insertion des lauréats de la FP à 9 mois par mode de formation",
+            "nom": "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par mode de formation",
             "description": "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par mode de formation.",
-            "categorie": "FP-insertion à 9 mois",
+            "categorie": "insertion",
             "abreviation": "FP",
             "roleAcces": [
                 {
@@ -47,9 +47,9 @@
             ]
         },
         {
-            "nom": "Taux d'insertion des lauréats de la FP à 9 mois par genre",
+            "nom": "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par genre",
             "description": "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par genre.",
-            "categorie": "FP-insertion à 9 mois",
+            "categorie": "insertion",
             "abreviation": "FP",
             "roleAcces": [
                 {
@@ -84,9 +84,9 @@
             ]
         },
         {
-            "nom": "Taux d'insertion des lauréats de la FP à 9 mois par niveau de formation",
+            "nom": "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par niveau de formation",
             "description": "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par niveau de formation.",
-            "categorie": "FP-insertion à 9 mois",
+            "categorie": "insertion",
             "abreviation": "FP",
             "roleAcces": [
                 {
@@ -121,9 +121,9 @@
             ]
         },
         {
-            "nom": "Taux d'insertion des lauréats de la FP à 9 mois par région",
+            "nom": "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par région",
             "description": "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par région.",
-            "categorie": "FP-insertion à 9 mois",
+            "categorie": "insertion",
             "abreviation": "FP",
             "roleAcces": [
                 {

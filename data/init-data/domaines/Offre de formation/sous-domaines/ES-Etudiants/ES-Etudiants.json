@@ -1,5 +1,5 @@
 {
-    "nom": "ES-Etudiants",
+    "nom": "enseignement supérieur - étudiant",
     "description": "Indicateurs relatifs aux étudiants de l'enseignement supérieur (public, privé, formation des cadres) par genre, composante et domaine d'études.",
     "roleAcces": [
         {
@@ -10,9 +10,9 @@
     "actif": true,
     "indicateurs": [
         {
-            "nom": "Nombre d'étudiants de l'ES par composante",
+            "nom": "Nombre d'étudiants de l'enseignement supérieur par composante",
             "description": "Nombre d'étudiants de l'enseignement supérieur par composante.",
-            "categorie": "ES-Etudiants",
+            "categorie": "étudiant",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -47,9 +47,9 @@
             ]
         },
         {
-            "nom": "Nombre d'étudiants de l'ES par genre",
+            "nom": "Nombre d'étudiants de l'enseignement supérieur par genre",
             "description": "Nombre d'étudiants de l'enseignement supérieur par genre.",
-            "categorie": "ES-Etudiants",
+            "categorie": "étudiant",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -86,7 +86,7 @@
         {
             "nom": "Nombre d'étudiants de l'enseignement universitaire public par domaine d'études",
             "description": "Nombre d'étudiants de l'enseignement universitaire public par domaine d'études.",
-            "categorie": "ES-Etudiants",
+            "categorie": "étudiant",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -123,7 +123,7 @@
         {
             "nom": "Nombre d'étudiants de l'enseignement universitaire public par genre",
             "description": "Nombre d'étudiants de l'enseignement universitaire public par genre.",
-            "categorie": "ES-Etudiants",
+            "categorie": "étudiant",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -160,7 +160,7 @@
         {
             "nom": "Nombre d'étudiants de l'enseignement supérieur privé par domaine d'études",
             "description": "Nombre d'étudiants de l'enseignement supérieur privé par domaine d'études.",
-            "categorie": "ES-Etudiants",
+            "categorie": "étudiant",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -197,7 +197,7 @@
         {
             "nom": "Nombre d'étudiants de l'enseignement supérieur privé par genre",
             "description": "Nombre d'étudiants de l'enseignement supérieur privé par genre.",
-            "categorie": "ES-Etudiants",
+            "categorie": "étudiant",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -234,7 +234,7 @@
         {
             "nom": "Nombre d'étudiants de la formation des cadres par domaine d'études",
             "description": "Nombre d'étudiants de la formation des cadres par domaine d'études.",
-            "categorie": "ES-Etudiants",
+            "categorie": "étudiant",
             "abreviation": "ES",
             "roleAcces": [
                 {
@@ -271,7 +271,7 @@
         {
             "nom": "Nombre d'étudiants de la formation des cadres par genre",
             "description": "Nombre d'étudiants de la formation des cadres par genre.",
-            "categorie": "ES-Etudiants",
+            "categorie": "étudiant",
             "abreviation": "ES",
             "roleAcces": [
                 {

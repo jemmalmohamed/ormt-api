@@ -33,7 +33,8 @@ public class IndicateurExportUtilService {
         DESCRIPTION("Description"),
         REGLE_CALCUL("Règle de calcul"),
         ACTIF("Actif"),
-        HAS_DATA("A des données");
+        HAS_DATA("A des données"),
+        TERRITOIRE("Territoire");
 
         private final String header;
 

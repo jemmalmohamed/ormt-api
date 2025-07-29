@@ -1,0 +1,70 @@
+{
+    "indicateur": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par région",
+    "data": [
+        {
+            "region": "Béni Mellal-Khénifra",
+            "annuel": "2016",
+            "valeur": 60.0
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annuel": "2016",
+            "valeur": 85.2
+        },
+        {
+            "region": "Dakhla-Oued Ed-Dahab",
+            "annuel": "2016",
+            "valeur": 81.2
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annuel": "2016",
+            "valeur": 92.4
+        },
+        {
+            "region": "Fès-Meknès",
+            "annuel": "2016",
+            "valeur": 93.8
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annuel": "2016",
+            "valeur": 80.0
+        },
+        {
+            "region": "Laâyoune-Sakia El Hamra",
+            "annuel": "2016",
+            "valeur": 77.6
+        },
+        {
+            "region": "L'Oriental",
+            "annuel": "2016",
+            "valeur": 73.1
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annuel": "2016",
+            "valeur": 86.0
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annuel": "2016",
+            "valeur": 84.6
+        },
+        {
+            "region": "Souss-Massa",
+            "annuel": "2016",
+            "valeur": 93.5
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceïma",
+            "annuel": "2016",
+            "valeur": 86.3
+        },
+        {
+            "region": "Total",
+            "annuel": "2016",
+            "valeur": 84.4
+        }
+    ]
+}

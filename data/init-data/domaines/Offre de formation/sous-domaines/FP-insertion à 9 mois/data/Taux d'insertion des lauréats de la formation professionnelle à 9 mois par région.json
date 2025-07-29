@@ -1,0 +1,15 @@
+{
+    "indicateur": "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par région",
+    "data": [
+        {
+            "region": "Région A",
+            "annuel": "2016",
+            "valeur": 88
+        },
+        {
+            "region": "Région B",
+            "annuel": "2016",
+            "valeur": 81
+        }
+    ]
+}

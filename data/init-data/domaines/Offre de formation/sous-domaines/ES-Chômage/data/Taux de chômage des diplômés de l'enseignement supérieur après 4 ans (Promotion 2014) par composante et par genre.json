@@ -1,0 +1,77 @@
+{
+    "indicateur": "Taux de chômage des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante et par genre",
+    "data": [
+        {
+            "composante": "Enseignement supérieur privé",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 7.1
+        },
+        {
+            "composante": "Enseignement supérieur privé",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 4.6
+        },
+        {
+            "composante": "Enseignement supérieur privé",
+            "genre": "Taux de chômage",
+            "annuel": "2014",
+            "valeur": 5.6
+        },
+        {
+            "composante": "Enseignement universitaire public",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 21.3
+        },
+        {
+            "composante": "Enseignement universitaire public",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 12.4
+        },
+        {
+            "composante": "Enseignement universitaire public",
+            "genre": "Taux de chômage",
+            "annuel": "2014",
+            "valeur": 16.4
+        },
+        {
+            "composante": "Formation professionnelle post-baccalauréat",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 27.0
+        },
+        {
+            "composante": "Formation professionnelle post-baccalauréat",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 15.4
+        },
+        {
+            "composante": "Formation professionnelle post-baccalauréat",
+            "genre": "Taux de chômage",
+            "annuel": "2014",
+            "valeur": 20.5
+        },
+        {
+            "composante": "Total",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 20.9
+        },
+        {
+            "composante": "Total",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 12.2
+        },
+        {
+            "composante": "Total",
+            "genre": "Taux de chômage",
+            "annuel": "2014",
+            "valeur": 16.1
+        }
+    ]
+}
