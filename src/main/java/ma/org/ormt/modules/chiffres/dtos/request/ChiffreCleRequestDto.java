@@ -33,10 +33,13 @@ public class ChiffreCleRequestDto extends Dto {
     @NotNull(message = "Ce champ est requis.")
     private Boolean actif;
 
+    private Boolean afficherDate;
+
     private String description;
 
     private String accessType;
 
-    private Long donneeIndicateurId;
+    private Dto indicateur;
 
+    private Dto donneeIndicateur;
 }

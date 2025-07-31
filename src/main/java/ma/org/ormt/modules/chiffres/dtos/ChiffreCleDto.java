@@ -28,8 +28,12 @@ public class ChiffreCleDto extends Dto {
 
     private Boolean actif;
 
+    private Boolean afficherDate;
+
     private String accessType;
 
     private DonneeIndicateurDto donneeIndicateur;
+
+    private Dto indicateur;
 
 }

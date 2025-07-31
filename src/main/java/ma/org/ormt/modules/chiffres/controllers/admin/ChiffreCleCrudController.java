@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -34,7 +33,7 @@ import ma.org.ormt.modules.chiffres.models.ChiffreCle;
 import ma.org.ormt.modules.chiffres.services.ChiffreCleService;
 
 @RestController
-@RequestMapping(value = "/api/v1/chiffrecles")
+@RequestMapping(value = "/api/v1/admin/chiffrecles")
 @RequiredArgsConstructor
 @Tag(name = "ChiffreCle", description = "ChiffreCle API")
 public class ChiffreCleCrudController extends BaseController<ChiffreCle> {
@@ -52,7 +51,7 @@ public class ChiffreCleCrudController extends BaseController<ChiffreCle> {
         @PostMapping("")
         @PreAuthorize("hasAuthority('chiffre_cle:create')")
         public ResponseEntity<RestResponse<ChiffreCleDto>> createChiffreCle(
-                        @Validated(OnCreate.class) @ModelAttribute ChiffreCleRequestDto requestDto) throws Exception {
+                        @Validated(OnCreate.class) @RequestBody ChiffreCleRequestDto requestDto) throws Exception {
                 ChiffreCle chiffrecle = chiffrecleService.create(requestDto);
                 return buildResponseEntity(chiffrecle, ChiffreCleDto.class, HttpStatus.CREATED);
         }
@@ -66,7 +65,7 @@ public class ChiffreCleCrudController extends BaseController<ChiffreCle> {
         @PutMapping("{id}")
         @PreAuthorize("hasAuthority('chiffre_cle:edit')")
         public ResponseEntity<RestResponse<ChiffreCleDto>> updateChiffreCle(@PathVariable Long id,
-                        @Validated(OnUpdate.class) @ModelAttribute ChiffreCleRequestDto chiffrecleRequestDto)
+                        @Validated(OnUpdate.class) @RequestBody ChiffreCleRequestDto chiffrecleRequestDto)
                         throws Exception {
                 ChiffreCle chiffrecle = chiffrecleService.update(id, chiffrecleRequestDto);
                 return buildResponseEntity(chiffrecle, ChiffreCleDto.class, HttpStatus.OK);

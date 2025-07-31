@@ -5,7 +5,8 @@
         "unite": "%",
         "accessType": "public",
         "description": " taux de chômage  en 2024",
-        "actif": true
+        "actif": true,
+        "afficherDate": false
     },
     {
         "libelle": "taux d'emplois",
@@ -13,7 +14,8 @@
         "unite": "%",
         "accessType": "public",
         "description": " taux d'emplois  en 2024",
-        "actif": true
+        "actif": true,
+        "afficherDate": false
     },
     {
         "libelle": "taux d'activité",
@@ -21,7 +23,8 @@
         "unite": "%",
         "accessType": "public",
         "description": "taux d'activité  en 2024",
-        "actif": true
+        "actif": true,
+        "afficherDate": false
     },
     {
         "libelle": "création d'emplois",
@@ -29,7 +32,8 @@
         "unite": "",
         "accessType": "public",
         "description": "nombre d'emplois créés  en 2024",
-        "actif": true
+        "actif": true,
+        "afficherDate": false
     },
     {
         "libelle": "Entreprises affiliées",
@@ -37,6 +41,7 @@
         "unite": "",
         "accessType": "public",
         "description": "nombre d'entreprises affiliées  en 2024",
-        "actif": true
+        "actif": true,
+        "afficherDate": true
     }
 ]

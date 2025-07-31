@@ -21,6 +21,8 @@ import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
 import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
 import ma.org.ormt.modules.indicateurs.donnee.services.DonneeIndicateurService;
+import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 import ma.org.ormt.modules.chiffres.association.domaine.ChiffreCleDomaine;
 import ma.org.ormt.modules.chiffres.association.domaine.repository.ChiffreCleDomaineRepository;
 import ma.org.ormt.modules.chiffres.dtos.request.ChiffreCleRequestDto;
@@ -40,6 +42,8 @@ public class ChiffreCleServiceImpl extends BaseServiceImpl<ChiffreCle> implement
 
     @Autowired
     private DonneeIndicateurService donneeIndicateurService;
+    @Autowired
+    private IndicateurService indicateurService;
 
     @Autowired
     private DomaineService domaineService;
@@ -124,11 +128,6 @@ public class ChiffreCleServiceImpl extends BaseServiceImpl<ChiffreCle> implement
 
         ChiffreCle chiffrecleToCreate = chiffrecleRequestMapper.mapToEntity(requestDto);
 
-        if (requestDto.getDonneeIndicateurId() != null) {
-            DonneeIndicateur donneeIndicateur = donneeIndicateurService.findById(requestDto.getDonneeIndicateurId())
-                    .orElseThrow(() -> new EntityNotFoundException("Donnee Indicateur non trouvé"));
-            chiffrecleToCreate.setDonneeIndicateur(donneeIndicateur);
-        }
         ChiffreCle createdChiffreCle = chiffrecleRepository.save(chiffrecleToCreate);
         return createdChiffreCle;
 
@@ -142,24 +141,32 @@ public class ChiffreCleServiceImpl extends BaseServiceImpl<ChiffreCle> implement
                 .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
         updateChiffreCleFields(chiffrecle, requestDto);
 
-        if (requestDto.getDonneeIndicateurId() != null) {
-            DonneeIndicateur donneeIndicateur = donneeIndicateurService.findById(requestDto.getDonneeIndicateurId())
-                    .orElseThrow(() -> new EntityNotFoundException("Donnee Indicateur non trouvé"));
-            chiffrecle.setDonneeIndicateur(donneeIndicateur);
-        } else {
-            chiffrecle.setDonneeIndicateur(null);
-        }
-
         return chiffrecleRepository.save(chiffrecle);
     }
 
-    private void updateChiffreCleFields(ChiffreCle chiffrecle, ChiffreCleRequestDto dto) {
-        chiffrecle.setLibelle(dto.getLibelle().toLowerCase());
-        chiffrecle.setValeur(dto.getValeur());
-        chiffrecle.setUnite(dto.getUnite().toLowerCase());
-        chiffrecle.setDescription(dto.getDescription().toLowerCase());
-        chiffrecle.setAccessType(dto.getAccessType());
-        chiffrecle.setActif(dto.getActif());
+    private void updateChiffreCleFields(ChiffreCle chiffrecle, ChiffreCleRequestDto requestDto) {
+        chiffrecle.setLibelle(requestDto.getLibelle().toLowerCase());
+        chiffrecle.setUnite(requestDto.getUnite().toLowerCase());
+        chiffrecle.setDescription(requestDto.getDescription().toLowerCase());
+        chiffrecle.setAfficherDate(requestDto.getAfficherDate());
+        chiffrecle.setAccessType(requestDto.getAccessType());
+        chiffrecle.setActif(requestDto.getActif());
+        chiffrecle.setValeur(requestDto.getValeur());
+        if (requestDto.getDonneeIndicateur() != null && requestDto.getIndicateur().getId() != null) {
+            DonneeIndicateur donneeIndicateur = donneeIndicateurService
+                    .findById(requestDto.getDonneeIndicateur().getId())
+                    .orElseThrow(() -> new EntityNotFoundException("Donnee Indicateur non trouvé"));
+            Indicateur indicateur = indicateurService.findById(requestDto.getIndicateur().getId())
+                    .orElseThrow(() -> new EntityNotFoundException("Indicateur non trouvé"));
+            chiffrecle.setDonneeIndicateur(donneeIndicateur);
+            chiffrecle.setIndicateur(indicateur);
+            chiffrecle.setValeur(donneeIndicateur.getValeur());
+        } else {
+
+            chiffrecle.setDonneeIndicateur(null);
+            chiffrecle.setIndicateur(null);
+
+        }
     }
 
     public void attachDomaine(Long chiffrecleId, Long domaineId) {

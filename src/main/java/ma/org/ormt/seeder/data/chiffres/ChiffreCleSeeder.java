@@ -146,8 +146,8 @@ public class ChiffreCleSeeder implements CommandLineRunner {
         requestDto.setDescription(indicateur.getDescription());
         requestDto.setValeur(latestDonnee.getValeur());
         requestDto.setUnite(indicateur.getUnite());
+        requestDto.setAfficherDate(false);
         requestDto.setActif(Boolean.TRUE);
-        requestDto.setDonneeIndicateurId(latestDonnee.getId());
         try {
             chiffreCleService.create(requestDto);
             log.info("Created chiffreCle from DonneeIndicateur: {}", requestDto.getLibelle());
@@ -219,6 +219,7 @@ public class ChiffreCleSeeder implements CommandLineRunner {
         requestDto.setValeur(chiffreCle.getValeur());
         requestDto.setUnite(chiffreCle.getUnite());
         requestDto.setAccessType(chiffreCle.getAccessType());
+        requestDto.setAfficherDate(chiffreCle.getAfficherDate());
         requestDto.setActif(chiffreCle.getActif());
 
         try {

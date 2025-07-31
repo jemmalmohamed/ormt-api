@@ -3,17 +3,20 @@ CREATE TABLE IF NOT EXISTS chiffre_cle (
     libelle VARCHAR(255) NOT NULL,
     valeur VARCHAR(255) NOT NULL,
     unite VARCHAR(50),
+    afficher_date BOOLEAN NOT NULL DEFAULT FALSE,
     access_type  VARCHAR(50) , 
     description VARCHAR(255),
     actif BOOLEAN NOT NULL DEFAULT TRUE,
     donnee_indicateur_id BIGINT,
+    indicateur_id BIGINT,
     status_code INT,
     created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
     last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
     version BIGINT NOT NULL DEFAULT 0,
     created_by VARCHAR(50),
     last_modified_by VARCHAR(50),
-    CONSTRAINT fk_donnee_indicateur FOREIGN KEY (donnee_indicateur_id) REFERENCES donnee_indicateur (id)
+    CONSTRAINT fk_chiffre_cle_indicateur FOREIGN KEY (indicateur_id) REFERENCES indicateur (id) ON DELETE SET NULL,
+    CONSTRAINT fk_donnee_indicateur FOREIGN KEY (donnee_indicateur_id) REFERENCES donnee_indicateur (id) ON DELETE SET NULL
 );
 
 CREATE TABLE IF NOT EXISTS chiffre_cle_espace (

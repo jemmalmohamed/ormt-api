@@ -18,6 +18,7 @@ import lombok.experimental.SuperBuilder;
 import ma.org.ormt.core.commun.base.entity.BaseEntity;
 import ma.org.ormt.modules.chiffres.association.domaine.ChiffreCleDomaine;
 import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 
 @Setter
 @Getter
@@ -38,6 +39,8 @@ public class ChiffreCle extends BaseEntity {
 
     private String description;
 
+    private Boolean afficherDate;
+
     private Boolean actif;
 
     private String accessType;
@@ -45,6 +48,10 @@ public class ChiffreCle extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "donnee_indicateur_id")
     private DonneeIndicateur donneeIndicateur;
+
+    @ManyToOne
+    @JoinColumn(name = "indicateur_id")
+    private Indicateur indicateur;
 
     @OneToMany(mappedBy = "chiffreCle", fetch = FetchType.LAZY)
     private List<ChiffreCleDomaine> chiffrecleDomaines;
