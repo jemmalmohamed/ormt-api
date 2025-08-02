@@ -23,7 +23,7 @@ import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.Indicateur
 @Component
 @Order(5)
 @RequiredArgsConstructor
-public class GrapheDemandeDeTravailSeeder implements CommandLineRunner {
+public class GrapheOffreDeTravailSeeder implements CommandLineRunner {
 
         @Value("${starter.database.seed}")
         private boolean seeding;
@@ -47,120 +47,11 @@ public class GrapheDemandeDeTravailSeeder implements CommandLineRunner {
                 }
 
                 try {
-                        createIndicateurGrapheConfigurationsDemandeDeTravail();
+
                         createIndicateurGrapheConfigurationsOffreDeTravail();
                         log.info("Graphe configuration data seeding completed successfully.");
                 } catch (Exception e) {
                         log.error("Error during graphe configuration data seeding: {}", e.getMessage(), e);
-                }
-        }
-
-        /**
-         * Creates graphe configurations for "Demande de Travail" indicators.
-         */
-        @Transactional
-        private void createIndicateurGrapheConfigurationsDemandeDeTravail() {
-                log.info("Creating graphe configurations for Demande de Travail indicators...");
-
-                List<IndicateurGrapheMapping> mappings = Arrays.asList(
-                                new IndicateurGrapheMapping("productivité par secteur d'activité", "HISTOGRAMME"),
-                                new IndicateurGrapheMapping("valeur ajoutée par secteur d'activité",
-                                                "GRAPHIQUE_EN_SECTEURS"),
-                                new IndicateurGrapheMapping("masse salariale par secteur d'activité",
-                                                "GRAPHIQUE_EN_SECTEURS"),
-                                new IndicateurGrapheMapping("salaire moyen par secteur d'activité",
-                                                "GRAPHIQUE_EN_SECTEURS"),
-                                new IndicateurGrapheMapping("smig journalier", "INDICATEUR"),
-                                new IndicateurGrapheMapping("smag journalier", "INDICATEUR"),
-                                new IndicateurGrapheMapping("salaire moyen à l'année n par secteur d'activité",
-                                                "INDICATEUR"),
-                                new IndicateurGrapheMapping("salaire moyen n-10 par secteur d'activité", "INDICATEUR"),
-                                new IndicateurGrapheMapping("variation productivité", "NUAGE_DU_POINT"),
-                                new IndicateurGrapheMapping("variation valeur ajoutée", "NUAGE_DU_POINT"),
-                                new IndicateurGrapheMapping("variation de la masse salariale", "NUAGE_DU_POINT"),
-                                new IndicateurGrapheMapping("emploi par genre", "COURBES"),
-                                new IndicateurGrapheMapping("emploi par âge", "COURBES"),
-                                new IndicateurGrapheMapping("emploi par diplôme", "COURBES"),
-                                new IndicateurGrapheMapping("emploi par secteur d'activité", "COURBES"),
-                                new IndicateurGrapheMapping("emploi par statut professionnel", "COURBES"),
-                                new IndicateurGrapheMapping("emploi par type d'emploi", "COURBES"),
-                                new IndicateurGrapheMapping("emploi par secteur d'emploi", "COURBES"),
-                                new IndicateurGrapheMapping("emploi par région", "CARTE"),
-                                new IndicateurGrapheMapping(
-                                                "emploi indépendants déclarés à la cnss par secteur d'activité",
-                                                "HISTOGRAMME"),
-                                new IndicateurGrapheMapping("emploi indépendants déclarés à la cnss par région",
-                                                "HISTOGRAMME"),
-                                new IndicateurGrapheMapping("salariés déclarés à la cnss par secteur d'activité",
-                                                "HISTOGRAMME"),
-                                new IndicateurGrapheMapping("salariés déclarés à la cnss par région", "CARTE"),
-                                new IndicateurGrapheMapping("emploi salarié eqtp par secteur d'activité",
-                                                "GRAPHIQUE_EN_SECTEURS"),
-                                new IndicateurGrapheMapping("nombre de déclaration cnss par secteur d'activité",
-                                                "HISTOGRAMME"),
-                                new IndicateurGrapheMapping(
-                                                "indice de rotation de salariés par poste par secteur d'activité",
-                                                "INDICATEUR"),
-                                new IndicateurGrapheMapping("emploi informel par secteur d'activité",
-                                                "GRAPHIQUE_EN_SECTEURS"),
-                                new IndicateurGrapheMapping("salarié public par secteur", "GRAPHIQUE_EN_SECTEURS"),
-                                new IndicateurGrapheMapping("nombre d'entreprises", "RADAR"),
-                                new IndicateurGrapheMapping("nombre d'entreprises entrantes", "RADAR"),
-                                new IndicateurGrapheMapping("nombre d'entreprises sortantes", "RADAR"),
-                                new IndicateurGrapheMapping("taux de survie des entreprises", "COURBES"),
-                                new IndicateurGrapheMapping("part de l'emploi informel par secteur d'activité",
-                                                "COURBES"),
-                                new IndicateurGrapheMapping("part de l'emploi rémunéré par secteur d'activité",
-                                                "COURBES"),
-                                new IndicateurGrapheMapping(
-                                                "part des actifs occupés bénéficiant d'une couverture médicale",
-                                                "COURBES"),
-                                new IndicateurGrapheMapping("part des salariés disposant d'un contrat de travail",
-                                                "COURBES"),
-                                new IndicateurGrapheMapping("part de l'emploi de type occasionnel ou saisonnier",
-                                                "COURBES"),
-                                new IndicateurGrapheMapping(
-                                                "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive)",
-                                                "COURBES"),
-                                new IndicateurGrapheMapping(
-                                                "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle",
-                                                "COURBES"),
-                                new IndicateurGrapheMapping(
-                                                "part des salariés touchant un salaire inférieur au smig par secteur d'activité",
-                                                "COURBES"),
-                                new IndicateurGrapheMapping(
-                                                "salariés (stables) déclarés à la cnss par secteur d'activité",
-                                                "COURBES"),
-                                new IndicateurGrapheMapping("création d'emploi par genre", "HISTOGRAMME"),
-                                new IndicateurGrapheMapping("création d'emploi par diplôme", "HISTOGRAMME"),
-                                new IndicateurGrapheMapping("création d'emploi par statut professionnel",
-                                                "HISTOGRAMME"),
-                                new IndicateurGrapheMapping("création d'emploi par secteur d'activité -7p",
-                                                "HISTOGRAMME"),
-                                new IndicateurGrapheMapping("création d'emploi par secteur d'activité -2p",
-                                                "HISTOGRAMME"),
-                                new IndicateurGrapheMapping("création d'emploi par secteur d'emploi", "HISTOGRAMME"),
-                                new IndicateurGrapheMapping("création d'emploi par type d'emploi", "HISTOGRAMME"),
-                                new IndicateurGrapheMapping("création d'emploi par région", "CARTE"),
-                                new IndicateurGrapheMapping("création d'emploi eqtp par secteur d'activité",
-                                                "HISTOGRAMME"),
-                                new IndicateurGrapheMapping("création d'emploi informel estimé", "HISTOGRAMME"),
-                                new IndicateurGrapheMapping(
-                                                "création d'emploi indépendants déclaré à la cnss par région", "CARTE"),
-                                new IndicateurGrapheMapping(
-                                                "création d'emploi indépendants déclaré à la cnss par secteur d'activité",
-                                                "HISTOGRAMME"),
-                                new IndicateurGrapheMapping("création d'emploi salariés par région", "CARTE"),
-                                new IndicateurGrapheMapping("création d'emploi salariés par secteur d'activité",
-                                                "COURBES"));
-
-                for (IndicateurGrapheMapping mapping : mappings) {
-                        try {
-                                createGrapheConfigurationForIndicateur(mapping);
-                        } catch (Exception e) {
-                                log.error("Error creating configuration for indicator '{}': {}",
-                                                mapping.indicateurNom, e.getMessage());
-                        }
                 }
         }
 

@@ -3,11 +3,11 @@ server:
 
 starter:
   database:
-    reset: true
-    seed: true
+    reset: false
+    seed: false
   minio: 
-    reset: true
-    seed: true
+    reset: false
+    seed: false
   keycloak: 
     reset: false
     seed: false

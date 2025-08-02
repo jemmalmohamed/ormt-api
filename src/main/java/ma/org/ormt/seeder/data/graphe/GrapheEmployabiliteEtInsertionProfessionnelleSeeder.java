@@ -23,7 +23,7 @@ import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.Indicateur
 @Component
 @Order(5)
 @RequiredArgsConstructor
-public class GrapheIndicateurSeeder implements CommandLineRunner {
+public class GrapheEmployabiliteEtInsertionProfessionnelleSeeder implements CommandLineRunner {
 
         @Value("${starter.database.seed}")
         private boolean seeding;
@@ -47,47 +47,10 @@ public class GrapheIndicateurSeeder implements CommandLineRunner {
                 }
 
                 try {
-                        createIndicateurGrapheConfigurationsCadreMacroEconomique();
                         createIndicateurGrapheConfigurationsEmployabiliteEtInsertionProfessionnelle();
                         log.info("Graphe configuration data seeding completed successfully.");
                 } catch (Exception e) {
                         log.error("Error during graphe configuration data seeding: {}", e.getMessage(), e);
-                }
-        }
-
-        /**
-         * Creates graphe configurations for indicators based on the Excel data mapping.
-         */
-        @Transactional
-        private void createIndicateurGrapheConfigurationsCadreMacroEconomique() {
-                log.info("Creating graphe configurations for indicators...");
-
-                List<IndicateurGrapheMapping> mappings = Arrays.asList(
-                                new IndicateurGrapheMapping("volume global de l'investissement public", null),
-                                new IndicateurGrapheMapping("formation brut de capital fixe", "HISTOGRAMME"),
-                                new IndicateurGrapheMapping("flux net des investissements directs étrangers au maroc",
-                                                "COURBES"),
-                                new IndicateurGrapheMapping("flux des investissements directs marocains à l'étranger",
-                                                "COURBES"),
-                                new IndicateurGrapheMapping("population municipale", "HISTOGRAMME"),
-                                new IndicateurGrapheMapping("incidence de la pauvreté absolue par région", "CARTE"),
-                                new IndicateurGrapheMapping("taux de pauvreté multidimensionnelle par région", "CARTE"),
-                                new IndicateurGrapheMapping("taux de vulnérabilité à la pauvreté par région", "CARTE"),
-                                new IndicateurGrapheMapping("produit intérieur brut aux prix courants", null),
-                                new IndicateurGrapheMapping("taux de croissance du pib en volume", "COURBES"),
-                                new IndicateurGrapheMapping(
-                                                "produit intérieur brut par habitant (aux prix courants) par région en dh",
-                                                null),
-                                new IndicateurGrapheMapping("valeur ajoutée par branche d'activité aux prix courants",
-                                                "COURBES"));
-
-                for (IndicateurGrapheMapping mapping : mappings) {
-                        try {
-                                createGrapheConfigurationForIndicateur(mapping);
-                        } catch (Exception e) {
-                                log.error("Error creating configuration for indicator '{}': {}",
-                                                mapping.indicateurNom, e.getMessage());
-                        }
                 }
         }
 
@@ -271,52 +234,6 @@ public class GrapheIndicateurSeeder implements CommandLineRunner {
                                                 mapping.indicateurNom, e.getMessage());
                         }
                 }
-        }
-
-        /**
-         * Creates a graphe configuration for a specific indicator mapping.
-         */
-        private void createGrapheConfigurationForIndicateur(IndicateurGrapheMapping mapping) {
-                // Skip if no graph type is specified
-                if (mapping.grapheTypeCode == null || mapping.grapheTypeCode.trim().isEmpty()) {
-                        log.info("Skipping indicator '{}' - no graph type specified", mapping.indicateurNom);
-                        return;
-                }
-
-                // Find the indicator by name
-                Optional<Indicateur> indicateurOpt = indicateurService.findByNom(mapping.indicateurNom);
-                if (indicateurOpt.isEmpty()) {
-                        log.warn("Indicator not found: '{}'", mapping.indicateurNom);
-                        return;
-                }
-
-                // Find the graph type by code
-                Optional<GrapheType> grapheTypeOpt = findGrapheTypeByCode(mapping.grapheTypeCode);
-                if (grapheTypeOpt.isEmpty()) {
-                        log.warn("Graph type not found with code: '{}'", mapping.grapheTypeCode);
-                        return;
-                }
-
-                Indicateur indicateur = indicateurOpt.get();
-                GrapheType grapheType = grapheTypeOpt.get();
-
-                // Generate unique configuration name with indicateur name and configuration
-                // number
-                String baseConfigurationName = grapheType.getNom() + " - " + indicateur.getNom();
-                String configurationName = generateUniqueConfigurationName(baseConfigurationName);
-
-                // Create the configuration
-                GrapheConfiguration configuration = GrapheConfiguration.builder()
-                                .indicateur(indicateur)
-                                .grapheType(grapheType)
-                                .nom(configurationName)
-                                .dimensionMappingJson("{\"default\": \"standard\"}")
-                                .chartOptionsJson(null)
-                                .isDefault(true)
-                                .build();
-
-                GrapheConfiguration savedConfig = grapheConfigurationService.save(configuration);
-                log.info("Created graphe configuration: {} (ID: {})", savedConfig.getNom(), savedConfig.getId());
         }
 
         /**
