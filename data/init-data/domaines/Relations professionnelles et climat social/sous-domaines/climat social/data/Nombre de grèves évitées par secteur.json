@@ -1,0 +1,95 @@
+{
+    "indicateur": "nombre de grèves évitées par secteur",
+    "data": [
+        {
+            "secteur_activite": "Agriculture",
+            "annuel": "2021",
+            "valeur": 351
+        },
+        {
+            "secteur_activite": "Agriculture",
+            "annuel": "2022",
+            "valeur": 291
+        },
+        {
+            "secteur_activite": "Agriculture",
+            "annuel": "2023",
+            "valeur": 240
+        },
+        {
+            "secteur_activite": "Industrie (y compris l'artisanat)",
+            "annuel": "2021",
+            "valeur": 270
+        },
+        {
+            "secteur_activite": "Industrie (y compris l'artisanat)",
+            "annuel": "2022",
+            "valeur": 228
+        },
+        {
+            "secteur_activite": "Industrie (y compris l'artisanat)",
+            "annuel": "2023",
+            "valeur": 254
+        },
+        {
+            "secteur_activite": "BTP",
+            "annuel": "2021",
+            "valeur": 106
+        },
+        {
+            "secteur_activite": "BTP",
+            "annuel": "2022",
+            "valeur": 87
+        },
+        {
+            "secteur_activite": "BTP",
+            "annuel": "2023",
+            "valeur": 85
+        },
+        {
+            "secteur_activite": "Commerce",
+            "annuel": "2021",
+            "valeur": 79
+        },
+        {
+            "secteur_activite": "Commerce",
+            "annuel": "2022",
+            "valeur": 52
+        },
+        {
+            "secteur_activite": "Commerce",
+            "annuel": "2023",
+            "valeur": 48
+        },
+        {
+            "secteur_activite": "Services",
+            "annuel": "2021",
+            "valeur": 428
+        },
+        {
+            "secteur_activite": "Services",
+            "annuel": "2022",
+            "valeur": 331
+        },
+        {
+            "secteur_activite": "Services",
+            "annuel": "2023",
+            "valeur": 315
+        },
+        {
+            "secteur_activite": "Total",
+            "annuel": "2021",
+            "valeur": 1234
+        },
+        {
+            "secteur_activite": "Total",
+            "annuel": "2022",
+            "valeur": 989
+        },
+        {
+            "secteur_activite": "Total",
+            "annuel": "2023",
+            "valeur": 942
+        }
+    ]
+}

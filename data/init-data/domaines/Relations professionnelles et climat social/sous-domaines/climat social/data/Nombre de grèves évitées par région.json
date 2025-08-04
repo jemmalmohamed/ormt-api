@@ -1,0 +1,200 @@
+{
+    "indicateur": "nombre de grèves évitées par région",
+    "data": [
+        {
+            "region": "Tanger-Tetouan-Al Hoceima",
+            "annuel": "2021",
+            "valeur": 158
+        },
+        {
+            "region": "Tanger-Tetouan-Al Hoceima",
+            "annuel": "2022",
+            "valeur": 138
+        },
+        {
+            "region": "Tanger-Tetouan-Al Hoceima",
+            "annuel": "2023",
+            "valeur": 157
+        },
+        {
+            "region": "L'Oriental",
+            "annuel": "2021",
+            "valeur": 37
+        },
+        {
+            "region": "L'Oriental",
+            "annuel": "2022",
+            "valeur": 41
+        },
+        {
+            "region": "L'Oriental",
+            "annuel": "2023",
+            "valeur": 60
+        },
+        {
+            "region": "Fès-Meknès",
+            "annuel": "2021",
+            "valeur": 234
+        },
+        {
+            "region": "Fès-Meknès",
+            "annuel": "2022",
+            "valeur": 159
+        },
+        {
+            "region": "Fès-Meknès",
+            "annuel": "2023",
+            "valeur": 122
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annuel": "2021",
+            "valeur": 298
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annuel": "2022",
+            "valeur": 299
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annuel": "2023",
+            "valeur": 272
+        },
+        {
+            "region": "Béni Melle-Khénifra",
+            "annuel": "2021",
+            "valeur": 27
+        },
+        {
+            "region": "Béni Melle-Khénifra",
+            "annuel": "2022",
+            "valeur": 20
+        },
+        {
+            "region": "Béni Melle-Khénifra",
+            "annuel": "2023",
+            "valeur": 15
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annuel": "2021",
+            "valeur": 161
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annuel": "2022",
+            "valeur": 109
+        },
+        {
+            "region": "Casablanca-Settat",
+            "annuel": "2023",
+            "valeur": 188
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annuel": "2021",
+            "valeur": 207
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annuel": "2022",
+            "valeur": 93
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annuel": "2023",
+            "valeur": 80
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annuel": "2021",
+            "valeur": 35
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annuel": "2022",
+            "valeur": 19
+        },
+        {
+            "region": "Drâa-Tafilalet",
+            "annuel": "2023",
+            "valeur": 12
+        },
+        {
+            "region": "Souss-Massa",
+            "annuel": "2021",
+            "valeur": 74
+        },
+        {
+            "region": "Souss-Massa",
+            "annuel": "2022",
+            "valeur": 108
+        },
+        {
+            "region": "Souss-Massa",
+            "annuel": "2023",
+            "valeur": 34
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annuel": "2021",
+            "valeur": 3
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annuel": "2022",
+            "valeur": 3
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annuel": "2023",
+            "valeur": 2
+        },
+        {
+            "region": "Laâyoune-Sakia El Hamra",
+            "annuel": "2021",
+            "valeur": 0
+        },
+        {
+            "region": "Laâyoune-Sakia El Hamra",
+            "annuel": "2022",
+            "valeur": 0
+        },
+        {
+            "region": "Laâyoune-Sakia El Hamra",
+            "annuel": "2023",
+            "valeur": 0
+        },
+        {
+            "region": "Dakhla-Oued ed Dahab",
+            "annuel": "2021",
+            "valeur": 0
+        },
+        {
+            "region": "Dakhla-Oued ed Dahab",
+            "annuel": "2022",
+            "valeur": 0
+        },
+        {
+            "region": "Dakhla-Oued ed Dahab",
+            "annuel": "2023",
+            "valeur": 0
+        },
+        {
+            "region": "Total",
+            "annuel": "2021",
+            "valeur": 1234
+        },
+        {
+            "region": "Total",
+            "annuel": "2022",
+            "valeur": 989
+        },
+        {
+            "region": "Total",
+            "annuel": "2023",
+            "valeur": 942
+        }
+    ]
+}

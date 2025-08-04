@@ -622,7 +622,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur",
+          "libelle": "secteur d'activité",
           "type": "texte",
           "association": {
             "principale": true,
