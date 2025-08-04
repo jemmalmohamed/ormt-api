@@ -227,47 +227,362 @@
             "valeur": 46100
         },
         {
-            "region": "TOTAL",
+            "region": "Guelmim-Oued Noun",
+            "annuel": "2016",
+            "valeur": 6000
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annuel": "2017",
+            "valeur": 7000
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annuel": "2018",
+            "valeur": 6000
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annuel": "2019",
+            "valeur": 7000
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annuel": "2020",
+            "valeur": 6000
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annuel": "2021",
+            "valeur": 6000
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annuel": "2022",
+            "valeur": 6000
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annuel": "2023",
+            "valeur": 5000
+        },
+        {
+            "region": "Guelmim-Oued Noun",
+            "annuel": "2024",
+            "valeur": 6000
+        },
+        {
+            "region": "Laâyoune-Sakia El Hamra",
+            "annuel": "2016",
+            "valeur": 7000
+        },
+        {
+            "region": "Laâyoune-Sakia El Hamra",
+            "annuel": "2017",
+            "valeur": 7000
+        },
+        {
+            "region": "Laâyoune-Sakia El Hamra",
+            "annuel": "2018",
+            "valeur": 7000
+        },
+        {
+            "region": "Laâyoune-Sakia El Hamra",
+            "annuel": "2019",
+            "valeur": 7000
+        },
+        {
+            "region": "Laâyoune-Sakia El Hamra",
+            "annuel": "2020",
+            "valeur": 7000
+        },
+        {
+            "region": "Laâyoune-Sakia El Hamra",
+            "annuel": "2021",
+            "valeur": 7000
+        },
+        {
+            "region": "Laâyoune-Sakia El Hamra",
+            "annuel": "2022",
+            "valeur": 7000
+        },
+        {
+            "region": "Laâyoune-Sakia El Hamra",
+            "annuel": "2023",
+            "valeur": 9000
+        },
+        {
+            "region": "Laâyoune-Sakia El Hamra",
+            "annuel": "2024",
+            "valeur": 8400
+        },
+        {
+            "region": "L'Oriental",
+            "annuel": "2016",
+            "valeur": 45000
+        },
+        {
+            "region": "L'Oriental",
+            "annuel": "2017",
+            "valeur": 42000
+        },
+        {
+            "region": "L'Oriental",
+            "annuel": "2018",
+            "valeur": 46000
+        },
+        {
+            "region": "L'Oriental",
+            "annuel": "2019",
+            "valeur": 44000
+        },
+        {
+            "region": "L'Oriental",
+            "annuel": "2020",
+            "valeur": 45000
+        },
+        {
+            "region": "L'Oriental",
+            "annuel": "2021",
+            "valeur": 41000
+        },
+        {
+            "region": "L'Oriental",
+            "annuel": "2022",
+            "valeur": 39000
+        },
+        {
+            "region": "L'Oriental",
+            "annuel": "2023",
+            "valeur": 41000
+        },
+        {
+            "region": "L'Oriental",
+            "annuel": "2024",
+            "valeur": 27400
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annuel": "2016",
+            "valeur": 27000
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annuel": "2017",
+            "valeur": 28000
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annuel": "2018",
+            "valeur": 30000
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annuel": "2019",
+            "valeur": 30000
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annuel": "2020",
+            "valeur": 30000
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annuel": "2021",
+            "valeur": 27000
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annuel": "2022",
+            "valeur": 28000
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annuel": "2023",
+            "valeur": 31000
+        },
+        {
+            "region": "Marrakech-Safi",
+            "annuel": "2024",
+            "valeur": 42000
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annuel": "2016",
+            "valeur": 78000
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annuel": "2017",
+            "valeur": 79000
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annuel": "2018",
+            "valeur": 80000
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annuel": "2019",
+            "valeur": 76000
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annuel": "2020",
+            "valeur": 72000
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annuel": "2021",
+            "valeur": 63000
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annuel": "2022",
+            "valeur": 66000
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annuel": "2023",
+            "valeur": 66000
+        },
+        {
+            "region": "Rabat-Salé-Kénitra",
+            "annuel": "2024",
+            "valeur": 66900
+        },
+        {
+            "region": "Souss-Massa",
+            "annuel": "2016",
+            "valeur": 27000
+        },
+        {
+            "region": "Souss-Massa",
+            "annuel": "2017",
+            "valeur": 29000
+        },
+        {
+            "region": "Souss-Massa",
+            "annuel": "2018",
+            "valeur": 30000
+        },
+        {
+            "region": "Souss-Massa",
+            "annuel": "2019",
+            "valeur": 30000
+        },
+        {
+            "region": "Souss-Massa",
+            "annuel": "2020",
+            "valeur": 29000
+        },
+        {
+            "region": "Souss-Massa",
+            "annuel": "2021",
+            "valeur": 25000
+        },
+        {
+            "region": "Souss-Massa",
+            "annuel": "2022",
+            "valeur": 27000
+        },
+        {
+            "region": "Souss-Massa",
+            "annuel": "2023",
+            "valeur": 30000
+        },
+        {
+            "region": "Souss-Massa",
+            "annuel": "2024",
+            "valeur": 33000
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceïma",
+            "annuel": "2016",
+            "valeur": 37000
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceïma",
+            "annuel": "2017",
+            "valeur": 38000
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceïma",
+            "annuel": "2018",
+            "valeur": 40000
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceïma",
+            "annuel": "2019",
+            "valeur": 39000
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceïma",
+            "annuel": "2020",
+            "valeur": 35000
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceïma",
+            "annuel": "2021",
+            "valeur": 33000
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceïma",
+            "annuel": "2022",
+            "valeur": 32000
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceïma",
+            "annuel": "2023",
+            "valeur": 34000
+        },
+        {
+            "region": "Tanger-Tétouan-Al Hoceïma",
+            "annuel": "2024",
+            "valeur": 34300
+        },
+        {
+            "region": "Total",
             "annuel": "2016",
             "valeur": 419000
         },
         {
-            "region": "TOTAL",
+            "region": "Total",
             "annuel": "2017",
             "valeur": 422000
         },
         {
-            "region": "TOTAL",
+            "region": "Total",
             "annuel": "2018",
             "valeur": 433000
         },
         {
-            "region": "TOTAL",
+            "region": "Total",
             "annuel": "2019",
             "valeur": 427000
         },
         {
-            "region": "TOTAL",
+            "region": "Total",
             "annuel": "2020",
             "valeur": 398000
         },
         {
-            "region": "TOTAL",
+            "region": "Total",
             "annuel": "2021",
             "valeur": 359000
         },
         {
-            "region": "TOTAL",
+            "region": "Total",
             "annuel": "2022",
             "valeur": 363000
         },
         {
-            "region": "TOTAL",
+            "region": "Total",
             "annuel": "2023",
             "valeur": 378000
         },
         {
-            "region": "TOTAL",
+            "region": "Total",
             "annuel": "2024",
             "valeur": 387200
         }
