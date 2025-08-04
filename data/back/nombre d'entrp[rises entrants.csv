@@ -1,0 +1,241 @@
+annuel	taille	region	Agriculture, forêt et pêche	BTP	Commerce	Enseignement	Hébérgement et restauration	Industries	Santé humaine et action sociale	Services	Transport
+2020	1-9 salariés	 Marrakech-Safi	240	350	295	25	162	89	30	401	45
+2020	1-9 salariés	 Rabat-Salé-Kénitra	127	427	410	90	202	127	28	629	132
+2020	1-9 salariés	 Souss-Massa	367	189	202	36	79	66	15	164	157
+2020	1-9 salariés	Béni Mellal-Khénifra	22	168	102	16	64	29	9	124	16
+2020	1-9 salariés	Drâa-Tafilalet	49	178	85	15	28	19	8	72	36
+2020	1-9 salariés	Eddakhla-Oued Eddahab	506	24	41	2	3	10	1	14	7
+2020	1-9 salariés	Fès-Meknès	17	335	236	35	147	87	37	203	62
+2020	1-9 salariés	Grand Casablanca-Settat	336	930	1202	77	333	375	71	1197	272
+2020	1-9 salariés	Guelmim-Oued Noun	93	32	11	3	6	10	2	15	11
+2020	1-9 salariés	Laayoune-Sakia El Hamra	244	96	51	5	15	20	0	36	23
+2020	1-9 salariés	Oriental	108	182	199	19	85	98	9	139	61
+2020	1-9 salariés	Tanger-Tetouan-Al Hoceima	352	256	320	46	141	113	24	306	199
+2020	10-49 salariés	 Marrakech-Safi	2	21	11	3	24	5	1	23	5
+2020	10-49 salariés	 Rabat-Salé-Kénitra	10	28	19	18	14	18	3	54	1
+2020	10-49 salariés	 Souss-Massa	18	12	13	3	7	6	5	10	4
+2020	10-49 salariés	Béni Mellal-Khénifra	1	10	1	1	2	1	0	6	0
+2020	10-49 salariés	Drâa-Tafilalet	3	5	0	2	1	0	1	6	0
+2020	10-49 salariés	Eddakhla-Oued Eddahab	0	2	3	1	0	1	0	0	2
+2020	10-49 salariés	Fès-Meknès	3	21	10	12	2	6	3	22	3
+2020	10-49 salariés	Grand Casablanca-Settat	6	80	78	22	25	45	4	96	22
+2020	10-49 salariés	Guelmim-Oued Noun	1	1	1	2	0	1	0	0	0
+2020	10-49 salariés	Laayoune-Sakia El Hamra	2	7	3	4	0	0	0	4	6
+2020	10-49 salariés	Oriental	3	3	6	3	8	10	0	6	1
+2020	10-49 salariés	Tanger-Tetouan-Al Hoceima	7	25	20	5	6	28	1	28	11
+2020	50-199 salariés	 Marrakech-Safi	0	4	0	0	0	2	0	2	1
+2020	50-199 salariés	 Rabat-Salé-Kénitra	0	3	3	0	1	4	2	8	1
+2020	50-199 salariés	 Souss-Massa	2	1	2	0	0	1	1	1	0
+2020	50-199 salariés	Béni Mellal-Khénifra	1	0	0	0	0	0	0	0	0
+2020	50-199 salariés	Drâa-Tafilalet	2	0	0	0	0	0	0	0	0
+2020	50-199 salariés	Eddakhla-Oued Eddahab	1	0	0	0	0	0	0	0	1
+2020	50-199 salariés	Fès-Meknès	1	3	2	1	0	2	0	2	0
+2020	50-199 salariés	Grand Casablanca-Settat	2	5	5	1	1	15	0	21	4
+2020	50-199 salariés	Guelmim-Oued Noun	0	0	0	0	0	0	0	0	0
+2020	50-199 salariés	Laayoune-Sakia El Hamra	0	1	0	0	0	0	0	2	0
+2020	50-199 salariés	Oriental	0	0	0	0	0	2	0	0	0
+2020	50-199 salariés	Tanger-Tetouan-Al Hoceima	0	1	1	1	1	15	0	3	1
+2020	200-499 salariés	 Marrakech-Safi	0	0	0	0	0	0	0	2	0
+2020	200-499 salariés	 Rabat-Salé-Kénitra	0	0	1	0	0	1	0	1	0
+2020	200-499 salariés	 Souss-Massa	0	0	0	0	0	0	0	0	0
+2020	200-499 salariés	Béni Mellal-Khénifra	0	0	0	0	0	0	0	0	0
+2020	200-499 salariés	Drâa-Tafilalet	1	0	0	0	0	0	0	0	0
+2020	200-499 salariés	Eddakhla-Oued Eddahab	1	0	0	0	0	0	0	0	0
+2020	200-499 salariés	Fès-Meknès	0	0	0	0	0	2	0	1	1
+2020	200-499 salariés	Grand Casablanca-Settat	1	1	1	0	0	1	0	4	0
+2020	200-499 salariés	Guelmim-Oued Noun	0	0	0	0	0	0	0	0	0
+2020	200-499 salariés	Laayoune-Sakia El Hamra	0	1	0	0	0	0	0	1	0
+2020	200-499 salariés	Oriental	0	0	0	0	0	0	0	0	0
+2020	200-499 salariés	Tanger-Tetouan-Al Hoceima	1	0	0	0	0	2	0	1	0
+2020	500 salariés et plus	 Marrakech-Safi	0	0	0	0	0	0	0	0	0
+2020	500 salariés et plus	 Rabat-Salé-Kénitra	0	0	0	0	0	0	0	0	0
+2020	500 salariés et plus	 Souss-Massa	1	0	0	0	0	0	0	0	0
+2020	500 salariés et plus	Béni Mellal-Khénifra	0	0	0	0	0	0	0	0	0
+2020	500 salariés et plus	Drâa-Tafilalet	0	0	0	0	0	0	0	0	0
+2020	500 salariés et plus	Eddakhla-Oued Eddahab	0	0	0	0	0	0	0	0	0
+2020	500 salariés et plus	Fès-Meknès	0	0	0	0	0	0	0	0	0
+2020	500 salariés et plus	Grand Casablanca-Settat	0	0	0	0	0	0	0	1	0
+2020	500 salariés et plus	Guelmim-Oued Noun	0	0	0	0	0	0	0	0	0
+2020	500 salariés et plus	Laayoune-Sakia El Hamra	0	0	0	0	0	0	0	0	0
+2020	500 salariés et plus	Oriental	0	0	0	0	0	0	0	0	0
+2020	500 salariés et plus	Tanger-Tetouan-Al Hoceima	0	0	0	0	0	0	0	0	0
+2021	1-9 salariés	 Marrakech-Safi	316	461	367	51	206	112	43	556	70
+2021	1-9 salariés	 Rabat-Salé-Kénitra	224	542	553	56	264	154	47	629	194
+2021	1-9 salariés	 Souss-Massa	524	265	317	47	127	100	30	303	210
+2021	1-9 salariés	Béni Mellal-Khénifra	32	187	122	48	50	38	14	192	14
+2021	1-9 salariés	Drâa-Tafilalet	64	218	81	12	32	18	9	131	48
+2021	1-9 salariés	Eddakhla-Oued Eddahab	443	38	46	1	15	11	2	79	11
+2021	1-9 salariés	Fès-Meknès	45	432	396	50	176	137	41	285	109
+2021	1-9 salariés	Grand Casablanca-Settat	483	1052	1641	96	420	497	110	1544	393
+2021	1-9 salariés	Guelmim-Oued Noun	90	38	27	4	18	6	1	43	14
+2021	1-9 salariés	Laayoune-Sakia El Hamra	265	110	89	5	37	15	1	80	58
+2021	1-9 salariés	Oriental	135	176	248	28	107	74	22	186	118
+2021	1-9 salariés	Tanger-Tetouan-Al Hoceima	357	313	413	53	152	173	28	419	354
+2021	10-49 salariés	 Marrakech-Safi	11	34	24	16	23	4	3	55	4
+2021	10-49 salariés	 Rabat-Salé-Kénitra	17	38	23	5	33	20	1	46	10
+2021	10-49 salariés	 Souss-Massa	42	16	13	9	10	6	3	15	4
+2021	10-49 salariés	Béni Mellal-Khénifra	1	6	4	6	2	2	1	12	1
+2021	10-49 salariés	Drâa-Tafilalet	1	14	3	0	1	0	1	12	1
+2021	10-49 salariés	Eddakhla-Oued Eddahab	0	2	6	0	2	2	1	1	0
+2021	10-49 salariés	Fès-Meknès	3	27	14	8	13	18	5	28	3
+2021	10-49 salariés	Grand Casablanca-Settat	15	80	108	48	44	75	9	140	20
+2021	10-49 salariés	Guelmim-Oued Noun	2	2	2	0	1	3	0	12	1
+2021	10-49 salariés	Laayoune-Sakia El Hamra	3	4	4	3	1	5	1	3	1
+2021	10-49 salariés	Oriental	5	6	8	4	7	13	5	23	0
+2021	10-49 salariés	Tanger-Tetouan-Al Hoceima	14	22	20	5	13	40	2	41	14
+2021	50-199 salariés	 Marrakech-Safi	0	6	3	0	0	0	0	5	1
+2021	50-199 salariés	 Rabat-Salé-Kénitra	1	3	1	0	4	1	0	6	0
+2021	50-199 salariés	 Souss-Massa	10	0	0	0	3	0	0	4	0
+2021	50-199 salariés	Béni Mellal-Khénifra	0	0	0	0	0	2	0	0	0
+2021	50-199 salariés	Drâa-Tafilalet	0	1	1	0	0	0	0	0	0
+2021	50-199 salariés	Eddakhla-Oued Eddahab	0	0	1	0	0	2	0	0	0
+2021	50-199 salariés	Fès-Meknès	3	1	1	0	0	2	0	2	0
+2021	50-199 salariés	Grand Casablanca-Settat	1	6	8	1	3	9	0	18	0
+2021	50-199 salariés	Guelmim-Oued Noun	0	0	0	0	0	0	0	0	0
+2021	50-199 salariés	Laayoune-Sakia El Hamra	0	1	0	0	0	2	0	0	0
+2021	50-199 salariés	Oriental	2	1	1	0	0	3	0	2	0
+2021	50-199 salariés	Tanger-Tetouan-Al Hoceima	0	0	1	0	1	13	1	4	1
+2021	200-499 salariés	 Marrakech-Safi	0	0	0	0	0	0	0	0	0
+2021	200-499 salariés	 Rabat-Salé-Kénitra	0	0	0	0	0	0	0	2	0
+2021	200-499 salariés	 Souss-Massa	1	0	0	0	0	0	0	0	0
+2021	200-499 salariés	Béni Mellal-Khénifra	0	0	0	0	0	0	0	0	0
+2021	200-499 salariés	Drâa-Tafilalet	1	0	0	0	0	0	0	0	0
+2021	200-499 salariés	Eddakhla-Oued Eddahab	0	0	0	0	0	0	0	0	0
+2021	200-499 salariés	Fès-Meknès	1	0	0	0	0	0	0	0	0
+2021	200-499 salariés	Grand Casablanca-Settat	3	2	0	0	0	3	1	5	1
+2021	200-499 salariés	Guelmim-Oued Noun	0	0	0	0	0	0	0	0	0
+2021	200-499 salariés	Laayoune-Sakia El Hamra	0	0	0	0	0	1	0	0	0
+2021	200-499 salariés	Oriental	0	0	1	0	0	1	0	0	0
+2021	200-499 salariés	Tanger-Tetouan-Al Hoceima	1	0	1	0	0	4	0	0	0
+2021	500 salariés et plus	 Marrakech-Safi	0	0	0	0	0	0	0	2	0
+2021	500 salariés et plus	 Rabat-Salé-Kénitra	0	0	0	0	0	1	0	1	0
+2021	500 salariés et plus	 Souss-Massa	2	0	0	0	0	0	0	0	0
+2021	500 salariés et plus	Béni Mellal-Khénifra	0	0	0	0	0	0	0	0	0
+2021	500 salariés et plus	Drâa-Tafilalet	0	0	0	0	0	0	0	0	0
+2021	500 salariés et plus	Eddakhla-Oued Eddahab	0	0	0	0	0	0	0	0	0
+2021	500 salariés et plus	Fès-Meknès	0	0	0	0	0	1	0	1	0
+2021	500 salariés et plus	Grand Casablanca-Settat	0	0	1	0	0	0	0	1	0
+2021	500 salariés et plus	Guelmim-Oued Noun	0	0	0	0	0	0	0	0	0
+2021	500 salariés et plus	Laayoune-Sakia El Hamra	0	0	0	0	0	0	0	0	0
+2021	500 salariés et plus	Oriental	0	0	0	0	0	0	0	0	0
+2021	500 salariés et plus	Tanger-Tetouan-Al Hoceima	0	0	0	0	0	2	0	0	0
+2022	1-9 salariés	 Marrakech-Safi	212	368	332	39	464	104	43	704	180
+2022	1-9 salariés	 Rabat-Salé-Kénitra	186	406	429	56	212	120	44	705	155
+2022	1-9 salariés	 Souss-Massa	368	187	255	51	139	111	37	747	183
+2022	1-9 salariés	Béni Mellal-Khénifra	33	149	77	24	44	38	10	210	25
+2022	1-9 salariés	Drâa-Tafilalet	85	163	92	10	126	33	6	209	165
+2022	1-9 salariés	Eddakhla-Oued Eddahab	295	23	38	5	13	15	5	89	11
+2022	1-9 salariés	Fès-Meknès	45	336	282	41	213	86	43	333	96
+2022	1-9 salariés	Grand Casablanca-Settat	252	983	1259	130	406	433	95	1457	357
+2022	1-9 salariés	Guelmim-Oued Noun	77	31	21	6	8	12	1	63	12
+2022	1-9 salariés	Laayoune-Sakia El Hamra	237	81	65	10	18	25	14	99	39
+2022	1-9 salariés	Oriental	98	137	188	16	95	59	25	221	82
+2022	1-9 salariés	Tanger-Tetouan-Al Hoceima	235	261	356	56	171	148	37	420	308
+2022	10-49 salariés	 Marrakech-Safi	16	24	22	7	52	12	8	330	21
+2022	10-49 salariés	 Rabat-Salé-Kénitra	11	27	28	16	29	15	4	337	7
+2022	10-49 salariés	 Souss-Massa	26	6	13	3	17	11	5	181	6
+2022	10-49 salariés	Béni Mellal-Khénifra	7	16	5	5	0	8	5	166	0
+2022	10-49 salariés	Drâa-Tafilalet	14	11	5	0	10	19	1	149	5
+2022	10-49 salariés	Eddakhla-Oued Eddahab	5	3	2	1	1	4	0	20	2
+2022	10-49 salariés	Fès-Meknès	15	24	9	11	20	17	43	213	3
+2022	10-49 salariés	Grand Casablanca-Settat	17	67	87	51	47	73	30	379	28
+2022	10-49 salariés	Guelmim-Oued Noun	13	1	0	12	1	11	1	108	0
+2022	10-49 salariés	Laayoune-Sakia El Hamra	13	11	8	9	1	9	14	78	5
+2022	10-49 salariés	Oriental	60	16	9	15	9	11	35	192	2
+2022	10-49 salariés	Tanger-Tetouan-Al Hoceima	14	18	17	9	14	32	3	228	7
+2022	50-199 salariés	 Marrakech-Safi	1	4	1	0	5	2	1	29	0
+2022	50-199 salariés	 Rabat-Salé-Kénitra	0	2	1	4	4	3	4	18	0
+2022	50-199 salariés	 Souss-Massa	5	0	0	0	2	2	2	9	1
+2022	50-199 salariés	Béni Mellal-Khénifra	0	1	1	0	0	2	1	13	1
+2022	50-199 salariés	Drâa-Tafilalet	1	0	0	0	0	0	0	12	0
+2022	50-199 salariés	Eddakhla-Oued Eddahab	1	0	1	0	0	0	0	0	0
+2022	50-199 salariés	Fès-Meknès	0	2	0	3	0	4	18	29	1
+2022	50-199 salariés	Grand Casablanca-Settat	4	5	7	5	3	8	8	62	1
+2022	50-199 salariés	Guelmim-Oued Noun	0	0	0	0	0	0	0	9	0
+2022	50-199 salariés	Laayoune-Sakia El Hamra	0	2	0	0	0	0	0	3	0
+2022	50-199 salariés	Oriental	5	3	0	0	0	1	13	41	0
+2022	50-199 salariés	Tanger-Tetouan-Al Hoceima	2	2	1	0	1	15	0	41	0
+2022	200-499 salariés	 Marrakech-Safi	2	0	0	0	0	0	0	1	0
+2022	200-499 salariés	 Rabat-Salé-Kénitra	0	0	0	0	0	0	0	1	0
+2022	200-499 salariés	 Souss-Massa	2	0	1	0	0	0	0	0	0
+2022	200-499 salariés	Béni Mellal-Khénifra	0	1	0	0	0	0	0	2	0
+2022	200-499 salariés	Drâa-Tafilalet	0	0	0	0	0	0	0	1	0
+2022	200-499 salariés	Eddakhla-Oued Eddahab	0	0	0	0	0	0	0	0	0
+2022	200-499 salariés	Fès-Meknès	1	0	0	0	0	1	1	1	0
+2022	200-499 salariés	Grand Casablanca-Settat	0	2	0	0	0	0	1	6	0
+2022	200-499 salariés	Guelmim-Oued Noun	0	0	0	0	0	0	0	0	0
+2022	200-499 salariés	Laayoune-Sakia El Hamra	0	0	0	2	0	0	0	0	0
+2022	200-499 salariés	Oriental	0	0	0	0	0	0	1	2	0
+2022	200-499 salariés	Tanger-Tetouan-Al Hoceima	1	1	0	0	0	1	0	7	0
+2022	500 salariés et plus	 Marrakech-Safi	0	0	0	0	0	0	0	0	0
+2022	500 salariés et plus	 Rabat-Salé-Kénitra	0	0	0	0	0	0	0	2	1
+2022	500 salariés et plus	 Souss-Massa	1	0	0	0	0	0	0	0	0
+2022	500 salariés et plus	Béni Mellal-Khénifra	0	0	0	0	0	0	0	0	0
+2022	500 salariés et plus	Drâa-Tafilalet	0	0	0	0	0	0	0	0	0
+2022	500 salariés et plus	Eddakhla-Oued Eddahab	0	1	0	0	0	0	0	0	0
+2022	500 salariés et plus	Fès-Meknès	0	0	0	0	0	0	0	0	0
+2022	500 salariés et plus	Grand Casablanca-Settat	0	0	1	0	0	0	1	4	0
+2022	500 salariés et plus	Guelmim-Oued Noun	0	0	0	0	0	0	0	0	0
+2022	500 salariés et plus	Laayoune-Sakia El Hamra	0	0	0	0	0	0	0	0	0
+2022	500 salariés et plus	Oriental	0	0	0	0	0	0	0	0	0
+2022	500 salariés et plus	Tanger-Tetouan-Al Hoceima	0	0	0	0	0	0	0	0	0
+2023	1-9 salariés	 Marrakech-Safi	206	325	286	35	296	96	47	576	101
+2023	1-9 salariés	 Rabat-Salé-Kénitra	132	431	360	50	194	114	40	725	128
+2023	1-9 salariés	 Souss-Massa	315	155	229	38	98	85	22	751	141
+2023	1-9 salariés	Béni Mellal-Khénifra	19	148	73	11	54	36	14	98	17
+2023	1-9 salariés	Drâa-Tafilalet	52	192	68	8	59	24	12	193	85
+2023	1-9 salariés	Eddakhla-Oued Eddahab	355	20	37	2	13	19	4	86	9
+2023	1-9 salariés	Fès-Meknès	34	359	242	45	181	100	47	287	80
+2023	1-9 salariés	Grand Casablanca-Settat	574	1022	1237	101	363	394	103	1615	298
+2023	1-9 salariés	Guelmim-Oued Noun	68	32	20	3	10	3	0	135	6
+2023	1-9 salariés	Laayoune-Sakia El Hamra	258	98	64	9	9	23	5	213	38
+2023	1-9 salariés	Oriental	117	122	172	13	84	52	27	214	74
+2023	1-9 salariés	Tanger-Tetouan-Al Hoceima	251	255	341	47	138	150	30	426	265
+2023	10-49 salariés	 Marrakech-Safi	184	37	20	3	45	18	9	206	4
+2023	10-49 salariés	 Rabat-Salé-Kénitra	69	25	22	9	21	12	9	159	8
+2023	10-49 salariés	 Souss-Massa	699	7	10	2	5	6	4	110	10
+2023	10-49 salariés	Béni Mellal-Khénifra	9	8	2	1	2	1	3	115	1
+2023	10-49 salariés	Drâa-Tafilalet	18	13	2	1	0	1	0	106	3
+2023	10-49 salariés	Eddakhla-Oued Eddahab	13	2	4	0	0	0	1	5	2
+2023	10-49 salariés	Fès-Meknès	12	12	10	12	9	12	59	139	3
+2023	10-49 salariés	Grand Casablanca-Settat	98	69	93	40	46	67	33	338	25
+2023	10-49 salariés	Guelmim-Oued Noun	46	0	1	0	0	1	2	82	0
+2023	10-49 salariés	Laayoune-Sakia El Hamra	23	25	6	2	1	5	1	66	6
+2023	10-49 salariés	Oriental	166	9	9	4	12	9	5	145	2
+2023	10-49 salariés	Tanger-Tetouan-Al Hoceima	218	29	19	10	19	43	2	173	9
+2023	50-199 salariés	 Marrakech-Safi	35	2	0	1	7	2	0	12	0
+2023	50-199 salariés	 Rabat-Salé-Kénitra	2	2	1	0	0	1	3	16	1
+2023	50-199 salariés	 Souss-Massa	13	0	1	1	0	1	0	7	0
+2023	50-199 salariés	Béni Mellal-Khénifra	0	2	0	1	0	0	1	15	0
+2023	50-199 salariés	Drâa-Tafilalet	1	0	0	0	0	0	0	4	0
+2023	50-199 salariés	Eddakhla-Oued Eddahab	1	1	3	0	0	0	0	0	0
+2023	50-199 salariés	Fès-Meknès	0	1	1	0	0	3	2	9	0
+2023	50-199 salariés	Grand Casablanca-Settat	11	4	8	4	5	10	5	44	0
+2023	50-199 salariés	Guelmim-Oued Noun	2	0	0	0	0	0	0	5	0
+2023	50-199 salariés	Laayoune-Sakia El Hamra	2	0	0	1	0	3	0	3	0
+2023	50-199 salariés	Oriental	0	1	0	1	0	0	0	8	0
+2023	50-199 salariés	Tanger-Tetouan-Al Hoceima	5	1	0	0	2	12	0	13	2
+2023	200-499 salariés	 Marrakech-Safi	0	0	0	0	0	0	0	2	0
+2023	200-499 salariés	 Rabat-Salé-Kénitra	0	1	0	0	0	1	0	5	0
+2023	200-499 salariés	 Souss-Massa	2	0	1	0	0	0	0	0	0
+2023	200-499 salariés	Béni Mellal-Khénifra	0	0	0	0	0	0	0	0	0
+2023	200-499 salariés	Drâa-Tafilalet	0	0	0	0	0	0	0	1	0
+2023	200-499 salariés	Eddakhla-Oued Eddahab	0	0	0	0	0	0	0	0	0
+2023	200-499 salariés	Fès-Meknès	0	0	1	0	0	1	0	1	0
+2023	200-499 salariés	Grand Casablanca-Settat	2	0	1	0	1	0	3	15	0
+2023	200-499 salariés	Guelmim-Oued Noun	0	0	0	0	0	0	0	0	0
+2023	200-499 salariés	Laayoune-Sakia El Hamra	0	0	1	0	0	0	0	1	0
+2023	200-499 salariés	Oriental	0	0	0	0	0	0	0	0	0
+2023	200-499 salariés	Tanger-Tetouan-Al Hoceima	0	1	0	0	0	0	0	1	0
+2023	500 salariés et plus	 Marrakech-Safi	0	1	0	0	0	0	0	0	0
+2023	500 salariés et plus	 Rabat-Salé-Kénitra	2	0	0	0	0	1	0	0	0
+2023	500 salariés et plus	 Souss-Massa	1	0	0	0	0	0	0	0	0
+2023	500 salariés et plus	Béni Mellal-Khénifra	0	0	0	0	0	0	0	0	0
+2023	500 salariés et plus	Drâa-Tafilalet	0	0	0	0	0	0	0	0	0
+2023	500 salariés et plus	Eddakhla-Oued Eddahab	0	0	0	0	0	0	0	0	0
+2023	500 salariés et plus	Fès-Meknès	0	0	0	0	0	0	0	0	0
+2023	500 salariés et plus	Grand Casablanca-Settat	0	1	0	0	0	1	0	1	0
+2023	500 salariés et plus	Guelmim-Oued Noun	0	0	0	0	0	0	0	0	0
+2023	500 salariés et plus	Laayoune-Sakia El Hamra	0	0	0	0	0	0	0	0	0
+2023	500 salariés et plus	Oriental	0	0	0	0	0	0	0	0	0
+2023	500 salariés et plus	Tanger-Tetouan-Al Hoceima	0	1	0	0	0	2	0	2	0
