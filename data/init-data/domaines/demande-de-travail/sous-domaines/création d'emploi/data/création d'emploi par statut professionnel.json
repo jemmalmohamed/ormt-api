@@ -5,367 +5,367 @@
             "statut": "salariés",
             "milieu": "urbain",
             "annuel": "2019",
-            "valeur": 188
+            "valeur": 188000
         },
         {
             "statut": "salariés",
             "milieu": "rural",
             "annuel": "2019",
-            "valeur": 27
+            "valeur": 27000
         },
         {
             "statut": "salariés",
             "milieu": "national",
             "annuel": "2019",
-            "valeur": 212
+            "valeur": 212000
         },
         {
             "statut": "salariés",
             "milieu": "urbain",
             "annuel": "2020",
-            "valeur": -120
+            "valeur": -120000
         },
         {
             "statut": "salariés",
             "milieu": "rural",
             "annuel": "2020",
-            "valeur": -31
+            "valeur": -31000
         },
         {
             "statut": "salariés",
             "milieu": "national",
             "annuel": "2020",
-            "valeur": -154
+            "valeur": -154000
         },
         {
             "statut": "salariés",
             "milieu": "urbain",
             "annuel": "2021",
-            "valeur": 133
+            "valeur": 133000
         },
         {
             "statut": "salariés",
             "milieu": "rural",
             "annuel": "2021",
-            "valeur": 95
+            "valeur": 95000
         },
         {
             "statut": "salariés",
             "milieu": "national",
             "annuel": "2021",
-            "valeur": 235
+            "valeur": 235000
         },
         {
             "statut": "salariés",
             "milieu": "urbain",
             "annuel": "2022",
-            "valeur": 74
+            "valeur": 74000
         },
         {
             "statut": "salariés",
             "milieu": "rural",
             "annuel": "2022",
-            "valeur": 9
+            "valeur": 9000
         },
         {
             "statut": "salariés",
             "milieu": "national",
             "annuel": "2022",
-            "valeur": 74
+            "valeur": 74000
         },
         {
             "statut": "salariés",
             "milieu": "urbain",
             "annuel": "2023",
-            "valeur": 387
+            "valeur": 387000
         },
         {
             "statut": "salariés",
             "milieu": "rural",
             "annuel": "2023",
-            "valeur": 186
+            "valeur": 186000
         },
         {
             "statut": "salariés",
             "milieu": "national",
             "annuel": "2023",
-            "valeur": 584
+            "valeur": 584000
         },
         {
             "statut": "indépendants",
             "milieu": "urbain",
             "annuel": "2019",
-            "valeur": 28
+            "valeur": 28000
         },
         {
             "statut": "indépendants",
             "milieu": "rural",
             "annuel": "2019",
-            "valeur": -26
+            "valeur": -26000
         },
         {
             "statut": "indépendants",
             "milieu": "national",
             "annuel": "2019",
-            "valeur": 7
+            "valeur": 7000
         },
         {
             "statut": "indépendants",
             "milieu": "urbain",
             "annuel": "2020",
-            "valeur": 39
+            "valeur": 39000
         },
         {
             "statut": "indépendants",
             "milieu": "rural",
             "annuel": "2020",
-            "valeur": -94
+            "valeur": -94000
         },
         {
             "statut": "indépendants",
             "milieu": "national",
             "annuel": "2020",
-            "valeur": -57
+            "valeur": -57000
         },
         {
             "statut": "indépendants",
             "milieu": "urbain",
             "annuel": "2021",
-            "valeur": -61
+            "valeur": -61000
         },
         {
             "statut": "indépendants",
             "milieu": "rural",
             "annuel": "2021",
-            "valeur": -11
+            "valeur": -11000
         },
         {
             "statut": "indépendants",
             "milieu": "national",
             "annuel": "2021",
-            "valeur": -69
+            "valeur": -69000
         },
         {
             "statut": "indépendants",
             "milieu": "urbain",
             "annuel": "2022",
-            "valeur": 109
+            "valeur": 109000
         },
         {
             "statut": "indépendants",
             "milieu": "rural",
             "annuel": "2022",
-            "valeur": -35
+            "valeur": -35000
         },
         {
             "statut": "indépendants",
             "milieu": "national",
             "annuel": "2022",
-            "valeur": 68
+            "valeur": 68000
         },
         {
             "statut": "indépendants",
             "milieu": "urbain",
             "annuel": "2023",
-            "valeur": -285
+            "valeur": -285000
         },
         {
             "statut": "indépendants",
             "milieu": "rural",
             "annuel": "2023",
-            "valeur": -192
+            "valeur": -192000
         },
         {
             "statut": "indépendants",
             "milieu": "national",
             "annuel": "2023",
-            "valeur": -472
+            "valeur": -472000
         },
         {
             "statut": "employeurs",
             "milieu": "urbain",
             "annuel": "2019",
-            "valeur": 9
+            "valeur": 9000
         },
         {
             "statut": "employeurs",
             "milieu": "rural",
             "annuel": "2019",
-            "valeur": -10
+            "valeur": -10000
         },
         {
             "statut": "employeurs",
             "milieu": "national",
             "annuel": "2019",
-            "valeur": 4
+            "valeur": 4000
         },
         {
             "statut": "employeurs",
             "milieu": "urbain",
             "annuel": "2020",
-            "valeur": -42
+            "valeur": -42000
         },
         {
             "statut": "employeurs",
             "milieu": "rural",
             "annuel": "2020",
-            "valeur": -11
+            "valeur": -11000
         },
         {
             "statut": "employeurs",
             "milieu": "national",
             "annuel": "2020",
-            "valeur": -53
+            "valeur": -53000
         },
         {
             "statut": "employeurs",
             "milieu": "urbain",
             "annuel": "2021",
-            "valeur": 28
+            "valeur": 28000
         },
         {
             "statut": "employeurs",
             "milieu": "rural",
             "annuel": "2021",
-            "valeur": 1
+            "valeur": 1000
         },
         {
             "statut": "employeurs",
             "milieu": "national",
             "annuel": "2021",
-            "valeur": 26
+            "valeur": 26000
         },
         {
             "statut": "employeurs",
             "milieu": "urbain",
             "annuel": "2022",
-            "valeur": -14
+            "valeur": -14000
         },
         {
             "statut": "employeurs",
             "milieu": "rural",
             "annuel": "2022",
-            "valeur": -1
+            "valeur": -1000
         },
         {
             "statut": "employeurs",
             "milieu": "national",
             "annuel": "2022",
-            "valeur": -11
+            "valeur": -11000
         },
         {
             "statut": "employeurs",
             "milieu": "urbain",
             "annuel": "2023",
-            "valeur": -18
+            "valeur": -18000
         },
         {
             "statut": "employeurs",
             "milieu": "rural",
             "annuel": "2023",
-            "valeur": -5
+            "valeur": -5000
         },
         {
             "statut": "employeurs",
             "milieu": "national",
             "annuel": "2023",
-            "valeur": -25
+            "valeur": -25000
         },
         {
             "statut": "aides familiales",
             "milieu": "urbain",
             "annuel": "2019",
-            "valeur": 12
+            "valeur": 12000
         },
         {
             "statut": "aides familiales",
             "milieu": "rural",
             "annuel": "2019",
-            "valeur": -84
+            "valeur": -84000
         },
         {
             "statut": "aides familiales",
             "milieu": "national",
             "annuel": "2019",
-            "valeur": -73
+            "valeur": -73000
         },
         {
             "statut": "aides familiales",
             "milieu": "urbain",
             "annuel": "2020",
-            "valeur": -16
+            "valeur": -16000
         },
         {
             "statut": "aides familiales",
             "milieu": "rural",
             "annuel": "2020",
-            "valeur": -153
+            "valeur": -153000
         },
         {
             "statut": "aides familiales",
             "milieu": "national",
             "annuel": "2020",
-            "valeur": -169
+            "valeur": -169000
         },
         {
             "statut": "aides familiales",
             "milieu": "urbain",
             "annuel": "2021",
-            "valeur": -10
+            "valeur": -10000
         },
         {
             "statut": "aides familiales",
             "milieu": "rural",
             "annuel": "2021",
-            "valeur": 43
+            "valeur": 43000
         },
         {
             "statut": "aides familiales",
             "milieu": "national",
             "annuel": "2021",
-            "valeur": 32
+            "valeur": 32000
         },
         {
             "statut": "aides familiales",
             "milieu": "urbain",
             "annuel": "2022",
-            "valeur": -10
+            "valeur": -10000
         },
         {
             "statut": "aides familiales",
             "milieu": "rural",
             "annuel": "2022",
-            "valeur": -152
+            "valeur": -152000
         },
         {
             "statut": "aides familiales",
             "milieu": "national",
             "annuel": "2022",
-            "valeur": -154
+            "valeur": -154000
         },
         {
             "statut": "aides familiales",
             "milieu": "urbain",
             "annuel": "2023",
-            "valeur": -12
+            "valeur": -12000
         },
         {
             "statut": "aides familiales",
             "milieu": "rural",
             "annuel": "2023",
-            "valeur": -188
+            "valeur": -188000
         },
         {
             "statut": "aides familiales",
             "milieu": "national",
             "annuel": "2023",
-            "valeur": -210
+            "valeur": -210000
         },
         {
             "statut": "autres",
             "milieu": "urbain",
             "annuel": "2019",
-            "valeur": 1
+            "valeur": 1000
         },
         {
             "statut": "autres",
@@ -377,25 +377,25 @@
             "statut": "autres",
             "milieu": "national",
             "annuel": "2019",
-            "valeur": 12
+            "valeur": 12000
         },
         {
             "statut": "autres",
             "milieu": "urbain",
             "annuel": "2020",
-            "valeur": -1
+            "valeur": -1000
         },
         {
             "statut": "autres",
             "milieu": "rural",
             "annuel": "2020",
-            "valeur": -6
+            "valeur": -6000
         },
         {
             "statut": "autres",
             "milieu": "national",
             "annuel": "2020",
-            "valeur": -13
+            "valeur": -13000
         },
         {
             "statut": "autres",
@@ -407,25 +407,25 @@
             "statut": "autres",
             "milieu": "rural",
             "annuel": "2021",
-            "valeur": 5
+            "valeur": 5000
         },
         {
             "statut": "autres",
             "milieu": "national",
             "annuel": "2021",
-            "valeur": 1
+            "valeur": 1000
         },
         {
             "statut": "autres",
             "milieu": "urbain",
             "annuel": "2022",
-            "valeur": -6
+            "valeur": -6000
         },
         {
             "statut": "autres",
             "milieu": "rural",
             "annuel": "2022",
-            "valeur": -1
+            "valeur": -1000
         },
         {
             "statut": "autres",
@@ -437,109 +437,109 @@
             "statut": "autres",
             "milieu": "urbain",
             "annuel": "2023",
-            "valeur": -6
+            "valeur": -6000
         },
         {
             "statut": "autres",
             "milieu": "rural",
             "annuel": "2023",
-            "valeur": -1
+            "valeur": -1000
         },
         {
             "statut": "autres",
             "milieu": "national",
             "annuel": "2023",
-            "valeur": -11
+            "valeur": -11000
         },
         {
             "statut": "ensemble",
             "milieu": "urbain",
             "annuel": "2019",
-            "valeur": 6
+            "valeur": 6000
         },
         {
             "statut": "ensemble",
             "milieu": "rural",
             "annuel": "2019",
-            "valeur": 8
+            "valeur": 8000
         },
         {
             "statut": "ensemble",
             "milieu": "national",
             "annuel": "2019",
-            "valeur": 14
+            "valeur": 14000
         },
         {
             "statut": "ensemble",
             "milieu": "urbain",
             "annuel": "2020",
-            "valeur": 9
+            "valeur": 9000
         },
         {
             "statut": "ensemble",
             "milieu": "rural",
             "annuel": "2020",
-            "valeur": -5
+            "valeur": -5000
         },
         {
             "statut": "ensemble",
             "milieu": "national",
             "annuel": "2020",
-            "valeur": -10
+            "valeur": -10000
         },
         {
             "statut": "ensemble",
             "milieu": "urbain",
             "annuel": "2021",
-            "valeur": 3
+            "valeur": 3000
         },
         {
             "statut": "ensemble",
             "milieu": "rural",
             "annuel": "2021",
-            "valeur": -2
+            "valeur": -2000
         },
         {
             "statut": "ensemble",
             "milieu": "national",
             "annuel": "2021",
-            "valeur": 16
+            "valeur": 16000
         },
         {
             "statut": "ensemble",
             "milieu": "urbain",
             "annuel": "2022",
-            "valeur": -2
+            "valeur": -2000
         },
         {
             "statut": "ensemble",
             "milieu": "rural",
             "annuel": "2022",
-            "valeur": 6
+            "valeur": 6000
         },
         {
             "statut": "ensemble",
             "milieu": "national",
             "annuel": "2022",
-            "valeur": -1
+            "valeur": -1000
         },
         {
             "statut": "ensemble",
             "milieu": "urbain",
             "annuel": "2023",
-            "valeur": -25
+            "valeur": -25000
         },
         {
             "statut": "ensemble",
             "milieu": "rural",
             "annuel": "2023",
-            "valeur": -4
+            "valeur": -4000
         },
         {
             "statut": "ensemble",
             "milieu": "national",
             "annuel": "2023",
-            "valeur": -25
+            "valeur": -25000
         }
     ]
 }

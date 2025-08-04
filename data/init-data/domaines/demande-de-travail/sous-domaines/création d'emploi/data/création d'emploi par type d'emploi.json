@@ -5,271 +5,271 @@
             "type_emploi": "emploi rémuneré",
             "milieu": "urbain",
             "annuel": "2019",
-            "valeur": 237
+            "valeur": 237000
         },
         {
             "type_emploi": "emploi rémuneré",
             "milieu": "rural",
             "annuel": "2019",
-            "valeur": -2
+            "valeur": -2000
         },
         {
             "type_emploi": "emploi rémuneré",
             "milieu": "ensemble",
             "annuel": "2019",
-            "valeur": 235
+            "valeur": 235000
         },
         {
             "type_emploi": "emploi rémuneré",
             "milieu": "urbain",
             "annuel": "2020",
-            "valeur": -120
+            "valeur": -120000
         },
         {
             "type_emploi": "emploi rémuneré",
             "milieu": "rural",
             "annuel": "2020",
-            "valeur": -136
+            "valeur": -136000
         },
         {
             "type_emploi": "emploi rémuneré",
             "milieu": "ensemble",
             "annuel": "2020",
-            "valeur": -257
+            "valeur": -257000
         },
         {
             "type_emploi": "emploi rémuneré",
             "milieu": "urbain",
             "annuel": "2021",
-            "valeur": 115
+            "valeur": 115000
         },
         {
             "type_emploi": "emploi rémuneré",
             "milieu": "rural",
             "annuel": "2021",
-            "valeur": 82
+            "valeur": 82000
         },
         {
             "type_emploi": "emploi rémuneré",
             "milieu": "ensemble",
             "annuel": "2021",
-            "valeur": 197
+            "valeur": 197000
         },
         {
             "type_emploi": "emploi rémuneré",
             "milieu": "urbain",
             "annuel": "2022",
-            "valeur": 160
+            "valeur": 160000
         },
         {
             "type_emploi": "emploi rémuneré",
             "milieu": "rural",
             "annuel": "2022",
-            "valeur": -21
+            "valeur": -21000
         },
         {
             "type_emploi": "emploi rémuneré",
             "milieu": "ensemble",
             "annuel": "2022",
-            "valeur": 138
+            "valeur": 138000
         },
         {
             "type_emploi": "emploi rémuneré",
             "milieu": "urbain",
             "annuel": "2023",
-            "valeur": 59
+            "valeur": 59000
         },
         {
             "type_emploi": "emploi rémuneré",
             "milieu": "rural",
             "annuel": "2023",
-            "valeur": -11
+            "valeur": -11000
         },
         {
             "type_emploi": "emploi rémuneré",
             "milieu": "ensemble",
             "annuel": "2023",
-            "valeur": 49
+            "valeur": 49000
         },
         {
             "type_emploi": "emploi non rémuneré",
             "milieu": "urbain",
             "annuel": "2019",
-            "valeur": 14
+            "valeur": 14000
         },
         {
             "type_emploi": "emploi non rémuneré",
             "milieu": "rural",
             "annuel": "2019",
-            "valeur": -84
+            "valeur": -84000
         },
         {
             "type_emploi": "emploi non rémuneré",
             "milieu": "ensemble",
             "annuel": "2019",
-            "valeur": -70
+            "valeur": -70000
         },
         {
             "type_emploi": "emploi non rémuneré",
             "milieu": "urbain",
             "annuel": "2020",
-            "valeur": -17
+            "valeur": -17000
         },
         {
             "type_emploi": "emploi non rémuneré",
             "milieu": "rural",
             "annuel": "2020",
-            "valeur": -159
+            "valeur": -159000
         },
         {
             "type_emploi": "emploi non rémuneré",
             "milieu": "ensemble",
             "annuel": "2020",
-            "valeur": -175
+            "valeur": -175000
         },
         {
             "type_emploi": "emploi non rémuneré",
             "milieu": "urbain",
             "annuel": "2021",
-            "valeur": -16
+            "valeur": -16000
         },
         {
             "type_emploi": "emploi non rémuneré",
             "milieu": "rural",
             "annuel": "2021",
-            "valeur": 48
+            "valeur": 48000
         },
         {
             "type_emploi": "emploi non rémuneré",
             "milieu": "ensemble",
             "annuel": "2021",
-            "valeur": 32
+            "valeur": 32000
         },
         {
             "type_emploi": "emploi non rémuneré",
             "milieu": "urbain",
             "annuel": "2022",
-            "valeur": -9
+            "valeur": -9000
         },
         {
             "type_emploi": "emploi non rémuneré",
             "milieu": "rural",
             "annuel": "2022",
-            "valeur": -153
+            "valeur": -153000
         },
         {
             "type_emploi": "emploi non rémuneré",
             "milieu": "ensemble",
             "annuel": "2022",
-            "valeur": -161
+            "valeur": -161000
         },
         {
             "type_emploi": "emploi non rémuneré",
             "milieu": "urbain",
             "annuel": "2023",
-            "valeur": -18
+            "valeur": -18000
         },
         {
             "type_emploi": "emploi non rémuneré",
             "milieu": "rural",
             "annuel": "2023",
-            "valeur": -188
+            "valeur": -188000
         },
         {
             "type_emploi": "emploi non rémuneré",
             "milieu": "ensemble",
             "annuel": "2023",
-            "valeur": -207
+            "valeur": -207000
         },
         {
             "type_emploi": "ensemble",
             "milieu": "urbain",
             "annuel": "2019",
-            "valeur": 251
+            "valeur": 251000
         },
         {
             "type_emploi": "ensemble",
             "milieu": "rural",
             "annuel": "2019",
-            "valeur": -86
+            "valeur": -86000
         },
         {
             "type_emploi": "ensemble",
             "milieu": "ensemble",
             "annuel": "2019",
-            "valeur": 165
+            "valeur": 165000
         },
         {
             "type_emploi": "ensemble",
             "milieu": "urbain",
             "annuel": "2020",
-            "valeur": -137
+            "valeur": -137000
         },
         {
             "type_emploi": "ensemble",
             "milieu": "rural",
             "annuel": "2020",
-            "valeur": -295
+            "valeur": -295000
         },
         {
             "type_emploi": "ensemble",
             "milieu": "ensemble",
             "annuel": "2020",
-            "valeur": -432
+            "valeur": -432000
         },
         {
             "type_emploi": "ensemble",
             "milieu": "urbain",
             "annuel": "2021",
-            "valeur": 99
+            "valeur": 99000
         },
         {
             "type_emploi": "ensemble",
             "milieu": "rural",
             "annuel": "2021",
-            "valeur": 130
+            "valeur": 130000
         },
         {
             "type_emploi": "ensemble",
             "milieu": "ensemble",
             "annuel": "2021",
-            "valeur": 229
+            "valeur": 229000
         },
         {
             "type_emploi": "ensemble",
             "milieu": "urbain",
             "annuel": "2022",
-            "valeur": 151
+            "valeur": 151000
         },
         {
             "type_emploi": "ensemble",
             "milieu": "rural",
             "annuel": "2022",
-            "valeur": -174
+            "valeur": -174000
         },
         {
             "type_emploi": "ensemble",
             "milieu": "ensemble",
             "annuel": "2022",
-            "valeur": -23
+            "valeur": -23000
         },
         {
             "type_emploi": "ensemble",
             "milieu": "urbain",
             "annuel": "2023",
-            "valeur": 41
+            "valeur": 41000
         },
         {
             "type_emploi": "ensemble",
             "milieu": "rural",
             "annuel": "2023",
-            "valeur": -199
+            "valeur": -199000
         },
         {
             "type_emploi": "ensemble",
             "milieu": "ensemble",
             "annuel": "2023",
-            "valeur": -158
+            "valeur": -158000
         }
     ]
 }

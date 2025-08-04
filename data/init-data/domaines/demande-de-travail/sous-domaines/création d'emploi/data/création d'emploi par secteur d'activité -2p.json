@@ -5,181 +5,181 @@
             "secteur_activite": "agricole",
             "milieu": "urbain",
             "annuel": "2019",
-            "valeur": 12
+            "valeur": 12000
         },
         {
             "secteur_activite": "agricole",
             "milieu": "rural",
             "annuel": "2019",
-            "valeur": -160
+            "valeur": -160000
         },
         {
             "secteur_activite": "agricole",
             "milieu": "national",
             "annuel": "2019",
-            "valeur": -152
+            "valeur": -152000
         },
         {
             "secteur_activite": "agricole",
             "milieu": "urbain",
             "annuel": "2020",
-            "valeur": -7
+            "valeur": -7000
         },
         {
             "secteur_activite": "agricole",
             "milieu": "rural",
             "annuel": "2020",
-            "valeur": -266
+            "valeur": -266000
         },
         {
             "secteur_activite": "agricole",
             "milieu": "national",
             "annuel": "2020",
-            "valeur": -267
+            "valeur": -267000
         },
         {
             "secteur_activite": "agricole",
             "milieu": "urbain",
             "annuel": "2021",
-            "valeur": -14
+            "valeur": -14000
         },
         {
             "secteur_activite": "agricole",
             "milieu": "rural",
             "annuel": "2021",
-            "valeur": 79
+            "valeur": 79000
         },
         {
             "secteur_activite": "agricole",
             "milieu": "national",
             "annuel": "2021",
-            "valeur": 61
+            "valeur": 61000
         },
         {
             "secteur_activite": "agricole",
             "milieu": "urbain",
             "annuel": "2022",
-            "valeur": -6
+            "valeur": -6000
         },
         {
             "secteur_activite": "agricole",
             "milieu": "rural",
             "annuel": "2022",
-            "valeur": -205
+            "valeur": -205000
         },
         {
             "secteur_activite": "agricole",
             "milieu": "national",
             "annuel": "2022",
-            "valeur": -211
+            "valeur": -211000
         },
         {
             "secteur_activite": "agricole",
             "milieu": "urbain",
             "annuel": "2023",
-            "valeur": 2
+            "valeur": 2000
         },
         {
             "secteur_activite": "agricole",
             "milieu": "rural",
             "annuel": "2023",
-            "valeur": -206
+            "valeur": -206000
         },
         {
             "secteur_activite": "agricole",
             "milieu": "national",
             "annuel": "2023",
-            "valeur": -195
+            "valeur": -195000
         },
         {
             "secteur_activite": "non agricole",
             "milieu": "urbain",
             "annuel": "2019",
-            "valeur": 232
+            "valeur": 232000
         },
         {
             "secteur_activite": "non agricole",
             "milieu": "rural",
             "annuel": "2019",
-            "valeur": 69
+            "valeur": 69000
         },
         {
             "secteur_activite": "non agricole",
             "milieu": "national",
             "annuel": "2019",
-            "valeur": 317
+            "valeur": 317000
         },
         {
             "secteur_activite": "non agricole",
             "milieu": "urbain",
             "annuel": "2020",
-            "valeur": -124
+            "valeur": -124000
         },
         {
             "secteur_activite": "non agricole",
             "milieu": "rural",
             "annuel": "2020",
-            "valeur": -24
+            "valeur": -24000
         },
         {
             "secteur_activite": "non agricole",
             "milieu": "national",
             "annuel": "2020",
-            "valeur": -155
+            "valeur": -155000
         },
         {
             "secteur_activite": "non agricole",
             "milieu": "urbain",
             "annuel": "2021",
-            "valeur": 113
+            "valeur": 113000
         },
         {
             "secteur_activite": "non agricole",
             "milieu": "rural",
             "annuel": "2021",
-            "valeur": 51
+            "valeur": 51000
         },
         {
             "secteur_activite": "non agricole",
             "milieu": "national",
             "annuel": "2021",
-            "valeur": 158
+            "valeur": 158000
         },
         {
             "secteur_activite": "non agricole",
             "milieu": "urbain",
             "annuel": "2022",
-            "valeur": 157
+            "valeur": 157000
         },
         {
             "secteur_activite": "non agricole",
             "milieu": "rural",
             "annuel": "2022",
-            "valeur": 31
+            "valeur": 31000
         },
         {
             "secteur_activite": "non agricole",
             "milieu": "national",
             "annuel": "2022",
-            "valeur": 188
+            "valeur": 188000
         },
         {
             "secteur_activite": "non agricole",
             "milieu": "urbain",
             "annuel": "2023",
-            "valeur": 39
+            "valeur": 39000
         },
         {
             "secteur_activite": "non agricole",
             "milieu": "rural",
             "annuel": "2023",
-            "valeur": 7
+            "valeur": 7000
         },
         {
             "secteur_activite": "non agricole",
             "milieu": "national",
             "annuel": "2023",
-            "valeur": 37
+            "valeur": 37000
         }
     ]
 }

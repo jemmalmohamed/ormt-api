@@ -5,37 +5,37 @@
             "secteur_emploi": "emploi public/semi public",
             "milieu": "urbain",
             "annuel": "2019",
-            "valeur": 27
+            "valeur": 27000
         },
         {
             "secteur_emploi": "emploi public/semi public",
             "milieu": "rural",
             "annuel": "2019",
-            "valeur": 3
+            "valeur": 3000
         },
         {
             "secteur_emploi": "emploi public/semi public",
             "milieu": "ensemble",
             "annuel": "2019",
-            "valeur": 30
+            "valeur": 30000
         },
         {
             "secteur_emploi": "emploi public/semi public",
             "milieu": "urbain",
             "annuel": "2020",
-            "valeur": -43
+            "valeur": -43000
         },
         {
             "secteur_emploi": "emploi public/semi public",
             "milieu": "rural",
             "annuel": "2020",
-            "valeur": 10
+            "valeur": 10000
         },
         {
             "secteur_emploi": "emploi public/semi public",
             "milieu": "ensemble",
             "annuel": "2020",
-            "valeur": -33
+            "valeur": -33000
         },
         {
             "secteur_emploi": "emploi public/semi public",
@@ -47,229 +47,229 @@
             "secteur_emploi": "emploi public/semi public",
             "milieu": "rural",
             "annuel": "2021",
-            "valeur": 13
+            "valeur": 13000
         },
         {
             "secteur_emploi": "emploi public/semi public",
             "milieu": "ensemble",
             "annuel": "2021",
-            "valeur": 13
+            "valeur": 13000
         },
         {
             "secteur_emploi": "emploi public/semi public",
             "milieu": "urbain",
             "annuel": "2022",
-            "valeur": -38
+            "valeur": -38000
         },
         {
             "secteur_emploi": "emploi public/semi public",
             "milieu": "rural",
             "annuel": "2022",
-            "valeur": 3
+            "valeur": 3000
         },
         {
             "secteur_emploi": "emploi public/semi public",
             "milieu": "ensemble",
             "annuel": "2022",
-            "valeur": -35
+            "valeur": -35000
         },
         {
             "secteur_emploi": "emploi public/semi public",
             "milieu": "urbain",
             "annuel": "2023",
-            "valeur": 24
+            "valeur": 24000
         },
         {
             "secteur_emploi": "emploi public/semi public",
             "milieu": "rural",
             "annuel": "2023",
-            "valeur": -11
+            "valeur": -11000
         },
         {
             "secteur_emploi": "emploi public/semi public",
             "milieu": "ensemble",
             "annuel": "2023",
-            "valeur": 13
+            "valeur": 13000
         },
         {
             "secteur_emploi": "emploi privé",
             "milieu": "urbain",
             "annuel": "2019",
-            "valeur": 237
+            "valeur": 237000
         },
         {
             "secteur_emploi": "emploi privé",
             "milieu": "rural",
             "annuel": "2019",
-            "valeur": -88
+            "valeur": -88000
         },
         {
             "secteur_emploi": "emploi privé",
             "milieu": "ensemble",
             "annuel": "2019",
-            "valeur": 149
+            "valeur": 149000
         },
         {
             "secteur_emploi": "emploi privé",
             "milieu": "urbain",
             "annuel": "2020",
-            "valeur": 25
+            "valeur": 25000
         },
         {
             "secteur_emploi": "emploi privé",
             "milieu": "rural",
             "annuel": "2020",
-            "valeur": -281
+            "valeur": -281000
         },
         {
             "secteur_emploi": "emploi privé",
             "milieu": "ensemble",
             "annuel": "2020",
-            "valeur": -256
+            "valeur": -256000
         },
         {
             "secteur_emploi": "emploi privé",
             "milieu": "urbain",
             "annuel": "2021",
-            "valeur": 99
+            "valeur": 99000
         },
         {
             "secteur_emploi": "emploi privé",
             "milieu": "rural",
             "annuel": "2021",
-            "valeur": 117
+            "valeur": 117000
         },
         {
             "secteur_emploi": "emploi privé",
             "milieu": "ensemble",
             "annuel": "2021",
-            "valeur": 216
+            "valeur": 216000
         },
         {
             "secteur_emploi": "emploi privé",
             "milieu": "urbain",
             "annuel": "2022",
-            "valeur": 189
+            "valeur": 189000
         },
         {
             "secteur_emploi": "emploi privé",
             "milieu": "rural",
             "annuel": "2022",
-            "valeur": -177
+            "valeur": -177000
         },
         {
             "secteur_emploi": "emploi privé",
             "milieu": "ensemble",
             "annuel": "2022",
-            "valeur": 12
+            "valeur": 12000
         },
         {
             "secteur_emploi": "emploi privé",
             "milieu": "urbain",
             "annuel": "2023",
-            "valeur": 17
+            "valeur": 17000
         },
         {
             "secteur_emploi": "emploi privé",
             "milieu": "rural",
             "annuel": "2023",
-            "valeur": -188
+            "valeur": -188000
         },
         {
             "secteur_emploi": "emploi privé",
             "milieu": "ensemble",
             "annuel": "2023",
-            "valeur": -171
+            "valeur": -171000
         },
         {
             "secteur_emploi": "ensemble",
             "milieu": "urbain",
             "annuel": "2019",
-            "valeur": 264
+            "valeur": 264000
         },
         {
             "secteur_emploi": "ensemble",
             "milieu": "rural",
             "annuel": "2019",
-            "valeur": -86
+            "valeur": -86000
         },
         {
             "secteur_emploi": "ensemble",
             "milieu": "ensemble",
             "annuel": "2019",
-            "valeur": 178
+            "valeur": 178000
         },
         {
             "secteur_emploi": "ensemble",
             "milieu": "urbain",
             "annuel": "2020",
-            "valeur": -18
+            "valeur": -18000
         },
         {
             "secteur_emploi": "ensemble",
             "milieu": "rural",
             "annuel": "2020",
-            "valeur": -272
+            "valeur": -272000
         },
         {
             "secteur_emploi": "ensemble",
             "milieu": "ensemble",
             "annuel": "2020",
-            "valeur": -289
+            "valeur": -289000
         },
         {
             "secteur_emploi": "ensemble",
             "milieu": "urbain",
             "annuel": "2021",
-            "valeur": 99
+            "valeur": 99000
         },
         {
             "secteur_emploi": "ensemble",
             "milieu": "rural",
             "annuel": "2021",
-            "valeur": 130
+            "valeur": 130000
         },
         {
             "secteur_emploi": "ensemble",
             "milieu": "ensemble",
             "annuel": "2021",
-            "valeur": 229
+            "valeur": 229000
         },
         {
             "secteur_emploi": "ensemble",
             "milieu": "urbain",
             "annuel": "2022",
-            "valeur": 151
+            "valeur": 151000
         },
         {
             "secteur_emploi": "ensemble",
             "milieu": "rural",
             "annuel": "2022",
-            "valeur": -174
+            "valeur": -174000
         },
         {
             "secteur_emploi": "ensemble",
             "milieu": "ensemble",
             "annuel": "2022",
-            "valeur": -23
+            "valeur": -23000
         },
         {
             "secteur_emploi": "ensemble",
             "milieu": "urbain",
             "annuel": "2023",
-            "valeur": 41
+            "valeur": 41000
         },
         {
             "secteur_emploi": "ensemble",
             "milieu": "rural",
             "annuel": "2023",
-            "valeur": -199
+            "valeur": -199000
         },
         {
             "secteur_emploi": "ensemble",
             "milieu": "ensemble",
             "annuel": "2023",
-            "valeur": -158
+            "valeur": -158000
         }
     ]
 }
