@@ -146,4 +146,13 @@ public class GrapheConfigurationServiceImpl extends BaseServiceImpl<GrapheConfig
 
     }
 
+    @Override
+    public Optional<GrapheConfiguration> findByIndicateurAndGrapheType(Long indicateurId, String grapheType) {
+        return grapheConfigurationRepository.findByIndicateurAndGrapheType(
+                indicateurService.findById(indicateurId)
+                        .orElseThrow(() -> new EntityNotFoundException("Indicateur non trouvé")),
+                grapheTypeService.findByNom(grapheType)
+                        .orElseThrow(() -> new EntityNotFoundException("GrapheType non trouvé")));
+    }
+
 }

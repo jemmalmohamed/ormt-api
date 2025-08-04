@@ -23,4 +23,6 @@ public interface GrapheConfigurationService extends BaseService<GrapheConfigurat
 
     boolean existsById(Long id);
 
+    Optional<GrapheConfiguration> findByIndicateurAndGrapheType(Long indicateurId, String grapheType);
+
 }

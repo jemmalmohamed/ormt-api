@@ -47,7 +47,7 @@ public class GrapheCadreMacroEconomiqueSeeder implements CommandLineRunner {
                 }
 
                 try {
-                        createIndicateurGrapheConfigurationsCadreMacroEconomique();
+                        // createIndicateurGrapheConfigurationsCadreMacroEconomique();
                         log.info("Graphe configuration data seeding completed successfully.");
                 } catch (Exception e) {
                         log.error("Error during graphe configuration data seeding: {}", e.getMessage(), e);

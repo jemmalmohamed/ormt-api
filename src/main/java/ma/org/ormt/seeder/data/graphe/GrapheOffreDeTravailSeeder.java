@@ -48,7 +48,7 @@ public class GrapheOffreDeTravailSeeder implements CommandLineRunner {
 
                 try {
 
-                        createIndicateurGrapheConfigurationsOffreDeTravail();
+                        // createIndicateurGrapheConfigurationsOffreDeTravail();
                         log.info("Graphe configuration data seeding completed successfully.");
                 } catch (Exception e) {
                         log.error("Error during graphe configuration data seeding: {}", e.getMessage(), e);
