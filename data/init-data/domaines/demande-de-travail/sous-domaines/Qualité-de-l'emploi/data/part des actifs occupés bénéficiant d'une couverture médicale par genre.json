@@ -1,0 +1,80 @@
+{
+    "indicateur": "part des actifs occupés bénéficiant d'une couverture médicale par genre",
+    "data": [
+        {
+            "genre": "Homme",
+            "annuel": 2019,
+            "valeur": 23.8
+        },
+        {
+            "genre": "Homme",
+            "annuel": 2020,
+            "valeur": 24.0
+        },
+        {
+            "genre": "Homme",
+            "annuel": 2021,
+            "valeur": 24.0
+        },
+        {
+            "genre": "Homme",
+            "annuel": 2022,
+            "valeur": 25.5
+        },
+        {
+            "genre": "Homme",
+            "annuel": 2023,
+            "valeur": 27.7
+        },
+        {
+            "genre": "Femme",
+            "annuel": 2019,
+            "valeur": 25.6
+        },
+        {
+            "genre": "Femme",
+            "annuel": 2020,
+            "valeur": 27.8
+        },
+        {
+            "genre": "Femme",
+            "annuel": 2021,
+            "valeur": 28.9
+        },
+        {
+            "genre": "Femme",
+            "annuel": 2022,
+            "valeur": 30.8
+        },
+        {
+            "genre": "Femme",
+            "annuel": 2023,
+            "valeur": 36.0
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": 2019,
+            "valeur": 24.2
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": 2020,
+            "valeur": 24.8
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": 2021,
+            "valeur": 25.1
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": 2022,
+            "valeur": 26.6
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": 2023,
+            "valeur": 29.4
+        }
+    ]
+}

@@ -95,8 +95,8 @@
       ]
     },
     {
-      "nom": "part des actifs occupés bénéficiant d'une couverture médicale",
-      "description": "part des actifs occupés bénéficiant d'une couverture médicale",
+      "nom": "part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence",
+      "description": "part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence",
       "categorie": "qualité de l’emploi",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -121,6 +121,35 @@
             "temporelle": false
           }
         },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "part des actifs occupés bénéficiant d'une couverture médicale par genre",
+      "description": "part des actifs occupés bénéficiant d'une couverture médicale par genre",
+      "categorie": "qualité de l’emploi",
+      "abreviation": "",
+      "typeTb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "dimensions": [
         {
           "nom": "genre",
           "libelle": "genre",
@@ -180,8 +209,8 @@
       ]
     },
     {
-      "nom": "part de l'emploi de type occasionnel ou saisonnier",
-      "description": "part de l'emploi de type occasionnel ou saisonnier",
+      "nom": "part de l'emploi de type occasionnel ou saisonnier par milieu de résidence",
+      "description": "part de l'emploi de type occasionnel ou saisonnier par milieu de résidence",
       "categorie": "qualité de l’emploi",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -206,6 +235,35 @@
             "temporelle": false
           }
         },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "part de l'emploi de type occasionnel ou saisonnier par genre",
+      "description": "part de l'emploi de type occasionnel ou saisonnier par genre",
+      "categorie": "qualité de l’emploi",
+      "abreviation": "",
+      "typeTb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "dimensions": [
         {
           "nom": "genre",
           "libelle": "genre",
@@ -227,8 +285,8 @@
       ]
     },
     {
-      "nom": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive)",
-      "description": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive)",
+      "nom": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par milieu de résidence",
+      "description": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par milieu de résidence",
       "categorie": "qualité de l’emploi",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -253,6 +311,35 @@
             "temporelle": false
           }
         },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par genre",
+      "description": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par genre",
+      "categorie": "qualité de l’emploi",
+      "abreviation": "",
+      "typeTb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "dimensions": [
         {
           "nom": "genre",
           "libelle": "genre",
