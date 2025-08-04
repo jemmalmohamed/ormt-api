@@ -1,0 +1,275 @@
+{
+    "indicateur": "création d'emploi par genre",
+    "data": [
+        {
+            "genre": "ensemble",
+            "milieu": "urbain",
+            "annuel": "2019",
+            "valeur": 251
+        },
+        {
+            "genre": "ensemble",
+            "milieu": "rural",
+            "annuel": "2019",
+            "valeur": -86
+        },
+        {
+            "genre": "ensemble",
+            "milieu": "national",
+            "annuel": "2019",
+            "valeur": 165
+        },
+        {
+            "genre": "ensemble",
+            "milieu": "urbain",
+            "annuel": "2020",
+            "valeur": -137
+        },
+        {
+            "genre": "ensemble",
+            "milieu": "rural",
+            "annuel": "2020",
+            "valeur": -295
+        },
+        {
+            "genre": "ensemble",
+            "milieu": "national",
+            "annuel": "2020",
+            "valeur": -433
+        },
+        {
+            "genre": "ensemble",
+            "milieu": "urbain",
+            "annuel": "2021",
+            "valeur": 99
+        },
+        {
+            "genre": "ensemble",
+            "milieu": "rural",
+            "annuel": "2021",
+            "valeur": 130
+        },
+        {
+            "genre": "ensemble",
+            "milieu": "national",
+            "annuel": "2021",
+            "valeur": 230
+        },
+        {
+            "genre": "ensemble",
+            "milieu": "urbain",
+            "annuel": "2022",
+            "valeur": 151
+        },
+        {
+            "genre": "ensemble",
+            "milieu": "rural",
+            "annuel": "2022",
+            "valeur": -174
+        },
+        {
+            "genre": "ensemble",
+            "milieu": "national",
+            "annuel": "2022",
+            "valeur": -23
+        },
+        {
+            "genre": "ensemble",
+            "milieu": "urbain",
+            "annuel": "2023",
+            "valeur": 41
+        },
+        {
+            "genre": "ensemble",
+            "milieu": "rural",
+            "annuel": "2023",
+            "valeur": -199
+        },
+        {
+            "genre": "ensemble",
+            "milieu": "national",
+            "annuel": "2023",
+            "valeur": -158
+        },
+        {
+            "genre": "femmes",
+            "milieu": "urbain",
+            "annuel": "2019",
+            "valeur": 93
+        },
+        {
+            "genre": "femmes",
+            "milieu": "rural",
+            "annuel": "2019",
+            "valeur": -70
+        },
+        {
+            "genre": "femmes",
+            "milieu": "national",
+            "annuel": "2019",
+            "valeur": 27
+        },
+        {
+            "genre": "femmes",
+            "milieu": "urbain",
+            "annuel": "2020",
+            "valeur": -58
+        },
+        {
+            "genre": "femmes",
+            "milieu": "rural",
+            "annuel": "2020",
+            "valeur": -165
+        },
+        {
+            "genre": "femmes",
+            "milieu": "national",
+            "annuel": "2020",
+            "valeur": -225
+        },
+        {
+            "genre": "femmes",
+            "milieu": "urbain",
+            "annuel": "2021",
+            "valeur": 63
+        },
+        {
+            "genre": "femmes",
+            "milieu": "rural",
+            "annuel": "2021",
+            "valeur": 67
+        },
+        {
+            "genre": "femmes",
+            "milieu": "national",
+            "annuel": "2021",
+            "valeur": 136
+        },
+        {
+            "genre": "femmes",
+            "milieu": "urbain",
+            "annuel": "2022",
+            "valeur": 5
+        },
+        {
+            "genre": "femmes",
+            "milieu": "rural",
+            "annuel": "2022",
+            "valeur": -113
+        },
+        {
+            "genre": "femmes",
+            "milieu": "national",
+            "annuel": "2022",
+            "valeur": -113
+        },
+        {
+            "genre": "femmes",
+            "milieu": "urbain",
+            "annuel": "2023",
+            "valeur": 47
+        },
+        {
+            "genre": "femmes",
+            "milieu": "rural",
+            "annuel": "2023",
+            "valeur": -146
+        },
+        {
+            "genre": "femmes",
+            "milieu": "national",
+            "annuel": "2023",
+            "valeur": -97
+        },
+        {
+            "genre": "hommes",
+            "milieu": "urbain",
+            "annuel": "2019",
+            "valeur": 158
+        },
+        {
+            "genre": "hommes",
+            "milieu": "rural",
+            "annuel": "2019",
+            "valeur": -16
+        },
+        {
+            "genre": "hommes",
+            "milieu": "national",
+            "annuel": "2019",
+            "valeur": 138
+        },
+        {
+            "genre": "hommes",
+            "milieu": "urbain",
+            "annuel": "2020",
+            "valeur": -79
+        },
+        {
+            "genre": "hommes",
+            "milieu": "rural",
+            "annuel": "2020",
+            "valeur": -130
+        },
+        {
+            "genre": "hommes",
+            "milieu": "national",
+            "annuel": "2020",
+            "valeur": -208
+        },
+        {
+            "genre": "hommes",
+            "milieu": "urbain",
+            "annuel": "2021",
+            "valeur": 36
+        },
+        {
+            "genre": "hommes",
+            "milieu": "rural",
+            "annuel": "2021",
+            "valeur": 63
+        },
+        {
+            "genre": "hommes",
+            "milieu": "national",
+            "annuel": "2021",
+            "valeur": 94
+        },
+        {
+            "genre": "hommes",
+            "milieu": "urbain",
+            "annuel": "2022",
+            "valeur": 146
+        },
+        {
+            "genre": "hommes",
+            "milieu": "rural",
+            "annuel": "2022",
+            "valeur": -61
+        },
+        {
+            "genre": "hommes",
+            "milieu": "national",
+            "annuel": "2022",
+            "valeur": 90
+        },
+        {
+            "genre": "hommes",
+            "milieu": "urbain",
+            "annuel": "2023",
+            "valeur": -6
+        },
+        {
+            "genre": "hommes",
+            "milieu": "rural",
+            "annuel": "2023",
+            "valeur": -53
+        },
+        {
+            "genre": "hommes",
+            "milieu": "national",
+            "annuel": "2023",
+            "valeur": -61
+        }
+    ]
+}

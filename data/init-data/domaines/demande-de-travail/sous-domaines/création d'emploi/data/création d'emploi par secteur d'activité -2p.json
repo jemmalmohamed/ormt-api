@@ -1,0 +1,185 @@
+{
+    "indicateur": "création d'emploi par secteur d'activité -2p",
+    "data": [
+        {
+            "secteur_activite": "agricole",
+            "milieu": "urbain",
+            "annuel": "2019",
+            "valeur": 12
+        },
+        {
+            "secteur_activite": "agricole",
+            "milieu": "rural",
+            "annuel": "2019",
+            "valeur": -160
+        },
+        {
+            "secteur_activite": "agricole",
+            "milieu": "national",
+            "annuel": "2019",
+            "valeur": -152
+        },
+        {
+            "secteur_activite": "agricole",
+            "milieu": "urbain",
+            "annuel": "2020",
+            "valeur": -7
+        },
+        {
+            "secteur_activite": "agricole",
+            "milieu": "rural",
+            "annuel": "2020",
+            "valeur": -266
+        },
+        {
+            "secteur_activite": "agricole",
+            "milieu": "national",
+            "annuel": "2020",
+            "valeur": -267
+        },
+        {
+            "secteur_activite": "agricole",
+            "milieu": "urbain",
+            "annuel": "2021",
+            "valeur": -14
+        },
+        {
+            "secteur_activite": "agricole",
+            "milieu": "rural",
+            "annuel": "2021",
+            "valeur": 79
+        },
+        {
+            "secteur_activite": "agricole",
+            "milieu": "national",
+            "annuel": "2021",
+            "valeur": 61
+        },
+        {
+            "secteur_activite": "agricole",
+            "milieu": "urbain",
+            "annuel": "2022",
+            "valeur": -6
+        },
+        {
+            "secteur_activite": "agricole",
+            "milieu": "rural",
+            "annuel": "2022",
+            "valeur": -205
+        },
+        {
+            "secteur_activite": "agricole",
+            "milieu": "national",
+            "annuel": "2022",
+            "valeur": -211
+        },
+        {
+            "secteur_activite": "agricole",
+            "milieu": "urbain",
+            "annuel": "2023",
+            "valeur": 2
+        },
+        {
+            "secteur_activite": "agricole",
+            "milieu": "rural",
+            "annuel": "2023",
+            "valeur": -206
+        },
+        {
+            "secteur_activite": "agricole",
+            "milieu": "national",
+            "annuel": "2023",
+            "valeur": -195
+        },
+        {
+            "secteur_activite": "non agricole",
+            "milieu": "urbain",
+            "annuel": "2019",
+            "valeur": 232
+        },
+        {
+            "secteur_activite": "non agricole",
+            "milieu": "rural",
+            "annuel": "2019",
+            "valeur": 69
+        },
+        {
+            "secteur_activite": "non agricole",
+            "milieu": "national",
+            "annuel": "2019",
+            "valeur": 317
+        },
+        {
+            "secteur_activite": "non agricole",
+            "milieu": "urbain",
+            "annuel": "2020",
+            "valeur": -124
+        },
+        {
+            "secteur_activite": "non agricole",
+            "milieu": "rural",
+            "annuel": "2020",
+            "valeur": -24
+        },
+        {
+            "secteur_activite": "non agricole",
+            "milieu": "national",
+            "annuel": "2020",
+            "valeur": -155
+        },
+        {
+            "secteur_activite": "non agricole",
+            "milieu": "urbain",
+            "annuel": "2021",
+            "valeur": 113
+        },
+        {
+            "secteur_activite": "non agricole",
+            "milieu": "rural",
+            "annuel": "2021",
+            "valeur": 51
+        },
+        {
+            "secteur_activite": "non agricole",
+            "milieu": "national",
+            "annuel": "2021",
+            "valeur": 158
+        },
+        {
+            "secteur_activite": "non agricole",
+            "milieu": "urbain",
+            "annuel": "2022",
+            "valeur": 157
+        },
+        {
+            "secteur_activite": "non agricole",
+            "milieu": "rural",
+            "annuel": "2022",
+            "valeur": 31
+        },
+        {
+            "secteur_activite": "non agricole",
+            "milieu": "national",
+            "annuel": "2022",
+            "valeur": 188
+        },
+        {
+            "secteur_activite": "non agricole",
+            "milieu": "urbain",
+            "annuel": "2023",
+            "valeur": 39
+        },
+        {
+            "secteur_activite": "non agricole",
+            "milieu": "rural",
+            "annuel": "2023",
+            "valeur": 7
+        },
+        {
+            "secteur_activite": "non agricole",
+            "milieu": "national",
+            "annuel": "2023",
+            "valeur": 37
+        }
+    ]
+}
