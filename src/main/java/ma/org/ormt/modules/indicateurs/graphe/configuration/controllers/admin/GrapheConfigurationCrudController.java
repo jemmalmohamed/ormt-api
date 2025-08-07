@@ -71,6 +71,23 @@ public class GrapheConfigurationCrudController extends BaseController<GrapheConf
                 return buildResponseEntity(grapGrapheConfiguration, GrapheConfigurationDto.class, HttpStatus.OK);
         }
 
+        @Operation(summary = "set default " + ENTITY_NAME, responses = {
+                        @ApiResponse(responseCode = "200", description = "Success", content = @Content(mediaType = "application/json", schema = @Schema(implementation = GrapheConfigurationDto.class))),
+                        @ApiResponse(responseCode = "400", description = "Validation failed", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @PutMapping("{id}/default")
+        @PreAuthorize("hasAuthority('indicateur:edit')")
+        public ResponseEntity<RestResponse<GrapheConfigurationDto>> setDefaultGrapheConfiguration(@PathVariable Long id,
+                        @Validated(OnUpdate.class) @RequestBody GrapheConfigurationRequestDto grapGrapheConfigurationRequestDto) {
+                GrapheConfiguration grapGrapheConfiguration = grapGrapheConfigurationService
+                                .setDefaultGrapheConfiguration(
+                                                grapGrapheConfigurationRequestDto.getIndicateur().getId(),
+                                                grapGrapheConfigurationRequestDto.getId());
+                return buildResponseEntity(grapGrapheConfiguration, GrapheConfigurationDto.class, HttpStatus.OK);
+        }
+
         @Operation(summary = "Delete " + ENTITY_NAME, responses = {
                         @ApiResponse(responseCode = "204", description = "No content"),
                         @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "ErrorResponse")),

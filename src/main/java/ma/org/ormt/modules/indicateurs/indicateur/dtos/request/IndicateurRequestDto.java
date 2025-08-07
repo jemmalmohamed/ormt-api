@@ -33,8 +33,8 @@ public class IndicateurRequestDto extends Dto {
     @NotNull(message = "Ce champ est requis.")
     private Boolean actif;
 
-    @NotNull(message = "Ce champ est requis.")
-    private String typeGraphe;
+    // @NotNull(message = "Ce champ est requis.")
+    // private String typeGraphe;
 
     private String unite;
 

@@ -17,12 +17,14 @@ public interface GrapheConfigurationService extends BaseService<GrapheConfigurat
 
     GrapheConfiguration create(GrapheConfigurationRequestDto requestDto);
 
-    GrapheConfiguration update(Long id, GrapheConfigurationRequestDto graGrapheConfigurationRequestDto);
+    GrapheConfiguration update(Long id, GrapheConfigurationRequestDto grapheConfigurationRequestDto);
 
-    GrapheConfiguration save(GrapheConfiguration graGrapheConfiguration);
+    GrapheConfiguration save(GrapheConfiguration grapheConfiguration);
 
     boolean existsById(Long id);
 
     Optional<GrapheConfiguration> findByIndicateurAndGrapheType(Long indicateurId, String grapheType);
+
+    GrapheConfiguration setDefaultGrapheConfiguration(Long indicateurId, Long grapheConfigurationId);
 
 }

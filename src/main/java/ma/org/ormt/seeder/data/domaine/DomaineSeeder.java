@@ -70,7 +70,7 @@ public class DomaineSeeder implements CommandLineRunner {
 
     private void processDomainesAndSousDomaines() {
         try {
-            Path domainesPath = Paths.get(dataExternalPath + "/init-data/domaines/");
+            Path domainesPath = Paths.get(dataExternalPath + "/init-data/domaines/national");
             if (!Files.exists(domainesPath)) {
                 log.warn("Domaines path {} does not exist. Skipping domain data seeding.", domainesPath);
                 return;

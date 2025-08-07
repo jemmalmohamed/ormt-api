@@ -49,7 +49,7 @@ public class Indicateur extends BaseEntity {
 
     private Boolean actif;
 
-    private String typeGraphe;
+    // private String typeGraphe;
 
     private String typeTb;
 

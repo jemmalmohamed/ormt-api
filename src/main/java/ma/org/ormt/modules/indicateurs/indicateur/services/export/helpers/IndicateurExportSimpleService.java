@@ -159,12 +159,12 @@ public class IndicateurExportSimpleService {
                             : "Non défini";
                     ExcelUtils.createCell(row, cellIndex, actifValue);
                     break;
-                case TYPE_GRAPHE:
-                    ExcelUtils.createCell(row, cellIndex,
-                            StringUtils.hasText(indicateur.getTypeGraphe())
-                                    ? indicateur.getTypeGraphe()
-                                    : "");
-                    break;
+                // case TYPE_GRAPHE:
+                // ExcelUtils.createCell(row, cellIndex,
+                // StringUtils.hasText(indicateur.getTypeGraphe())
+                // ? indicateur.getTypeGraphe()
+                // : "");
+                // break;
                 case TYPE_TB:
                     ExcelUtils.createCell(row, cellIndex,
                             StringUtils.hasText(indicateur.getTypeTb())

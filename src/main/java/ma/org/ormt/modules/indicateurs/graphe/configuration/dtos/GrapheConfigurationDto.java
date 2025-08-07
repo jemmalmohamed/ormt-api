@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import ma.org.ormt.core.commun.base.dto.BaseDto;
 import ma.org.ormt.core.commun.base.dto.Dto;
 import ma.org.ormt.modules.indicateurs.graphe.type.dtos.GrapheTypeDto;
 
@@ -16,7 +17,7 @@ import ma.org.ormt.modules.indicateurs.graphe.type.dtos.GrapheTypeDto;
 @JsonIgnoreProperties(value = { "grapheConfiguration.id" }, allowGetters = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class GrapheConfigurationDto extends Dto {
+public class GrapheConfigurationDto extends BaseDto {
 
     private Dto indicateur;
 

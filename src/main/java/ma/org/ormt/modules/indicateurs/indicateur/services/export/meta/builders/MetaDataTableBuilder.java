@@ -23,9 +23,10 @@ public class MetaDataTableBuilder {
                 section.addRow(new MetaDataRow("Type de tableau de bord",
                                 indicateur != null && indicateur.getTypeTb() != null ? indicateur.getTypeTb() : ""));
 
-                section.addRow(new MetaDataRow("Type de graphique",
-                                indicateur != null && indicateur.getTypeGraphe() != null ? indicateur.getTypeGraphe()
-                                                : ""));
+                // section.addRow(new MetaDataRow("Type de graphique",
+                // indicateur != null && indicateur.getTypeGraphe() != null ?
+                // indicateur.getTypeGraphe()
+                // : ""));
 
                 return section;
         }

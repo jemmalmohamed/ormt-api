@@ -18,4 +18,6 @@ public interface GrapheConfigurationRepository extends BaseRepository<GrapheConf
             Indicateur indicateur,
             GrapheType grapheType);
 
+    Optional<GrapheConfiguration> findByIndicateurIdAndIsDefaultTrue(Long indicateurId);
+
 }

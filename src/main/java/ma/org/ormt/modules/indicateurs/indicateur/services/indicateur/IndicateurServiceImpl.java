@@ -119,7 +119,7 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
         Source source = sourceService.findById(entityToUpdate.getSource().getId())
                 .orElseThrow(() -> new EntityNotFoundException("Source not found"));
         indicateur.setSource(source);
-        indicateur.setTypeGraphe(entityToUpdate.getTypeGraphe());
+        // indicateur.setTypeGraphe(entityToUpdate.getTypeGraphe());
         indicateur.setCategorie(entityToUpdate.getCategorie());
         indicateur.setRegleCalcul(entityToUpdate.getRegleCalcul());
     }
