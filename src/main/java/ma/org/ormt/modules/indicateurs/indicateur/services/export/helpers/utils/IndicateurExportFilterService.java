@@ -57,8 +57,9 @@ public class IndicateurExportFilterService {
     public java.util.Map<String, List<Indicateur>> groupBySource(List<Indicateur> indicateurs) {
         return indicateurs.stream()
                 .collect(Collectors
-                        .groupingBy(ind -> ind.getSource() != null && StringUtils.hasText(ind.getSource().getNom())
-                                ? ind.getSource().getNom()
-                                : "Sans source"));
+                        .groupingBy(
+                                ind -> ind.getSource() != null && StringUtils.hasText(ind.getSource().getAbreviation())
+                                        ? ind.getSource().getAbreviation()
+                                        : "Sans source"));
     }
 }

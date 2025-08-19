@@ -104,9 +104,9 @@ public class MetaDataTableBuilder {
                                 case "SOURCE":
                                         section.addRow(new MetaDataRow("Source",
                                                         (indicateur != null && indicateur.getSource() != null &&
-                                                                        indicateur.getSource().getNom() != null)
+                                                                        indicateur.getSource().getAbreviation() != null)
                                                                                         ? indicateur.getSource()
-                                                                                                        .getNom()
+                                                                                                        .getAbreviation()
                                                                                         : ""));
                                         break;
                                 case "ACTIF":

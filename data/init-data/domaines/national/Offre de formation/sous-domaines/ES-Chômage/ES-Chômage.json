@@ -10,8 +10,8 @@
     "actif": true,
     "indicateurs": [
         {
-            "nom": "Taux de chômage des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante et par genre",
-            "description": "Taux de chômage des diplômés de l'enseignement supérieur après 4 ans par composante et par genre.",
+            "nom": "Taux de chômage des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante et genre",
+            "description": "Taux de chômage des diplômés de l'enseignement supérieur après 4 ans par composante et genre.",
             "categorie": "Chômage",
             "abreviation": "ES",
             "roleAcces": [
@@ -93,8 +93,8 @@
             ]
         },
         {
-            "nom": "Taux de chômage des diplômés de l'enseignement universitaire public après 4 ans (Promotion 2014) par diplôme par genre",
-            "description": "Taux de chômage des diplômés de l'enseignement universitaire public après 4 ans par diplôme et par genre.",
+            "nom": "Taux de chômage des diplômés de l'enseignement universitaire public après 4 ans (Promotion 2014) par diplôme et genre",
+            "description": "Taux de chômage des diplômés de l'enseignement universitaire public après 4 ans par diplôme et genre.",
             "categorie": "Chômage",
             "abreviation": "ES",
             "roleAcces": [
@@ -139,8 +139,8 @@
             ]
         },
         {
-            "nom": "Taux de chômage des diplômés de l'enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme par genre",
-            "description": "Taux de chômage des diplômés de l'enseignement supérieur privé après 4 ans par diplôme et par genre.",
+            "nom": "Taux de chômage des diplômés de l'enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme et genre",
+            "description": "Taux de chômage des diplômés de l'enseignement supérieur privé après 4 ans par diplôme et genre.",
             "categorie": "Chômage",
             "abreviation": "ES",
             "roleAcces": [

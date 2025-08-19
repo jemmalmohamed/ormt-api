@@ -165,7 +165,8 @@ public class GrapheEmployabiliteEtInsertionProfessionnelleSeeder implements Comm
                                 new IndicateurMultipleGrapheMapping(
                                                 "nombre de bénéficiaires des programmes d'amélioration de l'employabilité",
                                                 Arrays.asList("HISTOGRAMME", "COURBE_LINEAIRE")),
-                                new IndicateurMultipleGrapheMapping("bénéficiaires des pae par composante",
+                                new IndicateurMultipleGrapheMapping(
+                                                "bénéficiaires des Programmes d’amélioration de l’employabilité par composante",
                                                 Arrays.asList("CAMEMBERT", "HISTOGRAMME_EMPILTE_EVOLUTION")),
                                 new IndicateurMultipleGrapheMapping("bénéficiaires de la fce par région",
                                                 Arrays.asList("CAMEMBERT", "HISTOGRAMME_EMPILTE_EVOLUTION")),

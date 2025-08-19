@@ -27,8 +27,6 @@ public class GrapheConfigurationRequestDto extends Dto {
     @Schema(description = "Nom de la configuration", required = true)
     private String nom;
 
-    @NotNull(message = "Ce champ est requis")
-    @Schema(description = "Mapping des options de graphique en JSON", required = true)
     private String chartOptionsJson;
 
     private Boolean isDefault = false;

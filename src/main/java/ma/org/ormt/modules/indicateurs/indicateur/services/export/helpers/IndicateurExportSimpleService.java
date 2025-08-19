@@ -159,12 +159,7 @@ public class IndicateurExportSimpleService {
                             : "Non défini";
                     ExcelUtils.createCell(row, cellIndex, actifValue);
                     break;
-                // case TYPE_GRAPHE:
-                // ExcelUtils.createCell(row, cellIndex,
-                // StringUtils.hasText(indicateur.getTypeGraphe())
-                // ? indicateur.getTypeGraphe()
-                // : "");
-                // break;
+
                 case TYPE_TB:
                     ExcelUtils.createCell(row, cellIndex,
                             StringUtils.hasText(indicateur.getTypeTb())
@@ -186,8 +181,8 @@ public class IndicateurExportSimpleService {
                 case SOURCE:
                     String sourceName = "";
                     if (indicateur.getSource() != null
-                            && StringUtils.hasText(indicateur.getSource().getNom())) {
-                        sourceName = indicateur.getSource().getNom();
+                            && StringUtils.hasText(indicateur.getSource().getAbreviation())) {
+                        sourceName = indicateur.getSource().getAbreviation();
                     }
                     ExcelUtils.createCell(row, cellIndex, sourceName);
                     break;
