@@ -11,6 +11,10 @@ import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.models.I
 import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.repository.IndicateurDimensionRepository;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
+import ma.org.ormt.modules.indicateurs.graphe.configuration.models.GrapheConfiguration;
+import ma.org.ormt.modules.indicateurs.graphe.configuration.services.GrapheConfigurationService;
+import ma.org.ormt.modules.indicateurs.graphe.type.models.GrapheType;
+import ma.org.ormt.modules.indicateurs.graphe.type.services.GrapheTypeService;
 import ma.org.ormt.modules.indicateurs.source.models.Source;
 import ma.org.ormt.modules.indicateurs.source.services.SourceService;
 
@@ -29,6 +33,8 @@ public class IndicateurSeeder {
     private final DimensionService dimensionService;
     private final SourceService sourceService;
     private final IndicateurDimensionRepository indicateurDimensionRepository;
+    private final GrapheTypeService grapheTypeService;
+    private final GrapheConfigurationService grapheConfigurationService;
 
     public void processIndicateurs(List<IndicateurCreateRequestDto> indicateurs, SousDomaine parentSousDomaine) {
         if (indicateurs == null || indicateurs.isEmpty()) {
@@ -71,11 +77,66 @@ public class IndicateurSeeder {
                     }
                 }
             }
+            if (indicateurRequest.getGrapheConfigurations() != null
+                    && !indicateurRequest.getGrapheConfigurations().isEmpty()) {
+                handleGrapheConfigurations(indicateurRequest, savedIndicateur);
+            }
             log.info("Created indicateur: {}", savedIndicateur.getNom());
         } catch (Exception e) {
             log.error("Error in createIndicateur: {}", e.getMessage());
             throw new RuntimeException("Failed to create indicateur", e);
         }
+    }
+
+    @Transactional
+    protected void handleGrapheConfigurations(IndicateurCreateRequestDto indicateurRequest, Indicateur indicateur) {
+        indicateurRequest.getGrapheConfigurations().forEach(cfg -> {
+            try {
+                if (cfg.getGrapheTypeCode() == null || cfg.getGrapheTypeCode().trim().isEmpty()) {
+                    log.warn("Skipping graphe configuration without grapheTypeCode for indicateur {}",
+                            indicateur.getNom());
+                    return;
+                }
+                GrapheType grapheType = grapheTypeService.findByCode(cfg.getGrapheTypeCode().toLowerCase())
+                        .orElseGet(() -> {
+                            log.warn("GrapheType '{}' not found for indicateur '{}', skipping.",
+                                    cfg.getGrapheTypeCode(), indicateur.getNom());
+                            return null;
+                        });
+                if (grapheType == null)
+                    return;
+
+                // Prevent duplicates
+                boolean exists = indicateur.getGrapheConfigurations() != null
+                        && indicateur.getGrapheConfigurations().stream()
+                                .anyMatch(gc -> gc.getGrapheType().getNom().equalsIgnoreCase(grapheType.getNom()));
+                if (exists) {
+                    log.debug("Graphe configuration already exists for '{}' and type '{}'", indicateur.getNom(),
+                            grapheType.getNom());
+                    return;
+                }
+
+                String dimensionMapping = cfg.getDimensionMappingJson() != null
+                        && !cfg.getDimensionMappingJson().isBlank()
+                                ? cfg.getDimensionMappingJson()
+                                : "{\"default\": \"standard\"}";
+                GrapheConfiguration grapheConfiguration = GrapheConfiguration.builder()
+                        .indicateur(indicateur)
+                        .grapheType(grapheType)
+                        .nom(cfg.getNom() != null && !cfg.getNom().isBlank() ? cfg.getNom()
+                                : grapheType.getNom() + " - " + indicateur.getNom())
+                        .dimensionMappingJson(dimensionMapping)
+                        .chartOptionsJson(cfg.getChartOptionsJson())
+                        .isDefault(cfg.getIsDefault() != null ? cfg.getIsDefault() : false)
+                        .build();
+                grapheConfigurationService.save(grapheConfiguration);
+                log.info("Created graphe configuration '{}' for indicateur '{}'", grapheConfiguration.getNom(),
+                        indicateur.getNom());
+            } catch (Exception ex) {
+                log.error("Failed to create graphe configuration for indicateur '{}': {}", indicateur.getNom(),
+                        ex.getMessage());
+            }
+        });
     }
 
     @Transactional

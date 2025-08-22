@@ -573,6 +573,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "emploi salarié eqtp par secteur d'activité - Camembert",
+          "grapheTypeCode": "Camembert",
+          "isDefault": true,
+          "chartOptionsJson": "{\"type\":\"doughnut\",\"title\":\"emploi salarié eqtp par secteur d'activité\",\"dataDimension\":\"secteur_activite\",\"labelsToHide\":[],\"filter\":{\"enabled\":true,\"dimension\":\"annuel\",\"label\":\"année\",\"value\":\"\"},\"display\":{\"showLegend\":true,\"showDataLabels\":true}}"
+        }
       ]
     },
     {
@@ -687,6 +695,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "emploi informel par secteur d'activité - Camembert",
+          "grapheTypeCode": "Camembert",
+          "isDefault": true,
+          "chartOptionsJson": "{\"type\":\"doughnut\",\"title\":\"emploi informel par secteur d'activité\",\"dataDimension\":\"secteur_activite_hcp\",\"labelsToHide\":[],\"filter\":{\"enabled\":true,\"dimension\":\"annuel\",\"label\":\"année\",\"value\":\"\"},\"display\":{\"showLegend\":true,\"showDataLabels\":true}}"
+        }
       ]
     },
     {
@@ -724,6 +740,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "salarié public par secteur - Camembert",
+          "grapheTypeCode": "Camembert",
+          "isDefault": true,
+          "chartOptionsJson": "{\"type\":\"doughnut\",\"title\":\"salarié public par secteur\",\"dataDimension\":\"secteur_activite_hcp\",\"labelsToHide\":[],\"filter\":{\"enabled\":true,\"dimension\":\"annuel\",\"label\":\"année\",\"value\":\"\"},\"display\":{\"showLegend\":true,\"showDataLabels\":true}}"
         }
       ]
     }

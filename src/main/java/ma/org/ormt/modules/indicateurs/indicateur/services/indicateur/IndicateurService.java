@@ -1,5 +1,6 @@
 package ma.org.ormt.modules.indicateurs.indicateur.services.indicateur;
 
+import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 
@@ -28,5 +29,7 @@ public interface IndicateurService extends BaseService<Indicateur> {
     Optional<Indicateur> findByNomWithDonneesAndDimensions(String nom);
 
     IndicateurDetailDto getIndicateurWithTableData(Long id, String tableFormat);
+
+    List<IndicateurDetailDto> getIndicateurListWithTableData(String tableFormat);
 
 }

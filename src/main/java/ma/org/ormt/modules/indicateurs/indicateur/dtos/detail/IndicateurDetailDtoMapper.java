@@ -5,6 +5,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 
 import ma.org.ormt.core.commun.base.mapper.BaseDtoMapper;
+import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDto;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 
 @Mapper
@@ -14,6 +15,9 @@ public interface IndicateurDetailDtoMapper extends BaseDtoMapper<Indicateur, Ind
     default void setHasDonnees(Indicateur source, @MappingTarget IndicateurDetailDto target) {
         // Set hasDonnees to true if the list is not null and not empty
         target.setHasDonnees(source.getDonnees() != null && !source.getDonnees().isEmpty());
+
+        target.setNombreDimensions(source.getDimensions() != null ? source.getDimensions().size() : 0);
+
     }
 
 }

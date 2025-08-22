@@ -225,9 +225,9 @@ public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements Doma
                         // Copy the hasDonnees and table data fields
                         indicateurDto.setHasDonnees(indicateurWithTableData.isHasDonnees());
                         indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
-                        indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
+                        // indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
                         indicateurDto.setCrudTableData(indicateurWithTableData.getCrudTableData());
-                        indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
+                        // indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
                     }
                 }
             }

@@ -108,6 +108,13 @@ public abstract class BaseController<T> {
         return ResponseEntity.status(status).body(restResponse);
     }
 
+    public <DTO> ResponseEntity<RestResponse<List<DTO>>> buildResponseDtos(List<DTO> dtos, QueryParams queryParams,
+            HttpStatus status) {
+        RestResponse<List<DTO>> restResponse = RestResponseUtil.buildRestResponse(dtos, queryParams);
+        return ResponseEntity.status(status).body(restResponse);
+
+    }
+
     public ResponseEntity<Void> handleDelete(Runnable deleteAction) {
         deleteAction.run();
         return ResponseEntity.noContent().build();

@@ -41,7 +41,7 @@ public class ChiffreCle extends BaseEntity {
 
     private Boolean afficherDate;
 
-    private Boolean actif;
+    private boolean actif;
 
     private String accessType;
 

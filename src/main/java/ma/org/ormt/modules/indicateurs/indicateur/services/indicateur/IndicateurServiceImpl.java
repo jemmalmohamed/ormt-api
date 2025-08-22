@@ -1,5 +1,7 @@
 package ma.org.ormt.modules.indicateurs.indicateur.services.indicateur;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -156,6 +158,7 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
 
     @Override
     public IndicateurDetailDto getIndicateurWithTableData(Long id, String tableFormat) {
+
         Indicateur indicateur = findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Indicateur not found with id: " + id));
 
@@ -181,8 +184,8 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
                 dto.setCrudTableData(
                         IndicateurCrudDataTable.buildCrudTableData(indicateur));
             } else if ("create".equals(tableFormat)) {
-                dto.setCreateTemplateData(
-                        IndicateurCrudDataTable.buildCreateTemplateData(indicateur));
+                // dto.setCreateTemplateData(
+                // IndicateurCrudDataTable.buildCreateTemplateData(indicateur));
             } else if ("both".equals(tableFormat)) {
                 dto.setPivotTableData(
                         IndicateurPivotDataTable.buildPivotTableWithMetadata(indicateur));
@@ -195,8 +198,8 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
                         IndicateurFlatDataTable.buildFlatTableData(indicateur));
                 dto.setCrudTableData(
                         IndicateurCrudDataTable.buildCrudTableData(indicateur));
-                dto.setCreateTemplateData(
-                        IndicateurCrudDataTable.buildCreateTemplateData(indicateur));
+                // dto.setCreateTemplateData(
+                // IndicateurCrudDataTable.buildCreateTemplateData(indicateur));
             }
         } catch (ArithmeticException e) {
             // Log the division by zero error and return DTO with basic info
@@ -211,6 +214,23 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
         }
 
         return dto;
+    }
+
+    @Override
+    public List<IndicateurDetailDto> getIndicateurListWithTableData(String tableFormat) {
+        List<Indicateur> indicateurs = findAll();
+        List<IndicateurDetailDto> dtos = new ArrayList<>();
+
+        for (Indicateur indicateur : indicateurs) {
+            IndicateurDetailDto dto = indicateurDetailMapper.mapToDto(indicateur);
+            // Add table data based on request format
+            if ("pivot".equals(tableFormat)) {
+                dto.setPivotTableData(IndicateurPivotDataTable.buildPivotTableWithMetadata(indicateur));
+            }
+            dtos.add(dto);
+        }
+
+        return dtos;
     }
 
 }

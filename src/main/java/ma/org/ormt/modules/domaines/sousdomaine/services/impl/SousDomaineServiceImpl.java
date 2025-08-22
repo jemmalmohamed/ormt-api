@@ -192,9 +192,9 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
 
                 // Copy table data fields
                 indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
-                indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
+                // indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
                 indicateurDto.setCrudTableData(indicateurWithTableData.getCrudTableData());
-                indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
+                // indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
             }
         }
 
@@ -219,9 +219,9 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
                 // Copy the hasDonnees and table data fields
                 indicateurDto.setHasDonnees(indicateurWithTableData.isHasDonnees());
                 indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
-                indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
+                // indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
                 indicateurDto.setCrudTableData(indicateurWithTableData.getCrudTableData());
-                indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
+                // indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
             }
         }
 
@@ -250,9 +250,9 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
                             // Copy the hasDonnees and table data fields
                             indicateurDto.setHasDonnees(indicateurWithTableData.isHasDonnees());
                             indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
-                            indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
+                            // indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
                             indicateurDto.setCrudTableData(indicateurWithTableData.getCrudTableData());
-                            indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
+                            // indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
                         }
                     }
 

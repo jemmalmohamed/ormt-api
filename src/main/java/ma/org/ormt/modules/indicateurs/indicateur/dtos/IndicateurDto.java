@@ -13,6 +13,7 @@ import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.BaseDto;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.summary.SousDomaineSummaryDto;
 import ma.org.ormt.modules.indicateurs.graphe.configuration.dtos.GrapheConfigurationDto;
+import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.dtos.IndicateurDimensionDto;
 import ma.org.ormt.modules.indicateurs.source.dtos.summary.SourceSummaryDto;
 import ma.org.ormt.modules.roleacces.dtos.summary.RoleAccesSummaryDto;
 import ma.org.ormt.security.users.AdminRoleFilter;
@@ -30,8 +31,6 @@ public class IndicateurDto extends BaseDto {
     private String regleCalcul;
 
     private Boolean actif;
-
-    // private String typeGraphe;
 
     private String categorie;
 
@@ -53,4 +52,7 @@ public class IndicateurDto extends BaseDto {
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = AdminRoleFilter.class)
     private List<RoleAccesSummaryDto> roleAcces;
+
+    private List<IndicateurDimensionDto> indicateurDimensions;
+
 }

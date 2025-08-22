@@ -175,8 +175,8 @@
             ]
         },
         {
-            "nom": "Population active par diplôme et genre",
-            "description": "Population active selon diplôme et genre",
+            "nom": "Population active par diplôme et milieu",
+            "description": "Population active selon diplôme et milieu",
             "categorie": "Volume",
             "abreviation": "",
             "roleAcces": [
@@ -201,8 +201,8 @@
                     }
                 },
                 {
-                    "nom": "genre",
-                    "libelle": "genre",
+                    "nom": "milieu",
+                    "libelle": "milieu de résidence",
                     "type": "texte",
                     "association": {
                         "principale": false,

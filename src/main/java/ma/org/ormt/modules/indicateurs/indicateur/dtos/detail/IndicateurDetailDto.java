@@ -22,14 +22,7 @@ import ma.org.ormt.modules.indicateurs.indicateur.services.export.data.dtos.Pivo
 @JsonIgnoreProperties(value = { "indicateur.id" }, allowGetters = true)
 public class IndicateurDetailDto extends IndicateurDto {
 
-    private List<IndicateurDimensionDto> indicateurDimensions;
-
     private List<DonneeIndicateurDto> donnees;
-
-    // Add table data - only included when requested
-    // @JsonInclude(JsonInclude.Include.NON_NULL)
-    // @Schema(description = "Pivot table format data for display purposes")
-    // private List<List<String>> pivotTableData;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(description = "Flat table format data for CRUD operations")
@@ -37,12 +30,13 @@ public class IndicateurDetailDto extends IndicateurDto {
 
     // CRUD-specific table data
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    @Schema(description = "CRUD table format with IDs for edit/delete operations")
+    @Schema(description = "CRUD table format with IDs for edit/delete   operations")
     private List<List<String>> crudTableData;
 
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    @Schema(description = "Template data for create operations (missing combinations)")
-    private List<List<String>> createTemplateData;
+    // @JsonInclude(JsonInclude.Include.NON_NULL)
+    // @Schema(description = "Template data for create operations (missing
+    // combinations)")
+    // private List<List<String>> createTemplateData;
 
     // Enhanced pivot table with metadata for chart mapping
     @JsonInclude(JsonInclude.Include.NON_NULL)

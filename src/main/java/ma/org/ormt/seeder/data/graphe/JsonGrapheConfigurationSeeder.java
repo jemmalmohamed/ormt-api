@@ -136,6 +136,7 @@ public class JsonGrapheConfigurationSeeder implements CommandLineRunner {
     /**
      * Creates a graph configuration from JSON node data.
      */
+    @Transactional
     private void createGrapheConfigurationFromJson(Indicateur indicateur, JsonNode configNode) {
         try {
             String grapheTypeCode = configNode.get("grapheTypeCode").asText();
@@ -267,8 +268,22 @@ public class JsonGrapheConfigurationSeeder implements CommandLineRunner {
      * type.
      */
     private boolean configurationAlreadyExists(Indicateur indicateur, GrapheType grapheType) {
-        return indicateur.getGrapheConfigurations() != null &&
-                indicateur.getGrapheConfigurations().stream()
+        try {
+            return grapheConfigurationService
+                    .findByIndicateurAndGrapheType(indicateur.getId(), grapheType.getNom())
+                    .isPresent();
+        } catch (Exception e) {
+            log.debug(
+                    "Could not check existing configuration via service ({}). Falling back to collection if initialized.",
+                    e.getMessage());
+            try {
+                return indicateur.getGrapheConfigurations() != null && indicateur.getGrapheConfigurations().stream()
                         .anyMatch(config -> config.getGrapheType().getId().equals(grapheType.getId()));
+            } catch (Exception ex) {
+                log.warn("Failed to access grapheConfigurations collection for indicateur '{}': {}",
+                        indicateur.getNom(), ex.getMessage());
+                return false;
+            }
+        }
     }
 }

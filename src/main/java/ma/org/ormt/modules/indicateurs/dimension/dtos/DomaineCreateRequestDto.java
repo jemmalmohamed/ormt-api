@@ -38,6 +38,7 @@ public class DomaineCreateRequestDto {
         private String unite;
         private String periode;
         private List<DimensionCreateRequestDto> dimensions;
+        private List<GrapheConfigurationCreateRequestDto> grapheConfigurations;
 
         @Data
         @NoArgsConstructor
@@ -60,6 +61,16 @@ public class DomaineCreateRequestDto {
         public static class IndicateurDonneeRequestDto {
             private String indicateur;
             private List<Object> data;
+        }
+
+        @Data
+        @NoArgsConstructor
+        public static class GrapheConfigurationCreateRequestDto {
+            private String nom; // optional
+            private String grapheTypeCode; // required
+            private Boolean isDefault = false;
+            private String dimensionMappingJson; // optional; default {"default":"standard"}
+            private String chartOptionsJson; // optional
         }
     }
 

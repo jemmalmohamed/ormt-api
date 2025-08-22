@@ -62,15 +62,40 @@ public class IndicateurAdminLoadController extends BaseController<Indicateur> {
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
+                QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField,
+                                direction, filters,
+                                globalFilter);
+
+                Page<Indicateur> indicateurPage = indicateurService.getEntityList(requestParams);
+
+                QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams,
+                                indicateurPage);
+
+                return buildResponseEntity(indicateurPage.getContent(),
+                                IndicateurDto.class, queryParams,
+                                HttpStatus.OK);
+        }
+
+        @GetMapping("/details")
+        @PreAuthorize("hasAuthority('indicateur:list')")
+        public ResponseEntity<RestResponse<List<IndicateurDetailDto>>> getIndicateursAll(
+                        @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
+                        @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
+                        @RequestParam(value = "sortField", defaultValue = "createdDate") String sortField,
+                        @RequestParam(value = "sortDirection", defaultValue = "DESC") Direction direction,
+                        @RequestParam(value = "filters", defaultValue = "") List<String> filters,
+                        @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
+
                 QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField, direction, filters,
                                 globalFilter);
 
                 Page<Indicateur> indicateurPage = indicateurService.getEntityList(requestParams);
 
                 QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, indicateurPage);
+                List<IndicateurDetailDto> dtos = indicateurService.getIndicateurListWithTableData("pivot");
 
-                return buildResponseEntity(indicateurPage.getContent(),
-                                IndicateurDto.class, queryParams,
+                return buildResponseDtos(dtos,
+                                queryParams,
                                 HttpStatus.OK);
         }
 
@@ -99,6 +124,7 @@ public class IndicateurAdminLoadController extends BaseController<Indicateur> {
                         // Use existing logic for backward compatibility
                         Indicateur indicateur = indicateurService.findById(id)
                                         .orElseThrow(EntityNotFoundException::new);
+
                         indicateurDetail = indicateurDetailMapper.mapToDto(indicateur);
                 }
 

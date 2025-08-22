@@ -1,5 +1,7 @@
 package ma.org.ormt.modules.indicateurs.graphe.type.services.impl;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +39,16 @@ public class GrapheTypeServiceImpl extends BaseServiceImpl<GrapheType> implement
     @Override
     public Optional<GrapheType> findByNom(String nom) {
         return graphetypeRepository.findByNom(nom);
+    }
+
+    @Override
+    public Optional<GrapheType> findByCode(String code) {
+        return graphetypeRepository.findByCode(code);
+    }
+
+    @Override
+    public List<GrapheType> findByCodeIn(Collection<String> codes) {
+        return graphetypeRepository.findByCodeIn(codes);
     }
 
     @Override

@@ -1,6 +1,9 @@
 package ma.org.ormt.modules.chiffres.dtos;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -9,6 +12,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.Dto;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
+import ma.org.ormt.modules.roleacces.dtos.summary.RoleAccesSummaryDto;
+import ma.org.ormt.security.users.AdminRoleFilter;
 
 @Setter
 @Getter
@@ -35,5 +40,8 @@ public class ChiffreCleDto extends Dto {
     private DonneeIndicateurDto donneeIndicateur;
 
     private Dto indicateur;
+
+    @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = AdminRoleFilter.class)
+    private List<RoleAccesSummaryDto> roleAcces;
 
 }
