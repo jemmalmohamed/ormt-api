@@ -5,7 +5,6 @@ import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 
 import ma.org.ormt.core.commun.base.mapper.BaseDtoMapper;
-import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDto;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 
 @Mapper

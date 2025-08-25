@@ -31,6 +31,7 @@ import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.detail.IndicateurDetailDto;
+import ma.org.ormt.modules.indicateurs.indicateur.dtos.sousdomaine.IndicateurSousDomaineDetailDto;
 
 @Service
 public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> implements SousDomaineService {
@@ -174,32 +175,37 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
 
     }
 
-    @Override
-    public SousDomaineDto getSousDomaineWithIndicateurTableData(Long id, String tableFormat) {
-        SousDomaine sousDomaine = findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("SousDomaine not found with id: " + id));
+    // @Override
+    // public SousDomaineDto getSousDomaineWithIndicateurTableData(Long id, String
+    // tableFormat) {
+    // SousDomaine sousDomaine = findById(id)
+    // .orElseThrow(() -> new EntityNotFoundException("SousDomaine not found with
+    // id: " + id));
 
-        // Map to DTO first (this will use the IndicateurDetailDtoMapper with
-        // @AfterMapping)
-        SousDomaineDto dto = sousDomaineDtoMapper.mapToDto(sousDomaine);
+    // // Map to DTO first (this will use the IndicateurDetailDtoMapper with
+    // // @AfterMapping)
+    // SousDomaineDto dto = sousDomaineDtoMapper.mapToDto(sousDomaine);
 
-        // Now add table data to each indicateur in the DTO
-        if (tableFormat != null && !tableFormat.isEmpty() && dto.getIndicateurs() != null) {
-            for (IndicateurDetailDto indicateurDto : dto.getIndicateurs()) {
-                // Get the full indicateur with table data
-                IndicateurDetailDto indicateurWithTableData = indicateurService
-                        .getIndicateurWithTableData(indicateurDto.getId(), tableFormat);
+    // // Now add table data to each indicateur in the DTO
+    // if (tableFormat != null && !tableFormat.isEmpty() && dto.getIndicateurs() !=
+    // null) {
+    // for (IndicateurSousDomaineDetailDto indicateurDto : dto.getIndicateurs()) {
+    // // Get the full indicateur with table data
+    // IndicateurDetailDto indicateurWithTableData = indicateurService
+    // .getIndicateurWithTableData(indicateurDto.getId(), tableFormat);
 
-                // Copy table data fields
-                indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
-                // indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
-                indicateurDto.setCrudTableData(indicateurWithTableData.getCrudTableData());
-                // indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
-            }
-        }
+    // // Copy table data fields
+    // indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
+    // //
+    // indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
+    // indicateurDto.setCrudTableData(indicateurWithTableData.getCrudTableData());
+    // //
+    // indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
+    // }
+    // }
 
-        return dto;
-    }
+    // return dto;
+    // }
 
     @Override
     public SousDomaineDetailsDto getSousDomaineWithPivotTable(Long id, String tableFormat) {
@@ -211,17 +217,13 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
 
         // Now enhance each indicateur with table data
         if (tableFormat != null && !tableFormat.isEmpty() && dto.getIndicateurs() != null) {
-            for (IndicateurDetailDto indicateurDto : dto.getIndicateurs()) {
+            for (IndicateurSousDomaineDetailDto indicateurDto : dto.getIndicateurs()) {
                 // Get the full indicateur with table data
                 IndicateurDetailDto indicateurWithTableData = indicateurService
                         .getIndicateurWithTableData(indicateurDto.getId(), tableFormat);
 
                 // Copy the hasDonnees and table data fields
-                indicateurDto.setHasDonnees(indicateurWithTableData.isHasDonnees());
                 indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
-                // indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
-                indicateurDto.setCrudTableData(indicateurWithTableData.getCrudTableData());
-                // indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
             }
         }
 
@@ -242,17 +244,14 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
 
                     // Now enhance each indicateur with table data
                     if (tableFormat != null && !tableFormat.isEmpty() && dto.getIndicateurs() != null) {
-                        for (IndicateurDetailDto indicateurDto : dto.getIndicateurs()) {
+                        for (IndicateurSousDomaineDetailDto indicateurDto : dto.getIndicateurs()) {
                             // Get the full indicateur with table data
                             IndicateurDetailDto indicateurWithTableData = indicateurService
                                     .getIndicateurWithTableData(indicateurDto.getId(), tableFormat);
 
                             // Copy the hasDonnees and table data fields
-                            indicateurDto.setHasDonnees(indicateurWithTableData.isHasDonnees());
                             indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
-                            // indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
-                            indicateurDto.setCrudTableData(indicateurWithTableData.getCrudTableData());
-                            // indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
+
                         }
                     }
 

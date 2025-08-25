@@ -1,7 +1,6 @@
 package ma.org.ormt.modules.chiffres.dtos.details;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.mapstruct.AfterMapping;
 import org.mapstruct.Context;
@@ -9,17 +8,17 @@ import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 
 import ma.org.ormt.core.commun.base.mapper.BaseDtoMapper;
-import ma.org.ormt.modules.chiffres.dtos.ChiffreCleDto;
 import ma.org.ormt.modules.chiffres.models.ChiffreCle;
 import ma.org.ormt.modules.roleacces.dtos.summary.RoleAccesSummaryDto;
-import ma.org.ormt.modules.roleacces.models.RoleAcces;
 import ma.org.ormt.modules.roleacces.services.RoleAccesService;
+import ma.org.ormt.modules.roleacces.utils.RoleAccesMappingUtil;
 
 @Mapper
 public interface ChiffreCleDetailsDtoMapper extends BaseDtoMapper<ChiffreCle, ChiffreCleDetailsDto> {
 
     @AfterMapping
-    default void afterMapping(ChiffreCle chiffreCle, @MappingTarget ChiffreCleDto dto, @Context Object... services) {
+    default void afterMapping(ChiffreCle chiffreCle, @MappingTarget ChiffreCleDetailsDto dto,
+            @Context Object... services) {
 
         RoleAccesService roleAccesService = findService(services,
                 RoleAccesService.class);
@@ -28,18 +27,8 @@ public interface ChiffreCleDetailsDtoMapper extends BaseDtoMapper<ChiffreCle, Ch
             return;
         }
 
-        List<RoleAcces> rolesAccesList = roleAccesService.getAccesByRessource("chiffreCle", chiffreCle.getId());
-
-        List<RoleAccesSummaryDto> roleAccesDtos = rolesAccesList.stream()
-                .map(roleAcces -> {
-                    RoleAccesSummaryDto roleAccesDto = new RoleAccesSummaryDto();
-                    roleAccesDto.setId(roleAcces.getId());
-                    roleAccesDto.setRoleCode(roleAcces.getRoleCode());
-                    roleAccesDto.setNiveauAcces(roleAcces.getNiveauAcces());
-                    return roleAccesDto;
-                })
-                .collect(Collectors.toList());
-
+        List<RoleAccesSummaryDto> roleAccesDtos = RoleAccesMappingUtil
+                .mapForRessource(roleAccesService, "chiffreCle", chiffreCle.getId());
         dto.setRoleAcces(roleAccesDtos);
 
     }

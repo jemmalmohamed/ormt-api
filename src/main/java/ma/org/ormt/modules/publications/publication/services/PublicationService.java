@@ -1,5 +1,6 @@
 package ma.org.ormt.modules.publications.publication.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.domain.Page;
@@ -14,6 +15,8 @@ public interface PublicationService extends BaseService<Publication> {
     Optional<Publication> findByTitre(String titre);
 
     Page<Publication> getEntityList(QueryParams requestParams);
+
+    public Page<Publication> getEntitiesByIds(List<Long> ids, QueryParams params);
 
     Publication create(PublicationRequestDto requestDto) throws Exception;
 

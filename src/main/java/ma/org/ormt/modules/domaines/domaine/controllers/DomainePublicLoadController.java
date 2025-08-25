@@ -35,7 +35,7 @@ import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
 @RestController
 @RequestMapping("api/v1/public/espaces/{espaceId}/domaines") // Context-aware public controller
 @RequiredArgsConstructor
-public class DomaineController extends BaseController<Domaine> {
+public class DomainePublicLoadController extends BaseController<Domaine> {
 
         private static final String ENTITY_NAME = "domaine";
 
@@ -106,14 +106,14 @@ public class DomaineController extends BaseController<Domaine> {
                 }
 
                 DomaineDetailDto domaineDetail;
-                if (tableFormat != null && !tableFormat.isEmpty()) {
-                        // Use service method that adds table data
-                        domaineDetail = domaineService.getDomaineWithTableData(id, tableFormat);
-                } else {
-                        // Use existing logic for backward compatibility
-                        Domaine domaine = domaineService.findById(id).orElseThrow(EntityNotFoundException::new);
-                        domaineDetail = domaineDetailMapper.mapToDto(domaine);
-                }
+                // if (tableFormat != null && !tableFormat.isEmpty()) {
+                // // Use service method that adds table data
+                // domaineDetail = domaineService.getDomaineWithTableData(id, tableFormat);
+                // } else {
+                // Use existing logic for backward compatibility
+                Domaine domaine = domaineService.findById(id).orElseThrow(EntityNotFoundException::new);
+                domaineDetail = domaineDetailMapper.mapToDto(domaine);
+                // }
 
                 return ResponseEntity.ok(RestResponse.<DomaineDetailDto>builder()
                                 .data(domaineDetail)

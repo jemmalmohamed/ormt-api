@@ -40,7 +40,7 @@ import ma.org.ormt.modules.publications.publication.services.PublicationService;
 @RequestMapping(value = "/api/v1/admin/publications")
 @RequiredArgsConstructor
 @Tag(name = "Publication", description = "Publication API")
-public class PublicationCrudController extends BaseController<Publication> {
+public class PublicationAdminCrudController extends BaseController<Publication> {
 
     private static final String ENTITY_NAME = "publication";
 

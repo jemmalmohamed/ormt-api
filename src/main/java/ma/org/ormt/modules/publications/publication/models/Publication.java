@@ -38,6 +38,8 @@ public class Publication extends BaseEntity {
 
     private String categorie;
 
+    private boolean actif;
+
     private String tags;
 
     private Integer nombreTelechargements;

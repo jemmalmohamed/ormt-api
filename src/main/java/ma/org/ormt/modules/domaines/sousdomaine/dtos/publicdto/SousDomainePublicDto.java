@@ -28,5 +28,4 @@ public class SousDomainePublicDto extends Dto {
 
     private List<IndicateurDetailDto> indicateurs;
 
-    // private DomaineSummaryDto domaine;
 }

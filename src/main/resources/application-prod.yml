@@ -23,6 +23,10 @@ minio:
 spring:
   security:
     enabled: true
+  servlet:
+    multipart:
+      max-file-size: ${UPLOAD_MAX_FILE_SIZE:20MB}
+      max-request-size: ${UPLOAD_MAX_REQUEST_SIZE:20MB}
   datasource:
     url: jdbc:postgresql://${spring.datasource.host}:${spring.datasource.port}/${spring.datasource.database}
     driver-class-name: org.postgresql.Driver

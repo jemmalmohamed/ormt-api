@@ -4,18 +4,14 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import jakarta.persistence.EntityNotFoundException;
 import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
 import ma.org.ormt.core.commun.base.service.SpecificationService;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
 import ma.org.ormt.core.minio.MinioService;
-import ma.org.ormt.core.utilities.EntityInspector;
-import ma.org.ormt.core.utilities.PaginationUtils;
+// pagination and spec handling centralized in BaseServiceImpl
 import ma.org.ormt.core.validators.ObjectsValidator;
 import ma.org.ormt.modules.publications.publication.dtos.request.PublicationRequestDto;
 import ma.org.ormt.modules.publications.publication.dtos.request.PublicationRequestDtoMapper;
@@ -47,7 +43,7 @@ public class PublicationServiceImpl extends BaseServiceImpl<Publication> impleme
 
     @Override
     public boolean existsById(Long id) {
-        return publicationRepository.existsById(id);
+        return super.existsById(id);
     }
 
     @Override
@@ -57,17 +53,12 @@ public class PublicationServiceImpl extends BaseServiceImpl<Publication> impleme
 
     @Override
     public Page<Publication> getEntityList(QueryParams requestParams) {
-        if (requestParams.getPageSize() == -1) {
-            requestParams.setPageSize(Integer.MAX_VALUE);
-        }
-        Pageable pageable = PaginationUtils.createPageable(requestParams);
-        if (!EntityInspector.isFieldPresentInEntity(pageable.getSort().toString(), Publication.class)) {
-            pageable = PaginationUtils.createPageable(requestParams);
-        }
-        Specification<Publication> specification = specificationService
-                .createSpecificationWithDynamicGlobalFilter(requestParams.getFilters(),
-                        requestParams.getGlobalFilter(), Publication.class);
-        return findAll(specification, pageable);
+        return super.getEntityList(requestParams, Publication.class);
+    }
+
+    @Override
+    public Page<Publication> getEntitiesByIds(java.util.List<Long> ids, QueryParams requestParams) {
+        return super.getEntitiesByIds(ids, requestParams, Publication.class);
     }
 
     @Override
@@ -78,7 +69,7 @@ public class PublicationServiceImpl extends BaseServiceImpl<Publication> impleme
         String fichierFileName = minioService.uploadFile(optimizedFichier);
         Publication publicationToCreate = publicationRequestMapper.mapToEntity(requestDto);
         publicationToCreate.setFichierUrl(fichierFileName); // Store just the filename
-
+        publicationToCreate.setTailleFichier(optimizedFichier.getSize());
         return publicationRepository.save(publicationToCreate);
     }
 
@@ -86,8 +77,7 @@ public class PublicationServiceImpl extends BaseServiceImpl<Publication> impleme
     public Publication update(Long id, PublicationRequestDto requestDto) throws Exception {
         validator.validate(requestDto);
         checkPathId(id, requestDto.getId());
-        Publication publication = publicationRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+        Publication publication = getOrThrow(id, NOT_FOUND_STRING);
         updatePublicationFields(publication, requestDto);
         handleFichierUpdate(publication, requestDto);
         return publicationRepository.save(publication);
@@ -101,7 +91,6 @@ public class PublicationServiceImpl extends BaseServiceImpl<Publication> impleme
         publication.setCategorie(requestDto.getCategorie());
         publication.setTags(requestDto.getTags());
         publication.setNombreTelechargements(requestDto.getNombreTelechargements());
-        // fichierUrl, nomFichier, tailleFichier are handled in handleFichierUpdate
     }
 
     private void handleFichierUpdate(Publication publication, PublicationRequestDto dto) throws Exception {

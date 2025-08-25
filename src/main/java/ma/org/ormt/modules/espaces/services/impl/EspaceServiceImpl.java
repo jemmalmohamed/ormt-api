@@ -5,8 +5,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -16,8 +14,7 @@ import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
 import ma.org.ormt.core.commun.base.service.SpecificationService;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
 import ma.org.ormt.core.minio.MinioService;
-import ma.org.ormt.core.utilities.EntityInspector;
-import ma.org.ormt.core.utilities.PaginationUtils;
+// removed unused imports after refactor
 import ma.org.ormt.core.utilities.files.ImageUtils;
 import ma.org.ormt.core.validators.ObjectsValidator;
 import ma.org.ormt.modules.domaines.domaine.models.Domaine;
@@ -58,7 +55,7 @@ public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements Espace
 
     @Override
     public boolean existsById(Long id) {
-        return espaceRepository.existsById(id);
+        return super.existsById(id);
     }
 
     @Override
@@ -68,49 +65,12 @@ public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements Espace
 
     @Override
     public Page<Espace> getEntityList(QueryParams requestParams) {
-        if (requestParams.getPageSize() == -1) {
-            requestParams.setPageSize(Integer.MAX_VALUE);
-        }
-        Pageable pageable = PaginationUtils.createPageable(requestParams);
-
-        if (!EntityInspector.isFieldPresentInEntity(pageable.getSort().toString(), Espace.class)) {
-            pageable = PaginationUtils.createPageable(requestParams);
-        }
-        Specification<Espace> specification = specificationService
-                .createSpecificationWithDynamicGlobalFilter(requestParams.getFilters(),
-                        requestParams.getGlobalFilter(), Espace.class);
-        return findAll(specification, pageable);
+        return super.getEntityList(requestParams, Espace.class);
     }
 
     @Override
     public Page<Espace> getEntitiesByIds(List<Long> ids, QueryParams requestParams) {
-        if (requestParams.getPageSize() == -1) {
-            requestParams.setPageSize(Integer.MAX_VALUE);
-        }
-        Pageable pageable = PaginationUtils.createPageable(requestParams);
-
-        if (!EntityInspector.isFieldPresentInEntity(pageable.getSort().toString(), Espace.class)) {
-            pageable = PaginationUtils.createPageable(requestParams);
-        }
-
-        // If no IDs are provided or empty list, return empty page
-        if (ids == null || ids.isEmpty()) {
-            return Page.empty(pageable);
-        }
-        // Create specification for filtering by IDs
-        Specification<Espace> idSpecification = (root, _, _) -> root.get("id").in(ids);
-
-        // Get filter specification and handle null case
-        Specification<Espace> filterSpecification = specificationService
-                .createSpecificationWithDynamicGlobalFilter(requestParams.getFilters(),
-                        requestParams.getGlobalFilter(), Espace.class);
-
-        // Combine specifications, handling null case
-        Specification<Espace> specification = filterSpecification != null
-                ? filterSpecification.and(idSpecification)
-                : idSpecification;
-
-        return findAll(specification, pageable);
+        return super.getEntitiesByIds(ids, requestParams, Espace.class);
     }
 
     @Override
@@ -166,8 +126,7 @@ public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements Espace
     }
 
     public void attachDomaine(Long espaceId, Long domaineId) {
-        Espace espace = espaceRepository.findById(espaceId)
-                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+    Espace espace = getOrThrow(espaceId, NOT_FOUND_STRING);
         Domaine domaine = domaineService.findById(domaineId)
                 .orElseThrow(() -> new EntityNotFoundException("Domaine non trouvé"));
 
@@ -180,8 +139,8 @@ public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements Espace
 
     public void detachDomaine(Long espaceDomaineId) {
 
-        EspaceDomaine espaceDomaine = espaceDomaineRepository.findById(espaceDomaineId)
-                .orElseThrow(() -> new EntityNotFoundException("Association non trouvée"));
+    EspaceDomaine espaceDomaine = espaceDomaineRepository.findById(espaceDomaineId)
+        .orElseThrow(() -> new EntityNotFoundException("Association non trouvée"));
 
         espaceDomaineRepository.delete(espaceDomaine);
     }

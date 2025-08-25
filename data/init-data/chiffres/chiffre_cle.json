@@ -6,7 +6,13 @@
         "accessType": "public",
         "description": " taux de chômage  en 2024",
         "actif": true,
-        "afficherDate": false
+        "afficherDate": false,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
     },
     {
         "libelle": "taux d'emplois",
@@ -15,7 +21,13 @@
         "accessType": "public",
         "description": " taux d'emplois  en 2024",
         "actif": true,
-        "afficherDate": false
+        "afficherDate": false,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
     },
     {
         "libelle": "taux d'activité",
@@ -24,7 +36,13 @@
         "accessType": "public",
         "description": "taux d'activité  en 2024",
         "actif": true,
-        "afficherDate": false
+        "afficherDate": false,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
     },
     {
         "libelle": "création d'emplois",
@@ -33,7 +51,13 @@
         "accessType": "public",
         "description": "nombre d'emplois créés  en 2024",
         "actif": true,
-        "afficherDate": false
+        "afficherDate": false,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
     },
     {
         "libelle": "Entreprises affiliées",
@@ -42,6 +66,12 @@
         "accessType": "public",
         "description": "nombre d'entreprises affiliées  en 2024",
         "actif": true,
-        "afficherDate": true
+        "afficherDate": true,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
     }
 ]

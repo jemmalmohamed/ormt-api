@@ -1,0 +1,158 @@
+package ma.org.ormt.modules.domaines.sousdomaine.controllers;
+
+import java.util.List;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import lombok.RequiredArgsConstructor;
+import ma.org.ormt.core.commun.base.controller.BaseController;
+import ma.org.ormt.core.commun.rest.queries.QueryParams;
+import ma.org.ormt.core.commun.rest.responses.RestResponse;
+import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDto;
+import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDtoMapper;
+import ma.org.ormt.modules.domaines.sousdomaine.dtos.details.SousDomaineDetailsDto;
+import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
+import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
+
+@RestController
+@RequestMapping("api/v1/public/domaines")
+@RequiredArgsConstructor
+public class SousDomainePublicLoadController extends BaseController<SousDomaine> {
+
+        // private static final String ENTITY_NAME = "sousdomaine";
+
+        private static final String ENTITY_NAME = "sousdomaine";
+
+        private final SousDomaineService sousDomaineService;
+        private final SousDomaineDtoMapper sousDomaineDtoMapper;
+        // private final SousDomaineDetailsDtoMapper sousDomaineDetailMapper;
+
+        @Operation(summary = "Get all " + ENTITY_NAME + "s")
+        @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Ok", content = {
+                        @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = SousDomaineDto.class))) }),
+                        @ApiResponse(responseCode = "404", description = ENTITY_NAME
+                                        + " not found", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @GetMapping("/{domaineId}/sous-domaines")
+        @PreAuthorize("hasAuthority('domaine:list')")
+        public ResponseEntity<RestResponse<List<SousDomaineDto>>> getSousDomaines(
+                        @PathVariable("domaineId") Long domaineId,
+                        @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
+                        @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
+                        @RequestParam(value = "sortField", defaultValue = "createdDate") String sortField,
+                        @RequestParam(value = "sortDirection", defaultValue = "DESC") Direction direction,
+                        @RequestParam(value = "filters", defaultValue = "") List<String> filters,
+                        @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
+
+                QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField,
+                                direction, filters,
+                                globalFilter);
+
+                Page<SousDomaine> sousDomainePage = sousDomaineService.getEntityListByDomaineId(domaineId,
+                                requestParams);
+
+                QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams,
+                                sousDomainePage);
+
+                return buildResponseEntity(sousDomainePage.getContent(),
+                                SousDomaineDto.class, queryParams,
+                                HttpStatus.OK);
+        }
+
+        @Operation(summary = "Get all " + ENTITY_NAME
+                        + "s with pivot table data", description = "Get list of sous domaines with table data for indicateurs. "
+                                        +
+                                        "Use tableFormat parameter: 'pivot' for pivot table, 'flat' for flat table, 'crud' for CRUD operations, "
+                                        +
+                                        "'create' for create template, 'both' for pivot+flat, 'all' for all formats")
+        @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Ok", content = {
+                        @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = SousDomaineDetailsDto.class))) }),
+                        @ApiResponse(responseCode = "404", description = ENTITY_NAME
+                                        + " not found", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @GetMapping("/{domaineId}/sous-domaines/pivot-table")
+        @PreAuthorize("hasAuthority('domaine:list')")
+        public ResponseEntity<RestResponse<List<SousDomaineDetailsDto>>> getSousDomainesWithPivotTable(
+                        @PathVariable("domaineId") Long domaineId,
+                        @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
+                        @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
+                        @RequestParam(value = "sortField", defaultValue = "createdDate") String sortField,
+                        @RequestParam(value = "sortDirection", defaultValue = "DESC") Direction direction,
+                        @RequestParam(value = "filters", defaultValue = "") List<String> filters,
+                        @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter,
+                        @Parameter(description = "Table format: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'", example = "pivot") @RequestParam(value = "tableFormat", defaultValue = "pivot") String tableFormat) {
+
+                QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField, direction, filters,
+                                globalFilter);
+
+                List<SousDomaineDetailsDto> sousDomainesList = sousDomaineService
+                                .getSousDomainesWithPivotTable(domaineId, requestParams, tableFormat);
+
+                RestResponse<List<SousDomaineDetailsDto>> response = RestResponse.<List<SousDomaineDetailsDto>>builder()
+                                .data(sousDomainesList)
+                                .build();
+
+                return ResponseEntity.ok(response);
+        }
+
+        @Operation(summary = "Get " + ENTITY_NAME
+                        + " with pivot table data", description = "Get sous domaine details with table data for indicateurs. "
+                                        +
+                                        "Use tableFormat parameter: 'pivot' for pivot table, 'flat' for flat table, 'crud' for CRUD operations, "
+                                        +
+                                        "'create' for create template, 'both' for pivot+flat, 'all' for all formats")
+        @ApiResponses(value = {
+                        @ApiResponse(responseCode = "200", description = "Ok", content = {
+                                        @Content(mediaType = "application/json", schema = @Schema(implementation = SousDomaineDetailsDto.class)) }),
+                        @ApiResponse(responseCode = "404", description = ENTITY_NAME
+                                        + " not found", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @GetMapping("/{domaineId}/sous-domaines/{id}/pivot-table")
+        @PreAuthorize("hasAuthority('domaine:read')")
+        public ResponseEntity<RestResponse<SousDomaineDetailsDto>> getSousDomaineWithPivotTable(
+                        @PathVariable("domaineId") Long domaineId,
+                        @PathVariable("id") Long id,
+                        @Parameter(description = "Table format: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'", example = "pivot") @RequestParam(value = "tableFormat", defaultValue = "pivot") String tableFormat) {
+                SousDomaineDetailsDto dto = sousDomaineService.getSousDomaineWithPivotTable(id, tableFormat);
+                RestResponse<SousDomaineDetailsDto> response = RestResponse.<SousDomaineDetailsDto>builder()
+                                .data(dto)
+                                .build();
+                return ResponseEntity.ok(response);
+        }
+
+        @Override
+        protected <DTO> DTO mapToDto(SousDomaine entity, Class<DTO> dtoClass) {
+                if (dtoClass == SousDomaineDto.class) {
+                        return dtoClass.cast(sousDomaineDtoMapper.mapToDto(entity));
+                }
+                throw new IllegalArgumentException("Unsupported DTO type: " + dtoClass.getName());
+        }
+        // @Override
+        // protected <DTO> DTO mapToDto(SousDomaine entity, Class<DTO> dtoClass) {
+        // if (dtoClass == SousDomainePublicDto.class) {
+        // return dtoClass.cast(sousDomaineDtoMapper.mapToDto(entity));
+        // }
+        // throw new IllegalArgumentException("Unsupported DTO type: " +
+        // dtoClass.getName());
+        // }
+
+}

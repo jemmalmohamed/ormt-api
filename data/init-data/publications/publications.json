@@ -9,7 +9,13 @@
         "tailleFichier": 1234567,
         "categorie": "Rapport",
         "tags": "panel, entreprises, analytique",
-        "nombreTelechargements": 0
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
     },
     {
         "titre": "Enquête auprès des bénéficiaires du programme Idmaj 1",
@@ -21,7 +27,13 @@
         "tailleFichier": 2345678,
         "categorie": "Programme",
         "tags": "idmaj, bénéficiaires, enquête",
-        "nombreTelechargements": 0
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
     },
     {
         "titre": "Étude sur les gains et pertes d'emploi dans l'industrie en 2001",
@@ -33,7 +45,13 @@
         "tailleFichier": 3456789,
         "categorie": "Étude",
         "tags": "industrie, emploi, gains, pertes",
-        "nombreTelechargements": 0
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
     },
     {
         "titre": "Le marché du travail en 2022",
@@ -45,7 +63,13 @@
         "tailleFichier": 4567890,
         "categorie": "Marché du travail",
         "tags": "marché, travail, 2022",
-        "nombreTelechargements": 0
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
     },
     {
         "titre": "Le marché du travail en 2019",
@@ -57,7 +81,13 @@
         "tailleFichier": 5678901,
         "categorie": "Marché du travail",
         "tags": "marché, travail, 2019",
-        "nombreTelechargements": 0
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
     },
     {
         "titre": "Le marché du travail en 2020",
@@ -69,7 +99,13 @@
         "tailleFichier": 6789012,
         "categorie": "Marché du travail",
         "tags": "marché, travail, 2020",
-        "nombreTelechargements": 0
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
     },
     {
         "titre": "Le marché du travail en 2021",
@@ -81,7 +117,13 @@
         "tailleFichier": 7890123,
         "categorie": "Marché du travail",
         "tags": "marché, travail, 2021",
-        "nombreTelechargements": 0
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
     },
     {
         "titre": "Le Travail sur les Plateformes Digitales au Maroc",
@@ -93,7 +135,13 @@
         "tailleFichier": 8901234,
         "categorie": "Digital",
         "tags": "plateformes, digital, Maroc",
-        "nombreTelechargements": 0
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
     },
     {
         "titre": "Les nouvelles formes et les formes atypiques d’emploi au Maroc",
@@ -105,6 +153,12 @@
         "tailleFichier": 9012345,
         "categorie": "Emploi",
         "tags": "formes, emploi, Maroc",
-        "nombreTelechargements": 0
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
     }
 ]

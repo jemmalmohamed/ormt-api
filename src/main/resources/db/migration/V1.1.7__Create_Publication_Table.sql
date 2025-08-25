@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS publication (
     auteur VARCHAR(255),
     date_publication DATE,
     fichier_url VARCHAR(500),
+    actif BOOLEAN NOT NULL DEFAULT TRUE,
     nom_fichier VARCHAR(255),
     taille_fichier BIGINT,
     categorie VARCHAR(100),

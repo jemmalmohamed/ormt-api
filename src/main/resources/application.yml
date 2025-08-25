@@ -21,6 +21,12 @@ spring:
   output:
     ansi:
       enabled: ALWAYS
+  servlet:
+    multipart:
+      enabled: true
+      # Allow up to 10MB per file and per request (can be overridden per profile or via env vars)
+      max-file-size: ${UPLOAD_MAX_FILE_SIZE:10MB}
+      max-request-size: ${UPLOAD_MAX_REQUEST_SIZE:10MB}
  
 flyway:
   enabled: true

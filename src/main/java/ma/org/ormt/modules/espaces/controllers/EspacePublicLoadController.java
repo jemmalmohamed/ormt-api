@@ -39,7 +39,7 @@ import ma.org.ormt.modules.espaces.services.EspaceService;
 @RestController
 @RequestMapping("api/v1/public/espaces")
 @RequiredArgsConstructor
-public class EspaceLoadPublicController extends BaseController<Espace> {
+public class EspacePublicLoadController extends BaseController<Espace> {
 
         private static final String ENTITY_NAME = "espace";
         private static final String RESOURCE_TYPE = "espace";
@@ -72,6 +72,7 @@ public class EspaceLoadPublicController extends BaseController<Espace> {
                 // Ensure filters is not null and add 'actif:true'
                 List<String> effectiveFilters = (filters == null) ? new java.util.ArrayList<>()
                                 : new java.util.ArrayList<>(filters);
+
                 effectiveFilters.add("actif:like:true");
 
                 QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField, direction,

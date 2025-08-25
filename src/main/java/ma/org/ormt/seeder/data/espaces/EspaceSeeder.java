@@ -28,6 +28,7 @@ import ma.org.ormt.modules.espaces.dtos.request.EspaceRequestDto;
 import ma.org.ormt.modules.espaces.models.Espace;
 import ma.org.ormt.modules.espaces.services.EspaceService;
 import ma.org.ormt.modules.roleacces.services.RoleAccesService;
+import ma.org.ormt.modules.roleacces.utils.RoleAccesMappingUtil;
 
 @Log4j2
 @Component
@@ -136,18 +137,13 @@ public class EspaceSeeder implements CommandLineRunner {
         // Save the espace which will cascade the relationships
         Espace createdEspace = espaceService.create(requestDto);
 
-        // Handle multiple role accesses
-        if (espace.getRoleAcces() != null && !espace.getRoleAcces().isEmpty()) {
-            espace.getRoleAcces().forEach(roleAcces -> {
-                if (!roleAccesService.hasAccess(
-                        roleAcces.getRoleCode(), "espace", createdEspace.getId(),
-                        roleAcces.getNiveauAcces())) {
-                    roleAccesService.addAccess(
-                            roleAcces.getRoleCode(), "espace", createdEspace.getId(),
-                            roleAcces.getNiveauAcces(), "system");
-                }
-            });
-        }
+        // Handle role accesses generically for the created resource
+        RoleAccesMappingUtil.applyRoleAccesses(roleAccesService, espace.getRoleAcces(),
+                "espace",
+                createdEspace.getId(),
+                ra -> ra.getRoleCode(),
+                ra -> ra.getNiveauAcces(),
+                "lecture");
 
         List<Domaine> domaines = domaineService.findAll();
         domaines.forEach(domaine -> {
@@ -182,4 +178,5 @@ public class EspaceSeeder implements CommandLineRunner {
             }
         }
     }
+
 }

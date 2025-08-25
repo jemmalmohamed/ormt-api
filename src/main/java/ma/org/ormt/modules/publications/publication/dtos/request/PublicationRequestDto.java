@@ -40,7 +40,7 @@ public class PublicationRequestDto extends Dto {
     private LocalDate datePublication;
 
     @NotNull(message = "Ce champ est requis.", groups = OnCreate.class)
-    @FileSize(max = 50 * 1024 * 1024, message = "La taille du fichier ne doit pas dépasser 50 Mo")
+    @FileSize(max = 20 * 1024 * 1024, message = "La taille du fichier ne doit pas dépasser 20 Mo")
     private MultipartFile fichier;
 
     private String titreFichier;
@@ -52,5 +52,8 @@ public class PublicationRequestDto extends Dto {
     private String tags;
 
     private Integer nombreTelechargements;
+
+    @NotNull(message = "Ce champ est requis.")
+    private Boolean actif;
 
 }

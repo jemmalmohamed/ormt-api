@@ -1,4 +1,4 @@
-package ma.org.ormt.modules.publications.publication.controllers.admin;
+package ma.org.ormt.modules.publications.publication.controllers;
 
 import java.util.List;
 import java.util.Optional;
@@ -37,21 +37,21 @@ import ma.org.ormt.modules.publications.publication.services.PublicationService;
 @Slf4j
 @Validated
 @RestController
-@RequestMapping("api/v1/admin/publications")
+@RequestMapping("api/v1/public/publications")
 @RequiredArgsConstructor
-public class PublicationAdminLoadController extends BaseController<Publication> {
+public class PublicationLoadPublicController extends BaseController<Publication> {
 
         private static final String ENTITY_NAME = "publication";
+        private static final String RESOURCE_TYPE = "publication";
 
         private final PublicationService publicationService;
         private final PublicationDtoMapper publicationDtoMapper;
         private final PublicationDetailDtoMapper publicationDetailMapper;
 
         /**
-         * Get all publications with optional pagination, sorting, and filtering
-         * (Admin).
+         * Get all publications with optional pagination, sorting, and filtering.
          */
-        @Operation(summary = "Get all " + ENTITY_NAME + "s (Admin)")
+        @Operation(summary = "Get all " + ENTITY_NAME + "s")
         @ApiResponses(value = {
                         @ApiResponse(responseCode = "200", description = "Ok", content = {
                                         @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = PublicationDto.class))) }),
@@ -69,11 +69,22 @@ public class PublicationAdminLoadController extends BaseController<Publication> 
                         @Parameter(description = "Filters") @RequestParam(value = "filters", required = false) final List<String> filters,
                         @Parameter(description = "Global filter") @RequestParam(value = "globalFilter", defaultValue = "") final String globalFilter) {
 
+                // Ensure filters is not null and add 'actif:true'
+                List<String> effectiveFilters = (filters == null) ? new java.util.ArrayList<>()
+                                : new java.util.ArrayList<>(filters);
+                effectiveFilters.add("actif:like:true");
+
                 QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField, direction,
-                                filters,
+                                effectiveFilters,
                                 globalFilter);
 
-                Page<Publication> publicationPage = publicationService.getEntityList(requestParams);
+                Page<Publication> publicationPage = getEntitiesWithAccessControl(
+                                RESOURCE_TYPE,
+                                "lecture",
+                                requestParams,
+                                publicationService::getEntityList, // Function<QueryParams, Page<T>>
+                                publicationService::getEntitiesByIds // BiFunction<List<Long>, QueryParams, Page<T>>
+                );
 
                 return buildResponseEntity(
                                 publicationPage.getContent(), PublicationDto.class,
@@ -82,9 +93,9 @@ public class PublicationAdminLoadController extends BaseController<Publication> 
         }
 
         /**
-         * Get publication details by ID (Admin).
+         * Get publication details by ID.
          */
-        @Operation(summary = "Get " + ENTITY_NAME + " by id (Admin)")
+        @Operation(summary = "Get " + ENTITY_NAME + " by id")
         @ApiResponses(value = {
                         @ApiResponse(responseCode = "200", description = "Ok", content = {
                                         @Content(mediaType = "application/json", schema = @Schema(implementation = PublicationDetailDto.class)) }),
@@ -95,6 +106,11 @@ public class PublicationAdminLoadController extends BaseController<Publication> 
         @GetMapping("/{id}")
         @PreAuthorize("hasAuthority('publication:read')")
         public ResponseEntity<RestResponse<PublicationDetailDto>> getPublication(@PathVariable("id") final Long id) {
+                boolean hasResourceAccess = hasResourceAccess(id, RESOURCE_TYPE, "lecture");
+                if (!hasResourceAccess) {
+                        return createForbiddenResponse();
+                }
+
                 try {
                         Optional<Publication> publicationOpt = publicationService.findById(id);
                         if (publicationOpt.isEmpty()) {
@@ -103,6 +119,10 @@ public class PublicationAdminLoadController extends BaseController<Publication> 
                         }
 
                         Publication publication = publicationOpt.get();
+                        if (!publication.isActif()) {
+                                return ResponseEntity.notFound()
+                                                .build();
+                        }
 
                         return buildResponseEntity(publication, PublicationDetailDto.class, HttpStatus.OK);
                 } catch (Exception e) {
@@ -114,7 +134,7 @@ public class PublicationAdminLoadController extends BaseController<Publication> 
 
         /**
          * Maps Publication entity to the specified DTO class.
-         * Supports PublicationDto and PublicationDetailDto mappings.
+         * Supports PublicationDto and PublicationDetailsDto mappings.
          * 
          * @param entity   The Publication entity to map
          * @param dtoClass The target DTO class

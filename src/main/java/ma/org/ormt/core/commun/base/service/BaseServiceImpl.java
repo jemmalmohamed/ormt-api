@@ -11,6 +11,7 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.lang.NonNull;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
@@ -37,6 +38,13 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
     public List<Long> findAllIds() {
         return this.baseRepository.findAllIds();
 
+    }
+
+    /**
+     * Common existence check by id
+     */
+    public boolean existsById(Long id) {
+        return baseRepository.existsById(id);
     }
 
     // ** CREATE **//
@@ -79,6 +87,14 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
     // ** READ ONE **//
     public Optional<T> findById(Long id) {
         return baseRepository.findById(id);
+    }
+
+    /**
+     * Convenience to fetch an entity or throw EntityNotFoundException with a custom message
+     */
+    public T getOrThrow(Long id, String notFoundMessage) {
+        return baseRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(notFoundMessage));
     }
 
     // ** UPDATE **//
@@ -186,6 +202,44 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
                         requestParams.getGlobalFilter(), entityClass);
 
         return new SpecificationAndPageable<>(specification, pageable);
+    }
+
+    /**
+     * Return a page for the current entity type using QueryParams (common pattern across services)
+     */
+    public Page<T> getEntityList(QueryParams requestParams, Class<T> entityClass) {
+        SpecificationAndPageable<T> sp = getSpecificationAndPageable(requestParams, entityClass);
+        return findAll(sp.getSpecification(), sp.getPageable());
+    }
+
+    /**
+     * Return entities by a set of IDs combined with filters/pagination.
+     */
+    public Page<T> getEntitiesByIds(List<Long> ids, QueryParams requestParams, Class<T> entityClass) {
+        if (requestParams.getPageSize() == -1) {
+            requestParams.setPageSize(Integer.MAX_VALUE);
+        }
+        Pageable pageable = PaginationUtils.createPageable(requestParams);
+
+        if (!EntityInspector.isFieldPresentInEntity(pageable.getSort().toString(), entityClass)) {
+            pageable = PaginationUtils.createPageable(requestParams);
+        }
+
+        if (ids == null || ids.isEmpty()) {
+            return Page.empty(pageable);
+        }
+
+        Specification<T> idSpecification = (root, _, _) -> root.get("id").in(ids);
+
+        Specification<T> filterSpecification = specificationService
+                .createSpecificationWithDynamicGlobalFilter(requestParams.getFilters(),
+                        requestParams.getGlobalFilter(), entityClass);
+
+        Specification<T> specification = filterSpecification != null
+                ? filterSpecification.and(idSpecification)
+                : idSpecification;
+
+        return findAll(specification, pageable);
     }
 
     public <E> Specification<E> addPredicateToSpecification(Specification<E> specification,

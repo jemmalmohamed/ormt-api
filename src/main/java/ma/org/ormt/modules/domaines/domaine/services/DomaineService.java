@@ -40,6 +40,6 @@ public interface DomaineService extends BaseService<Domaine> {
     /**
      * Gets a Domaine with table data for all its indicateurs
      */
-    DomaineDetailDto getDomaineWithTableData(Long id, String tableFormat);
+    // DomaineDetailDto getDomaineWithTableData(Long id, String tableFormat);
 
 }

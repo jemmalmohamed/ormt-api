@@ -12,6 +12,7 @@ import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.BaseDto;
 import ma.org.ormt.modules.domaines.domaine.dtos.summary.DomaineSummaryDto;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.detail.IndicateurDetailDto;
+import ma.org.ormt.modules.indicateurs.indicateur.dtos.sousdomaine.IndicateurSousDomaineDetailDto;
 
 @Setter
 @Getter
@@ -26,8 +27,6 @@ public class SousDomaineDto extends BaseDto {
     private String description;
 
     private Boolean actif;
-
-    private List<IndicateurDetailDto> indicateurs;
 
     private DomaineSummaryDto domaine;
 }

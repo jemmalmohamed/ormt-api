@@ -31,7 +31,8 @@ public interface SousDomaineService extends BaseService<SousDomaine> {
     SousDomaine dissociateIndicateurFromSousDomaine(Long sousDomaineId, List<Long> indicateurIds);
 
     // New method to get SousDomaine with table data for indicateurs
-    SousDomaineDto getSousDomaineWithIndicateurTableData(Long id, String tableFormat);
+    // SousDomaineDto getSousDomaineWithIndicateurTableData(Long id, String
+    // tableFormat);
 
     // New method to get SousDomaineDetailsDto with pivot table data
     SousDomaineDetailsDto getSousDomaineWithPivotTable(Long id, String tableFormat);

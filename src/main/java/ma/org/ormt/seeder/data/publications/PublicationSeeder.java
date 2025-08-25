@@ -23,10 +23,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.core.utilities.files.FileToMultipartFileConverter;
+import ma.org.ormt.modules.publications.publication.dtos.PublicationDto;
 import ma.org.ormt.modules.publications.publication.dtos.request.PublicationRequestDto;
 import ma.org.ormt.modules.publications.publication.models.Publication;
 import ma.org.ormt.modules.publications.publication.repositories.PublicationRepository;
 import ma.org.ormt.modules.publications.publication.services.PublicationService;
+import ma.org.ormt.modules.roleacces.services.RoleAccesService;
+import ma.org.ormt.modules.roleacces.utils.RoleAccesMappingUtil;
 
 @Log4j2
 @Component
@@ -43,6 +46,7 @@ public class PublicationSeeder implements CommandLineRunner {
     private final PublicationRepository publicationRepository;
     private final PublicationService publicationService;
     private final ObjectMapper objectMapper;
+    private final RoleAccesService roleAccesService;
 
     private static final String PUBLICATIONS_JSON_FILE = "publications.json";
 
@@ -92,9 +96,9 @@ public class PublicationSeeder implements CommandLineRunner {
     private void createPublicationsFromJsonFile(File jsonFile, String initDataPath) {
         try (InputStream inputStream = Files.newInputStream(jsonFile.toPath())) {
             log.info("Processing publications file: {}", jsonFile.getName());
-            List<Publication> publicationList = objectMapper.readValue(
+            List<PublicationDto> publicationList = objectMapper.readValue(
                     inputStream,
-                    new TypeReference<List<Publication>>() {
+                    new TypeReference<List<PublicationDto>>() {
                     });
 
             if (publicationList == null || publicationList.isEmpty()) {
@@ -102,7 +106,7 @@ public class PublicationSeeder implements CommandLineRunner {
                 return;
             }
 
-            for (Publication publication : publicationList) {
+            for (PublicationDto publication : publicationList) {
                 try {
                     createPublication(publication, initDataPath);
                 } catch (Exception e) {
@@ -121,52 +125,61 @@ public class PublicationSeeder implements CommandLineRunner {
     /**
      * Creates a single publication in the database.
      *
-     * @param publication The publication data from JSON
+     * @param publicationDto The publication data from JSON
      * @throws Exception
      */
-    private void createPublication(Publication publication, String initDataPath) throws Exception {
-        if (publication == null || !StringUtils.hasText(publication.getTitre())) {
+    private void createPublication(PublicationDto publicationDto, String initDataPath) throws Exception {
+        if (publicationDto == null || !StringUtils.hasText(publicationDto.getTitre())) {
             log.warn("Skipping invalid publication data: missing titre");
             return;
         }
 
         // Check if publication already exists
-        Optional<Publication> existingPublication = publicationRepository.findByTitre(publication.getTitre());
+        Optional<Publication> existingPublication = publicationRepository.findByTitre(publicationDto.getTitre());
         if (existingPublication.isPresent()) {
-            log.info("Publication with titre '{}' already exists. Skipping.", publication.getTitre());
+            log.info("Publication with titre '{}' already exists. Skipping.", publicationDto.getTitre());
             return;
         }
         // Create a DTO from the publication entity
-        PublicationRequestDto publicationDto = new PublicationRequestDto();
-        publicationDto.setTitre(publication.getTitre());
-        publicationDto.setDescription(publication.getDescription());
-        publicationDto.setDatePublication(publication.getDatePublication());
-        publicationDto.setAuteur(publication.getAuteur());
-        publicationDto.setCategorie(publication.getCategorie());
-        publicationDto.setTags(publication.getTags());
-        publicationDto.setNombreTelechargements(publication.getNombreTelechargements());
+        PublicationRequestDto publicationRequestDto = new PublicationRequestDto();
+        publicationRequestDto.setTitre(publicationDto.getTitre());
+        publicationRequestDto.setDescription(publicationDto.getDescription());
+        publicationRequestDto.setDatePublication(publicationDto.getDatePublication());
+        publicationRequestDto.setAuteur(publicationDto.getAuteur());
+        publicationRequestDto.setActif(true);
+        publicationRequestDto.setCategorie(publicationDto.getCategorie());
+        publicationRequestDto.setTags(publicationDto.getTags());
+        publicationRequestDto.setNombreTelechargements(publicationDto.getNombreTelechargements());
 
         // Process the image only if a imageUrl is provided
-        if (StringUtils.hasText(publication.getFichierUrl())) {
+        if (StringUtils.hasText(publicationDto.getFichierUrl())) {
             // Look for the image in the images subfolder
-            Path imagePath = Paths.get(initDataPath, publication.getFichierUrl());
+            Path imagePath = Paths.get(initDataPath, publicationDto.getFichierUrl());
             if (!Files.exists(imagePath)) {
                 log.error("Image not found at path: {}. Trying direct path.", imagePath);
                 // Fallback to the main directory if not found in images subdirectory
-                imagePath = Paths.get(initDataPath, publication.getFichierUrl());
+                imagePath = Paths.get(initDataPath, publicationDto.getFichierUrl());
             }
 
             if (Files.exists(imagePath)) {
                 MultipartFile imageFile = FileToMultipartFileConverter.toMultipartFile(imagePath.toFile());
-                publicationDto.setFichier(imageFile);
-                log.info("Found image for publication '{}' at: {}", publication.getTitre(), imagePath);
+                publicationRequestDto.setFichier(imageFile);
+                log.info("Found image for publication '{}' at: {}", publicationDto.getTitre(), imagePath);
             } else {
-                log.error("Image for publication '{}' not found at: {}", publication.getTitre(), imagePath);
+                log.error("Image for publication '{}' not found at: {}", publicationDto.getTitre(), imagePath);
             }
         }
 
-        publicationService.create(publicationDto);
+        Publication createdPublication = publicationService.create(publicationRequestDto);
 
-        log.info("Created publication: {}", publication.getTitre());
+        // Handle role accesses generically for the created resource
+        RoleAccesMappingUtil.applyRoleAccesses(roleAccesService, publicationDto.getRoleAcces(),
+                "publication",
+                createdPublication.getId(),
+                ra -> ra.getRoleCode(),
+                ra -> ra.getNiveauAcces(),
+                "lecture");
+
+        log.info("Created publication: {}", publicationDto.getTitre());
     }
 }

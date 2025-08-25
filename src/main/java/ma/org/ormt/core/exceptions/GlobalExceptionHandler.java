@@ -11,6 +11,7 @@ import org.hibernate.StaleObjectStateException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.web.multipart.MaxUploadSizeExceededException;
 import org.springframework.orm.ObjectOptimisticLockingFailureException;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -177,6 +178,13 @@ public class GlobalExceptionHandler {
         return buildErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, exception.getMessage(),
                 "exception.error.io.message", "Input/Output Error");
 
+    }
+
+    @ExceptionHandler(MaxUploadSizeExceededException.class)
+    public ResponseEntity<ErrorResponse> handleMaxUploadSizeExceeded(MaxUploadSizeExceededException ex) {
+        String message = "La taille du fichier dépasse la limite autorisée";
+        return buildErrorResponse(HttpStatus.PAYLOAD_TOO_LARGE, message,
+                "exception.error.file.too_large", "File upload");
     }
 
     @ExceptionHandler(HttpMessageNotReadableException.class)

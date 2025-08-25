@@ -18,6 +18,11 @@ starter:
 spring:  
   security:
     enabled: true
+  servlet:
+    multipart:
+      # Dev can override via env vars if needed
+      max-file-size: ${UPLOAD_MAX_FILE_SIZE:20MB}
+      max-request-size: ${UPLOAD_MAX_REQUEST_SIZE:20MB}
   datasource:
       url: jdbc:postgresql://localhost:5436/${spring.datasource.database} 
       driver-class-name: org.postgresql.Driver
