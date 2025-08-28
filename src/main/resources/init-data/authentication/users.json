@@ -12,6 +12,18 @@
     ]
   },
   {
+    "username": "user1",
+    "firstName": "user",
+    "lastName": "user1",
+    "email": "",
+    "emailVerified": true,
+    "enabled": true,
+    "password": "Ormt@2024@",
+    "clientRoles": [
+      "admin"
+    ]
+  },
+  {
     "username": "o.admin",
     "firstName": "mohamed",
     "lastName": "jemmal",
