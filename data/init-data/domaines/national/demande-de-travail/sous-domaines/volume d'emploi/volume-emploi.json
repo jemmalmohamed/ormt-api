@@ -54,6 +54,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "emploi par genre - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -100,6 +108,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "emploi par âge - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -148,6 +164,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "emploi par diplôme - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -194,6 +218,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "emploi par secteur d'activité - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -242,6 +274,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "emploi par statut professionnel - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -279,6 +319,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "emploi par type d'emploi - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -318,6 +366,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "emploi par secteur d'emploi - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -355,6 +411,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "emploi par région - Carte",
+          "grapheTypeCode": "CARTE",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -403,6 +467,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "emploi indépendants déclarés à la cnss par secteur d'activité - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -449,6 +521,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "emploi indépendants déclarés à la cnss par région - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -497,6 +577,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "salariés déclarés à la cnss par secteur d'activité - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -534,6 +622,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "salariés déclarés à la cnss par région - Carte",
+          "grapheTypeCode": "CARTE",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -577,9 +673,9 @@
       "grapheConfigurations": [
         {
           "nom": "emploi salarié eqtp par secteur d'activité - Camembert",
-          "grapheTypeCode": "Camembert",
+          "grapheTypeCode": "CAMEMBERT",
           "isDefault": true,
-          "chartOptionsJson": "{\"type\":\"doughnut\",\"title\":\"emploi salarié eqtp par secteur d'activité\",\"dataDimension\":\"secteur_activite\",\"labelsToHide\":[],\"filter\":{\"enabled\":true,\"dimension\":\"annuel\",\"label\":\"année\",\"value\":\"\"},\"display\":{\"showLegend\":true,\"showDataLabels\":true}}"
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -619,6 +715,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "nombre de déclaration cnss par secteur d'activité - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -656,6 +760,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "indice de rotation de salariés par poste par secteur d'activité - Indicateur",
+          "grapheTypeCode": "INDICATEUR",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -699,9 +811,9 @@
       "grapheConfigurations": [
         {
           "nom": "emploi informel par secteur d'activité - Camembert",
-          "grapheTypeCode": "Camembert",
+          "grapheTypeCode": "CAMEMBERT",
           "isDefault": true,
-          "chartOptionsJson": "{\"type\":\"doughnut\",\"title\":\"emploi informel par secteur d'activité\",\"dataDimension\":\"secteur_activite_hcp\",\"labelsToHide\":[],\"filter\":{\"enabled\":true,\"dimension\":\"annuel\",\"label\":\"année\",\"value\":\"\"},\"display\":{\"showLegend\":true,\"showDataLabels\":true}}"
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -745,9 +857,9 @@
       "grapheConfigurations": [
         {
           "nom": "salarié public par secteur - Camembert",
-          "grapheTypeCode": "Camembert",
+          "grapheTypeCode": "CAMEMBERT",
           "isDefault": true,
-          "chartOptionsJson": "{\"type\":\"doughnut\",\"title\":\"salarié public par secteur\",\"dataDimension\":\"secteur_activite_hcp\",\"labelsToHide\":[],\"filter\":{\"enabled\":true,\"dimension\":\"annuel\",\"label\":\"année\",\"value\":\"\"},\"display\":{\"showLegend\":true,\"showDataLabels\":true}}"
+          "chartOptionsJson": ""
         }
       ]
     }

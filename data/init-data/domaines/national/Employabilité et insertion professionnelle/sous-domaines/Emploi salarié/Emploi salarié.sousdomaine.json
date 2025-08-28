@@ -36,6 +36,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Objectif ciblé - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -65,6 +73,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux de réalisation de l’objectif ciblé - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -93,6 +109,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre des bénéficiaires de l'emploi salarié - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -132,6 +156,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Emploi salarié par genre - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -169,6 +201,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Emploi salarié par région - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     }

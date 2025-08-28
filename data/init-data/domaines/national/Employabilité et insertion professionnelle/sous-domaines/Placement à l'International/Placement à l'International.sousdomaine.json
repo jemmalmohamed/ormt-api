@@ -36,6 +36,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre des bénéficiaires du PI - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -73,6 +81,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires du PI par genre - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -150,6 +166,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires du PI par SAE - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -188,6 +212,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires du PI par type de contrat - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -225,6 +257,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires du PI par région - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     }

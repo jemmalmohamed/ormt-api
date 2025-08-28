@@ -72,7 +72,12 @@ public class GrapheTypeSeeder implements CommandLineRunner {
                 new GrapheTypeData("HISTOGRAMME_EMPILTE_EVOLUTION", "Histogramme empilé évolution",
                         "Histogramme empilé pour comparer évolutions", "bar"),
                 new GrapheTypeData("COURBE_EVOLUTION", "Courbe linéaire évolution",
-                        "Courbes multiples pour évolutions temporelles", "line"));
+                        "Courbes multiples pour évolutions temporelles", "line"),
+                // Nouveaux types pris en charge par les configurations JSON
+                new GrapheTypeData("INDICATEUR", "indicateur", "Valeur unique numérique (tuile/indicateur)",
+                        "indicator"),
+                new GrapheTypeData("RADAR", "Radar", "Graphique radar multi-dimensions", "radar"),
+                new GrapheTypeData("NUAGE_DU_POINT", "Nuage de points", "Graphique de dispersion", "scatter"));
 
         // Load existing by code (case-insensitive handling by normalizing codes to
         // upper)

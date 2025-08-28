@@ -45,6 +45,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d’insertion à 3 ans par genre - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -82,6 +90,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d’insertion à 3 ans par âge - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -121,6 +137,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d’insertion à 3 ans par diplôme - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -143,7 +167,7 @@
       "dimensions": [
         {
           "nom": "taille_entreprise",
-          "libelle": "Taille d'entreprise",
+          "libelle": "Taille d’entreprise",
           "type": "texte",
           "association": {
             "principale": true,
@@ -159,10 +183,18 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d’insertion à 3 ans par taille d’entreprise - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
-      "nom": "Taux d’insertion à 3 ans par secteur d'activité économique",
+      "nom": "Taux d’insertion à 3 ans par secteur d’activité économique",
       "categorie": "Insertion des bénéficiaires du contrat insertion",
       "abreviation": "",
       "roleAcces": [
@@ -177,7 +209,7 @@
       "reglecalcul": "",
       "unite": "%",
       "periode": "2019-2023",
-      "description": "Taux d’insertion à 3 ans ventilé par secteur d'activité économique.",
+      "description": "Taux d’insertion à 3 ans ventilé par secteur d’activité économique.",
       "dimensions": [
         {
           "nom": "sae_insertion",
@@ -196,6 +228,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d’insertion à 3 ans par secteur d’activité économique - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -235,6 +275,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d’insertion à 3 ans par région - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -273,10 +321,18 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d’insertion à 3 ans selon la période de stage - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
-      "nom": "Taux d’insertion à l'issue de stage par taille d’entreprise",
+      "nom": "Taux d’insertion à l’issue de stage par taille d’entreprise",
       "categorie": "Insertion des bénéficiaires du contrat insertion",
       "abreviation": "",
       "roleAcces": [
@@ -291,11 +347,11 @@
       "reglecalcul": "",
       "unite": "%",
       "periode": "2023",
-      "description": "Taux d’insertion à l'issue de stage ventilé par taille d’entreprise.",
+      "description": "Taux d’insertion à l’issue de stage ventilé par taille d’entreprise.",
       "dimensions": [
         {
           "nom": "taille_entreprise",
-          "libelle": "Taille d'entreprise",
+          "libelle": "Taille d’entreprise",
           "type": "texte",
           "association": {
             "principale": true,
@@ -311,10 +367,18 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d’insertion à l’issue de stage par taille d’entreprise - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
-      "nom": "Taux d’insertion à l'issue de stage par secteur d'activité économique",
+      "nom": "Taux d’insertion à l’issue de stage par secteur d’activité économique",
       "categorie": "Insertion des bénéficiaires du contrat insertion",
       "abreviation": "",
       "roleAcces": [
@@ -329,7 +393,7 @@
       "reglecalcul": "",
       "unite": "%",
       "periode": "2023",
-      "description": "Taux d’insertion à l'issue de stage ventilé par secteur d'activité économique.",
+      "description": "Taux d’insertion à l’issue de stage ventilé par secteur d’activité économique.",
       "dimensions": [
         {
           "nom": "sae_insertion",
@@ -348,6 +412,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d’insertion à l’issue de stage par secteur d’activité économique - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     }

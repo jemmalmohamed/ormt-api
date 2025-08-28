@@ -113,7 +113,7 @@ public class IndicateurAdminLoadController extends BaseController<Indicateur> {
         @PreAuthorize("hasAuthority('indicateur:read')")
         public ResponseEntity<RestResponse<IndicateurDetailDto>> getIndicateur(
                         @PathVariable("id") Long id,
-                        @Parameter(description = "Table format: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'", example = "crud") @RequestParam(value = "tableFormat", required = false) String tableFormat) {
+                        @Parameter() @RequestParam(value = "tableFormat", required = false) String tableFormat) {
 
                 IndicateurDetailDto indicateurDetail;
 

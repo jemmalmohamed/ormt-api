@@ -63,6 +63,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "nombre d'entreprises - Radar",
+          "grapheTypeCode": "RADAR",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -118,6 +126,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "nombre d'entreprises entrantes - Radar",
+          "grapheTypeCode": "RADAR",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -175,6 +191,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "nombre d'entreprises sortantes - Radar",
+          "grapheTypeCode": "RADAR",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -230,6 +254,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "taux de survie des entreprises - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     }

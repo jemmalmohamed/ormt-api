@@ -45,6 +45,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "part de l'emploi informel par secteur d'activité - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -92,6 +100,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "part de l'emploi rémunéré par secteur d'activité - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -130,6 +146,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -155,7 +179,7 @@
           "libelle": "genre",
           "type": "texte",
           "association": {
-            "principale": false,
+            "principale": true,
             "temporelle": false
           }
         },
@@ -167,6 +191,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "part des actifs occupés bénéficiant d'une couverture médicale par genre - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -206,6 +238,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "part des salariés disposant d'un contrat de travail - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -244,6 +284,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "part de l'emploi de type occasionnel ou saisonnier par milieu de résidence - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -269,7 +317,7 @@
           "libelle": "genre",
           "type": "texte",
           "association": {
-            "principale": false,
+            "principale": true,
             "temporelle": false
           }
         },
@@ -281,6 +329,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "part de l'emploi de type occasionnel ou saisonnier par genre - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -320,6 +376,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par milieu de résidence - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -345,7 +409,7 @@
           "libelle": "genre",
           "type": "texte",
           "association": {
-            "principale": false,
+            "principale": true,
             "temporelle": false
           }
         },
@@ -357,6 +421,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par genre - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -396,6 +468,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -434,6 +514,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "part des salariés touchant un salaire inférieur au smig par secteur d'activité - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -471,6 +559,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "salariés (stables) déclarés à la cnss par secteur d'activité - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     }

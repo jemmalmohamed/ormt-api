@@ -198,8 +198,7 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
                         IndicateurFlatDataTable.buildFlatTableData(indicateur));
                 dto.setCrudTableData(
                         IndicateurCrudDataTable.buildCrudTableData(indicateur));
-                // dto.setCreateTemplateData(
-                // IndicateurCrudDataTable.buildCreateTemplateData(indicateur));
+
             }
         } catch (ArithmeticException e) {
             // Log the division by zero error and return DTO with basic info

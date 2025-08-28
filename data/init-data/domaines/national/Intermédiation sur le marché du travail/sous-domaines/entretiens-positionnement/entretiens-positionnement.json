@@ -1,223 +1,271 @@
 {
-    "nom": "entretiens de positionnement",
-    "description": "statistiques sur les entretiens de positionnement réalisés par l’anapec.",
-    "roleAcces": [
+  "nom": "entretiens de positionnement",
+  "description": "statistiques sur les entretiens de positionnement réalisés par l’anapec.",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "indicateurs": [
+    {
+      "nom": "objectif ciblé d’entretiens de positionnement",
+      "description": "objectif ciblé d’entretiens de positionnement",
+      "categorie": "entretiens de positionnement",
+      "abreviation": "",
+      "roleAcces": [
         {
-            "roleCode": "role_public",
-            "niveauacces": "lecture"
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
         }
-    ],
-    "actif": true,
-    "indicateurs": [
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2024",
+      "dimensions": [
         {
-            "nom": "objectif ciblé d’entretiens de positionnement",
-            "description": "objectif ciblé d’entretiens de positionnement",
-            "categorie": "entretiens de positionnement",
-            "abreviation": "",
-            "roleAcces": [
-                {
-                    "roleCode": "role_public",
-                    "niveauacces": "lecture"
-                }
-            ],
-            "actif": true,
-            "typeTb": "décisionnel / grand public",
-            "source": "anapec",
-            "reglecalcul": "",
-            "unite": "",
-            "periode": "2019-2024",
-            "dimensions": [
-                {
-                    "nom": "annuel",
-                    "libelle": "année",
-                    "type": "texte",
-                    "association": {
-                        "principale": false,
-                        "temporelle": true
-                    }
-                }
-            ]
-        },
-        {
-            "nom": "nombre d'entretiens de positionnement",
-            "description": "nombre d'entretiens de positionnement",
-            "categorie": "entretiens de positionnement",
-            "abreviation": "",
-            "roleAcces": [
-                {
-                    "roleCode": "role_public",
-                    "niveauacces": "lecture"
-                }
-            ],
-            "actif": true,
-            "typeTb": "décisionnel / grand public",
-            "source": "anapec",
-            "reglecalcul": "",
-            "unite": "",
-            "periode": "2019-2024",
-            "dimensions": [
-                {
-                    "nom": "annuel",
-                    "libelle": "année",
-                    "type": "texte",
-                    "association": {
-                        "principale": false,
-                        "temporelle": true
-                    }
-                }
-            ]
-        },
-        {
-            "nom": "entretiens de positionnement par genre",
-            "description": "répartition des entretiens de positionnement par genre",
-            "categorie": "entretiens de positionnement",
-            "abreviation": "",
-            "roleAcces": [
-                {
-                    "roleCode": "role_public",
-                    "niveauacces": "lecture"
-                }
-            ],
-            "actif": true,
-            "typeTb": "décisionnel / grand public",
-            "source": "anapec",
-            "reglecalcul": "",
-            "unite": "%",
-            "periode": "2019-2024",
-            "dimensions": [
-                {
-                    "nom": "genre",
-                    "libelle": "genre",
-                    "type": "texte",
-                    "association": {
-                        "principale": true,
-                        "temporelle": false
-                    }
-                },
-                {
-                    "nom": "annuel",
-                    "libelle": "année",
-                    "type": "texte",
-                    "association": {
-                        "principale": false,
-                        "temporelle": true
-                    }
-                }
-            ]
-        },
-        {
-            "nom": "entretiens de positionnement par âge",
-            "description": "répartition des entretiens de positionnement par âge",
-            "categorie": "entretiens de positionnement",
-            "abreviation": "",
-            "roleAcces": [
-                {
-                    "roleCode": "role_public",
-                    "niveauacces": "lecture"
-                }
-            ],
-            "actif": true,
-            "typeTb": "décisionnel / grand public",
-            "source": "anapec",
-            "reglecalcul": "",
-            "unite": "%",
-            "periode": "2019-2024",
-            "dimensions": [
-                {
-                    "nom": "age",
-                    "libelle": "âge",
-                    "type": "texte",
-                    "association": {
-                        "principale": true,
-                        "temporelle": false
-                    }
-                },
-                {
-                    "nom": "annuel",
-                    "libelle": "année",
-                    "type": "texte",
-                    "association": {
-                        "principale": false,
-                        "temporelle": true
-                    }
-                }
-            ]
-        },
-        {
-            "nom": "entretiens de positionnement par diplôme",
-            "description": "répartition des entretiens de positionnement par diplôme",
-            "categorie": "entretiens de positionnement",
-            "abreviation": "",
-            "roleAcces": [
-                {
-                    "roleCode": "role_public",
-                    "niveauacces": "lecture"
-                }
-            ],
-            "actif": true,
-            "typeTb": "décisionnel / grand public",
-            "source": "anapec",
-            "reglecalcul": "",
-            "unite": "%",
-            "periode": "2019-2024",
-            "dimensions": [
-                {
-                    "nom": "diplome",
-                    "libelle": "diplôme",
-                    "type": "texte",
-                    "association": {
-                        "principale": true,
-                        "temporelle": false
-                    }
-                },
-                {
-                    "nom": "annuel",
-                    "libelle": "année",
-                    "type": "texte",
-                    "association": {
-                        "principale": false,
-                        "temporelle": true
-                    }
-                }
-            ]
-        },
-        {
-            "nom": "entretiens de positionnement par région",
-            "description": "répartition des entretiens de positionnement par région",
-            "categorie": "entretiens de positionnement",
-            "abreviation": "",
-            "roleAcces": [
-                {
-                    "roleCode": "role_public",
-                    "niveauacces": "lecture"
-                }
-            ],
-            "actif": true,
-            "typeTb": "décisionnel / grand public",
-            "source": "anapec",
-            "reglecalcul": "",
-            "unite": "%",
-            "periode": "2019-2024",
-            "dimensions": [
-                {
-                    "nom": "region",
-                    "libelle": "région",
-                    "type": "texte",
-                    "association": {
-                        "principale": true,
-                        "temporelle": false
-                    }
-                },
-                {
-                    "nom": "annuel",
-                    "libelle": "année",
-                    "type": "texte",
-                    "association": {
-                        "principale": false,
-                        "temporelle": true
-                    }
-                }
-            ]
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
         }
-    ]
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "objectif ciblé d’entretiens de positionnement - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "nombre d’entretiens de positionnement",
+      "description": "nombre d’entretiens de positionnement",
+      "categorie": "entretiens de positionnement",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "nombre d’entretiens de positionnement - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "entretiens de positionnement par genre",
+      "description": "répartition des entretiens de positionnement par genre",
+      "categorie": "entretiens de positionnement",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "entretiens de positionnement par genre - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "entretiens de positionnement par âge",
+      "description": "répartition des entretiens de positionnement par âge",
+      "categorie": "entretiens de positionnement",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "age",
+          "libelle": "âge",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "entretiens de positionnement par âge - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "entretiens de positionnement par diplôme",
+      "description": "répartition des entretiens de positionnement par diplôme",
+      "categorie": "entretiens de positionnement",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "diplome",
+          "libelle": "diplôme",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "entretiens de positionnement par diplôme - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "entretiens de positionnement par région",
+      "description": "répartition des entretiens de positionnement par région",
+      "categorie": "entretiens de positionnement",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "entretiens de positionnement par région - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    }
+  ]
 }

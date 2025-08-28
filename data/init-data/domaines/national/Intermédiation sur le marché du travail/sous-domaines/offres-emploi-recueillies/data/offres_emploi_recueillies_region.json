@@ -1,5 +1,5 @@
 {
-    "indicateur": "Offre d'emploi recueillies par région",
+    "indicateur": "Offre d’emploi recueillies par région",
     "data": [
         {
             "annuel": "2019",
@@ -38,7 +38,7 @@
         },
         {
             "annuel": "2019",
-            "region": "L'Oriental",
+            "region": "L’Oriental",
             "valeur": 6.5
         },
         {
@@ -63,7 +63,7 @@
         },
         {
             "annuel": "2019",
-            "region": "Autres (offres à l'international)",
+            "region": "Autres (offres à l’international)",
             "valeur": 1.0
         },
         {
@@ -103,7 +103,7 @@
         },
         {
             "annuel": "2020",
-            "region": "L'Oriental",
+            "region": "L’Oriental",
             "valeur": 7.0
         },
         {
@@ -128,7 +128,7 @@
         },
         {
             "annuel": "2020",
-            "region": "Autres (offres à l'international)",
+            "region": "Autres (offres à l’international)",
             "valeur": 1.5
         },
         {
@@ -168,7 +168,7 @@
         },
         {
             "annuel": "2021",
-            "region": "L'Oriental",
+            "region": "L’Oriental",
             "valeur": 8.6
         },
         {
@@ -193,7 +193,7 @@
         },
         {
             "annuel": "2021",
-            "region": "Autres (offres à l'international)",
+            "region": "Autres (offres à l’international)",
             "valeur": 0.7
         },
         {
@@ -233,7 +233,7 @@
         },
         {
             "annuel": "2022",
-            "region": "L'Oriental",
+            "region": "L’Oriental",
             "valeur": 4.1
         },
         {
@@ -258,7 +258,7 @@
         },
         {
             "annuel": "2022",
-            "region": "Autres (offres à l'international)",
+            "region": "Autres (offres à l’international)",
             "valeur": 2.4
         },
         {
@@ -298,7 +298,7 @@
         },
         {
             "annuel": "2023",
-            "region": "L'Oriental",
+            "region": "L’Oriental",
             "valeur": 4.5
         },
         {
@@ -323,7 +323,7 @@
         },
         {
             "annuel": "2023",
-            "region": "Autres (offres à l'international)",
+            "region": "Autres (offres à l’international)",
             "valeur": 0.8
         },
         {
@@ -363,7 +363,7 @@
         },
         {
             "annuel": "2024",
-            "region": "L'Oriental",
+            "region": "L’Oriental",
             "valeur": 5.8
         },
         {
@@ -388,7 +388,7 @@
         },
         {
             "annuel": "2024",
-            "region": "Autres (offres à l'international)",
+            "region": "Autres (offres à l’international)",
             "valeur": 0.5
         }
     ]
