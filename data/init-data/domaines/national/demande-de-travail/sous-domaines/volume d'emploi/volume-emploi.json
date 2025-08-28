@@ -1,5 +1,5 @@
 {
-  "nom": "volume d'emploi",
+  "nom": "volume d’emploi",
   "roleAcces": [
     {
       "roleCode": "role_public",
@@ -7,7 +7,7 @@
     }
   ],
   "actif": true,
-  "description": "étude du volume d'emplois disponibles sur le marché",
+  "description": "étude du volume d’emplois disponibles sur le marché",
   "indicateurs": [
     {
       "nom": "emploi par genre",
@@ -25,7 +25,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Données détaillées sur la répartition de l'emploi par genre",
+      "description": "Données détaillées sur la répartition de l’emploi par genre",
       "dimensions": [
         {
           "nom": "genre",
@@ -80,7 +80,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Données détaillées sur la répartition de l'emploi par tranches d'âge",
+      "description": "Données détaillées sur la répartition de l’emploi par tranches d’âge",
       "dimensions": [
         {
           "nom": "age",
@@ -135,7 +135,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Données détaillées sur la répartition de l'emploi selon le niveau d'éducation",
+      "description": "Données détaillées sur la répartition de l’emploi selon le niveau d’éducation",
       "dimensions": [
         {
           "nom": "diplome",
@@ -175,7 +175,7 @@
       ]
     },
     {
-      "nom": "emploi par secteur d'activité",
+      "nom": "emploi par secteur d’activité",
       "categorie": "Emploi total",
       "abreviation": "",
       "roleAcces": [
@@ -190,11 +190,11 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Répartition de l'emploi dans divers secteurs économiques",
+      "description": "Répartition de l’emploi dans divers secteurs économiques",
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -222,7 +222,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "emploi par secteur d'activité - Courbes",
+          "nom": "emploi par secteur d’activité - Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -285,7 +285,7 @@
       ]
     },
     {
-      "nom": "emploi par type d'emploi",
+      "nom": "emploi par type d’emploi",
       "categorie": "Emploi total",
       "abreviation": "",
       "roleAcces": [
@@ -304,7 +304,7 @@
       "dimensions": [
         {
           "nom": "type_emploi",
-          "libelle": "type d'emploi",
+          "libelle": "type d’emploi",
           "type": "texte",
           "association": {
             "principale": true,
@@ -323,7 +323,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "emploi par type d'emploi - Courbes",
+          "nom": "emploi par type d’emploi - Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -331,7 +331,7 @@
       ]
     },
     {
-      "nom": "emploi par secteur d'emploi",
+      "nom": "emploi par secteur d’emploi",
       "categorie": "Emploi total",
       "abreviation": "",
       "roleAcces": [
@@ -346,11 +346,11 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Répartition des emplois dans différents secteurs d'activité",
+      "description": "Répartition des emplois dans différents secteurs d’activité",
       "dimensions": [
         {
           "nom": "secteur_emploi",
-          "libelle": "secteur d'emploi",
+          "libelle": "secteur d’emploi",
           "type": "texte",
           "association": {
             "principale": true,
@@ -369,7 +369,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "emploi par secteur d'emploi - Courbes",
+          "nom": "emploi par secteur d’emploi - Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -392,7 +392,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Répartition de l'emploi à travers les différentes régions",
+      "description": "Répartition de l’emploi à travers les différentes régions",
       "dimensions": [
         {
           "nom": "region",
@@ -423,7 +423,7 @@
       ]
     },
     {
-      "nom": "emploi indépendants déclarés à la cnss par secteur d'activité",
+      "nom": "emploi indépendants déclarés à la cnss par secteur d’activité",
       "categorie": "Emploi indépendant",
       "abreviation": "",
       "roleAcces": [
@@ -442,7 +442,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -470,7 +470,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "emploi indépendants déclarés à la cnss par secteur d'activité - Histogramme",
+          "nom": "emploi indépendants déclarés à la cnss par secteur d’activité - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -533,7 +533,7 @@
       ]
     },
     {
-      "nom": "salariés déclarés à la cnss par secteur d'activité",
+      "nom": "salariés déclarés à la cnss par secteur d’activité",
       "categorie": "Emploi salarié",
       "abreviation": "",
       "roleAcces": [
@@ -548,11 +548,11 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Salariés déclarés à la CNSS dans différents secteurs d'activité",
+      "description": "Salariés déclarés à la CNSS dans différents secteurs d’activité",
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -580,7 +580,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "salariés déclarés à la cnss par secteur d'activité - Histogramme",
+          "nom": "salariés déclarés à la cnss par secteur d’activité - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -634,7 +634,7 @@
       ]
     },
     {
-      "nom": "emploi salarié eqtp par secteur d'activité",
+      "nom": "emploi salarié eqtp par secteur d’activité",
       "categorie": "Emploi salarié",
       "abreviation": "",
       "roleAcces": [
@@ -649,11 +649,11 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Emplois en équivalent temps plein par secteur d'activité",
+      "description": "Emplois en équivalent temps plein par secteur d’activité",
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -672,7 +672,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "emploi salarié eqtp par secteur d'activité - Camembert",
+          "nom": "emploi salarié eqtp par secteur d’activité - Camembert",
           "grapheTypeCode": "CAMEMBERT",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -680,7 +680,7 @@
       ]
     },
     {
-      "nom": "nombre de déclaration cnss par secteur d'activité",
+      "nom": "nombre de déclaration cnss par secteur d’activité",
       "categorie": "Emploi salarié",
       "abreviation": "",
       "typeTb": "décisionnel",
@@ -695,11 +695,11 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Nombre de déclarations à la CNSS selon le secteur d'activité",
+      "description": "Nombre de déclarations à la CNSS selon le secteur d’activité",
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -718,7 +718,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "nombre de déclaration cnss par secteur d'activité - Histogramme",
+          "nom": "nombre de déclaration cnss par secteur d’activité - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -726,7 +726,7 @@
       ]
     },
     {
-      "nom": "indice de rotation de salariés par poste par secteur d'activité",
+      "nom": "indice de rotation de salariés par poste par secteur d’activité",
       "categorie": "Emploi salarié",
       "abreviation": "",
       "typeTb": "décisionnel",
@@ -745,7 +745,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité_cnss",
+          "libelle": "secteur d’activité_cnss",
           "type": "texte",
           "association": {
             "principale": true,
@@ -764,7 +764,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "indice de rotation de salariés par poste par secteur d'activité - Indicateur",
+          "nom": "indice de rotation de salariés par poste par secteur d’activité - Indicateur",
           "grapheTypeCode": "INDICATEUR",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -772,7 +772,7 @@
       ]
     },
     {
-      "nom": "emploi informel par secteur d'activité",
+      "nom": "emploi informel par secteur d’activité",
       "categorie": "Emploi informel",
       "abreviation": "",
       "typeTb": "décisionnel",
@@ -787,11 +787,11 @@
       "reglecalcul": "et-p-s-idp",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Données sur l'emploi informel dans chaque secteur économique",
+      "description": "Données sur l’emploi informel dans chaque secteur économique",
       "dimensions": [
         {
           "nom": "secteur_activite_hcp",
-          "libelle": "secteur d'activité hcp",
+          "libelle": "secteur d’activité hcp",
           "type": "texte",
           "association": {
             "principale": true,
@@ -810,7 +810,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "emploi informel par secteur d'activité - Camembert",
+          "nom": "emploi informel par secteur d’activité - Camembert",
           "grapheTypeCode": "CAMEMBERT",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -833,11 +833,11 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Répartition des salariés du secteur public par secteur d'activité",
+      "description": "Répartition des salariés du secteur public par secteur d’activité",
       "dimensions": [
         {
           "nom": "secteur_activite_hcp",
-          "libelle": "secteur d'activité hcp",
+          "libelle": "secteur d’activité hcp",
           "type": "texte",
           "association": {
             "principale": true,

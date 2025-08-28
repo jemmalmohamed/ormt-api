@@ -1,5 +1,5 @@
 {
-    "indicateur": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par région",
+    "indicateur": "Taux d’insertion des lauréats de la formation professionnelle à 36 mois par région",
     "data": [
         {
             "region": "Béni Mellal-Khénifra",
@@ -37,7 +37,7 @@
             "valeur": 77.6
         },
         {
-            "region": "L'Oriental",
+            "region": "L’Oriental",
             "annuel": "2016",
             "valeur": 73.1
         },

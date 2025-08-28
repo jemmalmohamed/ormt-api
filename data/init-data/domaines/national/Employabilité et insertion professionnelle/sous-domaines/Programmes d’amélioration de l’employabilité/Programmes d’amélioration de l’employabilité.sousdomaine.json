@@ -268,7 +268,7 @@
       ]
     },
     {
-      "nom": "Bénéficiaires de la FSE par secteur d'activité économique",
+      "nom": "Bénéficiaires de la FSE par secteur d’activité économique",
       "categorie": "Programmes d’amélioration de l’employabilité",
       "abreviation": "",
       "roleAcces": [
@@ -283,7 +283,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Bénéficiaires de la FSE ventilés par secteur d'activité économique.",
+      "description": "Bénéficiaires de la FSE ventilés par secteur d’activité économique.",
       "dimensions": [
         {
           "nom": "sae_fse",
@@ -306,7 +306,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Bénéficiaires de la FSE par secteur d'activité économique - Camembert",
+          "nom": "Bénéficiaires de la FSE par secteur d’activité économique - Camembert",
           "grapheTypeCode": "CAMEMBERT",
           "isDefault": true,
           "chartOptionsJson": ""

@@ -1,6 +1,6 @@
 {
-  "nom": "qualité de l'emploi",
-  "description": "étude des caractéristiques qualitatives du marché de l'emploi",
+  "nom": "qualité de l’emploi",
+  "description": "étude des caractéristiques qualitatives du marché de l’emploi",
   "roleAcces": [
     {
       "roleCode": "role_public",
@@ -10,8 +10,8 @@
   "actif": true,
   "indicateurs": [
     {
-      "nom": "part de l'emploi informel par secteur d'activité",
-      "description": "part de l'emploi informel par secteur d'activité",
+      "nom": "part de l’emploi informel par secteur d’activité",
+      "description": "part de l’emploi informel par secteur d’activité",
       "categorie": "emploi",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -29,7 +29,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité 7p",
+          "libelle": "secteur d’activité 7p",
           "type": "texte",
           "association": {
             "principale": true,
@@ -48,7 +48,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part de l'emploi informel par secteur d'activité - Courbes",
+          "nom": "part de l’emploi informel par secteur d’activité - Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -56,8 +56,8 @@
       ]
     },
     {
-      "nom": "part de l'emploi rémunéré par secteur d'activité",
-      "description": "part de l'emploi rémunéré par secteur d'activité",
+      "nom": "part de l’emploi rémunéré par secteur d’activité",
+      "description": "part de l’emploi rémunéré par secteur d’activité",
       "categorie": "emploi",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -75,7 +75,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité 7p",
+          "libelle": "secteur d’activité 7p",
           "type": "texte",
           "association": {
             "principale": true,
@@ -103,7 +103,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part de l'emploi rémunéré par secteur d'activité - Courbes",
+          "nom": "part de l’emploi rémunéré par secteur d’activité - Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -111,8 +111,8 @@
       ]
     },
     {
-      "nom": "part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence",
-      "description": "part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence",
+      "nom": "part des actifs occupés bénéficiant d’une couverture médicale par milieu de résidence",
+      "description": "part des actifs occupés bénéficiant d’une couverture médicale par milieu de résidence",
       "categorie": "qualité de l’emploi",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -149,7 +149,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence - Courbes",
+          "nom": "part des actifs occupés bénéficiant d’une couverture médicale par milieu de résidence - Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -157,8 +157,8 @@
       ]
     },
     {
-      "nom": "part des actifs occupés bénéficiant d'une couverture médicale par genre",
-      "description": "part des actifs occupés bénéficiant d'une couverture médicale par genre",
+      "nom": "part des actifs occupés bénéficiant d’une couverture médicale par genre",
+      "description": "part des actifs occupés bénéficiant d’une couverture médicale par genre",
       "categorie": "qualité de l’emploi",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -195,7 +195,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part des actifs occupés bénéficiant d'une couverture médicale par genre - Courbes",
+          "nom": "part des actifs occupés bénéficiant d’une couverture médicale par genre - Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -203,8 +203,8 @@
       ]
     },
     {
-      "nom": "part des salariés disposant d'un contrat de travail",
-      "description": "part des salariés disposant d'un contrat de travail",
+      "nom": "part des salariés disposant d’un contrat de travail",
+      "description": "part des salariés disposant d’un contrat de travail",
       "categorie": "qualité de l’emploi",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -241,7 +241,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part des salariés disposant d'un contrat de travail - Courbes",
+          "nom": "part des salariés disposant d’un contrat de travail - Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -249,8 +249,8 @@
       ]
     },
     {
-      "nom": "part de l'emploi de type occasionnel ou saisonnier par milieu de résidence",
-      "description": "part de l'emploi de type occasionnel ou saisonnier par milieu de résidence",
+      "nom": "part de l’emploi de type occasionnel ou saisonnier par milieu de résidence",
+      "description": "part de l’emploi de type occasionnel ou saisonnier par milieu de résidence",
       "categorie": "qualité de l’emploi",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -287,7 +287,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part de l'emploi de type occasionnel ou saisonnier par milieu de résidence - Courbes",
+          "nom": "part de l’emploi de type occasionnel ou saisonnier par milieu de résidence - Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -295,8 +295,8 @@
       ]
     },
     {
-      "nom": "part de l'emploi de type occasionnel ou saisonnier par genre",
-      "description": "part de l'emploi de type occasionnel ou saisonnier par genre",
+      "nom": "part de l’emploi de type occasionnel ou saisonnier par genre",
+      "description": "part de l’emploi de type occasionnel ou saisonnier par genre",
       "categorie": "qualité de l’emploi",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -333,7 +333,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part de l'emploi de type occasionnel ou saisonnier par genre - Courbes",
+          "nom": "part de l’emploi de type occasionnel ou saisonnier par genre - Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -433,8 +433,8 @@
       ]
     },
     {
-      "nom": "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle",
-      "description": "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle",
+      "nom": "taux d’affiliation des actifs occupés à une organisation syndicale ou professionnelle",
+      "description": "taux d’affiliation des actifs occupés à une organisation syndicale ou professionnelle",
       "categorie": "qualité de l’emploi",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -471,7 +471,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle - Courbes",
+          "nom": "taux d’affiliation des actifs occupés à une organisation syndicale ou professionnelle - Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -479,8 +479,8 @@
       ]
     },
     {
-      "nom": "part des salariés touchant un salaire inférieur au smig par secteur d'activité",
-      "description": "part des salariés touchant un salaire inférieur au smig par secteur d'activité",
+      "nom": "part des salariés touchant un salaire inférieur au smig par secteur d’activité",
+      "description": "part des salariés touchant un salaire inférieur au smig par secteur d’activité",
       "categorie": "salaires ",
       "abreviation": "",
       "typeTb": "décisionnel",
@@ -498,7 +498,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite_cnss",
-          "libelle": "secteur d'activité cnss",
+          "libelle": "secteur d’activité cnss",
           "type": "texte",
           "association": {
             "principale": true,
@@ -517,7 +517,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part des salariés touchant un salaire inférieur au smig par secteur d'activité - Courbes",
+          "nom": "part des salariés touchant un salaire inférieur au smig par secteur d’activité - Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -525,8 +525,8 @@
       ]
     },
     {
-      "nom": "salariés (stables) déclarés à la cnss par secteur d'activité",
-      "description": "salariés (stables) déclarés à la cnss par secteur d'activité - cnss",
+      "nom": "salariés (stables) déclarés à la cnss par secteur d’activité",
+      "description": "salariés (stables) déclarés à la cnss par secteur d’activité - cnss",
       "categorie": "salaires",
       "abreviation": "",
       "typeTb": "grand public",
@@ -544,7 +544,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite_cnss",
-          "libelle": "secteur d'activité cnss",
+          "libelle": "secteur d’activité cnss",
           "type": "texte",
           "association": {
             "principale": true,
@@ -563,7 +563,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "salariés (stables) déclarés à la cnss par secteur d'activité - Courbes",
+          "nom": "salariés (stables) déclarés à la cnss par secteur d’activité - Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""

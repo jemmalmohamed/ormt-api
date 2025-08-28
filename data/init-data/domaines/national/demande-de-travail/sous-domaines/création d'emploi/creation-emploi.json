@@ -1,6 +1,6 @@
 {
-  "nom": "création d'emploi",
-  "description": "étude de la création d'emplois sur le marché",
+  "nom": "création d’emploi",
+  "description": "étude de la création d’emplois sur le marché",
   "roleAcces": [
     {
       "roleCode": "role_public",
@@ -10,9 +10,9 @@
   "actif": true,
   "indicateurs": [
     {
-      "nom": "création d'emploi par genre",
-      "description": "création d'emploi par genre",
-      "categorie": "création d'emploi",
+      "nom": "création d’emploi par genre",
+      "description": "création d’emploi par genre",
+      "categorie": "création d’emploi",
       "abreviation": "",
       "roleAcces": [
         {
@@ -57,7 +57,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d'emploi par genre - Histogramme",
+          "nom": "création d’emploi par genre - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -65,9 +65,9 @@
       ]
     },
     {
-      "nom": "création d'emploi par diplôme",
-      "description": "création d'emploi par diplôme",
-      "categorie": "création d'emploi",
+      "nom": "création d’emploi par diplôme",
+      "description": "création d’emploi par diplôme",
+      "categorie": "création d’emploi",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
       "source": "hcp",
@@ -112,7 +112,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d'emploi par diplôme - Histogramme",
+          "nom": "création d’emploi par diplôme - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -120,9 +120,9 @@
       ]
     },
     {
-      "nom": "création d'emploi par statut professionnel",
-      "description": "création d'emploi par statut professionnel",
-      "categorie": "création d'emploi",
+      "nom": "création d’emploi par statut professionnel",
+      "description": "création d’emploi par statut professionnel",
+      "categorie": "création d’emploi",
       "abreviation": "",
       "roleAcces": [
         {
@@ -167,7 +167,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d'emploi par statut professionnel - Histogramme",
+          "nom": "création d’emploi par statut professionnel - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -175,9 +175,9 @@
       ]
     },
     {
-      "nom": "création d'emploi par secteur d'activité -7p",
-      "description": "création d'emploi par secteur d'activité -7p",
-      "categorie": "création d'emploi",
+      "nom": "création d’emploi par secteur d’activité -7p",
+      "description": "création d’emploi par secteur d’activité -7p",
+      "categorie": "création d’emploi",
       "abreviation": "",
       "roleAcces": [
         {
@@ -194,7 +194,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité 7p",
+          "libelle": "secteur d’activité 7p",
           "type": "texte",
           "association": {
             "principale": true,
@@ -222,7 +222,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d'emploi par secteur d'activité -7p - Histogramme",
+          "nom": "création d’emploi par secteur d’activité -7p - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -230,9 +230,9 @@
       ]
     },
     {
-      "nom": "création d'emploi par secteur d'activité -2p",
-      "description": "création d'emploi par secteur d'activité -2p",
-      "categorie": "création d'emploi",
+      "nom": "création d’emploi par secteur d’activité -2p",
+      "description": "création d’emploi par secteur d’activité -2p",
+      "categorie": "création d’emploi",
       "abreviation": "",
       "roleAcces": [
         {
@@ -249,7 +249,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité 2p",
+          "libelle": "secteur d’activité 2p",
           "type": "texte",
           "association": {
             "principale": true,
@@ -277,7 +277,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d'emploi par secteur d'activité -2p - Histogramme",
+          "nom": "création d’emploi par secteur d’activité -2p - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -285,9 +285,9 @@
       ]
     },
     {
-      "nom": "création d'emploi par secteur d'emploi",
-      "description": "création d'emploi par secteur d'emploi",
-      "categorie": "création d'emploi",
+      "nom": "création d’emploi par secteur d’emploi",
+      "description": "création d’emploi par secteur d’emploi",
+      "categorie": "création d’emploi",
       "abreviation": "",
       "roleAcces": [
         {
@@ -304,7 +304,7 @@
       "dimensions": [
         {
           "nom": "secteur_emploi",
-          "libelle": "secteur d'emploi",
+          "libelle": "secteur d’emploi",
           "type": "texte",
           "association": {
             "principale": true,
@@ -332,7 +332,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d'emploi par secteur d'emploi - Histogramme",
+          "nom": "création d’emploi par secteur d’emploi - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -340,9 +340,9 @@
       ]
     },
     {
-      "nom": "création d'emploi par type d'emploi",
-      "description": "création d'emploi par type d'emploi",
-      "categorie": "création d'emploi",
+      "nom": "création d’emploi par type d’emploi",
+      "description": "création d’emploi par type d’emploi",
+      "categorie": "création d’emploi",
       "abreviation": "",
       "roleAcces": [
         {
@@ -359,7 +359,7 @@
       "dimensions": [
         {
           "nom": "type_emploi",
-          "libelle": "type d'emploi",
+          "libelle": "type d’emploi",
           "type": "texte",
           "association": {
             "principale": true,
@@ -387,7 +387,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d'emploi par type d'emploi - Histogramme",
+          "nom": "création d’emploi par type d’emploi - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -395,9 +395,9 @@
       ]
     },
     {
-      "nom": "création d'emploi par région",
-      "description": "création d'emploi par région",
-      "categorie": "création d'emploi",
+      "nom": "création d’emploi par région",
+      "description": "création d’emploi par région",
+      "categorie": "création d’emploi",
       "abreviation": "",
       "roleAcces": [
         {
@@ -433,7 +433,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d'emploi par région - Carte",
+          "nom": "création d’emploi par région - Carte",
           "grapheTypeCode": "CARTE",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -441,9 +441,9 @@
       ]
     },
     {
-      "nom": "création d'emploi salariés par secteur d'activité",
-      "description": "création d'emploi salariés par secteur d'activité - cnss",
-      "categorie": "création d'emploi",
+      "nom": "création d’emploi salariés par secteur d’activité",
+      "description": "création d’emploi salariés par secteur d’activité - cnss",
+      "categorie": "création d’emploi",
       "abreviation": "",
       "roleAcces": [
         {
@@ -460,7 +460,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite_cnss",
-          "libelle": "secteur d'activité cnss",
+          "libelle": "secteur d’activité cnss",
           "type": "texte",
           "association": {
             "principale": true,
@@ -488,7 +488,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d'emploi salariés par secteur d'activité - Courbes",
+          "nom": "création d’emploi salariés par secteur d’activité - Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -496,9 +496,9 @@
       ]
     },
     {
-      "nom": "création d'emploi salariés par région",
-      "description": "création d'emploi salariés par région",
-      "categorie": "création d'emploi",
+      "nom": "création d’emploi salariés par région",
+      "description": "création d’emploi salariés par région",
+      "categorie": "création d’emploi",
       "abreviation": "",
       "roleAcces": [
         {
@@ -543,7 +543,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d'emploi salariés par région - Carte",
+          "nom": "création d’emploi salariés par région - Carte",
           "grapheTypeCode": "CARTE",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -551,9 +551,9 @@
       ]
     },
     {
-      "nom": "création d'emploi eqtp par secteur d'activité",
-      "description": "création d'emploi eqtp par secteur d'activité",
-      "categorie": "création d'emploi",
+      "nom": "création d’emploi eqtp par secteur d’activité",
+      "description": "création d’emploi eqtp par secteur d’activité",
+      "categorie": "création d’emploi",
       "abreviation": "",
       "roleAcces": [
         {
@@ -570,7 +570,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -589,7 +589,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d'emploi eqtp par secteur d'activité - Histogramme",
+          "nom": "création d’emploi eqtp par secteur d’activité - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -597,9 +597,9 @@
       ]
     },
     {
-      "nom": "création d'emploi indépendants déclaré à la cnss par secteur d'activité",
-      "description": "création d'emploi indépendants déclaré à la cnss par secteur d'activité",
-      "categorie": "création d'emploi",
+      "nom": "création d’emploi indépendants déclaré à la cnss par secteur d’activité",
+      "description": "création d’emploi indépendants déclaré à la cnss par secteur d’activité",
+      "categorie": "création d’emploi",
       "abreviation": "",
       "roleAcces": [
         {
@@ -616,7 +616,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -644,7 +644,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d'emploi indépendants déclaré à la cnss par secteur d'activité - Histogramme",
+          "nom": "création d’emploi indépendants déclaré à la cnss par secteur d’activité - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -652,9 +652,9 @@
       ]
     },
     {
-      "nom": "création d'emploi indépendants déclaré à la cnss par région",
-      "description": "création d'emploi indépendants déclaré à la cnss par région",
-      "categorie": "création d'emploi",
+      "nom": "création d’emploi indépendants déclaré à la cnss par région",
+      "description": "création d’emploi indépendants déclaré à la cnss par région",
+      "categorie": "création d’emploi",
       "abreviation": "",
       "roleAcces": [
         {
@@ -699,7 +699,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d'emploi indépendants déclaré à la cnss par région - Carte",
+          "nom": "création d’emploi indépendants déclaré à la cnss par région - Carte",
           "grapheTypeCode": "CARTE",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -707,9 +707,9 @@
       ]
     },
     {
-      "nom": "création d'emploi informel estimé",
-      "description": "création d'emploi informel estimé",
-      "categorie": "création d'emploi",
+      "nom": "création d’emploi informel estimé",
+      "description": "création d’emploi informel estimé",
+      "categorie": "création d’emploi",
       "abreviation": "",
       "roleAcces": [
         {
@@ -726,7 +726,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -745,7 +745,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d'emploi informel estimé - Histogramme",
+          "nom": "création d’emploi informel estimé - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""

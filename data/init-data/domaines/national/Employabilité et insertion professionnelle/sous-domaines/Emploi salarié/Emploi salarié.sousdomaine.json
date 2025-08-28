@@ -25,7 +25,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Objectif ciblé pour l'emploi salarié.",
+      "description": "Objectif ciblé pour l’emploi salarié.",
       "dimensions": [
         {
           "nom": "annuel",
@@ -62,7 +62,7 @@
       "reglecalcul": "",
       "unite": "%",
       "periode": "2019-2024",
-      "description": "Taux de réalisation de l’objectif ciblé pour l'emploi salarié.",
+      "description": "Taux de réalisation de l’objectif ciblé pour l’emploi salarié.",
       "dimensions": [
         {
           "nom": "annuel",
@@ -84,7 +84,7 @@
       ]
     },
     {
-      "nom": "Nombre des bénéficiaires de l'emploi salarié",
+      "nom": "Nombre des bénéficiaires de l’emploi salarié",
       "categorie": "Emploi salarié",
       "abreviation": "",
       "roleAcces": [
@@ -99,7 +99,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Nombre des bénéficiaires de l'emploi salarié.",
+      "description": "Nombre des bénéficiaires de l’emploi salarié.",
       "dimensions": [
         {
           "nom": "annuel",
@@ -113,7 +113,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Nombre des bénéficiaires de l'emploi salarié - Histogramme",
+          "nom": "Nombre des bénéficiaires de l’emploi salarié - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""

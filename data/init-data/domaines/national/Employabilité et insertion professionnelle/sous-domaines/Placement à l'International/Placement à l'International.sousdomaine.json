@@ -1,5 +1,5 @@
 {
-  "nom": "Placement à l'International",
+  "nom": "Placement à l’International",
   "description": "Sous domaine du domaine Employabilité et insertion professionnelle.",
   "roleAcces": [
     {
@@ -11,7 +11,7 @@
   "indicateurs": [
     {
       "nom": "Nombre des bénéficiaires du PI",
-      "categorie": "Placement à l'International",
+      "categorie": "Placement à l’International",
       "abreviation": "",
       "roleAcces": [
         {
@@ -25,7 +25,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Nombre total des bénéficiaires du Placement à l'International.",
+      "description": "Nombre total des bénéficiaires du Placement à l’International.",
       "dimensions": [
         {
           "nom": "annuel",
@@ -48,7 +48,7 @@
     },
     {
       "nom": "Bénéficiaires du PI par genre",
-      "categorie": "Placement à l'International",
+      "categorie": "Placement à l’International",
       "abreviation": "",
       "roleAcces": [
         {
@@ -94,7 +94,7 @@
     },
     {
       "nom": "Bénéficiaires du PI par pays d’accueil",
-      "categorie": "Placement à l'International",
+      "categorie": "Placement à l’International",
       "abreviation": "",
       "roleAcces": [
         {
@@ -112,7 +112,7 @@
       "dimensions": [
         {
           "nom": "pays_accueil",
-          "libelle": "Pays d'accueil",
+          "libelle": "Pays d’accueil",
           "type": "texte",
           "association": {
             "principale": true,
@@ -132,7 +132,7 @@
     },
     {
       "nom": "Bénéficiaires du PI par SAE",
-      "categorie": "Placement à l'International",
+      "categorie": "Placement à l’International",
       "abreviation": "",
       "roleAcces": [
         {
@@ -178,7 +178,7 @@
     },
     {
       "nom": "Bénéficiaires du PI par type de contrat",
-      "categorie": "Placement à l'International",
+      "categorie": "Placement à l’International",
       "abreviation": "",
       "roleAcces": [
         {
@@ -224,7 +224,7 @@
     },
     {
       "nom": "Bénéficiaires du PI par région",
-      "categorie": "Placement à l'International",
+      "categorie": "Placement à l’International",
       "abreviation": "",
       "roleAcces": [
         {

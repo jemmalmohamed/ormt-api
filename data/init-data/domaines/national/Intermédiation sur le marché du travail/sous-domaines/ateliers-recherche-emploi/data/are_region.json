@@ -1,5 +1,5 @@
 {
-    "indicateur": "Bénéficiaires d'ARE par région",
+    "indicateur": "Bénéficiaires d’ARE par région",
     "data": [
         {
             "annuel": "2019",
@@ -38,7 +38,7 @@
         },
         {
             "annuel": "2019",
-            "region": "L'Oriental",
+            "region": "L’Oriental",
             "valeur": 5
         },
         {
@@ -98,7 +98,7 @@
         },
         {
             "annuel": "2020",
-            "region": "L'Oriental",
+            "region": "L’Oriental",
             "valeur": 8
         },
         {
@@ -158,7 +158,7 @@
         },
         {
             "annuel": "2021",
-            "region": "L'Oriental",
+            "region": "L’Oriental",
             "valeur": 4
         },
         {
@@ -218,7 +218,7 @@
         },
         {
             "annuel": "2022",
-            "region": "L'Oriental",
+            "region": "L’Oriental",
             "valeur": 4
         },
         {
@@ -278,7 +278,7 @@
         },
         {
             "annuel": "2023",
-            "region": "L'Oriental",
+            "region": "L’Oriental",
             "valeur": 3
         },
         {
@@ -338,7 +338,7 @@
         },
         {
             "annuel": "2024",
-            "region": "L'Oriental",
+            "region": "L’Oriental",
             "valeur": 5
         },
         {

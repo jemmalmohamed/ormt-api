@@ -1,6 +1,6 @@
 {
   "nom": "salaires & productivité",
-  "description": "étude des salaires et de la productivité dans l'économie",
+  "description": "étude des salaires et de la productivité dans l’économie",
   "roleAcces": [
     {
       "roleCode": "role_public",
@@ -10,8 +10,8 @@
   "actif": true,
   "indicateurs": [
     {
-      "nom": "productivité par secteur d'activité",
-      "description": "productivité par secteur d'activité",
+      "nom": "productivité par secteur d’activité",
+      "description": "productivité par secteur d’activité",
       "categorie": "productivité",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -29,7 +29,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -57,7 +57,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "productivité par secteur d'activité - Histogramme",
+          "nom": "productivité par secteur d’activité - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -65,8 +65,8 @@
       ]
     },
     {
-      "nom": "valeur ajoutée par secteur d'activité",
-      "description": "valeur ajoutée par secteur d'activité",
+      "nom": "valeur ajoutée par secteur d’activité",
+      "description": "valeur ajoutée par secteur d’activité",
       "categorie": "productivité",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -84,7 +84,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -112,7 +112,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "valeur ajoutée par secteur d'activité - Camembert",
+          "nom": "valeur ajoutée par secteur d’activité - Camembert",
           "grapheTypeCode": "CAMEMBERT",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -120,8 +120,8 @@
       ]
     },
     {
-      "nom": "masse salariale par secteur d'activité",
-      "description": "masse salariale par secteur d'activité",
+      "nom": "masse salariale par secteur d’activité",
+      "description": "masse salariale par secteur d’activité",
       "categorie": "salaires",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -139,7 +139,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -167,7 +167,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "masse salariale par secteur d'activité - Camembert",
+          "nom": "masse salariale par secteur d’activité - Camembert",
           "grapheTypeCode": "CAMEMBERT",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -175,8 +175,8 @@
       ]
     },
     {
-      "nom": "salaire moyen par secteur d'activité",
-      "description": "salaire moyen par secteur d'activité",
+      "nom": "salaire moyen par secteur d’activité",
+      "description": "salaire moyen par secteur d’activité",
       "categorie": "salaires",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -194,7 +194,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -222,7 +222,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "salaire moyen par secteur d'activité - Camembert",
+          "nom": "salaire moyen par secteur d’activité - Camembert",
           "grapheTypeCode": "CAMEMBERT",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -304,8 +304,8 @@
       ]
     },
     {
-      "nom": "salaire moyen à l'année n par secteur d'activité",
-      "description": "salaire moyen à l'année n par secteur d'activité",
+      "nom": "salaire moyen à l’année n par secteur d’activité",
+      "description": "salaire moyen à l’année n par secteur d’activité",
       "categorie": "salaires",
       "abreviation": "",
       "typeTb": "décisionnel",
@@ -323,7 +323,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -351,7 +351,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "salaire moyen à l'année n par secteur d'activité - Indicateur",
+          "nom": "salaire moyen à l’année n par secteur d’activité - Indicateur",
           "grapheTypeCode": "INDICATEUR",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -359,8 +359,8 @@
       ]
     },
     {
-      "nom": "salaire moyen n-10 par secteur d'activité",
-      "description": "salaire moyen n-10 par secteur d'activité",
+      "nom": "salaire moyen n-10 par secteur d’activité",
+      "description": "salaire moyen n-10 par secteur d’activité",
       "categorie": "salaires",
       "abreviation": "",
       "typeTb": "décisionnel",
@@ -378,7 +378,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -406,7 +406,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "salaire moyen n-10 par secteur d'activité - Indicateur",
+          "nom": "salaire moyen n-10 par secteur d’activité - Indicateur",
           "grapheTypeCode": "INDICATEUR",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -507,7 +507,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,

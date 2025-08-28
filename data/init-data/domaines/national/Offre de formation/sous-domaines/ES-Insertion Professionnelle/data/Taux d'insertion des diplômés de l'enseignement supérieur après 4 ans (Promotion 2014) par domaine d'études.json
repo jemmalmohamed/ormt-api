@@ -1,5 +1,5 @@
 {
-    "indicateur": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par domaine d'études",
+    "indicateur": "Taux d’insertion des diplômés de l’enseignement supérieur après 4 ans (Promotion 2014) par domaine d’études",
     "data": [
         {
             "domaine_etudes": "Enseignement Originel",
@@ -97,7 +97,7 @@
             "valeur": 90.5
         },
         {
-            "domaine_etudes": "Sciences de l'Education",
+            "domaine_etudes": "Sciences de l’Education",
             "annuel": "2014",
             "valeur": 92.3
         },
@@ -107,7 +107,7 @@
             "valeur": 93.9
         },
         {
-            "domaine_etudes": "Sciences d'Ingénieur",
+            "domaine_etudes": "Sciences d’Ingénieur",
             "annuel": "2014",
             "valeur": 96.4
         },

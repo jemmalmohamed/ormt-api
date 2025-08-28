@@ -36,6 +36,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de visites des inspecteurs de travail - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -65,10 +73,18 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de observations émises - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
-      "nom": "Nombre d'observations par motif d'observation",
+      "nom": "Nombre d’observations par motif d’observation",
       "categorie": "Application de la loi",
       "abreviation": "",
       "typeTb": "grand public",
@@ -83,11 +99,11 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2021-2023",
-      "description": "Nombre d'observations par motif d'observation",
+      "description": "Nombre d’observations par motif d’observation",
       "dimensions": [
         {
           "nom": "motif_observation",
-          "libelle": "motif d'observation",
+          "libelle": "motif d’observation",
           "type": "texte",
           "association": {
             "principale": true,
@@ -103,10 +119,18 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre d’observations par motif d’observation - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
-      "nom": "Nombre d'observations par secteur",
+      "nom": "Nombre d’observations par secteur",
       "categorie": "Application de la loi",
       "abreviation": "",
       "typeTb": "grand public",
@@ -121,11 +145,11 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2021-2023",
-      "description": "Nombre d'observations par secteur",
+      "description": "Nombre d’observations par secteur",
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -140,6 +164,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre d’observations par secteur - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     },
@@ -170,6 +202,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de PV - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -199,6 +239,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de contraventions - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -227,6 +275,14 @@
             "principale": true,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de délits - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     }

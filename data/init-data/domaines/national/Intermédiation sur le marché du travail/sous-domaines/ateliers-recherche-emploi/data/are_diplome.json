@@ -1,5 +1,5 @@
 {
-    "indicateur": "Bénéficiaires d'ARE par diplôme",
+    "indicateur": "Bénéficiaires d’ARE par diplôme",
     "data": [
         {
             "annuel": "2019",
@@ -13,7 +13,7 @@
         },
         {
             "annuel": "2019",
-            "diplome": "Diplômés de l'enseignement supérieur",
+            "diplome": "Diplômés de l’enseignement supérieur",
             "valeur": 13
         },
         {
@@ -38,7 +38,7 @@
         },
         {
             "annuel": "2020",
-            "diplome": "Diplômés de l'enseignement supérieur",
+            "diplome": "Diplômés de l’enseignement supérieur",
             "valeur": 15
         },
         {
@@ -63,7 +63,7 @@
         },
         {
             "annuel": "2021",
-            "diplome": "Diplômés de l'enseignement supérieur",
+            "diplome": "Diplômés de l’enseignement supérieur",
             "valeur": 15
         },
         {
@@ -88,7 +88,7 @@
         },
         {
             "annuel": "2022",
-            "diplome": "Diplômés de l'enseignement supérieur",
+            "diplome": "Diplômés de l’enseignement supérieur",
             "valeur": 17
         },
         {
@@ -113,7 +113,7 @@
         },
         {
             "annuel": "2023",
-            "diplome": "Diplômés de l'enseignement supérieur",
+            "diplome": "Diplômés de l’enseignement supérieur",
             "valeur": 16
         },
         {
@@ -138,7 +138,7 @@
         },
         {
             "annuel": "2024",
-            "diplome": "Diplômés de l'enseignement supérieur",
+            "diplome": "Diplômés de l’enseignement supérieur",
             "valeur": 14
         },
         {

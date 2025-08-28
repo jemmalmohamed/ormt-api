@@ -1,5 +1,5 @@
 {
-    "indicateur": "Taux d'emploi des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante et par genre",
+    "indicateur": "Taux d’emploi des diplômés de l’enseignement supérieur après 4 ans (Promotion 2014) par composante et par genre",
     "data": [
         {
             "composante": "Enseignement supérieur privé",
@@ -51,7 +51,7 @@
         },
         {
             "composante": "Total",
-            "genre": "Taux d'emploi",
+            "genre": "Taux d’emploi",
             "annuel": "2014",
             "valeur": 69.40
         },

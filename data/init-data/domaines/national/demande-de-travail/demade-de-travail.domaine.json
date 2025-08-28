@@ -1,7 +1,7 @@
 {
   "nom": "demande de travail",
-  "description": "étude de l'emploi, sa qualité et les besoins en compétences du marché",
-  "apropos": "La demande de travail au niveau régional reflète les dynamiques économiques et sociales d'une région, en mesurant des aspects tels que l'emploi total, la création nette d'emplois, le nombre d'entreprises et de salariés dans le secteur formel, ainsi que la part de l'emploi informel. Ces indicateurs, issus de sources fiables comme le HCP, la CNSS et le CRI, permettent d'analyser la qualité de l'emploi, les besoins en compétences et en recrutement",
+  "description": "étude de l’emploi, sa qualité et les besoins en compétences du marché",
+  "apropos": "La demande de travail au niveau régional reflète les dynamiques économiques et sociales d’une région, en mesurant des aspects tels que l’emploi total, la création nette d’emplois, le nombre d’entreprises et de salariés dans le secteur formel, ainsi que la part de l’emploi informel. Ces indicateurs, issus de sources fiables comme le HCP, la CNSS et le CRI, permettent d’analyser la qualité de l’emploi, les besoins en compétences et en recrutement",
   "imageUrl": "/images/demande-travail.png",
   "roleAcces": [
     {

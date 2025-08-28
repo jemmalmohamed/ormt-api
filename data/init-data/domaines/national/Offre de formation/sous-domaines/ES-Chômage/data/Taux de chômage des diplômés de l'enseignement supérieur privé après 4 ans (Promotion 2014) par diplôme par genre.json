@@ -1,5 +1,5 @@
 {
-    "indicateur": "Taux de chômage des diplômés de l'enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme et genre",
+    "indicateur": "Taux de chômage des diplômés de l’enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme et genre",
     "data": [
         {
             "diplome": "Licence du privé",
@@ -56,19 +56,19 @@
             "valeur": 5.30
         },
         {
-            "diplome": "Diplôme d'ingénieur Privé",
+            "diplome": "Diplôme d’ingénieur Privé",
             "genre": "Femmes",
             "annuel": "2014",
             "valeur": 3.20
         },
         {
-            "diplome": "Diplôme d'ingénieur Privé",
+            "diplome": "Diplôme d’ingénieur Privé",
             "genre": "Hommes",
             "annuel": "2014",
             "valeur": 8.40
         },
         {
-            "diplome": "Diplôme d'ingénieur Privé",
+            "diplome": "Diplôme d’ingénieur Privé",
             "genre": "ensemble",
             "annuel": "2014",
             "valeur": 6.80

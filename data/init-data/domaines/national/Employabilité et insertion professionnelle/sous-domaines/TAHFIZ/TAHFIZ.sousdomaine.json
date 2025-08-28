@@ -200,7 +200,7 @@
       "reglecalcul": "",
       "unite": "%",
       "periode": "2019-2024",
-      "description": "Salariés bénéficiaires TAHFIZ ventilés par secteur d'activité économique (SAE).",
+      "description": "Salariés bénéficiaires TAHFIZ ventilés par secteur d’activité économique (SAE).",
       "dimensions": [
         {
           "nom": "sae",
@@ -250,7 +250,7 @@
       "dimensions": [
         {
           "nom": "taille_entreprise",
-          "libelle": "Taille d'entreprise",
+          "libelle": "Taille d’entreprise",
           "type": "texte",
           "association": {
             "principale": true,
@@ -323,7 +323,7 @@
       ]
     },
     {
-      "nom": "Nombre d'entreprises bénéficiaires TAHFIZ",
+      "nom": "Nombre d’entreprises bénéficiaires TAHFIZ",
       "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -338,7 +338,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Nombre total d'entreprises bénéficiaires du programme TAHFIZ.",
+      "description": "Nombre total d’entreprises bénéficiaires du programme TAHFIZ.",
       "dimensions": [
         {
           "nom": "annuel",
@@ -352,7 +352,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Nombre d'entreprises bénéficiaires TAHFIZ - Histogramme",
+          "nom": "Nombre d’entreprises bénéficiaires TAHFIZ - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -379,7 +379,7 @@
       "dimensions": [
         {
           "nom": "taille_entreprise",
-          "libelle": "Taille d'entreprise",
+          "libelle": "Taille d’entreprise",
           "type": "texte",
           "association": {
             "principale": true,
@@ -421,7 +421,7 @@
       "reglecalcul": "",
       "unite": "%",
       "periode": "2022 et 2024",
-      "description": "Entreprises bénéficiaires TAHFIZ ventilées par secteur d'activité économique (SAE).",
+      "description": "Entreprises bénéficiaires TAHFIZ ventilées par secteur d’activité économique (SAE).",
       "dimensions": [
         {
           "nom": "sae_tahfiz",

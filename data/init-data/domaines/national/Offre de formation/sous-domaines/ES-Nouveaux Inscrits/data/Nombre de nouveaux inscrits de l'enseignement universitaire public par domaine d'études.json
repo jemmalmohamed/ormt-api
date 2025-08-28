@@ -1,5 +1,5 @@
 {
-    "indicateur": "Nombre de nouveaux inscrits de l'enseignement universitaire public par domaine d'études",
+    "indicateur": "Nombre de nouveaux inscrits de l’enseignement universitaire public par domaine d’études",
     "data": [
         {
             "domaine_etudes": "Enseignement originel",
@@ -282,42 +282,42 @@
             "valeur": 1000
         },
         {
-            "domaine_etudes": "Sciences de l'ingénieur",
+            "domaine_etudes": "Sciences de l’ingénieur",
             "annuel": "2016",
             "valeur": 2000
         },
         {
-            "domaine_etudes": "Sciences de l'ingénieur",
+            "domaine_etudes": "Sciences de l’ingénieur",
             "annuel": "2017",
             "valeur": 3000
         },
         {
-            "domaine_etudes": "Sciences de l'ingénieur",
+            "domaine_etudes": "Sciences de l’ingénieur",
             "annuel": "2018",
             "valeur": 3000
         },
         {
-            "domaine_etudes": "Sciences de l'ingénieur",
+            "domaine_etudes": "Sciences de l’ingénieur",
             "annuel": "2019",
             "valeur": 4000
         },
         {
-            "domaine_etudes": "Sciences de l'ingénieur",
+            "domaine_etudes": "Sciences de l’ingénieur",
             "annuel": "2020",
             "valeur": 4000
         },
         {
-            "domaine_etudes": "Sciences de l'ingénieur",
+            "domaine_etudes": "Sciences de l’ingénieur",
             "annuel": "2021",
             "valeur": 4000
         },
         {
-            "domaine_etudes": "Sciences de l'ingénieur",
+            "domaine_etudes": "Sciences de l’ingénieur",
             "annuel": "2022",
             "valeur": 4000
         },
         {
-            "domaine_etudes": "Sciences de l'ingénieur",
+            "domaine_etudes": "Sciences de l’ingénieur",
             "annuel": "2023",
             "valeur": 5000
         },
@@ -402,42 +402,42 @@
             "valeur": 9000
         },
         {
-            "domaine_etudes": "Sciences de l'éducation",
+            "domaine_etudes": "Sciences de l’éducation",
             "annuel": "2016",
             "valeur": 0
         },
         {
-            "domaine_etudes": "Sciences de l'éducation",
+            "domaine_etudes": "Sciences de l’éducation",
             "annuel": "2017",
             "valeur": 1000
         },
         {
-            "domaine_etudes": "Sciences de l'éducation",
+            "domaine_etudes": "Sciences de l’éducation",
             "annuel": "2018",
             "valeur": 0
         },
         {
-            "domaine_etudes": "Sciences de l'éducation",
+            "domaine_etudes": "Sciences de l’éducation",
             "annuel": "2019",
             "valeur": 0
         },
         {
-            "domaine_etudes": "Sciences de l'éducation",
+            "domaine_etudes": "Sciences de l’éducation",
             "annuel": "2020",
             "valeur": 0
         },
         {
-            "domaine_etudes": "Sciences de l'éducation",
+            "domaine_etudes": "Sciences de l’éducation",
             "annuel": "2021",
             "valeur": 0
         },
         {
-            "domaine_etudes": "Sciences de l'éducation",
+            "domaine_etudes": "Sciences de l’éducation",
             "annuel": "2022",
             "valeur": 1000
         },
         {
-            "domaine_etudes": "Sciences de l'éducation",
+            "domaine_etudes": "Sciences de l’éducation",
             "annuel": "2023",
             "valeur": 1000
         },

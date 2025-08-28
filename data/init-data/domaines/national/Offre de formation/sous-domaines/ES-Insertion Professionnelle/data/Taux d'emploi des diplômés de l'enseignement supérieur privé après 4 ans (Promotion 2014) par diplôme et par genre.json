@@ -1,5 +1,5 @@
 {
-    "indicateur": "Taux d'emploi des diplômés de l'enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme et par genre",
+    "indicateur": "Taux d’emploi des diplômés de l’enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme et par genre",
     "data": [
         {
             "diplome": "Licence du privé",
@@ -38,13 +38,13 @@
             "valeur": 94.9
         },
         {
-            "diplome": "Diplôme d'ingénieur Privé",
+            "diplome": "Diplôme d’ingénieur Privé",
             "genre": "Femmes",
             "annuel": "2014",
             "valeur": 66.7
         },
         {
-            "diplome": "Diplôme d'ingénieur Privé",
+            "diplome": "Diplôme d’ingénieur Privé",
             "genre": "Hommes",
             "annuel": "2014",
             "valeur": 89.1
@@ -86,7 +86,7 @@
             "valeur": 81.2
         },
         {
-            "diplome": "Diplôme d'ingénieur Privé",
+            "diplome": "Diplôme d’ingénieur Privé",
             "genre": "ensemble",
             "annuel": "2014",
             "valeur": 80.6

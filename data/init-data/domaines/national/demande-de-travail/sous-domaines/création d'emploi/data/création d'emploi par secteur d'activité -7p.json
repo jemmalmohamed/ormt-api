@@ -1,5 +1,5 @@
 {
-    "indicateur": "création d'emploi par secteur d'activité -7p",
+    "indicateur": "création d’emploi par secteur d’activité -7p",
     "data": [
         {
             "secteur_activite": "agriculture, forêt et pêche",
@@ -92,91 +92,91 @@
             "valeur": -195000
         },
         {
-            "secteur_activite": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l’artisanat)",
             "milieu": "urbain",
             "annuel": "2019",
             "valeur": 2000
         },
         {
-            "secteur_activite": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l’artisanat)",
             "milieu": "rural",
             "annuel": "2019",
             "valeur": 15000
         },
         {
-            "secteur_activite": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l’artisanat)",
             "milieu": "national",
             "annuel": "2019",
             "valeur": 20000
         },
         {
-            "secteur_activite": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l’artisanat)",
             "milieu": "urbain",
             "annuel": "2020",
             "valeur": -24000
         },
         {
-            "secteur_activite": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l’artisanat)",
             "milieu": "rural",
             "annuel": "2020",
             "valeur": -14000
         },
         {
-            "secteur_activite": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l’artisanat)",
             "milieu": "national",
             "annuel": "2020",
             "valeur": -41000
         },
         {
-            "secteur_activite": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l’artisanat)",
             "milieu": "urbain",
             "annuel": "2021",
             "valeur": -14000
         },
         {
-            "secteur_activite": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l’artisanat)",
             "milieu": "rural",
             "annuel": "2021",
             "valeur": -7000
         },
         {
-            "secteur_activite": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l’artisanat)",
             "milieu": "national",
             "annuel": "2021",
             "valeur": -15000
         },
         {
-            "secteur_activite": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l’artisanat)",
             "milieu": "urbain",
             "annuel": "2022",
             "valeur": 19000
         },
         {
-            "secteur_activite": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l’artisanat)",
             "milieu": "rural",
             "annuel": "2022",
             "valeur": 14000
         },
         {
-            "secteur_activite": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l’artisanat)",
             "milieu": "national",
             "annuel": "2022",
             "valeur": 30000
         },
         {
-            "secteur_activite": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l’artisanat)",
             "milieu": "urbain",
             "annuel": "2023",
             "valeur": 0
         },
         {
-            "secteur_activite": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l’artisanat)",
             "milieu": "rural",
             "annuel": "2023",
             "valeur": 3000
         },
         {
-            "secteur_activite": "industrie (y compris l'artisanat)",
+            "secteur_activite": "industrie (y compris l’artisanat)",
             "milieu": "national",
             "annuel": "2023",
             "valeur": 2000

@@ -45,6 +45,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de protocoles signés par région - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -83,6 +91,14 @@
             "temporelle": true
           }
         }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de conventions collectives par région - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
       ]
     },
     {
@@ -105,7 +121,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -120,6 +136,14 @@
             "principale": false,
             "temporelle": true
           }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de conventions collectives par secteur - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
         }
       ]
     }

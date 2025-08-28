@@ -10,8 +10,8 @@
   "actif": true,
   "indicateurs": [
     {
-      "nom": "nombre d'entreprises",
-      "description": "nombre d'entreprises",
+      "nom": "nombre d’entreprises",
+      "description": "nombre d’entreprises",
       "categorie": "économie",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -29,7 +29,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -38,7 +38,7 @@
         },
         {
           "nom": "taille",
-          "libelle": "taille d'entreprise",
+          "libelle": "taille d’entreprise",
           "type": "texte",
           "association": {
             "principale": false,
@@ -66,7 +66,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "nombre d'entreprises - Radar",
+          "nom": "nombre d’entreprises - Radar",
           "grapheTypeCode": "RADAR",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -74,8 +74,8 @@
       ]
     },
     {
-      "nom": "nombre d'entreprises entrantes",
-      "description": "nombre d'entreprises entrantes",
+      "nom": "nombre d’entreprises entrantes",
+      "description": "nombre d’entreprises entrantes",
       "categorie": "économie",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -93,7 +93,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -102,7 +102,7 @@
         },
         {
           "nom": "taille",
-          "libelle": "taille d'entreprise",
+          "libelle": "taille d’entreprise",
           "type": "texte",
           "association": {
             "principale": false,
@@ -130,7 +130,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "nombre d'entreprises entrantes - Radar",
+          "nom": "nombre d’entreprises entrantes - Radar",
           "grapheTypeCode": "RADAR",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -138,8 +138,8 @@
       ]
     },
     {
-      "nom": "nombre d'entreprises sortantes",
-      "description": "nombre d'entreprises sortantes",
+      "nom": "nombre d’entreprises sortantes",
+      "description": "nombre d’entreprises sortantes",
       "categorie": "économie",
       "abreviation": "",
       "typeTb": "décisionnel / grand public",
@@ -157,7 +157,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -166,7 +166,7 @@
         },
         {
           "nom": "taille",
-          "libelle": "taille d'entreprise",
+          "libelle": "taille d’entreprise",
           "type": "texte",
           "association": {
             "principale": false,
@@ -194,7 +194,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "nombre d'entreprises sortantes - Radar",
+          "nom": "nombre d’entreprises sortantes - Radar",
           "grapheTypeCode": "RADAR",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -221,7 +221,7 @@
       "dimensions": [
         {
           "nom": "secteur_activite",
-          "libelle": "secteur d'activité",
+          "libelle": "secteur d’activité",
           "type": "texte",
           "association": {
             "principale": true,
@@ -230,7 +230,7 @@
         },
         {
           "nom": "taille",
-          "libelle": "taille d'entreprise",
+          "libelle": "taille d’entreprise",
           "type": "texte",
           "association": {
             "principale": false,

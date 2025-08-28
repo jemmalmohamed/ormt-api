@@ -12,7 +12,7 @@
     {
       "nom": "nombre total des inscrits à l’anapec",
       "description": "nombre total des inscrits à l’anapec",
-      "categorie": "Cumul des inscrits à l'ANAPEC",
+      "categorie": "Cumul des inscrits à l’ANAPEC",
       "abreviation": "",
       "roleAcces": [
         {
@@ -49,7 +49,7 @@
     {
       "nom": "inscrits à l’anapec par genre",
       "description": "répartition des inscrits à l’anapec par genre",
-      "categorie": "Cumul des inscrits à l'ANAPEC",
+      "categorie": "Cumul des inscrits à l’ANAPEC",
       "abreviation": "",
       "roleAcces": [
         {
@@ -95,7 +95,7 @@
     {
       "nom": "inscrits à l’anapec par âge",
       "description": "répartition des inscrits à l’anapec par âge",
-      "categorie": "Cumul des inscrits à l'ANAPEC",
+      "categorie": "Cumul des inscrits à l’ANAPEC",
       "abreviation": "",
       "roleAcces": [
         {
@@ -141,7 +141,7 @@
     {
       "nom": "inscrits à l’anapec par diplôme",
       "description": "répartition des inscrits à l’anapec par diplôme",
-      "categorie": "Cumul des inscrits à l'ANAPEC",
+      "categorie": "Cumul des inscrits à l’ANAPEC",
       "abreviation": "",
       "roleAcces": [
         {
@@ -187,7 +187,7 @@
     {
       "nom": "inscrits à l’anapec par région",
       "description": "répartition des inscrits à l’anapec par région",
-      "categorie": "Cumul des inscrits à l'ANAPEC",
+      "categorie": "Cumul des inscrits à l’ANAPEC",
       "abreviation": "",
       "roleAcces": [
         {
@@ -233,7 +233,7 @@
     {
       "nom": "nombre de nouveaux inscrits à l’anapec",
       "description": "nombre de nouveaux inscrits à l’anapec",
-      "categorie": "Cumul des inscrits à l'ANAPEC",
+      "categorie": "Cumul des inscrits à l’ANAPEC",
       "abreviation": "",
       "roleAcces": [
         {
@@ -270,7 +270,7 @@
     {
       "nom": "nouveaux inscrits à l’anapec par genre",
       "description": "répartition des nouveaux inscrits à l’anapec par genre",
-      "categorie": "Cumul des inscrits à l'ANAPEC",
+      "categorie": "Cumul des inscrits à l’ANAPEC",
       "abreviation": "",
       "roleAcces": [
         {
@@ -316,7 +316,7 @@
     {
       "nom": "nouveaux inscrits à l’anapec par âge",
       "description": "répartition des nouveaux inscrits à l’anapec par âge",
-      "categorie": "Cumul des inscrits à l'ANAPEC",
+      "categorie": "Cumul des inscrits à l’ANAPEC",
       "abreviation": "",
       "roleAcces": [
         {
@@ -362,7 +362,7 @@
     {
       "nom": "nouveaux inscrits à l’anapec par diplôme",
       "description": "répartition des nouveaux inscrits à l’anapec par diplôme",
-      "categorie": "Cumul des inscrits à l'ANAPEC",
+      "categorie": "Cumul des inscrits à l’ANAPEC",
       "abreviation": "",
       "roleAcces": [
         {
@@ -408,7 +408,7 @@
     {
       "nom": "nouveaux inscrits à l’anapec par région",
       "description": "répartition des nouveaux inscrits à l’anapec par région",
-      "categorie": "Cumul des inscrits à l'ANAPEC",
+      "categorie": "Cumul des inscrits à l’ANAPEC",
       "abreviation": "",
       "roleAcces": [
         {

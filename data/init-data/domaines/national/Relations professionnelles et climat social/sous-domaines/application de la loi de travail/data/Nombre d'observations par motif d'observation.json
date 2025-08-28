@@ -1,18 +1,18 @@
 {
-    "indicateur": "nombre d'observations par motif d'observation",
+    "indicateur": "nombre d’observations par motif d’observation",
     "data": [
         {
-            "motif_observation": "Observations d'ordre général",
+            "motif_observation": "Observations d’ordre général",
             "annuel": "2021",
             "valeur": 151869
         },
         {
-            "motif_observation": "Observations d'ordre général",
+            "motif_observation": "Observations d’ordre général",
             "annuel": "2022",
             "valeur": 250789
         },
         {
-            "motif_observation": "Observations d'ordre général",
+            "motif_observation": "Observations d’ordre général",
             "annuel": "2023",
             "valeur": 403207
         },
@@ -137,32 +137,32 @@
             "valeur": 8
         },
         {
-            "motif_observation": "Comité d'hygiène et de sécurité",
+            "motif_observation": "Comité d’hygiène et de sécurité",
             "annuel": "2021",
             "valeur": 1668
         },
         {
-            "motif_observation": "Comité d'hygiène et de sécurité",
+            "motif_observation": "Comité d’hygiène et de sécurité",
             "annuel": "2022",
             "valeur": 1774
         },
         {
-            "motif_observation": "Comité d'hygiène et de sécurité",
+            "motif_observation": "Comité d’hygiène et de sécurité",
             "annuel": "2023",
             "valeur": 1304
         },
         {
-            "motif_observation": "Comité d'entreprise",
+            "motif_observation": "Comité d’entreprise",
             "annuel": "2021",
             "valeur": 1516
         },
         {
-            "motif_observation": "Comité d'entreprise",
+            "motif_observation": "Comité d’entreprise",
             "annuel": "2022",
             "valeur": 1488
         },
         {
-            "motif_observation": "Comité d'entreprise",
+            "motif_observation": "Comité d’entreprise",
             "annuel": "2023",
             "valeur": 823
         },

@@ -1,5 +1,5 @@
 {
-    "indicateur": "Nombre de diplômés de l'enseignement universitaire public par domaine d'études",
+    "indicateur": "Nombre de diplômés de l’enseignement universitaire public par domaine d’études",
     "data": [
         {
             "domaine_etudes": "Enseignement originel",
@@ -282,42 +282,42 @@
             "valeur": 0
         },
         {
-            "domaine_etudes": "Sciences de l' ingénieur",
+            "domaine_etudes": "Sciences de l’ ingénieur",
             "annuel": "2016",
             "valeur": 4000
         },
         {
-            "domaine_etudes": "Sciences de l' ingénieur",
+            "domaine_etudes": "Sciences de l’ ingénieur",
             "annuel": "2017",
             "valeur": 4000
         },
         {
-            "domaine_etudes": "Sciences de l' ingénieur",
+            "domaine_etudes": "Sciences de l’ ingénieur",
             "annuel": "2018",
             "valeur": 3000
         },
         {
-            "domaine_etudes": "Sciences de l' ingénieur",
+            "domaine_etudes": "Sciences de l’ ingénieur",
             "annuel": "2019",
             "valeur": 4000
         },
         {
-            "domaine_etudes": "Sciences de l' ingénieur",
+            "domaine_etudes": "Sciences de l’ ingénieur",
             "annuel": "2020",
             "valeur": 4000
         },
         {
-            "domaine_etudes": "Sciences de l' ingénieur",
+            "domaine_etudes": "Sciences de l’ ingénieur",
             "annuel": "2021",
             "valeur": 5000
         },
         {
-            "domaine_etudes": "Sciences de l' ingénieur",
+            "domaine_etudes": "Sciences de l’ ingénieur",
             "annuel": "2022",
             "valeur": 5000
         },
         {
-            "domaine_etudes": "Sciences de l' ingénieur",
+            "domaine_etudes": "Sciences de l’ ingénieur",
             "annuel": "2023",
             "valeur": 5000
         },
@@ -362,82 +362,82 @@
             "valeur": 4000
         },
         {
-            "domaine_etudes": "Sciences de l'éducation",
+            "domaine_etudes": "Sciences de l’éducation",
             "annuel": "2016",
             "valeur": 0
         },
         {
-            "domaine_etudes": "Sciences de l'éducation",
+            "domaine_etudes": "Sciences de l’éducation",
             "annuel": "2017",
             "valeur": 0
         },
         {
-            "domaine_etudes": "Sciences de l'éducation",
+            "domaine_etudes": "Sciences de l’éducation",
             "annuel": "2018",
             "valeur": 0
         },
         {
-            "domaine_etudes": "Sciences de l'éducation",
+            "domaine_etudes": "Sciences de l’éducation",
             "annuel": "2019",
             "valeur": 0
         },
         {
-            "domaine_etudes": "Sciences de l'éducation",
+            "domaine_etudes": "Sciences de l’éducation",
             "annuel": "2020",
             "valeur": 0
         },
         {
-            "domaine_etudes": "Sciences de l'éducation",
+            "domaine_etudes": "Sciences de l’éducation",
             "annuel": "2021",
             "valeur": 1000
         },
         {
-            "domaine_etudes": "Sciences de l'éducation",
+            "domaine_etudes": "Sciences de l’éducation",
             "annuel": "2022",
             "valeur": 1000
         },
         {
-            "domaine_etudes": "Sciences de l'éducation",
+            "domaine_etudes": "Sciences de l’éducation",
             "annuel": "2023",
             "valeur": 1000
         },
         {
-            "domaine_etudes": "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+            "domaine_etudes": "Formation des enseignants (Sciences de l’éducation et E.N.S et E.N.S.E.T)",
             "annuel": "2016",
             "valeur": 3000
         },
         {
-            "domaine_etudes": "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+            "domaine_etudes": "Formation des enseignants (Sciences de l’éducation et E.N.S et E.N.S.E.T)",
             "annuel": "2017",
             "valeur": 4000
         },
         {
-            "domaine_etudes": "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+            "domaine_etudes": "Formation des enseignants (Sciences de l’éducation et E.N.S et E.N.S.E.T)",
             "annuel": "2018",
             "valeur": 3000
         },
         {
-            "domaine_etudes": "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+            "domaine_etudes": "Formation des enseignants (Sciences de l’éducation et E.N.S et E.N.S.E.T)",
             "annuel": "2019",
             "valeur": 3000
         },
         {
-            "domaine_etudes": "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+            "domaine_etudes": "Formation des enseignants (Sciences de l’éducation et E.N.S et E.N.S.E.T)",
             "annuel": "2020",
             "valeur": 3000
         },
         {
-            "domaine_etudes": "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+            "domaine_etudes": "Formation des enseignants (Sciences de l’éducation et E.N.S et E.N.S.E.T)",
             "annuel": "2021",
             "valeur": 2000
         },
         {
-            "domaine_etudes": "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+            "domaine_etudes": "Formation des enseignants (Sciences de l’éducation et E.N.S et E.N.S.E.T)",
             "annuel": "2022",
             "valeur": 3000
         },
         {
-            "domaine_etudes": "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+            "domaine_etudes": "Formation des enseignants (Sciences de l’éducation et E.N.S et E.N.S.E.T)",
             "annuel": "2023",
             "valeur": 4000
         },

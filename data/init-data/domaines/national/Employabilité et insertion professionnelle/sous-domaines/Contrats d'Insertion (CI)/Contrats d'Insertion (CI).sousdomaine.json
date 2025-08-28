@@ -1,5 +1,5 @@
 {
-  "nom": "Contrats d'Insertion (CI)",
+  "nom": "Contrats d’Insertion (CI)",
   "description": "Sous domaine du domaine Employabilité et insertion professionnelle.",
   "roleAcces": [
     {
@@ -10,8 +10,8 @@
   "actif": true,
   "indicateurs": [
     {
-      "nom": "Nombre des bénéficiaires du contrats d'insertion",
-      "categorie": "Chercheurs d'emploi  Bénéficiaires",
+      "nom": "Nombre des bénéficiaires du contrats d’insertion",
+      "categorie": "Chercheurs d’emploi  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -25,7 +25,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Nombre total des bénéficiaires du Contrat d'Insertion.",
+      "description": "Nombre total des bénéficiaires du Contrat d’Insertion.",
       "dimensions": [
         {
           "nom": "annuel",
@@ -39,7 +39,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Nombre des bénéficiaires du contrats d'insertion - Histogramme",
+          "nom": "Nombre des bénéficiaires du contrats d’insertion - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -48,7 +48,7 @@
     },
     {
       "nom": "Bénéficiaires du CI par genre",
-      "categorie": "Chercheurs d'emploi  Bénéficiaires",
+      "categorie": "Chercheurs d’emploi  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -94,7 +94,7 @@
     },
     {
       "nom": "Bénéficiaires du CI par diplôme",
-      "categorie": "Chercheurs d'emploi  Bénéficiaires",
+      "categorie": "Chercheurs d’emploi  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -140,7 +140,7 @@
     },
     {
       "nom": "Bénéficiaires du CI par SAE",
-      "categorie": "Chercheurs d'emploi  Bénéficiaires",
+      "categorie": "Chercheurs d’emploi  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -186,7 +186,7 @@
     },
     {
       "nom": "Bénéficiaires du CI par région",
-      "categorie": "Chercheurs d'emploi  Bénéficiaires",
+      "categorie": "Chercheurs d’emploi  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
         {
@@ -231,7 +231,7 @@
       ]
     },
     {
-      "nom": "Nombre d'entreprises bénéficiaires du CI",
+      "nom": "Nombre d’entreprises bénéficiaires du CI",
       "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -246,7 +246,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Nombre total d'entreprises bénéficiaires du CI.",
+      "description": "Nombre total d’entreprises bénéficiaires du CI.",
       "dimensions": [
         {
           "nom": "annuel",
@@ -260,7 +260,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Nombre d'entreprises bénéficiaires du CI - Histogramme",
+          "nom": "Nombre d’entreprises bénéficiaires du CI - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -268,7 +268,7 @@
       ]
     },
     {
-      "nom": "Entreprises bénéficiaires du CI par taille d'entreprise",
+      "nom": "Entreprises bénéficiaires du CI par taille d’entreprise",
       "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -283,11 +283,11 @@
       "reglecalcul": "",
       "unite": "%",
       "periode": "2022-2024",
-      "description": "Entreprises bénéficiaires du CI ventilées par taille d'entreprise.",
+      "description": "Entreprises bénéficiaires du CI ventilées par taille d’entreprise.",
       "dimensions": [
         {
           "nom": "taille_entreprise",
-          "libelle": "Taille d'entreprise",
+          "libelle": "Taille d’entreprise",
           "type": "texte",
           "association": {
             "principale": true,
@@ -306,7 +306,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Entreprises bénéficiaires du CI par taille d'entreprise - Camembert",
+          "nom": "Entreprises bénéficiaires du CI par taille d’entreprise - Camembert",
           "grapheTypeCode": "CAMEMBERT",
           "isDefault": true,
           "chartOptionsJson": ""

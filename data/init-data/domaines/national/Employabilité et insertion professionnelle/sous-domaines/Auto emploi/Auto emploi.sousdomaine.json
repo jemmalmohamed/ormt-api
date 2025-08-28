@@ -25,7 +25,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Objectif ciblé pour l'accompagnement à l'auto emploi.",
+      "description": "Objectif ciblé pour l’accompagnement à l’auto emploi.",
       "dimensions": [
         {
           "nom": "annuel",
@@ -222,7 +222,7 @@
       ]
     },
     {
-      "nom": "Nombre d'entreprises crées",
+      "nom": "Nombre d’entreprises crées",
       "categorie": "Entreprises crées",
       "abreviation": "",
       "roleAcces": [
@@ -237,7 +237,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Nombre total d'entreprises crées.",
+      "description": "Nombre total d’entreprises crées.",
       "dimensions": [
         {
           "nom": "annuel",
@@ -251,7 +251,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Nombre d'entreprises crées - Histogramme",
+          "nom": "Nombre d’entreprises crées - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
