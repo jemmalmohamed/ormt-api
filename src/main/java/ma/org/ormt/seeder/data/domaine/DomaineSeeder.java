@@ -48,7 +48,7 @@ public class DomaineSeeder implements CommandLineRunner {
 
     private final DomaineService domaineService;
     private final SousDomaineService sousDomaineService;
-    private final ObjectMapper objectMapper;;
+    private final ObjectMapper objectMapper;
     private final DonneeIndicateurSeeder donneeIndicateurSeeder;
     private final IndicateurSeeder indicateurSeeder;
 
@@ -228,7 +228,7 @@ public class DomaineSeeder implements CommandLineRunner {
                 indicateurSeeder.processIndicateurs(sousDomaineData.getIndicateurs(), createdSousDomaine);
             }
 
-            donneeIndicateurSeeder.createIndicateurDonnee(file);
+            // donneeIndicateurSeeder.createIndicateurDonnee(file);
 
         } catch (Exception e) {
             log.error("Error processing subdomain file {}: {}", file.getName(), e.getMessage());

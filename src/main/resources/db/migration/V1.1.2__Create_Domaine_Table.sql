@@ -37,6 +37,7 @@ CREATE TABLE
         id BIGSERIAL PRIMARY KEY,
         id_espace BIGINT NOT NULL,
         id_domaine BIGINT NOT NULL,
+        ordre INT NULL DEFAULT 0,
         status_code INT NULL,
         created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
         last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
@@ -51,6 +52,7 @@ CREATE TABLE
     IF NOT EXISTS sous_domaine (
         id BIGSERIAL PRIMARY KEY,
         id_domaine BIGINT NOT NULL,
+        ordre INT NULL DEFAULT 0,
         nom varchar(255) NOT NULL UNIQUE,
         actif BOOLEAN NOT NULL DEFAULT TRUE,
         description varchar(255) NULL,

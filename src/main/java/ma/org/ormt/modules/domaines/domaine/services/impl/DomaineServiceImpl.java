@@ -21,7 +21,6 @@ import ma.org.ormt.core.utilities.EntityInspector;
 import ma.org.ormt.core.utilities.PaginationUtils;
 import ma.org.ormt.core.utilities.files.ImageUtils;
 import ma.org.ormt.core.validators.ObjectsValidator;
-import ma.org.ormt.modules.domaines.domaine.dtos.details.DomaineDetailDtoMapper;
 import ma.org.ormt.modules.domaines.domaine.dtos.request.DomaineRequestDto;
 import ma.org.ormt.modules.domaines.domaine.dtos.request.DomaineRequestDtoMapper;
 import ma.org.ormt.modules.domaines.domaine.models.Domaine;
@@ -29,7 +28,6 @@ import ma.org.ormt.modules.domaines.domaine.repositories.DomaineRepository;
 import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.repositories.SousDomaineRepository;
-import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @Service
 public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements DomaineService {
@@ -47,12 +45,6 @@ public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements Doma
 
     @Autowired
     private DomaineRequestDtoMapper domaineRequestMapper;
-
-    @Autowired
-    private DomaineDetailDtoMapper domaineDetailDtoMapper;
-
-    @Autowired
-    private IndicateurService indicateurService;
 
     static final String NOT_FOUND_STRING = "Domaine not found";
 
@@ -201,41 +193,5 @@ public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements Doma
     public List<Long> getDomaineIdsByEspaceId(Long espaceId) {
         return domaineRepository.findIdsByEspaceId(espaceId);
     }
-
-    // @Override
-    // public DomaineDetailDto getDomaineWithTableData(Long id, String tableFormat)
-    // {
-    // Domaine domaine = findById(id)
-    // .orElseThrow(() -> new EntityNotFoundException("Domaine not found with id: "
-    // + id));
-
-    // // Map to DTO first
-    // DomaineDetailDto dto = domaineDetailDtoMapper.mapToDto(domaine);
-
-    // // Now enhance each indicateur with table data
-    // if (tableFormat != null && !tableFormat.isEmpty() && dto.getSousDomaines() !=
-    // null) {
-    // for (SousDomainePublicDto sousDomaineDto : dto.getSousDomaines()) {
-    // if (sousDomaineDto.getIndicateurs() != null) {
-    // for (IndicateurDetailDto indicateurDto : sousDomaineDto.getIndicateurs()) {
-    // // Get the full indicateur with table data
-    // IndicateurDetailDto indicateurWithTableData = indicateurService
-    // .getIndicateurWithTableData(indicateurDto.getId(), tableFormat);
-
-    // // Copy the hasDonnees and table data fields
-    // indicateurDto.setHasDonnees(indicateurWithTableData.isHasDonnees());
-    // indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
-    // //
-    // indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
-    // indicateurDto.setCrudTableData(indicateurWithTableData.getCrudTableData());
-    // //
-    // indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
-    // }
-    // }
-    // }
-    // }
-
-    // return dto;
-    // }
 
 }

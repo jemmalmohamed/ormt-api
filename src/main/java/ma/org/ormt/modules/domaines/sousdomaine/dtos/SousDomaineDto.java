@@ -1,7 +1,5 @@
 package ma.org.ormt.modules.domaines.sousdomaine.dtos;
 
-import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -11,8 +9,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.BaseDto;
 import ma.org.ormt.modules.domaines.domaine.dtos.summary.DomaineSummaryDto;
-import ma.org.ormt.modules.indicateurs.indicateur.dtos.detail.IndicateurDetailDto;
-import ma.org.ormt.modules.indicateurs.indicateur.dtos.sousdomaine.IndicateurSousDomaineDetailDto;
 
 @Setter
 @Getter

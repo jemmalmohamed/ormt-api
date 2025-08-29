@@ -24,4 +24,7 @@ public class EspaceDomaineRequestDto extends Dto {
     @NotNull(message = "Ce champ est requis")
     private DomaineDto domaine;
 
+    @NotNull(message = "Ce champ est requis")
+    private Integer ordre;
+
 }

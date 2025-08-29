@@ -6,6 +6,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -21,8 +23,11 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.core.utilities.files.FileDataService;
 import ma.org.ormt.core.utilities.files.FileToMultipartFileConverter;
+import ma.org.ormt.modules.domaines.domaine.dtos.DomaineDto;
 import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
+import ma.org.ormt.modules.espaces.association.domaine.dtos.request.EspaceDomaineRequestDto;
+import ma.org.ormt.modules.espaces.association.domaine.service.EspaceDomaineService;
 import ma.org.ormt.modules.espaces.dtos.EspaceDto;
 import ma.org.ormt.modules.espaces.dtos.request.EspaceRequestDto;
 import ma.org.ormt.modules.espaces.models.Espace;
@@ -43,6 +48,8 @@ public class EspaceSeeder implements CommandLineRunner {
     private String dataExternalPath;
 
     private final EspaceService espaceService;
+
+    private final EspaceDomaineService espaceDomaineService;
 
     private final DomaineService domaineService;
 
@@ -146,9 +153,22 @@ public class EspaceSeeder implements CommandLineRunner {
                 "lecture");
 
         List<Domaine> domaines = domaineService.findAll();
-        domaines.forEach(domaine -> {
-            espaceService.attachDomaine(createdEspace.getId(), domaine.getId());
-        });
+        AtomicInteger ordre = new AtomicInteger(0);
+        List<EspaceDomaineRequestDto> espaceDomaineRequests = domaines.stream()
+                .map(domaine -> {
+                    EspaceDomaineRequestDto espaceDomaineRequestDto = new EspaceDomaineRequestDto();
+                    EspaceDto espaceDto = new EspaceDto();
+                    espaceDto.setId(createdEspace.getId());
+                    espaceDomaineRequestDto.setEspace(espaceDto);
+                    DomaineDto domaineDto = new DomaineDto();
+                    domaineDto.setId(domaine.getId());
+                    espaceDomaineRequestDto.setDomaine(domaineDto);
+                    espaceDomaineRequestDto.setOrdre(ordre.getAndIncrement());
+                    return espaceDomaineRequestDto;
+                })
+                .collect(Collectors.toList());
+
+        espaceDomaineService.attachDomainesToEspace(espaceDomaineRequests);
     }
 
     /**

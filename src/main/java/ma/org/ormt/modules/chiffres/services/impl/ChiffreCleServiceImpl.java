@@ -13,26 +13,20 @@ import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
 import ma.org.ormt.core.commun.base.service.SpecificationService;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
 import ma.org.ormt.core.validators.ObjectsValidator;
-import ma.org.ormt.modules.domaines.domaine.models.Domaine;
-import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
-import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
-import ma.org.ormt.modules.indicateurs.donnee.services.DonneeIndicateurService;
-import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
-import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
-import ma.org.ormt.modules.chiffres.association.domaine.ChiffreCleDomaine;
-import ma.org.ormt.modules.chiffres.association.domaine.repository.ChiffreCleDomaineRepository;
 import ma.org.ormt.modules.chiffres.dtos.request.ChiffreCleRequestDto;
 import ma.org.ormt.modules.chiffres.dtos.request.ChiffreCleRequestDtoMapper;
 import ma.org.ormt.modules.chiffres.models.ChiffreCle;
 import ma.org.ormt.modules.chiffres.repositories.ChiffreCleRepository;
 import ma.org.ormt.modules.chiffres.services.ChiffreCleService;
+import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
+import ma.org.ormt.modules.indicateurs.donnee.services.DonneeIndicateurService;
+import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @Service
 @Transactional
 public class ChiffreCleServiceImpl extends BaseServiceImpl<ChiffreCle> implements ChiffreCleService {
 
-    @Autowired
-    private ChiffreCleDomaineRepository chiffrecleDomaineRepository;
     @Autowired
     private ChiffreCleRepository chiffrecleRepository;
 
@@ -40,9 +34,6 @@ public class ChiffreCleServiceImpl extends BaseServiceImpl<ChiffreCle> implement
     private DonneeIndicateurService donneeIndicateurService;
     @Autowired
     private IndicateurService indicateurService;
-
-    @Autowired
-    private DomaineService domaineService;
 
     @Autowired
     private ObjectsValidator<ChiffreCleRequestDto> validator;
@@ -125,26 +116,6 @@ public class ChiffreCleServiceImpl extends BaseServiceImpl<ChiffreCle> implement
             chiffrecle.setIndicateur(null);
 
         }
-    }
-
-    public void attachDomaine(Long chiffrecleId, Long domaineId) {
-        ChiffreCle chiffrecle = chiffrecleRepository.findById(chiffrecleId)
-                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
-        Domaine domaine = domaineService.findById(domaineId)
-                .orElseThrow(() -> new EntityNotFoundException("Domaine non trouvé"));
-
-        ChiffreCleDomaine chiffrecleDomaine = new ChiffreCleDomaine();
-        chiffrecleDomaine.setChiffreCle(chiffrecle);
-        chiffrecleDomaine.setDomaine(domaine);
-        chiffrecleDomaineRepository.save(chiffrecleDomaine);
-    }
-
-    public void detachDomaine(Long chiffrecleDomaineId) {
-
-        ChiffreCleDomaine chiffrecleDomaine = chiffrecleDomaineRepository.findById(chiffrecleDomaineId)
-                .orElseThrow(() -> new EntityNotFoundException("Association non trouvée"));
-
-        chiffrecleDomaineRepository.delete(chiffrecleDomaine);
     }
 
 }

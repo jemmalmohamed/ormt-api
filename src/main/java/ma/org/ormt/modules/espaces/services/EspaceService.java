@@ -26,8 +26,4 @@ public interface EspaceService extends BaseService<Espace> {
 
     boolean existsById(Long id);
 
-    void attachDomaine(Long espaceId, Long domaineId);
-
-    void detachDomaine(Long eppaceDomaineId);
-
 }

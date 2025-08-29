@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +25,7 @@ import ma.org.ormt.modules.espaces.association.domaine.EspaceDomaine;
 import ma.org.ormt.modules.espaces.association.domaine.dtos.EspaceDomaineDto;
 import ma.org.ormt.modules.espaces.association.domaine.dtos.EspaceDomaineDtoMapper;
 import ma.org.ormt.modules.espaces.association.domaine.dtos.request.EspaceDomaineRequestDto;
+import ma.org.ormt.modules.espaces.association.domaine.dtos.request.ReorderDomainesRequest;
 import ma.org.ormt.modules.espaces.association.domaine.service.EspaceDomaineService;
 import ma.org.ormt.modules.espaces.models.Espace;
 
@@ -71,6 +73,20 @@ public class EspaceDomaineCrudController extends BaseController<EspaceDomaine> {
                         @Validated(OnCreate.class) @RequestBody List<Long> deletedIds) {
                 espaceDomaineService.detachDomainesFromEspace(deletedIds);
                 return buildResponseEntity(deletedIds, HttpStatus.OK);
+        }
+
+        @Operation(summary = "reorder domaines for espace", responses = {
+                        @ApiResponse(responseCode = "200", description = "Success", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Espace.class))),
+                        @ApiResponse(responseCode = "402", description = "Unprocessable entity", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "403", description = "Perdomaines denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @PutMapping("reorder-domaines")
+        @PreAuthorize("hasAuthority('espace:edit')")
+        public ResponseEntity<RestResponse<List<Long>>> reorderDomaines(
+                        @Validated(OnCreate.class) @RequestBody ReorderDomainesRequest request) {
+                espaceDomaineService.reorderDomaines(request.getEspaceId(), request.getItems());
+                return buildResponseEntity(java.util.List.of(request.getEspaceId()), HttpStatus.OK);
         }
 
         @Override

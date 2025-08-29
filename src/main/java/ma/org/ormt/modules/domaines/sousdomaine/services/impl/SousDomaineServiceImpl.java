@@ -19,19 +19,17 @@ import ma.org.ormt.core.commun.rest.queries.QueryParams;
 import ma.org.ormt.core.validators.ObjectsValidator;
 import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
-import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestDto;
-import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestDtoMapper;
-import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDto;
-import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDtoMapper;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.details.SousDomaineDetailsDto;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.details.SousDomaineDetailsDtoMapper;
+import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestDto;
+import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestDtoMapper;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.repositories.SousDomaineRepository;
 import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
-import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
-import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.detail.IndicateurDetailDto;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.sousdomaine.IndicateurSousDomaineDetailDto;
+import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @Service
 public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> implements SousDomaineService {
@@ -50,9 +48,6 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
 
     @Autowired
     private SousDomaineRequestDtoMapper sousDomaineRequestMapper;
-
-    @Autowired
-    private SousDomaineDtoMapper sousDomaineDtoMapper;
 
     @Autowired
     private SousDomaineDetailsDtoMapper sousDomaineDetailsDtoMapper;

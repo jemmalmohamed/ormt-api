@@ -18,4 +18,5 @@ public class EspaceDomaineDto extends Dto {
 
     private EspaceDto espace;
 
+    private Integer ordre;
 }

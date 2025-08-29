@@ -10,11 +10,8 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.Dto;
-import ma.org.ormt.modules.domaines.sousdomaine.dtos.summary.SousDomaineSummaryDto;
-import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
 import ma.org.ormt.modules.indicateurs.graphe.configuration.dtos.GrapheConfigurationDto;
 import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.dtos.IndicateurDimensionDto;
-import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDto;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.data.dtos.PivotTableWithMetadataDto;
 import ma.org.ormt.modules.indicateurs.source.dtos.summary.SourceSummaryDto;
 

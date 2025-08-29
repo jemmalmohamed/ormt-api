@@ -13,7 +13,7 @@ import ma.org.ormt.modules.indicateurs.indicateur.dtos.sousdomaine.IndicateurSou
 
 @Setter
 @Getter
-@Schema(name = "DomaineDetailDto")
+@Schema(name = "SousDomaineDetailsDto")
 @RequiredArgsConstructor
 @JsonIgnoreProperties(value = { "sousdomaine.id" }, allowGetters = true)
 public class SousDomaineDetailsDto extends SousDomaineDto {

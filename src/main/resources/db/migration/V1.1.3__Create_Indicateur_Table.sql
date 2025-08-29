@@ -58,6 +58,7 @@ CREATE TABLE
     IF NOT EXISTS indicateur_sous_domaine (
         id_indicateur BIGINT NOT NULL,
         id_sous_domaine BIGINT NOT NULL,
+        ordre INT NULL DEFAULT 0,
         status_code INT NULL,
         created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
         last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,

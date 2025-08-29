@@ -13,4 +13,7 @@ public interface EspaceDomaineService extends BaseService<Espace> {
 
     void detachDomainesFromEspace(List<Long> espaceDomaineIds);
 
+    void reorderDomaines(Long espaceId,
+            List<ma.org.ormt.modules.espaces.association.domaine.dtos.request.ReorderDomaineItem> items);
+
 }

@@ -26,8 +26,4 @@ public interface ChiffreCleService extends BaseService<ChiffreCle> {
 
     boolean existsById(Long id);
 
-    void attachDomaine(Long chiffrecleId, Long domaineId);
-
-    void detachDomaine(Long eppaceDomaineId);
-
 }

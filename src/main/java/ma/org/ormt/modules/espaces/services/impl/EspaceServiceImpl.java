@@ -17,10 +17,6 @@ import ma.org.ormt.core.minio.MinioService;
 // removed unused imports after refactor
 import ma.org.ormt.core.utilities.files.ImageUtils;
 import ma.org.ormt.core.validators.ObjectsValidator;
-import ma.org.ormt.modules.domaines.domaine.models.Domaine;
-import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
-import ma.org.ormt.modules.espaces.association.domaine.EspaceDomaine;
-import ma.org.ormt.modules.espaces.association.domaine.repository.EspaceDomaineRepository;
 import ma.org.ormt.modules.espaces.dtos.request.EspaceRequestDto;
 import ma.org.ormt.modules.espaces.dtos.request.EspaceRequestDtoMapper;
 import ma.org.ormt.modules.espaces.models.Espace;
@@ -32,11 +28,7 @@ import ma.org.ormt.modules.espaces.services.EspaceService;
 public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements EspaceService {
 
     @Autowired
-    private EspaceDomaineRepository espaceDomaineRepository;
-    @Autowired
     private EspaceRepository espaceRepository;
-    @Autowired
-    private DomaineService domaineService;
 
     @Autowired
     private MinioService minioService;
@@ -123,26 +115,6 @@ public class EspaceServiceImpl extends BaseServiceImpl<Espace> implements Espace
             espace.setImageUrl(imageFileName);
 
         }
-    }
-
-    public void attachDomaine(Long espaceId, Long domaineId) {
-    Espace espace = getOrThrow(espaceId, NOT_FOUND_STRING);
-        Domaine domaine = domaineService.findById(domaineId)
-                .orElseThrow(() -> new EntityNotFoundException("Domaine non trouvé"));
-
-        EspaceDomaine espaceDomaine = new EspaceDomaine();
-        espaceDomaine.setEspace(espace);
-        espaceDomaine.setDomaine(domaine);
-
-        espaceDomaineRepository.save(espaceDomaine);
-    }
-
-    public void detachDomaine(Long espaceDomaineId) {
-
-    EspaceDomaine espaceDomaine = espaceDomaineRepository.findById(espaceDomaineId)
-        .orElseThrow(() -> new EntityNotFoundException("Association non trouvée"));
-
-        espaceDomaineRepository.delete(espaceDomaine);
     }
 
 }

@@ -32,4 +32,6 @@ public class EspaceDomaine extends BaseEntity {
     @JoinColumn(name = "id_domaine")
     private Domaine domaine;
 
+    private Integer ordre;
+
 }
