@@ -26,6 +26,8 @@ public class SousDomainePublicDto extends Dto {
 
     private Boolean actif;
 
+    private Integer ordre;
+
     private List<IndicateurDetailDto> indicateurs;
 
 }

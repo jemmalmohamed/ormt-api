@@ -1,6 +1,8 @@
 package ma.org.ormt.modules.domaines.sousdomaine.services.impl;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -23,6 +25,7 @@ import ma.org.ormt.modules.domaines.sousdomaine.dtos.details.SousDomaineDetailsD
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.details.SousDomaineDetailsDtoMapper;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestDto;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestDtoMapper;
+import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.ReorderSousDomaineItem;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.repositories.SousDomaineRepository;
 import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
@@ -164,43 +167,68 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
         sousDomaine.setNom(entityToUpdate.getNom());
         sousDomaine.setDescription(entityToUpdate.getDescription());
         sousDomaine.setActif(entityToUpdate.getActif());
+        sousDomaine.setOrdre(entityToUpdate.getOrdre());
     }
 
     private void validateSousDomaineDependencies(Long id) {
 
     }
 
-    // @Override
-    // public SousDomaineDto getSousDomaineWithIndicateurTableData(Long id, String
-    // tableFormat) {
-    // SousDomaine sousDomaine = findById(id)
-    // .orElseThrow(() -> new EntityNotFoundException("SousDomaine not found with
-    // id: " + id));
+    @Transactional
+    @Override
+    public void reorderSousDomaines(Long domaineId, List<ReorderSousDomaineItem> items) {
+        // Validate domaine exists
+        domaineService.findById(domaineId).orElseThrow(() -> new EntityNotFoundException(DOMAINE_NOT_FOUND));
 
-    // // Map to DTO first (this will use the IndicateurDetailDtoMapper with
-    // // @AfterMapping)
-    // SousDomaineDto dto = sousDomaineDtoMapper.mapToDto(sousDomaine);
+        // Load existing sous-domaines for domaine
+        List<SousDomaine> existing = sousDomaineRepository.findByDomaineIdOrderByOrdreAsc(domaineId);
+        if (existing.isEmpty()) {
+            return; // nothing to reorder
+        }
 
-    // // Now add table data to each indicateur in the DTO
-    // if (tableFormat != null && !tableFormat.isEmpty() && dto.getIndicateurs() !=
-    // null) {
-    // for (IndicateurSousDomaineDetailDto indicateurDto : dto.getIndicateurs()) {
-    // // Get the full indicateur with table data
-    // IndicateurDetailDto indicateurWithTableData = indicateurService
-    // .getIndicateurWithTableData(indicateurDto.getId(), tableFormat);
+        Map<Long, SousDomaine> byId = existing.stream()
+                .collect(java.util.stream.Collectors.toMap(SousDomaine::getId, sd -> sd));
 
-    // // Copy table data fields
-    // indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
-    // //
-    // indicateurDto.setFlatTableData(indicateurWithTableData.getFlatTableData());
-    // indicateurDto.setCrudTableData(indicateurWithTableData.getCrudTableData());
-    // //
-    // indicateurDto.setCreateTemplateData(indicateurWithTableData.getCreateTemplateData());
-    // }
-    // }
+        Set<Long> currentIds = byId.keySet();
+        Set<Long> requestedIds = items.stream().map(ReorderSousDomaineItem::getSousDomaineId)
+                .collect(java.util.stream.Collectors.toSet());
 
-    // return dto;
-    // }
+        if (!currentIds.equals(requestedIds)) {
+            throw new IllegalArgumentException(
+                    "Reorder items must include all and only current sous-domaines for this domaine");
+        }
+
+        int n = items.size();
+        boolean withinRange = items.stream()
+                .allMatch(i -> i.getOrdre() != null && i.getOrdre() >= 0 && i.getOrdre() < n);
+        if (!withinRange) {
+            throw new IllegalArgumentException("Invalid ordre values; must be within 0.." + (n - 1));
+        }
+        java.util.HashSet<Integer> ordreSet = new java.util.HashSet<>();
+        for (var i : items) {
+            if (!ordreSet.add(i.getOrdre())) {
+                throw new IllegalArgumentException("Duplicate ordre values are not allowed");
+            }
+        }
+
+        Map<Long, Integer> newOrdreById = items.stream()
+                .collect(java.util.stream.Collectors.toMap(
+                        ReorderSousDomaineItem::getSousDomaineId,
+                        ReorderSousDomaineItem::getOrdre));
+
+        boolean anyChanged = false;
+        for (SousDomaine sd : existing) {
+            Integer newOrdre = newOrdreById.get(sd.getId());
+            if (newOrdre != null && !newOrdre.equals(sd.getOrdre())) {
+                sd.setOrdre(newOrdre);
+                anyChanged = true;
+            }
+        }
+
+        if (anyChanged) {
+            sousDomaineRepository.saveAll(existing);
+        }
+    }
 
     @Override
     public SousDomaineDetailsDto getSousDomaineWithPivotTable(Long id, String tableFormat) {

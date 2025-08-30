@@ -29,6 +29,9 @@ public class SousDomaineRequestDto extends Dto {
     @NotNull(message = "Ce champ est requis.")
     private Boolean actif;
 
+    @NotNull(message = "Ce champ est requis.")
+    private Integer ordre;
+
     @NotBlank(message = "Ce champ est requis.")
     private String description;
 

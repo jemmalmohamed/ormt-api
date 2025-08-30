@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -119,9 +120,11 @@ public class DomaineSeeder implements CommandLineRunner {
                         .filter(Files::isDirectory)
                         .collect(Collectors.toList());
                 if (!sousDomaineDirs.isEmpty()) {
+                    // Maintain a persistent order counter across all subdomains of this domain
+                    AtomicInteger ordre = new AtomicInteger(0);
                     // Process each subdomain directory sequentially (no threading)
                     for (Path sousDomainePath : sousDomaineDirs) {
-                        processSingleSousDomaineDir(sousDomainePath, createdDomaine);
+                        processSingleSousDomaineDir(sousDomainePath, createdDomaine, ordre);
                     }
                 }
             }
@@ -145,7 +148,7 @@ public class DomaineSeeder implements CommandLineRunner {
         return domaineFiles.isEmpty() ? null : domaineFiles.get(0);
     }
 
-    private void processSingleSousDomaineDir(Path sousDomainePath, Domaine createdDomaine) {
+    private void processSingleSousDomaineDir(Path sousDomainePath, Domaine createdDomaine, AtomicInteger ordre) {
         String sousDomaineName = sousDomainePath.getFileName().toString();
         log.info("Processing subdomain directory: {}", sousDomaineName);
         try {
@@ -155,7 +158,7 @@ public class DomaineSeeder implements CommandLineRunner {
                     .findFirst().orElse(null);
             if (sousDomaineFile != null) {
                 log.info("Found subdomain file: {}", sousDomaineFile.getName());
-                processSousDomaineJsonFile(sousDomaineFile, createdDomaine);
+                processSousDomaineJsonFile(sousDomaineFile, createdDomaine, ordre);
             } else {
                 log.warn("No JSON file found in subdomain directory: {}", sousDomaineName);
             }
@@ -207,7 +210,7 @@ public class DomaineSeeder implements CommandLineRunner {
     }
 
     @Transactional
-    private void processSousDomaineJsonFile(File file, Domaine parentDomaine) {
+    private void processSousDomaineJsonFile(File file, Domaine parentDomaine, AtomicInteger ordre) {
         try (InputStream inputStream = Files.newInputStream(file.toPath())) {
             log.info("Processing subdomain file: {}", file.getName());
             SousDomaineCreateRequestDto sousDomaineData = objectMapper.readValue(inputStream,
@@ -218,6 +221,7 @@ public class DomaineSeeder implements CommandLineRunner {
             requestDto.setNom(sousDomaineData.getNom().toLowerCase());
             requestDto.setDescription(sousDomaineData.getDescription());
             requestDto.setActif(sousDomaineData.getActif());
+            requestDto.setOrdre(ordre.getAndIncrement());
 
             SousDomaine createdSousDomaine = sousDomaineService.create(parentDomaine.getId(), requestDto);
             log.info("Created subdomain: {} with ID: {} under domain: {}",
@@ -228,7 +232,7 @@ public class DomaineSeeder implements CommandLineRunner {
                 indicateurSeeder.processIndicateurs(sousDomaineData.getIndicateurs(), createdSousDomaine);
             }
 
-            // donneeIndicateurSeeder.createIndicateurDonnee(file);
+            donneeIndicateurSeeder.createIndicateurDonnee(file);
 
         } catch (Exception e) {
             log.error("Error processing subdomain file {}: {}", file.getName(), e.getMessage());

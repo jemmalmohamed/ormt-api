@@ -24,5 +24,7 @@ public class SousDomaineDto extends BaseDto {
 
     private Boolean actif;
 
+    private Integer ordre;
+
     private DomaineSummaryDto domaine;
 }

@@ -36,6 +36,8 @@ public class SousDomaine extends BaseEntity {
 
     private Boolean actif;
 
+    private Integer ordre;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_domaine")
     private Domaine domaine;

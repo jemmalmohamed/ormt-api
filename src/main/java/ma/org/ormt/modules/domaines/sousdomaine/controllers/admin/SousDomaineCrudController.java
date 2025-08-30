@@ -31,6 +31,7 @@ import ma.org.ormt.core.validators.groups.OnUpdate;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDto;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDtoMapper;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.SousDomaineRequestDto;
+import ma.org.ormt.modules.domaines.sousdomaine.dtos.request.ReorderSousDomainesRequest;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDto;
@@ -109,6 +110,25 @@ public class SousDomaineCrudController extends BaseController<SousDomaine> {
                         @Validated(OnCreate.class) @RequestBody List<Long> ids) {
                 SousDomaine sousDomaine = sousDomaineService.dissociateIndicateurFromSousDomaine(id, ids);
                 return buildResponseEntity(sousDomaine, SousDomaineDto.class, HttpStatus.OK);
+        }
+
+        @Operation(summary = "reorder sous-domaines for domaine", responses = {
+                        @ApiResponse(responseCode = "200", description = "Success", content = @Content(mediaType = "application/json", schema = @Schema(implementation = SousDomaine.class))),
+                        @ApiResponse(responseCode = "402", description = "Unprocessable entity", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "404", description = "Not found", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @PutMapping("{domaineId}/sous-domaines/reorder")
+        @PreAuthorize("hasAuthority('domaine:edit')")
+        public ResponseEntity<RestResponse<List<Long>>> reorderSousDomaines(
+                        @PathVariable Long domaineId,
+                        @Validated(OnCreate.class) @RequestBody ReorderSousDomainesRequest request) {
+                // If request carries domaineId, prefer path variable and sanity check
+                if (request.getDomaineId() != null && !request.getDomaineId().equals(domaineId)) {
+                        return buildResponseEntity(java.util.List.of(), HttpStatus.BAD_REQUEST);
+                }
+                sousDomaineService.reorderSousDomaines(domaineId, request.getItems());
+                return buildResponseEntity(java.util.List.of(domaineId), HttpStatus.OK);
         }
 
         // *********** DELETE OPERATIONS ***********
