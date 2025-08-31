@@ -73,7 +73,7 @@ public class SousDomainePublicLoadController extends BaseController<SousDomaine>
 
                 return buildResponseEntity(sousDomainePage.getContent(),
                                 SousDomaineDto.class, queryParams,
-                                HttpStatus.OK);
+                                HttpStatus.OK, true);
         }
 
         @Operation(summary = "Get all " + ENTITY_NAME

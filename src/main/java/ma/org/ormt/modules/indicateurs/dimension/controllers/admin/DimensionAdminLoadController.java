@@ -66,7 +66,8 @@ public class DimensionAdminLoadController extends BaseController<Dimension> {
 
                 QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, dimensionPage);
 
-                return buildResponseEntity(dimensionPage.getContent(), DimensionDto.class, queryParams, HttpStatus.OK);
+                return buildResponseEntity(dimensionPage.getContent(), DimensionDto.class, queryParams, HttpStatus.OK,
+                                true);
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id")

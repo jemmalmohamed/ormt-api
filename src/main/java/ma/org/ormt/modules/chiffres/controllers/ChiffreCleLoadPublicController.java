@@ -89,7 +89,7 @@ public class ChiffreCleLoadPublicController extends BaseController<ChiffreCle> {
                 return buildResponseEntity(
                                 chiffreClePage.getContent(), ChiffreCleDto.class,
                                 adjustQueryParamsToGetAllRecords(requestParams, chiffreClePage),
-                                HttpStatus.OK);
+                                HttpStatus.OK, true);
         }
 
         /**

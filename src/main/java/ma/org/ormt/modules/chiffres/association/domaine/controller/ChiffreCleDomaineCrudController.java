@@ -56,7 +56,7 @@ public class ChiffreCleDomaineCrudController extends BaseController<ChiffreCleDo
 
                 List<Long> ids = chiffrecleDomaines.stream().map(ChiffreCleDomaine::getId).toList();
 
-                return buildResponseEntity(ids, HttpStatus.OK);
+                return buildResponseEntity(ids, HttpStatus.OK, true);
         }
 
         @Operation(summary = "detach domaines " + ENTITY_NAME, responses = {
@@ -70,7 +70,7 @@ public class ChiffreCleDomaineCrudController extends BaseController<ChiffreCleDo
         public ResponseEntity<RestResponse<List<Long>>> detachDomainesFromChiffreCle(
                         @Validated(OnCreate.class) @RequestBody List<Long> deletedIds) {
                 chiffrecleDomaineService.detachDomainesFromChiffreCle(deletedIds);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
         }
 
         @Override

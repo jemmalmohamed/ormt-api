@@ -36,65 +36,65 @@ import ma.org.ormt.modules.indicateurs.graphe.configuration.services.GrapheConfi
 @RequiredArgsConstructor
 public class GrapheConfigurationAdminLoadController extends BaseController<GrapheConfiguration> {
 
-    private static final String ENTITY_NAME = "grapheConfiguration";
+        private static final String ENTITY_NAME = "grapheConfiguration";
 
-    private final GrapheConfigurationService grapheConfigurationService;
-    private final GrapheConfigurationDtoMapper grapheConfigurationDtoMapper;
-    private final GrapheConfigurationDetailsDtoMapper grapheConfigurationDetailMapper;
+        private final GrapheConfigurationService grapheConfigurationService;
+        private final GrapheConfigurationDtoMapper grapheConfigurationDtoMapper;
+        private final GrapheConfigurationDetailsDtoMapper grapheConfigurationDetailMapper;
 
-    @Operation(summary = "Get all " + ENTITY_NAME + "s")
-    @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Ok", content = {
-            @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = GrapheConfigurationDto.class))) }),
-            @ApiResponse(responseCode = "404", description = ENTITY_NAME
-                    + " not found", content = @Content(mediaType = "ErrorResponse")),
-            @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
-    })
-    @GetMapping("")
-    @PreAuthorize("hasAuthority('indicateur:list')")
-    public ResponseEntity<RestResponse<List<GrapheConfigurationDto>>> getGrapheConfigurations(
-            @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
-            @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
-            @RequestParam(value = "sortField", defaultValue = "createdDate") String sortField,
-            @RequestParam(value = "sortDirection", defaultValue = "DESC") Direction direction,
-            @RequestParam(value = "filters", defaultValue = "") List<String> filters,
-            @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
+        @Operation(summary = "Get all " + ENTITY_NAME + "s")
+        @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Ok", content = {
+                        @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = GrapheConfigurationDto.class))) }),
+                        @ApiResponse(responseCode = "404", description = ENTITY_NAME
+                                        + " not found", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @GetMapping("")
+        @PreAuthorize("hasAuthority('indicateur:list')")
+        public ResponseEntity<RestResponse<List<GrapheConfigurationDto>>> getGrapheConfigurations(
+                        @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
+                        @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
+                        @RequestParam(value = "sortField", defaultValue = "createdDate") String sortField,
+                        @RequestParam(value = "sortDirection", defaultValue = "DESC") Direction direction,
+                        @RequestParam(value = "filters", defaultValue = "") List<String> filters,
+                        @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
 
-        QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField, direction, filters,
-                globalFilter);
+                QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField, direction, filters,
+                                globalFilter);
 
-        Page<GrapheConfiguration> grapheConfigurationPage = grapheConfigurationService
-                .getEntityList(requestParams);
+                Page<GrapheConfiguration> grapheConfigurationPage = grapheConfigurationService
+                                .getEntityList(requestParams);
 
-        QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, grapheConfigurationPage);
+                QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, grapheConfigurationPage);
 
-        return buildResponseEntity(grapheConfigurationPage.getContent(), GrapheConfigurationDto.class,
-                queryParams, HttpStatus.OK);
-    }
-
-    @Operation(summary = "Get " + ENTITY_NAME + " by id")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Ok", content = {
-                    @Content(mediaType = "application/json", schema = @Schema(implementation = GrapheConfigurationDto.class)) }),
-            @ApiResponse(responseCode = "404", description = ENTITY_NAME
-                    + " not found", content = @Content(mediaType = "ErrorResponse")),
-            @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
-    })
-    @GetMapping("/{id}")
-    @PreAuthorize("hasAuthority('indicateur:read')")
-    public ResponseEntity<RestResponse<GrapheConfigurationDetailsDto>> getGrapheConfiguration(
-            @PathVariable("id") Long id) {
-        GrapheConfiguration grapheConfiguration = grapheConfigurationService.findById(id)
-                .orElseThrow(EntityNotFoundException::new);
-        return buildResponseEntity(grapheConfiguration, GrapheConfigurationDetailsDto.class, HttpStatus.OK);
-    }
-
-    @Override
-    protected <DTO> DTO mapToDto(GrapheConfiguration entity, Class<DTO> dtoClass) {
-        if (dtoClass == GrapheConfigurationDetailsDto.class) {
-            return dtoClass.cast(grapheConfigurationDetailMapper.mapToDto(entity));
-        } else if (dtoClass == GrapheConfigurationDto.class) {
-            return dtoClass.cast(grapheConfigurationDtoMapper.mapToDto(entity));
+                return buildResponseEntity(grapheConfigurationPage.getContent(), GrapheConfigurationDto.class,
+                                queryParams, HttpStatus.OK, true);
         }
-        throw new IllegalArgumentException("Unsupported DTO type: " + dtoClass.getName());
-    }
+
+        @Operation(summary = "Get " + ENTITY_NAME + " by id")
+        @ApiResponses(value = {
+                        @ApiResponse(responseCode = "200", description = "Ok", content = {
+                                        @Content(mediaType = "application/json", schema = @Schema(implementation = GrapheConfigurationDto.class)) }),
+                        @ApiResponse(responseCode = "404", description = ENTITY_NAME
+                                        + " not found", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @GetMapping("/{id}")
+        @PreAuthorize("hasAuthority('indicateur:read')")
+        public ResponseEntity<RestResponse<GrapheConfigurationDetailsDto>> getGrapheConfiguration(
+                        @PathVariable("id") Long id) {
+                GrapheConfiguration grapheConfiguration = grapheConfigurationService.findById(id)
+                                .orElseThrow(EntityNotFoundException::new);
+                return buildResponseEntity(grapheConfiguration, GrapheConfigurationDetailsDto.class, HttpStatus.OK);
+        }
+
+        @Override
+        protected <DTO> DTO mapToDto(GrapheConfiguration entity, Class<DTO> dtoClass) {
+                if (dtoClass == GrapheConfigurationDetailsDto.class) {
+                        return dtoClass.cast(grapheConfigurationDetailMapper.mapToDto(entity));
+                } else if (dtoClass == GrapheConfigurationDto.class) {
+                        return dtoClass.cast(grapheConfigurationDtoMapper.mapToDto(entity));
+                }
+                throw new IllegalArgumentException("Unsupported DTO type: " + dtoClass.getName());
+        }
 }

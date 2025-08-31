@@ -75,7 +75,7 @@ public class DonneeIndicateurCrudController extends BaseController<DonneeIndicat
                                 requestDtos);
 
                 return buildResponseEntity(donneeIndicateurs, DonneeIndicateurDto.class,
-                                HttpStatus.CREATED);
+                                HttpStatus.CREATED, true);
         }
 
         // *********** UPDATE OPERATIONS ***********
@@ -169,7 +169,7 @@ public class DonneeIndicateurCrudController extends BaseController<DonneeIndicat
 
                 List<Long> deletedIds = donneeIndicateurService.deleteBySpecification(filters, globalFilter,
                                 DonneeIndicateur.class);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
 
         }
 
@@ -189,7 +189,7 @@ public class DonneeIndicateurCrudController extends BaseController<DonneeIndicat
                 List<Long> deletedIds = donneeIndicateurService.deleteBySpecificationExceptIds(filters, globalFilter,
                                 DonneeIndicateur.class, ids);
 
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
 
         }
 

@@ -99,7 +99,7 @@ public class UserLoadController extends BaseController<UserRepresentation> {
                         user.setClientRoles(clientRolesMap);
                 }
 
-                return buildResponseEntity(users, UserDto.class, HttpStatus.OK);
+                return buildResponseEntity(users, UserDto.class, HttpStatus.OK, true);
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id")

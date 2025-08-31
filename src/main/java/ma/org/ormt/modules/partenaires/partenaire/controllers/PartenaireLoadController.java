@@ -67,7 +67,7 @@ public class PartenaireLoadController extends BaseController<Partenaire> {
                 QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, partenairePage);
 
                 return buildResponseEntity(partenairePage.getContent(), PartenaireDto.class, queryParams,
-                                HttpStatus.OK);
+                                HttpStatus.OK, true);
 
         }
 

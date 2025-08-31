@@ -92,7 +92,7 @@ public class DimensionAdminCrudController extends BaseController<Dimension> {
         public ResponseEntity<RestResponse<List<Long>>> deleteMultiple(@RequestBody List<Long> ids) {
                 try {
                         dimensionService.deleteAllById(ids);
-                        return buildResponseEntity(ids, HttpStatus.OK);
+                        return buildResponseEntity(ids, HttpStatus.OK, true);
                 }
 
                 catch (DependencyException e) {
@@ -153,7 +153,7 @@ public class DimensionAdminCrudController extends BaseController<Dimension> {
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
                 List<Long> deletedIds = dimensionService.deleteBySpecification(filters, globalFilter,
                                 Dimension.class);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
         }
 
         @Operation(summary = "Delete by query parameters except ids" + ENTITY_NAME + "s", responses = {
@@ -169,7 +169,7 @@ public class DimensionAdminCrudController extends BaseController<Dimension> {
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
                 List<Long> deletedIds = dimensionService.deleteBySpecificationExceptIds(filters, globalFilter,
                                 Dimension.class, ids);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
         }
 
         @Override

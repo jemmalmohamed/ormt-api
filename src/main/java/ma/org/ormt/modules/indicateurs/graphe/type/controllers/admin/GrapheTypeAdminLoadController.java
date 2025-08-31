@@ -67,7 +67,7 @@ public class GrapheTypeAdminLoadController extends BaseController<GrapheType> {
                 QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, graphetypePage);
 
                 return buildResponseEntity(graphetypePage.getContent(), GrapheTypeDto.class, queryParams,
-                                HttpStatus.OK);
+                                HttpStatus.OK, true);
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id")

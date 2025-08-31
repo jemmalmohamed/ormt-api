@@ -107,7 +107,7 @@ public class PublicationAdminCrudController extends BaseController<Publication> 
     public ResponseEntity<RestResponse<List<Long>>> deleteMultiple(@RequestBody List<Long> ids) {
         try {
             publicationService.deleteAllById(ids);
-            return buildResponseEntity(ids, HttpStatus.OK);
+            return buildResponseEntity(ids, HttpStatus.OK, true);
         } catch (DataIntegrityViolationException e) {
             RestResponse<List<Long>> errorResponse = RestResponse.<List<Long>>builder()
                     .success(false)
@@ -156,7 +156,7 @@ public class PublicationAdminCrudController extends BaseController<Publication> 
 
         List<Long> deletedIds = publicationService.deleteBySpecification(filters, globalFilter,
                 Publication.class);
-        return buildResponseEntity(deletedIds, HttpStatus.OK);
+        return buildResponseEntity(deletedIds, HttpStatus.OK, true);
 
     }
 
@@ -175,7 +175,7 @@ public class PublicationAdminCrudController extends BaseController<Publication> 
         List<Long> deletedIds = publicationService.deleteBySpecificationExceptIds(filters, globalFilter,
                 Publication.class, ids);
 
-        return buildResponseEntity(deletedIds, HttpStatus.OK);
+        return buildResponseEntity(deletedIds, HttpStatus.OK, true);
 
     }
 

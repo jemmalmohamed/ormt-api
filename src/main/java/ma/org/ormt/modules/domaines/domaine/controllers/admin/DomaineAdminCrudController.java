@@ -97,7 +97,7 @@ public class DomaineAdminCrudController extends BaseController<Domaine> {
                 try {
                         domaineService.deleteAllById(ids);
 
-                        return buildResponseEntity(ids, HttpStatus.OK);
+                        return buildResponseEntity(ids, HttpStatus.OK, true);
 
                 }
 
@@ -166,7 +166,7 @@ public class DomaineAdminCrudController extends BaseController<Domaine> {
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
                 List<Long> deletedIds = domaineService.deleteBySpecification(filters, globalFilter,
                                 Domaine.class);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
         }
 
         @Operation(summary = "Delete by query parameters except ids" + ENTITY_NAME + "s", responses = {
@@ -182,7 +182,7 @@ public class DomaineAdminCrudController extends BaseController<Domaine> {
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
                 List<Long> deletedIds = domaineService.deleteBySpecificationExceptIds(filters, globalFilter,
                                 Domaine.class, ids);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
         }
 
         @Override

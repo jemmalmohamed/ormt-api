@@ -91,7 +91,7 @@ public class RoleAccesCrudController extends BaseController<RoleAcces> {
         public ResponseEntity<RestResponse<List<Long>>> deleteMultiple(@RequestBody List<Long> ids) {
                 try {
                         roleAccesService.deleteAllById(ids);
-                        return buildResponseEntity(ids, HttpStatus.OK);
+                        return buildResponseEntity(ids, HttpStatus.OK, true);
 
                 } catch (DataIntegrityViolationException e) {
                         // Handle foreign key constraint violation
@@ -142,7 +142,7 @@ public class RoleAccesCrudController extends BaseController<RoleAcces> {
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
                 List<Long> deletedIds = roleAccesService.deleteBySpecification(filters, globalFilter,
                                 RoleAcces.class);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
         }
 
         @Operation(summary = "Delete by query parameters except ids" + ENTITY_NAME + "s", responses = {
@@ -158,7 +158,7 @@ public class RoleAccesCrudController extends BaseController<RoleAcces> {
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
                 List<Long> deletedIds = roleAccesService.deleteBySpecificationExceptIds(filters, globalFilter,
                                 RoleAcces.class, ids);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
         }
 
         @Override

@@ -91,7 +91,7 @@ public class SourceCrudController extends BaseController<Source> {
         public ResponseEntity<RestResponse<List<Long>>> deleteMultiple(@RequestBody List<Long> ids) {
                 try {
                         sourceService.deleteAllById(ids);
-                        return buildResponseEntity(ids, HttpStatus.OK);
+                        return buildResponseEntity(ids, HttpStatus.OK, true);
                 } catch (DataIntegrityViolationException e) {
                         // Handle foreign key constraint violation
                         RestResponse<List<Long>> errorResponse = RestResponse.<List<Long>>builder()
@@ -141,7 +141,7 @@ public class SourceCrudController extends BaseController<Source> {
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
                 List<Long> deletedIds = sourceService.deleteBySpecification(filters, globalFilter,
                                 Source.class);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
         }
 
         @Operation(summary = "Delete by query parameters except ids" + ENTITY_NAME + "s", responses = {
@@ -157,7 +157,7 @@ public class SourceCrudController extends BaseController<Source> {
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
                 List<Long> deletedIds = sourceService.deleteBySpecificationExceptIds(filters, globalFilter,
                                 Source.class, ids);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
         }
 
         // @Operation(summary = "Associate source with indicateur", responses = {

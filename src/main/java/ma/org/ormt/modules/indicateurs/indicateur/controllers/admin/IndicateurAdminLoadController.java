@@ -73,7 +73,7 @@ public class IndicateurAdminLoadController extends BaseController<Indicateur> {
 
                 return buildResponseEntity(indicateurPage.getContent(),
                                 IndicateurDto.class, queryParams,
-                                HttpStatus.OK);
+                                HttpStatus.OK, true);
         }
 
         @GetMapping("/details")

@@ -77,7 +77,7 @@ public class EspaceAdminLoadController extends BaseController<Espace> {
                 return buildResponseEntity(
                                 espacePage.getContent(), EspaceDto.class,
                                 adjustQueryParamsToGetAllRecords(requestParams, espacePage),
-                                HttpStatus.OK);
+                                HttpStatus.OK, true);
         }
 
         /**

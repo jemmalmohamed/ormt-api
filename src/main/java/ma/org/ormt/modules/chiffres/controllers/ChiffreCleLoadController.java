@@ -78,7 +78,7 @@ public class ChiffreCleLoadController extends BaseController<ChiffreCle> {
                 return buildResponseEntity(
                                 chiffreclePage.getContent(), ChiffreCleDto.class,
                                 adjustQueryParamsToGetAllRecords(requestParams, chiffreclePage),
-                                HttpStatus.OK);
+                                HttpStatus.OK, true);
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id")

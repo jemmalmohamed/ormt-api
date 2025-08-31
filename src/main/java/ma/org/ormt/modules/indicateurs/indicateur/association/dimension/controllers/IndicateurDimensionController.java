@@ -88,7 +88,7 @@ public class IndicateurDimensionController extends BaseController<IndicateurDime
 
                 try {
                         indicateurDimensionService.dissociateDimensionFromIndicateur(ids);
-                        return buildResponseEntity(ids, HttpStatus.OK);
+                        return buildResponseEntity(ids, HttpStatus.OK, true);
 
                 } catch (DependencyException e) {
 

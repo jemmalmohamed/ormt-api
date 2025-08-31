@@ -63,7 +63,8 @@ public class RoleAccesLoadController extends BaseController<RoleAcces> {
 
                 QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, roleAccesPage);
 
-                return buildResponseEntity(roleAccesPage.getContent(), RoleAccesDto.class, queryParams, HttpStatus.OK);
+                return buildResponseEntity(roleAccesPage.getContent(), RoleAccesDto.class, queryParams, HttpStatus.OK,
+                                true);
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id")

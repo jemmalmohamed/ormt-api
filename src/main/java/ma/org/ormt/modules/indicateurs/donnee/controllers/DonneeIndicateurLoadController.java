@@ -93,7 +93,7 @@ public class DonneeIndicateurLoadController extends BaseController<DonneeIndicat
                 // Use existing logic for backward compatibility
                 ResponseEntity<RestResponse<List<DonneeIndicateurDto>>> response = buildResponseEntity(
                                 donneeIndicateurPage.getContent(), DonneeIndicateurDto.class, queryParams,
-                                HttpStatus.OK);
+                                HttpStatus.OK, true);
                 return ResponseEntity.ok(RestResponse.builder()
                                 .data(response.getBody().getData())
                                 .queryParams(queryParams)

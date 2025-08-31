@@ -70,7 +70,7 @@ public class SousDomaineAdminLoadController extends BaseController<SousDomaine> 
                 QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, sousDomainePage);
 
                 return buildResponseEntity(sousDomainePage.getContent(), SousDomaineDto.class, queryParams,
-                                HttpStatus.OK);
+                                HttpStatus.OK, true);
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id")

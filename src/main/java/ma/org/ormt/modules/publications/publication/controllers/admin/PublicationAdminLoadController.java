@@ -78,7 +78,7 @@ public class PublicationAdminLoadController extends BaseController<Publication> 
                 return buildResponseEntity(
                                 publicationPage.getContent(), PublicationDto.class,
                                 adjustQueryParamsToGetAllRecords(requestParams, publicationPage),
-                                HttpStatus.OK);
+                                HttpStatus.OK, true);
         }
 
         /**

@@ -92,7 +92,7 @@ public class EspaceAdminCrudController extends BaseController<Espace> {
         public ResponseEntity<RestResponse<List<Long>>> deleteMultiple(@RequestBody List<Long> ids) {
                 try {
                         espaceService.deleteAllById(ids);
-                        return buildResponseEntity(ids, HttpStatus.OK);
+                        return buildResponseEntity(ids, HttpStatus.OK, true);
                 } catch (DataIntegrityViolationException e) {
                         // Handle foreign key constraint violation
                         RestResponse<List<Long>> errorResponse = RestResponse.<List<Long>>builder()
@@ -142,7 +142,7 @@ public class EspaceAdminCrudController extends BaseController<Espace> {
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
                 List<Long> deletedIds = espaceService.deleteBySpecification(filters, globalFilter,
                                 Espace.class);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
         }
 
         @Operation(summary = "Delete by query parameters except ids" + ENTITY_NAME + "s", responses = {
@@ -158,7 +158,7 @@ public class EspaceAdminCrudController extends BaseController<Espace> {
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
                 List<Long> deletedIds = espaceService.deleteBySpecificationExceptIds(filters, globalFilter,
                                 Espace.class, ids);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
         }
 
         @Override

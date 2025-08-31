@@ -66,7 +66,8 @@ public class SourceAdminLoadController extends BaseController<Source> {
 
                 QueryParams queryParams = adjustQueryParamsToGetAllRecords(requestParams, sourcePage);
 
-                return buildResponseEntity(sourcePage.getContent(), SourceDto.class, queryParams, HttpStatus.OK);
+                return buildResponseEntity(sourcePage.getContent(), SourceDto.class, queryParams, HttpStatus.OK,
+                                true);
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id")
@@ -81,7 +82,7 @@ public class SourceAdminLoadController extends BaseController<Source> {
         @PreAuthorize("hasAuthority('datasource:read')")
         public ResponseEntity<RestResponse<SourceDetailsDto>> getSource(@PathVariable("id") Long id) {
                 Source source = sourceService.findById(id).orElseThrow(EntityNotFoundException::new);
-                return buildResponseEntity(source, SourceDetailsDto.class, HttpStatus.OK);
+                return buildResponseEntity(source, SourceDetailsDto.class, HttpStatus.OK, true);
         }
 
         @Override

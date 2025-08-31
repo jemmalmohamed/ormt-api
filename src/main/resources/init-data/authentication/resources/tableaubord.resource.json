@@ -1,0 +1,97 @@
+[
+  {
+    "name": "tableaubord",
+    "displayName": "tableau de bord",
+    "uris": [
+      "/tableaubords/*"
+    ],
+    "scopes": [
+      {
+        "name": "edit",
+        "displayName": "éditer",
+        "roles": [
+          {
+            "name": "master",
+            "required": false
+          },
+          {
+            "name": "admin",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "create",
+        "displayName": "ajouter",
+        "roles": [
+          {
+            "name": "master",
+            "required": false
+          },
+          {
+            "name": "admin",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "delete",
+        "displayName": "supprimer",
+        "roles": [
+          {
+            "name": "master",
+            "required": false
+          },
+          {
+            "name": "admin",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "read",
+        "displayName": "afficher",
+        "roles": [
+          {
+            "name": "master",
+            "required": false
+          },
+          {
+            "name": "admin",
+            "required": false
+          },
+          {
+            "name": "decideur",
+            "required": false
+          },
+          {
+            "name": "public",
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "list",
+        "displayName": "lister",
+        "roles": [
+          {
+            "name": "master",
+            "required": false
+          },
+          {
+            "name": "admin",
+            "required": false
+          },
+          {
+            "name": "decideur",
+            "required": false
+          },
+          {
+            "name": "public",
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+]

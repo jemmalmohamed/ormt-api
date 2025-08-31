@@ -58,7 +58,7 @@ public class EspaceDomaineCrudController extends BaseController<EspaceDomaine> {
 
                 List<Long> ids = espaceDomaines.stream().map(EspaceDomaine::getId).toList();
 
-                return buildResponseEntity(ids, HttpStatus.OK);
+                return buildResponseEntity(ids, HttpStatus.OK, true);
         }
 
         @Operation(summary = "detach domaines " + ENTITY_NAME, responses = {
@@ -72,7 +72,7 @@ public class EspaceDomaineCrudController extends BaseController<EspaceDomaine> {
         public ResponseEntity<RestResponse<List<Long>>> detachDomainesFromEspace(
                         @Validated(OnCreate.class) @RequestBody List<Long> deletedIds) {
                 espaceDomaineService.detachDomainesFromEspace(deletedIds);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
         }
 
         @Operation(summary = "reorder domaines for espace", responses = {
@@ -86,7 +86,7 @@ public class EspaceDomaineCrudController extends BaseController<EspaceDomaine> {
         public ResponseEntity<RestResponse<List<Long>>> reorderDomaines(
                         @Validated(OnCreate.class) @RequestBody ReorderDomainesRequest request) {
                 espaceDomaineService.reorderDomaines(request.getEspaceId(), request.getItems());
-                return buildResponseEntity(java.util.List.of(request.getEspaceId()), HttpStatus.OK);
+                return buildResponseEntity(java.util.List.of(request.getEspaceId()), HttpStatus.OK, true);
         }
 
         @Override

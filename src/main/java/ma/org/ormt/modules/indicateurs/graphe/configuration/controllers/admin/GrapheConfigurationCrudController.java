@@ -109,7 +109,7 @@ public class GrapheConfigurationCrudController extends BaseController<GrapheConf
         public ResponseEntity<RestResponse<List<Long>>> deleteMultiple(@RequestBody List<Long> ids) {
                 try {
                         grapGrapheConfigurationService.deleteAllById(ids);
-                        return buildResponseEntity(ids, HttpStatus.OK);
+                        return buildResponseEntity(ids, HttpStatus.OK, true);
                 } catch (DataIntegrityViolationException e) {
                         // Handle foreign key constraint violation
                         RestResponse<List<Long>> errorResponse = RestResponse.<List<Long>>builder()
@@ -159,7 +159,7 @@ public class GrapheConfigurationCrudController extends BaseController<GrapheConf
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
                 List<Long> deletedIds = grapGrapheConfigurationService.deleteBySpecification(filters, globalFilter,
                                 GrapheConfiguration.class);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
         }
 
         @Operation(summary = "Delete by query parameters except ids" + ENTITY_NAME + "s", responses = {
@@ -176,7 +176,7 @@ public class GrapheConfigurationCrudController extends BaseController<GrapheConf
                 List<Long> deletedIds = grapGrapheConfigurationService.deleteBySpecificationExceptIds(filters,
                                 globalFilter,
                                 GrapheConfiguration.class, ids);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
         }
 
         // @Operation(summary = "Associate grapGrapheConfiguration with indicateur",

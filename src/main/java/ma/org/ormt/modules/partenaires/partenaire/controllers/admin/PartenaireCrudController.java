@@ -107,7 +107,7 @@ public class PartenaireCrudController extends BaseController<Partenaire> {
         public ResponseEntity<RestResponse<List<Long>>> deleteMultiple(@RequestBody List<Long> ids) {
                 try {
                         partenaireService.deleteAllById(ids);
-                        return buildResponseEntity(ids, HttpStatus.OK);
+                        return buildResponseEntity(ids, HttpStatus.OK, true);
                 } catch (DataIntegrityViolationException e) {
                         RestResponse<List<Long>> errorResponse = RestResponse.<List<Long>>builder()
                                         .success(false)
@@ -156,7 +156,7 @@ public class PartenaireCrudController extends BaseController<Partenaire> {
 
                 List<Long> deletedIds = partenaireService.deleteBySpecification(filters, globalFilter,
                                 Partenaire.class);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
 
         }
 
@@ -175,7 +175,7 @@ public class PartenaireCrudController extends BaseController<Partenaire> {
                 List<Long> deletedIds = partenaireService.deleteBySpecificationExceptIds(filters, globalFilter,
                                 Partenaire.class, ids);
 
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
 
         }
 

@@ -89,7 +89,7 @@ public class PublicationLoadPublicController extends BaseController<Publication>
                 return buildResponseEntity(
                                 publicationPage.getContent(), PublicationDto.class,
                                 adjustQueryParamsToGetAllRecords(requestParams, publicationPage),
-                                HttpStatus.OK);
+                                HttpStatus.OK, true);
         }
 
         /**

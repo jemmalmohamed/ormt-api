@@ -92,7 +92,7 @@ public class ChiffreCleCrudController extends BaseController<ChiffreCle> {
         public ResponseEntity<RestResponse<List<Long>>> deleteMultiple(@RequestBody List<Long> ids) {
                 try {
                         chiffrecleService.deleteAllById(ids);
-                        return buildResponseEntity(ids, HttpStatus.OK);
+                        return buildResponseEntity(ids, HttpStatus.OK, true);
                 } catch (DataIntegrityViolationException e) {
                         RestResponse<List<Long>> errorResponse = RestResponse.<List<Long>>builder()
                                         .success(false)
@@ -140,7 +140,7 @@ public class ChiffreCleCrudController extends BaseController<ChiffreCle> {
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
                 List<Long> deletedIds = chiffrecleService.deleteBySpecification(filters, globalFilter,
                                 ChiffreCle.class);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
         }
 
         @Operation(summary = "Delete by query parameters except ids" + ENTITY_NAME + "s", responses = {
@@ -156,7 +156,7 @@ public class ChiffreCleCrudController extends BaseController<ChiffreCle> {
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
                 List<Long> deletedIds = chiffrecleService.deleteBySpecificationExceptIds(filters, globalFilter,
                                 ChiffreCle.class, ids);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
         }
 
         @Override

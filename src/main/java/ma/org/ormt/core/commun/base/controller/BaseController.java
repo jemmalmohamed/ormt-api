@@ -79,7 +79,7 @@ public abstract class BaseController<T> {
     }
 
     public <DTO> ResponseEntity<RestResponse<List<DTO>>> buildResponseEntity(List<T> entities, Class<DTO> dtoClass,
-            HttpStatus status) {
+            HttpStatus status, boolean success) {
         List<DTO> dtoList = entities.stream()
                 .map(entity -> mapToDto(entity, dtoClass))
                 .collect(Collectors.toList());
@@ -87,20 +87,23 @@ public abstract class BaseController<T> {
         RestResponse<List<DTO>> restResponse = RestResponse.<List<DTO>>builder()
                 .status(status)
                 .data(dtoList)
+                .success(success)
                 .build();
         return ResponseEntity.status(status).body(restResponse);
     }
 
-    public ResponseEntity<RestResponse<List<Long>>> buildResponseEntity(List<Long> ids, HttpStatus status) {
+    public ResponseEntity<RestResponse<List<Long>>> buildResponseEntity(List<Long> ids, HttpStatus status,
+            boolean success) {
         return ResponseEntity.ok(RestResponse.<List<Long>>builder()
                 .status(status)
                 .data(ids)
                 .message(!ids.isEmpty() ? null : "No data found")
+                .success(success)
                 .build());
     }
 
     public <DTO> ResponseEntity<RestResponse<List<DTO>>> buildResponseEntity(List<T> entities, Class<DTO> dtoClass,
-            QueryParams queryParams, HttpStatus status) {
+            QueryParams queryParams, HttpStatus status, boolean success) {
         List<DTO> dtoList = entities.stream()
                 .map(entity -> mapToDto(entity, dtoClass))
                 .collect(Collectors.toList());

@@ -79,7 +79,7 @@ public class DomainePublicLoadController extends BaseController<Domaine> {
                 return buildResponseEntity(
                                 domainePage.getContent(), DomaineDto.class,
                                 adjustQueryParamsToGetAllRecords(requestParams, domainePage),
-                                HttpStatus.OK);
+                                HttpStatus.OK, true);
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id in espace (context-aware)")

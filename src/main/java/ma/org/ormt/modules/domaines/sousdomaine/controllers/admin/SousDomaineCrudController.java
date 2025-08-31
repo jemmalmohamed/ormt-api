@@ -125,10 +125,10 @@ public class SousDomaineCrudController extends BaseController<SousDomaine> {
                         @Validated(OnCreate.class) @RequestBody ReorderSousDomainesRequest request) {
                 // If request carries domaineId, prefer path variable and sanity check
                 if (request.getDomaineId() != null && !request.getDomaineId().equals(domaineId)) {
-                        return buildResponseEntity(java.util.List.of(), HttpStatus.BAD_REQUEST);
+                        return buildResponseEntity(java.util.List.of(), HttpStatus.BAD_REQUEST, true);
                 }
                 sousDomaineService.reorderSousDomaines(domaineId, request.getItems());
-                return buildResponseEntity(java.util.List.of(domaineId), HttpStatus.OK);
+                return buildResponseEntity(java.util.List.of(domaineId), HttpStatus.OK, true);
         }
 
         // *********** DELETE OPERATIONS ***********
@@ -204,7 +204,7 @@ public class SousDomaineCrudController extends BaseController<SousDomaine> {
 
                 List<Long> deletedIds = sousDomaineService.deleteBySpecification(filters, globalFilter,
                                 SousDomaine.class);
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
 
         }
 
@@ -224,7 +224,7 @@ public class SousDomaineCrudController extends BaseController<SousDomaine> {
                 List<Long> deletedIds = sousDomaineService.deleteBySpecificationExceptIds(filters, globalFilter,
                                 SousDomaine.class, ids);
 
-                return buildResponseEntity(deletedIds, HttpStatus.OK);
+                return buildResponseEntity(deletedIds, HttpStatus.OK, true);
 
         }
 
