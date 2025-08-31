@@ -30,7 +30,7 @@ import ma.org.ormt.modules.dashboard.tableaubord.association.domaine.service.Tab
 import ma.org.ormt.modules.dashboard.tableaubord.models.TableauBord;
 
 @RestController
-@RequestMapping(value = "/api/v1/tableau-bord-domaine")
+@RequestMapping(value = "/api/v1/admin/tableau-bord-domaine")
 @RequiredArgsConstructor
 @Tag(name = "TableauBord", description = "TableauBord API")
 public class TableauBordDomaineCrudController extends BaseController<TableauBordDomaine> {
@@ -49,7 +49,7 @@ public class TableauBordDomaineCrudController extends BaseController<TableauBord
                         @ApiResponse(responseCode = "403", description = "Perdomaines denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PostMapping("attach-domaines")
-        @PreAuthorize("hasAuthority('tableauBord:edit')")
+        @PreAuthorize("hasAuthority('tableaubord:edit')")
         public ResponseEntity<RestResponse<List<Long>>> attachDomainessToTableauBord(
                         @Validated(OnCreate.class) @RequestBody List<TableauBordDomaineRequestDto> request) {
 
@@ -68,7 +68,7 @@ public class TableauBordDomaineCrudController extends BaseController<TableauBord
                         @ApiResponse(responseCode = "403", description = "Perdomaines denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PostMapping("detach-domaines")
-        @PreAuthorize("hasAuthority('tableauBord:edit')")
+        @PreAuthorize("hasAuthority('tableaubord:edit')")
         public ResponseEntity<RestResponse<List<Long>>> detachDomainesFromTableauBord(
                         @Validated(OnCreate.class) @RequestBody List<Long> deletedIds) {
                 tableauBordDomaineService.detachDomainesFromTableauBord(deletedIds);
@@ -82,7 +82,7 @@ public class TableauBordDomaineCrudController extends BaseController<TableauBord
                         @ApiResponse(responseCode = "403", description = "Perdomaines denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PutMapping("reorder-domaines")
-        @PreAuthorize("hasAuthority('tableauBord:edit')")
+        @PreAuthorize("hasAuthority('tableaubord:edit')")
         public ResponseEntity<RestResponse<List<Long>>> reorderDomaines(
                         @Validated(OnCreate.class) @RequestBody ReorderTBDomainesRequest request) {
                 tableauBordDomaineService.reorderDomaines(request.getTableauBordId(), request.getItems());

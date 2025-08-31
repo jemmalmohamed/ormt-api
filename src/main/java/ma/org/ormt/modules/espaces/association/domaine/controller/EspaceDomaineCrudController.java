@@ -30,7 +30,7 @@ import ma.org.ormt.modules.espaces.association.domaine.service.EspaceDomaineServ
 import ma.org.ormt.modules.espaces.models.Espace;
 
 @RestController
-@RequestMapping(value = "/api/v1/espace-domaine")
+@RequestMapping(value = "/api/v1/admin/espace-domaine")
 @RequiredArgsConstructor
 @Tag(name = "Espace", description = "Espace API")
 public class EspaceDomaineCrudController extends BaseController<EspaceDomaine> {
