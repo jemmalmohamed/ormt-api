@@ -1,0 +1,101 @@
+[
+    {
+        "tableauBord": {
+            "nom": "public"
+        },
+        "tbDomaine": {
+            "nom": "Cadrage du Marché du Travail"
+        },
+        "ordre": 0
+    },
+    {
+        "tableauBord": {
+            "nom": "public"
+        },
+        "tbDomaine": {
+            "nom": "Offre de travail"
+        },
+        "ordre": 1
+    },
+    {
+        "tableauBord": {
+            "nom": "public"
+        },
+        "tbDomaine": {
+            "nom": "Demande de travail"
+        },
+        "ordre": 2
+    },
+    {
+        "tableauBord": {
+            "nom": "public"
+        },
+        "tbDomaine": {
+            "nom": "Cadre macro-économique"
+        },
+        "ordre": 3
+    },
+    {
+        "tableauBord": {
+            "nom": "public"
+        },
+        "tbDomaine": {
+            "nom": "Relations professionnelles et climat social"
+        },
+        "ordre": 4
+    },
+    {
+        "tableauBord": {
+            "nom": "public"
+        },
+        "tbDomaine": {
+            "nom": "Offre de formation"
+        },
+        "ordre": 5
+    },
+    {
+        "tableauBord": {
+            "nom": "public"
+        },
+        "tbDomaine": {
+            "nom": "Employabilité et insertion professionnelle"
+        },
+        "ordre": 6
+    },
+    {
+        "tableauBord": {
+            "nom": "public"
+        },
+        "tbDomaine": {
+            "nom": "Entreprenariat"
+        },
+        "ordre": 7
+    },
+    {
+        "tableauBord": {
+            "nom": "public"
+        },
+        "tbDomaine": {
+            "nom": "Investissement"
+        },
+        "ordre": 8
+    },
+    {
+        "tableauBord": {
+            "nom": "public"
+        },
+        "tbDomaine": {
+            "nom": "Intermédiation sur le marché du travail"
+        },
+        "ordre": 9
+    },
+    {
+        "tableauBord": {
+            "nom": "public"
+        },
+        "tbDomaine": {
+            "nom": "Compétitivité et salaires"
+        },
+        "ordre": 10
+    }
+]

@@ -1,0 +1,167 @@
+[
+    {
+        "nom": "Cadrage du Marché du Travail",
+        "description": "Domaine concernant le cadrage et l'analyse du marché du travail",
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            },
+            {
+                "roleCode": "role_decideur",
+                "niveauAcces": "lecture"
+            }
+        ],
+        "actif": true
+    },
+    {
+        "nom": "Offre de travail",
+        "description": "Domaine concernant l'offre de travail et l'emploi",
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            },
+            {
+                "roleCode": "role_decideur",
+                "niveauAcces": "lecture"
+            }
+        ],
+        "actif": true
+    },
+    {
+        "nom": "Demande de travail",
+        "description": "Domaine concernant la demande de travail et le recrutement",
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            },
+            {
+                "roleCode": "role_decideur",
+                "niveauAcces": "lecture"
+            }
+        ],
+        "actif": true
+    },
+    {
+        "nom": "Cadre macro-économique",
+        "description": "Domaine concernant le cadre macro-économique et les indicateurs économiques",
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            },
+            {
+                "roleCode": "role_decideur",
+                "niveauAcces": "lecture"
+            }
+        ],
+        "actif": true
+    },
+    {
+        "nom": "Relations professionnelles et climat social",
+        "description": "Domaine concernant les relations professionnelles et le climat social",
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            },
+            {
+                "roleCode": "role_decideur",
+                "niveauAcces": "lecture"
+            }
+        ],
+        "actif": true
+    },
+    {
+        "nom": "Offre de formation",
+        "description": "Domaine concernant l'offre de formation et l'éducation",
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            },
+            {
+                "roleCode": "role_decideur",
+                "niveauAcces": "lecture"
+            }
+        ],
+        "actif": true
+    },
+    {
+        "nom": "Employabilité et insertion professionnelle",
+        "description": "Domaine concernant l'employabilité et l'insertion professionnelle",
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            },
+            {
+                "roleCode": "role_decideur",
+                "niveauAcces": "lecture"
+            }
+        ],
+        "actif": true
+    },
+    {
+        "nom": "Entreprenariat",
+        "description": "Domaine concernant l'entreprenariat et la création d'entreprises",
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            },
+            {
+                "roleCode": "role_decideur",
+                "niveauAcces": "lecture"
+            }
+        ],
+        "actif": true
+    },
+    {
+        "nom": "Investissement",
+        "description": "Domaine concernant l'investissement et le financement",
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            },
+            {
+                "roleCode": "role_decideur",
+                "niveauAcces": "lecture"
+            }
+        ],
+        "actif": true
+    },
+    {
+        "nom": "Intermédiation sur le marché du travail",
+        "description": "Domaine concernant l'intermédiation et les services de l'emploi",
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            },
+            {
+                "roleCode": "role_decideur",
+                "niveauAcces": "lecture"
+            }
+        ],
+        "actif": true
+    },
+    {
+        "nom": "Compétitivité et salaires",
+        "description": "Domaine concernant la compétitivité, les salaires et la rémunération",
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            },
+            {
+                "roleCode": "role_decideur",
+                "niveauAcces": "lecture"
+            }
+        ],
+        "actif": true
+    }
+]
