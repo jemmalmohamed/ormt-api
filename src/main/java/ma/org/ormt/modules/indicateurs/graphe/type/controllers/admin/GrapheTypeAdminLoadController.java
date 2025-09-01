@@ -50,7 +50,7 @@ public class GrapheTypeAdminLoadController extends BaseController<GrapheType> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("")
-        @PreAuthorize("hasAuthority('indicateur:list')")
+        // @PreAuthorize("hasAuthority('indicateur:list')")
         public ResponseEntity<RestResponse<List<GrapheTypeDto>>> getGrapheTypes(
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
                         @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
@@ -79,7 +79,7 @@ public class GrapheTypeAdminLoadController extends BaseController<GrapheType> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('indicateur:read')")
+        // @PreAuthorize("hasAuthority('indicateur:read')")
         public ResponseEntity<RestResponse<GrapheTypeDetailsDto>> getGrapheType(@PathVariable("id") Long id) {
                 GrapheType graphetype = graphetypeService.findById(id).orElseThrow(EntityNotFoundException::new);
                 return buildResponseEntity(graphetype, GrapheTypeDetailsDto.class, HttpStatus.OK);

@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.Dto;
-import ma.org.ormt.modules.dashboard.tableaubord.dtos.TableauBordDto;
 import ma.org.ormt.modules.dashboard.domaine.tbdomaine.dtos.TBDomaineDto;
 
 @Setter
@@ -16,7 +15,7 @@ public class TableauBordDomaineDto extends Dto {
 
     private TBDomaineDto tbDomaine;
 
-    private TableauBordDto tableauBord;
+    // private TableauSummaryDto tableauBord;
 
     private Integer ordre;
 }

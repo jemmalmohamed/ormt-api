@@ -60,7 +60,7 @@ public class TableauBordPublicLoadController extends BaseController<TableauBord>
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "application/json"))
         })
         @GetMapping
-        @PreAuthorize("hasAuthority('tableaubord:list')")
+        @PreAuthorize("hasAuthority('dashboard:list')")
         public ResponseEntity<RestResponse<List<TableauBordDto>>> getTableauxBord(
                         @Parameter(description = "Page index (0-based)") @RequestParam(value = "pageIndex", defaultValue = "0") final int pageIndex,
                         @Parameter(description = "Page size (-1 for all)") @RequestParam(value = "pageSize", defaultValue = "-1") final int pageSize,
@@ -105,7 +105,7 @@ public class TableauBordPublicLoadController extends BaseController<TableauBord>
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "application/json"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('tableaubord:read')")
+        @PreAuthorize("hasAuthority('dashboard:read')")
         public ResponseEntity<RestResponse<TableauBordDetailsDto>> getTableauBord(@PathVariable("id") final Long id) {
                 boolean hasResourceAccess = hasResourceAccess(id, RESOURCE_TYPE, "lecture");
                 if (!hasResourceAccess) {

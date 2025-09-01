@@ -16,6 +16,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 import ma.org.ormt.core.commun.base.entity.BaseEntity;
+import ma.org.ormt.modules.dashboard.domaine.tbdomaine.association.indicateur.TBDomaineIndicateur;
 import ma.org.ormt.modules.dashboard.tableaubord.association.domaine.TableauBordDomaine;
 
 @Setter
@@ -42,5 +43,9 @@ public class TBDomaine extends BaseEntity {
     @Builder.Default
     @OneToMany(mappedBy = "tbDomaine", fetch = FetchType.LAZY)
     private List<TableauBordDomaine> tableauBordDomaines = new ArrayList<>();
+
+    @Builder.Default
+    @OneToMany(mappedBy = "tbDomaine", fetch = FetchType.LAZY)
+    private List<TBDomaineIndicateur> tbDomaineIndicateurs = new ArrayList<>();
 
 }

@@ -2,6 +2,7 @@ package ma.org.ormt.modules.dashboard.domaine.tbdomaine.services.impl;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,9 +19,14 @@ import ma.org.ormt.core.utilities.PaginationUtils;
 import ma.org.ormt.core.validators.ObjectsValidator;
 import ma.org.ormt.modules.dashboard.domaine.tbdomaine.dtos.request.TBDomaineRequestDto;
 import ma.org.ormt.modules.dashboard.domaine.tbdomaine.dtos.request.TBDomaineRequestDtoMapper;
+import ma.org.ormt.modules.dashboard.domaine.tbdomaine.dtos.details.TBDomaineDetailDto;
+import ma.org.ormt.modules.dashboard.domaine.tbdomaine.dtos.details.TBDomaineDetailDtoMapper;
 import ma.org.ormt.modules.dashboard.domaine.tbdomaine.models.TBDomaine;
 import ma.org.ormt.modules.dashboard.domaine.tbdomaine.repositories.TBDomaineRepository;
 import ma.org.ormt.modules.dashboard.domaine.tbdomaine.services.TBDomaineService;
+import ma.org.ormt.modules.dashboard.domaine.tbdomaine.association.indicateur.dtos.TBDomaineIndicateurDto;
+import ma.org.ormt.modules.indicateurs.indicateur.dtos.detail.IndicateurDetailDto;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @Service
 public class TBDomaineServiceImpl extends BaseServiceImpl<TBDomaine> implements TBDomaineService {
@@ -33,6 +39,12 @@ public class TBDomaineServiceImpl extends BaseServiceImpl<TBDomaine> implements 
 
     @Autowired
     private TBDomaineRequestDtoMapper domaineRequestMapper;
+
+    @Autowired
+    private TBDomaineDetailDtoMapper tbDomaineDetailMapper;
+
+    @Autowired
+    private IndicateurService indicateurService;
 
     static final String NOT_FOUND_STRING = "TBDomaine not found";
 
@@ -141,15 +153,14 @@ public class TBDomaineServiceImpl extends BaseServiceImpl<TBDomaine> implements 
 
     private void validateDomaineDependencies(Long id) {
         // Check if tbDomaine exists
-        domaineRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+        // domaineRepository.findById(id)
+        // .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
 
         // if (!tbDomaine.getSousDomaines().isEmpty()) {
 
         // String message = MessageResponse.builder()
         // .title("Suppression impossible ")
         // .mainMessage("Impossible de supprimer le tbdomaine car il est associé aux
-        // sous
         // domaines.")
 
         // .build()
@@ -169,6 +180,46 @@ public class TBDomaineServiceImpl extends BaseServiceImpl<TBDomaine> implements 
     @Override
     public List<Long> getTBDomaineIdsByTableauBordId(Long tableauBordId) {
         return domaineRepository.findIdsByTableaubordId(tableauBordId);
+    }
+
+    @Override
+    public TBDomaineDetailDto getTBDomaineWithPivotTable(Long id, String tableFormat) {
+        TBDomaine tbDomaine = findById(id).orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
+
+        // Map entity to detail DTO
+        TBDomaineDetailDto dto = tbDomaineDetailMapper.mapToDto(tbDomaine);
+
+        // Enrich each associated indicateur with pivot table data
+        if (tableFormat != null && !tableFormat.isEmpty() && dto.getTbDomaineIndicateurs() != null) {
+            for (TBDomaineIndicateurDto assocDto : dto.getTbDomaineIndicateurs()) {
+                if (assocDto.getIndicateur() != null) {
+                    IndicateurDetailDto indic = indicateurService
+                            .getIndicateurWithTableData(assocDto.getIndicateur().getId(), tableFormat);
+                    assocDto.getIndicateur().setPivotTableData(indic.getPivotTableData());
+                }
+            }
+        }
+
+        return dto;
+    }
+
+    @Override
+    public List<TBDomaineDetailDto> getTBDomainesWithPivotTable(QueryParams requestParams, String tableFormat) {
+        Page<TBDomaine> page = getEntityList(requestParams);
+
+        return page.getContent().stream().map(tbDomaine -> {
+            TBDomaineDetailDto dto = tbDomaineDetailMapper.mapToDto(tbDomaine);
+            if (tableFormat != null && !tableFormat.isEmpty() && dto.getTbDomaineIndicateurs() != null) {
+                for (TBDomaineIndicateurDto assocDto : dto.getTbDomaineIndicateurs()) {
+                    if (assocDto.getIndicateur() != null) {
+                        IndicateurDetailDto indic = indicateurService
+                                .getIndicateurWithTableData(assocDto.getIndicateur().getId(), tableFormat);
+                        assocDto.getIndicateur().setPivotTableData(indic.getPivotTableData());
+                    }
+                }
+            }
+            return dto;
+        }).collect(Collectors.toList());
     }
 
 }

@@ -48,7 +48,7 @@ public class TableauBordAdminCrudController extends BaseController<TableauBord> 
             @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
     })
     @PostMapping("")
-    @PreAuthorize("hasAuthority('tableaubord:create')")
+    @PreAuthorize("hasAuthority('dashboard:create')")
     public ResponseEntity<RestResponse<TableauBordDto>> create(
             @Validated(OnCreate.class) @RequestBody TableauBordRequestDto requestDto) throws Exception {
         TableauBord created = service.create(requestDto);
@@ -62,7 +62,7 @@ public class TableauBordAdminCrudController extends BaseController<TableauBord> 
             @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
     })
     @PutMapping("{id}")
-    @PreAuthorize("hasAuthority('tableaubord:edit')")
+    @PreAuthorize("hasAuthority('dashboard:edit')")
     public ResponseEntity<RestResponse<TableauBordDto>> update(@PathVariable Long id,
             @Validated(OnUpdate.class) @RequestBody TableauBordRequestDto requestDto) throws Exception {
         TableauBord updated = service.update(id, requestDto);
@@ -75,7 +75,7 @@ public class TableauBordAdminCrudController extends BaseController<TableauBord> 
             @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
     })
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasAuthority('tableaubord:delete')")
+    @PreAuthorize("hasAuthority('dashboard:delete')")
     public ResponseEntity<Void> deleteById(@PathVariable Long id) {
         return handleDelete(() -> service.delete(id));
     }
@@ -86,7 +86,7 @@ public class TableauBordAdminCrudController extends BaseController<TableauBord> 
             @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
     })
     @DeleteMapping("/bulk")
-    @PreAuthorize("hasAuthority('tableaubord:delete')")
+    @PreAuthorize("hasAuthority('dashboard:delete')")
     public ResponseEntity<RestResponse<List<Long>>> deleteMultiple(@RequestBody List<Long> ids) {
         try {
             service.deleteAllById(ids);
@@ -109,7 +109,7 @@ public class TableauBordAdminCrudController extends BaseController<TableauBord> 
             @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
     })
     @DeleteMapping("/all")
-    @PreAuthorize("hasAuthority('tableaubord:delete')")
+    @PreAuthorize("hasAuthority('dashboard:delete')")
     public ResponseEntity<Void> deleteAll() {
         return handleDelete(service::deleteAll);
     }

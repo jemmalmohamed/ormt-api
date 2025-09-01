@@ -53,7 +53,7 @@ public class TBDomaineAdminCrudController extends BaseController<TBDomaine> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PostMapping("")
-        @PreAuthorize("hasAuthority('tableaubord:create')")
+        @PreAuthorize("hasAuthority('dashboard:create')")
         public ResponseEntity<RestResponse<TBDomaineDto>> createDomaine(
                         @Validated(OnCreate.class) @ModelAttribute TBDomaineRequestDto requestDto) throws Exception {
                 TBDomaine tbDomaine = tbDomaineService.create(requestDto);
@@ -67,7 +67,7 @@ public class TBDomaineAdminCrudController extends BaseController<TBDomaine> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @PutMapping("{id}")
-        @PreAuthorize("hasAuthority('tableaubord:edit')")
+        @PreAuthorize("hasAuthority('dashboard:edit')")
         public ResponseEntity<RestResponse<TBDomaineDto>> updateDomaine(@PathVariable Long id,
                         @Validated(OnUpdate.class) @ModelAttribute TBDomaineRequestDto domaineRequestDto)
                         throws Exception {
@@ -81,7 +81,7 @@ public class TBDomaineAdminCrudController extends BaseController<TBDomaine> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/{id}")
-        @PreAuthorize("hasAuthority('tableaubord:delete')")
+        @PreAuthorize("hasAuthority('dashboard:delete')")
         public ResponseEntity<Void> deleteById(@PathVariable Long id) {
                 return handleDelete(() -> tbDomaineService.delete(id));
         }
@@ -92,7 +92,7 @@ public class TBDomaineAdminCrudController extends BaseController<TBDomaine> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/bulk")
-        @PreAuthorize("hasAuthority('tableaubord:delete')")
+        @PreAuthorize("hasAuthority('dashboard:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteMultiple(@RequestBody List<Long> ids) {
                 try {
                         tbDomaineService.deleteAllById(ids);
@@ -138,7 +138,7 @@ public class TBDomaineAdminCrudController extends BaseController<TBDomaine> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/all")
-        @PreAuthorize("hasAuthority('tableaubord:delete')")
+        @PreAuthorize("hasAuthority('dashboard:delete')")
         public ResponseEntity<Void> deleteAll() {
                 return handleDelete(tbDomaineService::deleteAll);
         }
@@ -149,7 +149,7 @@ public class TBDomaineAdminCrudController extends BaseController<TBDomaine> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/exclude")
-        @PreAuthorize("hasAuthority('tableaubord:delete')")
+        @PreAuthorize("hasAuthority('dashboard:delete')")
         public ResponseEntity<Void> deleteAllExcept(@RequestBody List<Long> ids) {
                 return handleDelete(() -> tbDomaineService.deleteAllExceptIds(ids));
         }
@@ -160,7 +160,7 @@ public class TBDomaineAdminCrudController extends BaseController<TBDomaine> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/query")
-        @PreAuthorize("hasAuthority('tableaubord:delete')")
+        @PreAuthorize("hasAuthority('dashboard:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParams(
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
@@ -175,7 +175,7 @@ public class TBDomaineAdminCrudController extends BaseController<TBDomaine> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @DeleteMapping("/query-exclude")
-        @PreAuthorize("hasAuthority('tableaubord:delete')")
+        @PreAuthorize("hasAuthority('dashboard:delete')")
         public ResponseEntity<RestResponse<List<Long>>> deleteByQueryParamsExceptIds(
                         @RequestBody List<Long> ids,
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,

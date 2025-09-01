@@ -19,6 +19,7 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.Parameter;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import ma.org.ormt.core.commun.base.controller.BaseController;
@@ -50,7 +51,7 @@ public class TBDomaineAdminLoadController extends BaseController<TBDomaine> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("")
-        @PreAuthorize("hasAuthority('tableaubord:list')")
+        @PreAuthorize("hasAuthority('dashboard:list')")
         public ResponseEntity<RestResponse<List<TBDomaineDto>>> getDomaines(
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
                         @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
@@ -70,20 +71,74 @@ public class TBDomaineAdminLoadController extends BaseController<TBDomaine> {
                                 HttpStatus.OK, true);
         }
 
-        @Operation(summary = "Get " + ENTITY_NAME + " by id")
+        // @Operation(summary = "Get " + ENTITY_NAME + " by id")
+        // @ApiResponses(value = {
+        // @ApiResponse(responseCode = "200", description = "Ok", content = {
+        // @Content(mediaType = "application/json", schema = @Schema(implementation =
+        // TBDomaineDto.class)) }),
+        // @ApiResponse(responseCode = "404", description = ENTITY_NAME
+        // + " not found", content = @Content(mediaType = "ErrorResponse")),
+        // @ApiResponse(responseCode = "403", description = "Permission denied", content
+        // = @Content(mediaType = "ErrorResponse"))
+        // })
+        // @GetMapping("/{id}")
+        // @PreAuthorize("hasAuthority('dashboard:read')")
+        // public ResponseEntity<RestResponse<TBDomaineDetailDto>>
+        // getDomaine(@PathVariable("id") Long id) {
+        // TBDomaine tbDomaine =
+        // domaineService.findById(id).orElseThrow(EntityNotFoundException::new);
+        // return buildResponseEntity(tbDomaine, TBDomaineDetailDto.class,
+        // HttpStatus.OK);
+
+        // }
+
+        @Operation(summary = "Get " + ENTITY_NAME
+                        + " with pivot table data", description = "Get TB domaine details with table data for indicateurs. "
+                                        +
+                                        "Use tableFormat parameter: 'pivot' for pivot table, 'flat' for flat table, 'crud' for CRUD operations, "
+                                        +
+                                        "'create' for create template, 'both' for pivot+flat, 'all' for all formats")
         @ApiResponses(value = {
                         @ApiResponse(responseCode = "200", description = "Ok", content = {
-                                        @Content(mediaType = "application/json", schema = @Schema(implementation = TBDomaineDto.class)) }),
-                        @ApiResponse(responseCode = "404", description = ENTITY_NAME
-                                        + " not found", content = @Content(mediaType = "ErrorResponse")),
+                                        @Content(mediaType = "application/json", schema = @Schema(implementation = TBDomaineDetailDto.class)) }),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('tableaubord:read')")
-        public ResponseEntity<RestResponse<TBDomaineDetailDto>> getDomaine(@PathVariable("id") Long id) {
-                TBDomaine tbDomaine = domaineService.findById(id).orElseThrow(EntityNotFoundException::new);
-                return buildResponseEntity(tbDomaine, TBDomaineDetailDto.class, HttpStatus.OK);
+        @PreAuthorize("hasAuthority('dashboard:read')")
+        public ResponseEntity<RestResponse<TBDomaineDetailDto>> getTBDomaineWithPivotTable(
+                        @PathVariable("id") Long id,
+                        @Parameter(description = "Table format: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'", example = "pivot") @RequestParam(value = "tableFormat", defaultValue = "pivot") String tableFormat) {
+                TBDomaineDetailDto dto = domaineService.getTBDomaineWithPivotTable(id, tableFormat);
+                return ResponseEntity.ok(RestResponse.<TBDomaineDetailDto>builder().data(dto).build());
+        }
 
+        @Operation(summary = "Get all " + ENTITY_NAME
+                        + "s with pivot table data", description = "List TB domaines with table data for indicateurs. "
+                                        +
+                                        "Use tableFormat parameter: 'pivot' for pivot table, 'flat' for flat table, 'crud' for CRUD operations, "
+                                        +
+                                        "'create' for create template, 'both' for pivot+flat, 'all' for all formats")
+        @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Ok", content = {
+                        @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = TBDomaineDetailDto.class))) }),
+                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @GetMapping("/pivot-table")
+        @PreAuthorize("hasAuthority('dashboard:list')")
+        public ResponseEntity<RestResponse<List<TBDomaineDetailDto>>> getTBDomainesWithPivotTable(
+                        @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
+                        @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
+                        @RequestParam(value = "sortField", defaultValue = "createdDate") String sortField,
+                        @RequestParam(value = "sortDirection", defaultValue = "DESC") Direction direction,
+                        @RequestParam(value = "filters", defaultValue = "") List<String> filters,
+                        @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter,
+                        @Parameter(description = "Table format: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'", example = "pivot") @RequestParam(value = "tableFormat", defaultValue = "pivot") String tableFormat) {
+
+                QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField, direction, filters,
+                                globalFilter);
+
+                List<TBDomaineDetailDto> data = domaineService.getTBDomainesWithPivotTable(requestParams,
+                                tableFormat);
+                return ResponseEntity.ok(RestResponse.<List<TBDomaineDetailDto>>builder().data(data).build());
         }
 
         @Override

@@ -7,6 +7,7 @@ import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.request.DonneeIndicateurRequestDto;
 import ma.org.ormt.modules.indicateurs.donnee.services.DonneeIndicateurService;
 import ma.org.ormt.core.threads.ThreadService;
+import ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto.IndicateurCreateRequestDto.IndicateurDonneeRequestDto;
 import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
 import ma.org.ormt.modules.indicateurs.dimension.services.DimensionService;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
@@ -45,9 +46,8 @@ public class DonneeIndicateurSeeder {
                 for (File dataFile : dataFiles) {
                     try (InputStream dataInputStream = Files.newInputStream(dataFile.toPath())) {
                         log.info("Processing data file: {}", dataFile.getName());
-                        ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto.IndicateurCreateRequestDto.IndicateurDonneeRequestDto dataIndicareur = objectMapper
-                                .readValue(dataInputStream,
-                                        ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto.IndicateurCreateRequestDto.IndicateurDonneeRequestDto.class);
+                        IndicateurDonneeRequestDto dataIndicareur = objectMapper
+                                .readValue(dataInputStream, IndicateurDonneeRequestDto.class);
                         proccessDonneeIndicateur(dataIndicareur);
                     } catch (Exception e) {
                         log.error("Failed to process data file {}: {}", dataFile.getName(), e.getMessage(), e);
@@ -62,7 +62,7 @@ public class DonneeIndicateurSeeder {
     }
 
     public void proccessDonneeIndicateur(
-            ma.org.ormt.modules.indicateurs.dimension.dtos.DomaineCreateRequestDto.IndicateurCreateRequestDto.IndicateurDonneeRequestDto dataIndicareur) {
+            IndicateurDonneeRequestDto dataIndicareur) {
         try {
             Indicateur indicateur = indicateurService.findByNom(dataIndicareur.getIndicateur().toLowerCase())
                     .orElseThrow(() -> new RuntimeException("Indicateur not found: " + dataIndicareur.getIndicateur()));

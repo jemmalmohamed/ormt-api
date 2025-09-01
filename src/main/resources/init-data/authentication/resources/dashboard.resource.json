@@ -1,9 +1,9 @@
 [
   {
-    "name": "tableaubord",
+    "name": "dashboard",
     "displayName": "tableau de bord",
     "uris": [
-      "/tableaubords/*"
+      "/dashboards/*"
     ],
     "scopes": [
       {

@@ -45,6 +45,21 @@ CREATE TABLE
         created_by VARCHAR(50),
         last_modified_by VARCHAR(50)
     );
+-- Table TB Domaine indicateur
+CREATE TABLE
+    IF NOT EXISTS tb_domaine_indicateur (
+        id BIGSERIAL PRIMARY KEY,
+        id_tb_domaine BIGINT NOT NULL,
+        id_indicateur BIGINT NOT NULL,
+        categorie varchar(255) NULL,
+        ordre INT NULL DEFAULT 0,
+        status_code INT NULL,
+        created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+        version BIGINT NOT NULL DEFAULT 0,
+        created_by VARCHAR(50),
+        last_modified_by VARCHAR(50) 
+    );
 
 -- Table Many-to-Many: Tableau Bord ↔ TB Domaine
 CREATE TABLE

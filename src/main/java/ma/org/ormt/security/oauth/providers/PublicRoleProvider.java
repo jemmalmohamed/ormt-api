@@ -103,7 +103,6 @@ public class PublicRoleProvider {
     private static final Collection<GrantedAuthority> DEFAULT_AUTHORITIES = List.of(
             new SimpleGrantedAuthority("ROLE_PUBLIC"), // Accès public de base
             new SimpleGrantedAuthority("PUBLIC"), // Accès public de base
-
             new SimpleGrantedAuthority("ROLE_ANONYMOUS") // Identification utilisateur anonyme
     );
 

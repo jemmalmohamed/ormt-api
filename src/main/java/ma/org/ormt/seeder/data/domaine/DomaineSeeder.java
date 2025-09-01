@@ -232,7 +232,7 @@ public class DomaineSeeder implements CommandLineRunner {
                 indicateurSeeder.processIndicateurs(sousDomaineData.getIndicateurs(), createdSousDomaine);
             }
 
-            // donneeIndicateurSeeder.createIndicateurDonnee(file);
+            donneeIndicateurSeeder.createIndicateurDonnee(file);
 
         } catch (Exception e) {
             log.error("Error processing subdomain file {}: {}", file.getName(), e.getMessage());

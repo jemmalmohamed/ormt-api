@@ -1,7 +1,6 @@
 package ma.org.ormt.modules.dashboard.domaine.tbdomaine.controllers;
 
 import java.util.List;
-import io.swagger.v3.oas.annotations.Parameter;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
@@ -15,12 +14,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import ma.org.ormt.core.commun.base.controller.BaseController;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
@@ -51,7 +50,7 @@ public class TBDomainePublicLoadController extends BaseController<TBDomaine> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("")
-        @PreAuthorize("hasAuthority('tableaubord:list')")
+        @PreAuthorize("hasAuthority('dashboard:list')")
         public ResponseEntity<RestResponse<List<TBDomaineDto>>> getDomaines(
                         @PathVariable("tableauBordId") Long tableauBordId,
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
@@ -82,41 +81,80 @@ public class TBDomainePublicLoadController extends BaseController<TBDomaine> {
                                 HttpStatus.OK, true);
         }
 
-        @Operation(summary = "Get " + ENTITY_NAME + " by id in TB (context-aware)")
-        @ApiResponses(value = {
-                        @ApiResponse(responseCode = "200", description = "Ok", content = {
-                                        @Content(mediaType = "application/json", schema = @Schema(implementation = TBDomaineDetailDto.class)) }),
-                        @ApiResponse(responseCode = "404", description = ENTITY_NAME
-                                        + " not found", content = @Content(mediaType = "ErrorResponse")),
+        // @Operation(summary = "Get all " + ENTITY_NAME
+        // + "s with pivot table data (context-aware)", description = "List TB domaines
+        // with enriched indicateur table data. Use tableFormat: 'pivot', 'flat',
+        // 'crud', 'create', 'both', or 'all'")
+        // @ApiResponses(value = { @ApiResponse(responseCode = "200", description =
+        // "Ok", content = {
+        // @Content(mediaType = "application/json", array = @ArraySchema(schema =
+        // @Schema(implementation = TBDomaineDetailDto.class))) }),
+        // @ApiResponse(responseCode = "403", description = "Permission denied", content
+        // = @Content(mediaType = "ErrorResponse"))
+        // })
+        // @GetMapping("")
+        // @PreAuthorize("hasAuthority('dashboard:list')")
+        // public ResponseEntity<RestResponse<List<TBDomaineDetailDto>>>
+        // getTBDomainesWithPivotTable(
+        // @PathVariable("tableauBordId") Long tableauBordId,
+        // @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
+        // @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
+        // @RequestParam(value = "sortField", defaultValue = "createdDate") String
+        // sortField,
+        // @RequestParam(value = "sortDirection", defaultValue = "DESC") Direction
+        // direction,
+        // @RequestParam(value = "filters", defaultValue = "") List<String> filters,
+        // @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter,
+        // @Parameter(description = "Table format: 'pivot', 'flat', 'crud', 'create',
+        // 'both', or 'all'", example = "pivot") @RequestParam(value = "tableFormat",
+        // defaultValue = "pivot") String tableFormat) {
+
+        // if (!hasResourceAccess(tableauBordId, "tableauBord", "lecture")) {
+        // return createForbiddenResponse();
+        // }
+
+        // List<String> effectiveFilters = (filters == null) ? new
+        // java.util.ArrayList<>()
+        // : new java.util.ArrayList<>(filters);
+        // effectiveFilters.add("actif:like:true");
+        // effectiveFilters.add("tableauBordDomaines.tableauBord.id:=:" +
+        // tableauBordId);
+
+        // QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField,
+        // direction,
+        // effectiveFilters, globalFilter);
+
+        // List<TBDomaineDetailDto> data =
+        // tbDomaineService.getTBDomainesWithPivotTable(requestParams,
+        // tableFormat);
+
+        // return ResponseEntity.ok(RestResponse.<List<TBDomaineDetailDto>>builder()
+        // .data(data)
+        // .build());
+        // }
+
+        @Operation(summary = "Get " + ENTITY_NAME
+                        + " with pivot table data (context-aware)", description = "Get TB domaine with enriched indicateur table data. Use tableFormat: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'")
+        @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Ok", content = {
+                        @Content(mediaType = "application/json", schema = @Schema(implementation = TBDomaineDetailDto.class)) }),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('tableaubord:read')")
-        public ResponseEntity<RestResponse<TBDomaineDetailDto>> getDomaine(
+        @PreAuthorize("hasAuthority('dashboard:read')")
+        public ResponseEntity<RestResponse<TBDomaineDetailDto>> getTBDomaineWithPivotTable(
                         @PathVariable("tableauBordId") Long tableauBordId,
                         @PathVariable("id") Long id,
-                        @Parameter(description = "Table format for indicateurs: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'", example = "crud") @RequestParam(value = "tableFormat", defaultValue = "pivot", required = false) String tableFormat) {
+                        @RequestParam(value = "tableFormat", defaultValue = "pivot") String tableFormat) {
 
-                // Check if the user has access to the specified tableau de bord
                 boolean hasAccess = hasResourceAccess(tableauBordId, "tableauBord", "lecture");
-                boolean existsInTableauBord = tbDomaineService.existsInTableauBord(id, tableauBordId);
-
-                if (!hasAccess || !existsInTableauBord) {
+                boolean allowed = tbDomaineService.existsInTableauBord(id, tableauBordId);
+                if (!hasAccess || !allowed) {
                         return createForbiddenResponse();
                 }
 
-                TBDomaineDetailDto domaineDetail;
-                // if (tableFormat != null && !tableFormat.isEmpty()) {
-                // // Use service method that adds table data
-                // domaineDetail = domaineService.getDomaineWithTableData(id, tableFormat);
-                // } else {
-                // Use existing logic for backward compatibility
-                TBDomaine tbDomaine = tbDomaineService.findById(id).orElseThrow(EntityNotFoundException::new);
-                domaineDetail = tbDomaineDetailMapper.mapToDto(tbDomaine);
-                // }
-
+                TBDomaineDetailDto dto = tbDomaineService.getTBDomaineWithPivotTable(id, tableFormat);
                 return ResponseEntity.ok(RestResponse.<TBDomaineDetailDto>builder()
-                                .data(domaineDetail)
+                                .data(dto)
                                 .build());
         }
 
