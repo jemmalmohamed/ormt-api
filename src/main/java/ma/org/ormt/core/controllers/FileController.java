@@ -64,43 +64,104 @@ public class FileController {
     /**
      * Get a file from MinIO by its filename with token verification
      */
+    // @GetMapping("/{fileName}")
+    // public ResponseEntity<byte[]> getFile(
+    // @PathVariable String fileName,
+    // @RequestParam(required = true) String token) {
+    // // Decode the token if present (it may be URL-encoded)
+    // String decodedToken = null;
+    // if (token != null) {
+    // try {
+    // decodedToken = java.net.URLDecoder.decode(token,
+    // java.nio.charset.StandardCharsets.UTF_8);
+    // } catch (Exception e) {
+    // log.warn("Error decoding token: {}", e.getMessage());
+    // return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+    // }
+    // } else {
+    // log.warn("No token provided for file: {}", fileName);
+    // return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+    // }
+    // // Only check token validity (no browser fingerprint)
+    // if (!fileSecurityService.validateFileToken(fileName, decodedToken, null)) {
+    // log.warn("Invalid or expired token for file: {}", fileName);
+    // return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+    // }
+    // try {
+    // byte[] fileData = minioService.getMinioFile(fileName);
+    // String contentType = determineContentType(fileName);
+    // HttpHeaders headers = new HttpHeaders();
+    // headers.setContentType(MediaType.parseMediaType(contentType));
+    // headers.setCacheControl("private, max-age=5"); // Cache for token lifetime
+    // headers.setPragma(""); // Remove no-cache
+    // headers.setExpires(System.currentTimeMillis() + 5_000); // 5 seconds
+    // headers.add("Content-Security-Policy", "default-src 'self'");
+    // headers.add("ETag", generateContentETag(fileData));
+    // return new ResponseEntity<>(fileData, headers, HttpStatus.OK);
+    // } catch (Exception e) {
+    // log.error("Error retrieving file {}: {}", fileName, e.getMessage(), e);
+    // return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    // }
+    // }
+
     @GetMapping("/{fileName}")
     public ResponseEntity<byte[]> getFile(
             @PathVariable String fileName,
-            @RequestParam(required = true) String token) {
-        // Decode the token if present (it may be URL-encoded)
-        String decodedToken = null;
-        if (token != null) {
-            try {
-                decodedToken = java.net.URLDecoder.decode(token, java.nio.charset.StandardCharsets.UTF_8);
-            } catch (Exception e) {
-                log.warn("Error decoding token: {}", e.getMessage());
-                return new ResponseEntity<>(HttpStatus.FORBIDDEN);
-            }
-        } else {
-            log.warn("No token provided for file: {}", fileName);
+            @RequestParam(name = "token", required = true) String token,
+            @RequestParam(name = "download", required = false, defaultValue = "false") boolean download) {
+
+        final String decodedToken;
+        try {
+            decodedToken = java.net.URLDecoder.decode(token, java.nio.charset.StandardCharsets.UTF_8);
+        } catch (Exception e) {
+            log.warn("Error decoding token: {}", e.getMessage());
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
-        // Only check token validity (no browser fingerprint)
+
         if (!fileSecurityService.validateFileToken(fileName, decodedToken, null)) {
             log.warn("Invalid or expired token for file: {}", fileName);
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
+
         try {
             byte[] fileData = minioService.getMinioFile(fileName);
+
+            // Decide content type (prefer real PDF if detected)
             String contentType = determineContentType(fileName);
+            if (looksLikePdf(fileData)) {
+                contentType = "application/pdf";
+            }
+
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.parseMediaType(contentType));
-            headers.setCacheControl("private, max-age=5"); // Cache for token lifetime
-            headers.setPragma(""); // Remove no-cache
-            headers.setExpires(System.currentTimeMillis() + 5_000); // 5 seconds
-            headers.add("Content-Security-Policy", "default-src 'self'");
+            headers.add("X-Content-Type-Options", "nosniff");
+            headers.setCacheControl("private, max-age=5");
+            headers.setPragma("");
+            headers.setExpires(System.currentTimeMillis() + 5_000);
             headers.add("ETag", generateContentETag(fileData));
+
+            // Filename + disposition (inline for viewer, attachment for download)
+            String safeName = fileName;
+            if ("application/pdf".equals(contentType) && !safeName.toLowerCase().endsWith(".pdf")) {
+                safeName = safeName + ".pdf";
+            }
+            String dispositionType = download ? "attachment" : "inline";
+            headers.set(HttpHeaders.CONTENT_DISPOSITION, dispositionType + "; filename=\"" + safeName + "\"");
+
+            headers.setContentLength(fileData.length);
+
             return new ResponseEntity<>(fileData, headers, HttpStatus.OK);
         } catch (Exception e) {
             log.error("Error retrieving file {}: {}", fileName, e.getMessage(), e);
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    private boolean looksLikePdf(byte[] data) {
+        // Magic-number check: %PDF-
+        if (data == null || data.length < 5)
+            return false;
+        return data[0] == '%' && data[1] == 'P' && data[2] == 'D' && data[3] == 'F' && data[4] == '-';
     }
 
     // Generate a deterministic ETag based on file content
