@@ -102,7 +102,7 @@
     {
       "nom": "Taux de NEET par milieu de résidence",
       "description": "Taux de NEET selon le milieu de résidence",
-      "categorie": "Taux des NEET ",
+      "categorie": "Taux des NEET",
       "abreviation": "",
       "roleAcces": [
         {
@@ -148,7 +148,7 @@
     {
       "nom": "Taux de NEET par genre",
       "description": "Taux de NEET selon le genre",
-      "categorie": "Taux des NEET ",
+      "categorie": "Taux des NEET",
       "abreviation": "",
       "roleAcces": [
         {
@@ -193,7 +193,7 @@
     {
       "nom": "Taux de NEET par région",
       "description": "Taux de NEET selon la région",
-      "categorie": "Taux des NEET ",
+      "categorie": "Taux des NEET",
       "abreviation": "",
       "roleAcces": [
         {

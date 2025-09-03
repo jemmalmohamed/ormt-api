@@ -7,10 +7,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -60,7 +58,6 @@ public class ChiffreCleLoadPublicController extends BaseController<ChiffreCle> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "application/json"))
         })
         @GetMapping
-        @PreAuthorize("hasAuthority('chiffrecle:list')")
         public ResponseEntity<RestResponse<List<ChiffreCleDto>>> getChiffreCles(
                         @Parameter(description = "Page index (0-based)") @RequestParam(value = "pageIndex", defaultValue = "0") final int pageIndex,
                         @Parameter(description = "Page size (-1 for all)") @RequestParam(value = "pageSize", defaultValue = "-1") final int pageSize,
@@ -72,6 +69,7 @@ public class ChiffreCleLoadPublicController extends BaseController<ChiffreCle> {
                 // Ensure filters is not null and add 'actif:true'
                 List<String> effectiveFilters = (filters == null) ? new java.util.ArrayList<>()
                                 : new java.util.ArrayList<>(filters);
+
                 effectiveFilters.add("actif:like:true");
 
                 QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField, direction,
@@ -92,43 +90,47 @@ public class ChiffreCleLoadPublicController extends BaseController<ChiffreCle> {
                                 HttpStatus.OK, true);
         }
 
-        /**
-         * Get chiffreCle details by ID.
-         */
-        @Operation(summary = "Get " + ENTITY_NAME + " by id")
-        @ApiResponses(value = {
-                        @ApiResponse(responseCode = "200", description = "Ok", content = {
-                                        @Content(mediaType = "application/json", schema = @Schema(implementation = ChiffreCleDetailsDto.class)) }),
-                        @ApiResponse(responseCode = "404", description = ENTITY_NAME
-                                        + " not found", content = @Content(mediaType = "application/json")),
-                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "application/json"))
-        })
-        @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('chiffrecle:read')")
-        public ResponseEntity<RestResponse<ChiffreCleDetailsDto>> getChiffreCle(@PathVariable("id") final Long id) {
-                boolean hasResourceAccess = hasResourceAccess(id, RESOURCE_TYPE, "lecture");
-                if (!hasResourceAccess) {
-                        return createForbiddenResponse();
-                }
+        // /**
+        // * Get chiffreCle details by ID.
+        // */
+        // @Operation(summary = "Get " + ENTITY_NAME + " by id")
+        // @ApiResponses(value = {
+        // @ApiResponse(responseCode = "200", description = "Ok", content = {
+        // @Content(mediaType = "application/json", schema = @Schema(implementation =
+        // ChiffreCleDetailsDto.class)) }),
+        // @ApiResponse(responseCode = "404", description = ENTITY_NAME
+        // + " not found", content = @Content(mediaType = "application/json")),
+        // @ApiResponse(responseCode = "403", description = "Permission denied", content
+        // = @Content(mediaType = "application/json"))
+        // })
+        // @GetMapping("/{id}")
+        // @PreAuthorize("hasAuthority('chiffrecle:read')")
+        // public ResponseEntity<RestResponse<ChiffreCleDetailsDto>>
+        // getChiffreCle(@PathVariable("id") final Long id) {
+        // boolean hasResourceAccess = hasResourceAccess(id, RESOURCE_TYPE, "lecture");
+        // if (!hasResourceAccess) {
+        // return createForbiddenResponse();
+        // }
 
-                try {
-                        Optional<ChiffreCle> chiffreCleOpt = chiffreCleService.findById(id);
-                        if (chiffreCleOpt.isEmpty()) {
-                                return ResponseEntity.notFound()
-                                                .build();
-                        }
+        // try {
+        // Optional<ChiffreCle> chiffreCleOpt = chiffreCleService.findById(id);
+        // if (chiffreCleOpt.isEmpty()) {
+        // return ResponseEntity.notFound()
+        // .build();
+        // }
 
-                        ChiffreCle chiffreCle = chiffreCleOpt.get();
-                        if (!chiffreCle.isActif()) {
-                                return ResponseEntity.notFound()
-                                                .build();
-                        }
+        // ChiffreCle chiffreCle = chiffreCleOpt.get();
+        // if (!chiffreCle.isActif()) {
+        // return ResponseEntity.notFound()
+        // .build();
+        // }
 
-                        return buildResponseEntity(chiffreCle, ChiffreCleDetailsDto.class, HttpStatus.OK);
-                } catch (Exception e) {
-                        return createNotFoundResponse("ChiffreCle with id " + id + " not found");
-                }
-        }
+        // return buildResponseEntity(chiffreCle, ChiffreCleDetailsDto.class,
+        // HttpStatus.OK);
+        // } catch (Exception e) {
+        // return createNotFoundResponse("ChiffreCle with id " + id + " not found");
+        // }
+        // }
 
         // ==================== Abstract Method Implementation ====================
 

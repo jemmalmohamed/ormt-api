@@ -1,12 +1,12 @@
 package ma.org.ormt.modules.domaines.sousdomaine.controllers;
 
 import java.util.List;
+import java.util.Objects;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +24,8 @@ import lombok.RequiredArgsConstructor;
 import ma.org.ormt.core.commun.base.controller.BaseController;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
 import ma.org.ormt.core.commun.rest.responses.RestResponse;
+import ma.org.ormt.modules.domaines.domaine.models.Domaine;
+import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDto;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDtoMapper;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.details.SousDomaineDetailsDto;
@@ -40,6 +42,7 @@ public class SousDomainePublicLoadController extends BaseController<SousDomaine>
         private static final String ENTITY_NAME = "sousdomaine";
 
         private final SousDomaineService sousDomaineService;
+        private final DomaineService domaineService;
         private final SousDomaineDtoMapper sousDomaineDtoMapper;
         // private final SousDomaineDetailsDtoMapper sousDomaineDetailMapper;
 
@@ -51,7 +54,6 @@ public class SousDomainePublicLoadController extends BaseController<SousDomaine>
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{domaineId}/sous-domaines")
-        @PreAuthorize("hasAuthority('domaine:list')")
         public ResponseEntity<RestResponse<List<SousDomaineDto>>> getSousDomaines(
                         @PathVariable("domaineId") Long domaineId,
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
@@ -60,6 +62,11 @@ public class SousDomainePublicLoadController extends BaseController<SousDomaine>
                         @RequestParam(value = "sortDirection", defaultValue = "DESC") Direction direction,
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter) {
+
+                // Enforce parent espace access via domaine
+                if (!hasAnyEspaceAccessForDomaine(domaineId)) {
+                        return createForbiddenResponse();
+                }
 
                 QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField,
                                 direction, filters,
@@ -89,7 +96,6 @@ public class SousDomainePublicLoadController extends BaseController<SousDomaine>
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{domaineId}/sous-domaines/pivot-table")
-        @PreAuthorize("hasAuthority('domaine:list')")
         public ResponseEntity<RestResponse<List<SousDomaineDetailsDto>>> getSousDomainesWithPivotTable(
                         @PathVariable("domaineId") Long domaineId,
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
@@ -99,6 +105,11 @@ public class SousDomainePublicLoadController extends BaseController<SousDomaine>
                         @RequestParam(value = "filters", defaultValue = "") List<String> filters,
                         @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter,
                         @Parameter(description = "Table format: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'", example = "pivot") @RequestParam(value = "tableFormat", defaultValue = "pivot") String tableFormat) {
+
+                // Enforce parent espace access via domaine
+                if (!hasAnyEspaceAccessForDomaine(domaineId)) {
+                        return createForbiddenResponse();
+                }
 
                 QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField, direction, filters,
                                 globalFilter);
@@ -127,11 +138,22 @@ public class SousDomainePublicLoadController extends BaseController<SousDomaine>
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{domaineId}/sous-domaines/{id}/pivot-table")
-        @PreAuthorize("hasAuthority('domaine:read')")
         public ResponseEntity<RestResponse<SousDomaineDetailsDto>> getSousDomaineWithPivotTable(
                         @PathVariable("domaineId") Long domaineId,
                         @PathVariable("id") Long id,
                         @Parameter(description = "Table format: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'", example = "pivot") @RequestParam(value = "tableFormat", defaultValue = "pivot") String tableFormat) {
+                // Enforce parent espace access via domaine
+                if (!hasAnyEspaceAccessForDomaine(domaineId)) {
+                        return createForbiddenResponse();
+                }
+                // Ensure sous-domaine belongs to the provided domaine
+                boolean belongsToDomaine = sousDomaineService.findById(id)
+                                .map(sd -> sd.getDomaine() != null
+                                                && Objects.equals(sd.getDomaine().getId(), domaineId))
+                                .orElse(false);
+                if (!belongsToDomaine) {
+                        return createForbiddenResponse();
+                }
                 SousDomaineDetailsDto dto = sousDomaineService.getSousDomaineWithPivotTable(id, tableFormat);
                 RestResponse<SousDomaineDetailsDto> response = RestResponse.<SousDomaineDetailsDto>builder()
                                 .data(dto)
@@ -154,5 +176,15 @@ public class SousDomainePublicLoadController extends BaseController<SousDomaine>
         // throw new IllegalArgumentException("Unsupported DTO type: " +
         // dtoClass.getName());
         // }
+
+        private boolean hasAnyEspaceAccessForDomaine(Long domaineId) {
+                return domaineService.findById(domaineId)
+                                .map(Domaine::getEspaceDomaines)
+                                .orElse(java.util.Collections.emptyList())
+                                .stream()
+                                .map(ed -> ed.getEspace() != null ? ed.getEspace().getId() : null)
+                                .filter(Objects::nonNull)
+                                .anyMatch(espaceId -> hasResourceAccess(espaceId, "espace", "lecture"));
+        }
 
 }

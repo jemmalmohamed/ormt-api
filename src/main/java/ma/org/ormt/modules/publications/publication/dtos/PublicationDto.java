@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.BaseDto;
 import ma.org.ormt.modules.roleacces.dtos.summary.RoleAccesSummaryDto;
-import ma.org.ormt.security.users.AdminRoleFilter;
+import ma.org.ormt.security.users.RoleAccesContentFilter;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -45,7 +45,7 @@ public class PublicationDto extends BaseDto {
 
     private Integer nombreTelechargements;
 
-    @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = AdminRoleFilter.class)
+    @JsonInclude(content = JsonInclude.Include.CUSTOM, contentFilter = RoleAccesContentFilter.class)
     private List<RoleAccesSummaryDto> roleAcces;
 
 }

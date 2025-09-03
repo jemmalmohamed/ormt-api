@@ -97,5 +97,32 @@
             "nom": "Compétitivité et salaires"
         },
         "ordre": 10
+    },
+    {
+        "tableauBord": {
+            "nom": "decideur"
+        },
+        "tbDomaine": {
+            "nom": "Cadre macroéconomique"
+        },
+        "ordre": 0
+    },
+    {
+        "tableauBord": {
+            "nom": "decideur"
+        },
+        "tbDomaine": {
+            "nom": "Situation du marché du travail"
+        },
+        "ordre": 1
+    },
+    {
+        "tableauBord": {
+            "nom": "decideur"
+        },
+        "tbDomaine": {
+            "nom": "Leviers de promotion de l'emploi"
+        },
+        "ordre": 2
     }
 ]

@@ -309,7 +309,7 @@
     {
       "nom": "Taux d’activité selon le genre et le milieu de résidence",
       "description": "Taux d’activité selon le genre et le milieu de résidence",
-      "categorie": "Taux d’activité ",
+      "categorie": "Taux d’activité",
       "abreviation": "",
       "roleAcces": [
         {
@@ -364,7 +364,7 @@
     {
       "nom": "Taux d’activité selon le genre",
       "description": "Taux d’activité selon le genre",
-      "categorie": "Taux d’activité ",
+      "categorie": "Taux d’activité",
       "abreviation": "",
       "roleAcces": [
         {
@@ -410,7 +410,7 @@
     {
       "nom": "Taux d’activité selon le groupe d’âge et le milieu de résidence",
       "description": "Taux d’activité selon le groupe d’âge et le milieu de résidence",
-      "categorie": "Taux d’activité ",
+      "categorie": "Taux d’activité",
       "abreviation": "",
       "roleAcces": [
         {
@@ -464,7 +464,7 @@
     {
       "nom": "Taux d’activité selon le groupe d’âge et le genre",
       "description": "Taux d’activité selon le groupe d’âge et le genre",
-      "categorie": "Taux d’activité ",
+      "categorie": "Taux d’activité",
       "abreviation": "",
       "roleAcces": [
         {
@@ -518,7 +518,7 @@
     {
       "nom": "Taux d’activité selon le diplôme et le milieu de résidence",
       "description": "Taux d’activité selon le diplôme et le milieu de résidence",
-      "categorie": "Taux d’activité ",
+      "categorie": "Taux d’activité",
       "abreviation": "",
       "roleAcces": [
         {
@@ -573,7 +573,7 @@
     {
       "nom": "Taux d’activité selon le diplôme et le genre",
       "description": "Taux d’activité selon le diplôme et le genre",
-      "categorie": "Taux d’activité ",
+      "categorie": "Taux d’activité",
       "abreviation": "",
       "roleAcces": [
         {
@@ -674,7 +674,7 @@
     {
       "nom": "Taux d’activité par région et le milieu de résidence",
       "description": "Taux d’activité par région et le milieu de résidence",
-      "categorie": "Taux d’activité ",
+      "categorie": "Taux d’activité",
       "abreviation": "",
       "roleAcces": [
         {

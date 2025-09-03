@@ -16,7 +16,7 @@ import ma.org.ormt.modules.indicateurs.graphe.configuration.dtos.GrapheConfigura
 import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.dtos.IndicateurDimensionDto;
 import ma.org.ormt.modules.indicateurs.source.dtos.summary.SourceSummaryDto;
 import ma.org.ormt.modules.roleacces.dtos.summary.RoleAccesSummaryDto;
-import ma.org.ormt.security.users.AdminRoleFilter;
+import ma.org.ormt.security.users.RoleAccesContentFilter;
 
 @Setter
 @Getter
@@ -50,7 +50,7 @@ public class IndicateurDto extends BaseDto {
 
     private Integer nombreDimensions;
 
-    @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = AdminRoleFilter.class)
+    @JsonInclude(content = JsonInclude.Include.CUSTOM, contentFilter = RoleAccesContentFilter.class)
     private List<RoleAccesSummaryDto> roleAcces;
 
     private List<IndicateurDimensionDto> indicateurDimensions;

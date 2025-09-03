@@ -7,7 +7,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -60,7 +59,6 @@ public class PublicationLoadPublicController extends BaseController<Publication>
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "application/json"))
         })
         @GetMapping
-        @PreAuthorize("hasAuthority('publication:list')")
         public ResponseEntity<RestResponse<List<PublicationDto>>> getPublications(
                         @Parameter(description = "Page index (0-based)") @RequestParam(value = "pageIndex", defaultValue = "0") final int pageIndex,
                         @Parameter(description = "Page size (-1 for all)") @RequestParam(value = "pageSize", defaultValue = "-1") final int pageSize,
@@ -104,7 +102,6 @@ public class PublicationLoadPublicController extends BaseController<Publication>
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "application/json"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('publication:read')")
         public ResponseEntity<RestResponse<PublicationDetailDto>> getPublication(@PathVariable("id") final Long id) {
                 boolean hasResourceAccess = hasResourceAccess(id, RESOURCE_TYPE, "lecture");
                 if (!hasResourceAccess) {

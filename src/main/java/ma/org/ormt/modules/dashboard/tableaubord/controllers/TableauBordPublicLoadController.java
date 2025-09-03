@@ -7,7 +7,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -60,7 +59,6 @@ public class TableauBordPublicLoadController extends BaseController<TableauBord>
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "application/json"))
         })
         @GetMapping
-        @PreAuthorize("hasAuthority('dashboard:list')")
         public ResponseEntity<RestResponse<List<TableauBordDto>>> getTableauxBord(
                         @Parameter(description = "Page index (0-based)") @RequestParam(value = "pageIndex", defaultValue = "0") final int pageIndex,
                         @Parameter(description = "Page size (-1 for all)") @RequestParam(value = "pageSize", defaultValue = "-1") final int pageSize,
@@ -79,13 +77,18 @@ public class TableauBordPublicLoadController extends BaseController<TableauBord>
                                 effectiveFilters,
                                 globalFilter);
 
-                Page<TableauBord> tableauBordPage = getEntitiesWithAccessControl(
-                                RESOURCE_TYPE,
-                                "lecture",
-                                requestParams,
-                                tableauBordService::getEntityList, // Function<QueryParams, Page<T>>
-                                tableauBordService::getEntitiesByIds // BiFunction<List<Long>, QueryParams, Page<T>>
-                );
+                // Only dashboards accessible by the current role (exclude role_public)
+                Page<TableauBord> tableauBordPage;
+                List<Long> accessibleIds = roleAccesService
+                                .getAccessibleResourceIdsForCurrentUser(RESOURCE_TYPE, "lecture");
+                if (accessibleIds == null) {
+                        // Admin/Master - access to all
+                        tableauBordPage = tableauBordService.getEntityList(requestParams);
+                } else if (accessibleIds.isEmpty()) {
+                        tableauBordPage = Page.empty();
+                } else {
+                        tableauBordPage = tableauBordService.getEntitiesByIds(accessibleIds, requestParams);
+                }
 
                 return buildResponseEntity(
                                 tableauBordPage.getContent(), TableauBordDto.class,
@@ -105,9 +108,9 @@ public class TableauBordPublicLoadController extends BaseController<TableauBord>
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "application/json"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('dashboard:read')")
         public ResponseEntity<RestResponse<TableauBordDetailsDto>> getTableauBord(@PathVariable("id") final Long id) {
-                boolean hasResourceAccess = hasResourceAccess(id, RESOURCE_TYPE, "lecture");
+                // Require direct role access; no public fallback
+                boolean hasResourceAccess = roleAccesService.hasAccessToResource(id, RESOURCE_TYPE, "lecture");
                 if (!hasResourceAccess) {
                         return createForbiddenResponse();
                 }

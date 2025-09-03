@@ -481,7 +481,7 @@
     {
       "nom": "part des salariés touchant un salaire inférieur au smig par secteur d’activité",
       "description": "part des salariés touchant un salaire inférieur au smig par secteur d’activité",
-      "categorie": "salaires ",
+      "categorie": "salaires",
       "abreviation": "",
       "typeTb": "décisionnel",
       "source": "cnss",

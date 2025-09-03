@@ -7,7 +7,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -60,7 +59,6 @@ public class EspacePublicLoadController extends BaseController<Espace> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "application/json"))
         })
         @GetMapping
-        @PreAuthorize("hasAuthority('espace:list')")
         public ResponseEntity<RestResponse<List<EspaceDto>>> getEspaces(
                         @Parameter(description = "Page index (0-based)") @RequestParam(value = "pageIndex", defaultValue = "0") final int pageIndex,
                         @Parameter(description = "Page size (-1 for all)") @RequestParam(value = "pageSize", defaultValue = "-1") final int pageSize,
@@ -105,7 +103,6 @@ public class EspacePublicLoadController extends BaseController<Espace> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "application/json"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('espace:read')")
         public ResponseEntity<RestResponse<EspaceDetailsDto>> getEspace(@PathVariable("id") final Long id) {
                 boolean hasResourceAccess = hasResourceAccess(id, RESOURCE_TYPE, "lecture");
                 if (!hasResourceAccess) {

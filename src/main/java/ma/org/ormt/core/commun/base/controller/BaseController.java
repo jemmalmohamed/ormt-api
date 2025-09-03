@@ -1,7 +1,10 @@
 package ma.org.ormt.core.commun.base.controller;
 
 import java.util.Collections;
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -43,12 +46,23 @@ public abstract class BaseController<T> {
         if (accessibleIds == null) {
             // Admin/Master - access to all
             return getAllEntities.apply(requestParams);
-        } else if (accessibleIds.isEmpty()) {
-            // No access - return empty page
-            return Page.empty();
         } else {
-            // Limited access - filter by accessible IDs
-            return getEntitiesByIds.apply(accessibleIds, requestParams);
+            // Always include PUBLIC resources alongside role-based access when not admin
+            List<Long> publicIds = roleAccesService.getAccessibleResourceIds("role_public", resourceType, permission);
+
+            if ((accessibleIds == null || accessibleIds.isEmpty())
+                    && (publicIds == null || publicIds.isEmpty())) {
+                return Page.empty();
+            }
+
+            // Merge accessible and public IDs, keeping order and removing duplicates
+            Set<Long> merged = new LinkedHashSet<>();
+            if (accessibleIds != null)
+                merged.addAll(accessibleIds);
+            if (publicIds != null)
+                merged.addAll(publicIds);
+
+            return getEntitiesByIds.apply(new ArrayList<>(merged), requestParams);
         }
     }
 
@@ -56,7 +70,13 @@ public abstract class BaseController<T> {
      * Check access for single resource
      */
     protected boolean hasResourceAccess(Long resourceId, String resourceType, String permission) {
-        return roleAccesService.hasAccessToResource(resourceId, resourceType, permission);
+        // First, check access with current user's role
+        boolean hasAccess = roleAccesService.hasAccessToResource(resourceId, resourceType, permission);
+        if (hasAccess) {
+            return true;
+        }
+        // If no access, allow if the resource is PUBLIC
+        return roleAccesService.hasAccess("role_public", resourceType, resourceId, permission);
     }
 
     protected abstract <DTO> DTO mapToDto(T entity, Class<DTO> dtoClass);

@@ -6,7 +6,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -50,7 +49,6 @@ public class PartenaireLoadController extends BaseController<Partenaire> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("")
-        @PreAuthorize("hasAuthority('partenaire:list')")
         public ResponseEntity<RestResponse<List<PartenaireDto>>> getPartenaires(
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
                         @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
@@ -80,7 +78,6 @@ public class PartenaireLoadController extends BaseController<Partenaire> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('partenaire:read')")
         public ResponseEntity<RestResponse<PartenaireDetailDto>> getPartenaire(@PathVariable("id") Long id) {
                 Partenaire partenaire = partenaireService.findById(id).orElseThrow(EntityNotFoundException::new);
                 return buildResponseEntity(partenaire, PartenaireDetailDto.class, HttpStatus.OK);

@@ -352,7 +352,7 @@
     {
       "nom": "Taux de chômage selon le milieu de résidence",
       "description": "Taux de chômage selon le milieu de résidence",
-      "categorie": "Taux de chômage ",
+      "categorie": "Taux de chômage",
       "abreviation": "",
       "roleAcces": [
         {
@@ -398,7 +398,7 @@
     {
       "nom": "Taux de chômage par région et genre",
       "description": "Taux de chômage par région et genre",
-      "categorie": "Taux de chômage ",
+      "categorie": "Taux de chômage",
       "abreviation": "",
       "roleAcces": [
         {
@@ -453,7 +453,7 @@
     {
       "nom": "Taux de chômage par région et milieu de résidence",
       "description": "Taux de chômage par région et milieu de résidence",
-      "categorie": "Taux de chômage ",
+      "categorie": "Taux de chômage",
       "abreviation": "",
       "roleAcces": [
         {
@@ -508,7 +508,7 @@
     {
       "nom": "Taux de chômage selon le groupe d’âge",
       "description": "Taux de chômage selon le groupe d’âge",
-      "categorie": "Taux de chômage ",
+      "categorie": "Taux de chômage",
       "abreviation": "",
       "roleAcces": [
         {
@@ -554,7 +554,7 @@
     {
       "nom": "Taux de chômage selon le diplôme",
       "description": "Taux de chômage selon le diplôme",
-      "categorie": "Taux de chômage ",
+      "categorie": "Taux de chômage",
       "abreviation": "",
       "roleAcces": [
         {
@@ -600,7 +600,7 @@
     {
       "nom": "Taux de chômage selon le genre",
       "description": "Taux de chômage selon le genre",
-      "categorie": "Taux de chômage ",
+      "categorie": "Taux de chômage",
       "abreviation": "",
       "roleAcces": [
         {

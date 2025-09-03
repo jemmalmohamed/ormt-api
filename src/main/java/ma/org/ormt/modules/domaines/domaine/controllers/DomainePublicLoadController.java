@@ -7,7 +7,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -51,7 +50,6 @@ public class DomainePublicLoadController extends BaseController<Domaine> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("")
-        @PreAuthorize("hasAuthority('domaine:list')")
         public ResponseEntity<RestResponse<List<DomaineDto>>> getDomaines(
                         @PathVariable("espaceId") Long espaceId,
                         @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
@@ -91,7 +89,6 @@ public class DomainePublicLoadController extends BaseController<Domaine> {
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
         @GetMapping("/{id}")
-        @PreAuthorize("hasAuthority('domaine:read')")
         public ResponseEntity<RestResponse<DomaineDetailDto>> getDomaine(
                         @PathVariable("espaceId") Long espaceId,
                         @PathVariable("id") Long id,

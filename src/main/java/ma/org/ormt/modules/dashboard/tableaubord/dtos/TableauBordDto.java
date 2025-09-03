@@ -13,7 +13,7 @@ import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.BaseDto;
 import ma.org.ormt.modules.dashboard.tableaubord.association.domaine.dtos.TableauBordDomaineDto;
 import ma.org.ormt.modules.roleacces.dtos.summary.RoleAccesSummaryDto;
-import ma.org.ormt.security.users.AdminRoleFilter;
+import ma.org.ormt.security.users.RoleAccesContentFilter;
 
 @Setter
 @Getter
@@ -31,6 +31,7 @@ public class TableauBordDto extends BaseDto {
 
     private List<TableauBordDomaineDto> tableauBordDomaines;
 
-    @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = AdminRoleFilter.class)
+    // Filter list content element-wise based on current user's role; admins get all
+    @JsonInclude(content = JsonInclude.Include.CUSTOM, contentFilter = RoleAccesContentFilter.class)
     private List<RoleAccesSummaryDto> roleAcces;
 }
