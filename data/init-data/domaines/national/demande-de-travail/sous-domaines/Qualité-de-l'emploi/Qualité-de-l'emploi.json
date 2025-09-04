@@ -48,7 +48,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part de l’emploi informel par secteur d’activité - Courbes",
+          "nom": "part de l’emploi informel par secteur d’activité-Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -103,7 +103,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part de l’emploi rémunéré par secteur d’activité - Courbes",
+          "nom": "part de l’emploi rémunéré par secteur d’activité-Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -149,7 +149,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part des actifs occupés bénéficiant d’une couverture médicale par milieu de résidence - Courbes",
+          "nom": "part des actifs occupés bénéficiant d’une couverture médicale par milieu de résidence-Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -195,7 +195,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part des actifs occupés bénéficiant d’une couverture médicale par genre - Courbes",
+          "nom": "part des actifs occupés bénéficiant d’une couverture médicale par genre-Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -241,7 +241,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part des salariés disposant d’un contrat de travail - Courbes",
+          "nom": "part des salariés disposant d’un contrat de travail-Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -287,7 +287,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part de l’emploi de type occasionnel ou saisonnier par milieu de résidence - Courbes",
+          "nom": "part de l’emploi de type occasionnel ou saisonnier par milieu de résidence-Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -333,7 +333,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part de l’emploi de type occasionnel ou saisonnier par genre - Courbes",
+          "nom": "part de l’emploi de type occasionnel ou saisonnier par genre-Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -379,7 +379,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par milieu de résidence - Courbes",
+          "nom": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par milieu de résidence-Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -425,7 +425,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par genre - Courbes",
+          "nom": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par genre-Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -471,7 +471,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "taux d’affiliation des actifs occupés à une organisation syndicale ou professionnelle - Courbes",
+          "nom": "taux d’affiliation des actifs occupés à une organisation syndicale ou professionnelle-Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -517,7 +517,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "part des salariés touchant un salaire inférieur au smig par secteur d’activité - Courbes",
+          "nom": "part des salariés touchant un salaire inférieur au smig par secteur d’activité-Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -526,7 +526,7 @@
     },
     {
       "nom": "salariés (stables) déclarés à la cnss par secteur d’activité",
-      "description": "salariés (stables) déclarés à la cnss par secteur d’activité - cnss",
+      "description": "salariés (stables) déclarés à la cnss par secteur d’activité-cnss",
       "categorie": "salaires",
       "abreviation": "",
       "typeTb": "grand public",
@@ -563,7 +563,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "salariés (stables) déclarés à la cnss par secteur d’activité - Courbes",
+          "nom": "salariés (stables) déclarés à la cnss par secteur d’activité-Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""

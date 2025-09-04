@@ -260,8 +260,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "bénéficiaires d’are par région - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "bénéficiaires d’are par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

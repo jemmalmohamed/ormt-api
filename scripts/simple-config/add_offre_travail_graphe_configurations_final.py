@@ -44,7 +44,7 @@ INDICATEUR_TO_TYPE = {
     "Population active en chômage selon l’expérience": "HISTOGRAMME",
     "Population active en chômage selon les causes": "HISTOGRAMME",
     "Taux de chômage selon le milieu de résidence": "HISTOGRAMME",
-    "Taux de chômage par région et genre": "CARTE",
+    "Taux de chômage par région et genre": "CHOROPLETH",
     "Taux de chômage par région et milieu de résidence": "COURBES",
     "Taux de chômage selon le groupe d’âge": "COURBES",
     "Taux de chômage selon le diplôme": "COURBES",
@@ -55,7 +55,7 @@ INDICATEUR_TO_TYPE = {
     "Effectif des jeunes NEET par genre": "HISTOGRAMME",
     "Taux de NEET par milieu de résidence": "COURBES",
     "Taux de NEET par genre": "COURBES",
-    "Taux de NEET par région": "CARTE",
+    "Taux de NEET par région": "CHOROPLETH",
 }
 
 

@@ -224,8 +224,8 @@ public class JsonGrapheConfigurationSeeder implements CommandLineRunner {
             case "COURBE_LINEAIRE":
             case "COURBE LINEAIRE":
                 return "Courbe linéaire";
-            case "CARTE":
-                return "Carte";
+            case "CHOROPLETH":
+                return "Choropleth";
             case "CAMEMBERT":
                 return "Camembert";
             case "HISTOGRAMME_EMPILTE_EVOLUTION":

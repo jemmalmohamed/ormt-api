@@ -2,19 +2,19 @@
     "indicateur": "population municipale",
     "data": [
         {
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2024",
             "genre": "ensemble",
             "valeur": 7651096
         },
         {
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2024",
             "genre": "féminin",
             "valeur": 3834806
         },
         {
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2024",
             "genre": "masculin",
             "valeur": 3816290
@@ -128,19 +128,19 @@
             "valeur": 1226863
         },
         {
-            "region": "l’oriental",
+            "region": "l'oriental",
             "annuel": "2024",
             "genre": "ensemble",
             "valeur": 2269378
         },
         {
-            "region": "l’oriental",
+            "region": "l'oriental",
             "annuel": "2024",
             "genre": "féminin",
             "valeur": 1159757
         },
         {
-            "region": "l’oriental",
+            "region": "l'oriental",
             "annuel": "2024",
             "genre": "masculin",
             "valeur": 1109621
@@ -182,19 +182,19 @@
             "valeur": 213976
         },
         {
-            "region": "laâyoune-sakia el hamra",
+            "region": "laayoune-sakia el hamra",
             "annuel": "2024",
             "genre": "ensemble",
             "valeur": 417663
         },
         {
-            "region": "laâyoune-sakia el hamra",
+            "region": "laayoune-sakia el hamra",
             "annuel": "2024",
             "genre": "féminin",
             "valeur": 205193
         },
         {
-            "region": "laâyoune-sakia el hamra",
+            "region": "laayoune-sakia el hamra",
             "annuel": "2024",
             "genre": "masculin",
             "valeur": 205831

@@ -443,8 +443,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Taux de chômage par région et genre - Carte",
-          "grapheTypeCode": "CARTE",
+          "nom": "Taux de chômage par région et genre - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -498,8 +498,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Taux de chômage par région et milieu de résidence - Courbes",
-          "grapheTypeCode": "COURBES",
+          "nom": "Taux de chômage par région et milieu de résidence - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

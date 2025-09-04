@@ -3,7 +3,7 @@
     "data": [
         {
             "annuel": 2019,
-            "region": "Beni Mellal Khenifra",
+            "region": "Beni Mellal-Khénifra",
             "valeur": 6.7
         },
         {
@@ -23,7 +23,7 @@
         },
         {
             "annuel": 2019,
-            "region": "Fès Meknès",
+            "region": "Fès-meknès",
             "valeur": 17.0
         },
         {
@@ -33,12 +33,12 @@
         },
         {
             "annuel": 2019,
-            "region": "Laâyoune Sakia El Hamra",
+            "region": "Laayoune Sakia El Hamra",
             "valeur": 3.0
         },
         {
             "annuel": 2019,
-            "region": "L’Oriental",
+            "region": "L'oriental",
             "valeur": 7.0
         },
         {
@@ -63,7 +63,7 @@
         },
         {
             "annuel": 2020,
-            "region": "Beni Mellal Khenifra",
+            "region": "Beni Mellal-Khénifra",
             "valeur": 9.4
         },
         {
@@ -83,7 +83,7 @@
         },
         {
             "annuel": 2020,
-            "region": "Fès Meknès",
+            "region": "Fès-meknès",
             "valeur": 11.6
         },
         {
@@ -93,12 +93,12 @@
         },
         {
             "annuel": 2020,
-            "region": "Laâyoune Sakia El Hamra",
+            "region": "Laayoune Sakia El Hamra",
             "valeur": 3.0
         },
         {
             "annuel": 2020,
-            "region": "L’Oriental",
+            "region": "L'oriental",
             "valeur": 3.8
         },
         {
@@ -123,7 +123,7 @@
         },
         {
             "annuel": 2021,
-            "region": "Beni Mellal Khenifra",
+            "region": "Beni Mellal-Khénifra",
             "valeur": 4.1
         },
         {
@@ -143,7 +143,7 @@
         },
         {
             "annuel": 2021,
-            "region": "Fès Meknès",
+            "region": "Fès-meknès",
             "valeur": 15.8
         },
         {
@@ -153,12 +153,12 @@
         },
         {
             "annuel": 2021,
-            "region": "Laâyoune Sakia El Hamra",
+            "region": "Laayoune Sakia El Hamra",
             "valeur": 4.4
         },
         {
             "annuel": 2021,
-            "region": "L’Oriental",
+            "region": "L'oriental",
             "valeur": 3.6
         },
         {
@@ -183,7 +183,7 @@
         },
         {
             "annuel": 2022,
-            "region": "Beni Mellal Khenifra",
+            "region": "Beni Mellal-Khénifra",
             "valeur": 4.1
         },
         {
@@ -203,7 +203,7 @@
         },
         {
             "annuel": 2022,
-            "region": "Fès Meknès",
+            "region": "Fès-meknès",
             "valeur": 10.5
         },
         {
@@ -213,12 +213,12 @@
         },
         {
             "annuel": 2022,
-            "region": "Laâyoune Sakia El Hamra",
+            "region": "Laayoune Sakia El Hamra",
             "valeur": 3.4
         },
         {
             "annuel": 2022,
-            "region": "L’Oriental",
+            "region": "L'oriental",
             "valeur": 2.5
         },
         {
@@ -243,7 +243,7 @@
         },
         {
             "annuel": 2023,
-            "region": "Beni Mellal Khenifra",
+            "region": "Beni Mellal-Khénifra",
             "valeur": 9.7
         },
         {
@@ -263,7 +263,7 @@
         },
         {
             "annuel": 2023,
-            "region": "Fès Meknès",
+            "region": "Fès-meknès",
             "valeur": 9.9
         },
         {
@@ -273,12 +273,12 @@
         },
         {
             "annuel": 2023,
-            "region": "Laâyoune Sakia El Hamra",
+            "region": "Laayoune Sakia El Hamra",
             "valeur": 3.4
         },
         {
             "annuel": 2023,
-            "region": "L’Oriental",
+            "region": "L'oriental",
             "valeur": 7.0
         },
         {
@@ -303,7 +303,7 @@
         },
         {
             "annuel": 2024,
-            "region": "Beni Mellal Khenifra",
+            "region": "Beni Mellal-Khénifra",
             "valeur": 11.9
         },
         {
@@ -323,7 +323,7 @@
         },
         {
             "annuel": 2024,
-            "region": "Fès Meknès",
+            "region": "Fès-meknès",
             "valeur": 9.8
         },
         {
@@ -333,12 +333,12 @@
         },
         {
             "annuel": 2024,
-            "region": "Laâyoune Sakia El Hamra",
+            "region": "Laayoune Sakia El Hamra",
             "valeur": 2.5
         },
         {
             "annuel": 2024,
-            "region": "L’Oriental",
+            "region": "L'oriental",
             "valeur": 7.0
         },
         {

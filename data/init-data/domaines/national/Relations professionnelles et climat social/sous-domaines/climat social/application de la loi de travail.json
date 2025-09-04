@@ -48,8 +48,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Nombre de conflits par région - Courbes",
-          "grapheTypeCode": "COURBES",
+          "nom": "Nombre de conflits par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -94,8 +94,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Nombre de grèves évitées par région - Courbes",
-          "grapheTypeCode": "COURBES",
+          "nom": "Nombre de grèves évitées par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -140,8 +140,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Nombre de grèves déclenchées par région - Courbes",
-          "grapheTypeCode": "COURBES",
+          "nom": "Nombre de grèves déclenchées par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

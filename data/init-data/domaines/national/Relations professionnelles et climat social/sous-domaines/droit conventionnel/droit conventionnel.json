@@ -48,8 +48,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Nombre de protocoles signés par région - Courbes",
-          "grapheTypeCode": "COURBES",
+          "nom": "Nombre de protocoles signés par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -94,8 +94,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Nombre de conventions collectives par région - Courbes",
-          "grapheTypeCode": "COURBES",
+          "nom": "Nombre de conventions collectives par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

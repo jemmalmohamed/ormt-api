@@ -11,6 +11,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.BaseDto;
+import ma.org.ormt.modules.dashboard.domaine.tbdomaine.dtos.summary.TBDomaineSummaryDto;
 import ma.org.ormt.modules.roleacces.dtos.summary.RoleAccesSummaryDto;
 import ma.org.ormt.security.users.RoleAccesContentFilter;
 
@@ -27,6 +28,8 @@ public class TBDomaineDto extends BaseDto {
     private String description;
 
     private Boolean actif;
+
+    private TBDomaineSummaryDto tableauBord;
 
     @JsonInclude(content = JsonInclude.Include.CUSTOM, contentFilter = RoleAccesContentFilter.class)
     private List<RoleAccesSummaryDto> roleAcces;

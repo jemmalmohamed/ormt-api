@@ -32,7 +32,7 @@ public class PivotTableMetadataDto {
     private int headerRowCount;
 
     /**
-     * Total number of data columns (after cartesian product)
+     * Total number of data columns (after choroplethsian product)
      */
     private int dataColumnCount;
 

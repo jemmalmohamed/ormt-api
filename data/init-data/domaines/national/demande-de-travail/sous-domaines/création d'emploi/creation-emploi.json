@@ -433,8 +433,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d’emploi par région - Carte",
-          "grapheTypeCode": "CARTE",
+          "nom": "création d’emploi par région - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -543,8 +543,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d’emploi salariés par région - Carte",
-          "grapheTypeCode": "CARTE",
+          "nom": "création d’emploi salariés par région - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -699,8 +699,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d’emploi indépendants déclaré à la cnss par région - Carte",
-          "grapheTypeCode": "CARTE",
+          "nom": "création d’emploi indépendants déclaré à la cnss par région - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

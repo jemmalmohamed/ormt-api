@@ -315,8 +315,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Salariés bénéficiaires TAHFIZ par région - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "Salariés bénéficiaires TAHFIZ par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -490,8 +490,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Entreprises bénéficiaires TAHFIZ par région - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "Entreprises bénéficiaires TAHFIZ par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

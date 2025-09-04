@@ -261,8 +261,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Bénéficiaires du PI par région - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "Bénéficiaires du PI par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

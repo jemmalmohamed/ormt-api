@@ -100,7 +100,7 @@
     },
     {
         "tableauBord": {
-            "nom": "decideur"
+            "nom": "décisionnel"
         },
         "tbDomaine": {
             "nom": "Cadre macroéconomique"
@@ -109,7 +109,7 @@
     },
     {
         "tableauBord": {
-            "nom": "decideur"
+            "nom": "décisionnel"
         },
         "tbDomaine": {
             "nom": "Situation du marché du travail"
@@ -118,7 +118,7 @@
     },
     {
         "tableauBord": {
-            "nom": "decideur"
+            "nom": "décisionnel"
         },
         "tbDomaine": {
             "nom": "Leviers de promotion de l'emploi"

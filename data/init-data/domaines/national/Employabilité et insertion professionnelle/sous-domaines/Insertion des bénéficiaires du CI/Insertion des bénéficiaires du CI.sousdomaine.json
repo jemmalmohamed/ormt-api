@@ -278,8 +278,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Taux d’insertion à 3 ans par région - Histogramme",
-          "grapheTypeCode": "HISTOGRAMME",
+          "nom": "Taux d’insertion à 3 ans par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

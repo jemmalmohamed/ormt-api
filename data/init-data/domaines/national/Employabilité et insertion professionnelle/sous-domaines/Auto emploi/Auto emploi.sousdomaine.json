@@ -214,8 +214,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Porteurs de projet accompagnés par région - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "Porteurs de projet accompagnés par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -343,8 +343,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Entreprises crées par région - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "Entreprises crées par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -426,8 +426,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Emplois crées par région - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "Emplois crées par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

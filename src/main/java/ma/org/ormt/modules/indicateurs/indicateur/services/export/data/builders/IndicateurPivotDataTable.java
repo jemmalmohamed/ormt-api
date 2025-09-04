@@ -80,7 +80,7 @@ public class IndicateurPivotDataTable {
                     return values;
                 })
                 .collect(Collectors.toList());
-        List<List<String>> columnCombinations = cartesianProduct(columnValues);
+        List<List<String>> columnCombinations = choroplethsianProduct(columnValues);
 
         // Build header rows dynamically (no combination row at the end)
         List<List<String>> headerRows = new ArrayList<>();
@@ -205,18 +205,18 @@ public class IndicateurPivotDataTable {
                 .findFirst().orElse("");
     }
 
-    public static List<List<String>> cartesianProduct(List<List<String>> lists) {
+    public static List<List<String>> choroplethsianProduct(List<List<String>> lists) {
         List<List<String>> result = new ArrayList<>();
         if (lists.isEmpty()) {
             result.add(new ArrayList<>());
             return result;
         } else {
-            cartesianProductRecursive(lists, result, 0, new ArrayList<>());
+            choroplethsianProductRecursive(lists, result, 0, new ArrayList<>());
             return result;
         }
     }
 
-    private static void cartesianProductRecursive(List<List<String>> lists, List<List<String>> result, int depth,
+    private static void choroplethsianProductRecursive(List<List<String>> lists, List<List<String>> result, int depth,
             List<String> current) {
         if (depth == lists.size()) {
             result.add(new ArrayList<>(current));
@@ -224,7 +224,7 @@ public class IndicateurPivotDataTable {
         }
         for (String s : lists.get(depth)) {
             current.add(s);
-            cartesianProductRecursive(lists, result, depth + 1, current);
+            choroplethsianProductRecursive(lists, result, depth + 1, current);
             current.remove(current.size() - 1);
         }
     }

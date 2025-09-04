@@ -223,8 +223,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Bénéficiaires du CI par région - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "Bénéficiaires du CI par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -398,8 +398,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Entreprises bénéficiaires du CI par région - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "Entreprises bénéficiaires du CI par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

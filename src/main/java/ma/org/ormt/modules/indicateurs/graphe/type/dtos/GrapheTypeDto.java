@@ -27,11 +27,4 @@ public class GrapheTypeDto extends Dto {
 
     private Boolean actif;
 
-    // Relations will be added after creating other entities
-
-    // @OneToMany(mappedBy = "grapheType", fetch = FetchType.LAZY)
-    // private List<ChartMappingRule> mappingRules;
-
-    // @OneToMany(mappedBy = "grapheType", fetch = FetchType.LAZY)
-    // private List<ChartConfiguration> configurations;
 }

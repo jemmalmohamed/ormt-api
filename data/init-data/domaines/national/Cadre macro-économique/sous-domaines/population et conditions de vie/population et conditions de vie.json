@@ -103,8 +103,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "incidence de la pauvreté absolue par région - Carte",
-          "grapheTypeCode": "CARTE",
+          "nom": "incidence de la pauvreté absolue par région - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -149,8 +149,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "taux de pauvreté multidimensionnelle par région - Carte",
-          "grapheTypeCode": "CARTE",
+          "nom": "taux de pauvreté multidimensionnelle par région - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -195,8 +195,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "taux de vulnérabilité à la pauvreté par région - Carte",
-          "grapheTypeCode": "CARTE",
+          "nom": "taux de vulnérabilité à la pauvreté par région - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

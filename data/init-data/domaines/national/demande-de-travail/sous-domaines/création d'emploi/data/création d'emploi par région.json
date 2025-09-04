@@ -2,227 +2,227 @@
     "indicateur": "création d’emploi par région",
     "data": [
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "annuel": "2019",
             "valeur": -37000
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "annuel": "2020",
             "valeur": 14000
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "annuel": "2021",
             "valeur": 101000
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "annuel": "2022",
             "valeur": 37000
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "annuel": "2023",
             "valeur": -24000
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "annuel": "2019",
             "valeur": 7000
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "annuel": "2020",
             "valeur": -54000
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "annuel": "2021",
             "valeur": 32000
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "annuel": "2022",
             "valeur": 8000
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "annuel": "2023",
             "valeur": -38000
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "annuel": "2019",
             "valeur": 28000
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "annuel": "2020",
             "valeur": -55000
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "annuel": "2021",
             "valeur": -4000
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "annuel": "2022",
             "valeur": 9000
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "annuel": "2023",
             "valeur": -11000
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "annuel": "2019",
             "valeur": 7000
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "annuel": "2020",
             "valeur": -53000
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "annuel": "2021",
             "valeur": 28000
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "annuel": "2022",
             "valeur": 44000
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "annuel": "2023",
             "valeur": 0
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "annuel": "2019",
             "valeur": 43000
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "annuel": "2020",
             "valeur": -38000
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "annuel": "2021",
             "valeur": 6000
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "annuel": "2022",
             "valeur": -40000
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "annuel": "2023",
             "valeur": -50000
         },
         {
-            "region": "Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "annuel": "2019",
             "valeur": 45000
         },
         {
-            "region": "Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "annuel": "2020",
             "valeur": -158000
         },
         {
-            "region": "Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "annuel": "2021",
             "valeur": 1000
         },
         {
-            "region": "Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "annuel": "2022",
             "valeur": 10000
         },
         {
-            "region": "Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "annuel": "2023",
             "valeur": -25000
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "annuel": "2019",
             "valeur": 24000
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "annuel": "2020",
             "valeur": -26000
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "annuel": "2021",
             "valeur": 15000
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "annuel": "2022",
             "valeur": -26000
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "annuel": "2023",
             "valeur": -28000
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "annuel": "2019",
             "valeur": 29000
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "annuel": "2020",
             "valeur": -19000
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "annuel": "2021",
             "valeur": 30000
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "annuel": "2022",
             "valeur": -24000
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "annuel": "2023",
             "valeur": 1000
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "annuel": "2019",
             "valeur": 20000
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "annuel": "2020",
             "valeur": -26000
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "annuel": "2021",
             "valeur": 14000
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "annuel": "2022",
             "valeur": -45000
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "annuel": "2023",
             "valeur": 8000
         },

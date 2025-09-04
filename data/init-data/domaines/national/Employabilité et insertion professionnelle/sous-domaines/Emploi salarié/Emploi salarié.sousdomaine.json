@@ -205,8 +205,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Emploi salarié par région - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "Emploi salarié par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

@@ -2,22 +2,22 @@
     "indicateur": "Taux d’insertion des lauréats de la formation professionnelle à 9 mois par région",
     "data": [
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "annuel": "2016",
             "valeur": 43.5
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "annuel": "2019",
             "valeur": 71.7
         },
         {
-            "region": "Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "annuel": "2016",
             "valeur": 65.6
         },
         {
-            "region": "Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "annuel": "2019",
             "valeur": 67.7
         },
@@ -32,82 +32,82 @@
             "valeur": 78.4
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "annuel": "2016",
             "valeur": 70.0
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "annuel": "2019",
             "valeur": 85.5
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "annuel": "2016",
             "valeur": 85.2
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "annuel": "2019",
             "valeur": 78.5
         },
         {
-            "region": "Guelmim-Oued Noun",
+            "region": "Guelmim-oued noun",
             "annuel": "2016",
             "valeur": 81.0
         },
         {
-            "region": "Guelmim-Oued Noun",
+            "region": "Guelmim-oued noun",
             "annuel": "2019",
             "valeur": 71.1
         },
         {
-            "region": "Laâyoune-Sakia El Hamra",
+            "region": "Laayoune-Sakia El Hamra",
             "annuel": "2016",
             "valeur": 70.2
         },
         {
-            "region": "Laâyoune-Sakia El Hamra",
+            "region": "Laayoune-Sakia El Hamra",
             "annuel": "2019",
             "valeur": 72.9
         },
         {
-            "region": "L’Oriental",
+            "region": "L'oriental",
             "annuel": "2016",
             "valeur": 50.0
         },
         {
-            "region": "L’Oriental",
+            "region": "L'oriental",
             "annuel": "2019",
             "valeur": 71.4
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "annuel": "2016",
             "valeur": 66.5
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "annuel": "2019",
             "valeur": 64.2
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "annuel": "2016",
             "valeur": 62.4
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "annuel": "2019",
             "valeur": 62.9
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "annuel": "2016",
             "valeur": 79.5
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "annuel": "2019",
             "valeur": 76.8
         },

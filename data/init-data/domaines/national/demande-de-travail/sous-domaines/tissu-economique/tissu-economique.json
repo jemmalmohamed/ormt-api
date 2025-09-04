@@ -258,8 +258,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "taux de survie des entreprises - Courbes",
-          "grapheTypeCode": "COURBES",
+          "nom": "taux de survie des entreprises - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

@@ -719,8 +719,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Taux d’activité par région et le milieu de résidence - Courbes",
-          "grapheTypeCode": "COURBES",
+          "nom": "Taux d’activité par région et le milieu de résidence - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -774,8 +774,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Taux d’activité par région et genre - Courbes",
-          "grapheTypeCode": "COURBES",
+          "nom": "Taux d’activité par région et genre - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

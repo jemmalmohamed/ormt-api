@@ -415,8 +415,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "emploi par région - Carte",
-          "grapheTypeCode": "CARTE",
+          "nom": "emploi par région - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -626,8 +626,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "salariés déclarés à la cnss par région - Carte",
-          "grapheTypeCode": "CARTE",
+          "nom": "salariés déclarés à la cnss par région - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

@@ -66,8 +66,8 @@ public class IndicateurCrudDataTable {
                 .map(dim -> IndicateurPivotDataTable.getUniqueDimensionValues(indicateur, dim.getDimension().getNom()))
                 .collect(Collectors.toList());
 
-        // Cartesian product of all dimension values
-        List<List<String>> allCombinations = IndicateurPivotDataTable.cartesianProduct(allDimValues);
+        // Choroplethsian product of all dimension values
+        List<List<String>> allCombinations = IndicateurPivotDataTable.choroplethsianProduct(allDimValues);
 
         // Header row: dimension names + "Valeur"
         List<String> header = dims.stream()

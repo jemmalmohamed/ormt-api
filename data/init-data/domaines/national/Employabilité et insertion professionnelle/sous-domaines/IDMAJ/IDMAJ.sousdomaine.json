@@ -315,8 +315,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Bénéficiaires IDMAJ par région (hors PI) - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "Bénéficiaires IDMAJ par région (hors PI) - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

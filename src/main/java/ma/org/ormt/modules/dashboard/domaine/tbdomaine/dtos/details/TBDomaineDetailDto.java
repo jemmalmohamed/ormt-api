@@ -19,7 +19,5 @@ import ma.org.ormt.modules.dashboard.domaine.tbdomaine.dtos.TBDomaineDto;
 public class TBDomaineDetailDto extends TBDomaineDto {
 
     List<TBDomaineIndicateurDto> tbDomaineIndicateurs;
-    // List<SousDomainePublicDto> sousDomaines;
-    // List<SousDomaineSummaryDto> sousDomaines;
 
 }

@@ -260,8 +260,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "entretiens de positionnement par région - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "entretiens de positionnement par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

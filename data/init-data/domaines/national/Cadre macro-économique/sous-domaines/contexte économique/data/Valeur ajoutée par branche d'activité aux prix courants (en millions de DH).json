@@ -9,7 +9,7 @@
         },
         {
             "branche_activite": "agriculture",
-            "region": "oriental",
+            "region": "l'oriental",
             "annuel": "2022",
             "valeur": 10742
         },
@@ -33,7 +33,7 @@
         },
         {
             "branche_activite": "agriculture",
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2022",
             "valeur": 13277
         },
@@ -63,7 +63,7 @@
         },
         {
             "branche_activite": "agriculture",
-            "region": "laâyoune-saguia al hamra",
+            "region": "laayoune-sakia al hamra",
             "annuel": "2022",
             "valeur": 177
         },
@@ -81,7 +81,7 @@
         },
         {
             "branche_activite": "pêche",
-            "region": "oriental",
+            "region": "l'oriental",
             "annuel": "2022",
             "valeur": 71
         },
@@ -93,7 +93,7 @@
         },
         {
             "branche_activite": "pêche",
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2022",
             "valeur": 187
         },
@@ -117,7 +117,7 @@
         },
         {
             "branche_activite": "pêche",
-            "region": "laâyoune-saguia al hamra",
+            "region": "laayoune-sakia al hamra",
             "annuel": "2022",
             "valeur": 1484
         },
@@ -129,7 +129,7 @@
         },
         {
             "branche_activite": "industrie extractive",
-            "region": "oriental",
+            "region": "l'oriental",
             "annuel": "2022",
             "valeur": 728
         },
@@ -153,7 +153,7 @@
         },
         {
             "branche_activite": "industrie extractive",
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2022",
             "valeur": 238
         },
@@ -177,7 +177,7 @@
         },
         {
             "branche_activite": "industrie extractive",
-            "region": "laâyoune-saguia al hamra",
+            "region": "laayoune-sakia al hamra",
             "annuel": "2022",
             "valeur": 2300
         },
@@ -189,7 +189,7 @@
         },
         {
             "branche_activite": "industrie de transformation",
-            "region": "oriental",
+            "region": "l'oriental",
             "annuel": "2022",
             "valeur": 2594
         },
@@ -213,7 +213,7 @@
         },
         {
             "branche_activite": "industrie de transformation",
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2022",
             "valeur": 124119
         },
@@ -243,7 +243,7 @@
         },
         {
             "branche_activite": "industrie de transformation",
-            "region": "laâyoune-saguia al hamra",
+            "region": "laayoune-sakia al hamra",
             "annuel": "2022",
             "valeur": 4287
         },
@@ -261,7 +261,7 @@
         },
         {
             "branche_activite": "production et distribution d’électricité et d’eau",
-            "region": "oriental",
+            "region": "l'oriental",
             "annuel": "2022",
             "valeur": 1908
         },
@@ -285,7 +285,7 @@
         },
         {
             "branche_activite": "production et distribution d’électricité et d’eau",
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2022",
             "valeur": 12605
         },
@@ -315,7 +315,7 @@
         },
         {
             "branche_activite": "production et distribution d’électricité et d’eau",
-            "region": "laâyoune-saguia al hamra",
+            "region": "laayoune-sakia al hamra",
             "annuel": "2022",
             "valeur": 185
         },
@@ -333,7 +333,7 @@
         },
         {
             "branche_activite": "construction",
-            "region": "oriental",
+            "region": "l'oriental",
             "annuel": "2022",
             "valeur": 7824
         },
@@ -357,7 +357,7 @@
         },
         {
             "branche_activite": "construction",
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2022",
             "valeur": 18541
         },
@@ -387,7 +387,7 @@
         },
         {
             "branche_activite": "construction",
-            "region": "laâyoune-saguia al hamra",
+            "region": "laayoune-sakia al hamra",
             "annuel": "2022",
             "valeur": 3519
         },
@@ -405,7 +405,7 @@
         },
         {
             "branche_activite": "commerce",
-            "region": "oriental",
+            "region": "l'oriental",
             "annuel": "2022",
             "valeur": 12756
         },
@@ -429,7 +429,7 @@
         },
         {
             "branche_activite": "commerce",
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2022",
             "valeur": 37605
         },
@@ -459,7 +459,7 @@
         },
         {
             "branche_activite": "commerce",
-            "region": "laâyoune-saguia al hamra",
+            "region": "laayoune-sakia al hamra",
             "annuel": "2022",
             "valeur": 1330
         },
@@ -477,7 +477,7 @@
         },
         {
             "branche_activite": "transports et entreposage",
-            "region": "oriental",
+            "region": "l'oriental",
             "annuel": "2022",
             "valeur": 1769
         },
@@ -501,7 +501,7 @@
         },
         {
             "branche_activite": "transports et entreposage",
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2022",
             "valeur": 9848
         },
@@ -531,7 +531,7 @@
         },
         {
             "branche_activite": "transports et entreposage",
-            "region": "laâyoune-saguia al hamra",
+            "region": "laayoune-sakia al hamra",
             "annuel": "2022",
             "valeur": 425
         },
@@ -549,7 +549,7 @@
         },
         {
             "branche_activite": "hôtels et restaurants",
-            "region": "oriental",
+            "region": "l'oriental",
             "annuel": "2022",
             "valeur": 1592
         },
@@ -573,7 +573,7 @@
         },
         {
             "branche_activite": "hôtels et restaurants",
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2022",
             "valeur": 7976
         },
@@ -603,7 +603,7 @@
         },
         {
             "branche_activite": "hôtels et restaurants",
-            "region": "laâyoune-saguia al hamra",
+            "region": "laayoune-sakia al hamra",
             "annuel": "2022",
             "valeur": 402
         },
@@ -621,7 +621,7 @@
         },
         {
             "branche_activite": "information et communication",
-            "region": "oriental",
+            "region": "l'oriental",
             "annuel": "2022",
             "valeur": 209
         },
@@ -645,7 +645,7 @@
         },
         {
             "branche_activite": "information et communication",
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2022",
             "valeur": 14585
         },
@@ -675,7 +675,7 @@
         },
         {
             "branche_activite": "information et communication",
-            "region": "laâyoune-saguia al hamra",
+            "region": "laayoune-sakia al hamra",
             "annuel": "2022",
             "valeur": 42
         },
@@ -693,7 +693,7 @@
         },
         {
             "branche_activite": "activités financières et d’assurances",
-            "region": "oriental",
+            "region": "l'oriental",
             "annuel": "2022",
             "valeur": 1278
         },
@@ -717,7 +717,7 @@
         },
         {
             "branche_activite": "activités financières et d’assurances",
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2022",
             "valeur": 36903
         },
@@ -747,7 +747,7 @@
         },
         {
             "branche_activite": "activités financières et d’assurances",
-            "region": "laâyoune-saguia al hamra",
+            "region": "laayoune-sakia al hamra",
             "annuel": "2022",
             "valeur": 621
         },
@@ -765,7 +765,7 @@
         },
         {
             "branche_activite": "activités immobilières",
-            "region": "oriental",
+            "region": "l'oriental",
             "annuel": "2022",
             "valeur": 4161
         },
@@ -789,7 +789,7 @@
         },
         {
             "branche_activite": "activités immobilières",
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2022",
             "valeur": 29194
         },
@@ -819,7 +819,7 @@
         },
         {
             "branche_activite": "activités immobilières",
-            "region": "laâyoune-saguia al hamra",
+            "region": "laayoune-sakia al hamra",
             "annuel": "2022",
             "valeur": 1398
         },
@@ -837,7 +837,7 @@
         },
         {
             "branche_activite": "recherches et développement et services rendus aux entreprises",
-            "region": "oriental",
+            "region": "l'oriental",
             "annuel": "2022",
             "valeur": 3220
         },
@@ -861,7 +861,7 @@
         },
         {
             "branche_activite": "recherches et développement et services rendus aux entreprises",
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2022",
             "valeur": 22130
         },
@@ -891,7 +891,7 @@
         },
         {
             "branche_activite": "recherches et développement et services rendus aux entreprises",
-            "region": "laâyoune-saguia al hamra",
+            "region": "laayoune-sakia al hamra",
             "annuel": "2022",
             "valeur": 1615
         },
@@ -909,7 +909,7 @@
         },
         {
             "branche_activite": "administration publique; sécurité sociale obligatoire",
-            "region": "oriental",
+            "region": "l'oriental",
             "annuel": "2022",
             "valeur": 8336
         },
@@ -933,7 +933,7 @@
         },
         {
             "branche_activite": "administration publique; sécurité sociale obligatoire",
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2022",
             "valeur": 20739
         },
@@ -963,7 +963,7 @@
         },
         {
             "branche_activite": "administration publique; sécurité sociale obligatoire",
-            "region": "laâyoune-saguia al hamra",
+            "region": "laayoune-sakia al hamra",
             "annuel": "2022",
             "valeur": 5667
         },
@@ -981,7 +981,7 @@
         },
         {
             "branche_activite": "enseignement  santé humaine et action sociale",
-            "region": "oriental",
+            "region": "l'oriental",
             "annuel": "2022",
             "valeur": 5071
         },
@@ -1005,7 +1005,7 @@
         },
         {
             "branche_activite": "enseignement  santé humaine et action sociale",
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2022",
             "valeur": 17537
         },
@@ -1035,7 +1035,7 @@
         },
         {
             "branche_activite": "enseignement  santé humaine et action sociale",
-            "region": "laâyoune-saguia al hamra",
+            "region": "laayoune-sakia al hamra",
             "annuel": "2022",
             "valeur": 2447
         },
@@ -1053,7 +1053,7 @@
         },
         {
             "branche_activite": "autres services",
-            "region": "oriental",
+            "region": "l'oriental",
             "annuel": "2022",
             "valeur": 339
         },
@@ -1077,7 +1077,7 @@
         },
         {
             "branche_activite": "autres services",
-            "region": "casablanca-settat",
+            "region": "grand casablanca-settat",
             "annuel": "2022",
             "valeur": 4133
         },
@@ -1107,7 +1107,7 @@
         },
         {
             "branche_activite": "autres services",
-            "region": "laâyoune-saguia al hamra",
+            "region": "laayoune-sakia al hamra",
             "annuel": "2022",
             "valeur": 285
         },

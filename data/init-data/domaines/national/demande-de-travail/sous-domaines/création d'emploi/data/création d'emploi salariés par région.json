@@ -2,433 +2,433 @@
     "indicateur": "création d’emploi salariés par région",
     "data": [
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "genre": "femme",
             "annuel": "2020",
             "valeur": 1632
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "genre": "homme",
             "annuel": "2020",
             "valeur": 3701
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "genre": "ensemble",
             "annuel": "2020",
             "valeur": 5333
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "genre": "femme",
             "annuel": "2021",
             "valeur": 1675
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "genre": "homme",
             "annuel": "2021",
             "valeur": 1019
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "genre": "ensemble",
             "annuel": "2021",
             "valeur": 2694
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "genre": "femme",
             "annuel": "2022",
             "valeur": 1807
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "genre": "homme",
             "annuel": "2022",
             "valeur": 6538
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "genre": "ensemble",
             "annuel": "2022",
             "valeur": 8345
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "genre": "femme",
             "annuel": "2023",
             "valeur": 1666
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "genre": "homme",
             "annuel": "2023",
             "valeur": 1563
         },
         {
-            "region": "Béni Mellal-Khénifra",
+            "region": "Béni mellal-khénifra",
             "genre": "ensemble",
             "annuel": "2023",
             "valeur": 3229
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "genre": "femme",
             "annuel": "2020",
             "valeur": -1238
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "genre": "homme",
             "annuel": "2020",
             "valeur": -1311
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "genre": "ensemble",
             "annuel": "2020",
             "valeur": -2549
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "genre": "femme",
             "annuel": "2021",
             "valeur": 1072
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "genre": "homme",
             "annuel": "2021",
             "valeur": 2532
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "genre": "ensemble",
             "annuel": "2021",
             "valeur": 3604
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "genre": "femme",
             "annuel": "2022",
             "valeur": 1963
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "genre": "homme",
             "annuel": "2022",
             "valeur": 6670
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "genre": "ensemble",
             "annuel": "2022",
             "valeur": 8633
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "genre": "femme",
             "annuel": "2023",
             "valeur": 1022
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "genre": "homme",
             "annuel": "2023",
             "valeur": 886
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "genre": "ensemble",
             "annuel": "2023",
             "valeur": 1908
         },
         {
-            "region": "Eddakhla-Oued Eddahab",
+            "region": "Dakhla-Oued Ed dahab",
             "genre": "femme",
             "annuel": "2020",
             "valeur": 393
         },
         {
-            "region": "Eddakhla-Oued Eddahab",
+            "region": "Dakhla-Oued Ed dahab",
             "genre": "homme",
             "annuel": "2020",
             "valeur": 1494
         },
         {
-            "region": "Eddakhla-Oued Eddahab",
+            "region": "Dakhla-Oued Ed dahab",
             "genre": "ensemble",
             "annuel": "2020",
             "valeur": 1887
         },
         {
-            "region": "Eddakhla-Oued Eddahab",
+            "region": "Dakhla-Oued Ed dahab",
             "genre": "femme",
             "annuel": "2021",
             "valeur": 1977
         },
         {
-            "region": "Eddakhla-Oued Eddahab",
+            "region": "Dakhla-Oued Ed dahab",
             "genre": "homme",
             "annuel": "2021",
             "valeur": 6751
         },
         {
-            "region": "Eddakhla-Oued Eddahab",
+            "region": "Dakhla-Oued Ed dahab",
             "genre": "ensemble",
             "annuel": "2021",
             "valeur": 8728
         },
         {
-            "region": "Eddakhla-Oued Eddahab",
+            "region": "Dakhla-Oued Ed dahab",
             "genre": "femme",
             "annuel": "2022",
             "valeur": 2740
         },
         {
-            "region": "Eddakhla-Oued Eddahab",
+            "region": "Dakhla-Oued Ed dahab",
             "genre": "homme",
             "annuel": "2022",
             "valeur": 2588
         },
         {
-            "region": "Eddakhla-Oued Eddahab",
+            "region": "Dakhla-Oued Ed dahab",
             "genre": "ensemble",
             "annuel": "2022",
             "valeur": 5328
         },
         {
-            "region": "Eddakhla-Oued Eddahab",
+            "region": "Dakhla-Oued Ed dahab",
             "genre": "femme",
             "annuel": "2023",
             "valeur": -477
         },
         {
-            "region": "Eddakhla-Oued Eddahab",
+            "region": "Dakhla-Oued Ed dahab",
             "genre": "homme",
             "annuel": "2023",
             "valeur": 2007
         },
         {
-            "region": "Eddakhla-Oued Eddahab",
+            "region": "Dakhla-Oued Ed dahab",
             "genre": "ensemble",
             "annuel": "2023",
             "valeur": 1530
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "genre": "femme",
             "annuel": "2020",
             "valeur": 2419
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "genre": "homme",
             "annuel": "2020",
             "valeur": 6263
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "genre": "ensemble",
             "annuel": "2020",
             "valeur": 8682
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "genre": "femme",
             "annuel": "2021",
             "valeur": 6136
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "genre": "homme",
             "annuel": "2021",
             "valeur": 11600
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "genre": "ensemble",
             "annuel": "2021",
             "valeur": 17736
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "genre": "femme",
             "annuel": "2022",
             "valeur": 10361
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "genre": "homme",
             "annuel": "2022",
             "valeur": 13764
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "genre": "ensemble",
             "annuel": "2022",
             "valeur": 24125
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "genre": "femme",
             "annuel": "2023",
             "valeur": 2977
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "genre": "homme",
             "annuel": "2023",
             "valeur": 5333
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "genre": "ensemble",
             "annuel": "2023",
             "valeur": 8310
         },
         {
-            "region": "Grand Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "genre": "femme",
             "annuel": "2020",
             "valeur": -1309
         },
         {
-            "region": "Grand Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "genre": "homme",
             "annuel": "2020",
             "valeur": -18252
         },
         {
-            "region": "Grand Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "genre": "ensemble",
             "annuel": "2020",
             "valeur": -19561
         },
         {
-            "region": "Grand Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "genre": "femme",
             "annuel": "2021",
             "valeur": 21313
         },
         {
-            "region": "Grand Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "genre": "homme",
             "annuel": "2021",
             "valeur": 45241
         },
         {
-            "region": "Grand Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "genre": "ensemble",
             "annuel": "2021",
             "valeur": 66554
         },
         {
-            "region": "Grand Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "genre": "femme",
             "annuel": "2022",
             "valeur": 27846
         },
         {
-            "region": "Grand Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "genre": "homme",
             "annuel": "2022",
             "valeur": 59848
         },
         {
-            "region": "Grand Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "genre": "ensemble",
             "annuel": "2022",
             "valeur": 87694
         },
         {
-            "region": "Grand Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "genre": "femme",
             "annuel": "2023",
             "valeur": 25688
         },
         {
-            "region": "Grand Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "genre": "homme",
             "annuel": "2023",
             "valeur": 35536
         },
         {
-            "region": "Grand Casablanca-Settat",
+            "region": "Grand Casablanca-settat",
             "genre": "ensemble",
             "annuel": "2023",
             "valeur": 61224
         },
         {
-            "region": "Guelmim-Oued Noun",
+            "region": "Guelmim-oued noun",
             "genre": "femme",
             "annuel": "2020",
             "valeur": 52
         },
         {
-            "region": "Guelmim-Oued Noun",
+            "region": "Guelmim-oued noun",
             "genre": "homme",
             "annuel": "2020",
             "valeur": 1433
         },
         {
-            "region": "Guelmim-Oued Noun",
+            "region": "Guelmim-oued noun",
             "genre": "ensemble",
             "annuel": "2020",
             "valeur": 1485
         },
         {
-            "region": "Guelmim-Oued Noun",
+            "region": "Guelmim-oued noun",
             "genre": "femme",
             "annuel": "2021",
             "valeur": 390
         },
         {
-            "region": "Guelmim-Oued Noun",
+            "region": "Guelmim-oued noun",
             "genre": "homme",
             "annuel": "2021",
             "valeur": 1124
         },
         {
-            "region": "Guelmim-Oued Noun",
+            "region": "Guelmim-oued noun",
             "genre": "ensemble",
             "annuel": "2021",
             "valeur": 1514
         },
         {
-            "region": "Guelmim-Oued Noun",
+            "region": "Guelmim-oued noun",
             "genre": "femme",
             "annuel": "2022",
             "valeur": 965
         },
         {
-            "region": "Guelmim-Oued Noun",
+            "region": "Guelmim-oued noun",
             "genre": "homme",
             "annuel": "2022",
             "valeur": 2934
         },
         {
-            "region": "Guelmim-Oued Noun",
+            "region": "Guelmim-oued noun",
             "genre": "ensemble",
             "annuel": "2022",
             "valeur": 3899
         },
         {
-            "region": "Guelmim-Oued Noun",
+            "region": "Guelmim-oued noun",
             "genre": "femme",
             "annuel": "2023",
             "valeur": 263
         },
         {
-            "region": "Guelmim-Oued Noun",
+            "region": "Guelmim-oued noun",
             "genre": "homme",
             "annuel": "2023",
             "valeur": 625
         },
         {
-            "region": "Guelmim-Oued Noun",
+            "region": "Guelmim-oued noun",
             "genre": "ensemble",
             "annuel": "2023",
             "valeur": 888
@@ -506,289 +506,289 @@
             "valeur": 6672
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "genre": "femme",
             "annuel": "2020",
             "valeur": -597
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "genre": "homme",
             "annuel": "2020",
             "valeur": 1626
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "genre": "ensemble",
             "annuel": "2020",
             "valeur": 1029
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "genre": "femme",
             "annuel": "2021",
             "valeur": 718
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "genre": "homme",
             "annuel": "2021",
             "valeur": 5930
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "genre": "ensemble",
             "annuel": "2021",
             "valeur": 6648
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "genre": "femme",
             "annuel": "2022",
             "valeur": 9506
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "genre": "homme",
             "annuel": "2022",
             "valeur": 18436
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "genre": "ensemble",
             "annuel": "2022",
             "valeur": 27942
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "genre": "femme",
             "annuel": "2023",
             "valeur": 9020
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "genre": "homme",
             "annuel": "2023",
             "valeur": 11827
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "genre": "ensemble",
             "annuel": "2023",
             "valeur": 20847
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "genre": "femme",
             "annuel": "2020",
             "valeur": 3130
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "genre": "homme",
             "annuel": "2020",
             "valeur": 4548
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "genre": "ensemble",
             "annuel": "2020",
             "valeur": 7678
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "genre": "femme",
             "annuel": "2021",
             "valeur": 3158
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "genre": "homme",
             "annuel": "2021",
             "valeur": 5867
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "genre": "ensemble",
             "annuel": "2021",
             "valeur": 9025
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "genre": "femme",
             "annuel": "2022",
             "valeur": 3900
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "genre": "homme",
             "annuel": "2022",
             "valeur": 10938
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "genre": "ensemble",
             "annuel": "2022",
             "valeur": 14838
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "genre": "femme",
             "annuel": "2023",
             "valeur": 1587
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "genre": "homme",
             "annuel": "2023",
             "valeur": 1543
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "genre": "ensemble",
             "annuel": "2023",
             "valeur": 3130
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "genre": "femme",
             "annuel": "2020",
             "valeur": 11594
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "genre": "homme",
             "annuel": "2020",
             "valeur": 9657
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "genre": "ensemble",
             "annuel": "2020",
             "valeur": 21251
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "genre": "femme",
             "annuel": "2021",
             "valeur": 19136
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "genre": "homme",
             "annuel": "2021",
             "valeur": 17035
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "genre": "ensemble",
             "annuel": "2021",
             "valeur": 36171
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "genre": "femme",
             "annuel": "2022",
             "valeur": 16148
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "genre": "homme",
             "annuel": "2022",
             "valeur": 20954
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "genre": "ensemble",
             "annuel": "2022",
             "valeur": 37102
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "genre": "femme",
             "annuel": "2023",
             "valeur": 11428
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "genre": "homme",
             "annuel": "2023",
             "valeur": 11022
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "genre": "ensemble",
             "annuel": "2023",
             "valeur": 22450
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "genre": "femme",
             "annuel": "2020",
             "valeur": 150
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "genre": "homme",
             "annuel": "2020",
             "valeur": -1671
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "genre": "ensemble",
             "annuel": "2020",
             "valeur": -1521
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "genre": "femme",
             "annuel": "2021",
             "valeur": 6810
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "genre": "homme",
             "annuel": "2021",
             "valeur": 16704
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "genre": "ensemble",
             "annuel": "2021",
             "valeur": 23514
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "genre": "femme",
             "annuel": "2022",
             "valeur": 8435
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "genre": "homme",
             "annuel": "2022",
             "valeur": 25961
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "genre": "ensemble",
             "annuel": "2022",
             "valeur": 34396
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "genre": "femme",
             "annuel": "2023",
             "valeur": 6040
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "genre": "homme",
             "annuel": "2023",
             "valeur": 5546
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "genre": "ensemble",
             "annuel": "2023",
             "valeur": 11586

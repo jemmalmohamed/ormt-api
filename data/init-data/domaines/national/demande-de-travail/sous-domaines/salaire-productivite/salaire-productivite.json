@@ -112,8 +112,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "valeur ajoutée par secteur d’activité - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "valeur ajoutée par secteur d’activité - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -167,8 +167,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "masse salariale par secteur d’activité - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "masse salariale par secteur d’activité - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -222,8 +222,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "salaire moyen par secteur d’activité - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "salaire moyen par secteur d’activité - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -259,7 +259,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "smig journalier - Indicateur",
+          "nom": "smig journalier-Indicateur",
           "grapheTypeCode": "INDICATEUR",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -296,7 +296,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "smag journalier - Indicateur",
+          "nom": "smag journalier-Indicateur",
           "grapheTypeCode": "INDICATEUR",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -351,8 +351,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "salaire moyen à l’année n par secteur d’activité - Indicateur",
-          "grapheTypeCode": "INDICATEUR",
+          "nom": "salaire moyen à l’année n par secteur d’activité - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -406,8 +406,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "salaire moyen n-10 par secteur d’activité - Indicateur",
-          "grapheTypeCode": "INDICATEUR",
+          "nom": "salaire moyen n-10 par secteur d’activité - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -443,7 +443,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "variation productivité - Nuage_Du_Point",
+          "nom": "variation productivité-Nuage_Du_Point",
           "grapheTypeCode": "NUAGE_DU_POINT",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -480,7 +480,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "variation valeur ajoutée - Nuage_Du_Point",
+          "nom": "variation valeur ajoutée-Nuage_Du_Point",
           "grapheTypeCode": "NUAGE_DU_POINT",
           "isDefault": true,
           "chartOptionsJson": ""

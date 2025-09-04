@@ -2,361 +2,361 @@
     "indicateur": "Taux d’activité par région et le milieu de résidence",
     "data": [
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "milieu": "Urbain",
             "annuel": "2019",
             "valeur": 43.4
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "milieu": "Rural",
             "annuel": "2019",
             "valeur": 49.9
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "milieu": "National",
             "annuel": "2019",
             "valeur": 45.8
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "milieu": "Urbain",
             "annuel": "2020",
             "valeur": 44.6
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "milieu": "Rural",
             "annuel": "2020",
             "valeur": 50.1
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "milieu": "National",
             "annuel": "2020",
             "valeur": 46.6
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "milieu": "Urbain",
             "annuel": "2021",
             "valeur": 45.4
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "milieu": "Rural",
             "annuel": "2021",
             "valeur": 57.6
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "milieu": "National",
             "annuel": "2021",
             "valeur": 49.8
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "milieu": "Urbain",
             "annuel": "2022",
             "valeur": 45.6
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "milieu": "Rural",
             "annuel": "2022",
             "valeur": 58.2
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "milieu": "National",
             "annuel": "2022",
             "valeur": 50.1
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "milieu": "Urbain",
             "annuel": "2023",
             "valeur": 44.8
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "milieu": "Rural",
             "annuel": "2023",
             "valeur": 55.7
         },
         {
-            "region": "Tanger-Tétouan-Al Hoceima",
+            "region": "Tanger-tétouan-al hoceima",
             "milieu": "National",
             "annuel": "2023",
             "valeur": 48.7
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "milieu": "Urbain",
             "annuel": "2019",
             "valeur": 41.1
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "milieu": "Rural",
             "annuel": "2019",
             "valeur": 47.7
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "milieu": "National",
             "annuel": "2019",
             "valeur": 43.0
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "milieu": "Urbain",
             "annuel": "2020",
             "valeur": 40.8
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "milieu": "Rural",
             "annuel": "2020",
             "valeur": 46.4
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "milieu": "National",
             "annuel": "2020",
             "valeur": 42.4
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "milieu": "Urbain",
             "annuel": "2021",
             "valeur": 40.7
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "milieu": "Rural",
             "annuel": "2021",
             "valeur": 47.4
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "milieu": "National",
             "annuel": "2021",
             "valeur": 42.5
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "milieu": "Urbain",
             "annuel": "2022",
             "valeur": 40.8
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "milieu": "Rural",
             "annuel": "2022",
             "valeur": 45.4
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "milieu": "National",
             "annuel": "2022",
             "valeur": 42.0
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "milieu": "Urbain",
             "annuel": "2023",
             "valeur": 38.9
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "milieu": "Rural",
             "annuel": "2023",
             "valeur": 43.5
         },
         {
-            "region": "Oriental",
+            "region": "L'oriental",
             "milieu": "National",
             "annuel": "2023",
             "valeur": 40.1
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "milieu": "Urbain",
             "annuel": "2019",
             "valeur": 38.7
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "milieu": "Rural",
             "annuel": "2019",
             "valeur": 50.9
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "milieu": "National",
             "annuel": "2019",
             "valeur": 43.0
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "milieu": "Urbain",
             "annuel": "2020",
             "valeur": 38.7
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "milieu": "Rural",
             "annuel": "2020",
             "valeur": 49.3
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "milieu": "National",
             "annuel": "2020",
             "valeur": 42.4
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "milieu": "Urbain",
             "annuel": "2021",
             "valeur": 39.2
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "milieu": "Rural",
             "annuel": "2021",
             "valeur": 48.1
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "milieu": "National",
             "annuel": "2021",
             "valeur": 42.3
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "milieu": "Urbain",
             "annuel": "2022",
             "valeur": 39.1
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "milieu": "Rural",
             "annuel": "2022",
             "valeur": 48.3
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "milieu": "National",
             "annuel": "2022",
             "valeur": 42.2
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "milieu": "Urbain",
             "annuel": "2023",
             "valeur": 39.4
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "milieu": "Rural",
             "annuel": "2023",
             "valeur": 46.5
         },
         {
-            "region": "Fès-Meknès",
+            "region": "Fès-meknès",
             "milieu": "National",
             "annuel": "2023",
             "valeur": 41.8
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "milieu": "Urbain",
             "annuel": "2019",
             "valeur": 42.3
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "milieu": "Rural",
             "annuel": "2019",
             "valeur": 54.2
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "milieu": "National",
             "annuel": "2019",
             "valeur": 45.5
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "milieu": "Urbain",
             "annuel": "2020",
             "valeur": 42.0
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "milieu": "Rural",
             "annuel": "2020",
             "valeur": 50.5
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "milieu": "National",
             "annuel": "2020",
             "valeur": 44.2
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "milieu": "Urbain",
             "annuel": "2021",
             "valeur": 42.2
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "milieu": "Rural",
             "annuel": "2021",
             "valeur": 50.2
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "milieu": "National",
             "annuel": "2021",
             "valeur": 44.2
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "milieu": "Urbain",
             "annuel": "2022",
             "valeur": 42.2
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "milieu": "Rural",
             "annuel": "2022",
             "valeur": 50.6
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "milieu": "National",
             "annuel": "2022",
             "valeur": 44.3
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "milieu": "Urbain",
             "annuel": "2023",
             "valeur": 42.1
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "milieu": "Rural",
             "annuel": "2023",
             "valeur": 49.9
         },
         {
-            "region": "Rabat-Salé-Kénitra",
+            "region": "Rabat-salé-kénitra",
             "milieu": "National",
             "annuel": "2023",
             "valeur": 44.0
@@ -542,271 +542,271 @@
             "valeur": 46.1
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "milieu": "Urbain",
             "annuel": "2019",
             "valeur": 42.1
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "milieu": "Rural",
             "annuel": "2019",
             "valeur": 51.9
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "milieu": "National",
             "annuel": "2019",
             "valeur": 47.4
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "milieu": "Urbain",
             "annuel": "2020",
             "valeur": 41.8
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "milieu": "Rural",
             "annuel": "2020",
             "valeur": 50.7
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "milieu": "National",
             "annuel": "2020",
             "valeur": 46.6
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "milieu": "Urbain",
             "annuel": "2021",
             "valeur": 41.9
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "milieu": "Rural",
             "annuel": "2021",
             "valeur": 51.0
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "milieu": "National",
             "annuel": "2021",
             "valeur": 46.8
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "milieu": "Urbain",
             "annuel": "2022",
             "valeur": 41.4
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "milieu": "Rural",
             "annuel": "2022",
             "valeur": 48.2
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "milieu": "National",
             "annuel": "2022",
             "valeur": 45.0
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "milieu": "Urbain",
             "annuel": "2023",
             "valeur": 41.7
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "milieu": "Rural",
             "annuel": "2023",
             "valeur": 46.0
         },
         {
-            "region": "Marrakech-Safi",
+            "region": "marrakech-safi",
             "milieu": "National",
             "annuel": "2023",
             "valeur": 44.0
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "milieu": "Urbain",
             "annuel": "2019",
             "valeur": 35.6
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "milieu": "Rural",
             "annuel": "2019",
             "valeur": 45.0
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "milieu": "National",
             "annuel": "2019",
             "valeur": 41.6
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "milieu": "Urbain",
             "annuel": "2020",
             "valeur": 35.8
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "milieu": "Rural",
             "annuel": "2020",
             "valeur": 43.9
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "milieu": "National",
             "annuel": "2020",
             "valeur": 40.9
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "milieu": "Urbain",
             "annuel": "2021",
             "valeur": 38.5
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "milieu": "Rural",
             "annuel": "2021",
             "valeur": 46.6
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "milieu": "National",
             "annuel": "2021",
             "valeur": 43.6
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "milieu": "Urbain",
             "annuel": "2022",
             "valeur": 37.6
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "milieu": "Rural",
             "annuel": "2022",
             "valeur": 43.1
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "milieu": "National",
             "annuel": "2022",
             "valeur": 41.0
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "milieu": "Urbain",
             "annuel": "2023",
             "valeur": 38.7
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "milieu": "Rural",
             "annuel": "2023",
             "valeur": 43.5
         },
         {
-            "region": "Drâa-Tafilalet",
+            "region": "Drâa-tafilalet",
             "milieu": "National",
             "annuel": "2023",
             "valeur": 41.7
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "milieu": "Urbain",
             "annuel": "2019",
             "valeur": 42.6
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "milieu": "Rural",
             "annuel": "2019",
             "valeur": 43.5
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "milieu": "National",
             "annuel": "2019",
             "valeur": 42.9
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "milieu": "Urbain",
             "annuel": "2020",
             "valeur": 41.5
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "milieu": "Rural",
             "annuel": "2020",
             "valeur": 41.6
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "milieu": "National",
             "annuel": "2020",
             "valeur": 41.5
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "milieu": "Urbain",
             "annuel": "2021",
             "valeur": 41.6
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "milieu": "Rural",
             "annuel": "2021",
             "valeur": 40.8
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "milieu": "National",
             "annuel": "2021",
             "valeur": 41.3
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "milieu": "Urbain",
             "annuel": "2022",
             "valeur": 39.7
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "milieu": "Rural",
             "annuel": "2022",
             "valeur": 35.9
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "milieu": "National",
             "annuel": "2022",
             "valeur": 38.3
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "milieu": "Urbain",
             "annuel": "2023",
             "valeur": 40.7
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "milieu": "Rural",
             "annuel": "2023",
             "valeur": 35.8
         },
         {
-            "region": "Souss-Massa",
+            "region": "Souss-massa",
             "milieu": "National",
             "annuel": "2023",
             "valeur": 39.0

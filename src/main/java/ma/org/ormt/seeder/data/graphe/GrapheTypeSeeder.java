@@ -66,7 +66,7 @@ public class GrapheTypeSeeder implements CommandLineRunner {
                 new GrapheTypeData("COURBES", "Courbes", "Graphique linéaire simple", "line"),
                 new GrapheTypeData("PYRAMIDE_AGES", "Pyramide des âges",
                         "Graphique spécialisé pour la répartition par âge et genre", "bar"),
-                new GrapheTypeData("CARTE", "Carte", "Représentation géographique des données", "choropleth"),
+                new GrapheTypeData("CHOROPLETH", "Choropleth", "Représentation géographique des données", "choropleth"),
                 new GrapheTypeData("COURBE_LINEAIRE", "Courbe linéaire",
                         "Graphique linéaire pour évolutions temporelles", "line"),
                 new GrapheTypeData("HISTOGRAMME_EMPILTE_EVOLUTION", "Histogramme empilé évolution",

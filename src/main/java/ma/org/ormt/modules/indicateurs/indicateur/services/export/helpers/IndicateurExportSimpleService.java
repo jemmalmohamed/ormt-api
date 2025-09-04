@@ -298,8 +298,8 @@ public class IndicateurExportSimpleService {
                     .filter(valeur -> !valeur.contains("marrakech"))
                     .filter(valeur -> Arrays.asList("casablanca", "rabat", "fès", "tanger",
                             "agadir", "meknès", "oujda", "kenitra", "tétouan",
-                            "casablanca-settat", "rabat-salé-kénitra",
-                            "fès-meknès", "tanger-tétouan-al hoceima").stream()
+                            "casablanca - settat", "rabat - salé - kénitra",
+                            "fès - meknès", "tanger - tétouan - al hoceima").stream()
                             .anyMatch(region -> valeur.contains(region)))
                     .limit(2) // Limiter à 2 autres régions
                     .collect(Collectors.toList());
@@ -318,8 +318,8 @@ public class IndicateurExportSimpleService {
             List<String> regionsMarocaines = Arrays.asList(
                     "casablanca", "rabat", "fès", "tanger",
                     "agadir", "meknès", "oujda", "kenitra", "tétouan",
-                    "casablanca-settat", "rabat-salé-kénitra",
-                    "fès-meknès", "tanger-tétouan-al hoceima");
+                    "casablanca - settat", "rabat - salé - kénitra",
+                    "fès - meknès", "tanger - tétouan - al hoceima");
 
             List<String> regionsPresentes = valeursRegionales.stream()
                     .filter(valeur -> regionsMarocaines.stream()

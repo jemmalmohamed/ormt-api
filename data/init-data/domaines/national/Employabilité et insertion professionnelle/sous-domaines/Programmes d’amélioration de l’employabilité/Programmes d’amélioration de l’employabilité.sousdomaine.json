@@ -214,8 +214,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Bénéficiaires de la FQR par région - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "Bénéficiaires de la FQR par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -260,8 +260,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Bénéficiaires de la FSE par région - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "Bénéficiaires de la FSE par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

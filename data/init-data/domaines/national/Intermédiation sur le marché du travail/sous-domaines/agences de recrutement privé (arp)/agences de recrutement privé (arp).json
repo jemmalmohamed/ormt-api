@@ -48,8 +48,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "nombre des agences de recrutement privé par région - Histogramme",
-          "grapheTypeCode": "HISTOGRAMME",
+          "nom": "nombre des agences de recrutement privé par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -94,8 +94,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "agences de recrutement privé par région - Camembert",
-          "grapheTypeCode": "CAMEMBERT",
+          "nom": "agences de recrutement privé par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }

@@ -22,9 +22,9 @@ INDICATEUR_TO_TYPE = {
     
     # Population et conditions de vie
     "population municipale": "HISTOGRAMME",
-    "incidence de la pauvreté absolue par région": "CARTE",
-    "taux de pauvreté multidimensionnelle par région": "CARTE",
-    "taux de vulnérabilité à la pauvreté par région": "CARTE",
+    "incidence de la pauvreté absolue par région": "CHOROPLETH",
+    "taux de pauvreté multidimensionnelle par région": "CHOROPLETH",
+    "taux de vulnérabilité à la pauvreté par région": "CHOROPLETH",
     
     # Contexte économique
     "produit intérieur brut aux prix courants": "INDICATEUR",

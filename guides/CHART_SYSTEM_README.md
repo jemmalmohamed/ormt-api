@@ -51,7 +51,7 @@ Configurations sauvegardées par les utilisateurs :
 | Histogramme | HISTOGRAMME | bar | 1-10 | Non | xAxis + yAxis + series optionnel |
 | Courbes | COURBES | line | 1-10 | Non | Flexible avec séries multiples |
 | Pyramide des âges | PYRAMIDE_AGES | bar | 2 exactement | Non | ageAxis + genderAxis |
-| Carte | CARTE | choropleth | 1-3 | Non | Dimension géographique obligatoire |
+| Choropleth | CHOROPLETH | choropleth | 1-3 | Non | Dimension géographique obligatoire |
 | Courbe linéaire | COURBE_LINEAIRE | line | 1-8 | Oui | xAxis temporel obligatoire |
 | Histogramme évolution | HISTOGRAMME_EVOLUTION | bar | 1-8 | Oui | Empilé pour évolutions |
 | Courbe évolution | COURBE_EVOLUTION | line | 1-8 | Oui | Multiples séries temporelles |
@@ -68,7 +68,7 @@ Configurations sauvegardées par les utilisateurs :
 #### Exemple de Validation
 ```sql
 -- CAMEMBERT : Interdit xAxis, yAxis, series
--- CARTE : Nécessite dimension géographique
+-- CHOROPLETH : Nécessite dimension géographique
 -- COURBE_EVOLUTION : Nécessite dimension temporelle sur xAxis
 ```
 

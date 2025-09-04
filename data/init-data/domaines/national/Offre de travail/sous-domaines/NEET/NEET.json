@@ -228,8 +228,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Taux de NEET par région - Carte",
-          "grapheTypeCode": "CARTE",
+          "nom": "Taux de NEET par région - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
         }
