@@ -44,9 +44,9 @@ public interface SousDomaineService extends BaseService<SousDomaine> {
     SousDomaineDetailsDto getSousDomaineWithPivotTable(Long id, String tableFormat);
 
     // New method to get List of SousDomaineDetailsDto with pivot table data
-    // List<SousDomaineDetailsDto> getSousDomainesWithPivotTable(Long domaineId,
-    // QueryParams requestParams,
-    // String tableFormat);
+    List<SousDomaineDetailsDto> getSousDomainesWithPivotTable(Long domaineId,
+            QueryParams requestParams,
+            String tableFormat);
 
     void reorderSousDomaines(Long domaineId, List<ReorderSousDomaineItem> items);
 

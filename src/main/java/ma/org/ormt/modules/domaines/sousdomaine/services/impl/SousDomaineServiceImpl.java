@@ -275,38 +275,35 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
         return dto;
     }
 
-    // @Override
-    // public List<SousDomaineDetailsDto> getSousDomainesWithPivotTable(Long
-    // domaineId, QueryParams requestParams,
-    // String tableFormat) {
-    // // Get the sous domaines for the domaine
-    // Page<SousDomaine> sousDomainePage = getEntityListByDomaineId(domaineId,
-    // requestParams);
+    @Override
+    public List<SousDomaineDetailsDto> getSousDomainesWithPivotTable(Long domaineId, QueryParams requestParams,
+            String tableFormat) {
+        // Get the sous domaines for the domaine
+        Page<SousDomaine> sousDomainePage = getEntityListByDomaineId(domaineId,
+                requestParams);
 
-    // // Convert each SousDomaine to SousDomaineDetailsDto with pivot table data
-    // return sousDomainePage.getContent().stream()
-    // .map(sousDomaine -> {
-    // // Map to DetailsDto first
-    // SousDomaineDetailsDto dto =
-    // sousDomaineDetailsDtoMapper.mapToDto(sousDomaine);
+        // Convert each SousDomaine to SousDomaineDetailsDto with pivot table data
+        return sousDomainePage.getContent().stream()
+                .map(sousDomaine -> {
+                    // Map to DetailsDto first
+                    SousDomaineDetailsDto dto = sousDomaineDetailsDtoMapper.mapToDto(sousDomaine);
 
-    // // Now enhance each indicateur with table data
-    // if (tableFormat != null && !tableFormat.isEmpty() && dto.getIndicateurs() !=
-    // null) {
-    // for (IndicateurSousDomaineDetailDto indicateurDto : dto.getIndicateurs()) {
-    // // Get the full indicateur with table data
-    // IndicateurDetailDto indicateurWithTableData = indicateurService
-    // .getIndicateurWithTableData(indicateurDto.getId(), tableFormat);
+                    // Now enhance each indicateur with table data
+                    if (tableFormat != null && !tableFormat.isEmpty() && dto.getIndicateurs() != null) {
+                        for (IndicateurSousDomaineDetailDto indicateurDto : dto.getIndicateurs()) {
+                            // Get the full indicateur with table data
+                            IndicateurDetailDto indicateurWithTableData = indicateurService
+                                    .getIndicateurWithTableData(indicateurDto.getId(), tableFormat);
 
-    // // Copy the hasDonnees and table data fields
-    // indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
+                            // Copy the hasDonnees and table data fields
+                            indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
 
-    // }
-    // }
+                        }
+                    }
 
-    // return dto;
-    // })
-    // .collect(Collectors.toList());
-    // }
+                    return dto;
+                })
+                .collect(Collectors.toList());
+    }
 
 }
