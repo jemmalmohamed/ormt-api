@@ -97,6 +97,28 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
     }
 
     @Override
+    public Page<SousDomaine> getEntityListByDomaineIdHavingIndicateurs(Long domaineId, QueryParams requestParams) {
+        SpecificationAndPageable<SousDomaine> result = getSpecificationAndPageable(requestParams, SousDomaine.class);
+
+        // Domaine filter
+        Specification<SousDomaine> domaineSpec = (root, _, cb) -> cb.equal(root.get("domaine").get("id"), domaineId);
+
+        // Must have at least one indicateur
+        Specification<SousDomaine> hasIndicateursSpec = (root, query, cb) -> {
+            // Ensure distinct to avoid duplicates due to joins
+            query.distinct(true);
+            return cb.isNotEmpty(root.get("indicateurs"));
+        };
+
+        Specification<SousDomaine> combinedSpec = domaineSpec.and(hasIndicateursSpec);
+        if (result.getSpecification() != null) {
+            combinedSpec = addPredicateToSpecification(result.getSpecification(), combinedSpec);
+        }
+
+        return findAll(combinedSpec, result.getPageable());
+    }
+
+    @Override
     public SousDomaine create(Long domaineId, SousDomaineRequestDto requestDto) {
         validator.validate(requestDto);
         Domaine domaine = domaineService.findById(
@@ -253,34 +275,38 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
         return dto;
     }
 
-    @Override
-    public List<SousDomaineDetailsDto> getSousDomainesWithPivotTable(Long domaineId, QueryParams requestParams,
-            String tableFormat) {
-        // Get the sous domaines for the domaine
-        Page<SousDomaine> sousDomainePage = getEntityListByDomaineId(domaineId, requestParams);
+    // @Override
+    // public List<SousDomaineDetailsDto> getSousDomainesWithPivotTable(Long
+    // domaineId, QueryParams requestParams,
+    // String tableFormat) {
+    // // Get the sous domaines for the domaine
+    // Page<SousDomaine> sousDomainePage = getEntityListByDomaineId(domaineId,
+    // requestParams);
 
-        // Convert each SousDomaine to SousDomaineDetailsDto with pivot table data
-        return sousDomainePage.getContent().stream()
-                .map(sousDomaine -> {
-                    // Map to DetailsDto first
-                    SousDomaineDetailsDto dto = sousDomaineDetailsDtoMapper.mapToDto(sousDomaine);
+    // // Convert each SousDomaine to SousDomaineDetailsDto with pivot table data
+    // return sousDomainePage.getContent().stream()
+    // .map(sousDomaine -> {
+    // // Map to DetailsDto first
+    // SousDomaineDetailsDto dto =
+    // sousDomaineDetailsDtoMapper.mapToDto(sousDomaine);
 
-                    // Now enhance each indicateur with table data
-                    if (tableFormat != null && !tableFormat.isEmpty() && dto.getIndicateurs() != null) {
-                        for (IndicateurSousDomaineDetailDto indicateurDto : dto.getIndicateurs()) {
-                            // Get the full indicateur with table data
-                            IndicateurDetailDto indicateurWithTableData = indicateurService
-                                    .getIndicateurWithTableData(indicateurDto.getId(), tableFormat);
+    // // Now enhance each indicateur with table data
+    // if (tableFormat != null && !tableFormat.isEmpty() && dto.getIndicateurs() !=
+    // null) {
+    // for (IndicateurSousDomaineDetailDto indicateurDto : dto.getIndicateurs()) {
+    // // Get the full indicateur with table data
+    // IndicateurDetailDto indicateurWithTableData = indicateurService
+    // .getIndicateurWithTableData(indicateurDto.getId(), tableFormat);
 
-                            // Copy the hasDonnees and table data fields
-                            indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
+    // // Copy the hasDonnees and table data fields
+    // indicateurDto.setPivotTableData(indicateurWithTableData.getPivotTableData());
 
-                        }
-                    }
+    // }
+    // }
 
-                    return dto;
-                })
-                .collect(Collectors.toList());
-    }
+    // return dto;
+    // })
+    // .collect(Collectors.toList());
+    // }
 
 }

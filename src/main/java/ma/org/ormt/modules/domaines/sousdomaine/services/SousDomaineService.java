@@ -20,6 +20,12 @@ public interface SousDomaineService extends BaseService<SousDomaine> {
 
     Page<SousDomaine> getEntityListByDomaineId(Long domaineId, QueryParams requestParams);
 
+    /**
+     * Returns sous-domaines for a given domaine that have at least one associated
+     * indicateur
+     */
+    Page<SousDomaine> getEntityListByDomaineIdHavingIndicateurs(Long domaineId, QueryParams requestParams);
+
     SousDomaine create(Long domaineId, SousDomaineRequestDto requestDto);
 
     SousDomaine update(Long id, SousDomaineRequestDto sousDomaineRequestDto);
@@ -38,8 +44,9 @@ public interface SousDomaineService extends BaseService<SousDomaine> {
     SousDomaineDetailsDto getSousDomaineWithPivotTable(Long id, String tableFormat);
 
     // New method to get List of SousDomaineDetailsDto with pivot table data
-    List<SousDomaineDetailsDto> getSousDomainesWithPivotTable(Long domaineId, QueryParams requestParams,
-            String tableFormat);
+    // List<SousDomaineDetailsDto> getSousDomainesWithPivotTable(Long domaineId,
+    // QueryParams requestParams,
+    // String tableFormat);
 
     void reorderSousDomaines(Long domaineId, List<ReorderSousDomaineItem> items);
 

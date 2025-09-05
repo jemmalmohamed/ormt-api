@@ -1,5 +1,6 @@
 package ma.org.ormt.modules.espaces.controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -68,8 +69,7 @@ public class EspacePublicLoadController extends BaseController<Espace> {
                         @Parameter(description = "Global filter") @RequestParam(value = "globalFilter", defaultValue = "") final String globalFilter) {
 
                 // Ensure filters is not null and add 'actif:true'
-                List<String> effectiveFilters = (filters == null) ? new java.util.ArrayList<>()
-                                : new java.util.ArrayList<>(filters);
+                List<String> effectiveFilters = (filters == null) ? new ArrayList<>() : new ArrayList<>(filters);
 
                 effectiveFilters.add("actif:like:true");
 

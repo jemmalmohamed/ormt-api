@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.ContentDisposition;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -146,7 +147,17 @@ public class FileController {
                 safeName = safeName + ".pdf";
             }
             String dispositionType = download ? "attachment" : "inline";
-            headers.set(HttpHeaders.CONTENT_DISPOSITION, dispositionType + "; filename=\"" + safeName + "\"");
+
+            // Build a standards-compliant Content-Disposition with ASCII fallback and UTF-8
+            // filename*
+            ContentDisposition contentDisposition = ContentDisposition
+                    .builder(dispositionType)
+                    // ASCII fallback to satisfy Tomcat's ISO-8859-1 header validation
+                    .filename(toAsciiSafeFilename(safeName))
+                    // RFC 5987 encoded filename* so browsers get the real UTF-8 name
+                    .filename(safeName, java.nio.charset.StandardCharsets.UTF_8)
+                    .build();
+            headers.setContentDisposition(contentDisposition);
 
             headers.setContentLength(fileData.length);
 
@@ -155,6 +166,42 @@ public class FileController {
             log.error("Error retrieving file {}: {}", fileName, e.getMessage(), e);
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    /**
+     * Create an ASCII-only, header-safe filename fallback: strips diacritics,
+     * replaces common Unicode punctuation, removes control chars and path
+     * separators, and ensures a non-empty result.
+     */
+    private String toAsciiSafeFilename(String input) {
+        if (input == null || input.isBlank())
+            return "file";
+        String normalized;
+        try {
+            normalized = java.text.Normalizer.normalize(input, java.text.Normalizer.Form.NFKD);
+        } catch (Exception e) {
+            normalized = input;
+        }
+        String withoutDiacritics = normalized.replaceAll("\\p{M}+", "");
+        String replaced = withoutDiacritics
+                .replace('\u2019', '\'') // ’ -> '
+                .replace('\u2018', '\'') // ‘ -> '
+                .replace('\u201C', '"') // “ -> "
+                .replace('\u201D', '"') // ” -> "
+                .replace('\u2013', '-') // – -> -
+                .replace('\u2014', '-') // — -> -
+        ;
+        // Remove characters not allowed in HTTP header token/quoted-string contexts
+        // Keep printable ASCII, replace others/specials with underscore
+        String ascii = replaced.replaceAll("[\\r\\n]", " ")
+                .replaceAll("[\\\\/\\t]", "_")
+                .replaceAll("[^\u0020-\u007E]", "_")
+                .trim();
+        if (ascii.isEmpty())
+            ascii = "file";
+        // Avoid dangerous characters in filename parameter
+        ascii = ascii.replace(";", "_").replace("\"", "'");
+        return ascii;
     }
 
     private boolean looksLikePdf(byte[] data) {
