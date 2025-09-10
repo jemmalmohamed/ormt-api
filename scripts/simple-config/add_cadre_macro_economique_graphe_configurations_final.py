@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Script pour ajouter des configurations de graphiques simplifiées aux indicateurs du domaine
-Cadre macro-économique - Version finale avec correspondance exacte.
+cadre macro-économique - Version finale avec correspondance exacte.
 """
 import json
 import sys
@@ -10,7 +10,7 @@ import glob
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-DOMAIN_DIR = ROOT / "data" / "init-data" / "domaines" / "national" / "Cadre macro-économique"
+DOMAIN_DIR = ROOT / "data" / "init-data" / "domaines" / "national" / "cadre macro-économique"
 
 # Mapping from exact indicator names to graphe type codes
 INDICATEUR_TO_TYPE = {

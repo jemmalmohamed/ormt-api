@@ -118,8 +118,9 @@ public class TBDomaineSeeder implements CommandLineRunner {
      */
     private void createTBDomaine(TBDomaineDto tbDomaineDto) throws Exception {
         TBDomaineRequestDto requestDto = new TBDomaineRequestDto();
-        requestDto.setNom(tbDomaineDto.getNom());
+        requestDto.setNom(tbDomaineDto.getNom().toLowerCase());
         requestDto.setDescription(tbDomaineDto.getDescription());
+        requestDto.setLibelle(tbDomaineDto.getLibelle().toLowerCase());
         requestDto.setActif(tbDomaineDto.getActif());
 
         // Skip creation if a TB domaine with the same name already exists

@@ -1,0 +1,77 @@
+[
+    {
+        "tbDomaine": "relations professionnelles et climat social - public",
+        "categorie": "climat social",
+        "indicateur": "nombre de conflits par région"
+    },
+    {
+        "tbDomaine": "relations professionnelles et climat social - public",
+        "categorie": "climat social",
+        "indicateur": "nombre de grèves évitées par région"
+    },
+    {
+        "tbDomaine": "relations professionnelles et climat social - public",
+        "categorie": "climat social",
+        "indicateur": "nombre de grèves déclenchées par région"
+    },
+    {
+        "tbDomaine": "relations professionnelles et climat social - public",
+        "categorie": "climat social",
+        "indicateur": "nombre de grèves évitées par secteur"
+    },
+    {
+        "tbDomaine": "relations professionnelles et climat social - public",
+        "categorie": "climat social",
+        "indicateur": "nombre de grèves déclenchées par secteur"
+    },
+    {
+        "tbDomaine": "relations professionnelles et climat social - public",
+        "categorie": "droit conventionnel",
+        "indicateur": "nombre de protocoles signés par région"
+    },
+    {
+        "tbDomaine": "relations professionnelles et climat social - public",
+        "categorie": "droit conventionnel",
+        "indicateur": "nombre de conventions collectives par région"
+    },
+    {
+        "tbDomaine": "relations professionnelles et climat social - public",
+        "categorie": "droit conventionnel",
+        "indicateur": "nombre de conventions collectives par secteur"
+    },
+    {
+        "tbDomaine": "relations professionnelles et climat social - public",
+        "categorie": "application de la loi de travail",
+        "indicateur": "nombre de visites des inspecteurs de travail"
+    },
+    {
+        "tbDomaine": "relations professionnelles et climat social - public",
+        "categorie": "application de la loi de travail",
+        "indicateur": "nombre de observations émises"
+    },
+    {
+        "tbDomaine": "relations professionnelles et climat social - public",
+        "categorie": "application de la loi de travail",
+        "indicateur": "nombre d’observations par motif d’observation"
+    },
+    {
+        "tbDomaine": "relations professionnelles et climat social - public",
+        "categorie": "application de la loi de travail",
+        "indicateur": "nombre d’observations par secteur"
+    },
+    {
+        "tbDomaine": "relations professionnelles et climat social - public",
+        "categorie": "application de la loi de travail",
+        "indicateur": "nombre de pv"
+    },
+    {
+        "tbDomaine": "relations professionnelles et climat social - public",
+        "categorie": "application de la loi de travail",
+        "indicateur": "nombre de contraventions"
+    },
+    {
+        "tbDomaine": "relations professionnelles et climat social - public",
+        "categorie": "application de la loi de travail",
+        "indicateur": "nombre de délits"
+    }
+]

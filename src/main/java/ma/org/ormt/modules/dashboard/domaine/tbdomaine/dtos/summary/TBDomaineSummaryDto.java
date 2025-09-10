@@ -19,5 +19,7 @@ public class TBDomaineSummaryDto extends Dto {
 
     private String nom;
 
+    private String libelle;
+
     private String description;
 }

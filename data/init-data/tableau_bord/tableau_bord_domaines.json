@@ -1,64 +1,64 @@
 [
     {
         "tableauBord": {
-            "nom": "public"
+            "nom": "décisionnel"
         },
         "tbDomaine": {
-            "nom": "Cadrage du Marché du Travail"
+            "nom": "cadre macro-économique - décisionnel"
         },
         "ordre": 0
     },
     {
         "tableauBord": {
-            "nom": "public"
+            "nom": "décisionnel"
         },
         "tbDomaine": {
-            "nom": "Offre de travail"
+            "nom": "employabilité et insertion professionnelle - decisionnel"
         },
         "ordre": 1
     },
     {
         "tableauBord": {
-            "nom": "public"
+            "nom": "décisionnel"
         },
         "tbDomaine": {
-            "nom": "Demande de travail"
+            "nom": "Offre de travail - décisionnel"
         },
         "ordre": 2
     },
     {
         "tableauBord": {
-            "nom": "public"
+            "nom": "décisionnel"
         },
         "tbDomaine": {
-            "nom": "Cadre macro-économique"
+            "nom": "demande de travail - décisionnel"
         },
         "ordre": 3
     },
     {
         "tableauBord": {
-            "nom": "public"
+            "nom": "décisionnel"
         },
         "tbDomaine": {
-            "nom": "Relations professionnelles et climat social"
+            "nom": "relations professionnelles et climat social - public"
         },
         "ordre": 4
     },
     {
         "tableauBord": {
-            "nom": "public"
+            "nom": "décisionnel"
         },
         "tbDomaine": {
-            "nom": "Offre de formation"
+            "nom": "Offre de formation - public"
         },
         "ordre": 5
     },
     {
         "tableauBord": {
-            "nom": "public"
+            "nom": "décisionnel"
         },
         "tbDomaine": {
-            "nom": "Employabilité et insertion professionnelle"
+            "nom": "Intermédiation sur le marché du travail - public"
         },
         "ordre": 6
     },
@@ -67,62 +67,53 @@
             "nom": "public"
         },
         "tbDomaine": {
-            "nom": "Entreprenariat"
-        },
-        "ordre": 7
-    },
-    {
-        "tableauBord": {
-            "nom": "public"
-        },
-        "tbDomaine": {
-            "nom": "Investissement"
-        },
-        "ordre": 8
-    },
-    {
-        "tableauBord": {
-            "nom": "public"
-        },
-        "tbDomaine": {
-            "nom": "Intermédiation sur le marché du travail"
-        },
-        "ordre": 9
-    },
-    {
-        "tableauBord": {
-            "nom": "public"
-        },
-        "tbDomaine": {
-            "nom": "Compétitivité et salaires"
-        },
-        "ordre": 10
-    },
-    {
-        "tableauBord": {
-            "nom": "décisionnel"
-        },
-        "tbDomaine": {
-            "nom": "Cadre macroéconomique"
+            "nom": "relations professionnelles et climat social - public"
         },
         "ordre": 0
     },
     {
         "tableauBord": {
-            "nom": "décisionnel"
+            "nom": "public"
         },
         "tbDomaine": {
-            "nom": "Situation du marché du travail"
+            "nom": "employabilité et insertion professionnelle - public"
         },
         "ordre": 1
     },
     {
         "tableauBord": {
-            "nom": "décisionnel"
+            "nom": "public"
         },
         "tbDomaine": {
-            "nom": "Leviers de promotion de l'emploi"
+            "nom": "Offre de formation - public"
         },
         "ordre": 2
+    },
+    {
+        "tableauBord": {
+            "nom": "public"
+        },
+        "tbDomaine": {
+            "nom": "Offre de travail - public"
+        },
+        "ordre": 3
+    },
+    {
+        "tableauBord": {
+            "nom": "public"
+        },
+        "tbDomaine": {
+            "nom": "Intermédiation sur le marché du travail - public"
+        },
+        "ordre": 4
+    },
+    {
+        "tableauBord": {
+            "nom": "public"
+        },
+        "tbDomaine": {
+            "nom": "demande de travail - public"
+        },
+        "ordre": 5
     }
 ]

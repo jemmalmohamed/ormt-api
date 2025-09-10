@@ -32,13 +32,11 @@ public class TBDomaine extends BaseEntity {
     @Column(unique = true)
     private String nom;
 
+    private String libelle;
+
     private String description;
 
     private Boolean actif;
-
-    // @OneToMany(mappedBy = "tbDomaine", cascade = CascadeType.ALL, orphanRemoval =
-    // true)
-    // private List<SousDomaine> sousDomaines;
 
     @Builder.Default
     @OneToMany(mappedBy = "tbDomaine", fetch = FetchType.LAZY)

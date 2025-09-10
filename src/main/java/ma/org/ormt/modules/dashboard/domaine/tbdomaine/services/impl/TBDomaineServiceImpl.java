@@ -133,9 +133,7 @@ public class TBDomaineServiceImpl extends BaseServiceImpl<TBDomaine> implements 
         TBDomaine tbDomaine = domaineRepository.findById(
                 tbDomaineId)
                 .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
-        // SousDomaine sousDomaine = sousDomaineRepository.findById(categorieId)
-        // .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
-        // tbDomaine.getSousDomaines().add(sousDomaine);
+
         domaineRepository.save(tbDomaine);
     }
 
@@ -146,6 +144,7 @@ public class TBDomaineServiceImpl extends BaseServiceImpl<TBDomaine> implements 
 
     private void updateTBDomaineFields(TBDomaine tbDomaine, TBDomaineRequestDto entityToUpdate) {
         tbDomaine.setNom(entityToUpdate.getNom());
+        tbDomaine.setLibelle(entityToUpdate.getLibelle());
         tbDomaine.setDescription(entityToUpdate.getDescription());
         tbDomaine.setActif(entityToUpdate.getActif());
 

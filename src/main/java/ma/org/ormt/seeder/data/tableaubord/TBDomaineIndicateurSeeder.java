@@ -56,6 +56,8 @@ public class TBDomaineIndicateurSeeder implements CommandLineRunner {
     private final TBDomaineIndicateurRepository tbDomaineIndicateurRepository;
 
     private static final String TB_DOMAINE_INDICATEURS_JSON_FILE = "tb_domaine_indicateurs.json";
+    private static final String TB_DOMAINE_INDICATEURS_DIR = "tb_domaine_indicateurs"; // optional directory containing
+                                                                                       // per-domaine json files
 
     @Override
     public void run(String... args) {
@@ -72,13 +74,33 @@ public class TBDomaineIndicateurSeeder implements CommandLineRunner {
                 return;
             }
 
-            File jsonFile = new File(resourcePath.toFile(), TB_DOMAINE_INDICATEURS_JSON_FILE);
-            if (!fileDataService.fileExists(jsonFile)) {
-                log.warn("TB domaine-indicateur JSON file not found at: {}", jsonFile.getAbsolutePath());
-                return;
+            // 1) Preferred: directory with per-domaine JSON files
+            File dir = new File(resourcePath.toFile(), TB_DOMAINE_INDICATEURS_DIR);
+            if (dir.exists() && dir.isDirectory()) {
+                File[] files = dir
+                        .listFiles((d, name) -> d != null && name != null && name.toLowerCase().endsWith(".json"));
+                if (files != null && files.length > 0) {
+                    log.info("Found {} per-domaine TB indicateur files in {}", files.length, dir.getAbsolutePath());
+                    for (File f : files) {
+                        attachIndicateursFromDomainFile(f);
+                    }
+                    return; // done
+                } else {
+                    log.warn("Directory '{}' exists but contains no JSON files. Falling back to legacy file.",
+                            dir.getAbsolutePath());
+                }
             }
 
-            attachIndicateursFromJson(jsonFile);
+            // 2) Fallback: single legacy JSON file
+            File legacyJson = new File(resourcePath.toFile(), TB_DOMAINE_INDICATEURS_JSON_FILE);
+            if (!fileDataService.fileExists(legacyJson)) {
+                log.warn(
+                        "Neither per-domaine directory nor legacy TB domaine-indicateur JSON file found. Looked at: {} and {}",
+                        dir.getAbsolutePath(), legacyJson.getAbsolutePath());
+                return;
+            }
+            log.info("Using legacy TB domaine-indicateur JSON file: {}", legacyJson.getAbsolutePath());
+            attachIndicateursFromJson(legacyJson);
         } catch (Exception e) {
             log.error("Error during TB domaine-indicateur seeding: {}", e.getMessage(), e);
         }
@@ -93,78 +115,104 @@ public class TBDomaineIndicateurSeeder implements CommandLineRunner {
                 log.warn("No TB domaine-indicateur rows found in file: {}", jsonFile.getName());
                 return;
             }
-
-            // Group by tbDomaine name (preserve original casing as persisted)
-            Map<String, List<Row>> byDomain = rows.stream()
-                    .collect(Collectors.groupingBy(r -> r.getTbDomaine() == null ? null : r.getTbDomaine().trim()));
-
-            for (Map.Entry<String, List<Row>> entry : byDomain.entrySet()) {
-                String tbDomaineName = entry.getKey();
-                List<Row> domainRows = entry.getValue();
-
-                TBDomaine tbDomaine = tbDomaineService.findByNom(tbDomaineName)
-                        .orElseGet(() -> {
-                            log.warn("TB domaine '{}' not found. Skipping its rows.", tbDomaineName);
-                            return null;
-                        });
-                if (tbDomaine == null)
-                    continue;
-
-                List<TBDomaineIndicateur> existing = tbDomaineIndicateurRepository
-                        .findByTBDomaineIdOrderByOrdreAsc(tbDomaine.getId());
-                Set<Long> existingIndicateurIds = existing.stream().map(e -> e.getIndicateur().getId())
-                        .collect(Collectors.toCollection(HashSet::new));
-
-                int nextOrdre = existing.size();
-                List<TBDomaineIndicateurRequestDto> requests = new ArrayList<>();
-                Map<String, Long> resolvedCache = new HashMap<>();
-
-                for (Row row : domainRows) {
-                    String indicateurName = normalize(row.getIndicateur());
-                    if (indicateurName == null || indicateurName.isBlank()) {
-                        continue;
-                    }
-
-                    Long indicateurId = resolvedCache.get(indicateurName);
-                    if (indicateurId == null) {
-                        Indicateur indicator = indicateurService.findByNom(indicateurName).orElse(null);
-                        if (indicator == null) {
-                            log.warn("Indicateur '{}' not found. Skipping.", indicateurName);
-                            continue;
-                        }
-                        indicateurId = indicator.getId();
-                        resolvedCache.put(indicateurName, indicateurId);
-                    }
-
-                    if (existingIndicateurIds.contains(indicateurId)) {
-                        log.debug("Association already exists: tbDomaine='{}', indicateur='{}'", tbDomaineName,
-                                indicateurName);
-                        continue;
-                    }
-
-                    TBDomaineIndicateurRequestDto req = new TBDomaineIndicateurRequestDto();
-                    TBDomaineDto tbDto = new TBDomaineDto();
-                    tbDto.setId(tbDomaine.getId());
-                    req.setTbDomaine(tbDto);
-
-                    IndicateurDto indDto = new IndicateurDto();
-                    indDto.setId(indicateurId);
-                    req.setIndicateur(indDto);
-
-                    req.setCategorie(row.getCategorie() != null ? row.getCategorie().toLowerCase().trim() : null);
-                    req.setOrdre(nextOrdre++);
-                    requests.add(req);
-                }
-
-                if (!requests.isEmpty()) {
-                    tbDomaineIndicateurService.attachIndicateursToTBDomaine(requests);
-                    log.info("Attached {} indicateurs to TB domaine '{}'", requests.size(), tbDomaineName);
-                } else {
-                    log.info("No new indicateurs to attach for TB domaine '{}'", tbDomaineName);
-                }
-            }
+            processRowsGroupedByDomaine(rows, jsonFile.getName());
         } catch (Exception e) {
             log.error("Error processing TB domaine-indicateur file {}: {}", jsonFile.getName(), e.getMessage(), e);
+        }
+    }
+
+    @Transactional
+    protected void attachIndicateursFromDomainFile(File jsonFile) {
+        try {
+            List<Row> rows = fileDataService.readJsonFileAsList(jsonFile, new TypeReference<List<Row>>() {
+            });
+            if (rows == null || rows.isEmpty()) {
+                log.warn("Empty domaine indicateur file: {}", jsonFile.getName());
+                return;
+            }
+            processRowsGroupedByDomaine(rows, jsonFile.getName());
+        } catch (Exception e) {
+            log.error("Error processing per-domaine file {}: {}", jsonFile.getName(), e.getMessage(), e);
+        }
+    }
+
+    private void processRowsGroupedByDomaine(List<Row> rows, String sourceName) {
+        // Group by tbDomaine name (preserve original casing as persisted)
+        Map<String, List<Row>> byDomain = rows.stream()
+                .collect(Collectors.groupingBy(r -> r.getTbDomaine() == null ? null : r.getTbDomaine().trim()));
+
+        for (Map.Entry<String, List<Row>> entry : byDomain.entrySet()) {
+            String tbDomaineName = entry.getKey();
+            if (tbDomaineName == null) {
+                log.warn("Encountered row with null tbDomaine in source {}. Skipping those rows.", sourceName);
+                continue;
+            }
+
+            List<Row> domainRows = entry.getValue();
+
+            TBDomaine tbDomaine = tbDomaineService.findByNom(tbDomaineName.toLowerCase())
+                    .orElseGet(() -> {
+                        log.warn("TB domaine '{}' not found (source '{}'). Skipping its rows.", tbDomaineName,
+                                sourceName);
+                        return null;
+                    });
+            if (tbDomaine == null)
+                continue;
+
+            List<TBDomaineIndicateur> existing = tbDomaineIndicateurRepository
+                    .findByTBDomaineIdOrderByOrdreAsc(tbDomaine.getId());
+            Set<Long> existingIndicateurIds = existing.stream().map(e -> e.getIndicateur().getId())
+                    .collect(Collectors.toCollection(HashSet::new));
+
+            int nextOrdre = existing.size();
+            List<TBDomaineIndicateurRequestDto> requests = new ArrayList<>();
+            Map<String, Long> resolvedCache = new HashMap<>();
+
+            for (Row row : domainRows) {
+                String indicateurName = normalize(row.getIndicateur());
+                if (indicateurName == null || indicateurName.isBlank()) {
+                    continue;
+                }
+
+                Long indicateurId = resolvedCache.get(indicateurName);
+                if (indicateurId == null) {
+                    Indicateur indicator = indicateurService.findByNom(indicateurName.toLowerCase()).orElse(null);
+                    if (indicator == null) {
+                        log.warn("Indicateur '{}' not found (source '{}'). Skipping.", indicateurName, sourceName);
+                        continue;
+                    }
+                    indicateurId = indicator.getId();
+                    resolvedCache.put(indicateurName, indicateurId);
+                }
+
+                if (existingIndicateurIds.contains(indicateurId)) {
+                    log.debug("Association already exists: tbDomaine='{}', indicateur='{}' (source '{}')",
+                            tbDomaineName,
+                            indicateurName, sourceName);
+                    continue;
+                }
+
+                TBDomaineIndicateurRequestDto req = new TBDomaineIndicateurRequestDto();
+                TBDomaineDto tbDto = new TBDomaineDto();
+                tbDto.setId(tbDomaine.getId());
+                req.setTbDomaine(tbDto);
+
+                IndicateurDto indDto = new IndicateurDto();
+                indDto.setId(indicateurId);
+                req.setIndicateur(indDto);
+
+                req.setCategorie(row.getCategorie() != null ? row.getCategorie().toLowerCase().trim() : null);
+                req.setOrdre(nextOrdre++);
+                requests.add(req);
+            }
+
+            if (!requests.isEmpty()) {
+                tbDomaineIndicateurService.attachIndicateursToTBDomaine(requests);
+                log.info("Attached {} indicateurs to TB domaine '{}' (source '{}')", requests.size(), tbDomaineName,
+                        sourceName);
+            } else {
+                log.info("No new indicateurs to attach for TB domaine '{}' (source '{}')", tbDomaineName, sourceName);
+            }
         }
     }
 

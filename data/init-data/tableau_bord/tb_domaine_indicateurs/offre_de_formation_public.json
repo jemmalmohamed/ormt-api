@@ -1,0 +1,237 @@
+[
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - insertion professionnelle",
+        "indicateur": "taux de chômage des lauréats du supérieur (bac + 2 et plus)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - insertion professionnelle",
+        "indicateur": "taux d’activité des lauréats du supérieur (bac + 2 et plus)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - insertion professionnelle",
+        "indicateur": "taux d’emploi des lauréats du supérieur (bac + 2 et plus)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - insertion professionnelle",
+        "indicateur": "nombre de lauréats du supérieur (bac + 2 et plus) par diplôme (licence)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - insertion professionnelle",
+        "indicateur": "nombre de lauréats du supérieur (bac + 2 et plus) par diplôme (master)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - insertion professionnelle",
+        "indicateur": "nombre de lauréats du supérieur (bac + 2 et plus) par diplôme (doctorat)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - insertion professionnelle",
+        "indicateur": "taux de formation des lauréats du supérieur (bac + 2 et plus) à l’étranger"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - insertion professionnelle",
+        "indicateur": "taux de formation des lauréats du supérieur (bac + 2 et plus) au Maroc"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - diplômés",
+        "indicateur": "nombre de lauréats du supérieur (bac + 2 et plus)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - diplômés",
+        "indicateur": "nombre de lauréats du supérieur (bac + 2 et plus) par sexe"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - diplômés",
+        "indicateur": "nombre de lauréats du supérieur (bac + 2 et plus) par domaine de formation (sciences, technologie)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - diplômés",
+        "indicateur": "nombre de lauréats du supérieur (bac + 2 et plus) par domaine de formation (arts, lettres, et sciences humaines)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - diplômés",
+        "indicateur": "nombre de lauréats du supérieur (bac + 2 et plus) par domaine de formation (affaires, administration et droit)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - diplômés",
+        "indicateur": "nombre de lauréats du supérieur (bac + 2 et plus) par domaine de formation (santé et action sociale)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - étudiant",
+        "indicateur": "effectifs des étudiants du public (fiche statistique)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - étudiant",
+        "indicateur": "effectifs des étudiants du public par filière"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - étudiant",
+        "indicateur": "effectifs des étudiants du public par établissement (universitaire et non universitaire)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - étudiant",
+        "indicateur": "nouveaux inscrits du public par filière"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - étudiant",
+        "indicateur": "étudiants en cours de formation du public par filière"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - étudiant",
+        "indicateur": "effectifs des étudiants du public par type de filière, domaine ou spécialité de formation (sciences, technologie)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - étudiant",
+        "indicateur": "effectifs des étudiants du public par type de filière, domaine ou spécialité de formation (arts, lettres, et sciences humaines)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - étudiant",
+        "indicateur": "effectifs des étudiants du public par type de filière, domaine ou spécialité de formation (affaires, administration et droit)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - étudiant",
+        "indicateur": "effectifs des étudiants du public par type de filière, domaine ou spécialité de formation (santé et action sociale)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "formation professionnelle - insertion à 36 mois",
+        "indicateur": "taux d’insertion dans l’emploi à 36 mois des lauréats de la formation professionnelle"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "formation professionnelle - insertion à 36 mois",
+        "indicateur": "taux d’insertion dans l’emploi à 36 mois des lauréats de la formation professionnelle par type de formation (résidentielle)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "formation professionnelle - insertion à 36 mois",
+        "indicateur": "taux d’insertion dans l’emploi à 36 mois des lauréats de la formation professionnelle par type de formation (alternée)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "formation professionnelle - lauréats",
+        "indicateur": "effectif des lauréats de la formation professionnelle"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "formation professionnelle - lauréats",
+        "indicateur": "effectif des lauréats de la formation professionnelle par niveau de formation (spécialisation)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "formation professionnelle - lauréats",
+        "indicateur": "effectif des lauréats de la formation professionnelle par niveau de formation (qualification)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "formation professionnelle - lauréats",
+        "indicateur": "effectif des lauréats de la formation professionnelle par niveau de formation (technicien)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "formation professionnelle - lauréats",
+        "indicateur": "effectif des lauréats de la formation professionnelle par niveau de formation (technicien spécialisé)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "formation professionnelle - lauréats",
+        "indicateur": "effectif des lauréats de la formation professionnelle par mode de formation (résidentielle)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "formation professionnelle - lauréats",
+        "indicateur": "effectif des lauréats de la formation professionnelle par mode de formation (alternée)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - nouveaux inscrits",
+        "indicateur": "nombre de nouveaux inscrits du public par filière"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - nouveaux inscrits",
+        "indicateur": "nouveaux inscrits du public par type de filière, domaine ou spécialité de formation (sciences, technologie)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - nouveaux inscrits",
+        "indicateur": "nouveaux inscrits du public par type de filière, domaine ou spécialité de formation (arts, lettres, et sciences humaines)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - nouveaux inscrits",
+        "indicateur": "nouveaux inscrits du public par type de filière, domaine ou spécialité de formation (affaires, administration et droit)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - nouveaux inscrits",
+        "indicateur": "nouveaux inscrits du public par type de filière, domaine ou spécialité de formation (santé et action sociale)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - chômage",
+        "indicateur": "taux de chômage des diplômés de l’enseignement supérieur"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - chômage",
+        "indicateur": "taux de chômage des diplômés de l’enseignement supérieur par sexe"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "enseignement supérieur - chômage",
+        "indicateur": "taux de chômage des diplômés de l’enseignement supérieur par groupe d’âge (25-34 ans)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "formation professionnelle - insertion à 9 mois",
+        "indicateur": "taux d’insertion dans l’emploi à 9 mois des lauréats de la formation professionnelle"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "formation professionnelle - insertion à 9 mois",
+        "indicateur": "taux d’insertion dans l’emploi à 9 mois des lauréats de la formation professionnelle par type de formation (résidentielle)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "formation professionnelle - insertion à 9 mois",
+        "indicateur": "taux d’insertion dans l’emploi à 9 mois des lauréats de la formation professionnelle par type de formation (alternée)"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "formation professionnelle - stagiaires",
+        "indicateur": "effectif des stagiaires de la formation professionnelle continue"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "formation professionnelle - stagiaires",
+        "indicateur": "effectif des stagiaires de la formation professionnelle en mode résidentielle"
+    },
+    {
+        "tbDomaine": "Offre de formation - public",
+        "categorie": "formation professionnelle - stagiaires",
+        "indicateur": "effectif des stagiaires de la formation professionnelle en mode alternée"
+    }
+]

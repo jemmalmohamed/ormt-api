@@ -1,58 +1,10 @@
 [
     {
-        "nom": "Cadrage du Marché du Travail",
-        "description": "Domaine concernant le cadrage et l'analyse du marché du travail",
-        "roleAcces": [
-            {
-                "roleCode": "role_public",
-                "niveauAcces": "lecture"
-            },
-            {
-                "roleCode": "role_decideur",
-                "niveauAcces": "lecture"
-            }
-        ],
-        "actif": true
-    },
-    {
-        "nom": "Offre de travail",
-        "description": "Domaine concernant l'offre de travail et l'emploi",
-        "roleAcces": [
-            {
-                "roleCode": "role_public",
-                "niveauAcces": "lecture"
-            },
-            {
-                "roleCode": "role_decideur",
-                "niveauAcces": "lecture"
-            }
-        ],
-        "actif": true
-    },
-    {
-        "nom": "Demande de travail",
-        "description": "Domaine concernant la demande de travail et le recrutement",
-        "roleAcces": [
-            {
-                "roleCode": "role_public",
-                "niveauAcces": "lecture"
-            },
-            {
-                "roleCode": "role_decideur",
-                "niveauAcces": "lecture"
-            }
-        ],
-        "actif": true
-    },
-    {
-        "nom": "Cadre macro-économique",
+        "nom": "cadre macro-économique - décisionnel",
+        "libelle": "Cadre Macro-économique",
         "description": "Domaine concernant le cadre macro-économique et les indicateurs économiques",
         "roleAcces": [
             {
-                "roleCode": "role_public",
-                "niveauAcces": "lecture"
-            },
-            {
                 "roleCode": "role_decideur",
                 "niveauAcces": "lecture"
             }
@@ -60,7 +12,8 @@
         "actif": true
     },
     {
-        "nom": "Relations professionnelles et climat social",
+        "nom": "relations professionnelles et climat social - public",
+        "libelle": "Relations Professionnelles et Climat Social",
         "description": "Domaine concernant les relations professionnelles et le climat social",
         "roleAcces": [
             {
@@ -75,8 +28,9 @@
         "actif": true
     },
     {
-        "nom": "Offre de formation",
-        "description": "Domaine concernant l'offre de formation et l'éducation",
+        "nom": "employabilité et insertion professionnelle - public",
+        "libelle": "Employabilité et Insertion Professionnelle",
+        "description": "Version publique du domaine Employabilité et Insertion Professionnelle (indicateurs diffusables).",
         "roleAcces": [
             {
                 "roleCode": "role_public",
@@ -90,8 +44,21 @@
         "actif": true
     },
     {
-        "nom": "Employabilité et insertion professionnelle",
-        "description": "Domaine concernant l'employabilité et l'insertion professionnelle",
+        "nom": "employabilité et insertion professionnelle - decisionnel",
+        "libelle": "Employabilité et Insertion Professionnelle",
+        "description": "Version décisionnelle interne du domaine Employabilité et Insertion Professionnelle (indicateurs non publics).",
+        "roleAcces": [
+            {
+                "roleCode": "role_decideur",
+                "niveauAcces": "lecture"
+            }
+        ],
+        "actif": true
+    },
+    {
+        "nom": "Offre de formation - public",
+        "libelle": "Offre de Formation",
+        "description": "Version publique du domaine Offre de formation (indicateurs diffusables).",
         "roleAcces": [
             {
                 "roleCode": "role_public",
@@ -105,8 +72,21 @@
         "actif": true
     },
     {
-        "nom": "Entreprenariat",
-        "description": "Domaine concernant l'entreprenariat et la création d'entreprises",
+        "nom": "Offre de travail - décisionnel",
+        "libelle": "Offre de Travail",
+        "description": "Version décisionnelle du domaine Offre de travail (indicateurs non publics).",
+        "roleAcces": [
+            {
+                "roleCode": "role_decideur",
+                "niveauAcces": "lecture"
+            }
+        ],
+        "actif": true
+    },
+    {
+        "nom": "Offre de travail - public",
+        "libelle": "Offre de Travail",
+        "description": "Version publique du domaine Offre de travail (indicateurs diffusables).",
         "roleAcces": [
             {
                 "roleCode": "role_public",
@@ -120,8 +100,9 @@
         "actif": true
     },
     {
-        "nom": "Investissement",
-        "description": "Domaine concernant l'investissement et le financement",
+        "nom": "Intermédiation sur le marché du travail - public",
+        "libelle": "Intermédiation sur le marché du travail",
+        "description": "Version publique du domaine Intermédiation sur le marché du travail (indicateurs diffusables).",
         "roleAcces": [
             {
                 "roleCode": "role_public",
@@ -135,13 +116,10 @@
         "actif": true
     },
     {
-        "nom": "Intermédiation sur le marché du travail",
-        "description": "Domaine concernant l'intermédiation et les services de l'emploi",
+        "nom": "demande de travail - décisionnel",
+        "libelle": "Demande de Travail",
+        "description": "Version décisionnelle du domaine Demande de travail (accès interne).",
         "roleAcces": [
-            {
-                "roleCode": "role_public",
-                "niveauAcces": "lecture"
-            },
             {
                 "roleCode": "role_decideur",
                 "niveauAcces": "lecture"
@@ -150,8 +128,9 @@
         "actif": true
     },
     {
-        "nom": "Compétitivité et salaires",
-        "description": "Domaine concernant la compétitivité, les salaires et la rémunération",
+        "nom": "demande de travail - public",
+        "libelle": "Demande de Travail",
+        "description": "Version publique du domaine Demande de travail (indicateurs diffusables).",
         "roleAcces": [
             {
                 "roleCode": "role_public",

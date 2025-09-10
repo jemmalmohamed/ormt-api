@@ -55,6 +55,9 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
         truncateTable("graphe_type");
 
         // dashboard
+        truncateTable("tb_domaine_indicateur");
+        truncateTable("tb_domaine");
+
         truncateTable("tableau_bord");
 
     }

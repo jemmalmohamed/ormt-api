@@ -118,8 +118,8 @@ public class TableauBordSeeder implements CommandLineRunner {
      */
     private void createTableauBord(TableauBordDto tbDto) throws Exception {
         TableauBordRequestDto requestDto = new TableauBordRequestDto();
-        requestDto.setNom(tbDto.getNom());
-        requestDto.setDescription(tbDto.getDescription());
+        requestDto.setNom(tbDto.getNom().toLowerCase());
+        requestDto.setDescription(tbDto.getDescription().toLowerCase());
         requestDto.setActif(tbDto.getActif());
 
         // Skip creation if a tableau de bord with the same name already exists

@@ -1,0 +1,142 @@
+[
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "entretiens de positionnement",
+        "indicateur": "objectif ciblé d’entretiens de positionnement"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "entretiens de positionnement",
+        "indicateur": "nombre d’entretiens de positionnement"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "entretiens de positionnement",
+        "indicateur": "entretiens de positionnement par genre"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "entretiens de positionnement",
+        "indicateur": "entretiens de positionnement par âge"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "entretiens de positionnement",
+        "indicateur": "entretiens de positionnement par diplôme"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "entretiens de positionnement",
+        "indicateur": "entretiens de positionnement par région"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "offres d’emploi recueillies",
+        "indicateur": "nombre d’offre d’emploi recueillies"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "offres d’emploi recueillies",
+        "indicateur": "offre d’emploi recueillies par région"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "offres d’emploi recueillies",
+        "indicateur": "offre d’emploi recueillies par taille d’entreprise"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "offres d’emploi recueillies",
+        "indicateur": "offre d’emploi recueillies par contrat"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "inscrits à l’anapec",
+        "indicateur": "nombre total des inscrits à l’anapec"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "inscrits à l’anapec",
+        "indicateur": "inscrits à l’anapec par genre"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "inscrits à l’anapec",
+        "indicateur": "inscrits à l’anapec par âge"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "inscrits à l’anapec",
+        "indicateur": "inscrits à l’anapec par diplôme"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "inscrits à l’anapec",
+        "indicateur": "inscrits à l’anapec par région"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "inscrits à l’anapec",
+        "indicateur": "nombre de nouveaux inscrits à l’anapec"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "inscrits à l’anapec",
+        "indicateur": "nouveaux inscrits à l’anapec par genre"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "inscrits à l’anapec",
+        "indicateur": "nouveaux inscrits à l’anapec par âge"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "inscrits à l’anapec",
+        "indicateur": "nouveaux inscrits à l’anapec par diplôme"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "inscrits à l’anapec",
+        "indicateur": "nouveaux inscrits à l’anapec par région"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "agences de recrutement privé (arp)",
+        "indicateur": "nombre des agences de recrutement privé par région"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "agences de recrutement privé (arp)",
+        "indicateur": "agences de recrutement privé par région"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "ateliers de recherche d’emploi",
+        "indicateur": "objectif ciblé d’ateliers de recherche d’emploi"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "ateliers de recherche d’emploi",
+        "indicateur": "nombre de bénéficiaires d’ateliers de recherche d’emploi"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "ateliers de recherche d’emploi",
+        "indicateur": "bénéficiaires d’are par genre"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "ateliers de recherche d’emploi",
+        "indicateur": "bénéficiaires d’are par âge"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "ateliers de recherche d’emploi",
+        "indicateur": "bénéficiaires d’are par diplôme"
+    },
+    {
+        "tbDomaine": "Intermédiation sur le marché du travail - public",
+        "categorie": "ateliers de recherche d’emploi",
+        "indicateur": "bénéficiaires d’are par région"
+    }
+]

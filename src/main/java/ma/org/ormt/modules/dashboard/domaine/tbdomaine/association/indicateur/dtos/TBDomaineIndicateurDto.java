@@ -15,8 +15,6 @@ public class TBDomaineIndicateurDto extends Dto {
 
     private IndicateurSousDomaineDetailDto indicateur;
 
-    // private TBDomaineDto tbDomaine;
-
     private Integer ordre;
 
     private String categorie;

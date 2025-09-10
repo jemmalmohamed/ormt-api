@@ -120,12 +120,12 @@ public class TableauBordDomaineSeeder implements CommandLineRunner {
     private void createTableauBordDomaineAssociation(TableauBordDomaineRequestDto requestDto) throws Exception {
         try {
             // Find TableauBord by name
-            TableauBord tableauBord = tableauBordService.findByNom(requestDto.getTableauBord().getNom())
+            TableauBord tableauBord = tableauBordService.findByNom(requestDto.getTableauBord().getNom().toLowerCase())
                     .orElseThrow(() -> new RuntimeException(
                             "TableauBord not found: " + requestDto.getTableauBord().getNom()));
 
             // Find TBDomaine by name
-            TBDomaine tbDomaine = tbDomaineService.findByNom(requestDto.getTbDomaine().getNom())
+            TBDomaine tbDomaine = tbDomaineService.findByNom(requestDto.getTbDomaine().getNom().toLowerCase())
                     .orElseThrow(
                             () -> new RuntimeException("TBDomaine not found: " + requestDto.getTbDomaine().getNom()));
 

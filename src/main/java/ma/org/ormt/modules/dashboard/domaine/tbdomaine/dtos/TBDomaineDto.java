@@ -25,6 +25,8 @@ public class TBDomaineDto extends BaseDto {
 
     private String nom;
 
+    private String libelle;
+
     private String description;
 
     private Boolean actif;
