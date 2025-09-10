@@ -1,6 +1,7 @@
 package ma.org.ormt.seeder.data.tableaubord;
 
 import java.io.File;
+import java.text.Normalizer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -150,9 +151,11 @@ public class TBDomaineIndicateurSeeder implements CommandLineRunner {
 
             List<Row> domainRows = entry.getValue();
 
-            TBDomaine tbDomaine = tbDomaineService.findByNom(tbDomaineName.toLowerCase())
+            String normalizedDomaineLookup = normalize(tbDomaineName);
+            TBDomaine tbDomaine = tbDomaineService.findByNom(normalizedDomaineLookup)
                     .orElseGet(() -> {
-                        log.warn("TB domaine '{}' not found (source '{}'). Skipping its rows.", tbDomaineName,
+                        log.warn("TB domaine '{}' (normalized: '{}') not found (source '{}'). Skipping its rows.",
+                                tbDomaineName, normalizedDomaineLookup,
                                 sourceName);
                         return null;
                     });
@@ -177,6 +180,13 @@ public class TBDomaineIndicateurSeeder implements CommandLineRunner {
                 Long indicateurId = resolvedCache.get(indicateurName);
                 if (indicateurId == null) {
                     Indicateur indicator = indicateurService.findByNom(indicateurName.toLowerCase()).orElse(null);
+                    if (indicator == null) {
+                        // relaxed: strip accents
+                        String stripped = stripAccents(indicateurName);
+                        if (!stripped.equals(indicateurName)) {
+                            indicator = indicateurService.findByNom(stripped.toLowerCase()).orElse(null);
+                        }
+                    }
                     if (indicator == null) {
                         log.warn("Indicateur '{}' not found (source '{}'). Skipping.", indicateurName, sourceName);
                         continue;
@@ -217,7 +227,22 @@ public class TBDomaineIndicateurSeeder implements CommandLineRunner {
     }
 
     private static String normalize(String s) {
-        return s == null ? null : s.toLowerCase().trim();
+        if (s == null)
+            return null;
+        String v = s.trim();
+        v = v.replace('\u2019', '\'') // right single quote
+                .replace('\u2018', '\'') // left single quote
+                .replace("’", "'")
+                .replace("‘", "'")
+                .replace("`", "'");
+        v = v.replaceAll("\\s+", " ");
+        return v.toLowerCase();
+    }
+
+    private static String stripAccents(String input) {
+        if (input == null) return null;
+        String norm = Normalizer.normalize(input, Normalizer.Form.NFD);
+        return norm.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
     }
 
     @Data
