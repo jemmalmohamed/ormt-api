@@ -123,7 +123,7 @@ def main():
     subdomain_files = [
         DOMAIN_DIR / "sous-domaines" / "Nouveaux entrants potentiels sur le marché du travail" / "Nouveaux entrants potentiels sur le marché du travail.json",
         DOMAIN_DIR / "sous-domaines" / "Activité" / "Activité.json",
-        DOMAIN_DIR / "sous-domaines" / "Chomage" / "Chomage.json",
+        DOMAIN_DIR / "sous-domaines" / "Chômage " / "Chômage .json",
         DOMAIN_DIR / "sous-domaines" / "NEET" / "NEET.json",
     ]
     

@@ -240,7 +240,8 @@ public class TBDomaineIndicateurSeeder implements CommandLineRunner {
     }
 
     private static String stripAccents(String input) {
-        if (input == null) return null;
+        if (input == null)
+            return null;
         String norm = Normalizer.normalize(input, Normalizer.Form.NFD);
         return norm.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
     }
@@ -250,7 +251,7 @@ public class TBDomaineIndicateurSeeder implements CommandLineRunner {
     @AllArgsConstructor
     static class Row {
         private String tbDomaine; // e.g., "Offre de travail"
-        private String categorie; // e.g., "activité", "chomage", "neet"
+        private String categorie; // e.g., "activité", "chômage ", "neet"
         private String indicateur; // the indicator name
     }
 }
