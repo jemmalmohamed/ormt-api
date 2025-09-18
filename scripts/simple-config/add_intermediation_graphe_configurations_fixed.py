@@ -15,42 +15,42 @@ DOMAIN_DIR = ROOT / "data" / "init-data" / "domaines" / "national" / "Intermédi
 # Mapping from exact indicator names to graphe type codes
 INDICATEUR_TO_TYPE = {
     # Entretiens de positionnement
-    "objectif ciblé d’entretiens de positionnement": "HISTOGRAMME",
-    "nombre d’entretiens de positionnement": "HISTOGRAMME",
+    "objectif ciblé d'entretiens de positionnement": "HISTOGRAMME",
+    "nombre d'entretiens de positionnement": "HISTOGRAMME",
     "entretiens de positionnement par genre": "CAMEMBERT",
     "entretiens de positionnement par âge": "CAMEMBERT",
     "entretiens de positionnement par diplôme": "CAMEMBERT",
     "entretiens de positionnement par région": "CAMEMBERT",
     
-    # Offres d’emploi recueillies
-    "nombre d’offre d’emploi recueillies": "HISTOGRAMME",
-    "offre d’emploi recueillies par région": "CAMEMBERT",
-    "offre d’emploi recueillies par taille d’entreprise": "CAMEMBERT",
-    "offre d’emploi recueillies par contrat": "CAMEMBERT",
+    # Offres d'emploi recueillies
+    "nombre d'offre d'emploi recueillies": "HISTOGRAMME",
+    "offre d'emploi recueillies par région": "CAMEMBERT",
+    "offre d'emploi recueillies par taille d'entreprise": "CAMEMBERT",
+    "offre d'emploi recueillies par contrat": "CAMEMBERT",
     
-    # Inscrits à l’anapec
-    "nombre total des inscrits à l’anapec": "HISTOGRAMME",
-    "inscrits à l’anapec par genre": "CAMEMBERT",
-    "inscrits à l’anapec par âge": "CAMEMBERT",
-    "inscrits à l’anapec par diplôme": "CAMEMBERT",
-    "inscrits à l’anapec par région": "CAMEMBERT",
-    "nombre de nouveaux inscrits à l’anapec": "HISTOGRAMME",
-    "nouveaux inscrits à l’anapec par genre": "CAMEMBERT",
-    "nouveaux inscrits à l’anapec par âge": "CAMEMBERT",
-    "nouveaux inscrits à l’anapec par diplôme": "CAMEMBERT",
-    "nouveaux inscrits à l’anapec par région": "CAMEMBERT",
+    # Inscrits à l'anapec
+    "nombre total des inscrits à l'anapec": "HISTOGRAMME",
+    "inscrits à l'anapec par genre": "CAMEMBERT",
+    "inscrits à l'anapec par âge": "CAMEMBERT",
+    "inscrits à l'anapec par diplôme": "CAMEMBERT",
+    "inscrits à l'anapec par région": "CAMEMBERT",
+    "nombre de nouveaux inscrits à l'anapec": "HISTOGRAMME",
+    "nouveaux inscrits à l'anapec par genre": "CAMEMBERT",
+    "nouveaux inscrits à l'anapec par âge": "CAMEMBERT",
+    "nouveaux inscrits à l'anapec par diplôme": "CAMEMBERT",
+    "nouveaux inscrits à l'anapec par région": "CAMEMBERT",
     
     # Agences de recrutement privé (arp)
     "nombre des agences de recrutement privé par région": "HISTOGRAMME",
     "agences de recrutement privé par région": "CAMEMBERT",
     
-    # Ateliers de recherche d’emploi
-    "objectif ciblé d’ateliers de recherche d’emploi": "HISTOGRAMME",
-    "nombre de bénéficiaires d’ateliers de recherche d’emploi": "HISTOGRAMME",
-    "bénéficiaires d’are par genre": "CAMEMBERT",
-    "bénéficiaires d’are par âge": "CAMEMBERT",
-    "bénéficiaires d’are par diplôme": "CAMEMBERT",
-    "bénéficiaires d’are par région": "CAMEMBERT",
+    # Ateliers de recherche d'emploi
+    "objectif ciblé d'ateliers de recherche d'emploi": "HISTOGRAMME",
+    "nombre de bénéficiaires d'ateliers de recherche d'emploi": "HISTOGRAMME",
+    "bénéficiaires d'are par genre": "CAMEMBERT",
+    "bénéficiaires d'are par âge": "CAMEMBERT",
+    "bénéficiaires d'are par diplôme": "CAMEMBERT",
+    "bénéficiaires d'are par région": "CAMEMBERT",
 }
 
 

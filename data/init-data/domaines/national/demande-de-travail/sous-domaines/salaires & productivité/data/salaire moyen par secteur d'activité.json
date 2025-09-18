@@ -1,0 +1,3245 @@
+{
+  "indicateur": "salaire moyen par secteur d'activité",
+  "data": [
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "béni mellal-khénifra",
+      "annuel": "2019",
+      "valeur": 2169.77
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "béni mellal-khénifra",
+      "annuel": "2019",
+      "valeur": 2530.21
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "béni mellal-khénifra",
+      "annuel": "2019",
+      "valeur": 2959.08
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "béni mellal-khénifra",
+      "annuel": "2019",
+      "valeur": 2225.32
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "béni mellal-khénifra",
+      "annuel": "2019",
+      "valeur": 2354.24
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "béni mellal-khénifra",
+      "annuel": "2019",
+      "valeur": 3009.37
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "béni mellal-khénifra",
+      "annuel": "2019",
+      "valeur": 2663.73
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "béni mellal-khénifra",
+      "annuel": "2019",
+      "valeur": 2725.7
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "béni mellal-khénifra",
+      "annuel": "2019",
+      "valeur": 2848.21
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "drâa-tafilalet",
+      "annuel": "2019",
+      "valeur": 2441.6
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "drâa-tafilalet",
+      "annuel": "2019",
+      "valeur": 2637.19
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "drâa-tafilalet",
+      "annuel": "2019",
+      "valeur": 2694.57
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "drâa-tafilalet",
+      "annuel": "2019",
+      "valeur": 2141.38
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "drâa-tafilalet",
+      "annuel": "2019",
+      "valeur": 2869.22
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "drâa-tafilalet",
+      "annuel": "2019",
+      "valeur": 2608.93
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "drâa-tafilalet",
+      "annuel": "2019",
+      "valeur": 2452.8
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "drâa-tafilalet",
+      "annuel": "2019",
+      "valeur": 2639.11
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "drâa-tafilalet",
+      "annuel": "2019",
+      "valeur": 2628.05
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2019",
+      "valeur": 5758.49
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2019",
+      "valeur": 3101.59
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2019",
+      "valeur": 3170.08
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2019",
+      "valeur": 2150.66
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2019",
+      "valeur": 3145.06
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2019",
+      "valeur": 4035.4
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2019",
+      "valeur": 2566.77
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2019",
+      "valeur": 2653.5
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2019",
+      "valeur": 3143.5
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "fès-meknès",
+      "annuel": "2019",
+      "valeur": 1926.06
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "fès-meknès",
+      "annuel": "2019",
+      "valeur": 2609.0
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "fès-meknès",
+      "annuel": "2019",
+      "valeur": 3225.32
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "fès-meknès",
+      "annuel": "2019",
+      "valeur": 3148.55
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "fès-meknès",
+      "annuel": "2019",
+      "valeur": 2866.46
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "fès-meknès",
+      "annuel": "2019",
+      "valeur": 3138.51
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "fès-meknès",
+      "annuel": "2019",
+      "valeur": 2946.8
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "fès-meknès",
+      "annuel": "2019",
+      "valeur": 3468.84
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "fès-meknès",
+      "annuel": "2019",
+      "valeur": 3020.39
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "casablanca-settat",
+      "annuel": "2019",
+      "valeur": 2815.66
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "casablanca-settat",
+      "annuel": "2019",
+      "valeur": 3846.57
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "casablanca-settat",
+      "annuel": "2019",
+      "valeur": 5263.16
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "casablanca-settat",
+      "annuel": "2019",
+      "valeur": 4503.59
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "casablanca-settat",
+      "annuel": "2019",
+      "valeur": 3440.94
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "casablanca-settat",
+      "annuel": "2019",
+      "valeur": 5090.71
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "casablanca-settat",
+      "annuel": "2019",
+      "valeur": 4849.95
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "casablanca-settat",
+      "annuel": "2019",
+      "valeur": 5270.53
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "casablanca-settat",
+      "annuel": "2019",
+      "valeur": 5679.07
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "guelmim-oued noun",
+      "annuel": "2019",
+      "valeur": 3992.55
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "guelmim-oued noun",
+      "annuel": "2019",
+      "valeur": 2788.07
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "guelmim-oued noun",
+      "annuel": "2019",
+      "valeur": 2801.18
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "guelmim-oued noun",
+      "annuel": "2019",
+      "valeur": 2079.5
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "guelmim-oued noun",
+      "annuel": "2019",
+      "valeur": 2246.16
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "guelmim-oued noun",
+      "annuel": "2019",
+      "valeur": 2875.0
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "guelmim-oued noun",
+      "annuel": "2019",
+      "valeur": 2716.79
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "guelmim-oued noun",
+      "annuel": "2019",
+      "valeur": 2531.09
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "guelmim-oued noun",
+      "annuel": "2019",
+      "valeur": 3031.38
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2019",
+      "valeur": 4568.38
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2019",
+      "valeur": 3010.07
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2019",
+      "valeur": 3320.88
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2019",
+      "valeur": 2209.63
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2019",
+      "valeur": 3273.47
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2019",
+      "valeur": 2675.87
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2019",
+      "valeur": 2493.71
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2019",
+      "valeur": 2612.31
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2019",
+      "valeur": 3063.23
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "marrakech-safi",
+      "annuel": "2019",
+      "valeur": 2625.37
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "marrakech-safi",
+      "annuel": "2019",
+      "valeur": 3038.36
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "marrakech-safi",
+      "annuel": "2019",
+      "valeur": 3407.07
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "marrakech-safi",
+      "annuel": "2019",
+      "valeur": 4066.5
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "marrakech-safi",
+      "annuel": "2019",
+      "valeur": 4403.44
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "marrakech-safi",
+      "annuel": "2019",
+      "valeur": 3176.78
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "marrakech-safi",
+      "annuel": "2019",
+      "valeur": 3273.98
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "marrakech-safi",
+      "annuel": "2019",
+      "valeur": 3518.01
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "marrakech-safi",
+      "annuel": "2019",
+      "valeur": 3595.73
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "l'oriental",
+      "annuel": "2019",
+      "valeur": 2046.74
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "l'oriental",
+      "annuel": "2019",
+      "valeur": 2941.82
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "l'oriental",
+      "annuel": "2019",
+      "valeur": 2982.12
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "l'oriental",
+      "annuel": "2019",
+      "valeur": 2554.0
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "l'oriental",
+      "annuel": "2019",
+      "valeur": 2370.92
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "l'oriental",
+      "annuel": "2019",
+      "valeur": 3029.28
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "l'oriental",
+      "annuel": "2019",
+      "valeur": 2903.28
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "l'oriental",
+      "annuel": "2019",
+      "valeur": 2771.89
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "l'oriental",
+      "annuel": "2019",
+      "valeur": 3151.54
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2019",
+      "valeur": 1696.45
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2019",
+      "valeur": 3172.0
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2019",
+      "valeur": 3769.56
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2019",
+      "valeur": 4134.37
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2019",
+      "valeur": 3281.54
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2019",
+      "valeur": 3956.68
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2019",
+      "valeur": 3802.91
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2019",
+      "valeur": 4950.27
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2019",
+      "valeur": 3616.72
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "souss-massa",
+      "annuel": "2019",
+      "valeur": 2547.88
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "souss-massa",
+      "annuel": "2019",
+      "valeur": 2790.24
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "souss-massa",
+      "annuel": "2019",
+      "valeur": 3533.15
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "souss-massa",
+      "annuel": "2019",
+      "valeur": 3116.84
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "souss-massa",
+      "annuel": "2019",
+      "valeur": 3573.65
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "souss-massa",
+      "annuel": "2019",
+      "valeur": 3310.83
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "souss-massa",
+      "annuel": "2019",
+      "valeur": 3178.52
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "souss-massa",
+      "annuel": "2019",
+      "valeur": 3198.71
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "souss-massa",
+      "annuel": "2019",
+      "valeur": 3652.02
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2019",
+      "valeur": 2086.31
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2019",
+      "valeur": 3076.26
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2019",
+      "valeur": 3549.3
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2019",
+      "valeur": 3547.3
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2019",
+      "valeur": 3172.54
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2019",
+      "valeur": 3514.85
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2019",
+      "valeur": 3290.81
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2019",
+      "valeur": 3753.53
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2019",
+      "valeur": 5090.11
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 2714.15
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 3024.42
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 3395.38
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 4303.27
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 3940.48
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 3183.14
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 3305.71
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 3471.72
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 3401.03
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": 1728.29
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": 3209.64
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": 3841.48
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": 3986.81
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": 2980.37
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": 3870.44
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": 3808.41
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": 4922.42
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": 3748.38
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": 2610.72
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": 2836.43
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": 3551.28
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": 3184.84
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": 3361.98
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": 3388.35
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": 3302.69
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": 3207.09
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": 3604.32
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": 2096.42
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": 2570.16
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": 2923.51
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": 2168.04
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": 2199.25
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": 2973.45
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": 2894.57
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": 2688.92
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": 2769.08
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": 1737.12
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": 2716.44
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": 2686.86
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": 2057.13
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": 2677.04
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": 2642.95
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": 2523.84
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": 2682.85
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": 2460.64
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": 5052.5
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": 3035.09
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": 3150.98
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": 2168.78
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": 2817.41
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": 4182.34
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": 2582.88
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": 2909.51
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": 4216.18
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": 2176.65
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": 2590.51
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": 3187.25
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": 3138.0
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": 2680.66
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": 3159.04
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": 2935.38
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": 3421.62
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": 3087.35
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": 2898.77
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": 3852.55
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": 5197.51
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": 4469.87
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": 3207.58
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": 5026.43
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": 4696.24
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": 5371.52
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": 5535.24
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 3774.51
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 2831.03
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 2902.2
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 2058.56
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 1759.83
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 3059.98
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 2775.07
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 2709.54
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 3003.26
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": 4501.92
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": 3014.54
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": 3356.03
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": 2275.07
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": 3158.2
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": 2611.91
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": 2586.22
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": 2745.26
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": 3050.43
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": 2038.14
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": 2981.31
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": 2999.92
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": 2538.96
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": 2298.65
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": 2715.5
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": 2862.98
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": 2646.54
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": 3337.26
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": 2064.78
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": 3052.65
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": 3627.9
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": 3528.02
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": 2867.32
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": 3514.4
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": 3297.58
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": 3720.75
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": 5093.89
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 2954.97
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 3092.27
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 3464.35
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 4733.2
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 3759.15
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 3313.92
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 3460.21
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 3526.9
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 3701.96
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 1795.57
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 3313.69
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 3940.15
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 3687.98
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 3105.78
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 3972.09
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 3890.11
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 5024.82
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 3647.35
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 2655.43
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 2953.81
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 3654.8
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 3317.46
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 3192.54
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 3499.32
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 3470.84
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 3258.03
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 3780.01
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 2015.27
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 2651.54
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 2978.45
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 2322.47
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 2222.22
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 3098.98
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 2940.8
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 2780.58
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 3288.71
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 1796.5
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 2802.38
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 2746.2
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 2174.73
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 2774.04
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 2848.81
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 2636.3
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 2733.71
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 2730.61
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 6032.81
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 3171.33
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 3345.9
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 2375.27
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 3165.31
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 3722.86
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 3026.58
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 2797.52
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 3709.63
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 2147.56
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 2696.85
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 3277.24
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 3317.07
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 2657.15
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 3293.16
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 3015.85
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 3463.45
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 3265.01
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 2825.83
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 3892.67
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 5296.58
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 4683.57
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 3258.03
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 5202.07
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 4802.47
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 5483.66
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 5634.84
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 4086.82
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 2868.55
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 2958.03
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 2126.61
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 1838.48
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 3088.25
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 2629.0
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 2717.8
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 3019.14
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 5824.47
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 3176.18
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 3440.27
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 2399.76
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 2963.47
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 2711.35
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 2707.48
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 2877.97
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 3065.05
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 2232.87
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 3036.56
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 3025.89
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 2705.51
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 2402.85
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 2836.2
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 2890.08
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 2790.96
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 3229.58
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 2332.13
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 3138.26
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 3657.56
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 3773.35
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 2858.69
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 3713.72
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 3452.87
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 3914.27
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 5085.29
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 3033.54
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 3182.0
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 3568.05
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 5203.71
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 4379.76
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 3422.99
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 3611.66
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 3529.32
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 3665.72
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 1834.21
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 3402.89
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 3998.64
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 3809.89
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 3356.31
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 4141.88
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 3936.45
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 5079.98
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 3671.62
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 2742.21
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 3018.95
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 3736.42
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 3359.29
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 3385.93
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 3579.88
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 3514.6
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 3327.38
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 3862.41
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 2123.43
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 2735.26
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 3058.52
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 2432.02
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 2397.34
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 3103.82
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 3022.08
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 2771.32
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 3369.79
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 1984.89
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 2864.77
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 2813.07
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 2314.99
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 2945.02
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 2853.36
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 2746.49
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 2684.07
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 2803.85
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 6944.01
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 3569.25
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 3574.15
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 2449.79
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 3343.63
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 3522.55
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 2976.75
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 3420.41
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 3609.62
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 2100.39
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 2746.29
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 3325.97
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 3481.98
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 2770.8
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 3359.21
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 2912.75
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 3469.41
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 3298.71
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 2960.76
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 3960.96
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 5400.78
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 4757.14
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 3447.71
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 5323.05
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 4710.64
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 5539.44
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 5804.8
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": 3978.2
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": 2832.5
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": 2967.64
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": 2416.86
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": 2093.94
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": 3046.74
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": 2793.06
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": 2840.54
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": 3167.21
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 5784.8
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 3287.25
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 3623.69
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 2694.02
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 3031.5
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 2829.79
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 2782.67
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 2954.53
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 3193.09
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 2269.66
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 3103.52
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 3091.45
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 2790.33
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 2538.12
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 2948.02
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 2885.57
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 2809.82
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 3228.39
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 2355.33
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 3264.36
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 3740.39
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 3937.02
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 3112.47
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 3811.52
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 3567.25
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 3795.81
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 4942.68
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 2951.63
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 3260.61
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 3713.9
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 5600.07
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 4658.06
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 3449.94
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 3848.4
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 3612.11
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 3783.09
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 1943.63
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 3573.54
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 4228.93
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 3892.93
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 3564.89
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 4351.04
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 4096.78
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 5271.79
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 3784.79
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 2674.85
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 3188.17
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 3870.55
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 3511.02
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 3673.59
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 3739.51
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 3772.83
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 3465.7
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 3950.33
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 2236.07
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 2878.16
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 3195.6
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 2513.45
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 2547.42
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 3299.84
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 3130.35
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 2994.05
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 3579.79
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 2125.45
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 3007.6
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 2940.66
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 2437.55
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 3116.66
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 2934.01
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 2887.54
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 2826.65
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 2920.58
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 5072.28
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 3779.63
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 3772.86
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 2573.01
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 3599.66
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 3759.37
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 3100.54
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 3431.74
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 3575.6
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 2286.43
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 2921.24
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 3430.5
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 3643.5
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 2912.88
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 3570.22
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 2913.46
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 3808.7
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 3369.79
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 3195.06
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 4174.01
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 5631.36
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 4994.5
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 3644.96
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 5532.54
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 4747.44
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 5684.69
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 6023.72
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 4138.28
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 2889.02
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 3084.04
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 2393.43
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 2231.31
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 3181.28
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 2961.42
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 3002.66
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 3220.34
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 5856.74
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 3410.36
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 3575.29
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 2790.81
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 3331.27
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 2906.0
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 3226.96
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 3066.54
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 3301.48
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 2681.64
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 3225.56
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 3199.69
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 2978.4
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 2706.68
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 3195.28
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 3090.96
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 3066.62
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 3365.2
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 2355.92
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 3428.75
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 4008.81
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 4083.54
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 3299.3
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 4020.05
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 3662.28
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 3982.77
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 5089.8
+    }
+  ]
+}

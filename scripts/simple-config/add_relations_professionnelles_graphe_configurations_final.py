@@ -18,8 +18,8 @@ INDICATEUR_TO_TYPE = {
     # Application de la loi de travail
     "Nombre de visites des inspecteurs de travail": "COURBES",
     "Nombre de observations émises": "COURBES",
-    "Nombre d’observations par motif d’observation": "COURBES",
-    "Nombre d’observations par secteur": "COURBES",
+    "Nombre d'observations par motif d'observation": "COURBES",
+    "Nombre d'observations par secteur": "COURBES",
     "Nombre de PV": "COURBES",
     "Nombre de contraventions": "COURBES",
     "Nombre de délits": "COURBES",

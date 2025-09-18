@@ -15,23 +15,23 @@ DOMAIN_DIR = ROOT / "data" / "init-data" / "domaines" / "national" / "Offre de f
 # Mapping from exact indicator names to graphe type codes
 INDICATEUR_TO_TYPE = {
     # ES-Etudiants
-    "Nombre d’étudiants de l’enseignement supérieur par composante": "CAMEMBERT",
-    "Nombre d’étudiants de l’enseignement supérieur par genre": "CAMEMBERT",
-    "Nombre d’étudiants de l’enseignement universitaire public par domaine d’études": "HISTOGRAMME",
-    "Nombre d’étudiants de l’enseignement universitaire public par genre": "CAMEMBERT",
-    "Nombre d’étudiants de l’enseignement supérieur privé par domaine d’études": "HISTOGRAMME",
-    "Nombre d’étudiants de l’enseignement supérieur privé par genre": "CAMEMBERT",
-    "Nombre d’étudiants de la formation des cadres par domaine d’études": "HISTOGRAMME",
-    "Nombre d’étudiants de la formation des cadres par genre": "CAMEMBERT",
+    "Nombre d'étudiants de l'enseignement supérieur par composante": "CAMEMBERT",
+    "Nombre d'étudiants de l'enseignement supérieur par genre": "CAMEMBERT",
+    "Nombre d'étudiants de l'enseignement universitaire public par domaine d'études": "HISTOGRAMME",
+    "Nombre d'étudiants de l'enseignement universitaire public par genre": "CAMEMBERT",
+    "Nombre d'étudiants de l'enseignement supérieur privé par domaine d'études": "HISTOGRAMME",
+    "Nombre d'étudiants de l'enseignement supérieur privé par genre": "CAMEMBERT",
+    "Nombre d'étudiants de la formation des cadres par domaine d'études": "HISTOGRAMME",
+    "Nombre d'étudiants de la formation des cadres par genre": "CAMEMBERT",
     
     # ES-Nouveaux Inscrits
-    "Nombre de nouveaux inscrits de l’enseignement supérieur par composante": "HISTOGRAMME",
-    "Nombre de nouveaux inscrits de l’enseignement supérieur par genre": "CAMEMBERT",
-    "Nombre de nouveaux inscrits de l’enseignement universitaire public par domaine d’études": "HISTOGRAMME",
-    "Nombre de nouveaux inscrits de l’enseignement universitaire public par genre": "CAMEMBERT",
-    "Nombre de nouveaux inscrits de l’enseignement supérieur privé par genre": "CAMEMBERT",
-    "Nombre de nouveaux inscrits de l’enseignement supérieur privé par domaine d’études": "HISTOGRAMME",
-    "Nombre de nouveaux inscrits de la formation des cadres par domaine d’études": "HISTOGRAMME",
+    "Nombre de nouveaux inscrits de l'enseignement supérieur par composante": "HISTOGRAMME",
+    "Nombre de nouveaux inscrits de l'enseignement supérieur par genre": "CAMEMBERT",
+    "Nombre de nouveaux inscrits de l'enseignement universitaire public par domaine d'études": "HISTOGRAMME",
+    "Nombre de nouveaux inscrits de l'enseignement universitaire public par genre": "CAMEMBERT",
+    "Nombre de nouveaux inscrits de l'enseignement supérieur privé par genre": "CAMEMBERT",
+    "Nombre de nouveaux inscrits de l'enseignement supérieur privé par domaine d'études": "HISTOGRAMME",
+    "Nombre de nouveaux inscrits de la formation des cadres par domaine d'études": "HISTOGRAMME",
     "Nombre de nouveaux inscrits de la formation des cadres par genre": "CAMEMBERT",
     
     # FP-Stagiaires
@@ -41,30 +41,30 @@ INDICATEUR_TO_TYPE = {
     "Nombre de stagiaires de la formation professionnelle par région": "HISTOGRAMME",
     
     # ES-Diplômés
-    "Nombre de diplômés de l’enseignement supérieur par composante": "HISTOGRAMME",
-    "Nombre de diplômés de l’enseignement supérieur par genre": "CAMEMBERT",
-    "Nombre de diplômés de l’enseignement universitaire public par domaine d’études": "HISTOGRAMME",
-    "Nombre de diplômés de l’enseignement supérieur public par genre": "CAMEMBERT",
-    "Nombre de diplômés de l’enseignement supérieur privé par domaine d’études": "HISTOGRAMME",
-    "Nombre de diplômés de l’enseignement supérieur privé par genre": "CAMEMBERT",
-    "Nombre de diplômés de la formation des cadres par domaine d’études": "HISTOGRAMME",
+    "Nombre de diplômés de l'enseignement supérieur par composante": "HISTOGRAMME",
+    "Nombre de diplômés de l'enseignement supérieur par genre": "CAMEMBERT",
+    "Nombre de diplômés de l'enseignement universitaire public par domaine d'études": "HISTOGRAMME",
+    "Nombre de diplômés de l'enseignement supérieur public par genre": "CAMEMBERT",
+    "Nombre de diplômés de l'enseignement supérieur privé par domaine d'études": "HISTOGRAMME",
+    "Nombre de diplômés de l'enseignement supérieur privé par genre": "CAMEMBERT",
+    "Nombre de diplômés de la formation des cadres par domaine d'études": "HISTOGRAMME",
     "Nombre de diplômés de la formation des cadres par genre": "CAMEMBERT",
     
     # ES-Insertion Professionnelle
-    "Taux d’insertion des diplômés de l’enseignement supérieur après 4 ans (Promotion 2014) par composante": "HISTOGRAMME",
-    "Taux d’insertion des diplômés de l’enseignement supérieur après 4 ans (Promotion 2014) par type d’accès": "HISTOGRAMME",
-    "Taux d’insertion des diplômés de l’enseignement supérieur après 4 ans (Promotion 2014) par genre": "HISTOGRAMME",
-    "Taux d’insertion des diplômés de l’enseignement supérieur après 4 ans (Promotion 2014) par diplôme": "HISTOGRAMME",
-    "Taux d’insertion des diplômés de l’enseignement supérieur après 4 ans (Promotion 2014) par domaine d’études": "HISTOGRAMME",
-    "Taux d’emploi des diplômés de l’enseignement supérieur après 4 ans (Promotion 2014) par composante et par genre": "HISTOGRAMME",
-    "Taux d’emploi des diplômés de l’enseignement universitaire public après 4 ans (Promotion 2014) par diplôme et par genre": "BARRES_GROUPEES",
-    "Taux d’emploi des diplômés de l’enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme et par genre": "BARRES_GROUPEES",
+    "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante": "HISTOGRAMME",
+    "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par type d'accès": "HISTOGRAMME",
+    "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par genre": "HISTOGRAMME",
+    "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par diplôme": "HISTOGRAMME",
+    "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par domaine d'études": "HISTOGRAMME",
+    "Taux d'emploi des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante et par genre": "HISTOGRAMME",
+    "Taux d'emploi des diplômés de l'enseignement universitaire public après 4 ans (Promotion 2014) par diplôme et par genre": "BARRES_GROUPEES",
+    "Taux d'emploi des diplômés de l'enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme et par genre": "BARRES_GROUPEES",
     
     # ES-Chômage
-    "Taux de chômage des diplômés de l’enseignement supérieur après 4 ans (Promotion 2014) par composante et genre": "HISTOGRAMME",
-    "Taux de chômage des diplômés de l’enseignement universitaire public après 4 ans (Promotion 2014) par type d’accès": "HISTOGRAMME",
-    "Taux de chômage des diplômés de l’enseignement universitaire public après 4 ans (Promotion 2014) par diplôme et genre": "HISTOGRAMME",
-    "Taux de chômage des diplômés de l’enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme et genre": "HISTOGRAMME",
+    "Taux de chômage des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante et genre": "HISTOGRAMME",
+    "Taux de chômage des diplômés de l'enseignement universitaire public après 4 ans (Promotion 2014) par type d'accès": "HISTOGRAMME",
+    "Taux de chômage des diplômés de l'enseignement universitaire public après 4 ans (Promotion 2014) par diplôme et genre": "HISTOGRAMME",
+    "Taux de chômage des diplômés de l'enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme et genre": "HISTOGRAMME",
     
     # FP-Lauréats
     "Nombre de lauréats de la formation professionnelle par mode de formation": "HISTOGRAMME",
@@ -73,16 +73,16 @@ INDICATEUR_TO_TYPE = {
     "Nombre de lauréats de la formation professionnelle par région": "HISTOGRAMME",
     
     # FP-insertion à 9 mois
-    "Taux d’insertion des lauréats de la formation professionnelle à 9 mois par mode de formation": "HISTOGRAMME",
-    "Taux d’insertion des lauréats de la formation professionnelle à 9 mois par genre": "HISTOGRAMME",
-    "Taux d’insertion des lauréats de la formation professionnelle à 9 mois par niveau de formation": "HISTOGRAMME",
-    "Taux d’insertion des lauréats de la formation professionnelle à 9 mois par région": "HISTOGRAMME",
+    "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par mode de formation": "HISTOGRAMME",
+    "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par genre": "HISTOGRAMME",
+    "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par niveau de formation": "HISTOGRAMME",
+    "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par région": "HISTOGRAMME",
     
     # FP-insertion à 36 mois
-    "Taux d’insertion des lauréats de la formation professionnelle à 36 mois par mode de formation": "HISTOGRAMME",
-    "Taux d’insertion des lauréats de la formation professionnelle à 36 mois par genre": "HISTOGRAMME",
-    "Taux d’insertion des lauréats de la formation professionnelle à 36 mois par niveau de formation": "HISTOGRAMME",
-    "Taux d’insertion des lauréats de la formation professionnelle à 36 mois par région": "HISTOGRAMME",
+    "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par mode de formation": "HISTOGRAMME",
+    "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par genre": "HISTOGRAMME",
+    "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par niveau de formation": "HISTOGRAMME",
+    "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par région": "HISTOGRAMME",
 }
 
 

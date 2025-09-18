@@ -1,5 +1,5 @@
 {
-    "indicateur": "nombre de déclaration cnss par secteur d’activité",
+    "indicateur": "nombre de déclaration cnss par secteur d'activité",
     "data": [
         {
             "secteur_activite": "agriculture, forêt et pêche",
@@ -27,27 +27,27 @@
             "valeur": 762000
         },
         {
-            "secteur_activite": "industrie (y compris l’artisanat)",
+            "secteur_activite": "industrie (y compris l'artisanat)",
             "annuel": "2019",
             "valeur": 661000
         },
         {
-            "secteur_activite": "industrie (y compris l’artisanat)",
+            "secteur_activite": "industrie (y compris l'artisanat)",
             "annuel": "2020",
             "valeur": 644000
         },
         {
-            "secteur_activite": "industrie (y compris l’artisanat)",
+            "secteur_activite": "industrie (y compris l'artisanat)",
             "annuel": "2021",
             "valeur": 673000
         },
         {
-            "secteur_activite": "industrie (y compris l’artisanat)",
+            "secteur_activite": "industrie (y compris l'artisanat)",
             "annuel": "2022",
             "valeur": 699000
         },
         {
-            "secteur_activite": "industrie (y compris l’artisanat)",
+            "secteur_activite": "industrie (y compris l'artisanat)",
             "annuel": "2023",
             "valeur": 713000
         },

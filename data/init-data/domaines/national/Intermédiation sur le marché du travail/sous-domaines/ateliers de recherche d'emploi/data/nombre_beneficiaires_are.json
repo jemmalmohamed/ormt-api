@@ -1,0 +1,29 @@
+{
+    "indicateur": "Nombre de bénéficiaires d'ateliers de recherche d'emploi",
+    "data": [
+        {
+            "annuel": "2019",
+            "valeur": 79000
+        },
+        {
+            "annuel": "2020",
+            "valeur": 85000
+        },
+        {
+            "annuel": "2021",
+            "valeur": 97000
+        },
+        {
+            "annuel": "2022",
+            "valeur": 94000
+        },
+        {
+            "annuel": "2023",
+            "valeur": 106000
+        },
+        {
+            "annuel": "2024",
+            "valeur": 123000
+        }
+    ]
+}

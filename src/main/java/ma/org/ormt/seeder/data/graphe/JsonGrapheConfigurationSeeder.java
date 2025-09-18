@@ -34,8 +34,11 @@ public class JsonGrapheConfigurationSeeder implements CommandLineRunner {
     @Value("${starter.database.seed}")
     private boolean seeding;
 
-    @Value("${starter.database.init-data-path:data/init-data}")
-    private String initDataPath;
+    @Value("${data.external.data_path}")
+    private String dataExternalPath;
+
+    @Value("${data.external.territoire}")
+    private String territoire;
 
     private final GrapheTypeService grapheTypeService;
     private final IndicateurService indicateurService;
@@ -70,7 +73,8 @@ public class JsonGrapheConfigurationSeeder implements CommandLineRunner {
      */
     @Transactional
     private void processJsonFiles() throws IOException {
-        Path domainesPath = Paths.get(initDataPath, "domaines");
+        
+        Path domainesPath = Paths.get(dataExternalPath, "domaines" + territoire);
 
         if (!Files.exists(domainesPath)) {
             log.warn("Domaines directory not found: {}", domainesPath);

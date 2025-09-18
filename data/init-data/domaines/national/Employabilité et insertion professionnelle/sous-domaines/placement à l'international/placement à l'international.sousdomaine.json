@@ -1,0 +1,272 @@
+{
+  "nom": "Placement à l'International",
+  "description": "Sous domaine du domaine Employabilité et insertion professionnelle.",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "indicateurs": [
+    {
+      "nom": "Nombre des bénéficiaires du PI",
+      "categorie": "Placement à l'International",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2024",
+      "description": "Nombre total des bénéficiaires du Placement à l'International.",
+      "dimensions": [
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre des bénéficiaires du PI - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires du PI par genre",
+      "categorie": "Placement à l'International",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires du PI ventilés par genre.",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "Genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires du PI par genre - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires du PI par pays d'accueil",
+      "categorie": "Placement à l'International",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires du PI ventilés par pays d'accueil.",
+      "dimensions": [
+        {
+          "nom": "pays_accueil",
+          "libelle": "Pays d'accueil",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires du PI par SAE",
+      "categorie": "Placement à l'International",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires du PI ventilés par SAE.",
+      "dimensions": [
+        {
+          "nom": "sae_pi",
+          "libelle": "SAE_PI",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires du PI par SAE - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires du PI par type de contrat",
+      "categorie": "Placement à l'International",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires du PI ventilés par type de contrat.",
+      "dimensions": [
+        {
+          "nom": "type_contrat_pi",
+          "libelle": "Type de Contrat_PI",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires du PI par type de contrat - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires du PI par région",
+      "categorie": "Placement à l'International",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires du PI ventilés par région.",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires du PI par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    }
+  ]
+}

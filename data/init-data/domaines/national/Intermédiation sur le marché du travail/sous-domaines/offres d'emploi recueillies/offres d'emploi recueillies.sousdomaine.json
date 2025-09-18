@@ -1,0 +1,188 @@
+{
+  "nom": "offres d'emploi recueillies",
+  "description": "statistiques sur les offres d'emploi recueillies par l'anapec.",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "indicateurs": [
+    {
+      "nom": "nombre d'offre d'emploi recueillies",
+      "description": "nombre d'offre d'emploi recueillies",
+      "categorie": "offres d'emploi",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "nombre d'offre d'emploi recueillies - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "offre d'emploi recueillies par région",
+      "description": "répartition des offres d'emploi recueillies par région",
+      "categorie": "offres d'emploi",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "région-oer",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "offre d'emploi recueillies par région - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "offre d'emploi recueillies par taille d'entreprise",
+      "description": "répartition des offres d'emploi recueillies par taille d'entreprise",
+      "categorie": "offres d'emploi",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "taille",
+          "libelle": "taille d'entreprise",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "offre d'emploi recueillies par taille d'entreprise - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "offre d'emploi recueillies par contrat",
+      "description": "répartition des offres d'emploi recueillies par type de contrat",
+      "categorie": "offres d'emploi",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "type_contrat",
+          "libelle": "type de contrat",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "offre d'emploi recueillies par contrat - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    }
+  ]
+}

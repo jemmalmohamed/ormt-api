@@ -36,6 +36,9 @@ public class TBDomaineSeeder implements CommandLineRunner {
     @Value("${data.external.data_path}")
     private String dataExternalPath;
 
+    @Value("${data.external.territoire}")
+    private String territoire;
+
     private final TBDomaineService tbDomaineService;
 
     private final FileDataService fileDataService;
@@ -58,7 +61,7 @@ public class TBDomaineSeeder implements CommandLineRunner {
         }
 
         try {
-            String initDataPath = dataExternalPath + "/init-data/tableau_bord";
+            String initDataPath = dataExternalPath + "/init-data/tableau_bord" + "/" + territoire;
             log.info("Using data path: {}", initDataPath);
 
             Path resourcePath = Paths.get(initDataPath);

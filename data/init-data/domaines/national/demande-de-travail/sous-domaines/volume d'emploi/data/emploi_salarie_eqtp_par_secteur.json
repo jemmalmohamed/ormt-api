@@ -1,5 +1,5 @@
 {
-    "indicateur": "emploi salarié eqtp par secteur d’activité",
+    "indicateur": "emploi salarié eqtp par secteur d'activité",
     "data": [
         {
             "secteur_activite": "agriculture, forêt et pêche",
@@ -27,27 +27,27 @@
             "valeur": 294000
         },
         {
-            "secteur_activite": "industrie (y compris l’artisanat)",
+            "secteur_activite": "industrie (y compris l'artisanat)",
             "annuel": "2019",
             "valeur": 492000
         },
         {
-            "secteur_activite": "industrie (y compris l’artisanat)",
+            "secteur_activite": "industrie (y compris l'artisanat)",
             "annuel": "2020",
             "valeur": 449000
         },
         {
-            "secteur_activite": "industrie (y compris l’artisanat)",
+            "secteur_activite": "industrie (y compris l'artisanat)",
             "annuel": "2021",
             "valeur": 506000
         },
         {
-            "secteur_activite": "industrie (y compris l’artisanat)",
+            "secteur_activite": "industrie (y compris l'artisanat)",
             "annuel": "2022",
             "valeur": 524000
         },
         {
-            "secteur_activite": "industrie (y compris l’artisanat)",
+            "secteur_activite": "industrie (y compris l'artisanat)",
             "annuel": "2023",
             "valeur": 536000
         },

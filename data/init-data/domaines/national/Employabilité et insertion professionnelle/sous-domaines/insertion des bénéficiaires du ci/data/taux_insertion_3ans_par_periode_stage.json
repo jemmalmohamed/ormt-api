@@ -1,0 +1,55 @@
+{
+    "indicateur": "Taux d'insertion à 3 ans selon la période de stage",
+    "data": [
+        {
+            "annuel": 2021,
+            "periode_stage": "Moins de 6 mois",
+            "valeur": 44.6
+        },
+        {
+            "annuel": 2021,
+            "periode_stage": "6 à 11 mois",
+            "valeur": 50.9
+        },
+        {
+            "annuel": 2021,
+            "periode_stage": "12 à 17 mois",
+            "valeur": 60.9
+        },
+        {
+            "annuel": 2021,
+            "periode_stage": "18 à 23 mois",
+            "valeur": 82.1
+        },
+        {
+            "annuel": 2021,
+            "periode_stage": "24 mois",
+            "valeur": 91.3
+        },
+        {
+            "annuel": 2023,
+            "periode_stage": "Moins de 6 mois",
+            "valeur": 46.0
+        },
+        {
+            "annuel": 2023,
+            "periode_stage": "6 à 11 mois",
+            "valeur": 54.4
+        },
+        {
+            "annuel": 2023,
+            "periode_stage": "12 à 17 mois",
+            "valeur": 60.1
+        },
+        {
+            "annuel": 2023,
+            "periode_stage": "18 à 23 mois",
+            "valeur": 80.9
+        },
+        {
+            "annuel": 2023,
+            "periode_stage": "24 mois",
+            "valeur": 91.8
+        }
+    ]
+}

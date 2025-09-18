@@ -1,0 +1,95 @@
+{
+    "indicateur": "Taux d'emploi des diplômés de l'enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme et par genre",
+    "data": [
+        {
+            "diplome": "Licence du privé",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 71.9
+        },
+        {
+            "diplome": "Licence du privé",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 76.2
+        },
+        {
+            "diplome": "Bachelor",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 77.2
+        },
+        {
+            "diplome": "Bachelor",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 78.0
+        },
+        {
+            "diplome": "Master du privé",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 66.4
+        },
+        {
+            "diplome": "Master du privé",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 94.9
+        },
+        {
+            "diplome": "Diplôme d'ingénieur Privé",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 66.7
+        },
+        {
+            "diplome": "Diplôme d'ingénieur Privé",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 89.1
+        },
+        {
+            "diplome": "Total",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 68.3
+        },
+        {
+            "diplome": "Total",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 88.0
+        },
+        {
+            "diplome": "Total",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 79.1
+        },
+        {
+            "diplome": "Licence du privé",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 74.4
+        },
+        {
+            "diplome": "Bachelor",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 77.6
+        },
+        {
+            "diplome": "Master du privé",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 81.2
+        },
+        {
+            "diplome": "Diplôme d'ingénieur Privé",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 80.6
+        }
+    ]
+}

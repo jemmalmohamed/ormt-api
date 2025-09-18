@@ -1,0 +1,400 @@
+{
+  "nom": "enseignement supérieur - Insertion Professionnelle",
+  "description": "Indicateurs relatifs à l'insertion professionnelle des diplômés de l'enseignement supérieur par composante, type d'accès, genre, diplôme et domaine d'études",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "indicateurs": [
+    {
+      "nom": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante",
+      "description": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans par composante.",
+      "categorie": "Insertion",
+      "abreviation": "ES",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "MESRSI",
+      "reglecalcul": "",
+      "periode": "2014",
+      "dimensions": [
+        {
+          "nom": "composante",
+          "libelle": "Composante",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par type d'accès",
+      "description": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans par type d'accès.",
+      "categorie": "Insertion",
+      "abreviation": "ES",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "MESRSI",
+      "reglecalcul": "",
+      "periode": "2014",
+      "dimensions": [
+        {
+          "nom": "type_acces",
+          "libelle": "Type d'accès",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par type d'accès - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par genre",
+      "description": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans par genre.",
+      "categorie": "Insertion",
+      "abreviation": "ES",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "MESRSI",
+      "reglecalcul": "",
+      "periode": "2014",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "Genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par genre - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par diplôme",
+      "description": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans par diplôme.",
+      "categorie": "Insertion",
+      "abreviation": "ES",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "MESRSI",
+      "reglecalcul": "",
+      "periode": "2014",
+      "dimensions": [
+        {
+          "nom": "diplome",
+          "libelle": "Diplôme",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par diplôme - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par domaine d'études",
+      "description": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans par domaine d'études.",
+      "categorie": "Insertion",
+      "abreviation": "ES",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "MESRSI",
+      "reglecalcul": "",
+      "periode": "2014",
+      "dimensions": [
+        {
+          "nom": "domaine_etudes",
+          "libelle": "Domaine d'études",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par domaine d'études - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'emploi des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante et par genre",
+      "description": "Taux d'emploi des diplômés de l'enseignement supérieur après 4 ans par composante et par genre.",
+      "categorie": "Insertion",
+      "abreviation": "ES",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "MESRSI",
+      "reglecalcul": "",
+      "periode": "2014",
+      "dimensions": [
+        {
+          "nom": "composante",
+          "libelle": "Composante",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "Genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'emploi des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante et par genre - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'emploi des diplômés de l'enseignement universitaire public après 4 ans (Promotion 2014) par diplôme et par genre",
+      "description": "Taux d'emploi des diplômés de l'enseignement universitaire public après 4 ans par diplôme et par genre.",
+      "categorie": "Insertion",
+      "abreviation": "ES",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "MESRSI",
+      "reglecalcul": "",
+      "periode": "2014",
+      "dimensions": [
+        {
+          "nom": "diplome",
+          "libelle": "Diplôme",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "Genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'emploi des diplômés de l'enseignement universitaire public après 4 ans (Promotion 2014) par diplôme et par genre - Barres_Groupees",
+          "grapheTypeCode": "BARRES_GROUPEES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'emploi des diplômés de l'enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme et par genre",
+      "description": "Taux d'emploi des diplômés de l'enseignement supérieur privé après 4 ans par diplôme et par genre.",
+      "categorie": "Insertion",
+      "abreviation": "ES",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "MESRSI",
+      "reglecalcul": "",
+      "periode": "2014",
+      "dimensions": [
+        {
+          "nom": "diplome",
+          "libelle": "Diplôme",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "Genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'emploi des diplômés de l'enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme et par genre - Barres_Groupees",
+          "grapheTypeCode": "BARRES_GROUPEES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    }
+  ]
+}

@@ -47,6 +47,9 @@ public class DomaineSeeder implements CommandLineRunner {
     @Value("${data.external.data_path}")
     private String dataExternalPath;
 
+    @Value("${data.external.territoire}")
+    private String territoire;
+
     private final DomaineService domaineService;
     private final SousDomaineService sousDomaineService;
     private final ObjectMapper objectMapper;
@@ -71,7 +74,7 @@ public class DomaineSeeder implements CommandLineRunner {
 
     private void processDomainesAndSousDomaines() {
         try {
-            Path domainesPath = Paths.get(dataExternalPath + "/init-data/domaines/national");
+            Path domainesPath = Paths.get(dataExternalPath + "/init-data/domaines" + "/" + territoire);
             if (!Files.exists(domainesPath)) {
                 log.warn("Domaines path {} does not exist. Skipping domain data seeding.", domainesPath);
                 return;

@@ -13,6 +13,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.checkerframework.checker.units.qual.t;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
@@ -50,6 +51,9 @@ public class TBDomaineIndicateurSeeder implements CommandLineRunner {
     @Value("${data.external.data_path}")
     private String dataExternalPath;
 
+    @Value("${data.external.territoire}")
+    private String territoire;
+
     private final FileDataService fileDataService;
     private final TBDomaineService tbDomaineService;
     private final IndicateurService indicateurService;
@@ -68,7 +72,7 @@ public class TBDomaineIndicateurSeeder implements CommandLineRunner {
         }
 
         try {
-            String initDataPath = dataExternalPath + "/init-data/tableau_bord";
+            String initDataPath = dataExternalPath + "/init-data/tableau_bord" + "/" + territoire;
             Path resourcePath = Paths.get(initDataPath);
             if (!Files.exists(resourcePath)) {
                 log.warn("Resource path {} does not exist. Skipping TB domaine-indicateur seeding.", resourcePath);
@@ -152,7 +156,7 @@ public class TBDomaineIndicateurSeeder implements CommandLineRunner {
             List<Row> domainRows = entry.getValue();
 
             String normalizedDomaineLookup = normalize(tbDomaineName);
-            TBDomaine tbDomaine = tbDomaineService.findByNom(normalizedDomaineLookup)
+            TBDomaine tbDomaine = tbDomaineService.findByNom(normalizedDomaineLookup.toLowerCase())
                     .orElseGet(() -> {
                         log.warn("TB domaine '{}' (normalized: '{}') not found (source '{}'). Skipping its rows.",
                                 tbDomaineName, normalizedDomaineLookup,

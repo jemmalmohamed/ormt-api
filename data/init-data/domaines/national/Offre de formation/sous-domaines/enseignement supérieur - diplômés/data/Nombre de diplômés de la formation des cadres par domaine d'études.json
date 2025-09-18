@@ -1,0 +1,285 @@
+{
+    "indicateur": "Nombre de diplômés de la formation des cadres par domaine d'études",
+    "data": [
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2016",
+            "valeur": 1800
+        },
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2017",
+            "valeur": 1500
+        },
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2018",
+            "valeur": 2200
+        },
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2019",
+            "valeur": 1500
+        },
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2020",
+            "valeur": 1300
+        },
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2021",
+            "valeur": 700
+        },
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2022",
+            "valeur": 900
+        },
+        {
+            "domaine_etudes": "Sciences juridiques, économiques et de gestion",
+            "annuel": "2023",
+            "valeur": 500
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2016",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2017",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2018",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2019",
+            "valeur": 1200
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2020",
+            "valeur": 900
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2021",
+            "valeur": 900
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2022",
+            "valeur": 1100
+        },
+        {
+            "domaine_etudes": "Lettres, sciences humaines et arts",
+            "annuel": "2023",
+            "valeur": 900
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2016",
+            "valeur": 2500
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2017",
+            "valeur": 5200
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2018",
+            "valeur": 5200
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2019",
+            "valeur": 2700
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2020",
+            "valeur": 2700
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2021",
+            "valeur": 2900
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2022",
+            "valeur": 2900
+        },
+        {
+            "domaine_etudes": "Scientifique et technique",
+            "annuel": "2023",
+            "valeur": 2800
+        },
+        {
+            "domaine_etudes": "Sciences de la Santé",
+            "annuel": "2016",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sciences de la Santé",
+            "annuel": "2017",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sciences de la Santé",
+            "annuel": "2018",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sciences de la Santé",
+            "annuel": "2019",
+            "valeur": 1800
+        },
+        {
+            "domaine_etudes": "Sciences de la Santé",
+            "annuel": "2020",
+            "valeur": 2400
+        },
+        {
+            "domaine_etudes": "Sciences de la Santé",
+            "annuel": "2021",
+            "valeur": 2600
+        },
+        {
+            "domaine_etudes": "Sciences de la Santé",
+            "annuel": "2022",
+            "valeur": 2900
+        },
+        {
+            "domaine_etudes": "Sciences de la Santé",
+            "annuel": "2023",
+            "valeur": 3300
+        },
+        {
+            "domaine_etudes": "Formation pédagogique",
+            "annuel": "2016",
+            "valeur": 3300
+        },
+        {
+            "domaine_etudes": "Formation pédagogique",
+            "annuel": "2017",
+            "valeur": 1800
+        },
+        {
+            "domaine_etudes": "Formation pédagogique",
+            "annuel": "2018",
+            "valeur": 3300
+        },
+        {
+            "domaine_etudes": "Formation pédagogique",
+            "annuel": "2019",
+            "valeur": 3500
+        },
+        {
+            "domaine_etudes": "Formation pédagogique",
+            "annuel": "2020",
+            "valeur": 5500
+        },
+        {
+            "domaine_etudes": "Formation pédagogique",
+            "annuel": "2021",
+            "valeur": 17700
+        },
+        {
+            "domaine_etudes": "Formation pédagogique",
+            "annuel": "2022",
+            "valeur": 19300
+        },
+        {
+            "domaine_etudes": "Formation pédagogique",
+            "annuel": "2023",
+            "valeur": 21600
+        },
+        {
+            "domaine_etudes": "Sport",
+            "annuel": "2016",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sport",
+            "annuel": "2017",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sport",
+            "annuel": "2018",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sport",
+            "annuel": "2019",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sport",
+            "annuel": "2020",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sport",
+            "annuel": "2021",
+            "valeur": 200
+        },
+        {
+            "domaine_etudes": "Sport",
+            "annuel": "2022",
+            "valeur": 200
+        },
+        {
+            "domaine_etudes": "Sport",
+            "annuel": "2023",
+            "valeur": 100
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2016",
+            "valeur": 7600
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2017",
+            "valeur": 8500
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2018",
+            "valeur": 10700
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2019",
+            "valeur": 10700
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2020",
+            "valeur": 12800
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2021",
+            "valeur": 24900
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2022",
+            "valeur": 27200
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2023",
+            "valeur": 29200
+        }
+    ]
+}

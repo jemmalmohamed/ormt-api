@@ -1,5 +1,5 @@
 {
-  "indicateur": "emploi par secteur d’activité",
+  "indicateur": "emploi par secteur d'activité",
   "data": [
     {
       "secteur_activite": "agriculture, forêt et pêche",
@@ -92,91 +92,91 @@
       "valeur": 2955000
     },
     {
-      "secteur_activite": "industrie (y compris l’artisanat)",
+      "secteur_activite": "industrie (y compris l'artisanat)",
       "annuel": "2019",
       "milieu": "urbain",
       "valeur": 1098000
     },
     {
-      "secteur_activite": "industrie (y compris l’artisanat)",
+      "secteur_activite": "industrie (y compris l'artisanat)",
       "annuel": "2019",
       "milieu": "rural",
       "valeur": 221000
     },
     {
-      "secteur_activite": "industrie (y compris l’artisanat)",
+      "secteur_activite": "industrie (y compris l'artisanat)",
       "annuel": "2019",
       "milieu": "national",
       "valeur": 1317000
     },
     {
-      "secteur_activite": "industrie (y compris l’artisanat)",
+      "secteur_activite": "industrie (y compris l'artisanat)",
       "annuel": "2020",
       "milieu": "urbain",
       "valeur": 1075000
     },
     {
-      "secteur_activite": "industrie (y compris l’artisanat)",
+      "secteur_activite": "industrie (y compris l'artisanat)",
       "annuel": "2020",
       "milieu": "rural",
       "valeur": 207000
     },
     {
-      "secteur_activite": "industrie (y compris l’artisanat)",
+      "secteur_activite": "industrie (y compris l'artisanat)",
       "annuel": "2020",
       "milieu": "national",
       "valeur": 1276000
     },
     {
-      "secteur_activite": "industrie (y compris l’artisanat)",
+      "secteur_activite": "industrie (y compris l'artisanat)",
       "annuel": "2021",
       "milieu": "urbain",
       "valeur": 1061000
     },
     {
-      "secteur_activite": "industrie (y compris l’artisanat)",
+      "secteur_activite": "industrie (y compris l'artisanat)",
       "annuel": "2021",
       "milieu": "rural",
       "valeur": 199000
     },
     {
-      "secteur_activite": "industrie (y compris l’artisanat)",
+      "secteur_activite": "industrie (y compris l'artisanat)",
       "annuel": "2021",
       "milieu": "national",
       "valeur": 1260000
     },
     {
-      "secteur_activite": "industrie (y compris l’artisanat)",
+      "secteur_activite": "industrie (y compris l'artisanat)",
       "annuel": "2022",
       "milieu": "urbain",
       "valeur": 1080000
     },
     {
-      "secteur_activite": "industrie (y compris l’artisanat)",
+      "secteur_activite": "industrie (y compris l'artisanat)",
       "annuel": "2022",
       "milieu": "rural",
       "valeur": 214000
     },
     {
-      "secteur_activite": "industrie (y compris l’artisanat)",
+      "secteur_activite": "industrie (y compris l'artisanat)",
       "annuel": "2022",
       "milieu": "national",
       "valeur": 1290000
     },
     {
-      "secteur_activite": "industrie (y compris l’artisanat)",
+      "secteur_activite": "industrie (y compris l'artisanat)",
       "annuel": "2023",
       "milieu": "urbain",
       "valeur": 1080000
     },
     {
-      "secteur_activite": "industrie (y compris l’artisanat)",
+      "secteur_activite": "industrie (y compris l'artisanat)",
       "annuel": "2023",
       "milieu": "rural",
       "valeur": 216000
     },
     {
-      "secteur_activite": "industrie (y compris l’artisanat)",
+      "secteur_activite": "industrie (y compris l'artisanat)",
       "annuel": "2023",
       "milieu": "national",
       "valeur": 1292000

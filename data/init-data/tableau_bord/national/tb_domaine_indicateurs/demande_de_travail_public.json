@@ -1,0 +1,202 @@
+[
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "salaires & productivité",
+        "indicateur": "productivité par secteur d'activité"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "salaires & productivité",
+        "indicateur": "valeur ajoutée par secteur d'activité"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "salaires & productivité",
+        "indicateur": "masse salariale par secteur d'activité"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "salaires & productivité",
+        "indicateur": "salaire moyen par secteur d'activité"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "salaires & productivité",
+        "indicateur": "variation de la masse salariale"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "volume d'emploi",
+        "indicateur": "emploi par genre"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "volume d'emploi",
+        "indicateur": "emploi par âge"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "volume d'emploi",
+        "indicateur": "emploi par diplôme"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "volume d'emploi",
+        "indicateur": "emploi par secteur d'activité"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "volume d'emploi",
+        "indicateur": "emploi par statut professionnel"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "volume d'emploi",
+        "indicateur": "emploi par type d'emploi"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "volume d'emploi",
+        "indicateur": "emploi par secteur d'emploi"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "volume d'emploi",
+        "indicateur": "emploi par région"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "volume d'emploi",
+        "indicateur": "salariés déclarés à la cnss par secteur d'activité"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "volume d'emploi",
+        "indicateur": "salariés déclarés à la cnss par région"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "tissu économique",
+        "indicateur": "nombre d'entreprises"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "tissu économique",
+        "indicateur": "nombre d'entreprises entrantes"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "tissu économique",
+        "indicateur": "nombre d'entreprises sortantes"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "tissu économique",
+        "indicateur": "taux de survie des entreprises"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "qualité de l'emploi",
+        "indicateur": "part de l'emploi informel par secteur d'activité"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "qualité de l'emploi",
+        "indicateur": "part de l'emploi rémunéré par secteur d'activité"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "qualité de l'emploi",
+        "indicateur": "part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "qualité de l'emploi",
+        "indicateur": "part des actifs occupés bénéficiant d'une couverture médicale par genre"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "qualité de l'emploi",
+        "indicateur": "part des salariés disposant d'un contrat de travail"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "qualité de l'emploi",
+        "indicateur": "part de l'emploi de type occasionnel ou saisonnier par milieu de résidence"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "qualité de l'emploi",
+        "indicateur": "part de l'emploi de type occasionnel ou saisonnier par genre"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "qualité de l'emploi",
+        "indicateur": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par milieu de résidence"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "qualité de l'emploi",
+        "indicateur": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par genre"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "qualité de l'emploi",
+        "indicateur": "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "qualité de l'emploi",
+        "indicateur": "salariés (stables) déclarés à la cnss par secteur d'activité"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "création d'emploi",
+        "indicateur": "création d'emploi par genre"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "création d'emploi",
+        "indicateur": "création d'emploi par diplôme"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "création d'emploi",
+        "indicateur": "création d'emploi par statut professionnel"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "création d'emploi",
+        "indicateur": "création d'emploi par secteur d'activité -7p"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "création d'emploi",
+        "indicateur": "création d'emploi par secteur d'activité -2p"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "création d'emploi",
+        "indicateur": "création d'emploi par secteur d'emploi"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "création d'emploi",
+        "indicateur": "création d'emploi par type d'emploi"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "création d'emploi",
+        "indicateur": "création d'emploi par région"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "création d'emploi",
+        "indicateur": "création d'emploi salariés par secteur d'activité"
+    },
+    {
+        "tbDomaine": "demande de travail - public",
+        "categorie": "création d'emploi",
+        "indicateur": "création d'emploi salariés par région"
+    }
+]
