@@ -1,0 +1,185 @@
+{
+    "indicateur": "Taux d’emploi des diplômés de l’enseignement universitaire public après 4 ans (Promotion 2014) par diplôme et par genre",
+    "data": [
+        {
+            "diplome": "DEUST/DUT",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 53.0
+        },
+        {
+            "diplome": "DEUST/DUT",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 63.6
+        },
+        {
+            "diplome": "Licence fondamentale",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 54.0
+        },
+        {
+            "diplome": "Licence fondamentale",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 73.4
+        },
+        {
+            "diplome": "Licence ST",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 56.2
+        },
+        {
+            "diplome": "Licence ST",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 79.6
+        },
+        {
+            "diplome": "Master de recherche",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 53.5
+        },
+        {
+            "diplome": "Master de recherche",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 83.8
+        },
+        {
+            "diplome": "Master spécialisé",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 69.3
+        },
+        {
+            "diplome": "Master spécialisé",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 80.4
+        },
+        {
+            "diplome": "Licence professionnelle",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 71.7
+        },
+        {
+            "diplome": "Licence professionnelle",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 82.5
+        },
+        {
+            "diplome": "Diplôme de l’ENCG",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 80.6
+        },
+        {
+            "diplome": "Diplôme de l’ENCG",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 94.3
+        },
+        {
+            "diplome": "Diplôme d’ingénieur",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 87.1
+        },
+        {
+            "diplome": "Diplôme d’ingénieur",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 88.7
+        },
+        {
+            "diplome": "Doctorat",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 100.0
+        },
+        {
+            "diplome": "Doctorat",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 94.5
+        },
+        {
+            "diplome": "Total",
+            "genre": "Femmes",
+            "annuel": "2014",
+            "valeur": 59.60
+        },
+        {
+            "diplome": "Total",
+            "genre": "Hommes",
+            "annuel": "2014",
+            "valeur": 76.40
+        },
+        {
+            "diplome": "Total",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 68.10
+        },
+        {
+            "diplome": "DEUST/DUT",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 57.8
+        },
+        {
+            "diplome": "Licence fondamentale",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 63.9
+        },
+        {
+            "diplome": "Licence ST",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 68.2
+        },
+        {
+            "diplome": "Master de recherche",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 72.2
+        },
+        {
+            "diplome": "Master spécialisé",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 74.9
+        },
+        {
+            "diplome": "Licence professionnelle",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 76.7
+        },
+        {
+            "diplome": "Diplôme de l’ENCG",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 84.9
+        },
+        {
+            "diplome": "Diplôme d’ingénieur",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 87.9
+        },
+        {
+            "diplome": "Doctorat",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 96.2
+        }
+    ]
+}

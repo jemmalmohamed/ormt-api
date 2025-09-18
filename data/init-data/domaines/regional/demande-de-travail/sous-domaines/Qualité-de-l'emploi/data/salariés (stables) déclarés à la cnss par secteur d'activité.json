@@ -1,0 +1,255 @@
+{
+    "indicateur": "salariés (stables) déclarés à la cnss par secteur d’activité",
+    "data": [
+        {
+            "secteur_activite_cnss": "Agriculture, forêt et pêche",
+            "annuel": 2019,
+            "valeur": 273588
+        },
+        {
+            "secteur_activite_cnss": "Agriculture, forêt et pêche",
+            "annuel": 2020,
+            "valeur": 286633
+        },
+        {
+            "secteur_activite_cnss": "Agriculture, forêt et pêche",
+            "annuel": 2021,
+            "valeur": 306128
+        },
+        {
+            "secteur_activite_cnss": "Agriculture, forêt et pêche",
+            "annuel": 2022,
+            "valeur": 332727
+        },
+        {
+            "secteur_activite_cnss": "Agriculture, forêt et pêche",
+            "annuel": 2023,
+            "valeur": 356103
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "annuel": 2019,
+            "valeur": 360217
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "annuel": 2020,
+            "valeur": 379091
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "annuel": 2021,
+            "valeur": 398781
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "annuel": 2022,
+            "valeur": 418753
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "annuel": 2023,
+            "valeur": 426694
+        },
+        {
+            "secteur_activite_cnss": "Commerce",
+            "annuel": 2019,
+            "valeur": 430424
+        },
+        {
+            "secteur_activite_cnss": "Commerce",
+            "annuel": 2020,
+            "valeur": 452110
+        },
+        {
+            "secteur_activite_cnss": "Commerce",
+            "annuel": 2021,
+            "valeur": 473242
+        },
+        {
+            "secteur_activite_cnss": "Commerce",
+            "annuel": 2022,
+            "valeur": 499147
+        },
+        {
+            "secteur_activite_cnss": "Commerce",
+            "annuel": 2023,
+            "valeur": 517672
+        },
+        {
+            "secteur_activite_cnss": "Enseignement",
+            "annuel": 2019,
+            "valeur": 102929
+        },
+        {
+            "secteur_activite_cnss": "Enseignement",
+            "annuel": 2020,
+            "valeur": 109444
+        },
+        {
+            "secteur_activite_cnss": "Enseignement",
+            "annuel": 2021,
+            "valeur": 113087
+        },
+        {
+            "secteur_activite_cnss": "Enseignement",
+            "annuel": 2022,
+            "valeur": 128953
+        },
+        {
+            "secteur_activite_cnss": "Enseignement",
+            "annuel": 2023,
+            "valeur": 144025
+        },
+        {
+            "secteur_activite_cnss": "Hébérgement et restauration",
+            "annuel": 2019,
+            "valeur": 130917
+        },
+        {
+            "secteur_activite_cnss": "Hébérgement et restauration",
+            "annuel": 2020,
+            "valeur": 135933
+        },
+        {
+            "secteur_activite_cnss": "Hébérgement et restauration",
+            "annuel": 2021,
+            "valeur": 127043
+        },
+        {
+            "secteur_activite_cnss": "Hébérgement et restauration",
+            "annuel": 2022,
+            "valeur": 138830
+        },
+        {
+            "secteur_activite_cnss": "Hébérgement et restauration",
+            "annuel": 2023,
+            "valeur": 157663
+        },
+        {
+            "secteur_activite_cnss": "Santé humaine et action humaine",
+            "annuel": 2019,
+            "valeur": 51274
+        },
+        {
+            "secteur_activite_cnss": "Santé humaine et action humaine",
+            "annuel": 2020,
+            "valeur": 54445
+        },
+        {
+            "secteur_activite_cnss": "Santé humaine et action humaine",
+            "annuel": 2021,
+            "valeur": 57747
+        },
+        {
+            "secteur_activite_cnss": "Santé humaine et action humaine",
+            "annuel": 2022,
+            "valeur": 63188
+        },
+        {
+            "secteur_activite_cnss": "Santé humaine et action humaine",
+            "annuel": 2023,
+            "valeur": 71083
+        },
+        {
+            "secteur_activite_cnss": "Autres services",
+            "annuel": 2019,
+            "valeur": 676470
+        },
+        {
+            "secteur_activite_cnss": "Autres services",
+            "annuel": 2020,
+            "valeur": 714075
+        },
+        {
+            "secteur_activite_cnss": "Autres services",
+            "annuel": 2021,
+            "valeur": 725840
+        },
+        {
+            "secteur_activite_cnss": "Autres services",
+            "annuel": 2022,
+            "valeur": 784577
+        },
+        {
+            "secteur_activite_cnss": "Autres services",
+            "annuel": 2023,
+            "valeur": 858614
+        },
+        {
+            "secteur_activite_cnss": "Transport",
+            "annuel": 2019,
+            "valeur": 104390
+        },
+        {
+            "secteur_activite_cnss": "Transport",
+            "annuel": 2020,
+            "valeur": 110947
+        },
+        {
+            "secteur_activite_cnss": "Transport",
+            "annuel": 2021,
+            "valeur": 114190
+        },
+        {
+            "secteur_activite_cnss": "Transport",
+            "annuel": 2022,
+            "valeur": 122128
+        },
+        {
+            "secteur_activite_cnss": "Transport",
+            "annuel": 2023,
+            "valeur": 129878
+        },
+        {
+            "secteur_activite_cnss": "Industries",
+            "annuel": 2019,
+            "valeur": 510946
+        },
+        {
+            "secteur_activite_cnss": "Industries",
+            "annuel": 2020,
+            "valeur": 525419
+        },
+        {
+            "secteur_activite_cnss": "Industries",
+            "annuel": 2021,
+            "valeur": 529362
+        },
+        {
+            "secteur_activite_cnss": "Industries",
+            "annuel": 2022,
+            "valeur": 545502
+        },
+        {
+            "secteur_activite_cnss": "Industries",
+            "annuel": 2023,
+            "valeur": 559790
+        },
+        {
+            "secteur_activite_cnss": "Ensemble",
+            "annuel": 2019,
+            "valeur": 2644102
+        },
+        {
+            "secteur_activite_cnss": "Ensemble",
+            "annuel": 2020,
+            "valeur": 2768172
+        },
+        {
+            "secteur_activite_cnss": "Ensemble",
+            "annuel": 2021,
+            "valeur": 2845529
+        },
+        {
+            "secteur_activite_cnss": "Ensemble",
+            "annuel": 2022,
+            "valeur": 3033958
+        },
+        {
+            "secteur_activite_cnss": "Ensemble",
+            "annuel": 2023,
+            "valeur": 3221690
+        }
+    ]
+}

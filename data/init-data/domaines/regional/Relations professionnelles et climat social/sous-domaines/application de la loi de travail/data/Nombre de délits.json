@@ -1,0 +1,17 @@
+{
+    "indicateur": "nombre de délits",
+    "data": [
+        {
+            "annuel": "2021",
+            "valeur": 96
+        },
+        {
+            "annuel": "2022",
+            "valeur": 152
+        },
+        {
+            "annuel": "2023",
+            "valeur": 192
+        }
+    ]
+}

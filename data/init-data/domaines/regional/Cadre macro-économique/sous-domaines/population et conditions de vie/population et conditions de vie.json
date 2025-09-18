@@ -1,0 +1,206 @@
+{
+  "nom": "population et conditions de vie",
+  "description": "population et conditions de vie",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "indicateurs": [
+    {
+      "nom": "population municipale",
+      "description": "population municipale",
+      "categorie": "population et conditions de vie",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2024",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "population municipale - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "incidence de la pauvreté absolue par région",
+      "description": "incidence de la pauvreté absolue par région",
+      "categorie": "population et conditions de vie",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2014,2022",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "incidence de la pauvreté absolue par région - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "taux de pauvreté multidimensionnelle par région",
+      "description": "taux de pauvreté multidimensionnelle par région",
+      "categorie": "population et conditions de vie",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2014,2022",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "taux de pauvreté multidimensionnelle par région - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "taux de vulnérabilité à la pauvreté par région",
+      "description": "taux de vulnérabilité à la pauvreté par région",
+      "categorie": "population et conditions de vie",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2014,2022",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "taux de vulnérabilité à la pauvreté par région - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "nom": "Programmes d’amélioration de l’employabilité",
+  "description": "Sous domaine du domaine Employabilité et insertion professionnelle.",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "indicateurs": [
+    {
+      "nom": "Objectif ciblé (hors formation en ligne)",
+      "categorie": "Programmes d’amélioration de l’employabilité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2024",
+      "description": "Objectif ciblé (hors formation en ligne)",
+      "dimensions": [
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Objectif ciblé (hors formation en ligne) - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre de bénéficiaires des Programmes d’amélioration de l’employabilité",
+      "categorie": "Programmes d’amélioration de l’employabilité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2024",
+      "description": "Nombre total de bénéficiaires des Programmes d’amélioration de l’employabilité.",
+      "dimensions": [
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de bénéficiaires des Programmes d’amélioration de l’employabilité - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires des Programmes d’amélioration de l’employabilité par composante",
+      "categorie": "Programmes d’amélioration de l’employabilité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires des Programmes d’amélioration de l’employabilité ventilés par composante.",
+      "dimensions": [
+        {
+          "nom": "composante",
+          "libelle": "Composante",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires des Programmes d’amélioration de l’employabilité par composante - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires de la FCE par région",
+      "categorie": "Programmes d’amélioration de l’employabilité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires de la FCE ventilés par région.",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires de la FCE par région - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires de la FQR par région",
+      "categorie": "Programmes d’amélioration de l’employabilité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires de la FQR ventilés par région.",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires de la FQR par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires de la FSE par région",
+      "categorie": "Programmes d’amélioration de l’employabilité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires de la FSE ventilés par région.",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires de la FSE par région - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires de la FSE par secteur d’activité économique",
+      "categorie": "Programmes d’amélioration de l’employabilité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires de la FSE ventilés par secteur d’activité économique.",
+      "dimensions": [
+        {
+          "nom": "sae_fse",
+          "libelle": "SAE_FSE",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires de la FSE par secteur d’activité économique - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre des bénéficiaires du partenariat régional",
+      "categorie": "Programmes d’amélioration de l’employabilité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2024",
+      "description": "Nombre des bénéficiaires du partenariat régional.",
+      "dimensions": [
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre des bénéficiaires du partenariat régional - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre des bénéficiaires du partenariat national",
+      "categorie": "Programmes d’amélioration de l’employabilité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2024",
+      "description": "Nombre des bénéficiaires du partenariat national.",
+      "dimensions": [
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre des bénéficiaires du partenariat national - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre des bénéficiaires de la formation en ligne",
+      "categorie": "Programmes d’amélioration de l’employabilité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2024",
+      "description": "Nombre des bénéficiaires de la formation en ligne.",
+      "dimensions": [
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre des bénéficiaires de la formation en ligne - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    }
+  ]
+}

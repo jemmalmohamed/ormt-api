@@ -1,0 +1,645 @@
+{
+    "indicateur": "Nombre de diplômés de l’enseignement universitaire public par domaine d’études",
+    "data": [
+        {
+            "domaine_etudes": "Enseignement originel",
+            "annuel": "2016",
+            "valeur": 2000
+        },
+        {
+            "domaine_etudes": "Enseignement originel",
+            "annuel": "2017",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Enseignement originel",
+            "annuel": "2018",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Enseignement originel",
+            "annuel": "2019",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Enseignement originel",
+            "annuel": "2020",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Enseignement originel",
+            "annuel": "2021",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Enseignement originel",
+            "annuel": "2022",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Enseignement originel",
+            "annuel": "2023",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Sc.Juridiques, Economiques et Sociales",
+            "annuel": "2016",
+            "valeur": 34000
+        },
+        {
+            "domaine_etudes": "Sc.Juridiques, Economiques et Sociales",
+            "annuel": "2017",
+            "valeur": 37000
+        },
+        {
+            "domaine_etudes": "Sc.Juridiques, Economiques et Sociales",
+            "annuel": "2018",
+            "valeur": 42000
+        },
+        {
+            "domaine_etudes": "Sc.Juridiques, Economiques et Sociales",
+            "annuel": "2019",
+            "valeur": 48000
+        },
+        {
+            "domaine_etudes": "Sc.Juridiques, Economiques et Sociales",
+            "annuel": "2020",
+            "valeur": 54000
+        },
+        {
+            "domaine_etudes": "Sc.Juridiques, Economiques et Sociales",
+            "annuel": "2021",
+            "valeur": 65000
+        },
+        {
+            "domaine_etudes": "Sc.Juridiques, Economiques et Sociales",
+            "annuel": "2022",
+            "valeur": 65000
+        },
+        {
+            "domaine_etudes": "Sc.Juridiques, Economiques et Sociales",
+            "annuel": "2023",
+            "valeur": 60000
+        },
+        {
+            "domaine_etudes": "Lettres et Sciences Humaines",
+            "annuel": "2016",
+            "valeur": 24000
+        },
+        {
+            "domaine_etudes": "Lettres et Sciences Humaines",
+            "annuel": "2017",
+            "valeur": 28000
+        },
+        {
+            "domaine_etudes": "Lettres et Sciences Humaines",
+            "annuel": "2018",
+            "valeur": 30000
+        },
+        {
+            "domaine_etudes": "Lettres et Sciences Humaines",
+            "annuel": "2019",
+            "valeur": 27000
+        },
+        {
+            "domaine_etudes": "Lettres et Sciences Humaines",
+            "annuel": "2020",
+            "valeur": 27000
+        },
+        {
+            "domaine_etudes": "Lettres et Sciences Humaines",
+            "annuel": "2021",
+            "valeur": 28000
+        },
+        {
+            "domaine_etudes": "Lettres et Sciences Humaines",
+            "annuel": "2022",
+            "valeur": 27000
+        },
+        {
+            "domaine_etudes": "Lettres et Sciences Humaines",
+            "annuel": "2023",
+            "valeur": 26000
+        },
+        {
+            "domaine_etudes": "Sciences",
+            "annuel": "2016",
+            "valeur": 15000
+        },
+        {
+            "domaine_etudes": "Sciences",
+            "annuel": "2017",
+            "valeur": 16000
+        },
+        {
+            "domaine_etudes": "Sciences",
+            "annuel": "2018",
+            "valeur": 17000
+        },
+        {
+            "domaine_etudes": "Sciences",
+            "annuel": "2019",
+            "valeur": 18000
+        },
+        {
+            "domaine_etudes": "Sciences",
+            "annuel": "2020",
+            "valeur": 17000
+        },
+        {
+            "domaine_etudes": "Sciences",
+            "annuel": "2021",
+            "valeur": 17000
+        },
+        {
+            "domaine_etudes": "Sciences",
+            "annuel": "2022",
+            "valeur": 16000
+        },
+        {
+            "domaine_etudes": "Sciences",
+            "annuel": "2023",
+            "valeur": 15000
+        },
+        {
+            "domaine_etudes": "Sciences et Techniques(LST+LP)",
+            "annuel": "2016",
+            "valeur": 4000
+        },
+        {
+            "domaine_etudes": "Sciences et Techniques(LST+LP)",
+            "annuel": "2017",
+            "valeur": 5000
+        },
+        {
+            "domaine_etudes": "Sciences et Techniques(LST+LP)",
+            "annuel": "2018",
+            "valeur": 6000
+        },
+        {
+            "domaine_etudes": "Sciences et Techniques(LST+LP)",
+            "annuel": "2019",
+            "valeur": 5000
+        },
+        {
+            "domaine_etudes": "Sciences et Techniques(LST+LP)",
+            "annuel": "2020",
+            "valeur": 5000
+        },
+        {
+            "domaine_etudes": "Sciences et Techniques(LST+LP)",
+            "annuel": "2021",
+            "valeur": 6000
+        },
+        {
+            "domaine_etudes": "Sciences et Techniques(LST+LP)",
+            "annuel": "2022",
+            "valeur": 6000
+        },
+        {
+            "domaine_etudes": "Sciences et Techniques(LST+LP)",
+            "annuel": "2023",
+            "valeur": 6000
+        },
+        {
+            "domaine_etudes": "Médecine et Pharmacie",
+            "annuel": "2016",
+            "valeur": 2000
+        },
+        {
+            "domaine_etudes": "Médecine et Pharmacie",
+            "annuel": "2017",
+            "valeur": 2000
+        },
+        {
+            "domaine_etudes": "Médecine et Pharmacie",
+            "annuel": "2018",
+            "valeur": 2000
+        },
+        {
+            "domaine_etudes": "Médecine et Pharmacie",
+            "annuel": "2019",
+            "valeur": 2000
+        },
+        {
+            "domaine_etudes": "Médecine et Pharmacie",
+            "annuel": "2020",
+            "valeur": 2000
+        },
+        {
+            "domaine_etudes": "Médecine et Pharmacie",
+            "annuel": "2021",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Médecine et Pharmacie",
+            "annuel": "2022",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Médecine et Pharmacie",
+            "annuel": "2023",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Médecine Dentaire",
+            "annuel": "2016",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Médecine Dentaire",
+            "annuel": "2017",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Médecine Dentaire",
+            "annuel": "2018",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Médecine Dentaire",
+            "annuel": "2019",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Médecine Dentaire",
+            "annuel": "2020",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Médecine Dentaire",
+            "annuel": "2021",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Médecine Dentaire",
+            "annuel": "2022",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Médecine Dentaire",
+            "annuel": "2023",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sciences de l’ ingénieur",
+            "annuel": "2016",
+            "valeur": 4000
+        },
+        {
+            "domaine_etudes": "Sciences de l’ ingénieur",
+            "annuel": "2017",
+            "valeur": 4000
+        },
+        {
+            "domaine_etudes": "Sciences de l’ ingénieur",
+            "annuel": "2018",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Sciences de l’ ingénieur",
+            "annuel": "2019",
+            "valeur": 4000
+        },
+        {
+            "domaine_etudes": "Sciences de l’ ingénieur",
+            "annuel": "2020",
+            "valeur": 4000
+        },
+        {
+            "domaine_etudes": "Sciences de l’ ingénieur",
+            "annuel": "2021",
+            "valeur": 5000
+        },
+        {
+            "domaine_etudes": "Sciences de l’ ingénieur",
+            "annuel": "2022",
+            "valeur": 5000
+        },
+        {
+            "domaine_etudes": "Sciences de l’ ingénieur",
+            "annuel": "2023",
+            "valeur": 5000
+        },
+        {
+            "domaine_etudes": "Commerce et gestion",
+            "annuel": "2016",
+            "valeur": 2000
+        },
+        {
+            "domaine_etudes": "Commerce et gestion",
+            "annuel": "2017",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Commerce et gestion",
+            "annuel": "2018",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Commerce et gestion",
+            "annuel": "2019",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Commerce et gestion",
+            "annuel": "2020",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Commerce et gestion",
+            "annuel": "2021",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Commerce et gestion",
+            "annuel": "2022",
+            "valeur": 4000
+        },
+        {
+            "domaine_etudes": "Commerce et gestion",
+            "annuel": "2023",
+            "valeur": 4000
+        },
+        {
+            "domaine_etudes": "Sciences de l’éducation",
+            "annuel": "2016",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sciences de l’éducation",
+            "annuel": "2017",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sciences de l’éducation",
+            "annuel": "2018",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sciences de l’éducation",
+            "annuel": "2019",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sciences de l’éducation",
+            "annuel": "2020",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sciences de l’éducation",
+            "annuel": "2021",
+            "valeur": 1000
+        },
+        {
+            "domaine_etudes": "Sciences de l’éducation",
+            "annuel": "2022",
+            "valeur": 1000
+        },
+        {
+            "domaine_etudes": "Sciences de l’éducation",
+            "annuel": "2023",
+            "valeur": 1000
+        },
+        {
+            "domaine_etudes": "Formation des enseignants (Sciences de l’éducation et E.N.S et E.N.S.E.T)",
+            "annuel": "2016",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Formation des enseignants (Sciences de l’éducation et E.N.S et E.N.S.E.T)",
+            "annuel": "2017",
+            "valeur": 4000
+        },
+        {
+            "domaine_etudes": "Formation des enseignants (Sciences de l’éducation et E.N.S et E.N.S.E.T)",
+            "annuel": "2018",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Formation des enseignants (Sciences de l’éducation et E.N.S et E.N.S.E.T)",
+            "annuel": "2019",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Formation des enseignants (Sciences de l’éducation et E.N.S et E.N.S.E.T)",
+            "annuel": "2020",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Formation des enseignants (Sciences de l’éducation et E.N.S et E.N.S.E.T)",
+            "annuel": "2021",
+            "valeur": 2000
+        },
+        {
+            "domaine_etudes": "Formation des enseignants (Sciences de l’éducation et E.N.S et E.N.S.E.T)",
+            "annuel": "2022",
+            "valeur": 3000
+        },
+        {
+            "domaine_etudes": "Formation des enseignants (Sciences de l’éducation et E.N.S et E.N.S.E.T)",
+            "annuel": "2023",
+            "valeur": 4000
+        },
+        {
+            "domaine_etudes": "Traduction",
+            "annuel": "2016",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Traduction",
+            "annuel": "2017",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Traduction",
+            "annuel": "2018",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Traduction",
+            "annuel": "2019",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Traduction",
+            "annuel": "2020",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Traduction",
+            "annuel": "2021",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Traduction",
+            "annuel": "2022",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Traduction",
+            "annuel": "2023",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Technologie(DUT)",
+            "annuel": "2016",
+            "valeur": 4000
+        },
+        {
+            "domaine_etudes": "Technologie(DUT)",
+            "annuel": "2017",
+            "valeur": 6000
+        },
+        {
+            "domaine_etudes": "Technologie(DUT)",
+            "annuel": "2018",
+            "valeur": 6000
+        },
+        {
+            "domaine_etudes": "Technologie(DUT)",
+            "annuel": "2019",
+            "valeur": 6000
+        },
+        {
+            "domaine_etudes": "Technologie(DUT)",
+            "annuel": "2020",
+            "valeur": 8000
+        },
+        {
+            "domaine_etudes": "Technologie(DUT)",
+            "annuel": "2021",
+            "valeur": 9000
+        },
+        {
+            "domaine_etudes": "Technologie(DUT)",
+            "annuel": "2022",
+            "valeur": 8000
+        },
+        {
+            "domaine_etudes": "Technologie(DUT)",
+            "annuel": "2023",
+            "valeur": 9000
+        },
+        {
+            "domaine_etudes": "Sciences de la santé",
+            "annuel": "2016",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sciences de la santé",
+            "annuel": "2017",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sciences de la santé",
+            "annuel": "2018",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sciences de la santé",
+            "annuel": "2019",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sciences de la santé",
+            "annuel": "2020",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sciences de la santé",
+            "annuel": "2021",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sciences de la santé",
+            "annuel": "2022",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sciences de la santé",
+            "annuel": "2023",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sport",
+            "annuel": "2016",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sport",
+            "annuel": "2017",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sport",
+            "annuel": "2018",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sport",
+            "annuel": "2019",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sport",
+            "annuel": "2020",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sport",
+            "annuel": "2021",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sport",
+            "annuel": "2022",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Sport",
+            "annuel": "2023",
+            "valeur": 0
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2016",
+            "valeur": 95000
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2017",
+            "valeur": 103000
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2018",
+            "valeur": 112000
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2019",
+            "valeur": 119000
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2020",
+            "valeur": 127000
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2021",
+            "valeur": 143000
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2022",
+            "valeur": 140000
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2023",
+            "valeur": 135000
+        }
+    ]
+}

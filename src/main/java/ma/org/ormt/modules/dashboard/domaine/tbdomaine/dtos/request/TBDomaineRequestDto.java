@@ -30,7 +30,6 @@ public class TBDomaineRequestDto extends Dto {
     @NotNull(message = "Ce champ est requis.")
     private Boolean actif;
 
-    @NotBlank(message = "Ce champ est requis.")
     private String description;
 
 }

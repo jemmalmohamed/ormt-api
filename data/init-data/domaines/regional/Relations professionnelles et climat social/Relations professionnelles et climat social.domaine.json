@@ -1,0 +1,13 @@
+{
+  "nom": "relations professionnelles et climat social",
+  "description": "Surveillance du droit du travail, de la sécurité et du climat social",
+  "apropos": "Surveillance du droit du travail, de la sécurité et du climat social",
+  "imageUrl": "/images/relations-professionnelles.png",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true
+}

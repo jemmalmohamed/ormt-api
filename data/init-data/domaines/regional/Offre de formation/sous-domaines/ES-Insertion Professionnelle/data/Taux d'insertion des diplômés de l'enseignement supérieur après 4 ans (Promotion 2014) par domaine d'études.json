@@ -1,0 +1,130 @@
+{
+    "indicateur": "Taux d’insertion des diplômés de l’enseignement supérieur après 4 ans (Promotion 2014) par domaine d’études",
+    "data": [
+        {
+            "domaine_etudes": "Enseignement Originel",
+            "annuel": "2014",
+            "valeur": 70.5
+        },
+        {
+            "domaine_etudes": "Droit Arabe",
+            "annuel": "2014",
+            "valeur": 73.7
+        },
+        {
+            "domaine_etudes": "Hôtellerie et Tourisme (FP)",
+            "annuel": "2014",
+            "valeur": 74.5
+        },
+        {
+            "domaine_etudes": "Administration, Gestion et Commerce (FP)",
+            "annuel": "2014",
+            "valeur": 76.8
+        },
+        {
+            "domaine_etudes": "Transport et Logistique (FP)",
+            "annuel": "2014",
+            "valeur": 80.2
+        },
+        {
+            "domaine_etudes": "TIC (FP)",
+            "annuel": "2014",
+            "valeur": 80.2
+        },
+        {
+            "domaine_etudes": "Droit Français",
+            "annuel": "2014",
+            "valeur": 80.3
+        },
+        {
+            "domaine_etudes": "Industries MME&Automobile (FP)",
+            "annuel": "2014",
+            "valeur": 80.6
+        },
+        {
+            "domaine_etudes": "Bâtiment et Travaux Publics (FP)",
+            "annuel": "2014",
+            "valeur": 80.8
+        },
+        {
+            "domaine_etudes": "Sciences",
+            "annuel": "2014",
+            "valeur": 80.9
+        },
+        {
+            "domaine_etudes": "Sciences Economiques et Gestion",
+            "annuel": "2014",
+            "valeur": 82.3
+        },
+        {
+            "domaine_etudes": "Sciences Humaines et Sociales",
+            "annuel": "2014",
+            "valeur": 82.6
+        },
+        {
+            "domaine_etudes": "Agroalimentaires, chimie et textile (FP)",
+            "annuel": "2014",
+            "valeur": 83.8
+        },
+        {
+            "domaine_etudes": "Technologie",
+            "annuel": "2014",
+            "valeur": 85.1
+        },
+        {
+            "domaine_etudes": "Audio Visuel et Arts Graphiques (FP)",
+            "annuel": "2014",
+            "valeur": 86.1
+        },
+        {
+            "domaine_etudes": "Lettres, Langues et traduction",
+            "annuel": "2014",
+            "valeur": 87.6
+        },
+        {
+            "domaine_etudes": "Paramédicale et sciences de Santé (FP)",
+            "annuel": "2014",
+            "valeur": 87.8
+        },
+        {
+            "domaine_etudes": "Agriculture (FP)",
+            "annuel": "2014",
+            "valeur": 90.0
+        },
+        {
+            "domaine_etudes": "Sciences et techniques",
+            "annuel": "2014",
+            "valeur": 90.5
+        },
+        {
+            "domaine_etudes": "Sciences de l’Education",
+            "annuel": "2014",
+            "valeur": 92.3
+        },
+        {
+            "domaine_etudes": "Administration , Gestion et Commerce",
+            "annuel": "2014",
+            "valeur": 93.9
+        },
+        {
+            "domaine_etudes": "Sciences d’Ingénieur",
+            "annuel": "2014",
+            "valeur": 96.4
+        },
+        {
+            "domaine_etudes": "Journalisme et Communication",
+            "annuel": "2014",
+            "valeur": 97.6
+        },
+        {
+            "domaine_etudes": "Paramédicale et sciences de Santé",
+            "annuel": "2014",
+            "valeur": 99.0
+        },
+        {
+            "domaine_etudes": "Total",
+            "annuel": "2014",
+            "valeur": 83.90
+        }
+    ]
+}

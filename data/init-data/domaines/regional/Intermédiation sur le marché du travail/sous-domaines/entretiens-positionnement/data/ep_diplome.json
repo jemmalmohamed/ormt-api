@@ -1,0 +1,155 @@
+{
+    "indicateur": "Entretiens de positionnement par diplôme",
+    "data": [
+        {
+            "annuel": "2019",
+            "diplome": "Bac",
+            "valeur": 20.4
+        },
+        {
+            "annuel": "2019",
+            "diplome": "Diplômés de la formation professionnelle",
+            "valeur": 38.8
+        },
+        {
+            "annuel": "2019",
+            "diplome": "Diplômés de l’enseignement supérieur",
+            "valeur": 16.1
+        },
+        {
+            "annuel": "2019",
+            "diplome": "Autre",
+            "valeur": 21.1
+        },
+        {
+            "annuel": "2019",
+            "diplome": "Non renseigné",
+            "valeur": 3.5
+        },
+        {
+            "annuel": "2020",
+            "diplome": "Bac",
+            "valeur": 24.6
+        },
+        {
+            "annuel": "2020",
+            "diplome": "Diplômés de la formation professionnelle",
+            "valeur": 33.9
+        },
+        {
+            "annuel": "2020",
+            "diplome": "Diplômés de l’enseignement supérieur",
+            "valeur": 14.8
+        },
+        {
+            "annuel": "2020",
+            "diplome": "Autre",
+            "valeur": 22.9
+        },
+        {
+            "annuel": "2020",
+            "diplome": "Non renseigné",
+            "valeur": 3.7
+        },
+        {
+            "annuel": "2021",
+            "diplome": "Bac",
+            "valeur": 25.8
+        },
+        {
+            "annuel": "2021",
+            "diplome": "Diplômés de la formation professionnelle",
+            "valeur": 35.4
+        },
+        {
+            "annuel": "2021",
+            "diplome": "Diplômés de l’enseignement supérieur",
+            "valeur": 16.2
+        },
+        {
+            "annuel": "2021",
+            "diplome": "Autre",
+            "valeur": 19.5
+        },
+        {
+            "annuel": "2021",
+            "diplome": "Non renseigné",
+            "valeur": 3.0
+        },
+        {
+            "annuel": "2022",
+            "diplome": "Bac",
+            "valeur": 28.6
+        },
+        {
+            "annuel": "2022",
+            "diplome": "Diplômés de la formation professionnelle",
+            "valeur": 31.2
+        },
+        {
+            "annuel": "2022",
+            "diplome": "Diplômés de l’enseignement supérieur",
+            "valeur": 19.5
+        },
+        {
+            "annuel": "2022",
+            "diplome": "Autre",
+            "valeur": 18.4
+        },
+        {
+            "annuel": "2022",
+            "diplome": "Non renseigné",
+            "valeur": 2.4
+        },
+        {
+            "annuel": "2023",
+            "diplome": "Bac",
+            "valeur": 32.2
+        },
+        {
+            "annuel": "2023",
+            "diplome": "Diplômés de la formation professionnelle",
+            "valeur": 25.9
+        },
+        {
+            "annuel": "2023",
+            "diplome": "Diplômés de l’enseignement supérieur",
+            "valeur": 17.2
+        },
+        {
+            "annuel": "2023",
+            "diplome": "Autre",
+            "valeur": 19.2
+        },
+        {
+            "annuel": "2023",
+            "diplome": "Non renseigné",
+            "valeur": 5.5
+        },
+        {
+            "annuel": "2024",
+            "diplome": "Bac",
+            "valeur": 31.9
+        },
+        {
+            "annuel": "2024",
+            "diplome": "Diplômés de la formation professionnelle",
+            "valeur": 26.6
+        },
+        {
+            "annuel": "2024",
+            "diplome": "Diplômés de l’enseignement supérieur",
+            "valeur": 17.7
+        },
+        {
+            "annuel": "2024",
+            "diplome": "Autre",
+            "valeur": 19.5
+        },
+        {
+            "annuel": "2024",
+            "diplome": "Non renseigné",
+            "valeur": 4.4
+        }
+    ]
+}

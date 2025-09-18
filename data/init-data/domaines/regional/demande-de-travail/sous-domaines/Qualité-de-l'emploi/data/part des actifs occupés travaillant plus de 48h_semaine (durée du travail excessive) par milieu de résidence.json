@@ -1,0 +1,80 @@
+{
+    "indicateur": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par milieu de résidence",
+    "data": [
+        {
+            "milieu": "Urbain",
+            "annuel": 2019,
+            "valeur": 44.5
+        },
+        {
+            "milieu": "Urbain",
+            "annuel": 2020,
+            "valeur": 31.1
+        },
+        {
+            "milieu": "Urbain",
+            "annuel": 2021,
+            "valeur": 39.1
+        },
+        {
+            "milieu": "Urbain",
+            "annuel": 2022,
+            "valeur": 41.1
+        },
+        {
+            "milieu": "Urbain",
+            "annuel": 2023,
+            "valeur": 37.7
+        },
+        {
+            "milieu": "Rural",
+            "annuel": 2019,
+            "valeur": 34.8
+        },
+        {
+            "milieu": "Rural",
+            "annuel": 2020,
+            "valeur": 26.0
+        },
+        {
+            "milieu": "Rural",
+            "annuel": 2021,
+            "valeur": 32.2
+        },
+        {
+            "milieu": "Rural",
+            "annuel": 2022,
+            "valeur": 32.7
+        },
+        {
+            "milieu": "Rural",
+            "annuel": 2023,
+            "valeur": 31.6
+        },
+        {
+            "milieu": "Ensemble",
+            "annuel": 2019,
+            "valeur": 40.4
+        },
+        {
+            "milieu": "Ensemble",
+            "annuel": 2020,
+            "valeur": 29.0
+        },
+        {
+            "milieu": "Ensemble",
+            "annuel": 2021,
+            "valeur": 36.4
+        },
+        {
+            "milieu": "Ensemble",
+            "annuel": 2022,
+            "valeur": 37.7
+        },
+        {
+            "milieu": "Ensemble",
+            "annuel": 2023,
+            "valeur": 35.3
+        }
+    ]
+}

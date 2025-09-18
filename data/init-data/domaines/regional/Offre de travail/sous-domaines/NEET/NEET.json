@@ -1,0 +1,239 @@
+{
+  "nom": "NEET",
+  "description": "Indicateurs relatifs aux jeunes NEET (ni en emploi, ni en études, ni en formation)",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "indicateurs": [
+    {
+      "nom": "Effectif des jeunes NEET par milieu de résidence",
+      "description": "Effectif des jeunes NEET selon le milieu de résidence",
+      "categorie": "Volume",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Effectif des jeunes NEET par milieu de résidence - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Effectif des jeunes NEET par genre",
+      "description": "Effectif des jeunes NEET selon le genre",
+      "categorie": "Volume",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "periode": "2019-2025",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Effectif des jeunes NEET par genre - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux de NEET par milieu de résidence",
+      "description": "Taux de NEET selon le milieu de résidence",
+      "categorie": "Taux des NEET",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux de NEET par milieu de résidence - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux de NEET par genre",
+      "description": "Taux de NEET selon le genre",
+      "categorie": "Taux des NEET",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux de NEET par genre - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux de NEET par région",
+      "description": "Taux de NEET selon la région",
+      "categorie": "Taux des NEET",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "periode": "2019-2025",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux de NEET par région - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    }
+  ]
+}

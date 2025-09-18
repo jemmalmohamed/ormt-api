@@ -1,0 +1,65 @@
+{
+    "indicateur": "Bénéficiaires IDMAJ par genre (y compris le PI)",
+    "data": [
+        {
+            "annuel": 2019,
+            "genre": "Hommes",
+            "valeur": 46.1
+        },
+        {
+            "annuel": 2019,
+            "genre": "Femmes",
+            "valeur": 53.9
+        },
+        {
+            "annuel": 2020,
+            "genre": "Hommes",
+            "valeur": 46.7
+        },
+        {
+            "annuel": 2020,
+            "genre": "Femmes",
+            "valeur": 53.3
+        },
+        {
+            "annuel": 2021,
+            "genre": "Hommes",
+            "valeur": 44.7
+        },
+        {
+            "annuel": 2021,
+            "genre": "Femmes",
+            "valeur": 55.3
+        },
+        {
+            "annuel": 2022,
+            "genre": "Hommes",
+            "valeur": 46.2
+        },
+        {
+            "annuel": 2022,
+            "genre": "Femmes",
+            "valeur": 53.8
+        },
+        {
+            "annuel": 2023,
+            "genre": "Hommes",
+            "valeur": 45.3
+        },
+        {
+            "annuel": 2023,
+            "genre": "Femmes",
+            "valeur": 54.7
+        },
+        {
+            "annuel": 2024,
+            "genre": "Hommes",
+            "valeur": 49.4
+        },
+        {
+            "annuel": 2024,
+            "genre": "Femmes",
+            "valeur": 50.6
+        }
+    ]
+}

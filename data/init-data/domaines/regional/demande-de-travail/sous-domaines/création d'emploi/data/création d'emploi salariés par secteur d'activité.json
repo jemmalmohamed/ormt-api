@@ -1,0 +1,905 @@
+{
+    "indicateur": "création d’emploi salariés par secteur d’activité",
+    "data": [
+        {
+            "secteur_activite_cnss": "agriculture, forêt et pêche",
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": 10569
+        },
+        {
+            "secteur_activite_cnss": "agriculture, forêt et pêche",
+            "genre": "femme",
+            "annuel": "2019",
+            "valeur": -6107
+        },
+        {
+            "secteur_activite_cnss": "agriculture, forêt et pêche",
+            "genre": "ensemble",
+            "annuel": "2019",
+            "valeur": 4462
+        },
+        {
+            "secteur_activite_cnss": "agriculture, forêt et pêche",
+            "genre": "homme",
+            "annuel": "2020",
+            "valeur": 4393
+        },
+        {
+            "secteur_activite_cnss": "agriculture, forêt et pêche",
+            "genre": "femme",
+            "annuel": "2020",
+            "valeur": 3846
+        },
+        {
+            "secteur_activite_cnss": "agriculture, forêt et pêche",
+            "genre": "ensemble",
+            "annuel": "2020",
+            "valeur": 8239
+        },
+        {
+            "secteur_activite_cnss": "agriculture, forêt et pêche",
+            "genre": "homme",
+            "annuel": "2021",
+            "valeur": 28141
+        },
+        {
+            "secteur_activite_cnss": "agriculture, forêt et pêche",
+            "genre": "femme",
+            "annuel": "2021",
+            "valeur": 17150
+        },
+        {
+            "secteur_activite_cnss": "agriculture, forêt et pêche",
+            "genre": "ensemble",
+            "annuel": "2021",
+            "valeur": 45291
+        },
+        {
+            "secteur_activite_cnss": "agriculture, forêt et pêche",
+            "genre": "homme",
+            "annuel": "2022",
+            "valeur": 26192
+        },
+        {
+            "secteur_activite_cnss": "agriculture, forêt et pêche",
+            "genre": "femme",
+            "annuel": "2022",
+            "valeur": 10804
+        },
+        {
+            "secteur_activite_cnss": "agriculture, forêt et pêche",
+            "genre": "ensemble",
+            "annuel": "2022",
+            "valeur": 36996
+        },
+        {
+            "secteur_activite_cnss": "agriculture, forêt et pêche",
+            "genre": "homme",
+            "annuel": "2023",
+            "valeur": 7240
+        },
+        {
+            "secteur_activite_cnss": "agriculture, forêt et pêche",
+            "genre": "femme",
+            "annuel": "2023",
+            "valeur": 1250
+        },
+        {
+            "secteur_activite_cnss": "agriculture, forêt et pêche",
+            "genre": "ensemble",
+            "annuel": "2023",
+            "valeur": 8490
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": 21222
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "genre": "femme",
+            "annuel": "2019",
+            "valeur": 3183
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "genre": "ensemble",
+            "annuel": "2019",
+            "valeur": 24405
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "genre": "homme",
+            "annuel": "2020",
+            "valeur": 8823
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "genre": "femme",
+            "annuel": "2020",
+            "valeur": 3942
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "genre": "ensemble",
+            "annuel": "2020",
+            "valeur": 12765
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "genre": "homme",
+            "annuel": "2021",
+            "valeur": 29759
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "genre": "femme",
+            "annuel": "2021",
+            "valeur": 5033
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "genre": "ensemble",
+            "annuel": "2021",
+            "valeur": 34792
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "genre": "homme",
+            "annuel": "2022",
+            "valeur": 5141
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "genre": "femme",
+            "annuel": "2022",
+            "valeur": 711
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "genre": "ensemble",
+            "annuel": "2022",
+            "valeur": 5852
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "genre": "homme",
+            "annuel": "2023",
+            "valeur": 6463
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "genre": "femme",
+            "annuel": "2023",
+            "valeur": 1838
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "genre": "ensemble",
+            "annuel": "2023",
+            "valeur": 8301
+        },
+        {
+            "secteur_activite_cnss": "commerce",
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": 23812
+        },
+        {
+            "secteur_activite_cnss": "commerce",
+            "genre": "femme",
+            "annuel": "2019",
+            "valeur": 19523
+        },
+        {
+            "secteur_activite_cnss": "commerce",
+            "genre": "ensemble",
+            "annuel": "2019",
+            "valeur": 43335
+        },
+        {
+            "secteur_activite_cnss": "commerce",
+            "genre": "homme",
+            "annuel": "2020",
+            "valeur": 8070
+        },
+        {
+            "secteur_activite_cnss": "commerce",
+            "genre": "femme",
+            "annuel": "2020",
+            "valeur": 5725
+        },
+        {
+            "secteur_activite_cnss": "commerce",
+            "genre": "ensemble",
+            "annuel": "2020",
+            "valeur": 13795
+        },
+        {
+            "secteur_activite_cnss": "commerce",
+            "genre": "homme",
+            "annuel": "2021",
+            "valeur": 22801
+        },
+        {
+            "secteur_activite_cnss": "commerce",
+            "genre": "femme",
+            "annuel": "2021",
+            "valeur": 10189
+        },
+        {
+            "secteur_activite_cnss": "commerce",
+            "genre": "ensemble",
+            "annuel": "2021",
+            "valeur": 32990
+        },
+        {
+            "secteur_activite_cnss": "commerce",
+            "genre": "homme",
+            "annuel": "2022",
+            "valeur": 16989
+        },
+        {
+            "secteur_activite_cnss": "commerce",
+            "genre": "femme",
+            "annuel": "2022",
+            "valeur": 7719
+        },
+        {
+            "secteur_activite_cnss": "commerce",
+            "genre": "ensemble",
+            "annuel": "2022",
+            "valeur": 24708
+        },
+        {
+            "secteur_activite_cnss": "commerce",
+            "genre": "homme",
+            "annuel": "2023",
+            "valeur": 11079
+        },
+        {
+            "secteur_activite_cnss": "commerce",
+            "genre": "femme",
+            "annuel": "2023",
+            "valeur": 4603
+        },
+        {
+            "secteur_activite_cnss": "commerce",
+            "genre": "ensemble",
+            "annuel": "2023",
+            "valeur": 15682
+        },
+        {
+            "secteur_activite_cnss": "enseignement",
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": -2190
+        },
+        {
+            "secteur_activite_cnss": "enseignement",
+            "genre": "femme",
+            "annuel": "2019",
+            "valeur": 3590
+        },
+        {
+            "secteur_activite_cnss": "enseignement",
+            "genre": "ensemble",
+            "annuel": "2019",
+            "valeur": 1400
+        },
+        {
+            "secteur_activite_cnss": "enseignement",
+            "genre": "homme",
+            "annuel": "2020",
+            "valeur": 1356
+        },
+        {
+            "secteur_activite_cnss": "enseignement",
+            "genre": "femme",
+            "annuel": "2020",
+            "valeur": 3486
+        },
+        {
+            "secteur_activite_cnss": "enseignement",
+            "genre": "ensemble",
+            "annuel": "2020",
+            "valeur": 4842
+        },
+        {
+            "secteur_activite_cnss": "enseignement",
+            "genre": "homme",
+            "annuel": "2021",
+            "valeur": 3399
+        },
+        {
+            "secteur_activite_cnss": "enseignement",
+            "genre": "femme",
+            "annuel": "2021",
+            "valeur": 12452
+        },
+        {
+            "secteur_activite_cnss": "enseignement",
+            "genre": "ensemble",
+            "annuel": "2021",
+            "valeur": 15851
+        },
+        {
+            "secteur_activite_cnss": "enseignement",
+            "genre": "homme",
+            "annuel": "2022",
+            "valeur": 4531
+        },
+        {
+            "secteur_activite_cnss": "enseignement",
+            "genre": "femme",
+            "annuel": "2022",
+            "valeur": 10877
+        },
+        {
+            "secteur_activite_cnss": "enseignement",
+            "genre": "ensemble",
+            "annuel": "2022",
+            "valeur": 15408
+        },
+        {
+            "secteur_activite_cnss": "enseignement",
+            "genre": "homme",
+            "annuel": "2023",
+            "valeur": 2438
+        },
+        {
+            "secteur_activite_cnss": "enseignement",
+            "genre": "femme",
+            "annuel": "2023",
+            "valeur": 9825
+        },
+        {
+            "secteur_activite_cnss": "enseignement",
+            "genre": "ensemble",
+            "annuel": "2023",
+            "valeur": 12263
+        },
+        {
+            "secteur_activite_cnss": "hébergement et restauration",
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": 10229
+        },
+        {
+            "secteur_activite_cnss": "hébergement et restauration",
+            "genre": "femme",
+            "annuel": "2019",
+            "valeur": 5839
+        },
+        {
+            "secteur_activite_cnss": "hébergement et restauration",
+            "genre": "ensemble",
+            "annuel": "2019",
+            "valeur": 16068
+        },
+        {
+            "secteur_activite_cnss": "hébergement et restauration",
+            "genre": "homme",
+            "annuel": "2020",
+            "valeur": -1609
+        },
+        {
+            "secteur_activite_cnss": "hébergement et restauration",
+            "genre": "femme",
+            "annuel": "2020",
+            "valeur": -954
+        },
+        {
+            "secteur_activite_cnss": "hébergement et restauration",
+            "genre": "ensemble",
+            "annuel": "2020",
+            "valeur": -2563
+        },
+        {
+            "secteur_activite_cnss": "hébergement et restauration",
+            "genre": "homme",
+            "annuel": "2021",
+            "valeur": -1928
+        },
+        {
+            "secteur_activite_cnss": "hébergement et restauration",
+            "genre": "femme",
+            "annuel": "2021",
+            "valeur": -736
+        },
+        {
+            "secteur_activite_cnss": "hébergement et restauration",
+            "genre": "ensemble",
+            "annuel": "2021",
+            "valeur": -2664
+        },
+        {
+            "secteur_activite_cnss": "hébergement et restauration",
+            "genre": "homme",
+            "annuel": "2022",
+            "valeur": 16603
+        },
+        {
+            "secteur_activite_cnss": "hébergement et restauration",
+            "genre": "femme",
+            "annuel": "2022",
+            "valeur": 10127
+        },
+        {
+            "secteur_activite_cnss": "hébergement et restauration",
+            "genre": "ensemble",
+            "annuel": "2022",
+            "valeur": 26730
+        },
+        {
+            "secteur_activite_cnss": "hébergement et restauration",
+            "genre": "homme",
+            "annuel": "2023",
+            "valeur": 7918
+        },
+        {
+            "secteur_activite_cnss": "hébergement et restauration",
+            "genre": "femme",
+            "annuel": "2023",
+            "valeur": 5804
+        },
+        {
+            "secteur_activite_cnss": "hébergement et restauration",
+            "genre": "ensemble",
+            "annuel": "2023",
+            "valeur": 13722
+        },
+        {
+            "secteur_activite_cnss": "industries",
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": 1779
+        },
+        {
+            "secteur_activite_cnss": "industries",
+            "genre": "femme",
+            "annuel": "2019",
+            "valeur": 7612
+        },
+        {
+            "secteur_activite_cnss": "industries",
+            "genre": "ensemble",
+            "annuel": "2019",
+            "valeur": 9391
+        },
+        {
+            "secteur_activite_cnss": "industries",
+            "genre": "homme",
+            "annuel": "2020",
+            "valeur": 3469
+        },
+        {
+            "secteur_activite_cnss": "industries",
+            "genre": "femme",
+            "annuel": "2020",
+            "valeur": -7606
+        },
+        {
+            "secteur_activite_cnss": "industries",
+            "genre": "ensemble",
+            "annuel": "2020",
+            "valeur": -4137
+        },
+        {
+            "secteur_activite_cnss": "industries",
+            "genre": "homme",
+            "annuel": "2021",
+            "valeur": 11845
+        },
+        {
+            "secteur_activite_cnss": "industries",
+            "genre": "femme",
+            "annuel": "2021",
+            "valeur": 3210
+        },
+        {
+            "secteur_activite_cnss": "industries",
+            "genre": "ensemble",
+            "annuel": "2021",
+            "valeur": 15055
+        },
+        {
+            "secteur_activite_cnss": "industries",
+            "genre": "homme",
+            "annuel": "2022",
+            "valeur": 15242
+        },
+        {
+            "secteur_activite_cnss": "industries",
+            "genre": "femme",
+            "annuel": "2022",
+            "valeur": 8018
+        },
+        {
+            "secteur_activite_cnss": "industries",
+            "genre": "ensemble",
+            "annuel": "2022",
+            "valeur": 23260
+        },
+        {
+            "secteur_activite_cnss": "industries",
+            "genre": "homme",
+            "annuel": "2023",
+            "valeur": 7485
+        },
+        {
+            "secteur_activite_cnss": "industries",
+            "genre": "femme",
+            "annuel": "2023",
+            "valeur": 2774
+        },
+        {
+            "secteur_activite_cnss": "industries",
+            "genre": "ensemble",
+            "annuel": "2023",
+            "valeur": 10259
+        },
+        {
+            "secteur_activite_cnss": "santé humaine et action sociale",
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": 1414
+        },
+        {
+            "secteur_activite_cnss": "santé humaine et action sociale",
+            "genre": "femme",
+            "annuel": "2019",
+            "valeur": 6013
+        },
+        {
+            "secteur_activite_cnss": "santé humaine et action sociale",
+            "genre": "ensemble",
+            "annuel": "2019",
+            "valeur": 7427
+        },
+        {
+            "secteur_activite_cnss": "santé humaine et action sociale",
+            "genre": "homme",
+            "annuel": "2020",
+            "valeur": 188
+        },
+        {
+            "secteur_activite_cnss": "santé humaine et action sociale",
+            "genre": "femme",
+            "annuel": "2020",
+            "valeur": 2488
+        },
+        {
+            "secteur_activite_cnss": "santé humaine et action sociale",
+            "genre": "ensemble",
+            "annuel": "2020",
+            "valeur": 2676
+        },
+        {
+            "secteur_activite_cnss": "santé humaine et action sociale",
+            "genre": "homme",
+            "annuel": "2021",
+            "valeur": 1210
+        },
+        {
+            "secteur_activite_cnss": "santé humaine et action sociale",
+            "genre": "femme",
+            "annuel": "2021",
+            "valeur": 4758
+        },
+        {
+            "secteur_activite_cnss": "santé humaine et action sociale",
+            "genre": "ensemble",
+            "annuel": "2021",
+            "valeur": 5968
+        },
+        {
+            "secteur_activite_cnss": "santé humaine et action sociale",
+            "genre": "homme",
+            "annuel": "2022",
+            "valeur": 6123
+        },
+        {
+            "secteur_activite_cnss": "santé humaine et action sociale",
+            "genre": "femme",
+            "annuel": "2022",
+            "valeur": 6249
+        },
+        {
+            "secteur_activite_cnss": "santé humaine et action sociale",
+            "genre": "ensemble",
+            "annuel": "2022",
+            "valeur": 12372
+        },
+        {
+            "secteur_activite_cnss": "santé humaine et action sociale",
+            "genre": "homme",
+            "annuel": "2023",
+            "valeur": 2350
+        },
+        {
+            "secteur_activite_cnss": "santé humaine et action sociale",
+            "genre": "femme",
+            "annuel": "2023",
+            "valeur": 6377
+        },
+        {
+            "secteur_activite_cnss": "santé humaine et action sociale",
+            "genre": "ensemble",
+            "annuel": "2023",
+            "valeur": 8727
+        },
+        {
+            "secteur_activite_cnss": "services",
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": 35376
+        },
+        {
+            "secteur_activite_cnss": "services",
+            "genre": "femme",
+            "annuel": "2019",
+            "valeur": 24246
+        },
+        {
+            "secteur_activite_cnss": "services",
+            "genre": "ensemble",
+            "annuel": "2019",
+            "valeur": 59622
+        },
+        {
+            "secteur_activite_cnss": "services",
+            "genre": "homme",
+            "annuel": "2020",
+            "valeur": -5681
+        },
+        {
+            "secteur_activite_cnss": "services",
+            "genre": "femme",
+            "annuel": "2020",
+            "valeur": 10427
+        },
+        {
+            "secteur_activite_cnss": "services",
+            "genre": "ensemble",
+            "annuel": "2020",
+            "valeur": 4746
+        },
+        {
+            "secteur_activite_cnss": "services",
+            "genre": "homme",
+            "annuel": "2021",
+            "valeur": 27343
+        },
+        {
+            "secteur_activite_cnss": "services",
+            "genre": "femme",
+            "annuel": "2021",
+            "valeur": 18336
+        },
+        {
+            "secteur_activite_cnss": "services",
+            "genre": "ensemble",
+            "annuel": "2021",
+            "valeur": 45679
+        },
+        {
+            "secteur_activite_cnss": "services",
+            "genre": "homme",
+            "annuel": "2022",
+            "valeur": 101213
+        },
+        {
+            "secteur_activite_cnss": "services",
+            "genre": "femme",
+            "annuel": "2022",
+            "valeur": 39814
+        },
+        {
+            "secteur_activite_cnss": "services",
+            "genre": "ensemble",
+            "annuel": "2022",
+            "valeur": 141027
+        },
+        {
+            "secteur_activite_cnss": "services",
+            "genre": "homme",
+            "annuel": "2023",
+            "valeur": 43462
+        },
+        {
+            "secteur_activite_cnss": "services",
+            "genre": "femme",
+            "annuel": "2023",
+            "valeur": 32956
+        },
+        {
+            "secteur_activite_cnss": "services",
+            "genre": "ensemble",
+            "annuel": "2023",
+            "valeur": 76418
+        },
+        {
+            "secteur_activite_cnss": "transport",
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": 6819
+        },
+        {
+            "secteur_activite_cnss": "transport",
+            "genre": "femme",
+            "annuel": "2019",
+            "valeur": 1069
+        },
+        {
+            "secteur_activite_cnss": "transport",
+            "genre": "ensemble",
+            "annuel": "2019",
+            "valeur": 7888
+        },
+        {
+            "secteur_activite_cnss": "transport",
+            "genre": "homme",
+            "annuel": "2020",
+            "valeur": 5364
+        },
+        {
+            "secteur_activite_cnss": "transport",
+            "genre": "femme",
+            "annuel": "2020",
+            "valeur": 424
+        },
+        {
+            "secteur_activite_cnss": "transport",
+            "genre": "ensemble",
+            "annuel": "2020",
+            "valeur": 5788
+        },
+        {
+            "secteur_activite_cnss": "transport",
+            "genre": "homme",
+            "annuel": "2021",
+            "valeur": 6649
+        },
+        {
+            "secteur_activite_cnss": "transport",
+            "genre": "femme",
+            "annuel": "2021",
+            "valeur": 675
+        },
+        {
+            "secteur_activite_cnss": "transport",
+            "genre": "ensemble",
+            "annuel": "2021",
+            "valeur": 7324
+        },
+        {
+            "secteur_activite_cnss": "transport",
+            "genre": "homme",
+            "annuel": "2022",
+            "valeur": 7204
+        },
+        {
+            "secteur_activite_cnss": "transport",
+            "genre": "femme",
+            "annuel": "2022",
+            "valeur": 1122
+        },
+        {
+            "secteur_activite_cnss": "transport",
+            "genre": "ensemble",
+            "annuel": "2022",
+            "valeur": 8326
+        },
+        {
+            "secteur_activite_cnss": "transport",
+            "genre": "homme",
+            "annuel": "2023",
+            "valeur": 5275
+        },
+        {
+            "secteur_activite_cnss": "transport",
+            "genre": "femme",
+            "annuel": "2023",
+            "valeur": 298
+        },
+        {
+            "secteur_activite_cnss": "transport",
+            "genre": "ensemble",
+            "annuel": "2023",
+            "valeur": 5573
+        },
+        {
+            "secteur_activite_cnss": "ensemble",
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": 109030
+        },
+        {
+            "secteur_activite_cnss": "ensemble",
+            "genre": "femme",
+            "annuel": "2019",
+            "valeur": 64968
+        },
+        {
+            "secteur_activite_cnss": "ensemble",
+            "genre": "ensemble",
+            "annuel": "2019",
+            "valeur": 173998
+        },
+        {
+            "secteur_activite_cnss": "ensemble",
+            "genre": "homme",
+            "annuel": "2020",
+            "valeur": 24373
+        },
+        {
+            "secteur_activite_cnss": "ensemble",
+            "genre": "femme",
+            "annuel": "2020",
+            "valeur": 21778
+        },
+        {
+            "secteur_activite_cnss": "ensemble",
+            "genre": "ensemble",
+            "annuel": "2020",
+            "valeur": 46151
+        },
+        {
+            "secteur_activite_cnss": "ensemble",
+            "genre": "homme",
+            "annuel": "2021",
+            "valeur": 129219
+        },
+        {
+            "secteur_activite_cnss": "ensemble",
+            "genre": "femme",
+            "annuel": "2021",
+            "valeur": 71067
+        },
+        {
+            "secteur_activite_cnss": "ensemble",
+            "genre": "ensemble",
+            "annuel": "2021",
+            "valeur": 200286
+        },
+        {
+            "secteur_activite_cnss": "ensemble",
+            "genre": "homme",
+            "annuel": "2022",
+            "valeur": 199238
+        },
+        {
+            "secteur_activite_cnss": "ensemble",
+            "genre": "femme",
+            "annuel": "2022",
+            "valeur": 95441
+        },
+        {
+            "secteur_activite_cnss": "ensemble",
+            "genre": "ensemble",
+            "annuel": "2022",
+            "valeur": 294679
+        },
+        {
+            "secteur_activite_cnss": "ensemble",
+            "genre": "homme",
+            "annuel": "2023",
+            "valeur": 93710
+        },
+        {
+            "secteur_activite_cnss": "ensemble",
+            "genre": "femme",
+            "annuel": "2023",
+            "valeur": 65725
+        },
+        {
+            "secteur_activite_cnss": "ensemble",
+            "genre": "ensemble",
+            "annuel": "2023",
+            "valeur": 159435
+        }
+    ]
+}

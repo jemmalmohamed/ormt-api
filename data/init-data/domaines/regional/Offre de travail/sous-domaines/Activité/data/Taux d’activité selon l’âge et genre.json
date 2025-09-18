@@ -1,0 +1,305 @@
+{
+    "indicateur": "Taux d’activité selon le groupe d’âge et le genre",
+    "data": [
+        {
+            "groupe_age": "15-24 ans",
+            "genre": "Masculin",
+            "annuel": "2019",
+            "valeur": 36.8
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "genre": "Féminin",
+            "annuel": "2019",
+            "valeur": 13.2
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "genre": "Masculin",
+            "annuel": "2020",
+            "valeur": 35.3
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "genre": "Féminin",
+            "annuel": "2020",
+            "valeur": 11.4
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "genre": "Masculin",
+            "annuel": "2021",
+            "valeur": 35.4
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "genre": "Féminin",
+            "annuel": "2021",
+            "valeur": 12.1
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "genre": "Masculin",
+            "annuel": "2022",
+            "valeur": 33.5
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "genre": "Féminin",
+            "annuel": "2022",
+            "valeur": 11.7
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "genre": "Masculin",
+            "annuel": "2023",
+            "valeur": 33.4
+        },
+        {
+            "groupe_age": "15-24 ans",
+            "genre": "Féminin",
+            "annuel": "2023",
+            "valeur": 11.4
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "genre": "Masculin",
+            "annuel": "2019",
+            "valeur": 92.0
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "genre": "Féminin",
+            "annuel": "2019",
+            "valeur": 29.0
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "genre": "Masculin",
+            "annuel": "2020",
+            "valeur": 91.1
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "genre": "Féminin",
+            "annuel": "2020",
+            "valeur": 27.1
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "genre": "Masculin",
+            "annuel": "2021",
+            "valeur": 91.6
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "genre": "Féminin",
+            "annuel": "2021",
+            "valeur": 29.2
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "genre": "Masculin",
+            "annuel": "2022",
+            "valeur": 91.8
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "genre": "Féminin",
+            "annuel": "2022",
+            "valeur": 28.6
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "genre": "Masculin",
+            "annuel": "2023",
+            "valeur": 91.0
+        },
+        {
+            "groupe_age": "25-34 ans",
+            "genre": "Féminin",
+            "annuel": "2023",
+            "valeur": 29.2
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "genre": "Masculin",
+            "annuel": "2019",
+            "valeur": 95.7
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "genre": "Féminin",
+            "annuel": "2019",
+            "valeur": 27.2
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "genre": "Masculin",
+            "annuel": "2020",
+            "valeur": 96.0
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "genre": "Féminin",
+            "annuel": "2020",
+            "valeur": 26.0
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "genre": "Masculin",
+            "annuel": "2021",
+            "valeur": 95.3
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "genre": "Féminin",
+            "annuel": "2021",
+            "valeur": 27.2
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "genre": "Masculin",
+            "annuel": "2022",
+            "valeur": 95.0
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "genre": "Féminin",
+            "annuel": "2022",
+            "valeur": 25.2
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "genre": "Masculin",
+            "annuel": "2023",
+            "valeur": 94.2
+        },
+        {
+            "groupe_age": "35-44 ans",
+            "genre": "Féminin",
+            "annuel": "2023",
+            "valeur": 23.4
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "genre": "Masculin",
+            "annuel": "2019",
+            "valeur": 89.6
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "genre": "Féminin",
+            "annuel": "2019",
+            "valeur": 25.9
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "genre": "Masculin",
+            "annuel": "2020",
+            "valeur": 90.4
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "genre": "Féminin",
+            "annuel": "2020",
+            "valeur": 24.5
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "genre": "Masculin",
+            "annuel": "2021",
+            "valeur": 90.1
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "genre": "Féminin",
+            "annuel": "2021",
+            "valeur": 25.3
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "genre": "Masculin",
+            "annuel": "2022",
+            "valeur": 89.8
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "genre": "Féminin",
+            "annuel": "2022",
+            "valeur": 23.7
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "genre": "Masculin",
+            "annuel": "2023",
+            "valeur": 89.7
+        },
+        {
+            "groupe_age": "45-59 ans",
+            "genre": "Féminin",
+            "annuel": "2023",
+            "valeur": 22.0
+        },
+        {
+            "groupe_age": "60 ans et plus",
+            "genre": "Masculin",
+            "annuel": "2019",
+            "valeur": 37.7
+        },
+        {
+            "groupe_age": "60 ans et plus",
+            "genre": "Féminin",
+            "annuel": "2019",
+            "valeur": 10.3
+        },
+        {
+            "groupe_age": "60 ans et plus",
+            "genre": "Masculin",
+            "annuel": "2020",
+            "valeur": 38.3
+        },
+        {
+            "groupe_age": "60 ans et plus",
+            "genre": "Féminin",
+            "annuel": "2020",
+            "valeur": 9.3
+        },
+        {
+            "groupe_age": "60 ans et plus",
+            "genre": "Masculin",
+            "annuel": "2021",
+            "valeur": 38.4
+        },
+        {
+            "groupe_age": "60 ans et plus",
+            "genre": "Féminin",
+            "annuel": "2021",
+            "valeur": 9.6
+        },
+        {
+            "groupe_age": "60 ans et plus",
+            "genre": "Masculin",
+            "annuel": "2022",
+            "valeur": 37.2
+        },
+        {
+            "groupe_age": "60 ans et plus",
+            "genre": "Féminin",
+            "annuel": "2022",
+            "valeur": 8.6
+        },
+        {
+            "groupe_age": "60 ans et plus",
+            "genre": "Masculin",
+            "annuel": "2023",
+            "valeur": 35.9
+        },
+        {
+            "groupe_age": "60 ans et plus",
+            "genre": "Féminin",
+            "annuel": "2023",
+            "valeur": 7.9
+        }
+    ]
+}

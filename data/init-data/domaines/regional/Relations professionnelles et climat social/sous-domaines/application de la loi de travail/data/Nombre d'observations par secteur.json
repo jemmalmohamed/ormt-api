@@ -1,0 +1,50 @@
+{
+    "indicateur": "nombre d’observations par secteur",
+    "data": [
+        {
+            "secteur_activite": "Industrie, BTP, commerce et services",
+            "annuel": "2021",
+            "valeur": 207586
+        },
+        {
+            "secteur_activite": "Industrie, BTP, commerce et services",
+            "annuel": "2022",
+            "valeur": 265377
+        },
+        {
+            "secteur_activite": "Industrie, BTP, commerce et services",
+            "annuel": "2023",
+            "valeur": 476537
+        },
+        {
+            "secteur_activite": "Agriculture",
+            "annuel": "2021",
+            "valeur": 20244
+        },
+        {
+            "secteur_activite": "Agriculture",
+            "annuel": "2022",
+            "valeur": 31935
+        },
+        {
+            "secteur_activite": "Agriculture",
+            "annuel": "2023",
+            "valeur": 16470
+        },
+        {
+            "secteur_activite": "Total",
+            "annuel": "2021",
+            "valeur": 227830
+        },
+        {
+            "secteur_activite": "Total",
+            "annuel": "2022",
+            "valeur": 297312
+        },
+        {
+            "secteur_activite": "Total",
+            "annuel": "2023",
+            "valeur": 493007
+        }
+    ]
+}

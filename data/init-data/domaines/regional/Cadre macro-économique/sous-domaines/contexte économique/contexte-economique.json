@@ -1,0 +1,206 @@
+{
+  "nom": "contexte économique",
+  "description": "contexte économique",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "indicateurs": [
+    {
+      "nom": "produit intérieur brut aux prix courants",
+      "categorie": "contexte économique",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "millions de dh",
+      "periode": "2015-2023",
+      "description": "produit intérieur brut aux prix courants",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "produit intérieur brut aux prix courants - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "taux de croissance du pib en volume",
+      "categorie": "contexte économique",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2015-2024",
+      "description": "variation annuelle en pourcentage du pib",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "taux de croissance du pib en volume - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "produit intérieur brut par habitant (aux prix courants) par région",
+      "categorie": "contexte économique",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "dh",
+      "periode": "2015-2022",
+      "description": "montant du pib rapporté au nombre d’habitants d’une région.",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "produit intérieur brut par habitant (aux prix courants) par région - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "valeur ajoutée par branche d’activité aux prix courants",
+      "categorie": "contexte économique",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "millions de dh",
+      "periode": "2022",
+      "description": "valeur totale ajoutée par chaque branche d’activité économique, exprimée en millions de dirhams aux prix courants.",
+      "dimensions": [
+        {
+          "nom": "branche_activite",
+          "libelle": "branche d’activité",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "valeur ajoutée par branche d’activité aux prix courants - Choropleth",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    }
+  ]
+}
