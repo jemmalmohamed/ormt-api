@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "Nombre de visites des inspecteurs de travail",
+      "titre": "Nombre de visites des inspecteurs de travail",
       "categorie": "Application de la loi",
       "abreviation": "",
       "typeTb": "grand public",
@@ -48,6 +49,7 @@
     },
     {
       "nom": "Nombre de observations émises",
+      "titre": "Nombre de observations émises",
       "categorie": "Application de la loi",
       "abreviation": "",
       "typeTb": "grand public",
@@ -85,6 +87,7 @@
     },
     {
       "nom": "Nombre d'observations par motif d'observation",
+      "titre": "Nombre d'observations par motif d'observation",
       "categorie": "Application de la loi",
       "abreviation": "",
       "typeTb": "grand public",
@@ -131,6 +134,7 @@
     },
     {
       "nom": "Nombre d'observations par secteur",
+      "titre": "Nombre d'observations par secteur",
       "categorie": "Application de la loi",
       "abreviation": "",
       "typeTb": "grand public",
@@ -177,6 +181,7 @@
     },
     {
       "nom": "Nombre de PV",
+      "titre": "Nombre de PV",
       "categorie": "Application de la loi",
       "abreviation": "",
       "typeTb": "grand public",
@@ -214,6 +219,7 @@
     },
     {
       "nom": "Nombre de contraventions",
+      "titre": "Nombre de contraventions",
       "categorie": "Application de la loi",
       "abreviation": "",
       "typeTb": "grand public",
@@ -251,6 +257,7 @@
     },
     {
       "nom": "Nombre de délits",
+      "titre": "Nombre de délits",
       "categorie": "Application de la loi",
       "abreviation": "",
       "typeTb": "grand public",

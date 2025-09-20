@@ -28,6 +28,7 @@ import ma.org.ormt.modules.dashboard.domaine.tbdomaine.dtos.details.TBDomaineDet
 import ma.org.ormt.modules.dashboard.domaine.tbdomaine.dtos.details.TBDomaineDetailDtoMapper;
 import ma.org.ormt.modules.dashboard.domaine.tbdomaine.models.TBDomaine;
 import ma.org.ormt.modules.dashboard.domaine.tbdomaine.services.TBDomaineService;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @RestController
 @RequestMapping("api/v1/public/dashboards/{tableauBordId}/tb-domaines") // Context-aware public controller
@@ -39,6 +40,7 @@ public class TBDomainePublicLoadController extends BaseController<TBDomaine> {
         private final TBDomaineService tbDomaineService;
         private final TBDomaineDtoMapper tbDomaineDtoMapper;
         private final TBDomaineDetailDtoMapper tbDomaineDetailMapper;
+        private final IndicateurService indicateurService;
 
         @Operation(summary = "Get all " + ENTITY_NAME + "s in tableau de bord (context-aware)")
         @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Ok", content = {
@@ -78,58 +80,6 @@ public class TBDomainePublicLoadController extends BaseController<TBDomaine> {
                                 HttpStatus.OK, true);
         }
 
-        // @Operation(summary = "Get all " + ENTITY_NAME
-        // + "s with pivot table data (context-aware)", description = "List TB domaines
-        // with enriched indicateur table data. Use tableFormat: 'pivot', 'flat',
-        // 'crud', 'create', 'both', or 'all'")
-        // @ApiResponses(value = { @ApiResponse(responseCode = "200", description =
-        // "Ok", content = {
-        // @Content(mediaType = "application/json", array = @ArraySchema(schema =
-        // @Schema(implementation = TBDomaineDetailDto.class))) }),
-        // @ApiResponse(responseCode = "403", description = "Permission denied", content
-        // = @Content(mediaType = "ErrorResponse"))
-        // })
-        // @GetMapping("")
-        // @PreAuthorize("hasAuthority('dashboard:list')")
-        // public ResponseEntity<RestResponse<List<TBDomaineDetailDto>>>
-        // getTBDomainesWithPivotTable(
-        // @PathVariable("tableauBordId") Long tableauBordId,
-        // @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
-        // @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
-        // @RequestParam(value = "sortField", defaultValue = "createdDate") String
-        // sortField,
-        // @RequestParam(value = "sortDirection", defaultValue = "DESC") Direction
-        // direction,
-        // @RequestParam(value = "filters", defaultValue = "") List<String> filters,
-        // @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter,
-        // @Parameter(description = "Table format: 'pivot', 'flat', 'crud', 'create',
-        // 'both', or 'all'", example = "pivot") @RequestParam(value = "tableFormat",
-        // defaultValue = "pivot") String tableFormat) {
-
-        // if (!hasResourceAccess(tableauBordId, "tableauBord", "lecture")) {
-        // return createForbiddenResponse();
-        // }
-
-        // List<String> effectiveFilters = (filters == null) ? new
-        // java.util.ArrayList<>()
-        // : new java.util.ArrayList<>(filters);
-        // effectiveFilters.add("actif:like:true");
-        // effectiveFilters.add("tableauBordDomaines.tableauBord.id:=:" +
-        // tableauBordId);
-
-        // QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField,
-        // direction,
-        // effectiveFilters, globalFilter);
-
-        // List<TBDomaineDetailDto> data =
-        // tbDomaineService.getTBDomainesWithPivotTable(requestParams,
-        // tableFormat);
-
-        // return ResponseEntity.ok(RestResponse.<List<TBDomaineDetailDto>>builder()
-        // .data(data)
-        // .build());
-        // }
-
         @Operation(summary = "Get " + ENTITY_NAME
                         + " with pivot table data (context-aware)", description = "Get TB domaine with enriched indicateur table data. Use tableFormat: 'pivot', 'flat', 'crud', 'create', 'both', or 'all'")
         @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Ok", content = {
@@ -157,9 +107,9 @@ public class TBDomainePublicLoadController extends BaseController<TBDomaine> {
         @Override
         protected <DTO> DTO mapToDto(TBDomaine entity, Class<DTO> dtoClass) {
                 if (dtoClass == TBDomaineDetailDto.class) {
-                        return dtoClass.cast(tbDomaineDetailMapper.mapToDto(entity));
+                        return dtoClass.cast(tbDomaineDetailMapper.mapToDto(entity, indicateurService));
                 } else if (dtoClass == TBDomaineDto.class) {
-                        return dtoClass.cast(tbDomaineDtoMapper.mapToDto(entity));
+                        return dtoClass.cast(tbDomaineDtoMapper.mapToDto(entity, indicateurService));
                 }
                 throw new IllegalArgumentException("Unsupported DTO type: " + dtoClass.getName());
         }

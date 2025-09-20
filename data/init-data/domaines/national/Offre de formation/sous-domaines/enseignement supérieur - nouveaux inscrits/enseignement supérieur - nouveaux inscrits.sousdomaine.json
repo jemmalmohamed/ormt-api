@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "Nombre de nouveaux inscrits de l'enseignement supérieur par composante",
+      "titre": "Nombre de nouveaux inscrits de l'enseignement supérieur par composante",
       "description": "Nombre de nouveaux inscrits de l'enseignement supérieur par composante.",
       "categorie": "Nouveaux inscrits",
       "abreviation": "ES",
@@ -56,6 +57,7 @@
     },
     {
       "nom": "Nombre de nouveaux inscrits de l'enseignement supérieur par genre",
+      "titre": "Nombre de nouveaux inscrits de l'enseignement supérieur par genre",
       "description": "Nombre de nouveaux inscrits de l'enseignement supérieur par genre.",
       "categorie": "Nouveaux inscrits",
       "abreviation": "ES",
@@ -101,6 +103,7 @@
     },
     {
       "nom": "Nombre de nouveaux inscrits de l'enseignement universitaire public par domaine d'études",
+      "titre": "Nombre de nouveaux inscrits de l'enseignement universitaire public par domaine d'études",
       "description": "Nombre de nouveaux inscrits de l'enseignement universitaire public par domaine d'études.",
       "categorie": "Nouveaux inscrits",
       "abreviation": "ES",
@@ -146,6 +149,7 @@
     },
     {
       "nom": "Nombre de nouveaux inscrits de l'enseignement universitaire public par genre",
+      "titre": "Nombre de nouveaux inscrits de l'enseignement universitaire public par genre",
       "description": "Nombre de nouveaux inscrits de l'enseignement universitaire public par genre.",
       "categorie": "Nouveaux inscrits",
       "abreviation": "ES",
@@ -191,6 +195,7 @@
     },
     {
       "nom": "Nombre de nouveaux inscrits de l'enseignement supérieur privé par genre",
+      "titre": "Nombre de nouveaux inscrits de l'enseignement supérieur privé par genre",
       "description": "Nombre de nouveaux inscrits de l'enseignement supérieur privé par genre.",
       "categorie": "Nouveaux inscrits",
       "abreviation": "ES",
@@ -236,6 +241,7 @@
     },
     {
       "nom": "Nombre de nouveaux inscrits de l'enseignement supérieur privé par domaine d'études",
+      "titre": "Nombre de nouveaux inscrits de l'enseignement supérieur privé par domaine d'études",
       "description": "Nombre de nouveaux inscrits de l'enseignement supérieur privé par domaine d'études.",
       "categorie": "Nouveaux inscrits",
       "abreviation": "ES",
@@ -281,6 +287,7 @@
     },
     {
       "nom": "Nombre de nouveaux inscrits de la formation des cadres par domaine d'études",
+      "titre": "Nombre de nouveaux inscrits de la formation des cadres par domaine d'études",
       "description": "Nombre de nouveaux inscrits de la formation des cadres par domaine d'études.",
       "categorie": "Nouveaux inscrits",
       "abreviation": "ES",
@@ -326,6 +333,7 @@
     },
     {
       "nom": "Nombre de nouveaux inscrits de la formation des cadres par genre",
+      "titre": "Nombre de nouveaux inscrits de la formation des cadres par genre",
       "description": "Nombre de nouveaux inscrits de la formation des cadres par genre.",
       "categorie": "Nouveaux inscrits",
       "abreviation": "ES",

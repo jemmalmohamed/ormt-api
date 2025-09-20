@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "création d'emploi par genre",
+      "titre": "création d'emploi par genre",
       "description": "création d'emploi par genre",
       "categorie": "création d'emploi",
       "abreviation": "",
@@ -66,6 +67,7 @@
     },
     {
       "nom": "création d'emploi par diplôme",
+      "titre": "création d'emploi par diplôme",
       "description": "création d'emploi par diplôme",
       "categorie": "création d'emploi",
       "abreviation": "",
@@ -121,6 +123,7 @@
     },
     {
       "nom": "création d'emploi par statut professionnel",
+      "titre": "création d'emploi par statut professionnel",
       "description": "création d'emploi par statut professionnel",
       "categorie": "création d'emploi",
       "abreviation": "",
@@ -176,6 +179,7 @@
     },
     {
       "nom": "création d'emploi par secteur d'activité -7p",
+      "titre": "création d'emploi par secteur d'activité -7p",
       "description": "création d'emploi par secteur d'activité -7p",
       "categorie": "création d'emploi",
       "abreviation": "",
@@ -231,6 +235,7 @@
     },
     {
       "nom": "création d'emploi par secteur d'activité -2p",
+      "titre": "création d'emploi par secteur d'activité -2p",
       "description": "création d'emploi par secteur d'activité -2p",
       "categorie": "création d'emploi",
       "abreviation": "",
@@ -286,6 +291,7 @@
     },
     {
       "nom": "création d'emploi par secteur d'emploi",
+      "titre": "création d'emploi par secteur d'emploi",
       "description": "création d'emploi par secteur d'emploi",
       "categorie": "création d'emploi",
       "abreviation": "",
@@ -341,6 +347,7 @@
     },
     {
       "nom": "création d'emploi par type d'emploi",
+      "titre": "création d'emploi par type d'emploi",
       "description": "création d'emploi par type d'emploi",
       "categorie": "création d'emploi",
       "abreviation": "",
@@ -396,7 +403,8 @@
     },
     {
       "nom": "création d'emploi par région",
-      "description": "création d'emploi par région",
+      "titre": "création d'emploi",
+      "description": "création d'emploi",
       "categorie": "création d'emploi",
       "abreviation": "",
       "roleAcces": [
@@ -433,7 +441,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "création d'emploi par région - Choropleth",
+          "nom": "création d'emploi - Choropleth",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -442,6 +450,7 @@
     },
     {
       "nom": "création d'emploi salariés par secteur d'activité",
+      "titre": "création d'emploi salariés par secteur d'activité",
       "description": "création d'emploi salariés par secteur d'activité - cnss",
       "categorie": "création d'emploi",
       "abreviation": "",
@@ -497,7 +506,8 @@
     },
     {
       "nom": "création d'emploi salariés par région",
-      "description": "création d'emploi salariés par région",
+      "titre": "création d'emploi salariés",
+      "description": "création d'emploi salariés",
       "categorie": "création d'emploi",
       "abreviation": "",
       "roleAcces": [
@@ -552,6 +562,7 @@
     },
     {
       "nom": "création d'emploi eqtp par secteur d'activité",
+      "titre": "création d'emploi eqtp par secteur d'activité",
       "description": "création d'emploi eqtp par secteur d'activité",
       "categorie": "création d'emploi",
       "abreviation": "",
@@ -598,6 +609,7 @@
     },
     {
       "nom": "création d'emploi indépendants déclaré à la cnss par secteur d'activité",
+      "titre": "création d'emploi indépendants déclaré à la cnss par secteur d'activité",
       "description": "création d'emploi indépendants déclaré à la cnss par secteur d'activité",
       "categorie": "création d'emploi",
       "abreviation": "",
@@ -653,7 +665,8 @@
     },
     {
       "nom": "création d'emploi indépendants déclaré à la cnss par région",
-      "description": "création d'emploi indépendants déclaré à la cnss par région",
+      "titre": "création d'emploi indépendants déclaré à la cnss",
+      "description": "création d'emploi indépendants déclaré à la cnss",
       "categorie": "création d'emploi",
       "abreviation": "",
       "roleAcces": [
@@ -708,6 +721,7 @@
     },
     {
       "nom": "création d'emploi informel estimé",
+      "titre": "création d'emploi informel estimé",
       "description": "création d'emploi informel estimé",
       "categorie": "création d'emploi",
       "abreviation": "",

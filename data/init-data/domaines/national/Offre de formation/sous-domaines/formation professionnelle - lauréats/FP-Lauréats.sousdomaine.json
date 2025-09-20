@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "Nombre de lauréats de la formation professionnelle par mode de formation",
+      "titre": "Nombre de lauréats de la formation professionnelle par mode de formation",
       "description": "Nombre de lauréats de la formation professionnelle par mode de formation.",
       "categorie": "Lauréats",
       "abreviation": "FP",
@@ -56,6 +57,7 @@
     },
     {
       "nom": "Nombre de lauréats de la formation professionnelle par opérateur de formation",
+      "titre": "Nombre de lauréats de la formation professionnelle par opérateur de formation",
       "description": "Nombre de lauréats de la formation professionnelle par opérateur de formation.",
       "categorie": "Lauréats",
       "abreviation": "FP",
@@ -101,6 +103,7 @@
     },
     {
       "nom": "Nombre de lauréats de la formation professionnelle par niveau de formation",
+      "titre": "Nombre de lauréats de la formation professionnelle par niveau de formation",
       "description": "Nombre de lauréats de la formation professionnelle par niveau de formation.",
       "categorie": "Lauréats",
       "abreviation": "FP",
@@ -146,7 +149,8 @@
     },
     {
       "nom": "Nombre de lauréats de la formation professionnelle par région",
-      "description": "Nombre de lauréats de la formation professionnelle par région.",
+      "titre": "Nombre de lauréats de la formation professionnelle",
+      "description": "Nombre de lauréats de la formation professionnelle.",
       "categorie": "Lauréats",
       "abreviation": "FP",
       "roleAcces": [
@@ -182,7 +186,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Nombre de lauréats de la formation professionnelle par région - Histogramme",
+          "nom": "Nombre de lauréats de la formation professionnelle - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""

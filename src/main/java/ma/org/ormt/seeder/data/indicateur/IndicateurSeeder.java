@@ -54,6 +54,7 @@ public class IndicateurSeeder {
         try {
             Indicateur newIndicateur = new Indicateur();
             newIndicateur.setNom(indicateurRequest.getNom().toLowerCase());
+            newIndicateur.setTitre(indicateurRequest.getTitre().toLowerCase());
             newIndicateur.setCategorie(indicateurRequest.getCategorie().toLowerCase());
             newIndicateur.setActif(indicateurRequest.getActif());
             newIndicateur.setAbreviation(indicateurRequest.getAbreviation().toLowerCase());

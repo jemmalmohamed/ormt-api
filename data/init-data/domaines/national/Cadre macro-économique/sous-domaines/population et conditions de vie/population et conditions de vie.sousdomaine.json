@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "population municipale",
+      "titre": "population municipale",
       "description": "population municipale",
       "categorie": "population et conditions de vie",
       "abreviation": "",
@@ -66,7 +67,8 @@
     },
     {
       "nom": "incidence de la pauvreté absolue par région",
-      "description": "incidence de la pauvreté absolue par région",
+      "titre": "incidence de la pauvreté absolue",
+      "description": "incidence de la pauvreté absolue",
       "categorie": "population et conditions de vie",
       "abreviation": "",
       "roleAcces": [
@@ -103,7 +105,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "incidence de la pauvreté absolue par région - Choropleth",
+          "nom": "incidence de la pauvreté absolue - Choropleth",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -112,7 +114,8 @@
     },
     {
       "nom": "taux de pauvreté multidimensionnelle par région",
-      "description": "taux de pauvreté multidimensionnelle par région",
+      "titre": "taux de pauvreté multidimensionnelle",
+      "description": "taux de pauvreté multidimensionnelle",
       "categorie": "population et conditions de vie",
       "abreviation": "",
       "roleAcces": [
@@ -149,7 +152,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "taux de pauvreté multidimensionnelle par région - Choropleth",
+          "nom": "taux de pauvreté multidimensionnelle - Choropleth",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -158,7 +161,8 @@
     },
     {
       "nom": "taux de vulnérabilité à la pauvreté par région",
-      "description": "taux de vulnérabilité à la pauvreté par région",
+      "titre": "taux de vulnérabilité à la pauvreté",
+      "description": "taux de vulnérabilité à la pauvreté",
       "categorie": "population et conditions de vie",
       "abreviation": "",
       "roleAcces": [
@@ -195,7 +199,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "taux de vulnérabilité à la pauvreté par région - Choropleth",
+          "nom": "taux de vulnérabilité à la pauvreté - Choropleth",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""

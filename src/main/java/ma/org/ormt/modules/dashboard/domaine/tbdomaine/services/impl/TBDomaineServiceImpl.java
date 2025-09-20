@@ -185,8 +185,8 @@ public class TBDomaineServiceImpl extends BaseServiceImpl<TBDomaine> implements 
     public TBDomaineDetailDto getTBDomaineWithPivotTable(Long id, String tableFormat) {
         TBDomaine tbDomaine = findById(id).orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
 
-        // Map entity to detail DTO
-        TBDomaineDetailDto dto = tbDomaineDetailMapper.mapToDto(tbDomaine);
+        // Map entity to detail DTO with services context
+        TBDomaineDetailDto dto = tbDomaineDetailMapper.mapToDto(tbDomaine, indicateurService);
 
         // Enrich each associated indicateur with pivot table data
         if (tableFormat != null && !tableFormat.isEmpty() && dto.getTbDomaineIndicateurs() != null) {
@@ -207,7 +207,7 @@ public class TBDomaineServiceImpl extends BaseServiceImpl<TBDomaine> implements 
         Page<TBDomaine> page = getEntityList(requestParams);
 
         return page.getContent().stream().map(tbDomaine -> {
-            TBDomaineDetailDto dto = tbDomaineDetailMapper.mapToDto(tbDomaine);
+            TBDomaineDetailDto dto = tbDomaineDetailMapper.mapToDto(tbDomaine, indicateurService);
             if (tableFormat != null && !tableFormat.isEmpty() && dto.getTbDomaineIndicateurs() != null) {
                 for (TBDomaineIndicateurDto assocDto : dto.getTbDomaineIndicateurs()) {
                     if (assocDto.getIndicateur() != null) {

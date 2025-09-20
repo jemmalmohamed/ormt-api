@@ -32,6 +32,10 @@ public class IndicateurSousDomaineDetailDto extends Dto {
 
     private String unite;
 
+    private Boolean regional;
+
+    private String territoire;
+
     private SourceSummaryDto source;
 
     private List<GrapheConfigurationDto> grapheConfigurations;

@@ -28,6 +28,9 @@ public class IndicateurRequestDto extends Dto {
     private String nom;
 
     @NotBlank(message = "Ce champ est requis.")
+    private String titre;
+
+    @NotBlank(message = "Ce champ est requis.")
     private String categorie;
 
     @NotNull(message = "Ce champ est requis.")

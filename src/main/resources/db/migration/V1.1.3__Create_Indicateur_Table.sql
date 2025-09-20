@@ -3,6 +3,7 @@ CREATE TABLE
     IF NOT EXISTS source (
         id BIGSERIAL PRIMARY KEY,
         nom varchar(255) NOT NULL UNIQUE,
+        
         description TEXT, 
         url VARCHAR(255),
         abreviation VARCHAR(100),
@@ -13,13 +14,14 @@ CREATE TABLE
         created_by VARCHAR(50),
         last_modified_by VARCHAR(50)
     );
-  
+   
 
 -- Indicateur
 CREATE TABLE
     IF NOT EXISTS indicateur (
         id BIGSERIAL PRIMARY KEY,
         nom  varchar(255) NOT NULL UNIQUE,
+        titre varchar(255) NOT NULL,
         description TEXT,
         abreviation VARCHAR(10),
         actif BOOLEAN NOT NULL DEFAULT TRUE,

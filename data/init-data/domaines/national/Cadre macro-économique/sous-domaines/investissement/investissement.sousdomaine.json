@@ -4,20 +4,21 @@
   "roleAcces": [
     {
       "roleCode": "role_public",
-      "niveauacces": "lecture"
+      "niveauAcces": "lecture"
     }
   ],
   "actif": true,
   "indicateurs": [
     {
       "nom": "Formation brut de capital fixe",
+      "titre": "Formation brut de capital fixe",
       "description": "Formation brut de capital fixe",
       "abreviation": "FBCF",
       "categorie": "investissement",
       "roleAcces": [
         {
           "roleCode": "role_public",
-          "niveauacces": "lecture"
+          "niveauAcces": "lecture"
         }
       ],
       "actif": true,
@@ -48,13 +49,14 @@
     },
     {
       "nom": "Volume global de l'investissement public",
+      "titre": "Volume global de l'investissement public",
       "description": "Volume global de l'investissement public",
       "abreviation": "",
       "categorie": "investissement",
       "roleAcces": [
         {
           "roleCode": "role_public",
-          "niveauacces": "lecture"
+          "niveauAcces": "lecture"
         }
       ],
       "actif": true,
@@ -85,13 +87,14 @@
     },
     {
       "nom": "Flux net des investissements directs étrangers au Maroc",
+      "titre": "Flux net des investissements directs étrangers au Maroc",
       "description": "Flux net des investissements directs étrangers au Maroc",
       "abreviation": "",
       "categorie": "investissement",
       "roleAcces": [
         {
           "roleCode": "role_public",
-          "niveauacces": "lecture"
+          "niveauAcces": "lecture"
         }
       ],
       "actif": true,
@@ -122,13 +125,14 @@
     },
     {
       "nom": "Flux des investissements directs marocains à l'étranger",
+      "titre": "Flux des investissements directs marocains à l'étranger",
       "description": "Flux des investissements directs marocains à l'étranger",
       "abreviation": "",
       "categorie": "investissement",
       "roleAcces": [
         {
           "roleCode": "role_public",
-          "niveauacces": "lecture"
+          "niveauAcces": "lecture"
         }
       ],
       "actif": true,

@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "Nombre de conflits par région",
+      "titre": "Nombre de conflits",
       "categorie": "Relations professionnelles",
       "abreviation": "",
       "typeTb": "grand public",
@@ -25,7 +26,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2021-2023",
-      "description": "Nombre de conflits par région",
+      "description": "Nombre de conflits",
       "dimensions": [
         {
           "nom": "region",
@@ -48,7 +49,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Nombre de conflits par région - CHOROPLETH",
+          "nom": "Nombre de conflits - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -57,6 +58,7 @@
     },
     {
       "nom": "Nombre de grèves évitées par région",
+      "titre": "Nombre de grèves évitées",
       "categorie": "Relations professionnelles",
       "abreviation": "",
       "typeTb": "grand public",
@@ -71,7 +73,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2021-2023",
-      "description": "Nombre de grèves évitées par région",
+      "description": "Nombre de grèves évitées",
       "dimensions": [
         {
           "nom": "region",
@@ -94,7 +96,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Nombre de grèves évitées par région - CHOROPLETH",
+          "nom": "Nombre de grèves évitées - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -103,6 +105,7 @@
     },
     {
       "nom": "Nombre de grèves déclenchées par région",
+      "titre": "Nombre de grèves déclenchées",
       "categorie": "Relations professionnelles",
       "abreviation": "",
       "typeTb": "grand public",
@@ -117,7 +120,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2021-2023",
-      "description": "Nombre de grèves déclenchées par région",
+      "description": "Nombre de grèves déclenchées",
       "dimensions": [
         {
           "nom": "region",
@@ -140,7 +143,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Nombre de grèves déclenchées par région - CHOROPLETH",
+          "nom": "Nombre de grèves déclenchées  - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -149,6 +152,7 @@
     },
     {
       "nom": "Nombre de grèves évitées par secteur",
+      "titre": "Nombre de grèves évitées par secteur",
       "categorie": "Relations professionnelles",
       "abreviation": "",
       "typeTb": "grand public",
@@ -195,6 +199,7 @@
     },
     {
       "nom": "Nombre de grèves déclenchées par secteur",
+      "titre": "Nombre de grèves déclenchées par secteur",
       "categorie": "Relations professionnelles",
       "abreviation": "",
       "typeTb": "grand public",

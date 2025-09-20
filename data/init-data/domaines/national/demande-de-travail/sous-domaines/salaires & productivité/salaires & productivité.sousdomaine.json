@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "productivité par secteur d'activité",
+      "titre": "productivité par secteur d'activité",
       "description": "productivité par secteur d'activité",
       "categorie": "productivité",
       "abreviation": "",
@@ -66,6 +67,7 @@
     },
     {
       "nom": "valeur ajoutée par secteur d'activité",
+      "titre": "valeur ajoutée par secteur d'activité",
       "description": "valeur ajoutée par secteur d'activité",
       "categorie": "productivité",
       "abreviation": "",
@@ -121,6 +123,7 @@
     },
     {
       "nom": "masse salariale par secteur d'activité",
+      "titre": "masse salariale par secteur d'activité",
       "description": "masse salariale par secteur d'activité",
       "categorie": "salaires",
       "abreviation": "",
@@ -176,6 +179,7 @@
     },
     {
       "nom": "salaire moyen par secteur d'activité",
+      "titre": "salaire moyen par secteur d'activité",
       "description": "salaire moyen par secteur d'activité",
       "categorie": "salaires",
       "abreviation": "",
@@ -231,6 +235,7 @@
     },
     {
       "nom": "smig journalier",
+      "titre": "smig journalier",
       "description": "smig journalier",
       "categorie": "salaires",
       "abreviation": "",
@@ -268,6 +273,7 @@
     },
     {
       "nom": "smag journalier",
+      "titre": "smag journalier",
       "description": "smag journalier",
       "categorie": "salaires",
       "abreviation": "",
@@ -305,6 +311,7 @@
     },
     {
       "nom": "salaire moyen à l'année n par secteur d'activité",
+      "titre": "salaire moyen à l'année n par secteur d'activité",
       "description": "salaire moyen à l'année n par secteur d'activité",
       "categorie": "salaires",
       "abreviation": "",
@@ -360,6 +367,7 @@
     },
     {
       "nom": "salaire moyen n-10 par secteur d'activité",
+      "titre": "salaire moyen n-10 par secteur d'activité",
       "description": "salaire moyen n-10 par secteur d'activité",
       "categorie": "salaires",
       "abreviation": "",
@@ -415,6 +423,7 @@
     },
     {
       "nom": "variation productivité",
+      "titre": "variation productivité",
       "description": "variation productivité",
       "categorie": "productivité",
       "abreviation": "",
@@ -452,6 +461,7 @@
     },
     {
       "nom": "variation valeur ajoutée",
+      "titre": "variation valeur ajoutée",
       "description": "variation valeur ajoutée",
       "categorie": "productivité",
       "abreviation": "",
@@ -489,6 +499,7 @@
     },
     {
       "nom": "variation de la masse salariale",
+      "titre": "variation de la masse salariale",
       "description": "variation de la masse salariale",
       "categorie": "salaires",
       "abreviation": "",

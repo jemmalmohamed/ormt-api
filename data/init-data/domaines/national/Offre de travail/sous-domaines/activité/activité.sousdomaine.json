@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "Population en âge d'activité",
+      "titre": "Population en âge d'activité",
       "description": "Population en âge d'activité selon groupe d'âge, milieu de résidence et genre",
       "categorie": "Volume",
       "abreviation": "",
@@ -74,6 +75,7 @@
     },
     {
       "nom": "Population inactive",
+      "titre": "Population inactive",
       "description": "Population inactive selon groupe d'âge, milieu de résidence et genre",
       "categorie": "Volume",
       "abreviation": "",
@@ -137,6 +139,7 @@
     },
     {
       "nom": "Population active",
+      "titre": "Population active",
       "description": "Population active selon groupe d'âge, milieu de résidence et genre",
       "categorie": "Volume",
       "abreviation": "",
@@ -200,6 +203,7 @@
     },
     {
       "nom": "Population active par diplôme et milieu",
+      "titre": "Population active par diplôme et milieu",
       "description": "Population active selon diplôme et milieu",
       "categorie": "Volume",
       "abreviation": "",
@@ -254,6 +258,7 @@
     },
     {
       "nom": "Population en active par diplôme et milieu de résidence",
+      "titre": "Population en active par diplôme et milieu de résidence",
       "description": "Population active selon diplôme et milieu de résidence",
       "categorie": "Volume",
       "abreviation": "",
@@ -308,6 +313,7 @@
     },
     {
       "nom": "Taux d'activité selon le genre et le milieu de résidence",
+      "titre": "Taux d'activité selon le genre et le milieu de résidence",
       "description": "Taux d'activité selon le genre et le milieu de résidence",
       "categorie": "Taux d'activité",
       "abreviation": "",
@@ -363,6 +369,7 @@
     },
     {
       "nom": "Taux d'activité selon le genre",
+      "titre": "Taux d'activité selon le genre",
       "description": "Taux d'activité selon le genre",
       "categorie": "Taux d'activité",
       "abreviation": "",
@@ -409,6 +416,7 @@
     },
     {
       "nom": "Taux d'activité selon le groupe d'âge et le milieu de résidence",
+      "titre": "Taux d'activité selon le groupe d'âge et le milieu de résidence",
       "description": "Taux d'activité selon le groupe d'âge et le milieu de résidence",
       "categorie": "Taux d'activité",
       "abreviation": "",
@@ -463,6 +471,7 @@
     },
     {
       "nom": "Taux d'activité selon le groupe d'âge et le genre",
+      "titre": "Taux d'activité selon le groupe d'âge et le genre",
       "description": "Taux d'activité selon le groupe d'âge et le genre",
       "categorie": "Taux d'activité",
       "abreviation": "",
@@ -517,6 +526,7 @@
     },
     {
       "nom": "Taux d'activité selon le diplôme et le milieu de résidence",
+      "titre": "Taux d'activité selon le diplôme et le milieu de résidence",
       "description": "Taux d'activité selon le diplôme et le milieu de résidence",
       "categorie": "Taux d'activité",
       "abreviation": "",
@@ -572,6 +582,7 @@
     },
     {
       "nom": "Taux d'activité selon le diplôme et le genre",
+      "titre": "Taux d'activité selon le diplôme et le genre",
       "description": "Taux d'activité selon le diplôme et le genre",
       "categorie": "Taux d'activité",
       "abreviation": "",
@@ -627,6 +638,7 @@
     },
     {
       "nom": "Taux d'activité selon le milieu de résidence",
+      "titre": "Taux d'activité selon le milieu de résidence",
       "description": "Taux d'activité selon le milieu de résidence",
       "categorie": "Taux d'activité",
       "abreviation": "",
@@ -673,7 +685,8 @@
     },
     {
       "nom": "Taux d'activité par région et le milieu de résidence",
-      "description": "Taux d'activité par région et le milieu de résidence",
+      "titre": "Taux d'activité par milieu de résidence",
+      "description": "Taux d'activité par milieu de résidence",
       "categorie": "Taux d'activité",
       "abreviation": "",
       "roleAcces": [
@@ -719,7 +732,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Taux d'activité par région et le milieu de résidence - CHOROPLETH",
+          "nom": "Taux d'activité par milieu de résidence - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -728,7 +741,8 @@
     },
     {
       "nom": "Taux d'activité par région et genre",
-      "description": "Taux d'activité par région et le genre",
+      "titre": "Taux d'activité par genre",
+      "description": "Taux d'activité par genre",
       "categorie": "Taux d'activité",
       "abreviation": "",
       "roleAcces": [
@@ -774,7 +788,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Taux d'activité par région et genre - CHOROPLETH",
+          "nom": "Taux d'activité par genre - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""

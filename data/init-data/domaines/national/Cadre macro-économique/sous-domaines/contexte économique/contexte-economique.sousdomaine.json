@@ -4,19 +4,20 @@
   "roleAcces": [
     {
       "roleCode": "role_public",
-      "niveauacces": "lecture"
+      "niveauAcces": "lecture"
     }
   ],
   "actif": true,
   "indicateurs": [
     {
       "nom": "produit intérieur brut aux prix courants",
+      "titre": "produit intérieur brut aux prix courants",
       "categorie": "contexte économique",
       "abreviation": "",
       "roleAcces": [
         {
           "roleCode": "role_public",
-          "niveauacces": "lecture"
+          "niveauAcces": "lecture"
         }
       ],
       "actif": true,
@@ -57,12 +58,13 @@
     },
     {
       "nom": "taux de croissance du pib en volume",
+      "titre": "taux de croissance du pib en volume",
       "categorie": "contexte économique",
       "abreviation": "",
       "roleAcces": [
         {
           "roleCode": "role_public",
-          "niveauacces": "lecture"
+          "niveauAcces": "lecture"
         }
       ],
       "actif": true,
@@ -103,12 +105,13 @@
     },
     {
       "nom": "produit intérieur brut par habitant (aux prix courants) par région",
+      "titre": "produit intérieur brut par habitant (aux prix courants)",
       "categorie": "contexte économique",
       "abreviation": "",
       "roleAcces": [
         {
           "roleCode": "role_public",
-          "niveauacces": "lecture"
+          "niveauAcces": "lecture"
         }
       ],
       "actif": true,
@@ -140,7 +143,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "produit intérieur brut par habitant (aux prix courants) par région - Choropleth",
+          "nom": "produit intérieur brut par habitant (aux prix courants) - Choropleth",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -149,12 +152,13 @@
     },
     {
       "nom": "valeur ajoutée par branche d'activité aux prix courants",
+      "titre": "valeur ajoutée par branche d'activité aux prix courants",
       "categorie": "contexte économique",
       "abreviation": "",
       "roleAcces": [
         {
           "roleCode": "role_public",
-          "niveauacces": "lecture"
+          "niveauAcces": "lecture"
         }
       ],
       "actif": true,

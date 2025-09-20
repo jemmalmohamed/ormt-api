@@ -27,6 +27,7 @@ public class DomaineCreateRequestDto {
     @NoArgsConstructor
     public static class IndicateurCreateRequestDto {
         private String nom;
+        private String titre;
         private String categorie;
 
         private Boolean actif;

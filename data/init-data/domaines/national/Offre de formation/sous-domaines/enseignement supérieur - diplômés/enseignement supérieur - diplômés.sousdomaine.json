@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "Nombre de diplômés de l'enseignement supérieur par composante",
+      "titre": "Nombre de diplômés de l'enseignement supérieur par composante",
       "description": "Nombre de diplômés de l'enseignement supérieur par composante.",
       "categorie": "Diplômés",
       "abreviation": "ES",
@@ -56,6 +57,7 @@
     },
     {
       "nom": "Nombre de diplômés de l'enseignement supérieur par genre",
+      "titre": "Nombre de diplômés de l'enseignement supérieur par genre",
       "description": "Nombre de diplômés de l'enseignement supérieur par genre.",
       "categorie": "Diplômés",
       "abreviation": "ES",
@@ -101,6 +103,7 @@
     },
     {
       "nom": "Nombre de diplômés de l'enseignement universitaire public par domaine d'études",
+      "titre": "Nombre de diplômés de l'enseignement universitaire public par domaine d'études",
       "description": "Nombre de diplômés de l'enseignement universitaire public par domaine d'études.",
       "categorie": "Diplômés",
       "abreviation": "ES",
@@ -146,6 +149,7 @@
     },
     {
       "nom": "Nombre de diplômés de l'enseignement supérieur public par genre",
+      "titre": "Nombre de diplômés de l'enseignement supérieur public par genre",
       "description": "Nombre de diplômés de l'enseignement supérieur public par genre.",
       "categorie": "Diplômés",
       "abreviation": "ES",
@@ -191,6 +195,7 @@
     },
     {
       "nom": "Nombre de diplômés de l'enseignement supérieur privé par domaine d'études",
+      "titre": "Nombre de diplômés de l'enseignement supérieur privé par domaine d'études",
       "description": "Nombre de diplômés de l'enseignement supérieur privé par domaine d'études.",
       "categorie": "Diplômés",
       "abreviation": "ES",
@@ -236,6 +241,7 @@
     },
     {
       "nom": "Nombre de diplômés de l'enseignement supérieur privé par genre",
+      "titre": "Nombre de diplômés de l'enseignement supérieur privé par genre",
       "description": "Nombre de diplômés de l'enseignement supérieur privé par genre.",
       "categorie": "Diplômés",
       "abreviation": "ES",
@@ -281,6 +287,7 @@
     },
     {
       "nom": "Nombre de diplômés de la formation des cadres par domaine d'études",
+      "titre": "Nombre de diplômés de la formation des cadres par domaine d'études",
       "description": "Nombre de diplômés de la formation des cadres par domaine d'études.",
       "categorie": "Diplômés",
       "abreviation": "ES",
@@ -326,6 +333,7 @@
     },
     {
       "nom": "Nombre de diplômés de la formation des cadres par genre",
+      "titre": "Nombre de diplômés de la formation des cadres par genre",
       "description": "Nombre de diplômés de la formation des cadres par genre.",
       "categorie": "Diplômés",
       "abreviation": "ES",

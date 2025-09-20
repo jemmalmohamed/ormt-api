@@ -135,6 +135,11 @@ public class IndicateurExportSimpleService {
                             StringUtils.hasText(indicateur.getNom()) ? indicateur.getNom()
                                     : "");
                     break;
+                case TITRE:
+                    ExcelUtils.createCell(row, cellIndex,
+                            StringUtils.hasText(indicateur.getTitre()) ? indicateur.getTitre()
+                                    : "");
+                    break;
                 case DESCRIPTION:
                     ExcelUtils.createCell(row, cellIndex,
                             StringUtils.hasText(indicateur.getDescription())

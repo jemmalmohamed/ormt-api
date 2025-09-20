@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "nombre total des inscrits à l'anapec",
+      "titre": "nombre total des inscrits à l'anapec",
       "description": "nombre total des inscrits à l'anapec",
       "categorie": "Cumul des inscrits à l'ANAPEC",
       "abreviation": "",
@@ -48,6 +49,7 @@
     },
     {
       "nom": "inscrits à l'anapec par genre",
+      "titre": "inscrits à l'anapec par genre",
       "description": "répartition des inscrits à l'anapec par genre",
       "categorie": "Cumul des inscrits à l'ANAPEC",
       "abreviation": "",
@@ -94,6 +96,7 @@
     },
     {
       "nom": "inscrits à l'anapec par âge",
+      "titre": "inscrits à l'anapec par âge",
       "description": "répartition des inscrits à l'anapec par âge",
       "categorie": "Cumul des inscrits à l'ANAPEC",
       "abreviation": "",
@@ -140,6 +143,7 @@
     },
     {
       "nom": "inscrits à l'anapec par diplôme",
+      "titre": "inscrits à l'anapec par diplôme",
       "description": "répartition des inscrits à l'anapec par diplôme",
       "categorie": "Cumul des inscrits à l'ANAPEC",
       "abreviation": "",
@@ -186,7 +190,8 @@
     },
     {
       "nom": "inscrits à l'anapec par région",
-      "description": "répartition des inscrits à l'anapec par région",
+      "titre": "inscrits à l'anapec",
+      "description": "répartition des inscrits à l'anapec",
       "categorie": "Cumul des inscrits à l'ANAPEC",
       "abreviation": "",
       "roleAcces": [
@@ -223,7 +228,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "inscrits à l'anapec par région - Camembert",
+          "nom": "inscrits à l'anapec - Camembert",
           "grapheTypeCode": "CAMEMBERT",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -232,6 +237,7 @@
     },
     {
       "nom": "nombre de nouveaux inscrits à l'anapec",
+      "titre": "nombre de nouveaux inscrits à l'anapec",
       "description": "nombre de nouveaux inscrits à l'anapec",
       "categorie": "Cumul des inscrits à l'ANAPEC",
       "abreviation": "",
@@ -269,6 +275,7 @@
     },
     {
       "nom": "nouveaux inscrits à l'anapec par genre",
+      "titre": "nouveaux inscrits à l'anapec par genre",
       "description": "répartition des nouveaux inscrits à l'anapec par genre",
       "categorie": "Cumul des inscrits à l'ANAPEC",
       "abreviation": "",
@@ -315,6 +322,7 @@
     },
     {
       "nom": "nouveaux inscrits à l'anapec par âge",
+      "titre": "nouveaux inscrits à l'anapec par âge",
       "description": "répartition des nouveaux inscrits à l'anapec par âge",
       "categorie": "Cumul des inscrits à l'ANAPEC",
       "abreviation": "",
@@ -361,6 +369,7 @@
     },
     {
       "nom": "nouveaux inscrits à l'anapec par diplôme",
+      "titre": "nouveaux inscrits à l'anapec par diplôme",
       "description": "répartition des nouveaux inscrits à l'anapec par diplôme",
       "categorie": "Cumul des inscrits à l'ANAPEC",
       "abreviation": "",
@@ -407,7 +416,8 @@
     },
     {
       "nom": "nouveaux inscrits à l'anapec par région",
-      "description": "répartition des nouveaux inscrits à l'anapec par région",
+      "titre": "nouveaux inscrits à l'anapec",
+      "description": "répartition des nouveaux inscrits à l'anapec",
       "categorie": "Cumul des inscrits à l'ANAPEC",
       "abreviation": "",
       "roleAcces": [
@@ -444,7 +454,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "nouveaux inscrits à l'anapec par région - Camembert",
+          "nom": "nouveaux inscrits à l'anapec - Camembert",
           "grapheTypeCode": "CAMEMBERT",
           "isDefault": true,
           "chartOptionsJson": ""

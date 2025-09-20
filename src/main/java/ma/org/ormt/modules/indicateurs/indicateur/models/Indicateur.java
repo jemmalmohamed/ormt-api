@@ -41,6 +41,8 @@ public class Indicateur extends BaseEntity {
 
     private String nom;
 
+    private String titre;
+
     private String description;
 
     private String abreviation;
@@ -48,8 +50,6 @@ public class Indicateur extends BaseEntity {
     private String categorie;
 
     private Boolean actif;
-
-    // private String typeGraphe;
 
     private String typeTb;
 

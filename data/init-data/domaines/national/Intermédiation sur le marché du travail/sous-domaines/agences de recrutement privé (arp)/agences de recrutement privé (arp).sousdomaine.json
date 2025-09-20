@@ -1,6 +1,6 @@
 {
   "nom": "agences de recrutement privé (arp)",
-  "description": "statistiques sur les agences de recrutement privé par région.",
+  "description": "statistiques sur les agences de recrutement privé .",
   "roleAcces": [
     {
       "roleCode": "role_public",
@@ -11,7 +11,8 @@
   "indicateurs": [
     {
       "nom": "nombre des agences de recrutement privé par région",
-      "description": "nombre des agences de recrutement privé par région",
+      "titre": "nombre des agences de recrutement privé",
+      "description": "nombre des agences de recrutement privé",
       "categorie": "arp",
       "abreviation": "",
       "roleAcces": [
@@ -48,7 +49,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "nombre des agences de recrutement privé par région - CHOROPLETH",
+          "nom": "nombre des agences de recrutement privé - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -57,7 +58,8 @@
     },
     {
       "nom": "agences de recrutement privé par région",
-      "description": "répartition des agences de recrutement privé par région",
+      "titre": "agences de recrutement privé",
+      "description": "répartition des agences de recrutement privé",
       "categorie": "arp",
       "abreviation": "",
       "roleAcces": [
@@ -94,7 +96,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "agences de recrutement privé par région - CHOROPLETH",
+          "nom": "agences de recrutement privé - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""

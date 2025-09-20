@@ -28,6 +28,8 @@ public class IndicateurDto extends BaseDto {
 
     private String nom;
 
+    private String titre;
+
     private String regleCalcul;
 
     private Boolean actif;
@@ -43,6 +45,10 @@ public class IndicateurDto extends BaseDto {
     private SourceSummaryDto source;
 
     private boolean hasDonnees;
+
+    private boolean regional;
+
+    private String territoire;
 
     private List<GrapheConfigurationDto> grapheConfigurations;
 

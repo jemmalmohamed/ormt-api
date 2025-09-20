@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "Nouveaux entrants potentiels sur le MT par genre",
+      "titre": "Nouveaux entrants potentiels sur le MT par genre",
       "description": "Nouveaux entrants potentiels sur le marché du travail selon le genre",
       "categorie": "Nouveaux entrants potentiels sur le marché du travail",
       "abreviation": "",
@@ -56,6 +57,7 @@
     },
     {
       "nom": "Nouveaux entrants potentiels sur le MT par composante",
+      "titre": "Nouveaux entrants potentiels sur le MT par composante",
       "description": "Nouveaux entrants potentiels sur le marché du travail selon la composante",
       "categorie": "Nouveaux entrants potentiels sur le marché du travail",
       "abreviation": "",

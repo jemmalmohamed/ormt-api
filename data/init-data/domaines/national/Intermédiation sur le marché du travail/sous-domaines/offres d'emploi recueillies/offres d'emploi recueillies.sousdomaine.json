@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "nombre d'offre d'emploi recueillies",
+      "titre": "nombre d'offre d'emploi recueillies",
       "description": "nombre d'offre d'emploi recueillies",
       "categorie": "offres d'emploi",
       "abreviation": "",
@@ -48,7 +49,8 @@
     },
     {
       "nom": "offre d'emploi recueillies par région",
-      "description": "répartition des offres d'emploi recueillies par région",
+      "titre": "offre d'emploi recueillies",
+      "description": "répartition des offres d'emploi recueillies",
       "categorie": "offres d'emploi",
       "abreviation": "",
       "roleAcces": [
@@ -85,7 +87,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "offre d'emploi recueillies par région - Camembert",
+          "nom": "offre d'emploi recueillies - Camembert",
           "grapheTypeCode": "CAMEMBERT",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -94,6 +96,7 @@
     },
     {
       "nom": "offre d'emploi recueillies par taille d'entreprise",
+      "titre": "offre d'emploi recueillies par taille d'entreprise",
       "description": "répartition des offres d'emploi recueillies par taille d'entreprise",
       "categorie": "offres d'emploi",
       "abreviation": "",
@@ -140,6 +143,7 @@
     },
     {
       "nom": "offre d'emploi recueillies par contrat",
+      "titre": "offre d'emploi recueillies par contrat",
       "description": "répartition des offres d'emploi recueillies par type de contrat",
       "categorie": "offres d'emploi",
       "abreviation": "",

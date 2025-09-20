@@ -73,8 +73,8 @@ public class JsonGrapheConfigurationSeeder implements CommandLineRunner {
      */
     @Transactional
     private void processJsonFiles() throws IOException {
-        
-        Path domainesPath = Paths.get(dataExternalPath, "domaines" + territoire);
+
+        Path domainesPath = Paths.get(dataExternalPath, "init-data/domaines/" + territoire);
 
         if (!Files.exists(domainesPath)) {
             log.warn("Domaines directory not found: {}", domainesPath);

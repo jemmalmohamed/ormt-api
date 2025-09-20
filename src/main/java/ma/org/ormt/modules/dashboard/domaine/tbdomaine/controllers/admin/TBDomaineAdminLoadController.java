@@ -31,6 +31,7 @@ import ma.org.ormt.modules.dashboard.domaine.tbdomaine.dtos.details.TBDomaineDet
 import ma.org.ormt.modules.dashboard.domaine.tbdomaine.dtos.details.TBDomaineDetailDtoMapper;
 import ma.org.ormt.modules.dashboard.domaine.tbdomaine.models.TBDomaine;
 import ma.org.ormt.modules.dashboard.domaine.tbdomaine.services.TBDomaineService;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @RestController
 @RequestMapping("api/v1/admin/tb-domaines")
@@ -42,6 +43,7 @@ public class TBDomaineAdminLoadController extends BaseController<TBDomaine> {
         private final TBDomaineService domaineService;
         private final TBDomaineDtoMapper tbDomaineDtoMapper;
         private final TBDomaineDetailDtoMapper tbDomaineDetailMapper;
+        private final IndicateurService indicateurService;
 
         @Operation(summary = "Get all " + ENTITY_NAME + "s")
         @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Ok", content = {
@@ -144,9 +146,9 @@ public class TBDomaineAdminLoadController extends BaseController<TBDomaine> {
         @Override
         protected <DTO> DTO mapToDto(TBDomaine entity, Class<DTO> dtoClass) {
                 if (dtoClass == TBDomaineDetailDto.class) {
-                        return dtoClass.cast(tbDomaineDetailMapper.mapToDto(entity));
+                        return dtoClass.cast(tbDomaineDetailMapper.mapToDto(entity, indicateurService));
                 } else if (dtoClass == TBDomaineDto.class) {
-                        return dtoClass.cast(tbDomaineDtoMapper.mapToDto(entity));
+                        return dtoClass.cast(tbDomaineDtoMapper.mapToDto(entity, indicateurService));
                 }
                 throw new IllegalArgumentException("Unsupported DTO type: " + dtoClass.getName());
         }

@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "objectif ciblé d'entretiens de positionnement",
+      "titre": "objectif ciblé d'entretiens de positionnement",
       "description": "objectif ciblé d'entretiens de positionnement",
       "categorie": "entretiens de positionnement",
       "abreviation": "",
@@ -48,6 +49,7 @@
     },
     {
       "nom": "nombre d'entretiens de positionnement",
+      "titre": "nombre d'entretiens de positionnement",
       "description": "nombre d'entretiens de positionnement",
       "categorie": "entretiens de positionnement",
       "abreviation": "",
@@ -85,6 +87,7 @@
     },
     {
       "nom": "entretiens de positionnement par genre",
+      "titre": "entretiens de positionnement par genre",
       "description": "répartition des entretiens de positionnement par genre",
       "categorie": "entretiens de positionnement",
       "abreviation": "",
@@ -131,6 +134,7 @@
     },
     {
       "nom": "entretiens de positionnement par âge",
+      "titre": "entretiens de positionnement par âge",
       "description": "répartition des entretiens de positionnement par âge",
       "categorie": "entretiens de positionnement",
       "abreviation": "",
@@ -177,6 +181,7 @@
     },
     {
       "nom": "entretiens de positionnement par diplôme",
+      "titre": "entretiens de positionnement par diplôme",
       "description": "répartition des entretiens de positionnement par diplôme",
       "categorie": "entretiens de positionnement",
       "abreviation": "",
@@ -223,7 +228,8 @@
     },
     {
       "nom": "entretiens de positionnement par région",
-      "description": "répartition des entretiens de positionnement par région",
+      "titre": "entretiens de positionnement",
+      "description": "répartition des entretiens de positionnement ",
       "categorie": "entretiens de positionnement",
       "abreviation": "",
       "roleAcces": [
@@ -260,7 +266,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "entretiens de positionnement par région - CHOROPLETH",
+          "nom": "entretiens de positionnement - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""

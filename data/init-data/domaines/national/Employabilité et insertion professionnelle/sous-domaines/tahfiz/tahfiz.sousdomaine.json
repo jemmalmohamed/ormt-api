@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "Nombre des salariés bénéficiaires TAHFIZ",
+      "titre": "Nombre des salariés bénéficiaires TAHFIZ",
       "categorie": "Salariés Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -48,6 +49,7 @@
     },
     {
       "nom": "Salariés bénéficiaires TAHFIZ par genre",
+      "titre": "Salariés bénéficiaires TAHFIZ par genre",
       "categorie": "Salariés Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -94,6 +96,7 @@
     },
     {
       "nom": "Salariés bénéficiaires TAHFIZ par âge",
+      "titre": "Salariés bénéficiaires TAHFIZ par âge",
       "categorie": "Salariés Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -140,6 +143,7 @@
     },
     {
       "nom": "Salariés bénéficiaires TAHFIZ par diplôme",
+      "titre": "Salariés bénéficiaires TAHFIZ par diplôme",
       "categorie": "Salariés Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -186,6 +190,7 @@
     },
     {
       "nom": "Salariés bénéficiaires TAHFIZ par SAE",
+      "titre": "Salariés bénéficiaires TAHFIZ par SAE",
       "categorie": "Salariés Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -232,6 +237,7 @@
     },
     {
       "nom": "Salariés bénéficiaires TAHFIZ par taille d'entreprise",
+      "titre": "Salariés bénéficiaires TAHFIZ par taille d'entreprise",
       "categorie": "Salariés Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -278,6 +284,7 @@
     },
     {
       "nom": "Salariés bénéficiaires TAHFIZ par région",
+      "titre": "Salariés bénéficiaires TAHFIZ",
       "categorie": "Salariés Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -292,7 +299,7 @@
       "reglecalcul": "",
       "unite": "%",
       "periode": "2019-2024",
-      "description": "Salariés bénéficiaires TAHFIZ ventilés par région.",
+      "description": "Salariés bénéficiaires TAHFIZ.",
       "dimensions": [
         {
           "nom": "region",
@@ -315,7 +322,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Salariés bénéficiaires TAHFIZ par région - CHOROPLETH",
+          "nom": "Salariés bénéficiaires TAHFIZ - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -324,6 +331,7 @@
     },
     {
       "nom": "Nombre d'entreprises bénéficiaires TAHFIZ",
+      "titre": "Nombre d'entreprises bénéficiaires TAHFIZ",
       "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -361,6 +369,7 @@
     },
     {
       "nom": "Entreprises bénéficiaires TAHFIZ par taille d'entreprise",
+      "titre": "Entreprises bénéficiaires TAHFIZ par taille d'entreprise",
       "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -407,6 +416,7 @@
     },
     {
       "nom": "Entreprises bénéficiaires TAHFIZ par SAE",
+      "titre": "Entreprises bénéficiaires TAHFIZ par SAE",
       "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -453,6 +463,7 @@
     },
     {
       "nom": "Entreprises bénéficiaires TAHFIZ par région",
+      "titre": "Entreprises bénéficiaires TAHFIZ",
       "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -467,7 +478,7 @@
       "reglecalcul": "",
       "unite": "%",
       "periode": "2019-2024",
-      "description": "Entreprises bénéficiaires TAHFIZ ventilées par région.",
+      "description": "Entreprises bénéficiaires TAHFIZ.",
       "dimensions": [
         {
           "nom": "region",
@@ -490,7 +501,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Entreprises bénéficiaires TAHFIZ par région - CHOROPLETH",
+          "nom": "Entreprises bénéficiaires TAHFIZ - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""

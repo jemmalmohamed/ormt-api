@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "Nombre des bénéficiaires IDMAJ, y compris le PI",
+      "titre": "Nombre des bénéficiaires IDMAJ, y compris le PI",
       "categorie": "Chercheurs d'emploi bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -48,6 +49,7 @@
     },
     {
       "nom": "Bénéficiaires IDMAJ par genre (y compris le PI)",
+      "titre": "Bénéficiaires IDMAJ par genre (y compris le PI)",
       "categorie": "Chercheurs d'emploi bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -94,6 +96,7 @@
     },
     {
       "nom": "Bénéficiaires IDMAJ par âge (hors PI)",
+      "titre": "Bénéficiaires IDMAJ par âge (hors PI)",
       "categorie": "Chercheurs d'emploi bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -140,6 +143,7 @@
     },
     {
       "nom": "Bénéficiaires IDMAJ par diplôme (hors PI)",
+      "titre": "Bénéficiaires IDMAJ par diplôme (hors PI)",
       "categorie": "Chercheurs d'emploi bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -186,6 +190,7 @@
     },
     {
       "nom": "Bénéficiaires IDMAJ par type de contrat (hors PI)",
+      "titre": "Bénéficiaires IDMAJ par type de contrat (hors PI)",
       "categorie": "Chercheurs d'emploi bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -232,6 +237,7 @@
     },
     {
       "nom": "Bénéficiaires IDMAJ par secteur d'activité (hors PI)",
+      "titre": "Bénéficiaires IDMAJ par secteur d'activité (hors PI)",
       "categorie": "Chercheurs d'emploi bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -278,6 +284,7 @@
     },
     {
       "nom": "Bénéficiaires IDMAJ par région (hors PI)",
+      "titre": "Bénéficiaires IDMAJ (hors PI)",
       "categorie": "Chercheurs d'emploi bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -292,7 +299,7 @@
       "reglecalcul": "",
       "unite": "%",
       "periode": "2019-2024",
-      "description": "Bénéficiaires IDMAJ ventilés par région (hors PI).",
+      "description": "Bénéficiaires IDMAJ (hors PI).",
       "dimensions": [
         {
           "nom": "region",
@@ -315,7 +322,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Bénéficiaires IDMAJ par région (hors PI) - CHOROPLETH",
+          "nom": "Bénéficiaires IDMAJ  (hors PI) - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""

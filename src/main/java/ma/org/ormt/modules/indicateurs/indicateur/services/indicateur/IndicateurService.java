@@ -32,4 +32,6 @@ public interface IndicateurService extends BaseService<Indicateur> {
 
     List<IndicateurDetailDto> getIndicateurListWithTableData(String tableFormat);
 
+    String analyzeTerritoireStatus(Indicateur indicateur);
+
 }

@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "objectif ciblé d'ateliers de recherche d'emploi",
+      "titre": "objectif ciblé d'ateliers de recherche d'emploi",
       "description": "objectif ciblé d'ateliers de recherche d'emploi",
       "categorie": "Ateliers de recherche d'emploi",
       "abreviation": "",
@@ -48,6 +49,7 @@
     },
     {
       "nom": "nombre de bénéficiaires d'ateliers de recherche d'emploi",
+      "titre": "nombre de bénéficiaires d'ateliers de recherche d'emploi",
       "description": "nombre de bénéficiaires d'ateliers de recherche d'emploi",
       "categorie": "Ateliers de recherche d'emploi",
       "abreviation": "",
@@ -85,6 +87,7 @@
     },
     {
       "nom": "bénéficiaires d'are par genre",
+      "titre": "bénéficiaires d'are par genre",
       "description": "répartition des bénéficiaires d'ateliers de recherche d'emploi par genre",
       "categorie": "Ateliers de recherche d'emploi",
       "abreviation": "",
@@ -131,6 +134,7 @@
     },
     {
       "nom": "bénéficiaires d'are par âge",
+      "titre": "bénéficiaires d'are par âge",
       "description": "répartition des bénéficiaires d'ateliers de recherche d'emploi par âge",
       "categorie": "Ateliers de recherche d'emploi",
       "abreviation": "",
@@ -177,6 +181,7 @@
     },
     {
       "nom": "bénéficiaires d'are par diplôme",
+      "titre": "bénéficiaires d'are par diplôme",
       "description": "répartition des bénéficiaires d'ateliers de recherche d'emploi par diplôme",
       "categorie": "Ateliers de recherche d'emploi",
       "abreviation": "",
@@ -223,7 +228,8 @@
     },
     {
       "nom": "bénéficiaires d'are par région",
-      "description": "répartition des bénéficiaires d'ateliers de recherche d'emploi par région",
+      "titre": "bénéficiaires d'are",
+      "description": "répartition des bénéficiaires d'ateliers de recherche d'emploi ",
       "categorie": "Ateliers de recherche d'emploi",
       "abreviation": "",
       "roleAcces": [
@@ -260,7 +266,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "bénéficiaires d'are par région - CHOROPLETH",
+          "nom": "bénéficiaires d'are - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""

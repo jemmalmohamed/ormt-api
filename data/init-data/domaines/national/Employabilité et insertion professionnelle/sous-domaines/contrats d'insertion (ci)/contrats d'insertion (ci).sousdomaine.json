@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "Nombre des bénéficiaires du contrats d'insertion",
+      "titre": "Nombre des bénéficiaires du contrats d'insertion",
       "categorie": "Chercheurs d'emploi  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -48,6 +49,7 @@
     },
     {
       "nom": "Bénéficiaires du CI par genre",
+      "titre": "Bénéficiaires du CI par genre",
       "categorie": "Chercheurs d'emploi  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -94,6 +96,7 @@
     },
     {
       "nom": "Bénéficiaires du CI par diplôme",
+      "titre": "Bénéficiaires du CI par diplôme",
       "categorie": "Chercheurs d'emploi  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -140,6 +143,7 @@
     },
     {
       "nom": "Bénéficiaires du CI par SAE",
+      "titre": "Bénéficiaires du CI par SAE",
       "categorie": "Chercheurs d'emploi  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -186,6 +190,7 @@
     },
     {
       "nom": "Bénéficiaires du CI par région",
+      "titre": "Bénéficiaires du CI",
       "categorie": "Chercheurs d'emploi  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -200,7 +205,7 @@
       "reglecalcul": "",
       "unite": "%",
       "periode": "2019-2024",
-      "description": "Bénéficiaires du CI ventilés par région.",
+      "description": "Bénéficiaires du CI.",
       "dimensions": [
         {
           "nom": "region",
@@ -223,7 +228,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Bénéficiaires du CI par région - CHOROPLETH",
+          "nom": "Bénéficiaires du CI  - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -232,6 +237,7 @@
     },
     {
       "nom": "Nombre d'entreprises bénéficiaires du CI",
+      "titre": "Nombre d'entreprises bénéficiaires du CI",
       "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -269,6 +275,7 @@
     },
     {
       "nom": "Entreprises bénéficiaires du CI par taille d'entreprise",
+      "titre": "Entreprises bénéficiaires du CI par taille d'entreprise",
       "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -315,6 +322,7 @@
     },
     {
       "nom": "Entreprises bénéficiaires du CI par SAE",
+      "titre": "Entreprises bénéficiaires du CI par SAE",
       "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -361,6 +369,7 @@
     },
     {
       "nom": "Entreprises bénéficiaires du CI par région",
+      "titre": "Entreprises bénéficiaires du CI",
       "categorie": "Entreprises  Bénéficiaires",
       "abreviation": "",
       "roleAcces": [
@@ -375,7 +384,7 @@
       "reglecalcul": "",
       "unite": "%",
       "periode": "2022-2024",
-      "description": "Entreprises bénéficiaires du CI ventilées par région.",
+      "description": "Entreprises bénéficiaires du CI.",
       "dimensions": [
         {
           "nom": "region",
@@ -398,7 +407,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Entreprises bénéficiaires du CI par région - CHOROPLETH",
+          "nom": "Entreprises bénéficiaires du CI - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""

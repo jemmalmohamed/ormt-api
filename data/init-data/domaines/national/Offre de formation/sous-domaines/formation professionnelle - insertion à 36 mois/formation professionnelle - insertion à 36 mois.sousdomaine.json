@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par mode de formation",
+      "titre": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par mode de formation",
       "description": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par mode de formation.",
       "categorie": "insertion",
       "abreviation": "FP",
@@ -56,6 +57,7 @@
     },
     {
       "nom": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par genre",
+      "titre": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par genre",
       "description": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par genre.",
       "categorie": "insertion",
       "abreviation": "FP",
@@ -101,6 +103,7 @@
     },
     {
       "nom": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par niveau de formation",
+      "titre": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par niveau de formation",
       "description": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par niveau de formation.",
       "categorie": "insertion",
       "abreviation": "FP",
@@ -146,7 +149,8 @@
     },
     {
       "nom": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par région",
-      "description": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par région.",
+      "titre": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois",
+      "description": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois.",
       "categorie": "insertion",
       "abreviation": "FP",
       "roleAcces": [
@@ -182,7 +186,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par région - Histogramme",
+          "nom": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""

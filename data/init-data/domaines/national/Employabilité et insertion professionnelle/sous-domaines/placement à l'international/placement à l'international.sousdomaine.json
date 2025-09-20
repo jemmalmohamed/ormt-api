@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "Nombre des bénéficiaires du PI",
+      "titre": "Nombre des bénéficiaires du PI",
       "categorie": "Placement à l'International",
       "abreviation": "",
       "roleAcces": [
@@ -48,6 +49,7 @@
     },
     {
       "nom": "Bénéficiaires du PI par genre",
+      "titre": "Bénéficiaires du PI par genre",
       "categorie": "Placement à l'International",
       "abreviation": "",
       "roleAcces": [
@@ -94,6 +96,7 @@
     },
     {
       "nom": "Bénéficiaires du PI par pays d'accueil",
+      "titre": "Bénéficiaires du PI par pays d'accueil",
       "categorie": "Placement à l'International",
       "abreviation": "",
       "roleAcces": [
@@ -132,6 +135,7 @@
     },
     {
       "nom": "Bénéficiaires du PI par SAE",
+      "titre": "Bénéficiaires du PI par SAE",
       "categorie": "Placement à l'International",
       "abreviation": "",
       "roleAcces": [
@@ -178,6 +182,7 @@
     },
     {
       "nom": "Bénéficiaires du PI par type de contrat",
+      "titre": "Bénéficiaires du PI par type de contrat",
       "categorie": "Placement à l'International",
       "abreviation": "",
       "roleAcces": [
@@ -224,6 +229,7 @@
     },
     {
       "nom": "Bénéficiaires du PI par région",
+      "titre": "Bénéficiaires du PI",
       "categorie": "Placement à l'International",
       "abreviation": "",
       "roleAcces": [
@@ -238,7 +244,7 @@
       "reglecalcul": "",
       "unite": "%",
       "periode": "2019-2024",
-      "description": "Bénéficiaires du PI ventilés par région.",
+      "description": "Bénéficiaires du PI.",
       "dimensions": [
         {
           "nom": "region",
@@ -261,7 +267,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Bénéficiaires du PI par région - CHOROPLETH",
+          "nom": "Bénéficiaires du PI - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""

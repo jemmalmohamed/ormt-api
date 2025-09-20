@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "part de l'emploi informel par secteur d'activité",
+      "titre": "part de l'emploi informel par secteur d'activité",
       "description": "part de l'emploi informel par secteur d'activité",
       "categorie": "emploi",
       "abreviation": "",
@@ -57,6 +58,7 @@
     },
     {
       "nom": "part de l'emploi rémunéré par secteur d'activité",
+      "titre": "part de l'emploi rémunéré par secteur d'activité",
       "description": "part de l'emploi rémunéré par secteur d'activité",
       "categorie": "emploi",
       "abreviation": "",
@@ -112,6 +114,7 @@
     },
     {
       "nom": "part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence",
+      "titre": "part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence",
       "description": "part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence",
       "categorie": "qualité de l'emploi",
       "abreviation": "",
@@ -158,6 +161,7 @@
     },
     {
       "nom": "part des actifs occupés bénéficiant d'une couverture médicale par genre",
+      "titre": "part des actifs occupés bénéficiant d'une couverture médicale par genre",
       "description": "part des actifs occupés bénéficiant d'une couverture médicale par genre",
       "categorie": "qualité de l'emploi",
       "abreviation": "",
@@ -204,6 +208,7 @@
     },
     {
       "nom": "part des salariés disposant d'un contrat de travail",
+      "titre": "part des salariés disposant d'un contrat de travail",
       "description": "part des salariés disposant d'un contrat de travail",
       "categorie": "qualité de l'emploi",
       "abreviation": "",
@@ -250,6 +255,7 @@
     },
     {
       "nom": "part de l'emploi de type occasionnel ou saisonnier par milieu de résidence",
+      "titre": "part de l'emploi de type occasionnel ou saisonnier par milieu de résidence",
       "description": "part de l'emploi de type occasionnel ou saisonnier par milieu de résidence",
       "categorie": "qualité de l'emploi",
       "abreviation": "",
@@ -296,6 +302,7 @@
     },
     {
       "nom": "part de l'emploi de type occasionnel ou saisonnier par genre",
+      "titre": "part de l'emploi de type occasionnel ou saisonnier par genre",
       "description": "part de l'emploi de type occasionnel ou saisonnier par genre",
       "categorie": "qualité de l'emploi",
       "abreviation": "",
@@ -342,6 +349,7 @@
     },
     {
       "nom": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par milieu de résidence",
+      "titre": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par milieu de résidence",
       "description": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par milieu de résidence",
       "categorie": "qualité de l'emploi",
       "abreviation": "",
@@ -388,6 +396,7 @@
     },
     {
       "nom": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par genre",
+      "titre": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par genre",
       "description": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par genre",
       "categorie": "qualité de l'emploi",
       "abreviation": "",
@@ -434,6 +443,7 @@
     },
     {
       "nom": "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle",
+      "titre": "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle",
       "description": "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle",
       "categorie": "qualité de l'emploi",
       "abreviation": "",
@@ -480,6 +490,7 @@
     },
     {
       "nom": "part des salariés touchant un salaire inférieur au smig par secteur d'activité",
+      "titre": "part des salariés touchant un salaire inférieur au smig par secteur d'activité",
       "description": "part des salariés touchant un salaire inférieur au smig par secteur d'activité",
       "categorie": "salaires",
       "abreviation": "",
@@ -526,6 +537,7 @@
     },
     {
       "nom": "salariés (stables) déclarés à la cnss par secteur d'activité",
+      "titre": "salariés (stables) déclarés à la cnss par secteur d'activité",
       "description": "salariés (stables) déclarés à la cnss par secteur d'activité-cnss",
       "categorie": "salaires",
       "abreviation": "",

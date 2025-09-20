@@ -94,6 +94,13 @@ public class MetaDataTableBuilder {
                                                                         ? indicateur.getNom()
                                                                         : ""));
                                         break;
+                                case "TITRE":
+                                case "TITLE":
+                                        section.addRow(new MetaDataRow("Titre",
+                                                        indicateur != null && indicateur.getTitre() != null
+                                                                        ? indicateur.getTitre()
+                                                                        : ""));
+                                        break;
                                 case "ABREVIATION":
                                 case "ABBREVIATION":
                                         section.addRow(new MetaDataRow("Abréviation",

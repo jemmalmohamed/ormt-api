@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "Objectif ciblé (hors formation en ligne)",
+      "titre": "Objectif ciblé (hors formation en ligne)",
       "categorie": "Programmes d'amélioration de l'employabilité",
       "abreviation": "",
       "roleAcces": [
@@ -48,6 +49,7 @@
     },
     {
       "nom": "Nombre de bénéficiaires des Programmes d'amélioration de l'employabilité",
+      "titre": "Nombre de bénéficiaires des Programmes d'amélioration de l'employabilité",
       "categorie": "Programmes d'amélioration de l'employabilité",
       "abreviation": "",
       "roleAcces": [
@@ -85,6 +87,7 @@
     },
     {
       "nom": "Bénéficiaires des Programmes d'amélioration de l'employabilité par composante",
+      "titre": "Bénéficiaires des Programmes d'amélioration de l'employabilité par composante",
       "categorie": "Programmes d'amélioration de l'employabilité",
       "abreviation": "",
       "roleAcces": [
@@ -131,6 +134,7 @@
     },
     {
       "nom": "Bénéficiaires de la FCE par région",
+      "titre": "Bénéficiaires de la FCE",
       "categorie": "Programmes d'amélioration de l'employabilité",
       "abreviation": "",
       "roleAcces": [
@@ -145,7 +149,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Bénéficiaires de la FCE ventilés par région.",
+      "description": "Bénéficiaires de la FCE.",
       "dimensions": [
         {
           "nom": "region",
@@ -168,7 +172,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Bénéficiaires de la FCE par région - Camembert",
+          "nom": "Bénéficiaires de la FCE - Camembert",
           "grapheTypeCode": "CAMEMBERT",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -177,6 +181,7 @@
     },
     {
       "nom": "Bénéficiaires de la FQR par région",
+      "titre": "Bénéficiaires de la FQR",
       "categorie": "Programmes d'amélioration de l'employabilité",
       "abreviation": "",
       "roleAcces": [
@@ -191,7 +196,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Bénéficiaires de la FQR ventilés par région.",
+      "description": "Bénéficiaires de la FQR.",
       "dimensions": [
         {
           "nom": "region",
@@ -214,7 +219,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Bénéficiaires de la FQR par région - CHOROPLETH",
+          "nom": "Bénéficiaires de la FQR  - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -223,6 +228,7 @@
     },
     {
       "nom": "Bénéficiaires de la FSE par région",
+      "titre": "Bénéficiaires de la FSE",
       "categorie": "Programmes d'amélioration de l'employabilité",
       "abreviation": "",
       "roleAcces": [
@@ -237,7 +243,7 @@
       "reglecalcul": "",
       "unite": "",
       "periode": "2019-2024",
-      "description": "Bénéficiaires de la FSE ventilés par région.",
+      "description": "Bénéficiaires de la FSE.",
       "dimensions": [
         {
           "nom": "region",
@@ -260,7 +266,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Bénéficiaires de la FSE par région - CHOROPLETH",
+          "nom": "Bénéficiaires de la FSE - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -269,6 +275,7 @@
     },
     {
       "nom": "Bénéficiaires de la FSE par secteur d'activité économique",
+      "titre": "Bénéficiaires de la FSE par secteur d'activité économique",
       "categorie": "Programmes d'amélioration de l'employabilité",
       "abreviation": "",
       "roleAcces": [
@@ -315,6 +322,7 @@
     },
     {
       "nom": "Nombre des bénéficiaires du partenariat régional",
+      "titre": "Nombre des bénéficiaires du partenariat régional",
       "categorie": "Programmes d'amélioration de l'employabilité",
       "abreviation": "",
       "roleAcces": [
@@ -352,6 +360,7 @@
     },
     {
       "nom": "Nombre des bénéficiaires du partenariat national",
+      "titre": "Nombre des bénéficiaires du partenariat national",
       "categorie": "Programmes d'amélioration de l'employabilité",
       "abreviation": "",
       "roleAcces": [
@@ -389,6 +398,7 @@
     },
     {
       "nom": "Nombre des bénéficiaires de la formation en ligne",
+      "titre": "Nombre des bénéficiaires de la formation en ligne",
       "categorie": "Programmes d'amélioration de l'employabilité",
       "abreviation": "",
       "roleAcces": [

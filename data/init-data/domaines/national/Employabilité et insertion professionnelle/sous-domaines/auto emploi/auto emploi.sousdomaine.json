@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "Objectif ciblé (accompagnement)",
+      "titre": "Objectif ciblé (accompagnement)",
       "categorie": "Porteurs de projet accompagnés",
       "abreviation": "",
       "roleAcces": [
@@ -48,6 +49,7 @@
     },
     {
       "nom": "Nombre de porteurs de projet accompagnés",
+      "titre": "Nombre de porteurs de projet accompagnés",
       "categorie": "Porteurs de projet accompagnés",
       "abreviation": "",
       "roleAcces": [
@@ -85,6 +87,7 @@
     },
     {
       "nom": "Porteurs de projet accompagnés par genre",
+      "titre": "Porteurs de projet accompagnés par genre",
       "categorie": "Porteurs de projet accompagnés",
       "abreviation": "",
       "roleAcces": [
@@ -131,6 +134,7 @@
     },
     {
       "nom": "Porteurs de projet accompagnés par âge",
+      "titre": "Porteurs de projet accompagnés par âge",
       "categorie": "Porteurs de projet accompagnés",
       "abreviation": "",
       "roleAcces": [
@@ -177,6 +181,7 @@
     },
     {
       "nom": "Porteurs de projet accompagnés par région",
+      "titre": "Porteurs de projet accompagnés",
       "categorie": "Entreprises crées",
       "abreviation": "",
       "roleAcces": [
@@ -191,7 +196,7 @@
       "reglecalcul": "",
       "unite": "%",
       "periode": "2019-2024",
-      "description": "Porteurs de projet accompagnés ventilés par région.",
+      "description": "Porteurs de projet accompagnés.",
       "dimensions": [
         {
           "nom": "region",
@@ -214,7 +219,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Porteurs de projet accompagnés par région - CHOROPLETH",
+          "nom": "Porteurs de projet accompagnés - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -223,6 +228,7 @@
     },
     {
       "nom": "Nombre d'entreprises crées",
+      "titre": "Nombre d'entreprises crées",
       "categorie": "Entreprises crées",
       "abreviation": "",
       "roleAcces": [
@@ -260,6 +266,7 @@
     },
     {
       "nom": "Entreprises crées par genre",
+      "titre": "Entreprises crées par genre",
       "categorie": "Entreprises crées",
       "abreviation": "",
       "roleAcces": [
@@ -306,6 +313,7 @@
     },
     {
       "nom": "Entreprises crées par région",
+      "titre": "Entreprises crées",
       "categorie": "Entreprises crées",
       "abreviation": "",
       "roleAcces": [
@@ -320,7 +328,7 @@
       "reglecalcul": "",
       "unite": "%",
       "periode": "2019-2024",
-      "description": "Entreprises crées ventilées par région.",
+      "description": "Entreprises crées.",
       "dimensions": [
         {
           "nom": "region",
@@ -343,7 +351,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Entreprises crées par région - CHOROPLETH",
+          "nom": "Entreprises crées - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""
@@ -352,6 +360,7 @@
     },
     {
       "nom": "Nombre des emplois crées",
+      "titre": "Nombre des emplois crées",
       "categorie": "Entreprises crées",
       "abreviation": "",
       "roleAcces": [
@@ -389,6 +398,7 @@
     },
     {
       "nom": "Emplois crées par région",
+      "titre": "Emplois crées",
       "categorie": "Entreprises crées",
       "abreviation": "",
       "roleAcces": [
@@ -403,7 +413,7 @@
       "reglecalcul": "",
       "unite": "%",
       "periode": "2019-2024",
-      "description": "Emplois crées ventilés par région.",
+      "description": "Emplois crées.",
       "dimensions": [
         {
           "nom": "region",
@@ -426,7 +436,7 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Emplois crées par région - CHOROPLETH",
+          "nom": "Emplois crées - CHOROPLETH",
           "grapheTypeCode": "CHOROPLETH",
           "isDefault": true,
           "chartOptionsJson": ""

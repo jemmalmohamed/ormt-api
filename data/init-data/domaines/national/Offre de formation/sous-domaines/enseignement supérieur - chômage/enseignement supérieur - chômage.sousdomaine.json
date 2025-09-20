@@ -11,6 +11,7 @@
   "indicateurs": [
     {
       "nom": "Taux de chômage des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante et genre",
+      "titre": "Taux de chômage des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante et genre",
       "description": "Taux de chômage des diplômés de l'enseignement supérieur après 4 ans par composante et genre.",
       "categorie": "Chômage",
       "abreviation": "ES",
@@ -59,12 +60,13 @@
           "nom": "Taux de chômage des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante et genre - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
-          "chartOptionsJson": ""
+          "chartOptionsJson": "{\"type\":\"bar\",\"orientation\":\"horizontal\",\"title\":\"taux de chômage des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par composante et genre\",\"dataDimension\":\"composante\",\"groupingDimension\":\"genre\",\"display\":{\"showDataLabels\":false,\"showLegend\":true,\"legendPosition\":\"bottom\",\"legendAlign\":\"center\",\"grouped\":true,\"chartStyle\":\"bar\",\"stacking\":\"none\",\"palette\":\"blue-shades\"},\"filters\":{\"enabled\":true,\"logic\":\"AND\",\"items\":[{\"dimension\":\"annuel\",\"operator\":\"eq\",\"value\":\"2014\",\"active\":true}]},\"pivotVisibility\":{\"hiddenRowValues\":[\"total\"],\"hiddenColumnValues\":{\"genre\":[\"ensemble\"]}},\"ordering\":{\"principalOrder\":[\"total\",\"formation professionnelle post-baccalauréat\",\"enseignement supérieur privé\",\"enseignement universitaire public\"]}}"
         }
       ]
     },
     {
       "nom": "Taux de chômage des diplômés de l'enseignement universitaire public après 4 ans (Promotion 2014) par type d'accès",
+      "titre": "Taux de chômage des diplômés de l'enseignement universitaire public après 4 ans (Promotion 2014) par type d'accès",
       "description": "Taux de chômage des diplômés de l'enseignement universitaire public après 4 ans par type d'accès.",
       "categorie": "Chômage",
       "abreviation": "ES",
@@ -110,6 +112,7 @@
     },
     {
       "nom": "Taux de chômage des diplômés de l'enseignement universitaire public après 4 ans (Promotion 2014) par diplôme et genre",
+      "titre": "Taux de chômage des diplômés de l'enseignement universitaire public après 4 ans (Promotion 2014) par diplôme et genre",
       "description": "Taux de chômage des diplômés de l'enseignement universitaire public après 4 ans par diplôme et genre.",
       "categorie": "Chômage",
       "abreviation": "ES",
@@ -164,6 +167,7 @@
     },
     {
       "nom": "Taux de chômage des diplômés de l'enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme et genre",
+      "titre": "Taux de chômage des diplômés de l'enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme et genre",
       "description": "Taux de chômage des diplômés de l'enseignement supérieur privé après 4 ans par diplôme et genre.",
       "categorie": "Chômage",
       "abreviation": "ES",

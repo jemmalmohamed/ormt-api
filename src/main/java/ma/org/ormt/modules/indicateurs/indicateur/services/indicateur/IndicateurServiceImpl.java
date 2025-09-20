@@ -1,8 +1,10 @@
 package ma.org.ormt.modules.indicateurs.indicateur.services.indicateur;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -27,6 +29,7 @@ import ma.org.ormt.modules.indicateurs.indicateur.repositories.IndicateurReposit
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.data.builders.IndicateurCrudDataTable;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.data.builders.IndicateurFlatDataTable;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.data.builders.IndicateurPivotDataTable;
+import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
 import ma.org.ormt.modules.indicateurs.source.models.Source;
 import ma.org.ormt.modules.indicateurs.source.services.SourceService;
 
@@ -112,6 +115,7 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
 
     private void updateFields(Indicateur indicateur, IndicateurRequestDto entityToUpdate) {
         indicateur.setNom(entityToUpdate.getNom());
+        indicateur.setTitre(entityToUpdate.getTitre());
         indicateur.setDescription(entityToUpdate.getDescription());
         indicateur.setAbreviation(entityToUpdate.getAbreviation());
         indicateur.setActif(entityToUpdate.getActif());
@@ -163,7 +167,7 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
                 .orElseThrow(() -> new EntityNotFoundException("Indicateur not found with id: " + id));
 
         // Use the existing mapper to convert to DTO
-        IndicateurDetailDto dto = indicateurDetailMapper.mapToDto(indicateur);
+        IndicateurDetailDto dto = indicateurDetailMapper.mapToDto(indicateur, this);
 
         // Check if indicateur has valid data for table processing
         if (indicateur.getDonnees() == null || indicateur.getDonnees().isEmpty() ||
@@ -230,6 +234,99 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
         }
 
         return dtos;
+    }
+
+    @Override
+    public String analyzeTerritoireStatus(Indicateur indicateur) {
+        // Récupérer les dimensions de l'indicateur
+        List<Dimension> dimensions = indicateur.getDimensions();
+
+        if (dimensions == null || dimensions.isEmpty()) {
+            return "Pas de dimensions";
+        }
+
+        // Chercher une dimension de type "région" ou "territoire"
+        boolean hasRegionDimension = dimensions.stream()
+                .anyMatch(dimension -> dimension.getNom() != null &&
+                        (dimension.getNom().toLowerCase().contains("region")));
+
+        if (!hasRegionDimension) {
+            return "National";
+        }
+
+        // Si on a une dimension région/territoire, vérifier les données
+        if (indicateur.getDonnees() == null || indicateur.getDonnees().isEmpty()) {
+            return "Régional mais pas de données";
+        }
+
+        // Récupérer toutes les valeurs pour les dimensions région de cet indicateur
+        List<String> valeursRegionales = indicateur.getDonnees().stream()
+                .flatMap(donnee -> donnee.getValeurDimensions().stream())
+                .filter(vd -> vd.getDimension() != null &&
+                        vd.getDimension().getNom() != null &&
+                        vd.getDimension().getNom().toLowerCase().contains("region"))
+                .map(vd -> vd.getValeur())
+                .filter(valeur -> valeur != null && !valeur.trim().isEmpty())
+                .map(valeur -> valeur.toLowerCase().trim())
+                .distinct()
+                .collect(Collectors.toList());
+
+        if (valeursRegionales.isEmpty()) {
+            return "Régional mais pas de données";
+        }
+
+        // Vérifier spécifiquement si Marrakech est présent
+        boolean hasMarrakech = valeursRegionales.stream()
+                .anyMatch(valeur -> valeur.contains("marrakech"));
+
+        if (hasMarrakech) {
+            // Marrakech trouvé - le mentionner en premier
+            List<String> autresRegions = valeursRegionales.stream()
+                    .filter(valeur -> !valeur.contains("marrakech"))
+                    .filter(valeur -> Arrays.asList("casablanca", "rabat", "fès", "tanger",
+                            "agadir", "meknès", "oujda", "kenitra", "tétouan",
+                            "casablanca - settat", "rabat - salé - kénitra",
+                            "fès - meknès", "tanger - tétouan - al hoceima").stream()
+                            .anyMatch(region -> valeur.contains(region)))
+                    .limit(2) // Limiter à 2 autres régions
+                    .collect(Collectors.toList());
+
+            String regionsText = "marrakech";
+            if (!autresRegions.isEmpty()) {
+                regionsText += ", " + String.join(", ", autresRegions);
+                if (valeursRegionales.size() > autresRegions.size() + 1) {
+                    regionsText += "...";
+                }
+            }
+
+            return "Régional (" + regionsText + ")";
+        } else {
+            // Pas de Marrakech - vérifier autres régions marocaines
+            List<String> regionsMarocaines = Arrays.asList(
+                    "casablanca", "rabat", "fès", "tanger",
+                    "agadir", "meknès", "oujda", "kenitra", "tétouan",
+                    "casablanca - settat", "rabat - salé - kénitra",
+                    "fès - meknès", "tanger - tétouan - al hoceima");
+
+            List<String> regionsPresentes = valeursRegionales.stream()
+                    .filter(valeur -> regionsMarocaines.stream()
+                            .anyMatch(region -> valeur.contains(region)))
+                    .collect(Collectors.toList());
+
+            if (!regionsPresentes.isEmpty()) {
+                String regionsText = regionsPresentes.stream()
+                        .limit(3)
+                        .collect(Collectors.joining(", "));
+
+                if (regionsPresentes.size() > 3) {
+                    regionsText += "...";
+                }
+
+                return "Régional (pas de données Marrakech, " + regionsText + ")";
+            } else {
+                return "Régional (pas de données Marrakech, autres territoires)";
+            }
+        }
     }
 
 }
