@@ -357,53 +357,6 @@
       ]
     },
     {
-      "nom": "Taux de chômage selon le milieu de résidence",
-      "titre": "Taux de chômage selon le milieu de résidence",
-      "description": "Taux de chômage selon le milieu de résidence",
-      "categorie": "Taux de chômage",
-      "abreviation": "",
-      "roleAcces": [
-        {
-          "roleCode": "role_public",
-          "niveauacces": "lecture"
-        }
-      ],
-      "actif": true,
-      "typeTb": "décisionnel / grand public",
-      "source": "hcp",
-      "reglecalcul": "",
-      "unite": "%",
-      "periode": "2019-2023",
-      "dimensions": [
-        {
-          "nom": "milieu",
-          "libelle": "milieu de résidence",
-          "type": "texte",
-          "association": {
-            "principale": true,
-            "temporelle": false
-          }
-        },
-        {
-          "nom": "annuel",
-          "libelle": "année",
-          "type": "texte",
-          "association": {
-            "principale": false,
-            "temporelle": true
-          }
-        }
-      ],
-      "grapheConfigurations": [
-        {
-          "nom": "Taux de chômage selon le milieu de résidence - Histogramme",
-          "grapheTypeCode": "HISTOGRAMME",
-          "isDefault": true,
-          "chartOptionsJson": ""
-        }
-      ]
-    },
-    {
       "nom": "Taux de chômage par région et genre",
       "titre": "Taux de chômage par genre",
       "description": "Taux de chômage par genre",
@@ -603,53 +556,6 @@
       "grapheConfigurations": [
         {
           "nom": "Taux de chômage selon le diplôme - Courbes",
-          "grapheTypeCode": "COURBES",
-          "isDefault": true,
-          "chartOptionsJson": ""
-        }
-      ]
-    },
-    {
-      "nom": "Taux de chômage selon le genre",
-      "titre": "Taux de chômage selon le genre",
-      "description": "Taux de chômage selon le genre",
-      "categorie": "Taux de chômage",
-      "abreviation": "",
-      "roleAcces": [
-        {
-          "roleCode": "role_public",
-          "niveauacces": "lecture"
-        }
-      ],
-      "actif": true,
-      "typeTb": "décisionnel / grand public",
-      "source": "hcp",
-      "reglecalcul": "",
-      "unite": "%",
-      "periode": "2019-2023",
-      "dimensions": [
-        {
-          "nom": "genre",
-          "libelle": "genre",
-          "type": "texte",
-          "association": {
-            "principale": true,
-            "temporelle": false
-          }
-        },
-        {
-          "nom": "annuel",
-          "libelle": "année",
-          "type": "texte",
-          "association": {
-            "principale": false,
-            "temporelle": true
-          }
-        }
-      ],
-      "grapheConfigurations": [
-        {
-          "nom": "Taux de chômage selon le genre - Courbes",
           "grapheTypeCode": "COURBES",
           "isDefault": true,
           "chartOptionsJson": ""

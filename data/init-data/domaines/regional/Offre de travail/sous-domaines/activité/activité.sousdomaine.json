@@ -368,53 +368,6 @@
       ]
     },
     {
-      "nom": "Taux d'activité selon le genre",
-      "titre": "Taux d'activité selon le genre",
-      "description": "Taux d'activité selon le genre",
-      "categorie": "Taux d'activité",
-      "abreviation": "",
-      "roleAcces": [
-        {
-          "roleCode": "role_public",
-          "niveauacces": "lecture"
-        }
-      ],
-      "actif": true,
-      "typeTb": "décisionnel / grand public",
-      "source": "hcp",
-      "reglecalcul": "",
-      "unite": "%",
-      "periode": "2019-2024",
-      "dimensions": [
-        {
-          "nom": "genre",
-          "libelle": "genre",
-          "type": "texte",
-          "association": {
-            "principale": true,
-            "temporelle": false
-          }
-        },
-        {
-          "nom": "annuel",
-          "libelle": "année",
-          "type": "texte",
-          "association": {
-            "principale": false,
-            "temporelle": true
-          }
-        }
-      ],
-      "grapheConfigurations": [
-        {
-          "nom": "Taux d'activité selon le genre - Courbes",
-          "grapheTypeCode": "COURBES",
-          "isDefault": true,
-          "chartOptionsJson": ""
-        }
-      ]
-    },
-    {
       "nom": "Taux d'activité selon le groupe d'âge et le milieu de résidence",
       "titre": "Taux d'activité selon le groupe d'âge et le milieu de résidence",
       "description": "Taux d'activité selon le groupe d'âge et le milieu de résidence",
