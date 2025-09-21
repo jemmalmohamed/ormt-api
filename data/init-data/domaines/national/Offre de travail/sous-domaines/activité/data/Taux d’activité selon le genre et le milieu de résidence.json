@@ -3,6 +3,7 @@
     "data": [
         {
             "genre": "Masculin",
+            "region": "marrakech-safi",
             "milieu": "Urbain",
             "annuel": "2019",
             "valeur": 67.6

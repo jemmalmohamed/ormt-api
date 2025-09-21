@@ -611,7 +611,222 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Répartition provinciale des EPMA  - Histogramme",
+          "nom": "Répartition provinciale des EPMA  - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "créations d'entreprises personnes morales",
+      "titre": "Créations d'entreprises PM (en nombre)",
+      "description": "nombre d'entreprises PM créées dans la région Marrakech-Safi",
+      "categorie": "créations d'entreprises",
+      "abreviation": "",
+      "typeTb": "décisionnel / grand public",
+      "source": "omtpme",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2022",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Créations d'entreprises PM - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "créations d'entreprises personnes morales par province",
+      "titre": "Créations d'entreprises PM par province (en nombre)",
+      "description": "créations d'entreprises PM par province pour la région Marrakech-Safi",
+      "categorie": "créations d'entreprises",
+      "abreviation": "",
+      "typeTb": "décisionnel / grand public",
+      "source": "omtpme",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2021-2022",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "dimensions": [
+        {
+          "nom": "province",
+          "libelle": "Province",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Créations d'entreprises PM par province - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "créations d'entreprises personnes morales par secteur d'activités",
+      "titre": "Créations d'entreprises PM par secteur d'activités (en nombre)",
+      "description": "créations d'entreprises PM par secteur d'activités pour la région Marrakech-Safi",
+      "categorie": "créations d'entreprises",
+      "abreviation": "",
+      "typeTb": "décisionnel / grand public",
+      "source": "omtpme",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2021-2022",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "Secteur d'activités",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Créations d'entreprises PM par secteur - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "créations d'entreprises personnes morales par forme juridique",
+      "titre": "Créations d'entreprises PM par forme juridique (en nombre)",
+      "description": "créations d'entreprises PM par forme juridique pour la région Marrakech-Safi",
+      "categorie": "créations d'entreprises",
+      "abreviation": "",
+      "typeTb": "décisionnel / grand public",
+      "source": "omtpme",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2021-2022",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "dimensions": [
+        {
+          "nom": "forme_juridique",
+          "libelle": "Forme juridique",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Créations d'entreprises PM par forme juridique - Histogramme",
           "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""

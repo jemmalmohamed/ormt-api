@@ -6,6 +6,12 @@
         "description": "caisse nationale de sécurité sociale"
     },
     {
+        "abreviation": "omtpme",
+        "nom": "observatoire marocain de la très petite et moyenne entreprise",
+        "url": "https://www.omtpme.ma/",
+        "description": "observatoire marocain de la très petite et moyenne entreprise"
+    },
+    {
         "abreviation": "anapec",
         "nom": "agence nationale de promotion de l'emploi et des compétences",
         "description": "agence nationale de promotion de l'emploi et des compétences",

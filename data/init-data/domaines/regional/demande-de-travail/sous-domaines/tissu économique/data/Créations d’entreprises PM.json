@@ -1,0 +1,25 @@
+{
+    "indicateur": "créations d'entreprises personnes morales",
+    "data": [
+        {
+            "region": "marrakech-safi",
+            "annuel": "2019",
+            "valeur": 3996
+        },
+        {
+            "region": "marrakech-safi",
+            "annuel": "2020",
+            "valeur": 5487
+        },
+        {
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 6800
+        },
+        {
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 7033
+        }
+    ]
+}

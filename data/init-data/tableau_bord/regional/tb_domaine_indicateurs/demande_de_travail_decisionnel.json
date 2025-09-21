@@ -191,6 +191,26 @@
     },
     {
         "tbDomaine": "demande de travail - décisionnel",
+        "categorie": "tissu économique",
+        "indicateur": "créations d'entreprises personnes morales"
+    },
+    {
+        "tbDomaine": "demande de travail - décisionnel",
+        "categorie": "tissu économique",
+        "indicateur": "créations d'entreprises personnes morales par province"
+    },
+    {
+        "tbDomaine": "demande de travail - décisionnel",
+        "categorie": "tissu économique",
+        "indicateur": "créations d'entreprises personnes morales par secteur d'activités"
+    },
+    {
+        "tbDomaine": "demande de travail - décisionnel",
+        "categorie": "tissu économique",
+        "indicateur": "créations d'entreprises personnes morales par forme juridique"
+    },
+    {
+        "tbDomaine": "demande de travail - décisionnel",
         "categorie": "qualité de l'emploi",
         "indicateur": "part de l'emploi informel par secteur d'activité"
     },
