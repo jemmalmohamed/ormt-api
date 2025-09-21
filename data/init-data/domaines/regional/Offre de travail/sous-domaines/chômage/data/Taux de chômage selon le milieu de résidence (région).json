@@ -1,0 +1,59 @@
+{
+    "indicateur": "Taux de chômage selon le milieu de résidence",
+    "data": [
+        {
+            "milieu": "Urbain",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 11.8
+        },
+        {
+            "milieu": "Urbain",
+            "region": "marrakech-safi",
+            "annuel": "2023",
+            "valeur": 12.2
+        },
+        {
+            "milieu": "Urbain",
+            "region": "marrakech-safi",
+            "annuel": "2024",
+            "valeur": 13.2
+        },
+        {
+            "milieu": "Rural",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 3.2
+        },
+        {
+            "milieu": "Rural",
+            "region": "marrakech-safi",
+            "annuel": "2023",
+            "valeur": 4.1
+        },
+        {
+            "milieu": "Rural",
+            "region": "marrakech-safi",
+            "annuel": "2024",
+            "valeur": 5.4
+        },
+        {
+            "milieu": "Ensemble",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 6.9
+        },
+        {
+            "milieu": "Ensemble",
+            "region": "marrakech-safi",
+            "annuel": "2023",
+            "valeur": 7.7
+        },
+        {
+            "milieu": "Ensemble",
+            "region": "marrakech-safi",
+            "annuel": "2024",
+            "valeur": 8.9
+        }
+    ]
+}
