@@ -1,0 +1,245 @@
+{
+  "indicateur": "Nombre de lauréats de la formation professionnelle par niveau de formation",
+  "data": [
+    {
+      "niveau_formation": "CAP",
+      "annuel": "2016",
+      "valeur": 4000
+    },
+    {
+      "niveau_formation": "CAP",
+      "annuel": "2017",
+      "valeur": 5000
+    },
+    {
+      "niveau_formation": "CAP",
+      "annuel": "2018",
+      "valeur": 9000
+    },
+    {
+      "niveau_formation": "CAP",
+      "annuel": "2019",
+      "valeur": 6000
+    },
+    {
+      "niveau_formation": "CAP",
+      "annuel": "2020",
+      "valeur": 3000
+    },
+    {
+      "niveau_formation": "CAP",
+      "annuel": "2021",
+      "valeur": 4000
+    },
+    {
+      "niveau_formation": "CAP",
+      "annuel": "2022",
+      "valeur": 4000
+    },
+    {
+      "niveau_formation": "CAP",
+      "annuel": "2023",
+      "valeur": 4000
+    },
+    {
+      "niveau_formation": "Specialisation",
+      "annuel": "2016",
+      "valeur": 44000
+    },
+    {
+      "niveau_formation": "Specialisation",
+      "annuel": "2017",
+      "valeur": 46000
+    },
+    {
+      "niveau_formation": "Specialisation",
+      "annuel": "2018",
+      "valeur": 48000
+    },
+    {
+      "niveau_formation": "Specialisation",
+      "annuel": "2019",
+      "valeur": 51000
+    },
+    {
+      "niveau_formation": "Specialisation",
+      "annuel": "2020",
+      "valeur": 48000
+    },
+    {
+      "niveau_formation": "Specialisation",
+      "annuel": "2021",
+      "valeur": 39000
+    },
+    {
+      "niveau_formation": "Specialisation",
+      "annuel": "2022",
+      "valeur": 45000
+    },
+    {
+      "niveau_formation": "Specialisation",
+      "annuel": "2023",
+      "valeur": 51000
+    },
+    {
+      "niveau_formation": "Qualification",
+      "annuel": "2016",
+      "valeur": 42000
+    },
+    {
+      "niveau_formation": "Qualification",
+      "annuel": "2017",
+      "valeur": 44000
+    },
+    {
+      "niveau_formation": "Qualification",
+      "annuel": "2018",
+      "valeur": 46000
+    },
+    {
+      "niveau_formation": "Qualification",
+      "annuel": "2019",
+      "valeur": 46000
+    },
+    {
+      "niveau_formation": "Qualification",
+      "annuel": "2020",
+      "valeur": 44000
+    },
+    {
+      "niveau_formation": "Qualification",
+      "annuel": "2021",
+      "valeur": 37000
+    },
+    {
+      "niveau_formation": "Qualification",
+      "annuel": "2022",
+      "valeur": 26000
+    },
+    {
+      "niveau_formation": "Qualification",
+      "annuel": "2023",
+      "valeur": 37000
+    },
+    {
+      "niveau_formation": "Technicien",
+      "annuel": "2016",
+      "valeur": 45000
+    },
+    {
+      "niveau_formation": "Technicien",
+      "annuel": "2017",
+      "valeur": 43000
+    },
+    {
+      "niveau_formation": "Technicien",
+      "annuel": "2018",
+      "valeur": 41000
+    },
+    {
+      "niveau_formation": "Technicien",
+      "annuel": "2019",
+      "valeur": 38000
+    },
+    {
+      "niveau_formation": "Technicien",
+      "annuel": "2020",
+      "valeur": 31000
+    },
+    {
+      "niveau_formation": "Technicien",
+      "annuel": "2021",
+      "valeur": 38000
+    },
+    {
+      "niveau_formation": "Technicien",
+      "annuel": "2022",
+      "valeur": 24000
+    },
+    {
+      "niveau_formation": "Technicien",
+      "annuel": "2023",
+      "valeur": 21000
+    },
+    {
+      "niveau_formation": "Technicien spécialisé",
+      "annuel": "2016",
+      "valeur": 47000
+    },
+    {
+      "niveau_formation": "Technicien spécialisé",
+      "annuel": "2017",
+      "valeur": 48000
+    },
+    {
+      "niveau_formation": "Technicien spécialisé",
+      "annuel": "2018",
+      "valeur": 52000
+    },
+    {
+      "niveau_formation": "Technicien spécialisé",
+      "annuel": "2019",
+      "valeur": 51000
+    },
+    {
+      "niveau_formation": "Technicien spécialisé",
+      "annuel": "2020",
+      "valeur": 52000
+    },
+    {
+      "niveau_formation": "Technicien spécialisé",
+      "annuel": "2021",
+      "valeur": 62000
+    },
+    {
+      "niveau_formation": "Technicien spécialisé",
+      "annuel": "2022",
+      "valeur": 48000
+    },
+    {
+      "niveau_formation": "Technicien spécialisé",
+      "annuel": "2023",
+      "valeur": 44000
+    },
+    {
+      "niveau_formation": "TOTAL",
+      "annuel": "2016",
+      "valeur": 182000
+    },
+    {
+      "niveau_formation": "TOTAL",
+      "annuel": "2017",
+      "valeur": 186000
+    },
+    {
+      "niveau_formation": "TOTAL",
+      "annuel": "2018",
+      "valeur": 196000
+    },
+    {
+      "niveau_formation": "TOTAL",
+      "annuel": "2019",
+      "valeur": 191000
+    },
+    {
+      "niveau_formation": "TOTAL",
+      "annuel": "2020",
+      "valeur": 178000
+    },
+    {
+      "niveau_formation": "TOTAL",
+      "annuel": "2021",
+      "valeur": 180000
+    },
+    {
+      "niveau_formation": "TOTAL",
+      "annuel": "2022",
+      "valeur": 147000
+    },
+    {
+      "niveau_formation": "TOTAL",
+      "annuel": "2023",
+      "valeur": 156000
+    }
+  ]
+}

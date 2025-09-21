@@ -1,0 +1,154 @@
+{
+  "nom": "droit conventionnel",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "description": "droit conventionnel",
+  "indicateurs": [
+    {
+      "nom": "Nombre de protocoles signés par région",
+      "titre": "Nombre de protocoles signés",
+      "categorie": "Relations professionnelles",
+      "abreviation": "",
+      "typeTb": "grand public",
+      "source": "MIEPEEC",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2021-2023",
+      "description": "Nombre de protocoles signés",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de protocoles signés - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre de conventions collectives par région",
+      "titre": "Nombre de conventions collectives",
+      "categorie": "Relations professionnelles",
+      "abreviation": "",
+      "typeTb": "grand public",
+      "source": "MIEPEEC",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2021-2023",
+      "description": "Nombre de conventions collectives",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de conventions collectives - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre de conventions collectives par secteur",
+      "titre": "Nombre de conventions collectives par secteur",
+      "categorie": "Relations professionnelles",
+      "abreviation": "",
+      "typeTb": "grand public",
+      "source": "MIEPEEC",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2021-2023",
+      "description": "Nombre de conventions collectives par secteur",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de conventions collectives par secteur - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    }
+  ]
+}

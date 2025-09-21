@@ -1,0 +1,215 @@
+{
+    "indicateur": "Bénéficiaires du CI par SAE",
+    "data": [
+        {
+            "annuel": 2019,
+            "sae": "Industrie",
+            "valeur": 46.6
+        },
+        {
+            "annuel": 2019,
+            "sae": "BTP",
+            "valeur": 0.9
+        },
+        {
+            "annuel": 2019,
+            "sae": "Services",
+            "valeur": 38.0
+        },
+        {
+            "annuel": 2019,
+            "sae": "Hôtellerie",
+            "valeur": 3.8
+        },
+        {
+            "annuel": 2019,
+            "sae": "Agriculture et pêche",
+            "valeur": 0.6
+        },
+        {
+            "annuel": 2019,
+            "sae": "Éducation",
+            "valeur": 6.8
+        },
+        {
+            "annuel": 2019,
+            "sae": "Autres",
+            "valeur": 3.4
+        },
+        {
+            "annuel": 2020,
+            "sae": "Industrie",
+            "valeur": 54.7
+        },
+        {
+            "annuel": 2020,
+            "sae": "BTP",
+            "valeur": 0.8
+        },
+        {
+            "annuel": 2020,
+            "sae": "Services",
+            "valeur": 33.1
+        },
+        {
+            "annuel": 2020,
+            "sae": "Hôtellerie",
+            "valeur": 1.9
+        },
+        {
+            "annuel": 2020,
+            "sae": "Agriculture et pêche",
+            "valeur": 0.3
+        },
+        {
+            "annuel": 2020,
+            "sae": "Éducation",
+            "valeur": 5.9
+        },
+        {
+            "annuel": 2020,
+            "sae": "Autres",
+            "valeur": 3.2
+        },
+        {
+            "annuel": 2021,
+            "sae": "Industrie",
+            "valeur": 46.1
+        },
+        {
+            "annuel": 2021,
+            "sae": "BTP",
+            "valeur": 0.8
+        },
+        {
+            "annuel": 2021,
+            "sae": "Services",
+            "valeur": 38.3
+        },
+        {
+            "annuel": 2021,
+            "sae": "Hôtellerie",
+            "valeur": 2.2
+        },
+        {
+            "annuel": 2021,
+            "sae": "Agriculture et pêche",
+            "valeur": 0.3
+        },
+        {
+            "annuel": 2021,
+            "sae": "Éducation",
+            "valeur": 7.0
+        },
+        {
+            "annuel": 2021,
+            "sae": "Autres",
+            "valeur": 5.2
+        },
+        {
+            "annuel": 2022,
+            "sae": "Industrie",
+            "valeur": 49.4
+        },
+        {
+            "annuel": 2022,
+            "sae": "BTP",
+            "valeur": 0.9
+        },
+        {
+            "annuel": 2022,
+            "sae": "Services",
+            "valeur": 35.2
+        },
+        {
+            "annuel": 2022,
+            "sae": "Hôtellerie",
+            "valeur": 3.7
+        },
+        {
+            "annuel": 2022,
+            "sae": "Agriculture et pêche",
+            "valeur": 0.2
+        },
+        {
+            "annuel": 2022,
+            "sae": "Éducation",
+            "valeur": 5.1
+        },
+        {
+            "annuel": 2022,
+            "sae": "Autres",
+            "valeur": 5.5
+        },
+        {
+            "annuel": 2023,
+            "sae": "Industrie",
+            "valeur": 47.9
+        },
+        {
+            "annuel": 2023,
+            "sae": "BTP",
+            "valeur": 0.6
+        },
+        {
+            "annuel": 2023,
+            "sae": "Services",
+            "valeur": 38.1
+        },
+        {
+            "annuel": 2023,
+            "sae": "Hôtellerie",
+            "valeur": 3.3
+        },
+        {
+            "annuel": 2023,
+            "sae": "Agriculture et pêche",
+            "valeur": 0.2
+        },
+        {
+            "annuel": 2023,
+            "sae": "Éducation",
+            "valeur": 4.4
+        },
+        {
+            "annuel": 2023,
+            "sae": "Autres",
+            "valeur": 5.5
+        },
+        {
+            "annuel": 2024,
+            "sae": "Industrie",
+            "valeur": 42.1
+        },
+        {
+            "annuel": 2024,
+            "sae": "BTP",
+            "valeur": 1.3
+        },
+        {
+            "annuel": 2024,
+            "sae": "Services",
+            "valeur": 39.6
+        },
+        {
+            "annuel": 2024,
+            "sae": "Hôtellerie",
+            "valeur": 3.0
+        },
+        {
+            "annuel": 2024,
+            "sae": "Agriculture et pêche",
+            "valeur": 0.2
+        },
+        {
+            "annuel": 2024,
+            "sae": "Éducation",
+            "valeur": 3.9
+        },
+        {
+            "annuel": 2024,
+            "sae": "Autres",
+            "valeur": 10.0
+        }
+    ]
+}

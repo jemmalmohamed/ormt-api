@@ -1,0 +1,2597 @@
+{
+  "indicateur": "variation de la masse salariale",
+  "data": [
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": 6555844
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": -37078554
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": 24586851
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": 18008032
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": 6428034
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 13614896
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": 37755697
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 26612969
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": 4947630
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": 102001643
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": 20843173
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": -5795806
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": 13742437
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": -22618251
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": 4682486
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": 14588874
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": -535985807
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": -16570357
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": 43579606
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": -89024501
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": -19934990
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": -207320067
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": -30625445
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": -23997987
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": 16371557
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": -49142212
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": 8356110
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": -76148185
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": -237312725
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 1483707
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": 23960014
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": -103544525
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": 22733983
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": -52171602
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": 15910377
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": 95043040
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": -3332612
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": -13847117
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": -400027
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": -5136002
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": -49856808
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 1941366
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": 1302001
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 92137501
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": -1998978
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": 20721177
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": 1404120
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": 788535
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": -12869024
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": -71176947
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": -7750162
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": -112153698
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": -542298727
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 2083034
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": -1585485
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": -842048500
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": -28138270
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": -133731316
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": -247400330
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": -122364390
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": -1505056
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": -12466735
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": 12793485
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": -148312285
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": -692982451
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 14618302
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": -22414976
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": -75781015
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": 15373426
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": -154741605
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": 30412423
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": -492848720
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": 5553100
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": -2118753
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": 59125
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": 2044968
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": -16847834
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 1876707
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": 2139745
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 8145758
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": -2181413
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": 267010
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": 8367476
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": -737104
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": 1389379
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": -15398575
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": -3510918
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": 67155064
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": 99686285
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 187404
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": 8102223
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": -259897546
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": -12198126
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": 515720635
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": -51253276
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": 24292303
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "béni mellal-khénifra",
+      "annuel": "2020",
+      "valeur": -3839076
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "drâa-tafilalet",
+      "annuel": "2020",
+      "valeur": -16187352
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2020",
+      "valeur": 7550944
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "fès-meknès",
+      "annuel": "2020",
+      "valeur": -4829692
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "casablanca-settat",
+      "annuel": "2020",
+      "valeur": -439627379
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "guelmim-oued noun",
+      "annuel": "2020",
+      "valeur": 1204820
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2020",
+      "valeur": 6034517
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": -61684781
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "l'oriental",
+      "annuel": "2020",
+      "valeur": -7906657
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2020",
+      "valeur": -6523192
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "souss-massa",
+      "annuel": "2020",
+      "valeur": 4919300
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2020",
+      "valeur": 36373157
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 107285150
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 114301485
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 502612372
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 6402799
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 23508490
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 257531470
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 42290774
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 117541634
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 28999439
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 134327470
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 32207647
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 146943206
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 241776758
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 329299830
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 139860905
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 63107491
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 119514157
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 14255968
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 255284409
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 1134133665
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 11862725
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 76146607
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 133630841
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 203125634
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 180896418
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 408909002
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 275372733
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 35085423
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 24626364
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 36292608
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 217426328
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 1861766382
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 9634615
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 66086386
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 99679352
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 376665836
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 152945673
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 154919390
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 41411807
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 17725122
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 7995449
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 1675695
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 63608681
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 235536926
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 281361
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 3027479
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 23388401
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 60728002
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 4430975
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 156456707
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 14238552
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 16834582
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 1887979
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 11098597
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 64197433
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 255184710
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 3229466
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 3838917
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 40265831
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 91484350
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 84278899
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 464805628
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 69256518
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 20717649
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 11960417
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 25400781
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 235823223
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 1390242224
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 11220275
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 15053808
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 87257456
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 971277075
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 39642592
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 65247885
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 27477792
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 9434768
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 4205524
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 71181
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 26558606
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 204311022
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 804823
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 2443515
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 12092039
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 34371912
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 293009823
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 760485833
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 117347664
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 38082140
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 29177295
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": -1178322
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 218472941
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 3068255393
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 6059313
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 19853871
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 72346823
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 249802400
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 53119920
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 76922245
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 108146799
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 13026507
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 11907722
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 7452454
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 58283217
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 231139326
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 5708211
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 21950711
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 36674534
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 174450802
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 14892766
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 66981588
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 451539637
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 6177849
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 33532835
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": -3985265
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 26371537
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": -11346276
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": -18892375
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": -47938868
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 5263839
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": -3015527
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 77112988
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": -29204459
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": -740161
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 18136732
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 3310690
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 20112761
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 25776180
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 472132639
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": -2327748
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 409460
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 14087617
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 99001673
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 124004985
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 210954345
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 96435326
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 23932661
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 12120094
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 8404720
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 72984739
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 1129366099
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": 782466
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 64003094
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 54393590
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 301716756
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 184925978
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 432405593
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 30132509
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 11574298
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 5486122
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 2352029
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 54600392
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 298562649
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": 2866669
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 10096842
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 19374335
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 51779437
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 652800200
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 190689117
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 153647930
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 9791500
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 36155502
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 8791278
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 107355930
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 395952409
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": 2968807
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 2219338
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 29610765
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 92853435
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 58633731
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 364110584
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 44728954
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 14071543
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 6890281
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 24158550
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 117806847
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 783840930
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": -7303323
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 30243586
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 18576716
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 564424866
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 30463117
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 45900505
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 18908224
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 2703658
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 1920885
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 724943
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 29678502
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 160785413
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": 337167
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 3569091
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 29099051
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 23015425
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 405476424
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 957825756
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 203183038
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 82321789
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 73519239
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 22470361
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 203075143
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 3998837586
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": 24768176
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 30810425
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 129306856
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 326740904
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 70641944
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 55238960
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 45928871
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 6792983
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 20666916
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 3889930
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 12726322
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 303816342
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": 514385
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 2370707
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 10923975
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 89786908
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": -92428553
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 112000879
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": -234936429
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 12293705
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 16227922
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 92515656
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 5769409
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 35053657
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 26567732
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 89788261
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 37637100
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": -39266811
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 145963421
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 89899792
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 40468926
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 34162031
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 19094395
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 42933903
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 111665919
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 500416185
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 794650
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 61519243
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": -11824262
+    },
+    {
+      "secteur_activite": "BTP",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 113151006
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 90371648
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 455016677
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 54582277
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 20399805
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 14456822
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 14563518
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 67041284
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 1014040635
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 3428775
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 35004233
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 61358828
+    },
+    {
+      "secteur_activite": "Commerce",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 456720202
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 203312171
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 410255502
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 52203960
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 3984874
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 3190301
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 1286747
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 47563692
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 291254985
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 667806
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": -576514
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 13320824
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 39948637
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 499203151
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 104245237
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 110023619
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 5550446
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 39075583
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 9128793
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 72000431
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 268653894
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 1432451
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 2784008
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 20680474
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 85519921
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 47280852
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 433720162
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 20393458
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 14042091
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 1967611
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 6247095
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 202593749
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 684868705
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 10742803
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": -880524
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 57656307
+    },
+    {
+      "secteur_activite": "Industries",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 623284696
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 63331085
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 54978522
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 41403649
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 6864170
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 4635660
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 481155
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 37683089
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 146640131
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 713709
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 26228
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 6721489
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 26418621
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 329563975
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 923477013
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 129375836
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 36157744
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 6617519
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 5388734
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 232879004
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 3990534517
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": -3947509
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 129530133
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 93419257
+    },
+    {
+      "secteur_activite": "Services",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 285287577
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 47112215
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 38500226
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 16614837
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 8070095
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 25741530
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 5612973
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 770915
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 430962150
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 245367
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 8824102
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 17824943
+    },
+    {
+      "secteur_activite": "Transport",
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 163453098
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+    "indicateur": "Taux d'insertion à 3 ans par genre",
+    "data": [
+        {
+            "annuel": 2019,
+            "genre": "Hommes",
+            "valeur": 66
+        },
+        {
+            "annuel": 2019,
+            "genre": "Femmes",
+            "valeur": 61
+        },
+        {
+            "annuel": 2020,
+            "genre": "Hommes",
+            "valeur": 65
+        },
+        {
+            "annuel": 2020,
+            "genre": "Femmes",
+            "valeur": 57
+        },
+        {
+            "annuel": 2021,
+            "genre": "Hommes",
+            "valeur": 65
+        },
+        {
+            "annuel": 2021,
+            "genre": "Femmes",
+            "valeur": 57
+        },
+        {
+            "annuel": 2022,
+            "genre": "Hommes",
+            "valeur": 69
+        },
+        {
+            "annuel": 2022,
+            "genre": "Femmes",
+            "valeur": 61
+        },
+        {
+            "annuel": 2023,
+            "genre": "Hommes",
+            "valeur": 67
+        },
+        {
+            "annuel": 2023,
+            "genre": "Femmes",
+            "valeur": 62
+        }
+    ]
+}

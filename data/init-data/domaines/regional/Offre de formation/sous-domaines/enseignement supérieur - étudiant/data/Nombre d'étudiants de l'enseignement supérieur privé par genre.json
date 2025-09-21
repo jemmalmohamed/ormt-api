@@ -1,0 +1,95 @@
+{
+    "indicateur": "Nombre d'étudiants de l'enseignement supérieur privé par genre",
+    "data": [
+        {
+            "genre": "Femmes",
+            "annuel": "2016",
+            "valeur": 18000
+        },
+        {
+            "genre": "Femmes",
+            "annuel": "2017",
+            "valeur": 20000
+        },
+        {
+            "genre": "Femmes",
+            "annuel": "2018",
+            "valeur": 21000
+        },
+        {
+            "genre": "Femmes",
+            "annuel": "2019",
+            "valeur": 23000
+        },
+        {
+            "genre": "Femmes",
+            "annuel": "2020",
+            "valeur": 25000
+        },
+        {
+            "genre": "Femmes",
+            "annuel": "2021",
+            "valeur": 27000
+        },
+        {
+            "genre": "Femmes",
+            "annuel": "2022",
+            "valeur": 31000
+        },
+        {
+            "genre": "Femmes",
+            "annuel": "2023",
+            "valeur": 35000
+        },
+        {
+            "genre": "Femmes",
+            "annuel": "2024",
+            "valeur": 40000
+        },
+        {
+            "genre": "Hommes",
+            "annuel": "2016",
+            "valeur": 20700
+        },
+        {
+            "genre": "Hommes",
+            "annuel": "2017",
+            "valeur": 21300
+        },
+        {
+            "genre": "Hommes",
+            "annuel": "2018",
+            "valeur": 24400
+        },
+        {
+            "genre": "Hommes",
+            "annuel": "2019",
+            "valeur": 26200
+        },
+        {
+            "genre": "Hommes",
+            "annuel": "2020",
+            "valeur": 28300
+        },
+        {
+            "genre": "Hommes",
+            "annuel": "2021",
+            "valeur": 29600
+        },
+        {
+            "genre": "Hommes",
+            "annuel": "2022",
+            "valeur": 32100
+        },
+        {
+            "genre": "Hommes",
+            "annuel": "2023",
+            "valeur": 35700
+        },
+        {
+            "genre": "Hommes",
+            "annuel": "2024",
+            "valeur": 39600
+        }
+    ]
+}

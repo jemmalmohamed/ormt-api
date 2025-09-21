@@ -1,0 +1,255 @@
+{
+    "indicateur": "part des salariés touchant un salaire inférieur au smig par secteur d'activité",
+    "data": [
+        {
+            "secteur_activite_cnss": "Agriculture, forêt et pêche",
+            "annuel": 2019,
+            "valeur": 72.2
+        },
+        {
+            "secteur_activite_cnss": "Agriculture, forêt et pêche",
+            "annuel": 2020,
+            "valeur": 74.0
+        },
+        {
+            "secteur_activite_cnss": "Agriculture, forêt et pêche",
+            "annuel": 2021,
+            "valeur": 72.4
+        },
+        {
+            "secteur_activite_cnss": "Agriculture, forêt et pêche",
+            "annuel": 2022,
+            "valeur": 75.2
+        },
+        {
+            "secteur_activite_cnss": "Agriculture, forêt et pêche",
+            "annuel": 2023,
+            "valeur": 76.9
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "annuel": 2019,
+            "valeur": 53.6
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "annuel": 2020,
+            "valeur": 60.0
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "annuel": 2021,
+            "valeur": 48.8
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "annuel": 2022,
+            "valeur": 58.7
+        },
+        {
+            "secteur_activite_cnss": "BTP",
+            "annuel": 2023,
+            "valeur": 60.3
+        },
+        {
+            "secteur_activite_cnss": "Commerce",
+            "annuel": 2019,
+            "valeur": 36.5
+        },
+        {
+            "secteur_activite_cnss": "Commerce",
+            "annuel": 2020,
+            "valeur": 42.9
+        },
+        {
+            "secteur_activite_cnss": "Commerce",
+            "annuel": 2021,
+            "valeur": 33.3
+        },
+        {
+            "secteur_activite_cnss": "Commerce",
+            "annuel": 2022,
+            "valeur": 42.7
+        },
+        {
+            "secteur_activite_cnss": "Commerce",
+            "annuel": 2023,
+            "valeur": 43.8
+        },
+        {
+            "secteur_activite_cnss": "Enseignement",
+            "annuel": 2019,
+            "valeur": 47.8
+        },
+        {
+            "secteur_activite_cnss": "Enseignement",
+            "annuel": 2020,
+            "valeur": 55.6
+        },
+        {
+            "secteur_activite_cnss": "Enseignement",
+            "annuel": 2021,
+            "valeur": 47.3
+        },
+        {
+            "secteur_activite_cnss": "Enseignement",
+            "annuel": 2022,
+            "valeur": 53.9
+        },
+        {
+            "secteur_activite_cnss": "Enseignement",
+            "annuel": 2023,
+            "valeur": 57.1
+        },
+        {
+            "secteur_activite_cnss": "Hébérgement et restauration",
+            "annuel": 2019,
+            "valeur": 47.1
+        },
+        {
+            "secteur_activite_cnss": "Hébérgement et restauration",
+            "annuel": 2020,
+            "valeur": 63.9
+        },
+        {
+            "secteur_activite_cnss": "Hébérgement et restauration",
+            "annuel": 2021,
+            "valeur": 60.5
+        },
+        {
+            "secteur_activite_cnss": "Hébérgement et restauration",
+            "annuel": 2022,
+            "valeur": 59.0
+        },
+        {
+            "secteur_activite_cnss": "Hébérgement et restauration",
+            "annuel": 2023,
+            "valeur": 58.5
+        },
+        {
+            "secteur_activite_cnss": "Industries",
+            "annuel": 2019,
+            "valeur": 38.8
+        },
+        {
+            "secteur_activite_cnss": "Industries",
+            "annuel": 2020,
+            "valeur": 46.2
+        },
+        {
+            "secteur_activite_cnss": "Industries",
+            "annuel": 2021,
+            "valeur": 39.2
+        },
+        {
+            "secteur_activite_cnss": "Industries",
+            "annuel": 2022,
+            "valeur": 43.4
+        },
+        {
+            "secteur_activite_cnss": "Industries",
+            "annuel": 2023,
+            "valeur": 43.1
+        },
+        {
+            "secteur_activite_cnss": "Santé humaine et action sociale",
+            "annuel": 2019,
+            "valeur": 37.6
+        },
+        {
+            "secteur_activite_cnss": "Santé humaine et action sociale",
+            "annuel": 2020,
+            "valeur": 43.7
+        },
+        {
+            "secteur_activite_cnss": "Santé humaine et action sociale",
+            "annuel": 2021,
+            "valeur": 31.5
+        },
+        {
+            "secteur_activite_cnss": "Santé humaine et action sociale",
+            "annuel": 2022,
+            "valeur": 46.1
+        },
+        {
+            "secteur_activite_cnss": "Santé humaine et action sociale",
+            "annuel": 2023,
+            "valeur": 47.7
+        },
+        {
+            "secteur_activite_cnss": "Services",
+            "annuel": 2019,
+            "valeur": 42.8
+        },
+        {
+            "secteur_activite_cnss": "Services",
+            "annuel": 2020,
+            "valeur": 47.4
+        },
+        {
+            "secteur_activite_cnss": "Services",
+            "annuel": 2021,
+            "valeur": 38.6
+        },
+        {
+            "secteur_activite_cnss": "Services",
+            "annuel": 2022,
+            "valeur": 49.3
+        },
+        {
+            "secteur_activite_cnss": "Services",
+            "annuel": 2023,
+            "valeur": 51.2
+        },
+        {
+            "secteur_activite_cnss": "Transport",
+            "annuel": 2019,
+            "valeur": 29.1
+        },
+        {
+            "secteur_activite_cnss": "Transport",
+            "annuel": 2020,
+            "valeur": 37.2
+        },
+        {
+            "secteur_activite_cnss": "Transport",
+            "annuel": 2021,
+            "valeur": 23.1
+        },
+        {
+            "secteur_activite_cnss": "Transport",
+            "annuel": 2022,
+            "valeur": 36.2
+        },
+        {
+            "secteur_activite_cnss": "Transport",
+            "annuel": 2023,
+            "valeur": 41.0
+        },
+        {
+            "secteur_activite_cnss": "Ensemble",
+            "annuel": 2019,
+            "valeur": 45.7
+        },
+        {
+            "secteur_activite_cnss": "Ensemble",
+            "annuel": 2020,
+            "valeur": 52.0
+        },
+        {
+            "secteur_activite_cnss": "Ensemble",
+            "annuel": 2021,
+            "valeur": 44.0
+        },
+        {
+            "secteur_activite_cnss": "Ensemble",
+            "annuel": 2022,
+            "valeur": 51.8
+        },
+        {
+            "secteur_activite_cnss": "Ensemble",
+            "annuel": 2023,
+            "valeur": 53.2
+        }
+    ]
+}

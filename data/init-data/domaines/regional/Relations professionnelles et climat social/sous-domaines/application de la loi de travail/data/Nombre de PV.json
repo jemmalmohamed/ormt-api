@@ -1,0 +1,17 @@
+{
+    "indicateur": "nombre de PV",
+    "data": [
+        {
+            "annuel": "2021",
+            "valeur": 76
+        },
+        {
+            "annuel": "2022",
+            "valeur": 244
+        },
+        {
+            "annuel": "2023",
+            "valeur": 182
+        }
+    ]
+}

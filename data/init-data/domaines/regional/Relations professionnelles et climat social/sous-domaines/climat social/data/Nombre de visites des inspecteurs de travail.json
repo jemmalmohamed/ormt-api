@@ -1,0 +1,200 @@
+{
+  "indicateur": "nombre de conflits par région",
+  "data": [
+    {
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2021",
+      "valeur": 8467
+    },
+    {
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2022",
+      "valeur": 8503
+    },
+    {
+      "region": "tanger-tétouan-al hoceïma",
+      "annuel": "2023",
+      "valeur": 8061
+    },
+    {
+      "region": "l'oriental",
+      "annuel": "2021",
+      "valeur": 4205
+    },
+    {
+      "region": "l'oriental",
+      "annuel": "2022",
+      "valeur": 4573
+    },
+    {
+      "region": "l'oriental",
+      "annuel": "2023",
+      "valeur": 5239
+    },
+    {
+      "region": "fès-meknès",
+      "annuel": "2021",
+      "valeur": 6359
+    },
+    {
+      "region": "fès-meknès",
+      "annuel": "2022",
+      "valeur": 6321
+    },
+    {
+      "region": "fès-meknès",
+      "annuel": "2023",
+      "valeur": 5125
+    },
+    {
+      "region": "rabat-salé-kénitra",
+      "annuel": "2021",
+      "valeur": 8368
+    },
+    {
+      "region": "rabat-salé-kénitra",
+      "annuel": "2022",
+      "valeur": 9944
+    },
+    {
+      "region": "rabat-salé-kénitra",
+      "annuel": "2023",
+      "valeur": 8448
+    },
+    {
+      "region": "béni mellal-khénifra",
+      "annuel": "2021",
+      "valeur": 2344
+    },
+    {
+      "region": "béni mellal-khénifra",
+      "annuel": "2022",
+      "valeur": 2769
+    },
+    {
+      "region": "béni mellal-khénifra",
+      "annuel": "2023",
+      "valeur": 2129
+    },
+    {
+      "region": "casablanca-settat",
+      "annuel": "2021",
+      "valeur": 17806
+    },
+    {
+      "region": "casablanca-settat",
+      "annuel": "2022",
+      "valeur": 14544
+    },
+    {
+      "region": "casablanca-settat",
+      "annuel": "2023",
+      "valeur": 17129
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 3951
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 5752
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 4282
+    },
+    {
+      "region": "drâa-tafilalet",
+      "annuel": "2021",
+      "valeur": 663
+    },
+    {
+      "region": "drâa-tafilalet",
+      "annuel": "2022",
+      "valeur": 575
+    },
+    {
+      "region": "drâa-tafilalet",
+      "annuel": "2023",
+      "valeur": 568
+    },
+    {
+      "region": "souss-massa",
+      "annuel": "2021",
+      "valeur": 3291
+    },
+    {
+      "region": "souss-massa",
+      "annuel": "2022",
+      "valeur": 3758
+    },
+    {
+      "region": "souss-massa",
+      "annuel": "2023",
+      "valeur": 2761
+    },
+    {
+      "region": "guelmim-oued noun",
+      "annuel": "2021",
+      "valeur": 388
+    },
+    {
+      "region": "guelmim-oued noun",
+      "annuel": "2022",
+      "valeur": 358
+    },
+    {
+      "region": "guelmim-oued noun",
+      "annuel": "2023",
+      "valeur": 285
+    },
+    {
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2021",
+      "valeur": 371
+    },
+    {
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2022",
+      "valeur": 449
+    },
+    {
+      "region": "laâyoune-sakia el hamra",
+      "annuel": "2023",
+      "valeur": 257
+    },
+    {
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2021",
+      "valeur": 296
+    },
+    {
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2022",
+      "valeur": 338
+    },
+    {
+      "region": "dakhla-oued ed-dahab",
+      "annuel": "2023",
+      "valeur": 304
+    },
+    {
+      "region": "total",
+      "annuel": "2021",
+      "valeur": 56509
+    },
+    {
+      "region": "total",
+      "annuel": "2022",
+      "valeur": 57884
+    },
+    {
+      "region": "total",
+      "annuel": "2023",
+      "valeur": 54588
+    }
+  ]
+}

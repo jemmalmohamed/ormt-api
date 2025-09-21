@@ -1,0 +1,333 @@
+{
+  "nom": "IDMAJ",
+  "description": "Sous domaine du domaine Employabilité et insertion professionnelle.",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "indicateurs": [
+    {
+      "nom": "Nombre des bénéficiaires IDMAJ, y compris le PI",
+      "titre": "Nombre des bénéficiaires IDMAJ, y compris le PI",
+      "categorie": "Chercheurs d'emploi bénéficiaires",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2019-2024",
+      "description": "Nombre total des bénéficiaires IDMAJ, y compris le PI.",
+      "dimensions": [
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre des bénéficiaires IDMAJ, y compris le PI - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires IDMAJ par genre (y compris le PI)",
+      "titre": "Bénéficiaires IDMAJ par genre (y compris le PI)",
+      "categorie": "Chercheurs d'emploi bénéficiaires",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires IDMAJ ventilés par genre (y compris le PI).",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "Genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires IDMAJ par genre (y compris le PI) - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires IDMAJ par âge (hors PI)",
+      "titre": "Bénéficiaires IDMAJ par âge (hors PI)",
+      "categorie": "Chercheurs d'emploi bénéficiaires",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires IDMAJ ventilés par âge (hors PI).",
+      "dimensions": [
+        {
+          "nom": "age",
+          "libelle": "Age",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires IDMAJ par âge (hors PI) - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires IDMAJ par diplôme (hors PI)",
+      "titre": "Bénéficiaires IDMAJ par diplôme (hors PI)",
+      "categorie": "Chercheurs d'emploi bénéficiaires",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires IDMAJ ventilés par diplôme (hors PI).",
+      "dimensions": [
+        {
+          "nom": "diplome",
+          "libelle": "Diplôme",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires IDMAJ par diplôme (hors PI) - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires IDMAJ par type de contrat (hors PI)",
+      "titre": "Bénéficiaires IDMAJ par type de contrat (hors PI)",
+      "categorie": "Chercheurs d'emploi bénéficiaires",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires IDMAJ ventilés par type de contrat (hors PI).",
+      "dimensions": [
+        {
+          "nom": "type_contrat",
+          "libelle": "Type de Contrat",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires IDMAJ par type de contrat (hors PI) - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires IDMAJ par secteur d'activité (hors PI)",
+      "titre": "Bénéficiaires IDMAJ par secteur d'activité (hors PI)",
+      "categorie": "Chercheurs d'emploi bénéficiaires",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires IDMAJ ventilés par secteur d'activité (hors PI).",
+      "dimensions": [
+        {
+          "nom": "sae_idmaj",
+          "libelle": "SAE_IDMAJ",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires IDMAJ par secteur d'activité (hors PI) - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Bénéficiaires IDMAJ par région (hors PI)",
+      "titre": "Bénéficiaires IDMAJ (hors PI)",
+      "categorie": "Chercheurs d'emploi bénéficiaires",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "anapec",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "description": "Bénéficiaires IDMAJ (hors PI).",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Bénéficiaires IDMAJ  (hors PI) - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    }
+  ]
+}

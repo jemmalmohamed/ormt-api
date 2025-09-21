@@ -1,0 +1,80 @@
+{
+    "indicateur": "Taux de chômage selon le genre",
+    "data": [
+        {
+            "genre": "Homme",
+            "annuel": "2019",
+            "valeur": 7.8
+        },
+        {
+            "genre": "Homme",
+            "annuel": "2020",
+            "valeur": 10.7
+        },
+        {
+            "genre": "Homme",
+            "annuel": "2021",
+            "valeur": 10.9
+        },
+        {
+            "genre": "Homme",
+            "annuel": "2022",
+            "valeur": 10.3
+        },
+        {
+            "genre": "Homme",
+            "annuel": "2023",
+            "valeur": 11.5
+        },
+        {
+            "genre": "Femme",
+            "annuel": "2019",
+            "valeur": 13.5
+        },
+        {
+            "genre": "Femme",
+            "annuel": "2020",
+            "valeur": 16.2
+        },
+        {
+            "genre": "Femme",
+            "annuel": "2021",
+            "valeur": 16.8
+        },
+        {
+            "genre": "Femme",
+            "annuel": "2022",
+            "valeur": 17.2
+        },
+        {
+            "genre": "Femme",
+            "annuel": "2023",
+            "valeur": 18.3
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": "2019",
+            "valeur": 9.2
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": "2020",
+            "valeur": 11.9
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": "2021",
+            "valeur": 12.3
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": "2022",
+            "valeur": 11.8
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": "2023",
+            "valeur": 13.0
+        }
+    ]
+}

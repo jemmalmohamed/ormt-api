@@ -1,0 +1,80 @@
+{
+    "indicateur": "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par genre",
+    "data": [
+        {
+            "genre": "Homme",
+            "annuel": 2019,
+            "valeur": 48.4
+        },
+        {
+            "genre": "Homme",
+            "annuel": 2020,
+            "valeur": 34.4
+        },
+        {
+            "genre": "Homme",
+            "annuel": 2021,
+            "valeur": 43.5
+        },
+        {
+            "genre": "Homme",
+            "annuel": 2022,
+            "valeur": 44.4
+        },
+        {
+            "genre": "Homme",
+            "annuel": 2023,
+            "valeur": 41.0
+        },
+        {
+            "genre": "Femme",
+            "annuel": 2019,
+            "valeur": 12.9
+        },
+        {
+            "genre": "Femme",
+            "annuel": 2020,
+            "valeur": 9.1
+        },
+        {
+            "genre": "Femme",
+            "annuel": 2021,
+            "valeur": 11.7
+        },
+        {
+            "genre": "Femme",
+            "annuel": 2022,
+            "valeur": 12.7
+        },
+        {
+            "genre": "Femme",
+            "annuel": 2023,
+            "valeur": 13.5
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": 2019,
+            "valeur": 40.4
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": 2020,
+            "valeur": 29.0
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": 2021,
+            "valeur": 36.4
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": 2022,
+            "valeur": 37.7
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": 2023,
+            "valeur": 35.3
+        }
+    ]
+}

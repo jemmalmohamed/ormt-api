@@ -1,0 +1,29 @@
+{
+    "indicateur": "Nombre des bénéficiaires de la formation en ligne",
+    "data": [
+        {
+            "annuel": 2019,
+            "valeur": 36806
+        },
+        {
+            "annuel": 2020,
+            "valeur": 28090
+        },
+        {
+            "annuel": 2021,
+            "valeur": 29315
+        },
+        {
+            "annuel": 2022,
+            "valeur": 125266
+        },
+        {
+            "annuel": 2023,
+            "valeur": 134259
+        },
+        {
+            "annuel": 2024,
+            "valeur": 41938
+        }
+    ]
+}

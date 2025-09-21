@@ -1,0 +1,75 @@
+{
+    "indicateur": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par diplôme",
+    "data": [
+        {
+            "diplome": "Licence fondamentale",
+            "annuel": "2014",
+            "valeur": 79.0
+        },
+        {
+            "diplome": "DEUST/DUT",
+            "annuel": "2014",
+            "valeur": 84.4
+        },
+        {
+            "diplome": "Licence professionnelle",
+            "annuel": "2014",
+            "valeur": 88.5
+        },
+        {
+            "diplome": "Technicien spécialisé",
+            "annuel": "2014",
+            "valeur": 79.5
+        },
+        {
+            "diplome": "Licence ST",
+            "annuel": "2014",
+            "valeur": 89.7
+        },
+        {
+            "diplome": "Master de recherche",
+            "annuel": "2014",
+            "valeur": 89.8
+        },
+        {
+            "diplome": "Master spécialisé",
+            "annuel": "2014",
+            "valeur": 90.0
+        },
+        {
+            "diplome": "Licence du privé",
+            "annuel": "2014",
+            "valeur": 94.0
+        },
+        {
+            "diplome": "Master du privé",
+            "annuel": "2014",
+            "valeur": 94.7
+        },
+        {
+            "diplome": "Diplôme de l'ENCG",
+            "annuel": "2014",
+            "valeur": 94.8
+        },
+        {
+            "diplome": "Diplôme d'ingénieur",
+            "annuel": "2014",
+            "valeur": 97.1
+        },
+        {
+            "diplome": "Doctorat",
+            "annuel": "2014",
+            "valeur": 100.0
+        },
+        {
+            "diplome": "Bachelor",
+            "annuel": "2014",
+            "valeur": 100.0
+        },
+        {
+            "diplome": "Total",
+            "annuel": "2014",
+            "valeur": 83.90
+        }
+    ]
+}

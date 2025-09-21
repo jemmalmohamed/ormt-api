@@ -1,0 +1,799 @@
+{
+  "nom": "Activité",
+  "description": "Indicateurs relatifs à l'activité de la population sur le marché du travail (population active, inactive, taux d'activité, etc.)",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "indicateurs": [
+    {
+      "nom": "Population en âge d'activité",
+      "titre": "Population en âge d'activité",
+      "description": "Population en âge d'activité selon groupe d'âge, milieu de résidence et genre",
+      "categorie": "Volume",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "groupe_age",
+          "libelle": "groupe d'âge",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Population en âge d'activité - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Population inactive",
+      "titre": "Population inactive",
+      "description": "Population inactive selon groupe d'âge, milieu de résidence et genre",
+      "categorie": "Volume",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "groupe_age",
+          "libelle": "groupe d'âge",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Population inactive - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Population active",
+      "titre": "Population active",
+      "description": "Population active selon groupe d'âge, milieu de résidence et genre",
+      "categorie": "Volume",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "groupe_age",
+          "libelle": "groupe d'âge",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Population active - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Population active par diplôme et milieu",
+      "titre": "Population active par diplôme et milieu",
+      "description": "Population active selon diplôme et milieu",
+      "categorie": "Volume",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "diplome",
+          "libelle": "diplôme",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Population active par diplôme et milieu - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Population en active par diplôme et milieu de résidence",
+      "titre": "Population en active par diplôme et milieu de résidence",
+      "description": "Population active selon diplôme et milieu de résidence",
+      "categorie": "Volume",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "periode": "2019-2025",
+      "dimensions": [
+        {
+          "nom": "diplome",
+          "libelle": "diplôme",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Population en active par diplôme et milieu de résidence - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'activité selon le genre et le milieu de résidence",
+      "titre": "Taux d'activité selon le genre et le milieu de résidence",
+      "description": "Taux d'activité selon le genre et le milieu de résidence",
+      "categorie": "Taux d'activité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'activité selon le genre et le milieu de résidence - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'activité selon le genre",
+      "titre": "Taux d'activité selon le genre",
+      "description": "Taux d'activité selon le genre",
+      "categorie": "Taux d'activité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'activité selon le genre - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'activité selon le groupe d'âge et le milieu de résidence",
+      "titre": "Taux d'activité selon le groupe d'âge et le milieu de résidence",
+      "description": "Taux d'activité selon le groupe d'âge et le milieu de résidence",
+      "categorie": "Taux d'activité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "Décisionnel",
+      "source": "hcp",
+      "reglecalcul": "",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "groupe_age",
+          "libelle": "groupe d'âge",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'activité selon le groupe d'âge et le milieu de résidence - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'activité selon le groupe d'âge et le genre",
+      "titre": "Taux d'activité selon le groupe d'âge et le genre",
+      "description": "Taux d'activité selon le groupe d'âge et le genre",
+      "categorie": "Taux d'activité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "Décisionnel",
+      "source": "hcp",
+      "reglecalcul": "",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "groupe_age",
+          "libelle": "groupe d'âge",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'activité selon le groupe d'âge et le genre - Pyramide_Des_Ages",
+          "grapheTypeCode": "PYRAMIDE_DES_AGES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'activité selon le diplôme et le milieu de résidence",
+      "titre": "Taux d'activité selon le diplôme et le milieu de résidence",
+      "description": "Taux d'activité selon le diplôme et le milieu de résidence",
+      "categorie": "Taux d'activité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "Décisionnel",
+      "source": "hcp",
+      "unite": "%",
+      "reglecalcul": "",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "diplome",
+          "libelle": "diplôme",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'activité selon le diplôme et le milieu de résidence - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'activité selon le diplôme et le genre",
+      "titre": "Taux d'activité selon le diplôme et le genre",
+      "description": "Taux d'activité selon le diplôme et le genre",
+      "categorie": "Taux d'activité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "Décisionnel",
+      "source": "hcp",
+      "reglecalcul": "",
+      "periode": "2019-2024",
+      "unite": "%",
+      "dimensions": [
+        {
+          "nom": "diplome",
+          "libelle": "diplôme",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'activité selon le diplôme et le genre - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'activité selon le milieu de résidence",
+      "titre": "Taux d'activité selon le milieu de résidence",
+      "description": "Taux d'activité selon le milieu de résidence",
+      "categorie": "Taux d'activité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "Décisionnel",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'activité selon le milieu de résidence - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'activité par région et le milieu de résidence",
+      "titre": "Taux d'activité par milieu de résidence",
+      "description": "Taux d'activité par milieu de résidence",
+      "categorie": "Taux d'activité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "Décisionnel",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "milieu",
+          "libelle": "milieu de résidence",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'activité par milieu de résidence - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'activité par région et genre",
+      "titre": "Taux d'activité par genre",
+      "description": "Taux d'activité par genre",
+      "categorie": "Taux d'activité",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "Décisionnel",
+      "source": "hcp",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2024",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "genre",
+          "libelle": "genre",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'activité par genre - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,665 @@
+{
+  "indicateur": "Taux d'activité par région et genre",
+  "data": [
+    {
+      "region": "tanger-tétouan-al hoceïma",
+      "genre": "Masculin",
+      "annuel": "2019",
+      "valeur": 72.8
+    },
+    {
+      "region": "tanger-tétouan-al hoceïma",
+      "genre": "Féminin",
+      "annuel": "2019",
+      "valeur": 18.3
+    },
+    {
+      "region": "tanger-tétouan-al hoceïma",
+      "genre": "Masculin",
+      "annuel": "2020",
+      "valeur": 72.6
+    },
+    {
+      "region": "tanger-tétouan-al hoceïma",
+      "genre": "Féminin",
+      "annuel": "2020",
+      "valeur": 20.0
+    },
+    {
+      "region": "tanger-tétouan-al hoceïma",
+      "genre": "Masculin",
+      "annuel": "2021",
+      "valeur": 72.8
+    },
+    {
+      "region": "tanger-tétouan-al hoceïma",
+      "genre": "Féminin",
+      "annuel": "2021",
+      "valeur": 26.2
+    },
+    {
+      "region": "tanger-tétouan-al hoceïma",
+      "genre": "Masculin",
+      "annuel": "2022",
+      "valeur": 72.4
+    },
+    {
+      "region": "tanger-tétouan-al hoceïma",
+      "genre": "Féminin",
+      "annuel": "2022",
+      "valeur": 27.2
+    },
+    {
+      "region": "tanger-tétouan-al hoceïma",
+      "genre": "Masculin",
+      "annuel": "2023",
+      "valeur": 71.8
+    },
+    {
+      "region": "tanger-tétouan-al hoceïma",
+      "genre": "Féminin",
+      "annuel": "2023",
+      "valeur": 25.0
+    },
+    {
+      "region": "l'oriental",
+      "genre": "Masculin",
+      "annuel": "2019",
+      "valeur": 72.0
+    },
+    {
+      "region": "l'oriental",
+      "genre": "Féminin",
+      "annuel": "2019",
+      "valeur": 15.6
+    },
+    {
+      "region": "l'oriental",
+      "genre": "Masculin",
+      "annuel": "2020",
+      "valeur": 71.9
+    },
+    {
+      "region": "l'oriental",
+      "genre": "Féminin",
+      "annuel": "2020",
+      "valeur": 14.5
+    },
+    {
+      "region": "l'oriental",
+      "genre": "Masculin",
+      "annuel": "2021",
+      "valeur": 71.6
+    },
+    {
+      "region": "l'oriental",
+      "genre": "Féminin",
+      "annuel": "2021",
+      "valeur": 15.0
+    },
+    {
+      "region": "l'oriental",
+      "genre": "Masculin",
+      "annuel": "2022",
+      "valeur": 70.7
+    },
+    {
+      "region": "l'oriental",
+      "genre": "Féminin",
+      "annuel": "2022",
+      "valeur": 14.9
+    },
+    {
+      "region": "l'oriental",
+      "genre": "Masculin",
+      "annuel": "2023",
+      "valeur": 68.1
+    },
+    {
+      "region": "l'oriental",
+      "genre": "Féminin",
+      "annuel": "2023",
+      "valeur": 13.6
+    },
+    {
+      "region": "fès-meknès",
+      "genre": "Masculin",
+      "annuel": "2019",
+      "valeur": 68.5
+    },
+    {
+      "region": "fès-meknès",
+      "genre": "Féminin",
+      "annuel": "2019",
+      "valeur": 18.7
+    },
+    {
+      "region": "fès-meknès",
+      "genre": "Masculin",
+      "annuel": "2020",
+      "valeur": 68.2
+    },
+    {
+      "region": "fès-meknès",
+      "genre": "Féminin",
+      "annuel": "2020",
+      "valeur": 18.0
+    },
+    {
+      "region": "fès-meknès",
+      "genre": "Masculin",
+      "annuel": "2021",
+      "valeur": 67.2
+    },
+    {
+      "region": "fès-meknès",
+      "genre": "Féminin",
+      "annuel": "2021",
+      "valeur": 18.6
+    },
+    {
+      "region": "fès-meknès",
+      "genre": "Masculin",
+      "annuel": "2022",
+      "valeur": 67.0
+    },
+    {
+      "region": "fès-meknès",
+      "genre": "Féminin",
+      "annuel": "2022",
+      "valeur": 18.6
+    },
+    {
+      "region": "fès-meknès",
+      "genre": "Masculin",
+      "annuel": "2023",
+      "valeur": 66.5
+    },
+    {
+      "region": "fès-meknès",
+      "genre": "Féminin",
+      "annuel": "2023",
+      "valeur": 18.2
+    },
+    {
+      "region": "rabat-salé-kénitra",
+      "genre": "Masculin",
+      "annuel": "2019",
+      "valeur": 69.0
+    },
+    {
+      "region": "rabat-salé-kénitra",
+      "genre": "Féminin",
+      "annuel": "2019",
+      "valeur": 22.9
+    },
+    {
+      "region": "rabat-salé-kénitra",
+      "genre": "Masculin",
+      "annuel": "2020",
+      "valeur": 68.6
+    },
+    {
+      "region": "rabat-salé-kénitra",
+      "genre": "Féminin",
+      "annuel": "2020",
+      "valeur": 20.8
+    },
+    {
+      "region": "rabat-salé-kénitra",
+      "genre": "Masculin",
+      "annuel": "2021",
+      "valeur": 68.1
+    },
+    {
+      "region": "rabat-salé-kénitra",
+      "genre": "Féminin",
+      "annuel": "2021",
+      "valeur": 21.3
+    },
+    {
+      "region": "rabat-salé-kénitra",
+      "genre": "Masculin",
+      "annuel": "2022",
+      "valeur": 68.7
+    },
+    {
+      "region": "rabat-salé-kénitra",
+      "genre": "Féminin",
+      "annuel": "2022",
+      "valeur": 20.9
+    },
+    {
+      "region": "rabat-salé-kénitra",
+      "genre": "Masculin",
+      "annuel": "2023",
+      "valeur": 68.1
+    },
+    {
+      "region": "rabat-salé-kénitra",
+      "genre": "Féminin",
+      "annuel": "2023",
+      "valeur": 20.9
+    },
+    {
+      "region": "béni mellal-khénifra",
+      "genre": "Masculin",
+      "annuel": "2019",
+      "valeur": 70.5
+    },
+    {
+      "region": "béni mellal-khénifra",
+      "genre": "Féminin",
+      "annuel": "2019",
+      "valeur": 21.4
+    },
+    {
+      "region": "béni mellal-khénifra",
+      "genre": "Masculin",
+      "annuel": "2020",
+      "valeur": 70.1
+    },
+    {
+      "region": "béni mellal-khénifra",
+      "genre": "Féminin",
+      "annuel": "2020",
+      "valeur": 18.7
+    },
+    {
+      "region": "béni mellal-khénifra",
+      "genre": "Masculin",
+      "annuel": "2021",
+      "valeur": 72.3
+    },
+    {
+      "region": "béni mellal-khénifra",
+      "genre": "Féminin",
+      "annuel": "2021",
+      "valeur": 18.4
+    },
+    {
+      "region": "béni mellal-khénifra",
+      "genre": "Masculin",
+      "annuel": "2022",
+      "valeur": 70.0
+    },
+    {
+      "region": "béni mellal-khénifra",
+      "genre": "Féminin",
+      "annuel": "2022",
+      "valeur": 16.2
+    },
+    {
+      "region": "béni mellal-khénifra",
+      "genre": "Masculin",
+      "annuel": "2023",
+      "valeur": 68.5
+    },
+    {
+      "region": "béni mellal-khénifra",
+      "genre": "Féminin",
+      "annuel": "2023",
+      "valeur": 13.3
+    },
+    {
+      "region": "casablanca-settat",
+      "genre": "Masculin",
+      "annuel": "2019",
+      "valeur": 72.6
+    },
+    {
+      "region": "casablanca-settat",
+      "genre": "Féminin",
+      "annuel": "2019",
+      "valeur": 28.2
+    },
+    {
+      "region": "casablanca-settat",
+      "genre": "Masculin",
+      "annuel": "2020",
+      "valeur": 71.4
+    },
+    {
+      "region": "casablanca-settat",
+      "genre": "Féminin",
+      "annuel": "2020",
+      "valeur": 25.0
+    },
+    {
+      "region": "casablanca-settat",
+      "genre": "Masculin",
+      "annuel": "2021",
+      "valeur": 71.0
+    },
+    {
+      "region": "casablanca-settat",
+      "genre": "Féminin",
+      "annuel": "2021",
+      "valeur": 25.2
+    },
+    {
+      "region": "casablanca-settat",
+      "genre": "Masculin",
+      "annuel": "2022",
+      "valeur": 70.2
+    },
+    {
+      "region": "casablanca-settat",
+      "genre": "Féminin",
+      "annuel": "2022",
+      "valeur": 23.9
+    },
+    {
+      "region": "casablanca-settat",
+      "genre": "Masculin",
+      "annuel": "2023",
+      "valeur": 69.9
+    },
+    {
+      "region": "casablanca-settat",
+      "genre": "Féminin",
+      "annuel": "2023",
+      "valeur": 23.1
+    },
+    {
+      "region": "marrakech-safi",
+      "genre": "Masculin",
+      "annuel": "2019",
+      "valeur": 74.6
+    },
+    {
+      "region": "marrakech-safi",
+      "genre": "Féminin",
+      "annuel": "2019",
+      "valeur": 20.2
+    },
+    {
+      "region": "marrakech-safi",
+      "genre": "Masculin",
+      "annuel": "2020",
+      "valeur": 74.1
+    },
+    {
+      "region": "marrakech-safi",
+      "genre": "Féminin",
+      "annuel": "2020",
+      "valeur": 19.0
+    },
+    {
+      "region": "marrakech-safi",
+      "genre": "Masculin",
+      "annuel": "2021",
+      "valeur": 74.2
+    },
+    {
+      "region": "marrakech-safi",
+      "genre": "Féminin",
+      "annuel": "2021",
+      "valeur": 19.2
+    },
+    {
+      "region": "marrakech-safi",
+      "genre": "Masculin",
+      "annuel": "2022",
+      "valeur": 72.5
+    },
+    {
+      "region": "marrakech-safi",
+      "genre": "Féminin",
+      "annuel": "2022",
+      "valeur": 17.3
+    },
+    {
+      "region": "marrakech-safi",
+      "genre": "Masculin",
+      "annuel": "2023",
+      "valeur": 71.2
+    },
+    {
+      "region": "marrakech-safi",
+      "genre": "Féminin",
+      "annuel": "2023",
+      "valeur": 16.5
+    },
+    {
+      "region": "drâa-tafilalet",
+      "genre": "Masculin",
+      "annuel": "2019",
+      "valeur": 64.6
+    },
+    {
+      "region": "drâa-tafilalet",
+      "genre": "Féminin",
+      "annuel": "2019",
+      "valeur": 20.2
+    },
+    {
+      "region": "drâa-tafilalet",
+      "genre": "Masculin",
+      "annuel": "2020",
+      "valeur": 64.5
+    },
+    {
+      "region": "drâa-tafilalet",
+      "genre": "Féminin",
+      "annuel": "2020",
+      "valeur": 19.0
+    },
+    {
+      "region": "drâa-tafilalet",
+      "genre": "Masculin",
+      "annuel": "2021",
+      "valeur": 65.5
+    },
+    {
+      "region": "drâa-tafilalet",
+      "genre": "Féminin",
+      "annuel": "2021",
+      "valeur": 23.1
+    },
+    {
+      "region": "drâa-tafilalet",
+      "genre": "Masculin",
+      "annuel": "2022",
+      "valeur": 63.7
+    },
+    {
+      "region": "drâa-tafilalet",
+      "genre": "Féminin",
+      "annuel": "2022",
+      "valeur": 19.8
+    },
+    {
+      "region": "drâa-tafilalet",
+      "genre": "Masculin",
+      "annuel": "2023",
+      "valeur": 64.7
+    },
+    {
+      "region": "drâa-tafilalet",
+      "genre": "Féminin",
+      "annuel": "2023",
+      "valeur": 20.0
+    },
+    {
+      "region": "souss-massa",
+      "genre": "Masculin",
+      "annuel": "2019",
+      "valeur": 68.8
+    },
+    {
+      "region": "souss-massa",
+      "genre": "Féminin",
+      "annuel": "2019",
+      "valeur": 18.9
+    },
+    {
+      "region": "souss-massa",
+      "genre": "Masculin",
+      "annuel": "2020",
+      "valeur": 68.1
+    },
+    {
+      "region": "souss-massa",
+      "genre": "Féminin",
+      "annuel": "2020",
+      "valeur": 16.8
+    },
+    {
+      "region": "souss-massa",
+      "genre": "Masculin",
+      "annuel": "2021",
+      "valeur": 68.3
+    },
+    {
+      "region": "souss-massa",
+      "genre": "Féminin",
+      "annuel": "2021",
+      "valeur": 16.0
+    },
+    {
+      "region": "souss-massa",
+      "genre": "Masculin",
+      "annuel": "2022",
+      "valeur": 66.3
+    },
+    {
+      "region": "souss-massa",
+      "genre": "Féminin",
+      "annuel": "2022",
+      "valeur": 12.1
+    },
+    {
+      "region": "souss-massa",
+      "genre": "Masculin",
+      "annuel": "2023",
+      "valeur": 66.7
+    },
+    {
+      "region": "souss-massa",
+      "genre": "Féminin",
+      "annuel": "2023",
+      "valeur": 12.9
+    },
+    {
+      "region": "régions du sud",
+      "genre": "Masculin",
+      "annuel": "2019",
+      "valeur": 71.2
+    },
+    {
+      "region": "régions du sud",
+      "genre": "Féminin",
+      "annuel": "2019",
+      "valeur": 18.3
+    },
+    {
+      "region": "régions du sud",
+      "genre": "Masculin",
+      "annuel": "2020",
+      "valeur": 69.5
+    },
+    {
+      "region": "régions du sud",
+      "genre": "Féminin",
+      "annuel": "2020",
+      "valeur": 16.3
+    },
+    {
+      "region": "régions du sud",
+      "genre": "Masculin",
+      "annuel": "2021",
+      "valeur": 69.2
+    },
+    {
+      "region": "régions du sud",
+      "genre": "Féminin",
+      "annuel": "2021",
+      "valeur": 17.4
+    },
+    {
+      "region": "régions du sud",
+      "genre": "Masculin",
+      "annuel": "2022",
+      "valeur": 70.8
+    },
+    {
+      "region": "régions du sud",
+      "genre": "Féminin",
+      "annuel": "2022",
+      "valeur": 15.6
+    },
+    {
+      "region": "régions du sud",
+      "genre": "Masculin",
+      "annuel": "2023",
+      "valeur": 72.2
+    },
+    {
+      "region": "régions du sud",
+      "genre": "Féminin",
+      "annuel": "2023",
+      "valeur": 15.9
+    },
+    {
+      "region": "total",
+      "genre": "Masculin",
+      "annuel": "2019",
+      "valeur": 71.0
+    },
+    {
+      "region": "total",
+      "genre": "Féminin",
+      "annuel": "2019",
+      "valeur": 21.5
+    },
+    {
+      "region": "total",
+      "genre": "Masculin",
+      "annuel": "2020",
+      "valeur": 70.4
+    },
+    {
+      "region": "total",
+      "genre": "Féminin",
+      "annuel": "2020",
+      "valeur": 19.9
+    },
+    {
+      "region": "total",
+      "genre": "Masculin",
+      "annuel": "2021",
+      "valeur": 70.4
+    },
+    {
+      "region": "total",
+      "genre": "Féminin",
+      "annuel": "2021",
+      "valeur": 20.9
+    },
+    {
+      "region": "total",
+      "genre": "Masculin",
+      "annuel": "2022",
+      "valeur": 69.6
+    },
+    {
+      "region": "total",
+      "genre": "Féminin",
+      "annuel": "2022",
+      "valeur": 19.8
+    },
+    {
+      "region": "total",
+      "genre": "Masculin",
+      "annuel": "2023",
+      "valeur": 69.0
+    },
+    {
+      "region": "total",
+      "genre": "Féminin",
+      "annuel": "2023",
+      "valeur": 19.0
+    }
+  ]
+}

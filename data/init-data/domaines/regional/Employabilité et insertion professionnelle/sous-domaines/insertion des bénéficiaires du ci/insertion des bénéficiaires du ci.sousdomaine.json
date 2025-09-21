@@ -1,0 +1,436 @@
+{
+  "nom": "Insertion des bénéficiaires du CI",
+  "description": "Sous domaine du domaine Employabilité et insertion professionnelle.",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "indicateurs": [
+    {
+      "nom": "Taux d'insertion à 3 ans par genre",
+      "titre": "Taux d'insertion à 3 ans par genre",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "donmt",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2023",
+      "description": "Taux d'insertion à 3 ans ventilé par genre.",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "Genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'insertion à 3 ans par genre - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'insertion à 3 ans par âge",
+      "titre": "Taux d'insertion à 3 ans par âge",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "donmt",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2023",
+      "description": "Taux d'insertion à 3 ans ventilé par âge.",
+      "dimensions": [
+        {
+          "nom": "age_insertion",
+          "libelle": "Age_insertion",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'insertion à 3 ans par âge - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'insertion à 3 ans par diplôme",
+      "titre": "Taux d'insertion à 3 ans par diplôme",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "donmt",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2023",
+      "description": "Taux d'insertion à 3 ans ventilé par diplôme.",
+      "dimensions": [
+        {
+          "nom": "diplome",
+          "libelle": "Diplôme",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'insertion à 3 ans par diplôme - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'insertion à 3 ans par taille d'entreprise",
+      "titre": "Taux d'insertion à 3 ans par taille d'entreprise",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "donmt",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2023",
+      "description": "Taux d'insertion à 3 ans ventilé par taille d'entreprise.",
+      "dimensions": [
+        {
+          "nom": "taille_entreprise",
+          "libelle": "Taille d'entreprise",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'insertion à 3 ans par taille d'entreprise - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'insertion à 3 ans par secteur d'activité économique",
+      "titre": "Taux d'insertion à 3 ans par secteur d'activité économique",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "donmt",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2023",
+      "description": "Taux d'insertion à 3 ans ventilé par secteur d'activité économique.",
+      "dimensions": [
+        {
+          "nom": "sae_insertion",
+          "libelle": "SAE_insertion",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'insertion à 3 ans par secteur d'activité économique - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'insertion à 3 ans par région",
+      "titre": "Taux d'insertion à 3 ans",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "donmt",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2019-2023",
+      "description": "Taux d'insertion à 3 ans.",
+      "dimensions": [
+        {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'insertion à 3 ans - CHOROPLETH",
+          "grapheTypeCode": "CHOROPLETH",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'insertion à 3 ans selon la période de stage",
+      "titre": "Taux d'insertion à 3 ans selon la période de stage",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "donmt",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2021et 2023",
+      "description": "Taux d'insertion à 3 ans ventilé selon la période de stage.",
+      "dimensions": [
+        {
+          "nom": "periode_stage",
+          "libelle": "Période de Stage",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'insertion à 3 ans selon la période de stage - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'insertion à l'issue de stage par taille d'entreprise",
+      "titre": "Taux d'insertion à l'issue de stage par taille d'entreprise",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "donmt",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2023",
+      "description": "Taux d'insertion à l'issue de stage ventilé par taille d'entreprise.",
+      "dimensions": [
+        {
+          "nom": "taille_entreprise",
+          "libelle": "Taille d'entreprise",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'insertion à l'issue de stage par taille d'entreprise - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Taux d'insertion à l'issue de stage par secteur d'activité économique",
+      "titre": "Taux d'insertion à l'issue de stage par secteur d'activité économique",
+      "categorie": "Insertion des bénéficiaires du contrat insertion",
+      "abreviation": "",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel",
+      "source": "donmt",
+      "reglecalcul": "",
+      "unite": "%",
+      "periode": "2023",
+      "description": "Taux d'insertion à l'issue de stage ventilé par secteur d'activité économique.",
+      "dimensions": [
+        {
+          "nom": "sae_insertion",
+          "libelle": "SAE_insertion",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Taux d'insertion à l'issue de stage par secteur d'activité économique - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    }
+  ]
+}
