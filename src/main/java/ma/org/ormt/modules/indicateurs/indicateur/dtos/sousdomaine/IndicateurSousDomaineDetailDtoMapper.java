@@ -30,7 +30,7 @@ public interface IndicateurSousDomaineDetailDtoMapper
                     !territoireStatus.equals("Pas de dimensions"));
         } else {
             // Fallback: set default values if service is not available
-            target.setTerritoire("Unknown");
+            target.setTerritoire("national");
             target.setRegional(false);
         }
     }

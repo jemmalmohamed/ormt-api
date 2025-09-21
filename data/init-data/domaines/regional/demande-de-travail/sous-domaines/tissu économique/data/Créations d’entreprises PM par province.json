@@ -1,0 +1,101 @@
+{
+    "indicateur": "créations d'entreprises personnes morales par province",
+    "data": [
+        {
+            "province": "Marrakech",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 5227
+        },
+        {
+            "province": "Marrakech",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 5264
+        },
+        {
+            "province": "El Kelâa Sraghna",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 525
+        },
+        {
+            "province": "El Kelâa Sraghna",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 620
+        },
+        {
+            "province": "Safi",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 571
+        },
+        {
+            "province": "Safi",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 597
+        },
+        {
+            "province": "Essaouira",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 210
+        },
+        {
+            "province": "Essaouira",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 247
+        },
+        {
+            "province": "Youssoufia",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 144
+        },
+        {
+            "province": "Youssoufia",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 158
+        },
+        {
+            "province": "Chichaoua",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 122
+        },
+        {
+            "province": "Chichaoua",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 146
+        },
+        {
+            "province": "Al Haouz",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 1
+        },
+        {
+            "province": "Al Haouz",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 1
+        },
+        {
+            "province": "Total",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 6800
+        },
+        {
+            "province": "Total",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 7033
+        }
+    ]
+}

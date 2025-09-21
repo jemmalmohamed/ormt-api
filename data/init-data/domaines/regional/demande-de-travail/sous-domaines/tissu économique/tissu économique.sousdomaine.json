@@ -714,8 +714,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "Créations d'entreprises PM par province - CHOROPLETH",
-          "grapheTypeCode": "CHOROPLETH",
+          "nom": "Créations d'entreprises PM par province - HISTOGRAMME",
+          "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
         }

@@ -31,6 +31,7 @@ import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDtoMapper;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.details.SousDomaineDetailsDto;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.services.SousDomaineService;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 
 @RestController
 @RequestMapping("api/v1/public/domaines")
@@ -43,6 +44,7 @@ public class SousDomainePublicLoadController extends BaseController<SousDomaine>
 
         private final SousDomaineService sousDomaineService;
         private final DomaineService domaineService;
+        private final IndicateurService indicateurService;
         private final SousDomaineDtoMapper sousDomaineDtoMapper;
         // private final SousDomaineDetailsDtoMapper sousDomaineDetailMapper;
 
@@ -86,59 +88,6 @@ public class SousDomainePublicLoadController extends BaseController<SousDomaine>
                                 HttpStatus.OK, true);
         }
 
-        // @Operation(summary = "Get all " + ENTITY_NAME
-        // + "s with pivot table data", description = "Get list of sous domaines with
-        // table data for indicateurs. "
-        // +
-        // "Use tableFormat parameter: 'pivot' for pivot table, 'flat' for flat table,
-        // 'crud' for CRUD operations, "
-        // +
-        // "'create' for create template, 'both' for pivot+flat, 'all' for all formats")
-        // @ApiResponses(value = { @ApiResponse(responseCode = "200", description =
-        // "Ok", content = {
-        // @Content(mediaType = "application/json", array = @ArraySchema(schema =
-        // @Schema(implementation = SousDomaineDetailsDto.class))) }),
-        // @ApiResponse(responseCode = "404", description = ENTITY_NAME
-        // + " not found", content = @Content(mediaType = "ErrorResponse")),
-        // @ApiResponse(responseCode = "403", description = "Permission denied", content
-        // = @Content(mediaType = "ErrorResponse"))
-        // })
-        // @GetMapping("/{domaineId}/sous-domaines/pivot-table")
-        // public ResponseEntity<RestResponse<List<SousDomaineDetailsDto>>>
-        // getSousDomainesWithPivotTable(
-        // @PathVariable("domaineId") Long domaineId,
-        // @RequestParam(value = "pageIndex", defaultValue = "0") int pageIndex,
-        // @RequestParam(value = "pageSize", defaultValue = "-1") int pageSize,
-        // @RequestParam(value = "sortField", defaultValue = "createdDate") String
-        // sortField,
-        // @RequestParam(value = "sortDirection", defaultValue = "DESC") Direction
-        // direction,
-        // @RequestParam(value = "filters", defaultValue = "") List<String> filters,
-        // @RequestParam(value = "globalFilter", defaultValue = "") String globalFilter,
-        // @Parameter(description = "Table format: 'pivot', 'flat', 'crud', 'create',
-        // 'both', or 'all'", example = "pivot") @RequestParam(value = "tableFormat",
-        // defaultValue = "pivot") String tableFormat) {
-
-        // // Enforce parent espace access via domaine
-        // if (!hasAnyEspaceAccessForDomaine(domaineId)) {
-        // return createForbiddenResponse();
-        // }
-
-        // QueryParams requestParams = buildQueryParams(pageIndex, pageSize, sortField,
-        // direction, filters,
-        // globalFilter);
-
-        // List<SousDomaineDetailsDto> sousDomainesList = sousDomaineService
-        // .getSousDomainesWithPivotTable(domaineId, requestParams, tableFormat);
-
-        // RestResponse<List<SousDomaineDetailsDto>> response =
-        // RestResponse.<List<SousDomaineDetailsDto>>builder()
-        // .data(sousDomainesList)
-        // .build();
-
-        // return ResponseEntity.ok(response);
-        // }
-
         @Operation(summary = "Get " + ENTITY_NAME
                         + " with pivot table data", description = "Get sous domaine details with table data for indicateurs. "
                                         +
@@ -170,6 +119,7 @@ public class SousDomainePublicLoadController extends BaseController<SousDomaine>
                         return createForbiddenResponse();
                 }
                 SousDomaineDetailsDto dto = sousDomaineService.getSousDomaineWithPivotTable(id, tableFormat);
+
                 RestResponse<SousDomaineDetailsDto> response = RestResponse.<SousDomaineDetailsDto>builder()
                                 .data(dto)
                                 .build();
@@ -179,7 +129,7 @@ public class SousDomainePublicLoadController extends BaseController<SousDomaine>
         @Override
         protected <DTO> DTO mapToDto(SousDomaine entity, Class<DTO> dtoClass) {
                 if (dtoClass == SousDomaineDto.class) {
-                        return dtoClass.cast(sousDomaineDtoMapper.mapToDto(entity));
+                        return dtoClass.cast(sousDomaineDtoMapper.mapToDto(entity, indicateurService));
                 }
                 throw new IllegalArgumentException("Unsupported DTO type: " + dtoClass.getName());
         }

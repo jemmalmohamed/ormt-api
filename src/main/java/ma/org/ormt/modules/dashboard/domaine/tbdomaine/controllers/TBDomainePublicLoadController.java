@@ -99,6 +99,7 @@ public class TBDomainePublicLoadController extends BaseController<TBDomaine> {
                 }
 
                 TBDomaineDetailDto dto = tbDomaineService.getTBDomaineWithPivotTable(id, tableFormat);
+
                 return ResponseEntity.ok(RestResponse.<TBDomaineDetailDto>builder()
                                 .data(dto)
                                 .build());

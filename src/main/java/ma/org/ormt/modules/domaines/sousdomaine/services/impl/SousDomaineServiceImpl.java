@@ -258,7 +258,7 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
                 .orElseThrow(() -> new EntityNotFoundException("SousDomaine not found with id: " + id));
 
         // Map to DetailsDto first
-        SousDomaineDetailsDto dto = sousDomaineDetailsDtoMapper.mapToDto(sousDomaine);
+        SousDomaineDetailsDto dto = sousDomaineDetailsDtoMapper.mapToDto(sousDomaine, indicateurService);
 
         // Now enhance each indicateur with table data
         if (tableFormat != null && !tableFormat.isEmpty() && dto.getIndicateurs() != null) {
@@ -286,7 +286,7 @@ public class SousDomaineServiceImpl extends BaseServiceImpl<SousDomaine> impleme
         return sousDomainePage.getContent().stream()
                 .map(sousDomaine -> {
                     // Map to DetailsDto first
-                    SousDomaineDetailsDto dto = sousDomaineDetailsDtoMapper.mapToDto(sousDomaine);
+                    SousDomaineDetailsDto dto = sousDomaineDetailsDtoMapper.mapToDto(sousDomaine, indicateurService);
 
                     // Now enhance each indicateur with table data
                     if (tableFormat != null && !tableFormat.isEmpty() && dto.getIndicateurs() != null) {
