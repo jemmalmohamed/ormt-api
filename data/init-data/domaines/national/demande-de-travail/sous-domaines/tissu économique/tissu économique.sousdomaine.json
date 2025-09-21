@@ -67,8 +67,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "nombre d'entreprises - Radar",
-          "grapheTypeCode": "RADAR",
+          "nom": "nombre d'entreprises - HISTOGRAMME",
+          "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -132,8 +132,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "nombre d'entreprises entrantes - Radar",
-          "grapheTypeCode": "RADAR",
+          "nom": "nombre d'entreprises entrantes - HISTOGRAMME",
+          "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
         }
@@ -197,8 +197,8 @@
       ],
       "grapheConfigurations": [
         {
-          "nom": "nombre d'entreprises sortantes - Radar",
-          "grapheTypeCode": "RADAR",
+          "nom": "nombre d'entreprises sortantes - HISTOGRAMME",
+          "grapheTypeCode": "HISTOGRAMME",
           "isDefault": true,
           "chartOptionsJson": ""
         }

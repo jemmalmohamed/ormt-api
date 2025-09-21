@@ -1,0 +1,101 @@
+{
+    "indicateur": "répartition provinciale des epma",
+    "data": [
+        {
+            "province": "Marrakech",
+            "region": "marrakech-safi",
+            "annuel": "2020",
+            "valeur": 26485
+        },
+        {
+            "province": "Safi",
+            "region": "marrakech-safi",
+            "annuel": "2020",
+            "valeur": 2782
+        },
+        {
+            "province": "Essaouira",
+            "region": "marrakech-safi",
+            "annuel": "2020",
+            "valeur": 1566
+        },
+        {
+            "province": "El Kelâa Sraghna",
+            "region": "marrakech-safi",
+            "annuel": "2020",
+            "valeur": 1640
+        },
+        {
+            "province": "Youssoufia",
+            "region": "marrakech-safi",
+            "annuel": "2020",
+            "valeur": 750
+        },
+        {
+            "province": "Chichaoua",
+            "region": "marrakech-safi",
+            "annuel": "2020",
+            "valeur": 155
+        },
+        {
+            "province": "Al Haouz",
+            "region": "marrakech-safi",
+            "annuel": "2020",
+            "valeur": 151
+        },
+        {
+            "province": "Rehamna",
+            "region": "marrakech-safi",
+            "annuel": "2020",
+            "valeur": 104
+        },
+        {
+            "province": "Marrakech",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 28496
+        },
+        {
+            "province": "Safi",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 3068
+        },
+        {
+            "province": "Essaouira",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 1694
+        },
+        {
+            "province": "El Kelâa Sraghna",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 1954
+        },
+        {
+            "province": "Youssoufia",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 846
+        },
+        {
+            "province": "Chichaoua",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 280
+        },
+        {
+            "province": "Al Haouz",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 147
+        },
+        {
+            "province": "Rehamna",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 113
+        }
+    ]
+}

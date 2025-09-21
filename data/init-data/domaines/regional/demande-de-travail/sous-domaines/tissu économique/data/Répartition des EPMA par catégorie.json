@@ -1,0 +1,77 @@
+{
+    "indicateur": "répartition des epma par catégorie",
+    "data": [
+        {
+            "categorie_entreprise": "Micro [0,3]",
+            "region": "national",
+            "annuel": "2020",
+            "valeur": 27685
+        },
+        {
+            "categorie_entreprise": "TPE [3,10]",
+            "region": "national",
+            "annuel": "2020",
+            "valeur": 1410
+        },
+        {
+            "categorie_entreprise": "PE [10,50]",
+            "region": "national",
+            "annuel": "2020",
+            "valeur": 701
+        },
+        {
+            "categorie_entreprise": "ME [50,175]",
+            "region": "national",
+            "annuel": "2020",
+            "valeur": 117
+        },
+        {
+            "categorie_entreprise": "GE > 175",
+            "region": "national",
+            "annuel": "2020",
+            "valeur": 41
+        },
+        {
+            "categorie_entreprise": "Total",
+            "region": "national",
+            "annuel": "2020",
+            "valeur": 29954
+        },
+        {
+            "categorie_entreprise": "Micro [0,3]",
+            "region": "national",
+            "annuel": "2021",
+            "valeur": 29605
+        },
+        {
+            "categorie_entreprise": "TPE [3,10]",
+            "region": "national",
+            "annuel": "2021",
+            "valeur": 1571
+        },
+        {
+            "categorie_entreprise": "PE [10,50]",
+            "region": "national",
+            "annuel": "2021",
+            "valeur": 829
+        },
+        {
+            "categorie_entreprise": "ME [50,175]",
+            "region": "national",
+            "annuel": "2021",
+            "valeur": 139
+        },
+        {
+            "categorie_entreprise": "GE > 175",
+            "region": "national",
+            "annuel": "2021",
+            "valeur": 47
+        },
+        {
+            "categorie_entreprise": "Total",
+            "region": "national",
+            "annuel": "2021",
+            "valeur": 32191
+        }
+    ]
+}
