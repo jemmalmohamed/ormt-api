@@ -620,7 +620,7 @@
     },
     {
       "nom": "créations d'entreprises personnes morales",
-      "titre": "Créations d'entreprises PM (en nombre)",
+      "titre": "Créations d'entreprises PM",
       "description": "nombre d'entreprises PM créées dans la région Marrakech-Safi",
       "categorie": "créations d'entreprises",
       "abreviation": "",
@@ -667,7 +667,7 @@
     },
     {
       "nom": "créations d'entreprises personnes morales par province",
-      "titre": "Créations d'entreprises PM par province (en nombre)",
+      "titre": "Créations d'entreprises PM par province",
       "description": "créations d'entreprises PM par province pour la région Marrakech-Safi",
       "categorie": "créations d'entreprises",
       "abreviation": "",
@@ -723,7 +723,7 @@
     },
     {
       "nom": "créations d'entreprises personnes morales par secteur d'activités",
-      "titre": "Créations d'entreprises PM par secteur d'activités (en nombre)",
+      "titre": "Créations d'entreprises PM par secteur d'activités",
       "description": "créations d'entreprises PM par secteur d'activités pour la région Marrakech-Safi",
       "categorie": "créations d'entreprises",
       "abreviation": "",
@@ -779,7 +779,7 @@
     },
     {
       "nom": "créations d'entreprises personnes morales par forme juridique",
-      "titre": "Créations d'entreprises PM par forme juridique (en nombre)",
+      "titre": "Créations d'entreprises PM par forme juridique",
       "description": "créations d'entreprises PM par forme juridique pour la région Marrakech-Safi",
       "categorie": "créations d'entreprises",
       "abreviation": "",

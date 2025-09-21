@@ -24,6 +24,8 @@ public class IndicateurSousDomaineDetailDto extends Dto {
 
     private String nom;
 
+    private String titre;
+
     private Boolean actif;
 
     private String categorie;
