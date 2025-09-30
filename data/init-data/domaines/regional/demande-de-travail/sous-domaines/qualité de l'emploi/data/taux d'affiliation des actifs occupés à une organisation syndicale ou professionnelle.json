@@ -2,32 +2,32 @@
     "indicateur": "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle",
     "data": [
         {
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": 2021,
             "valeur": 2.7
         },
         {
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": 2022,
             "valeur": 2.4
         },
         {
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": 2023,
             "valeur": 2.4
         },
         {
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": 2021,
             "valeur": 3.2
         },
         {
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": 2022,
             "valeur": 3.0
         },
         {
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": 2023,
             "valeur": 3.3
         },

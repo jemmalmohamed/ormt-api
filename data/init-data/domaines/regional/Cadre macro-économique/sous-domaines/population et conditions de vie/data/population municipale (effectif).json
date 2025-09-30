@@ -10,13 +10,13 @@
     {
       "region": "casablanca-settat",
       "annuel": "2024",
-      "genre": "féminin",
+      "genre": "femme",
       "valeur": 3834806
     },
     {
       "region": "casablanca-settat",
       "annuel": "2024",
-      "genre": "masculin",
+      "genre": "homme",
       "valeur": 3816290
     },
     {
@@ -28,13 +28,13 @@
     {
       "region": "rabat-salé-kénitra",
       "annuel": "2024",
-      "genre": "féminin",
+      "genre": "femme",
       "valeur": 2560370
     },
     {
       "region": "rabat-salé-kénitra",
       "annuel": "2024",
-      "genre": "masculin",
+      "genre": "homme",
       "valeur": 2528286
     },
     {
@@ -46,13 +46,13 @@
     {
       "region": "marrakech-safi",
       "annuel": "2024",
-      "genre": "féminin",
+      "genre": "femme",
       "valeur": 2411225
     },
     {
       "region": "marrakech-safi",
       "annuel": "2024",
-      "genre": "masculin",
+      "genre": "homme",
       "valeur": 2452962
     },
     {
@@ -64,13 +64,13 @@
     {
       "region": "fès-meknès",
       "annuel": "2024",
-      "genre": "féminin",
+      "genre": "femme",
       "valeur": 2232578
     },
     {
       "region": "fès-meknès",
       "annuel": "2024",
-      "genre": "masculin",
+      "genre": "homme",
       "valeur": 2204295
     },
     {
@@ -82,13 +82,13 @@
     {
       "region": "tanger-tétouan-al hoceïma",
       "annuel": "2024",
-      "genre": "féminin",
+      "genre": "femme",
       "valeur": 1973161
     },
     {
       "region": "tanger-tétouan-al hoceïma",
       "annuel": "2024",
-      "genre": "masculin",
+      "genre": "homme",
       "valeur": 2035494
     },
     {
@@ -100,13 +100,13 @@
     {
       "region": "souss-massa",
       "annuel": "2024",
-      "genre": "féminin",
+      "genre": "femme",
       "valeur": 1509876
     },
     {
       "region": "souss-massa",
       "annuel": "2024",
-      "genre": "masculin",
+      "genre": "homme",
       "valeur": 1484484
     },
     {
@@ -118,13 +118,13 @@
     {
       "region": "béni mellal-khénifra",
       "annuel": "2024",
-      "genre": "féminin",
+      "genre": "femme",
       "valeur": 1283936
     },
     {
       "region": "béni mellal-khénifra",
       "annuel": "2024",
-      "genre": "masculin",
+      "genre": "homme",
       "valeur": 1226863
     },
     {
@@ -136,13 +136,13 @@
     {
       "region": "l'oriental",
       "annuel": "2024",
-      "genre": "féminin",
+      "genre": "femme",
       "valeur": 1159757
     },
     {
       "region": "l'oriental",
       "annuel": "2024",
-      "genre": "masculin",
+      "genre": "homme",
       "valeur": 1109621
     },
     {
@@ -154,13 +154,13 @@
     {
       "region": "drâa-tafilalet",
       "annuel": "2024",
-      "genre": "féminin",
+      "genre": "femme",
       "valeur": 834796
     },
     {
       "region": "drâa-tafilalet",
       "annuel": "2024",
-      "genre": "masculin",
+      "genre": "homme",
       "valeur": 808348
     },
     {
@@ -172,13 +172,13 @@
     {
       "region": "guelmim-oued noun",
       "annuel": "2024",
-      "genre": "féminin",
+      "genre": "femme",
       "valeur": 211832
     },
     {
       "region": "guelmim-oued noun",
       "annuel": "2024",
-      "genre": "masculin",
+      "genre": "homme",
       "valeur": 213976
     },
     {
@@ -190,13 +190,13 @@
     {
       "region": "laâyoune-sakia el hamra",
       "annuel": "2024",
-      "genre": "féminin",
+      "genre": "femme",
       "valeur": 205193
     },
     {
       "region": "laâyoune-sakia el hamra",
       "annuel": "2024",
-      "genre": "masculin",
+      "genre": "homme",
       "valeur": 205831
     },
     {
@@ -208,13 +208,13 @@
     {
       "region": "dakhla-oued ed-dahab",
       "annuel": "2024",
-      "genre": "féminin",
+      "genre": "femme",
       "valeur": 77573
     },
     {
       "region": "dakhla-oued ed-dahab",
       "annuel": "2024",
-      "genre": "masculin",
+      "genre": "homme",
       "valeur": 109038
     }
   ]

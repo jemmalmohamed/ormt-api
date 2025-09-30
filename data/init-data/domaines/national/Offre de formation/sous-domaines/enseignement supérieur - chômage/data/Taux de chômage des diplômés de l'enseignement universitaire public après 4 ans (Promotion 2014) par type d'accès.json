@@ -3,13 +3,13 @@
     "data": [
         {
             "type_acces": "Université Accès ouvert",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 24.70
         },
         {
             "type_acces": "Université Accès ouvert",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 13.90
         },
@@ -21,13 +21,13 @@
         },
         {
             "type_acces": "Université Accès régulé",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 10.50
         },
         {
             "type_acces": "Université Accès régulé",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 6.50
         },
@@ -39,13 +39,13 @@
         },
         {
             "type_acces": "Total",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 21.30
         },
         {
             "type_acces": "Total",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 12.40
         },

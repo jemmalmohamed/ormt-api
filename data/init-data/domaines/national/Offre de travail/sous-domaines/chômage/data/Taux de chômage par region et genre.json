@@ -3,7 +3,7 @@
   "data": [
     {
       "region": "tanger-tétouan-al hoceïma",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2019",
       "valeur": 7.1
     },
@@ -21,7 +21,7 @@
     },
     {
       "region": "tanger-tétouan-al hoceïma",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2020",
       "valeur": 8.9
     },
@@ -39,7 +39,7 @@
     },
     {
       "region": "tanger-tétouan-al hoceïma",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2021",
       "valeur": 9.6
     },
@@ -57,7 +57,7 @@
     },
     {
       "region": "tanger-tétouan-al hoceïma",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2022",
       "valeur": 8.8
     },
@@ -75,7 +75,7 @@
     },
     {
       "region": "tanger-tétouan-al hoceïma",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2023",
       "valeur": 9.4
     },
@@ -93,7 +93,7 @@
     },
     {
       "region": "l'oriental",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2019",
       "valeur": 12.4
     },
@@ -111,7 +111,7 @@
     },
     {
       "region": "l'oriental",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2020",
       "valeur": 19.7
     },
@@ -129,7 +129,7 @@
     },
     {
       "region": "l'oriental",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2021",
       "valeur": 16.7
     },
@@ -147,7 +147,7 @@
     },
     {
       "region": "l'oriental",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2022",
       "valeur": 15.3
     },
@@ -165,7 +165,7 @@
     },
     {
       "region": "l'oriental",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2023",
       "valeur": 17.9
     },
@@ -183,7 +183,7 @@
     },
     {
       "region": "fès-meknès",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2019",
       "valeur": 7.5
     },
@@ -201,7 +201,7 @@
     },
     {
       "region": "fès-meknès",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2020",
       "valeur": 11.3
     },
@@ -219,7 +219,7 @@
     },
     {
       "region": "fès-meknès",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2021",
       "valeur": 11.5
     },
@@ -237,7 +237,7 @@
     },
     {
       "region": "fès-meknès",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2022",
       "valeur": 11.6
     },
@@ -255,7 +255,7 @@
     },
     {
       "region": "fès-meknès",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2023",
       "valeur": 12.4
     },
@@ -273,7 +273,7 @@
     },
     {
       "region": "rabat-salé-kénitra",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2019",
       "valeur": 8.2
     },
@@ -291,7 +291,7 @@
     },
     {
       "region": "rabat-salé-kénitra",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2020",
       "valeur": 10.5
     },
@@ -309,7 +309,7 @@
     },
     {
       "region": "rabat-salé-kénitra",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2021",
       "valeur": 10.1
     },
@@ -327,7 +327,7 @@
     },
     {
       "region": "rabat-salé-kénitra",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2022",
       "valeur": 8.9
     },
@@ -345,7 +345,7 @@
     },
     {
       "region": "rabat-salé-kénitra",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2023",
       "valeur": 9.7
     },
@@ -363,7 +363,7 @@
     },
     {
       "region": "béni mellal-khénifra",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2019",
       "valeur": 4.6
     },
@@ -381,7 +381,7 @@
     },
     {
       "region": "béni mellal-khénifra",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2020",
       "valeur": 6.9
     },
@@ -399,7 +399,7 @@
     },
     {
       "region": "béni mellal-khénifra",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2021",
       "valeur": 9.3
     },
@@ -417,7 +417,7 @@
     },
     {
       "region": "béni mellal-khénifra",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2022",
       "valeur": 10.2
     },
@@ -435,7 +435,7 @@
     },
     {
       "region": "béni mellal-khénifra",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2023",
       "valeur": 12.0
     },
@@ -453,7 +453,7 @@
     },
     {
       "region": "casablanca-settat",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2019",
       "valeur": 8.8
     },
@@ -471,7 +471,7 @@
     },
     {
       "region": "casablanca-settat",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2020",
       "valeur": 12.1
     },
@@ -489,7 +489,7 @@
     },
     {
       "region": "casablanca-settat",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2021",
       "valeur": 13.2
     },
@@ -507,7 +507,7 @@
     },
     {
       "region": "casablanca-settat",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2022",
       "valeur": 12.3
     },
@@ -525,7 +525,7 @@
     },
     {
       "region": "casablanca-settat",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2023",
       "valeur": 13.9
     },
@@ -543,7 +543,7 @@
     },
     {
       "region": "marrakech-safi",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2019",
       "valeur": 5.3
     },
@@ -561,7 +561,7 @@
     },
     {
       "region": "marrakech-safi",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2020",
       "valeur": 6.5
     },
@@ -579,7 +579,7 @@
     },
     {
       "region": "marrakech-safi",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2021",
       "valeur": 6.8
     },
@@ -597,7 +597,7 @@
     },
     {
       "region": "marrakech-safi",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2022",
       "valeur": 5.7
     },
@@ -615,7 +615,7 @@
     },
     {
       "region": "marrakech-safi",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2023",
       "valeur": 6.4
     },
@@ -633,7 +633,7 @@
     },
     {
       "region": "drâa-tafilalet",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2019",
       "valeur": 5.0
     },
@@ -651,7 +651,7 @@
     },
     {
       "region": "drâa-tafilalet",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2020",
       "valeur": 9.0
     },
@@ -669,7 +669,7 @@
     },
     {
       "region": "drâa-tafilalet",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2021",
       "valeur": 9.7
     },
@@ -687,7 +687,7 @@
     },
     {
       "region": "drâa-tafilalet",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2022",
       "valeur": 9.2
     },
@@ -705,7 +705,7 @@
     },
     {
       "region": "drâa-tafilalet",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2023",
       "valeur": 10.7
     },
@@ -723,7 +723,7 @@
     },
     {
       "region": "souss-massa",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2019",
       "valeur": 9.6
     },
@@ -741,7 +741,7 @@
     },
     {
       "region": "souss-massa",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2020",
       "valeur": 11.1
     },
@@ -759,7 +759,7 @@
     },
     {
       "region": "souss-massa",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2021",
       "valeur": 9.9
     },
@@ -777,7 +777,7 @@
     },
     {
       "region": "souss-massa",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2022",
       "valeur": 9.6
     },
@@ -795,7 +795,7 @@
     },
     {
       "region": "souss-massa",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2023",
       "valeur": 11.4
     },
@@ -813,7 +813,7 @@
     },
     {
       "region": "régions du sud",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2019",
       "valeur": 10.7
     },
@@ -831,7 +831,7 @@
     },
     {
       "region": "régions du sud",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2020",
       "valeur": 13.9
     },
@@ -849,7 +849,7 @@
     },
     {
       "region": "régions du sud",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2021",
       "valeur": 14.2
     },
@@ -867,7 +867,7 @@
     },
     {
       "region": "régions du sud",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2022",
       "valeur": 14.4
     },
@@ -885,7 +885,7 @@
     },
     {
       "region": "régions du sud",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2023",
       "valeur": 14.5
     },
@@ -903,7 +903,7 @@
     },
     {
       "region": "ensemble",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2019",
       "valeur": 7.8
     },
@@ -921,7 +921,7 @@
     },
     {
       "region": "ensemble",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2020",
       "valeur": 10.7
     },
@@ -939,7 +939,7 @@
     },
     {
       "region": "ensemble",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2021",
       "valeur": 10.9
     },
@@ -957,7 +957,7 @@
     },
     {
       "region": "ensemble",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2022",
       "valeur": 10.3
     },
@@ -975,7 +975,7 @@
     },
     {
       "region": "ensemble",
-      "genre": "Homme",
+      "genre": "homme",
       "annuel": "2023",
       "valeur": 11.5
     },

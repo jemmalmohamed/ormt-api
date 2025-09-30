@@ -2,12 +2,12 @@
     "indicateur": "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par genre",
     "data": [
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 79.10
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 87.80
         },

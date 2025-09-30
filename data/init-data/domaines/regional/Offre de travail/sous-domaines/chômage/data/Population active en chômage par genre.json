@@ -2,27 +2,27 @@
     "indicateur": "Population active en chômage par genre",
     "data": [
         {
-            "genre": "Homme",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 719000
         },
         {
-            "genre": "Homme",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 991000
         },
         {
-            "genre": "Homme",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 1025000
         },
         {
-            "genre": "Homme",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 968000
         },
         {
-            "genre": "Homme",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 1088000
         },

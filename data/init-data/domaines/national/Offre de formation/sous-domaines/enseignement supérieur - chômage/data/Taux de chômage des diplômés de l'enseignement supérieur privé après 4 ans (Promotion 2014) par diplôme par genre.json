@@ -3,13 +3,13 @@
     "data": [
         {
             "diplome": "Licence du privé",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 8.60
         },
         {
             "diplome": "Licence du privé",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 3.60
         },
@@ -21,13 +21,13 @@
         },
         {
             "diplome": "Bachelor",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 0.00
         },
         {
             "diplome": "Bachelor",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 0.00
         },
@@ -39,13 +39,13 @@
         },
         {
             "diplome": "Master du privé",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 7.70
         },
         {
             "diplome": "Master du privé",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 4.30
         },
@@ -57,13 +57,13 @@
         },
         {
             "diplome": "Diplôme d'ingénieur Privé",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 3.20
         },
         {
             "diplome": "Diplôme d'ingénieur Privé",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 8.40
         },
@@ -75,13 +75,13 @@
         },
         {
             "diplome": "Total",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 7.10
         },
         {
             "diplome": "Total",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 4.60
         },

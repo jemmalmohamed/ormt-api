@@ -1,140 +1,26 @@
 {
     "indicateur": "Nombre de stagiaires de la formation professionnelle par mode de formation",
+    "region": "Marrakech-Safi",
     "data": [
         {
-            "mode_formation": "Formation Résidentielle et Alternée",
-            "annuel": "2016",
-            "valeur": 389000
+            "mode_formation": "Alterné",
+            "valeur": 7342,
+            "annuel": "2024"
         },
         {
-            "mode_formation": "Formation Résidentielle et Alternée",
-            "annuel": "2017",
-            "valeur": 392000
+            "mode_formation": "Apprentissage",
+            "valeur": 4721,
+            "annuel": "2024"
         },
         {
-            "mode_formation": "Formation Résidentielle et Alternée",
-            "annuel": "2018",
-            "valeur": 396000
+            "mode_formation": "Résidentielle",
+            "valeur": 29897,
+            "annuel": "2024"
         },
         {
-            "mode_formation": "Formation Résidentielle et Alternée",
-            "annuel": "2019",
-            "valeur": 387000
-        },
-        {
-            "mode_formation": "Formation Résidentielle et Alternée",
-            "annuel": "2020",
-            "valeur": 361000
-        },
-        {
-            "mode_formation": "Formation Résidentielle et Alternée",
-            "annuel": "2021",
-            "valeur": 328000
-        },
-        {
-            "mode_formation": "Formation Résidentielle et Alternée",
-            "annuel": "2022",
-            "valeur": 336000
-        },
-        {
-            "mode_formation": "Formation Résidentielle et Alternée",
-            "annuel": "2023",
-            "valeur": 354000
-        },
-        {
-            "mode_formation": "Formation Résidentielle et Alternée",
-            "annuel": "2024",
-            "valeur": 355800
-        },
-        {
-            "mode_formation": "Formation par apprentissage",
-            "annuel": "2016",
-            "valeur": 30000
-        },
-        {
-            "mode_formation": "Formation par apprentissage",
-            "annuel": "2017",
-            "valeur": 31000
-        },
-        {
-            "mode_formation": "Formation par apprentissage",
-            "annuel": "2018",
-            "valeur": 37000
-        },
-        {
-            "mode_formation": "Formation par apprentissage",
-            "annuel": "2019",
-            "valeur": 39000
-        },
-        {
-            "mode_formation": "Formation par apprentissage",
-            "annuel": "2020",
-            "valeur": 37000
-        },
-        {
-            "mode_formation": "Formation par apprentissage",
-            "annuel": "2021",
-            "valeur": 30000
-        },
-        {
-            "mode_formation": "Formation par apprentissage",
-            "annuel": "2022",
-            "valeur": 27000
-        },
-        {
-            "mode_formation": "Formation par apprentissage",
-            "annuel": "2023",
-            "valeur": 24000
-        },
-        {
-            "mode_formation": "Formation par apprentissage",
-            "annuel": "2024",
-            "valeur": 31500
-        },
-        {
-            "mode_formation": "TOTAL",
-            "annuel": "2016",
-            "valeur": 419000
-        },
-        {
-            "mode_formation": "TOTAL",
-            "annuel": "2017",
-            "valeur": 422000
-        },
-        {
-            "mode_formation": "TOTAL",
-            "annuel": "2018",
-            "valeur": 433000
-        },
-        {
-            "mode_formation": "TOTAL",
-            "annuel": "2019",
-            "valeur": 427000
-        },
-        {
-            "mode_formation": "TOTAL",
-            "annuel": "2020",
-            "valeur": 398000
-        },
-        {
-            "mode_formation": "TOTAL",
-            "annuel": "2021",
-            "valeur": 359000
-        },
-        {
-            "mode_formation": "TOTAL",
-            "annuel": "2022",
-            "valeur": 363000
-        },
-        {
-            "mode_formation": "TOTAL",
-            "annuel": "2023",
-            "valeur": 378000
-        },
-        {
-            "mode_formation": "TOTAL",
-            "annuel": "2024",
-            "valeur": 387200
+            "mode_formation": "Total",
+            "valeur": 41960,
+            "annuel": "2024"
         }
     ]
 }

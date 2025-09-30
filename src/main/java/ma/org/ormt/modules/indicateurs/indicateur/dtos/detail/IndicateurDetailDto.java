@@ -32,11 +32,6 @@ public class IndicateurDetailDto extends IndicateurDto {
     @Schema(description = "CRUD table format with IDs for edit/delete   operations")
     private List<List<String>> crudTableData;
 
-    // @JsonInclude(JsonInclude.Include.NON_NULL)
-    // @Schema(description = "Template data for create operations (missing
-    // combinations)")
-    // private List<List<String>> createTemplateData;
-
     // Enhanced pivot table with metadata for chart mapping
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(description = "Pivot table data with metadata for chart mapping and dimension understanding")

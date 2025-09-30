@@ -2,27 +2,27 @@
     "indicateur": "part de l'emploi de type occasionnel ou saisonnier par genre",
     "data": [
         {
-            "genre": "Homme",
+            "genre": "homme",
             "annuel": 2019,
             "valeur": 10.6
         },
         {
-            "genre": "Homme",
+            "genre": "homme",
             "annuel": 2020,
             "valeur": 10.9
         },
         {
-            "genre": "Homme",
+            "genre": "homme",
             "annuel": 2021,
             "valeur": 12.1
         },
         {
-            "genre": "Homme",
+            "genre": "homme",
             "annuel": 2022,
             "valeur": 12.2
         },
         {
-            "genre": "Homme",
+            "genre": "homme",
             "annuel": 2023,
             "valeur": 11.7
         },

@@ -25,7 +25,7 @@ def parse_csv_to_json():
             years.append(year)
     
     # Parse company sizes
-    company_sizes = ["1-9 salariés", "10-49 salariés", "50-199 salariés", "200-499 salariés", "500 salariés et plus"]
+    company_sizes = ["1 à 9 salariés", "10-49 salariés", "50 à 199 salariés", "200 à 499 salariés", "500 salariés et plus"]
     
     # Parse regions (clean up extra spaces)
     regions = []

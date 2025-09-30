@@ -3,49 +3,49 @@
     "data": [
         {
             "composante": "Enseignement supérieur privé",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 68.3
         },
         {
             "composante": "Enseignement supérieur privé",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 88.0
         },
         {
             "composante": "Enseignement universitaire public",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 59.6
         },
         {
             "composante": "Enseignement universitaire public",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 76.4
         },
         {
             "composante": "Formation professionnelle post-baccalauréat",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 54.9
         },
         {
             "composante": "Formation professionnelle post-baccalauréat",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 76.4
         },
         {
             "composante": "Total",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 60.30
         },
         {
             "composante": "Total",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 78.10
         },

@@ -142,5 +142,21 @@
             }
         ],
         "actif": true
+    },
+    {
+        "nom": "Compétitivité et salaires - public",
+        "libelle": "Compétitivité et Salaires",
+        "description": "Version publique du domaine Compétitivité et salaires.",
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            },
+            {
+                "roleCode": "role_decideur",
+                "niveauAcces": "lecture"
+            }
+        ],
+        "actif": true
     }
 ]

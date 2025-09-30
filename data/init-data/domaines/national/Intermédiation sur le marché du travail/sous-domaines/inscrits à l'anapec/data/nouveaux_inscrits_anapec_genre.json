@@ -3,7 +3,7 @@
     "data": [
         {
             "annuel": "2019",
-            "genre": "Homme",
+            "genre": "homme",
             "valeur": 55.1
         },
         {
@@ -18,7 +18,7 @@
         },
         {
             "annuel": "2020",
-            "genre": "Homme",
+            "genre": "homme",
             "valeur": 55.5
         },
         {
@@ -28,7 +28,7 @@
         },
         {
             "annuel": "2021",
-            "genre": "Homme",
+            "genre": "homme",
             "valeur": 53.5
         },
         {
@@ -38,7 +38,7 @@
         },
         {
             "annuel": "2022",
-            "genre": "Homme",
+            "genre": "homme",
             "valeur": 57.5
         },
         {
@@ -48,7 +48,7 @@
         },
         {
             "annuel": "2023",
-            "genre": "Homme",
+            "genre": "homme",
             "valeur": 55.6
         },
         {
@@ -58,7 +58,7 @@
         },
         {
             "annuel": "2024",
-            "genre": "Homme",
+            "genre": "homme",
             "valeur": 51.5
         },
         {

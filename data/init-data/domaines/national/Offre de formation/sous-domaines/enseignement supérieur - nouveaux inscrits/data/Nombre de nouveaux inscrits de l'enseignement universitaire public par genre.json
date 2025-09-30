@@ -2,82 +2,82 @@
     "indicateur": "Nombre de nouveaux inscrits de l'enseignement universitaire public par genre",
     "data": [
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2016",
             "valeur": 99000
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2017",
             "valeur": 105000
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2018",
             "valeur": 123000
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 134000
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 145000
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 158000
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 161000
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 170000
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2016",
             "valeur": 104000
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2017",
             "valeur": 106000
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2018",
             "valeur": 117000
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 124000
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 130000
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 133000
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 134000
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 128000
         },

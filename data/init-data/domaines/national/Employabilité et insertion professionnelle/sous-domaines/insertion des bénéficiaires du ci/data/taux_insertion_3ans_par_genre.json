@@ -3,52 +3,52 @@
     "data": [
         {
             "annuel": 2019,
-            "genre": "Hommes",
+            "genre": "homme",
             "valeur": 66
         },
         {
             "annuel": 2019,
-            "genre": "Femmes",
+            "genre": "femme",
             "valeur": 61
         },
         {
             "annuel": 2020,
-            "genre": "Hommes",
+            "genre": "homme",
             "valeur": 65
         },
         {
             "annuel": 2020,
-            "genre": "Femmes",
+            "genre": "femme",
             "valeur": 57
         },
         {
             "annuel": 2021,
-            "genre": "Hommes",
+            "genre": "homme",
             "valeur": 65
         },
         {
             "annuel": 2021,
-            "genre": "Femmes",
+            "genre": "femme",
             "valeur": 57
         },
         {
             "annuel": 2022,
-            "genre": "Hommes",
+            "genre": "homme",
             "valeur": 69
         },
         {
             "annuel": 2022,
-            "genre": "Femmes",
+            "genre": "femme",
             "valeur": 61
         },
         {
             "annuel": 2023,
-            "genre": "Hommes",
+            "genre": "homme",
             "valeur": 67
         },
         {
             "annuel": 2023,
-            "genre": "Femmes",
+            "genre": "femme",
             "valeur": 62
         }
     ]

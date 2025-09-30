@@ -115,5 +115,23 @@
             "nom": "demande de travail - public"
         },
         "ordre": 5
+    },
+    {
+        "tableauBord": {
+            "nom": "public"
+        },
+        "tbDomaine": {
+            "nom": "compétitivité et salaires - public"
+        },
+        "ordre": 6
+    },
+    {
+        "tableauBord": {
+            "nom": "décisionnel"
+        },
+        "tbDomaine": {
+            "nom": "compétitivité et salaires - public"
+        },
+        "ordre": 7
     }
 ]

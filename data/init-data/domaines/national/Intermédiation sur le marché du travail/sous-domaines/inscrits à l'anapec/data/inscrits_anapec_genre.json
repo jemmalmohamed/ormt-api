@@ -3,12 +3,12 @@
     "data": [
         {
             "annuel": "2019",
-            "genre": "Hommes",
+            "genre": "homme",
             "valeur": 55
         },
         {
             "annuel": "2019",
-            "genre": "Femmes",
+            "genre": "femme",
             "valeur": 44
         },
         {
@@ -18,12 +18,12 @@
         },
         {
             "annuel": "2022",
-            "genre": "Hommes",
+            "genre": "homme",
             "valeur": 61
         },
         {
             "annuel": "2022",
-            "genre": "Femmes",
+            "genre": "femme",
             "valeur": 39
         },
         {
@@ -33,12 +33,12 @@
         },
         {
             "annuel": "2024",
-            "genre": "Hommes",
+            "genre": "homme",
             "valeur": 57
         },
         {
             "annuel": "2024",
-            "genre": "Femmes",
+            "genre": "femme",
             "valeur": 43
         },
         {

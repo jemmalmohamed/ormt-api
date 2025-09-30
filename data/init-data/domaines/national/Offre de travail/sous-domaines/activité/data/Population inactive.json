@@ -4,14 +4,14 @@
         {
             "groupe_age": "15-24 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 1252287
         },
         {
             "groupe_age": "15-24 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 1546009
         },
@@ -25,14 +25,14 @@
         {
             "groupe_age": "15-24 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 637488
         },
         {
             "groupe_age": "15-24 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 983024
         },
@@ -46,14 +46,14 @@
         {
             "groupe_age": "15-24 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 1889775
         },
         {
             "groupe_age": "15-24 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 2529033
         },
@@ -67,14 +67,14 @@
         {
             "groupe_age": "25-34 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 170795
         },
         {
             "groupe_age": "25-34 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 1376936
         },
@@ -88,14 +88,14 @@
         {
             "groupe_age": "25-34 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 53536
         },
         {
             "groupe_age": "25-34 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 675688
         },
@@ -109,14 +109,14 @@
         {
             "groupe_age": "25-34 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 224331
         },
         {
             "groupe_age": "25-34 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 2052623
         },
@@ -130,14 +130,14 @@
         {
             "groupe_age": "35-44 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 74467
         },
         {
             "groupe_age": "35-44 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 1298861
         },
@@ -151,14 +151,14 @@
         {
             "groupe_age": "35-44 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 27024
         },
         {
             "groupe_age": "35-44 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 519518
         },
@@ -172,14 +172,14 @@
         {
             "groupe_age": "35-44 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 101491
         },
         {
             "groupe_age": "35-44 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 1818380
         },
@@ -193,14 +193,14 @@
         {
             "groupe_age": "45-59 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 233804
         },
         {
             "groupe_age": "45-59 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 1597209
         },
@@ -214,14 +214,14 @@
         {
             "groupe_age": "45-59 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 53238
         },
         {
             "groupe_age": "45-59 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 544138
         },
@@ -235,14 +235,14 @@
         {
             "groupe_age": "45-59 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 287042
         },
         {
             "groupe_age": "45-59 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 2141347
         },
@@ -256,14 +256,14 @@
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 943703
         },
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 1317952
         },
@@ -277,14 +277,14 @@
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 309689
         },
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 662196
         },
@@ -298,14 +298,14 @@
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 1253393
         },
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 1980148
         },
@@ -319,14 +319,14 @@
         {
             "groupe_age": "Total",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 2675056
         },
         {
             "groupe_age": "Total",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 7136967
         },
@@ -340,14 +340,14 @@
         {
             "groupe_age": "Total",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 1080975
         },
         {
             "groupe_age": "Total",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 3384564
         },
@@ -361,14 +361,14 @@
         {
             "groupe_age": "Total",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 3756032
         },
         {
             "groupe_age": "Total",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 10521531
         },
@@ -382,14 +382,14 @@
         {
             "groupe_age": "15-24 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 1260059
         },
         {
             "groupe_age": "15-24 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 1551334
         },
@@ -403,14 +403,14 @@
         {
             "groupe_age": "15-24 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 676122
         },
         {
             "groupe_age": "15-24 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 1017776
         },
@@ -424,14 +424,14 @@
         {
             "groupe_age": "15-24 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 1936180
         },
         {
             "groupe_age": "15-24 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 2569110
         },
@@ -445,14 +445,14 @@
         {
             "groupe_age": "25-34 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 190371
         },
         {
             "groupe_age": "25-34 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 1424489
         },
@@ -466,14 +466,14 @@
         {
             "groupe_age": "25-34 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 61692
         },
         {
             "groupe_age": "25-34 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 692980
         },
@@ -487,14 +487,14 @@
         {
             "groupe_age": "25-34 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 252063
         },
         {
             "groupe_age": "25-34 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 2117469
         },
@@ -508,14 +508,14 @@
         {
             "groupe_age": "35-44 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 70848
         },
         {
             "groupe_age": "35-44 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 1333147
         },
@@ -529,14 +529,14 @@
         {
             "groupe_age": "35-44 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 26895
         },
         {
             "groupe_age": "35-44 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 542701
         },
@@ -550,14 +550,14 @@
         {
             "groupe_age": "35-44 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 97743
         },
         {
             "groupe_age": "35-44 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 1875848
         },
@@ -571,14 +571,14 @@
         {
             "groupe_age": "45-59 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 211839
         },
         {
             "groupe_age": "45-59 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 1613017
         },
@@ -592,14 +592,14 @@
         {
             "groupe_age": "45-59 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 51847
         },
         {
             "groupe_age": "45-59 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 561385
         },
@@ -613,14 +613,14 @@
         {
             "groupe_age": "45-59 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 263685
         },
         {
             "groupe_age": "45-59 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 2174402
         },
@@ -634,14 +634,14 @@
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 1015503
         },
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 1430143
         },
@@ -655,14 +655,14 @@
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 323483
         },
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 723028
         },
@@ -676,14 +676,14 @@
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 1338985
         },
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 2153171
         },
@@ -697,14 +697,14 @@
         {
             "groupe_age": "Total",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 2748620
         },
         {
             "groupe_age": "Total",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 7352130
         },
@@ -718,14 +718,14 @@
         {
             "groupe_age": "Total",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 1140039
         },
         {
             "groupe_age": "Total",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 3537870
         },
@@ -739,14 +739,14 @@
         {
             "groupe_age": "Total",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 3888656
         },
         {
             "groupe_age": "Total",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 10890000
         },
@@ -760,14 +760,14 @@
         {
             "groupe_age": "15-24 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 1258000
         },
         {
             "groupe_age": "15-24 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 1539000
         },
@@ -781,14 +781,14 @@
         {
             "groupe_age": "15-24 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 677000
         },
         {
             "groupe_age": "15-24 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 1005000
         },
@@ -802,14 +802,14 @@
         {
             "groupe_age": "15-24 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 1935000
         },
         {
             "groupe_age": "15-24 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 2544000
         },
@@ -823,14 +823,14 @@
         {
             "groupe_age": "25-34 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 181000
         },
         {
             "groupe_age": "25-34 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 1403000
         },
@@ -844,14 +844,14 @@
         {
             "groupe_age": "25-34 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 59000
         },
         {
             "groupe_age": "25-34 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 662000
         },
@@ -865,14 +865,14 @@
         {
             "groupe_age": "25-34 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 241000
         },
         {
             "groupe_age": "25-34 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 2065000
         },
@@ -886,14 +886,14 @@
         {
             "groupe_age": "35-44 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 84000
         },
         {
             "groupe_age": "35-44 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 1348000
         },
@@ -907,14 +907,14 @@
         {
             "groupe_age": "35-44 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 31000
         },
         {
             "groupe_age": "35-44 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 524000
         },
@@ -928,14 +928,14 @@
         {
             "groupe_age": "35-44 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 115000
         },
         {
             "groupe_age": "35-44 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 1872000
         },
@@ -949,14 +949,14 @@
         {
             "groupe_age": "45-59 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 219000
         },
         {
             "groupe_age": "45-59 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 1645000
         },
@@ -970,14 +970,14 @@
         {
             "groupe_age": "45-59 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 55000
         },
         {
             "groupe_age": "45-59 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 556000
         },
@@ -991,14 +991,14 @@
         {
             "groupe_age": "45-59 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 274000
         },
         {
             "groupe_age": "45-59 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 2201000
         },
@@ -1012,14 +1012,14 @@
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 1072000
         },
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 1499000
         },
@@ -1033,14 +1033,14 @@
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 317000
         },
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 712000
         },
@@ -1054,14 +1054,14 @@
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 1389000
         },
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 2211000
         },
@@ -1075,14 +1075,14 @@
         {
             "groupe_age": "Total",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 2814000
         },
         {
             "groupe_age": "Total",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 7434000
         },
@@ -1096,14 +1096,14 @@
         {
             "groupe_age": "Total",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 1139000
         },
         {
             "groupe_age": "Total",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 3459000
         },
@@ -1117,14 +1117,14 @@
         {
             "groupe_age": "Total",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 3954000
         },
         {
             "groupe_age": "Total",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 10893000
         },
@@ -1138,14 +1138,14 @@
         {
             "groupe_age": "15-24 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 1277000
         },
         {
             "groupe_age": "15-24 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 1541000
         },
@@ -1159,14 +1159,14 @@
         {
             "groupe_age": "15-24 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 720000
         },
         {
             "groupe_age": "15-24 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 1013000
         },
@@ -1180,14 +1180,14 @@
         {
             "groupe_age": "15-24 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 1996000
         },
         {
             "groupe_age": "15-24 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 2555000
         },
@@ -1201,14 +1201,14 @@
         {
             "groupe_age": "25-34 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 176000
         },
         {
             "groupe_age": "25-34 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 1420000
         },
@@ -1222,14 +1222,14 @@
         {
             "groupe_age": "25-34 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 60000
         },
         {
             "groupe_age": "25-34 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 668000
         },
@@ -1243,14 +1243,14 @@
         {
             "groupe_age": "25-34 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 236000
         },
         {
             "groupe_age": "25-34 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 2088000
         },
@@ -1264,14 +1264,14 @@
         {
             "groupe_age": "35-44 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 92000
         },
         {
             "groupe_age": "35-44 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 1403000
         },
@@ -1285,14 +1285,14 @@
         {
             "groupe_age": "35-44 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 32000
         },
         {
             "groupe_age": "35-44 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 546000
         },
@@ -1306,14 +1306,14 @@
         {
             "groupe_age": "35-44 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 124000
         },
         {
             "groupe_age": "35-44 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 1950000
         },
@@ -1327,14 +1327,14 @@
         {
             "groupe_age": "45-59 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 228000
         },
         {
             "groupe_age": "45-59 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 1696000
         },
@@ -1348,14 +1348,14 @@
         {
             "groupe_age": "45-59 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 59000
         },
         {
             "groupe_age": "45-59 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 596000
         },
@@ -1369,14 +1369,14 @@
         {
             "groupe_age": "45-59 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 287000
         },
         {
             "groupe_age": "45-59 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 2292000
         },
@@ -1390,14 +1390,14 @@
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 1132000
         },
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 1571000
         },
@@ -1411,14 +1411,14 @@
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 346000
         },
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 736000
         },
@@ -1432,14 +1432,14 @@
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 1478000
         },
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 2307000
         },
@@ -1453,14 +1453,14 @@
         {
             "groupe_age": "Total",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 2905000
         },
         {
             "groupe_age": "Total",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 7631000
         },
@@ -1474,14 +1474,14 @@
         {
             "groupe_age": "Total",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 1217000
         },
         {
             "groupe_age": "Total",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 3559000
         },
@@ -1495,14 +1495,14 @@
         {
             "groupe_age": "Total",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 4121000
         },
         {
             "groupe_age": "Total",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 11192000
         },
@@ -1516,14 +1516,14 @@
         {
             "groupe_age": "15-24 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 1275200
         },
         {
             "groupe_age": "15-24 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 1538500
         },
@@ -1537,14 +1537,14 @@
         {
             "groupe_age": "15-24 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 729900
         },
         {
             "groupe_age": "15-24 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 1025100
         },
@@ -1558,14 +1558,14 @@
         {
             "groupe_age": "15-24 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 2005000
         },
         {
             "groupe_age": "15-24 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 2563500
         },
@@ -1579,14 +1579,14 @@
         {
             "groupe_age": "25-34 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 192000
         },
         {
             "groupe_age": "25-34 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 1398000
         },
@@ -1600,14 +1600,14 @@
         {
             "groupe_age": "25-34 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 66900
         },
         {
             "groupe_age": "25-34 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 671000
         },
@@ -1621,14 +1621,14 @@
         {
             "groupe_age": "25-34 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 258900
         },
         {
             "groupe_age": "25-34 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 2069000
         },
@@ -1642,14 +1642,14 @@
         {
             "groupe_age": "35-44 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 112300
         },
         {
             "groupe_age": "35-44 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 1447400
         },
@@ -1663,14 +1663,14 @@
         {
             "groupe_age": "35-44 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 34500
         },
         {
             "groupe_age": "35-44 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 575000
         },
@@ -1684,14 +1684,14 @@
         {
             "groupe_age": "35-44 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 146800
         },
         {
             "groupe_age": "35-44 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 2022400
         },
@@ -1705,14 +1705,14 @@
         {
             "groupe_age": "45-59 ans",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 231700
         },
         {
             "groupe_age": "45-59 ans",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 1741900
         },
@@ -1726,14 +1726,14 @@
         {
             "groupe_age": "45-59 ans",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 66700
         },
         {
             "groupe_age": "45-59 ans",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 648500
         },
@@ -1747,14 +1747,14 @@
         {
             "groupe_age": "45-59 ans",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 298400
         },
         {
             "groupe_age": "45-59 ans",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 2390400
         },
@@ -1768,14 +1768,14 @@
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 1190300
         },
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 1638200
         },
@@ -1789,14 +1789,14 @@
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 366800
         },
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 767300
         },
@@ -1810,14 +1810,14 @@
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 1557100
         },
         {
             "groupe_age": "60 ans ou plus",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 2405500
         },
@@ -1831,14 +1831,14 @@
         {
             "groupe_age": "Total",
             "milieu": "Urbain",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 3001500
         },
         {
             "groupe_age": "Total",
             "milieu": "Urbain",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 7764000
         },
@@ -1852,14 +1852,14 @@
         {
             "groupe_age": "Total",
             "milieu": "Rural",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 1264800
         },
         {
             "groupe_age": "Total",
             "milieu": "Rural",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 3686900
         },
@@ -1873,14 +1873,14 @@
         {
             "groupe_age": "Total",
             "milieu": "National",
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 4266200
         },
         {
             "groupe_age": "Total",
             "milieu": "National",
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 11450800
         },

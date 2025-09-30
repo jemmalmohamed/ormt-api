@@ -303,5 +303,60 @@
         "tbDomaine": "relations professionnelles et climat social",
         "categorie": "application de la loi de travail",
         "indicateur": "nombre de délits"
+    },
+    {
+        "tbDomaine": "Compétitivité et salaires",
+        "categorie": "productivité",
+        "indicateur": "productivité par secteur d'activité"
+    },
+    {
+        "tbDomaine": "Compétitivité et salaires",
+        "categorie": "productivité",
+        "indicateur": "valeur ajoutée par secteur d'activité"
+    },
+    {
+        "tbDomaine": "Compétitivité et salaires",
+        "categorie": "salaires",
+        "indicateur": "masse salariale par secteur d'activité"
+    },
+    {
+        "tbDomaine": "Compétitivité et salaires",
+        "categorie": "salaires",
+        "indicateur": "salaire moyen par secteur d'activité"
+    },
+    {
+        "tbDomaine": "Compétitivité et salaires",
+        "categorie": "salaires",
+        "indicateur": "smig journalier"
+    },
+    {
+        "tbDomaine": "Compétitivité et salaires",
+        "categorie": "salaires",
+        "indicateur": "smag journalier"
+    },
+    {
+        "tbDomaine": "Compétitivité et salaires",
+        "categorie": "salaires",
+        "indicateur": "salaire moyen à l'année n par secteur d'activité"
+    },
+    {
+        "tbDomaine": "Compétitivité et salaires",
+        "categorie": "salaires",
+        "indicateur": "salaire moyen n-10 par secteur d'activité"
+    },
+    {
+        "tbDomaine": "Compétitivité et salaires",
+        "categorie": "productivité",
+        "indicateur": "variation productivité"
+    },
+    {
+        "tbDomaine": "Compétitivité et salaires",
+        "categorie": "productivité",
+        "indicateur": "variation valeur ajoutée"
+    },
+    {
+        "tbDomaine": "Compétitivité et salaires",
+        "categorie": "salaires",
+        "indicateur": "variation de la masse salariale"
     }
 ]

@@ -2,52 +2,52 @@
     "indicateur": "Taux de NEET par genre",
     "data": [
         {
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 11.6
         },
         {
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 13.9
         },
         {
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 13.6
         },
         {
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 13.6
         },
         {
-            "genre": "Masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 15.3
         },
         {
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 41.7
         },
         {
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 39.7
         },
         {
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 38.8
         },
         {
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 37.3
         },
         {
-            "genre": "Féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 37.4
         }

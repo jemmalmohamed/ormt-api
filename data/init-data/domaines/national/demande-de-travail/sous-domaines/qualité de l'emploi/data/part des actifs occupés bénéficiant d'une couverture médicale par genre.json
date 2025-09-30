@@ -2,27 +2,27 @@
     "indicateur": "part des actifs occupés bénéficiant d'une couverture médicale par genre",
     "data": [
         {
-            "genre": "Homme",
+            "genre": "homme",
             "annuel": 2019,
             "valeur": 23.8
         },
         {
-            "genre": "Homme",
+            "genre": "homme",
             "annuel": 2020,
             "valeur": 24.0
         },
         {
-            "genre": "Homme",
+            "genre": "homme",
             "annuel": 2021,
             "valeur": 24.0
         },
         {
-            "genre": "Homme",
+            "genre": "homme",
             "annuel": 2022,
             "valeur": 25.5
         },
         {
-            "genre": "Homme",
+            "genre": "homme",
             "annuel": 2023,
             "valeur": 27.7
         },

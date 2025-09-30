@@ -3,13 +3,13 @@
     "data": [
         {
             "age": "ensemble",
-            "genre": "masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 8486000
         },
         {
             "age": "ensemble",
-            "genre": "féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 2489000
         },
@@ -20,50 +20,50 @@
             "valeur": 10975000
         },
         {
-            "age": "15 – 34 ans",
-            "genre": "masculin",
+            "age": "15 à 34 ans",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 3123000
         },
         {
-            "age": "15 – 34 ans",
-            "genre": "féminin",
+            "age": "15 à 34 ans",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 901000
         },
         {
-            "age": "15 – 34 ans",
+            "age": "15 à 34 ans",
             "genre": "national",
             "annuel": "2019",
             "valeur": 4028000
         },
         {
-            "age": "35 – 59 ans",
-            "genre": "masculin",
+            "age": "35 à 59 ans",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 4608000
         },
         {
-            "age": "35 – 59 ans",
-            "genre": "féminin",
+            "age": "35 à 59 ans",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 1361000
         },
         {
-            "age": "35 – 59 ans",
+            "age": "35 à 59 ans",
             "genre": "national",
             "annuel": "2019",
             "valeur": 5970000
         },
         {
             "age": "60 ans et plus",
-            "genre": "masculin",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 747000
         },
         {
             "age": "60 ans et plus",
-            "genre": "féminin",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 226000
         },
@@ -75,13 +75,13 @@
         },
         {
             "age": "ensemble",
-            "genre": "masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 8278000
         },
         {
             "age": "ensemble",
-            "genre": "féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 2265000
         },
@@ -92,50 +92,50 @@
             "valeur": 10542000
         },
         {
-            "age": "15 – 34 ans",
-            "genre": "masculin",
+            "age": "15 à 34 ans",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 2930000
         },
         {
-            "age": "15 – 34 ans",
-            "genre": "féminin",
+            "age": "15 à 34 ans",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 775000
         },
         {
-            "age": "15 – 34 ans",
+            "age": "15 à 34 ans",
             "genre": "national",
             "annuel": "2020",
             "valeur": 3700000
         },
         {
-            "age": "35 – 59 ans",
-            "genre": "masculin",
+            "age": "35 à 59 ans",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 4536000
         },
         {
-            "age": "35 – 59 ans",
-            "genre": "féminin",
+            "age": "35 à 59 ans",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 1271000
         },
         {
-            "age": "35 – 59 ans",
+            "age": "35 à 59 ans",
             "genre": "national",
             "annuel": "2020",
             "valeur": 5809000
         },
         {
             "age": "60 ans et plus",
-            "genre": "masculin",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 811000
         },
         {
             "age": "60 ans et plus",
-            "genre": "féminin",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 217000
         },
@@ -147,13 +147,13 @@
         },
         {
             "age": "ensemble",
-            "genre": "masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 8374000
         },
         {
             "age": "ensemble",
-            "genre": "féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 2398000
         },
@@ -164,50 +164,50 @@
             "valeur": 10772000
         },
         {
-            "age": "15 – 34 ans",
-            "genre": "masculin",
+            "age": "15 à 34 ans",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 2923000
         },
         {
-            "age": "15 – 34 ans",
-            "genre": "féminin",
+            "age": "15 à 34 ans",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 825000
         },
         {
-            "age": "15 – 34 ans",
+            "age": "15 à 34 ans",
             "genre": "national",
             "annuel": "2021",
             "valeur": 3749000
         },
         {
-            "age": "35 – 59 ans",
-            "genre": "masculin",
+            "age": "35 à 59 ans",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 4597000
         },
         {
-            "age": "35 – 59 ans",
-            "genre": "féminin",
+            "age": "35 à 59 ans",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 1343000
         },
         {
-            "age": "35 – 59 ans",
+            "age": "35 à 59 ans",
             "genre": "national",
             "annuel": "2021",
             "valeur": 5946000
         },
         {
             "age": "60 ans et plus",
-            "genre": "masculin",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 846000
         },
         {
             "age": "60 ans et plus",
-            "genre": "féminin",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 230000
         },
@@ -219,13 +219,13 @@
         },
         {
             "age": "ensemble",
-            "genre": "masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 8462000
         },
         {
             "age": "ensemble",
-            "genre": "féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 2287000
         },
@@ -236,50 +236,50 @@
             "valeur": 10749000
         },
         {
-            "age": "15 – 34 ans",
-            "genre": "masculin",
+            "age": "15 à 34 ans",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 2928000
         },
         {
-            "age": "15 – 34 ans",
-            "genre": "féminin",
+            "age": "15 à 34 ans",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 789000
         },
         {
-            "age": "15 – 34 ans",
+            "age": "15 à 34 ans",
             "genre": "national",
             "annuel": "2022",
             "valeur": 3719000
         },
         {
-            "age": "35 – 59 ans",
-            "genre": "masculin",
+            "age": "35 à 59 ans",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 4671000
         },
         {
-            "age": "35 – 59 ans",
-            "genre": "féminin",
+            "age": "35 à 59 ans",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 1283000
         },
         {
-            "age": "35 – 59 ans",
+            "age": "35 à 59 ans",
             "genre": "national",
             "annuel": "2022",
             "valeur": 5955000
         },
         {
             "age": "60 ans et plus",
-            "genre": "masculin",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 863000
         },
         {
             "age": "60 ans et plus",
-            "genre": "féminin",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 215000
         },
@@ -291,13 +291,13 @@
         },
         {
             "age": "ensemble",
-            "genre": "masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 8399000
         },
         {
             "age": "ensemble",
-            "genre": "féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 2192000
         },
@@ -308,50 +308,50 @@
             "valeur": 10591000
         },
         {
-            "age": "15 – 34 ans",
-            "genre": "masculin",
+            "age": "15 à 34 ans",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 2847000
         },
         {
-            "age": "15 – 34 ans",
-            "genre": "féminin",
+            "age": "15 à 34 ans",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 783000
         },
         {
-            "age": "15 – 34 ans",
+            "age": "15 à 34 ans",
             "genre": "national",
             "annuel": "2023",
             "valeur": 3622000
         },
         {
-            "age": "35 – 59 ans",
-            "genre": "masculin",
+            "age": "35 à 59 ans",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 4703000
         },
         {
-            "age": "35 – 59 ans",
-            "genre": "féminin",
+            "age": "35 à 59 ans",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 1208000
         },
         {
-            "age": "35 – 59 ans",
+            "age": "35 à 59 ans",
             "genre": "national",
             "annuel": "2023",
             "valeur": 5910000
         },
         {
             "age": "60 ans et plus",
-            "genre": "masculin",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 857000
         },
         {
             "age": "60 ans et plus",
-            "genre": "féminin",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 204000
         },

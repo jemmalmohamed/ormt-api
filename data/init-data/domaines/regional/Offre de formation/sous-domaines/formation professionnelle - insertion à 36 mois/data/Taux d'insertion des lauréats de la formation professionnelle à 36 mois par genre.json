@@ -2,42 +2,42 @@
     "indicateur": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par genre",
     "data": [
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2006",
             "valeur": 72.3
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2008",
             "valeur": 75.6
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2010",
             "valeur": 73.2
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2016",
             "valeur": 81.4
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2006",
             "valeur": 80.0
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2008",
             "valeur": 73.1
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2010",
             "valeur": 77.5
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2016",
             "valeur": 86.0
         },

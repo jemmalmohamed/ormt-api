@@ -2,82 +2,82 @@
     "indicateur": "Nombre de nouveaux inscrits de la formation des cadres par genre",
     "data": [
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2016",
             "valeur": 4000
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2017",
             "valeur": 5000
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2018",
             "valeur": 10000
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 8000
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": 11000
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 17000
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 21000
         },
         {
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 21000
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2016",
             "valeur": 4000
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2017",
             "valeur": 5000
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2018",
             "valeur": 10000
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 11000
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": 10000
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 11000
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 13000
         },
         {
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 12000
         },

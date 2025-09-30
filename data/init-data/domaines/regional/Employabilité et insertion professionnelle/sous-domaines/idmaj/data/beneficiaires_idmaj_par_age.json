@@ -8,12 +8,12 @@
         },
         {
             "annuel": 2019,
-            "age": "20 à 25",
+            "age": "20 à 25 ans",
             "valeur": 49.3
         },
         {
             "annuel": 2019,
-            "age": "25 à 35",
+            "age": "25 à 35 ans",
             "valeur": 34.4
         },
         {
@@ -38,12 +38,12 @@
         },
         {
             "annuel": 2020,
-            "age": "20 à 25",
+            "age": "20 à 25 ans",
             "valeur": 50.0
         },
         {
             "annuel": 2020,
-            "age": "25 à 35",
+            "age": "25 à 35 ans",
             "valeur": 32.9
         },
         {
@@ -68,12 +68,12 @@
         },
         {
             "annuel": 2021,
-            "age": "20 à 25",
+            "age": "20 à 25 ans",
             "valeur": 51.4
         },
         {
             "annuel": 2021,
-            "age": "25 à 35",
+            "age": "25 à 35 ans",
             "valeur": 32.4
         },
         {
@@ -98,12 +98,12 @@
         },
         {
             "annuel": 2022,
-            "age": "20 à 25",
+            "age": "20 à 25 ans",
             "valeur": null
         },
         {
             "annuel": 2022,
-            "age": "25 à 35",
+            "age": "25 à 35 ans",
             "valeur": null
         },
         {
@@ -128,12 +128,12 @@
         },
         {
             "annuel": 2023,
-            "age": "20 à 25",
+            "age": "20 à 25 ans",
             "valeur": null
         },
         {
             "annuel": 2023,
-            "age": "25 à 35",
+            "age": "25 à 35 ans",
             "valeur": null
         },
         {
@@ -158,12 +158,12 @@
         },
         {
             "annuel": 2024,
-            "age": "20 à 25",
+            "age": "20 à 25 ans",
             "valeur": 48.7
         },
         {
             "annuel": 2024,
-            "age": "25 à 35",
+            "age": "25 à 35 ans",
             "valeur": 38.5
         },
         {

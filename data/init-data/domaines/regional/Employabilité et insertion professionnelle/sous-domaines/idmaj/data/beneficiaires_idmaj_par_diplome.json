@@ -3,7 +3,7 @@
     "data": [
         {
             "annuel": 2019,
-            "diplome": "Bac",
+            "diplome": "Baccalauréat",
             "valeur": 36.0
         },
         {
@@ -33,7 +33,7 @@
         },
         {
             "annuel": 2020,
-            "diplome": "Bac",
+            "diplome": "Baccalauréat",
             "valeur": 32.8
         },
         {
@@ -63,7 +63,7 @@
         },
         {
             "annuel": 2021,
-            "diplome": "Bac",
+            "diplome": "Baccalauréat",
             "valeur": 31.4
         },
         {
@@ -93,7 +93,7 @@
         },
         {
             "annuel": 2022,
-            "diplome": "Bac",
+            "diplome": "Baccalauréat",
             "valeur": 33.5
         },
         {
@@ -123,7 +123,7 @@
         },
         {
             "annuel": 2023,
-            "diplome": "Bac",
+            "diplome": "Baccalauréat",
             "valeur": 35.8
         },
         {
@@ -153,7 +153,7 @@
         },
         {
             "annuel": 2024,
-            "diplome": "Bac",
+            "diplome": "Baccalauréat",
             "valeur": 38.3
         },
         {

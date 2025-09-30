@@ -9,13 +9,13 @@
         },
         {
             "diplome": "sans diplôme",
-            "genre": "femmes",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": -67000
         },
         {
             "diplome": "sans diplôme",
-            "genre": "hommes",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": -77000
         },
@@ -27,13 +27,13 @@
         },
         {
             "diplome": "sans diplôme",
-            "genre": "femmes",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": -164000
         },
         {
             "diplome": "sans diplôme",
-            "genre": "hommes",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": -198000
         },
@@ -45,13 +45,13 @@
         },
         {
             "diplome": "sans diplôme",
-            "genre": "femmes",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 51000
         },
         {
             "diplome": "sans diplôme",
-            "genre": "hommes",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": -78000
         },
@@ -63,13 +63,13 @@
         },
         {
             "diplome": "sans diplôme",
-            "genre": "femmes",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": -114000
         },
         {
             "diplome": "sans diplôme",
-            "genre": "hommes",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": -80000
         },
@@ -81,13 +81,13 @@
         },
         {
             "diplome": "sans diplôme",
-            "genre": "femmes",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": -136000
         },
         {
             "diplome": "sans diplôme",
-            "genre": "hommes",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": -84000
         },
@@ -99,13 +99,13 @@
         },
         {
             "diplome": "niveau moyen",
-            "genre": "femmes",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 17000
         },
         {
             "diplome": "niveau moyen",
-            "genre": "hommes",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 136000
         },
@@ -117,13 +117,13 @@
         },
         {
             "diplome": "niveau moyen",
-            "genre": "femmes",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": -31000
         },
         {
             "diplome": "niveau moyen",
-            "genre": "hommes",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": -5000
         },
@@ -135,13 +135,13 @@
         },
         {
             "diplome": "niveau moyen",
-            "genre": "femmes",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 28000
         },
         {
             "diplome": "niveau moyen",
-            "genre": "hommes",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 116000
         },
@@ -153,13 +153,13 @@
         },
         {
             "diplome": "niveau moyen",
-            "genre": "femmes",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": -9000
         },
         {
             "diplome": "niveau moyen",
-            "genre": "hommes",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 68000
         },
@@ -171,13 +171,13 @@
         },
         {
             "diplome": "niveau moyen",
-            "genre": "femmes",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": -10000
         },
         {
             "diplome": "niveau moyen",
-            "genre": "hommes",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": -19000
         },
@@ -189,13 +189,13 @@
         },
         {
             "diplome": "niveau supérieur",
-            "genre": "femmes",
+            "genre": "femme",
             "annuel": "2019",
             "valeur": 69000
         },
         {
             "diplome": "niveau supérieur",
-            "genre": "hommes",
+            "genre": "homme",
             "annuel": "2019",
             "valeur": 84000
         },
@@ -207,13 +207,13 @@
         },
         {
             "diplome": "niveau supérieur",
-            "genre": "femmes",
+            "genre": "femme",
             "annuel": "2020",
             "valeur": -24000
         },
         {
             "diplome": "niveau supérieur",
-            "genre": "hommes",
+            "genre": "homme",
             "annuel": "2020",
             "valeur": -9000
         },
@@ -225,13 +225,13 @@
         },
         {
             "diplome": "niveau supérieur",
-            "genre": "femmes",
+            "genre": "femme",
             "annuel": "2021",
             "valeur": 54000
         },
         {
             "diplome": "niveau supérieur",
-            "genre": "hommes",
+            "genre": "homme",
             "annuel": "2021",
             "valeur": 56000
         },
@@ -243,13 +243,13 @@
         },
         {
             "diplome": "niveau supérieur",
-            "genre": "femmes",
+            "genre": "femme",
             "annuel": "2022",
             "valeur": 9000
         },
         {
             "diplome": "niveau supérieur",
-            "genre": "hommes",
+            "genre": "homme",
             "annuel": "2022",
             "valeur": 108000
         },
@@ -261,13 +261,13 @@
         },
         {
             "diplome": "niveau supérieur",
-            "genre": "femmes",
+            "genre": "femme",
             "annuel": "2023",
             "valeur": 51000
         },
         {
             "diplome": "niveau supérieur",
-            "genre": "hommes",
+            "genre": "homme",
             "annuel": "2023",
             "valeur": 38000
         }

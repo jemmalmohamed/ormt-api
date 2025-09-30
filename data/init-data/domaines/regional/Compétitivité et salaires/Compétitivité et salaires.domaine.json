@@ -1,0 +1,13 @@
+{
+  "nom": "Compétitivité et salaires",
+  "description": "Compétitivité et salaires",
+  "apropos": "Compétitivité et salaires",
+  "imageUrl": "/images/demande-travail.png",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauAcces": "lecture"
+    }
+  ],
+  "actif": true
+}

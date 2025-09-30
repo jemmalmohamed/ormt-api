@@ -3,13 +3,13 @@
     "data": [
         {
             "diplome": "DEUST/DUT",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 17.70
         },
         {
             "diplome": "DEUST/DUT",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 13.30
         },
@@ -21,13 +21,13 @@
         },
         {
             "diplome": "Licence fondamentale",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 27.10
         },
         {
             "diplome": "Licence fondamentale",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 16.00
         },
@@ -39,13 +39,13 @@
         },
         {
             "diplome": "Licence ST",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 14.50
         },
         {
             "diplome": "Licence ST",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 7.20
         },
@@ -57,13 +57,13 @@
         },
         {
             "diplome": "Master de recherche",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 17.90
         },
         {
             "diplome": "Master de recherche",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 6.70
         },
@@ -75,13 +75,13 @@
         },
         {
             "diplome": "Master spécialisé",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 15.60
         },
         {
             "diplome": "Master spécialisé",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 5.20
         },
@@ -93,13 +93,13 @@
         },
         {
             "diplome": "Licence professionnelle",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 15.00
         },
         {
             "diplome": "Licence professionnelle",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 7.50
         },
@@ -111,13 +111,13 @@
         },
         {
             "diplome": "Diplôme de l'ENCG",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 6.00
         },
         {
             "diplome": "Diplôme de l'ENCG",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 3.90
         },
@@ -129,13 +129,13 @@
         },
         {
             "diplome": "Diplôme d'ingénieur",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 2.80
         },
         {
             "diplome": "Diplôme d'ingénieur",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 3.50
         },
@@ -147,13 +147,13 @@
         },
         {
             "diplome": "Doctorat",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 0.00
         },
         {
             "diplome": "Doctorat",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 0.00
         },
@@ -165,13 +165,13 @@
         },
         {
             "diplome": "Total",
-            "genre": "Femmes",
+            "genre": "femme",
             "annuel": "2014",
             "valeur": 21.30
         },
         {
             "diplome": "Total",
-            "genre": "Hommes",
+            "genre": "homme",
             "annuel": "2014",
             "valeur": 12.40
         },

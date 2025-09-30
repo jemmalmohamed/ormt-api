@@ -3,7 +3,7 @@
     "data": [
         {
             "annuel": "2019",
-            "diplome": "Bac",
+            "diplome": "Baccalauréat",
             "valeur": 19.3
         },
         {
@@ -18,7 +18,7 @@
         },
         {
             "annuel": "2019",
-            "diplome": "Autre",
+            "diplome": "Autres",
             "valeur": 19.4
         },
         {
@@ -28,7 +28,7 @@
         },
         {
             "annuel": "2020",
-            "diplome": "Bac",
+            "diplome": "Baccalauréat",
             "valeur": 25.1
         },
         {
@@ -43,7 +43,7 @@
         },
         {
             "annuel": "2020",
-            "diplome": "Autre",
+            "diplome": "Autres",
             "valeur": 20.6
         },
         {
@@ -53,7 +53,7 @@
         },
         {
             "annuel": "2021",
-            "diplome": "Bac",
+            "diplome": "Baccalauréat",
             "valeur": 23.8
         },
         {
@@ -68,7 +68,7 @@
         },
         {
             "annuel": "2021",
-            "diplome": "Autre",
+            "diplome": "Autres",
             "valeur": 17.7
         },
         {
@@ -78,7 +78,7 @@
         },
         {
             "annuel": "2022",
-            "diplome": "Bac",
+            "diplome": "Baccalauréat",
             "valeur": 20.6
         },
         {
@@ -93,7 +93,7 @@
         },
         {
             "annuel": "2022",
-            "diplome": "Autre",
+            "diplome": "Autres",
             "valeur": 22.0
         },
         {
@@ -103,7 +103,7 @@
         },
         {
             "annuel": "2023",
-            "diplome": "Bac",
+            "diplome": "Baccalauréat",
             "valeur": 22.2
         },
         {
@@ -118,7 +118,7 @@
         },
         {
             "annuel": "2023",
-            "diplome": "Autre",
+            "diplome": "Autres",
             "valeur": 23.6
         },
         {
@@ -128,7 +128,7 @@
         },
         {
             "annuel": "2024",
-            "diplome": "Bac",
+            "diplome": "Baccalauréat",
             "valeur": 28.6
         },
         {
@@ -143,7 +143,7 @@
         },
         {
             "annuel": "2024",
-            "diplome": "Autre",
+            "diplome": "Autres",
             "valeur": 24.0
         },
         {
