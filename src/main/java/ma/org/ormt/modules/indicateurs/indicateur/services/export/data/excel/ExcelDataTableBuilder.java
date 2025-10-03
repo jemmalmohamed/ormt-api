@@ -71,7 +71,7 @@ public class ExcelDataTableBuilder {
 
         try {
             Row noDataRow = sheet.createRow(startRowIdx++);
-            String displayMessage = message != null ? message : "Aucune donnée disponible";
+            String displayMessage = message != null ? message : "Pas de données régionales disponibles";
             ExcelUtils.createCell(noDataRow, 0, displayMessage, style);
             return startRowIdx;
         } catch (Exception e) {

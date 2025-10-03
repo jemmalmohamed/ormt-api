@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.data.builders.DataTableBuilderService;
+import ma.org.ormt.modules.indicateurs.indicateur.services.export.helpers.utils.IndicateurExportUtilService;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -25,6 +26,9 @@ public class IndicateurExcelExportDataTableService {
         @Autowired
         private ExcelDataTableBuilder excelDataTableBuilder;
 
+        @Autowired
+        private IndicateurExportUtilService utilService;
+
         /**
          * Crée une table de données au format pivot
          */
@@ -36,9 +40,9 @@ public class IndicateurExcelExportDataTableService {
                 List<List<String>> pivotData = dataTableBuilderService.buildDataTable(
                                 indicateur, DataTableBuilderService.DataTableType.PIVOT);
 
-                if (pivotData.isEmpty()) {
+                if (pivotData.isEmpty() || !utilService.isRegional(indicateur)) {
                         return excelDataTableBuilder.createNoDataMessage(sheet,
-                                        "Aucune donnée pivot disponible", rowIdx, borderStyle);
+                                        "Pas de données régionales disponibles", rowIdx, borderStyle);
                 }
 
                 // Créer la table dans Excel
@@ -57,9 +61,9 @@ public class IndicateurExcelExportDataTableService {
                 List<List<String>> flatData = dataTableBuilderService.buildDataTable(
                                 indicateur, DataTableBuilderService.DataTableType.FLAT);
 
-                if (flatData.isEmpty()) {
+                if (flatData.isEmpty() || !utilService.isRegional(indicateur)) {
                         return excelDataTableBuilder.createNoDataMessage(sheet,
-                                        "Aucune donnée disponible", rowIdx, borderStyle);
+                                        "Pas de données régionales disponibles", rowIdx, borderStyle);
                 }
 
                 // Créer la table dans Excel

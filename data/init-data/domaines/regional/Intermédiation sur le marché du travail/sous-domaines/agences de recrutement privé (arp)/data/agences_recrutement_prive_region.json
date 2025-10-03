@@ -3,63 +3,8 @@
   "data": [
     {
       "annuel": "2019",
-      "region": "casablanca-settat",
-      "valeur": 71
-    },
-    {
-      "annuel": "2019",
-      "region": "dakhla-oued ed-dahab",
-      "valeur": 1
-    },
-    {
-      "annuel": "2019",
-      "region": "fès-meknès",
-      "valeur": 3
-    },
-    {
-      "annuel": "2019",
-      "region": "laâyoune-sakia el hamra",
-      "valeur": 0
-    },
-    {
-      "annuel": "2019",
       "region": "marrakech-safi",
       "valeur": 9
-    },
-    {
-      "annuel": "2019",
-      "region": "rabat-salé-kénitra",
-      "valeur": 12
-    },
-    {
-      "annuel": "2019",
-      "region": "souss-massa",
-      "valeur": 3
-    },
-    {
-      "annuel": "2019",
-      "region": "tanger-tétouan-al hoceïma",
-      "valeur": 1
-    },
-    {
-      "annuel": "2020",
-      "region": "casablanca-settat",
-      "valeur": 71
-    },
-    {
-      "annuel": "2020",
-      "region": "dakhla-oued ed-dahab",
-      "valeur": 1
-    },
-    {
-      "annuel": "2020",
-      "region": "fès-meknès",
-      "valeur": 3
-    },
-    {
-      "annuel": "2020",
-      "region": "laâyoune-sakia el hamra",
-      "valeur": 0
     },
     {
       "annuel": "2020",
@@ -67,139 +12,19 @@
       "valeur": 8
     },
     {
-      "annuel": "2020",
-      "region": "rabat-salé-kénitra",
-      "valeur": 12
-    },
-    {
-      "annuel": "2020",
-      "region": "souss-massa",
-      "valeur": 3
-    },
-    {
-      "annuel": "2020",
-      "region": "tanger-tétouan-al hoceïma",
-      "valeur": 1
-    },
-    {
-      "annuel": "2021",
-      "region": "casablanca-settat",
-      "valeur": 68
-    },
-    {
-      "annuel": "2021",
-      "region": "dakhla-oued ed-dahab",
-      "valeur": 1
-    },
-    {
-      "annuel": "2021",
-      "region": "fès-meknès",
-      "valeur": 3
-    },
-    {
-      "annuel": "2021",
-      "region": "laâyoune-sakia el hamra",
-      "valeur": 1
-    },
-    {
       "annuel": "2021",
       "region": "marrakech-safi",
       "valeur": 9
     },
     {
-      "annuel": "2021",
-      "region": "rabat-salé-kénitra",
-      "valeur": 12
-    },
-    {
-      "annuel": "2021",
-      "region": "souss-massa",
-      "valeur": 3
-    },
-    {
-      "annuel": "2021",
-      "region": "tanger-tétouan-al hoceïma",
-      "valeur": 1
-    },
-    {
-      "annuel": "2022",
-      "region": "casablanca-settat",
-      "valeur": 69
-    },
-    {
-      "annuel": "2022",
-      "region": "dakhla-oued ed-dahab",
-      "valeur": 1
-    },
-    {
-      "annuel": "2022",
-      "region": "fès-meknès",
-      "valeur": 3
-    },
-    {
-      "annuel": "2022",
-      "region": "laâyoune-sakia el hamra",
-      "valeur": 1
-    },
-    {
       "annuel": "2022",
       "region": "marrakech-safi",
       "valeur": 8
-    },
-    {
-      "annuel": "2022",
-      "region": "rabat-salé-kénitra",
-      "valeur": 13
-    },
-    {
-      "annuel": "2022",
-      "region": "souss-massa",
-      "valeur": 3
-    },
-    {
-      "annuel": "2022",
-      "region": "tanger-tétouan-al hoceïma",
-      "valeur": 1
-    },
-    {
-      "annuel": "2023",
-      "region": "casablanca-settat",
-      "valeur": 69
-    },
-    {
-      "annuel": "2023",
-      "region": "dakhla-oued ed-dahab",
-      "valeur": 1
-    },
-    {
-      "annuel": "2023",
-      "region": "fès-meknès",
-      "valeur": 3
-    },
-    {
-      "annuel": "2023",
-      "region": "laâyoune-sakia el hamra",
-      "valeur": 1
     },
     {
       "annuel": "2023",
       "region": "marrakech-safi",
       "valeur": 7
-    },
-    {
-      "annuel": "2023",
-      "region": "rabat-salé-kénitra",
-      "valeur": 12
-    },
-    {
-      "annuel": "2023",
-      "region": "souss-massa",
-      "valeur": 4
-    },
-    {
-      "annuel": "2023",
-      "region": "tanger-tétouan-al hoceïma",
-      "valeur": 1
     }
   ]
 }

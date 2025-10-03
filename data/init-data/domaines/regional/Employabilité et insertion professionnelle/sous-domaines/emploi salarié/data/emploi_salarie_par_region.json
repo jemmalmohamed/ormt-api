@@ -3,113 +3,13 @@
   "data": [
     {
       "annuel": 2019,
-      "region": "béni mellal-khénifra",
-      "valeur": 2.4
-    },
-    {
-      "annuel": 2019,
-      "region": "casablanca-settat",
-      "valeur": 27.7
-    },
-    {
-      "annuel": 2019,
-      "region": "dakhla-oued ed-dahab",
-      "valeur": 0.3
-    },
-    {
-      "annuel": 2019,
-      "region": "drâa-tafilalet",
-      "valeur": 2.1
-    },
-    {
-      "annuel": 2019,
-      "region": "fès-meknès",
-      "valeur": 9.8
-    },
-    {
-      "annuel": 2019,
-      "region": "guelmim-oued noun",
-      "valeur": 0.6
-    },
-    {
-      "annuel": 2019,
-      "region": "laâyoune-sakia el hamra",
-      "valeur": 0.7
-    },
-    {
-      "annuel": 2019,
-      "region": "l'oriental",
-      "valeur": 5.4
-    },
-    {
-      "annuel": 2019,
       "region": "marrakech-safi",
       "valeur": 6.8
     },
     {
       "annuel": 2019,
-      "region": "rabat-salé-kénitra",
-      "valeur": 22.7
-    },
-    {
-      "annuel": 2019,
-      "region": "souss-massa",
-      "valeur": 6.5
-    },
-    {
-      "annuel": 2019,
-      "region": "tanger-tétouan-al hoceïma",
-      "valeur": 14.8
-    },
-    {
-      "annuel": 2019,
-      "region": "non renseigné",
-      "valeur": 0.0
-    },
-    {
-      "annuel": 2019,
       "region": "ensemble",
       "valeur": 100.0
-    },
-    {
-      "annuel": 2020,
-      "region": "béni mellal-khénifra",
-      "valeur": 2.1
-    },
-    {
-      "annuel": 2020,
-      "region": "casablanca-settat",
-      "valeur": 26.1
-    },
-    {
-      "annuel": 2020,
-      "region": "dakhla-oued ed-dahab",
-      "valeur": 0.5
-    },
-    {
-      "annuel": 2020,
-      "region": "drâa-tafilalet",
-      "valeur": 2.2
-    },
-    {
-      "annuel": 2020,
-      "region": "fès-meknès",
-      "valeur": 9.3
-    },
-    {
-      "annuel": 2020,
-      "region": "guelmim-oued noun",
-      "valeur": 0.6
-    },
-    {
-      "annuel": 2020,
-      "region": "laâyoune-sakia el hamra",
-      "valeur": 0.9
-    },
-    {
-      "annuel": 2020,
-      "region": "l'oriental",
-      "valeur": 4.7
     },
     {
       "annuel": 2020,
@@ -118,68 +18,8 @@
     },
     {
       "annuel": 2020,
-      "region": "rabat-salé-kénitra",
-      "valeur": 26.1
-    },
-    {
-      "annuel": 2020,
-      "region": "souss-massa",
-      "valeur": 6.3
-    },
-    {
-      "annuel": 2020,
-      "region": "tanger-tétouan-al hoceïma",
-      "valeur": 15.8
-    },
-    {
-      "annuel": 2020,
-      "region": "non renseigné",
-      "valeur": 0.0
-    },
-    {
-      "annuel": 2020,
       "region": "ensemble",
       "valeur": 100.0
-    },
-    {
-      "annuel": 2021,
-      "region": "béni mellal-khénifra",
-      "valeur": 2.8
-    },
-    {
-      "annuel": 2021,
-      "region": "casablanca-settat",
-      "valeur": 28.9
-    },
-    {
-      "annuel": 2021,
-      "region": "dakhla-oued ed-dahab",
-      "valeur": 0.4
-    },
-    {
-      "annuel": 2021,
-      "region": "drâa-tafilalet",
-      "valeur": 2.2
-    },
-    {
-      "annuel": 2021,
-      "region": "fès-meknès",
-      "valeur": 8.8
-    },
-    {
-      "annuel": 2021,
-      "region": "guelmim-oued noun",
-      "valeur": 0.6
-    },
-    {
-      "annuel": 2021,
-      "region": "laâyoune-sakia el hamra",
-      "valeur": 0.9
-    },
-    {
-      "annuel": 2021,
-      "region": "l'oriental",
-      "valeur": 6.0
     },
     {
       "annuel": 2021,
@@ -188,68 +28,8 @@
     },
     {
       "annuel": 2021,
-      "region": "rabat-salé-kénitra",
-      "valeur": 19.8
-    },
-    {
-      "annuel": 2021,
-      "region": "souss-massa",
-      "valeur": 8.1
-    },
-    {
-      "annuel": 2021,
-      "region": "tanger-tétouan-al hoceïma",
-      "valeur": 15.1
-    },
-    {
-      "annuel": 2021,
-      "region": "non renseigné",
-      "valeur": 0.0
-    },
-    {
-      "annuel": 2021,
       "region": "ensemble",
       "valeur": 100.0
-    },
-    {
-      "annuel": 2022,
-      "region": "béni mellal-khénifra",
-      "valeur": 2.3
-    },
-    {
-      "annuel": 2022,
-      "region": "casablanca-settat",
-      "valeur": 29.5
-    },
-    {
-      "annuel": 2022,
-      "region": "dakhla-oued ed-dahab",
-      "valeur": 0.3
-    },
-    {
-      "annuel": 2022,
-      "region": "drâa-tafilalet",
-      "valeur": 2.5
-    },
-    {
-      "annuel": 2022,
-      "region": "fès-meknès",
-      "valeur": 8.9
-    },
-    {
-      "annuel": 2022,
-      "region": "guelmim-oued noun",
-      "valeur": 0.6
-    },
-    {
-      "annuel": 2022,
-      "region": "laâyoune-sakia el hamra",
-      "valeur": 0.7
-    },
-    {
-      "annuel": 2022,
-      "region": "l'oriental",
-      "valeur": 5.0
     },
     {
       "annuel": 2022,
@@ -258,68 +38,8 @@
     },
     {
       "annuel": 2022,
-      "region": "rabat-salé-kénitra",
-      "valeur": 21.1
-    },
-    {
-      "annuel": 2022,
-      "region": "souss-massa",
-      "valeur": 6.3
-    },
-    {
-      "annuel": 2022,
-      "region": "tanger-tétouan-al hoceïma",
-      "valeur": 15.4
-    },
-    {
-      "annuel": 2022,
-      "region": "non renseigné",
-      "valeur": 0.0
-    },
-    {
-      "annuel": 2022,
       "region": "ensemble",
       "valeur": 100.0
-    },
-    {
-      "annuel": 2023,
-      "region": "béni mellal-khénifra",
-      "valeur": 2.5
-    },
-    {
-      "annuel": 2023,
-      "region": "casablanca-settat",
-      "valeur": 29.9
-    },
-    {
-      "annuel": 2023,
-      "region": "dakhla-oued ed-dahab",
-      "valeur": 0.4
-    },
-    {
-      "annuel": 2023,
-      "region": "drâa-tafilalet",
-      "valeur": 2.6
-    },
-    {
-      "annuel": 2023,
-      "region": "fès-meknès",
-      "valeur": 9.6
-    },
-    {
-      "annuel": 2023,
-      "region": "guelmim-oued noun",
-      "valeur": 0.7
-    },
-    {
-      "annuel": 2023,
-      "region": "laâyoune-sakia el hamra",
-      "valeur": 0.9
-    },
-    {
-      "annuel": 2023,
-      "region": "l'oriental",
-      "valeur": 5.6
     },
     {
       "annuel": 2023,
@@ -328,93 +48,13 @@
     },
     {
       "annuel": 2023,
-      "region": "rabat-salé-kénitra",
-      "valeur": 19.6
-    },
-    {
-      "annuel": 2023,
-      "region": "souss-massa",
-      "valeur": 6.3
-    },
-    {
-      "annuel": 2023,
-      "region": "tanger-tétouan-al hoceïma",
-      "valeur": 14.7
-    },
-    {
-      "annuel": 2023,
-      "region": "non renseigné",
-      "valeur": 0.0
-    },
-    {
-      "annuel": 2023,
       "region": "ensemble",
       "valeur": 100.0
     },
     {
       "annuel": 2024,
-      "region": "béni mellal-khénifra",
-      "valeur": 2.4
-    },
-    {
-      "annuel": 2024,
-      "region": "casablanca-settat",
-      "valeur": 28.6
-    },
-    {
-      "annuel": 2024,
-      "region": "dakhla-oued ed-dahab",
-      "valeur": 0.6
-    },
-    {
-      "annuel": 2024,
-      "region": "drâa-tafilalet",
-      "valeur": 2.3
-    },
-    {
-      "annuel": 2024,
-      "region": "fès-meknès",
-      "valeur": 9.1
-    },
-    {
-      "annuel": 2024,
-      "region": "guelmim-oued noun",
-      "valeur": 0.5
-    },
-    {
-      "annuel": 2024,
-      "region": "laâyoune-sakia el hamra",
-      "valeur": 1.0
-    },
-    {
-      "annuel": 2024,
-      "region": "l'oriental",
-      "valeur": 4.4
-    },
-    {
-      "annuel": 2024,
       "region": "marrakech-safi",
       "valeur": 7.4
-    },
-    {
-      "annuel": 2024,
-      "region": "rabat-salé-kénitra",
-      "valeur": 20.6
-    },
-    {
-      "annuel": 2024,
-      "region": "souss-massa",
-      "valeur": 6.3
-    },
-    {
-      "annuel": 2024,
-      "region": "tanger-tétouan-al hoceïma",
-      "valeur": 16.4
-    },
-    {
-      "annuel": 2024,
-      "region": "non renseigné",
-      "valeur": 0.3
     },
     {
       "annuel": 2024,

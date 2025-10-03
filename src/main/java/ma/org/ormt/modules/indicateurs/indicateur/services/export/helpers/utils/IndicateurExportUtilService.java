@@ -7,6 +7,8 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
+import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.dtos.IndicateurExportRequestDto;
 import lombok.extern.slf4j.Slf4j;
 
@@ -118,11 +120,19 @@ public class IndicateurExportUtilService {
         }
 
         // Remplacer les caractères interdits dans les noms de feuilles Excel
-        String cleaned = name.replaceAll("[\\[\\]\\*\\?:/\\\\]", "_");
+        String cleaned = name.replaceAll("[\\[\\]\\*\\?:/\\\\']", "_");
+
+        // Supprimer les apostrophes au début et à la fin (Excel ne les accepte pas)
+        cleaned = cleaned.replaceAll("^'+", "").replaceAll("'+$", "");
 
         // Limiter à 31 caractères (limite Excel)
         if (cleaned.length() > 31) {
             cleaned = cleaned.substring(0, 31);
+        }
+
+        // S'assurer que le nom n'est pas vide après nettoyage
+        if (!StringUtils.hasText(cleaned)) {
+            return "Feuille";
         }
 
         return cleaned;
@@ -165,5 +175,26 @@ public class IndicateurExportUtilService {
             default:
                 return true;
         }
+    }
+
+    /**
+     * Détermine si un indicateur est régional (pas national)
+     */
+    public boolean isRegional(Indicateur indicateur) {
+        if (indicateur == null) {
+            return false;
+        }
+
+        List<Dimension> dimensions = indicateur.getDimensions();
+        if (dimensions == null || dimensions.isEmpty()) {
+            return false; // Pas de dimensions = pas régional
+        }
+
+        // Chercher une dimension de type "région" ou "territoire"
+        boolean hasRegionDimension = dimensions.stream()
+                .anyMatch(dimension -> dimension.getNom() != null &&
+                        dimension.getNom().toLowerCase().contains("region"));
+
+        return hasRegionDimension;
     }
 }

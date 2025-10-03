@@ -22,7 +22,7 @@ public class DataStatsMetaDataBuilder {
         MetaDataSection section = new MetaDataSection("Statistiques détaillées des données");
 
         if (indicateur == null || indicateur.getDonnees() == null) {
-            section.addRow(new MetaDataRow("État", "Aucune donnée disponible"));
+            section.addRow(new MetaDataRow("État", "Pas de données régionales disponibles"));
             return section;
         }
 
