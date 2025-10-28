@@ -37,6 +37,15 @@
           }
         },
         {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
           "nom": "annuel",
           "libelle": "Année",
           "type": "texte",
@@ -83,6 +92,15 @@
           }
         },
         {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
           "nom": "annuel",
           "libelle": "Année",
           "type": "texte",
@@ -125,6 +143,15 @@
           "type": "texte",
           "association": {
             "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": false,
             "temporelle": false
           }
         },

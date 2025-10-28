@@ -37,6 +37,15 @@
           }
         },
         {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
           "nom": "annuel",
           "libelle": "Année",
           "type": "texte",
@@ -79,6 +88,15 @@
           "type": "texte",
           "association": {
             "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": false,
             "temporelle": false
           }
         },
@@ -129,6 +147,15 @@
           }
         },
         {
+          "nom": "region",
+          "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
           "nom": "annuel",
           "libelle": "Année",
           "type": "texte",
@@ -148,7 +175,7 @@
       ]
     },
     {
-      "nom": "Nombre de lauréats de la formation professionnelle par région",
+      "nom": "Nombre de lauréats de la formation professionnelle par province",
       "titre": "Nombre de lauréats de la formation professionnelle",
       "description": "Nombre de lauréats de la formation professionnelle.",
       "categorie": "Lauréats",
@@ -168,6 +195,15 @@
         {
           "nom": "region",
           "libelle": "Région",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "province",
+          "libelle": "Province",
           "type": "texte",
           "association": {
             "principale": true,

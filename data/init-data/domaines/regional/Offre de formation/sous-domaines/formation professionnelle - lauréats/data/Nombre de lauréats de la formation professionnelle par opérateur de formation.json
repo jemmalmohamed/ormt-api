@@ -2,164 +2,76 @@
   "indicateur": "Nombre de lauréats de la formation professionnelle par opérateur de formation",
   "data": [
     {
+      "region": "marrakech-safi",
+      "operateur_formation": "Agriculture",
+      "annuel": "2024",
+      "valeur": 672
+    },
+    {
+      "region": "marrakech-safi",
+      "operateur_formation": "Artisanat",
+      "annuel": "2024",
+      "valeur": 113
+    },
+    {
+      "region": "marrakech-safi",
+      "operateur_formation": "Entraide Nationale",
+      "annuel": "2024",
+      "valeur": 296
+    },
+    {
+      "region": "marrakech-safi",
+      "operateur_formation": "Jeunesse",
+      "annuel": "2024",
+      "valeur": 174
+    },
+    {
+      "region": "marrakech-safi",
+      "operateur_formation": "Ministère de l'Equipement et de l'Eau",
+      "annuel": "2024",
+      "valeur": 67
+    },
+    {
+      "region": "marrakech-safi",
+      "operateur_formation": "Ministère de la santé et de la protection sociale",
+      "annuel": "2024",
+      "valeur": 85
+    },
+    {
+      "region": "marrakech-safi",
       "operateur_formation": "OFPPT",
-      "annuel": "2016",
-      "valeur": 120000
+      "annuel": "2024",
+      "valeur": 6246
     },
     {
-      "operateur_formation": "OFPPT",
-      "annuel": "2017",
-      "valeur": 122000
+      "region": "marrakech-safi",
+      "operateur_formation": "ONG",
+      "annuel": "2024",
+      "valeur": 1581
     },
     {
-      "operateur_formation": "OFPPT",
-      "annuel": "2018",
-      "valeur": 134000
+      "region": "marrakech-safi",
+      "operateur_formation": "Pêche Maritime",
+      "annuel": "2024",
+      "valeur": 444
     },
     {
-      "operateur_formation": "OFPPT",
-      "annuel": "2019",
-      "valeur": 119000
+      "region": "marrakech-safi",
+      "operateur_formation": "Privé",
+      "annuel": "2024",
+      "valeur": 6110
     },
     {
-      "operateur_formation": "OFPPT",
-      "annuel": "2020",
-      "valeur": 104000
+      "region": "marrakech-safi",
+      "operateur_formation": "Transition énergétique",
+      "annuel": "2024",
+      "valeur": 69
     },
     {
-      "operateur_formation": "OFPPT",
-      "annuel": "2021",
-      "valeur": 113000
-    },
-    {
-      "operateur_formation": "OFPPT",
-      "annuel": "2022",
-      "valeur": 75000
-    },
-    {
-      "operateur_formation": "OFPPT",
-      "annuel": "2023",
-      "valeur": 71000
-    },
-    {
-      "operateur_formation": "AUTRES OPERATEURS PUBLIC",
-      "annuel": "2016",
-      "valeur": 24000
-    },
-    {
-      "operateur_formation": "AUTRES OPERATEURS PUBLIC",
-      "annuel": "2017",
-      "valeur": 24000
-    },
-    {
-      "operateur_formation": "AUTRES OPERATEURS PUBLIC",
-      "annuel": "2018",
-      "valeur": 19000
-    },
-    {
-      "operateur_formation": "AUTRES OPERATEURS PUBLIC",
-      "annuel": "2019",
-      "valeur": 30000
-    },
-    {
-      "operateur_formation": "AUTRES OPERATEURS PUBLIC",
-      "annuel": "2020",
-      "valeur": 26000
-    },
-    {
-      "operateur_formation": "AUTRES OPERATEURS PUBLIC",
-      "annuel": "2021",
-      "valeur": 25000
-    },
-    {
-      "operateur_formation": "AUTRES OPERATEURS PUBLIC",
-      "annuel": "2022",
-      "valeur": 27000
-    },
-    {
-      "operateur_formation": "AUTRES OPERATEURS PUBLIC",
-      "annuel": "2023",
-      "valeur": 30000
-    },
-    {
-      "operateur_formation": "PRIVE",
-      "annuel": "2016",
-      "valeur": 39000
-    },
-    {
-      "operateur_formation": "PRIVE",
-      "annuel": "2017",
-      "valeur": 41000
-    },
-    {
-      "operateur_formation": "PRIVE",
-      "annuel": "2018",
-      "valeur": 43000
-    },
-    {
-      "operateur_formation": "PRIVE",
-      "annuel": "2019",
-      "valeur": 43000
-    },
-    {
-      "operateur_formation": "PRIVE",
-      "annuel": "2020",
-      "valeur": 48000
-    },
-    {
-      "operateur_formation": "PRIVE",
-      "annuel": "2021",
-      "valeur": 43000
-    },
-    {
-      "operateur_formation": "PRIVE",
-      "annuel": "2022",
-      "valeur": 45000
-    },
-    {
-      "operateur_formation": "PRIVE",
-      "annuel": "2023",
-      "valeur": 56000
-    },
-    {
+      "region": "marrakech-safi",
       "operateur_formation": "TOTAL",
-      "annuel": "2016",
-      "valeur": 182000
-    },
-    {
-      "operateur_formation": "TOTAL",
-      "annuel": "2017",
-      "valeur": 186000
-    },
-    {
-      "operateur_formation": "TOTAL",
-      "annuel": "2018",
-      "valeur": 196000
-    },
-    {
-      "operateur_formation": "TOTAL",
-      "annuel": "2019",
-      "valeur": 191000
-    },
-    {
-      "operateur_formation": "TOTAL",
-      "annuel": "2020",
-      "valeur": 178000
-    },
-    {
-      "operateur_formation": "TOTAL",
-      "annuel": "2021",
-      "valeur": 180000
-    },
-    {
-      "operateur_formation": "TOTAL",
-      "annuel": "2022",
-      "valeur": 147000
-    },
-    {
-      "operateur_formation": "TOTAL",
-      "annuel": "2023",
-      "valeur": 156000
+      "annuel": "2024",
+      "valeur": 15857
     }
   ]
 }

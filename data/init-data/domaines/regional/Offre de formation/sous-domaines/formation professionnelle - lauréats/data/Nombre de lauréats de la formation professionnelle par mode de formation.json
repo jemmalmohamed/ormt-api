@@ -2,124 +2,28 @@
   "indicateur": "Nombre de lauréats de la formation professionnelle par mode de formation",
   "data": [
     {
-      "mode_formation": "Formation Résidentielle et Alterné",
-      "annuel": "2016",
-      "valeur": 165000
+      "region": "marrakech-safi",
+      "mode_formation": "Alterné",
+      "annuel": "2024",
+      "valeur": 2079
     },
     {
-      "mode_formation": "Formation Résidentielle et Alterné",
-      "annuel": "2017",
-      "valeur": 169000
+      "region": "marrakech-safi",
+      "mode_formation": "Apprentissage",
+      "annuel": "2024",
+      "valeur": 2655
     },
     {
-      "mode_formation": "Formation Résidentielle et Alterné",
-      "annuel": "2018",
-      "valeur": 173000
+      "region": "marrakech-safi",
+      "mode_formation": "Résidentielle",
+      "annuel": "2024",
+      "valeur": 11123
     },
     {
-      "mode_formation": "Formation Résidentielle et Alterné",
-      "annuel": "2019",
-      "valeur": 169000
-    },
-    {
-      "mode_formation": "Formation Résidentielle et Alterné",
-      "annuel": "2020",
-      "valeur": 159000
-    },
-    {
-      "mode_formation": "Formation Résidentielle et Alterné",
-      "annuel": "2021",
-      "valeur": 164000
-    },
-    {
-      "mode_formation": "Formation Résidentielle et Alterné",
-      "annuel": "2022",
-      "valeur": 125000
-    },
-    {
-      "mode_formation": "Formation Résidentielle et Alterné",
-      "annuel": "2023",
-      "valeur": 134000
-    },
-    {
-      "mode_formation": "Formation par apprentissage",
-      "annuel": "2016",
-      "valeur": 17000
-    },
-    {
-      "mode_formation": "Formation par apprentissage",
-      "annuel": "2017",
-      "valeur": 17000
-    },
-    {
-      "mode_formation": "Formation par apprentissage",
-      "annuel": "2018",
-      "valeur": 22000
-    },
-    {
-      "mode_formation": "Formation par apprentissage",
-      "annuel": "2019",
-      "valeur": 22000
-    },
-    {
-      "mode_formation": "Formation par apprentissage",
-      "annuel": "2020",
-      "valeur": 18000
-    },
-    {
-      "mode_formation": "Formation par apprentissage",
-      "annuel": "2021",
-      "valeur": 16000
-    },
-    {
-      "mode_formation": "Formation par apprentissage",
-      "annuel": "2022",
-      "valeur": 22000
-    },
-    {
-      "mode_formation": "Formation par apprentissage",
-      "annuel": "2023",
-      "valeur": 23000
-    },
-    {
+      "region": "marrakech-safi",
       "mode_formation": "TOTAL",
-      "annuel": "2016",
-      "valeur": 182000
-    },
-    {
-      "mode_formation": "TOTAL",
-      "annuel": "2017",
-      "valeur": 186000
-    },
-    {
-      "mode_formation": "TOTAL",
-      "annuel": "2018",
-      "valeur": 196000
-    },
-    {
-      "mode_formation": "TOTAL",
-      "annuel": "2019",
-      "valeur": 191000
-    },
-    {
-      "mode_formation": "TOTAL",
-      "annuel": "2020",
-      "valeur": 178000
-    },
-    {
-      "mode_formation": "TOTAL",
-      "annuel": "2021",
-      "valeur": 180000
-    },
-    {
-      "mode_formation": "TOTAL",
-      "annuel": "2022",
-      "valeur": 147000
-    },
-    {
-      "mode_formation": "TOTAL",
-      "annuel": "2023",
-      "valeur": 156000
+      "annuel": "2024",
+      "valeur": 15857
     }
   ]
 }
