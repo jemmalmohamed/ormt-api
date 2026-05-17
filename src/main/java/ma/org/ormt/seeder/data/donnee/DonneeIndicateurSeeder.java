@@ -19,7 +19,6 @@ import java.io.File;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -83,9 +82,7 @@ public class DonneeIndicateurSeeder {
                         return;
                     }
                     List<ValeurDimensionRequestDto> dimensionValues = new ArrayList<>();
-                    Iterator<Map.Entry<String, JsonNode>> fields = jsonNode.fields();
-                    while (fields.hasNext()) {
-                        Map.Entry<String, JsonNode> field = fields.next();
+                    for (Map.Entry<String, JsonNode> field : jsonNode.properties()) {
                         String dimensionName = field.getKey();
                         if (!dimensionName.equals("valeur")) {
                             String dimensionValue = field.getValue().asText();

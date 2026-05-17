@@ -8,4 +8,10 @@ import ma.org.ormt.modules.indicateurs.source.models.Source;
 @Repository
 public interface SourceRepository extends BaseRepository<Source> {
     Optional<Source> findByAbreviation(String abreviation);
+
+    Optional<Source> findByNomIgnoreCase(String nom);
+
+    boolean existsByNomIgnoreCase(String nom);
+
+    boolean existsByNomIgnoreCaseAndIdNot(String nom, Long id);
 }

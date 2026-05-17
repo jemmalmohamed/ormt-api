@@ -24,6 +24,7 @@ import lombok.RequiredArgsConstructor;
 import ma.org.ormt.core.commun.base.controller.BaseController;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
 import ma.org.ormt.core.commun.rest.responses.RestResponse;
+import ma.org.ormt.core.commun.rest.responses.ExistsDto;
 import ma.org.ormt.modules.indicateurs.source.dtos.SourceDto;
 import ma.org.ormt.modules.indicateurs.source.dtos.SourceDtoMapper;
 import ma.org.ormt.modules.indicateurs.source.dtos.details.SourceDetailsDto;
@@ -70,6 +71,30 @@ public class SourceAdminLoadController extends BaseController<Source> {
                                 true);
         }
 
+        @Operation(summary = "Check if " + ENTITY_NAME + " name exists")
+        @ApiResponses(value = {
+                        @ApiResponse(responseCode = "200", description = "Ok", content = {
+                                        @Content(mediaType = "application/json", schema = @Schema(implementation = ExistsDto.class)) }),
+                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @GetMapping("/exists-by-nom")
+        @PreAuthorize("hasAuthority('datasource:list')")
+        public ResponseEntity<RestResponse<ExistsDto>> existsByNom(
+                        @RequestParam(value = "nom") String nom,
+                        @RequestParam(value = "excludeId", required = false) Long excludeId) {
+                var existing = sourceService.findByNom(nom);
+                boolean exists = existing.isPresent()
+                                && (excludeId == null || !excludeId.equals(existing.get().getId()));
+                Long existingId = existing.filter(source -> exists).map(Source::getId).orElse(null);
+                var dto = new ExistsDto(exists, existingId);
+                dto.setExcludeId(excludeId);
+                return ResponseEntity.ok(RestResponse.<ExistsDto>builder()
+                                .status(HttpStatus.OK)
+                                .data(dto)
+                                .success(true)
+                                .build());
+        }
+
         @Operation(summary = "Get " + ENTITY_NAME + " by id")
         @ApiResponses(value = {
                         @ApiResponse(responseCode = "200", description = "Ok", content = {
@@ -78,7 +103,7 @@ public class SourceAdminLoadController extends BaseController<Source> {
                                         + " not found", content = @Content(mediaType = "ErrorResponse")),
                         @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
         })
-        @GetMapping("/{id}")
+        @GetMapping("/{id:\\d+}")
         @PreAuthorize("hasAuthority('datasource:read')")
         public ResponseEntity<RestResponse<SourceDetailsDto>> getSource(@PathVariable("id") Long id) {
                 Source source = sourceService.findById(id).orElseThrow(EntityNotFoundException::new);
