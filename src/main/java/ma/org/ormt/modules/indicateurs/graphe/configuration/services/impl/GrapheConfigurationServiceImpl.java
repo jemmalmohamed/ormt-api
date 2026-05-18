@@ -112,8 +112,11 @@ public class GrapheConfigurationServiceImpl extends BaseServiceImpl<GrapheConfig
     private void updateFields(GrapheConfiguration grapheConfiguration, GrapheConfigurationRequestDto requestDto) {
 
         grapheConfiguration.setNom(requestDto.getNom());
-        grapheConfiguration.setDimensionMappingJson("{}");
+        grapheConfiguration.setDimensionMappingJson(resolveDimensionMappingJson(requestDto));
         grapheConfiguration.setChartOptionsJson(requestDto.getChartOptionsJson());
+        grapheConfiguration.setChartSpecVersion(resolveChartSpecVersion(requestDto));
+        grapheConfiguration.setChartSpecJson(requestDto.getChartSpecJson());
+        grapheConfiguration.setConfigSystem(resolveConfigSystem(requestDto));
         grapheConfiguration.setIsDefault(requestDto.getIsDefault());
 
         grapheConfiguration.setIndicateur(
@@ -124,6 +127,33 @@ public class GrapheConfigurationServiceImpl extends BaseServiceImpl<GrapheConfig
                 grapheTypeService.findById(requestDto.getGrapheType().getId())
                         .orElseThrow(() -> new EntityNotFoundException("GrapheType non trouvé")));
 
+    }
+
+    private String resolveDimensionMappingJson(GrapheConfigurationRequestDto requestDto) {
+        if (requestDto.getDimensionMappingJson() == null || requestDto.getDimensionMappingJson().isBlank()) {
+            return "{}";
+        }
+        return requestDto.getDimensionMappingJson();
+    }
+
+    private Integer resolveChartSpecVersion(GrapheConfigurationRequestDto requestDto) {
+        if (requestDto.getChartSpecVersion() != null) {
+            return requestDto.getChartSpecVersion();
+        }
+        if (requestDto.getChartSpecJson() != null && !requestDto.getChartSpecJson().isBlank()) {
+            return 1;
+        }
+        return null;
+    }
+
+    private String resolveConfigSystem(GrapheConfigurationRequestDto requestDto) {
+        if (requestDto.getConfigSystem() != null && !requestDto.getConfigSystem().isBlank()) {
+            return requestDto.getConfigSystem();
+        }
+        if (requestDto.getChartSpecJson() != null && !requestDto.getChartSpecJson().isBlank()) {
+            return "chartspec";
+        }
+        return "legacy";
     }
 
     @Override

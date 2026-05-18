@@ -55,7 +55,7 @@ public class FileController {
         // Fix: Use the current server's base URL instead of frontend URL for API
         // endpoints
         String secureUrl = "/api/v1/files/" + fileName + "?token=" + encodedToken;
-        long expirySeconds = 100;
+        long expirySeconds = 3600;
         Map<String, Object> response = new HashMap<>();
         response.put("url", secureUrl);
         response.put("expiresIn", expirySeconds);
@@ -136,9 +136,9 @@ public class FileController {
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.parseMediaType(contentType));
             headers.add("X-Content-Type-Options", "nosniff");
-            headers.setCacheControl("private, max-age=5");
+            headers.setCacheControl("private, max-age=3600");
             headers.setPragma("");
-            headers.setExpires(System.currentTimeMillis() + 5_000);
+            headers.setExpires(System.currentTimeMillis() + 3_600_000L);
             headers.add("ETag", generateContentETag(fileData));
 
             // Filename + disposition (inline for viewer, attachment for download)

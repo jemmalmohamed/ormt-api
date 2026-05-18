@@ -27,7 +27,15 @@ public class GrapheConfigurationRequestDto extends Dto {
     @Schema(description = "Nom de la configuration")
     private String nom;
 
+    private String dimensionMappingJson;
+
     private String chartOptionsJson;
+
+    private Integer chartSpecVersion;
+
+    private String chartSpecJson;
+
+    private String configSystem;
 
     private Boolean isDefault = false;
 
