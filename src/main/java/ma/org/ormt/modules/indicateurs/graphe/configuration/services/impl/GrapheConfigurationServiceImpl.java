@@ -1,5 +1,6 @@
 package ma.org.ormt.modules.indicateurs.graphe.configuration.services.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -165,13 +166,16 @@ public class GrapheConfigurationServiceImpl extends BaseServiceImpl<GrapheConfig
             throw new IllegalArgumentException("La GrapheConfiguration n'appartient pas à l'indicateur spécifié");
         }
 
-        // Find current default configuration for this indicator and set it to false
-        Optional<GrapheConfiguration> currentDefault = grapheConfigurationRepository
+        // Récupère toutes les configurations par défaut pour cet indicateur et les remet à false
+        // (gère le cas où plusieurs doublons existent en base, qui causait un NonUniqueResultException)
+        List<GrapheConfiguration> currentDefaults = grapheConfigurationRepository
                 .findByIndicateurIdAndIsDefaultTrue(indicateurId);
 
-        if (currentDefault.isPresent() && !currentDefault.get().getId().equals(grapheConfigurationId)) {
-            currentDefault.get().setIsDefault(false);
-            grapheConfigurationRepository.save(currentDefault.get());
+        for (GrapheConfiguration current : currentDefaults) {
+            if (!current.getId().equals(grapheConfigurationId)) {
+                current.setIsDefault(false);
+                grapheConfigurationRepository.save(current);
+            }
         }
 
         grapheConfiguration.setIsDefault(true);

@@ -1,5 +1,6 @@
 package ma.org.ormt.modules.indicateurs.graphe.configuration.repositories;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
@@ -18,6 +19,6 @@ public interface GrapheConfigurationRepository extends BaseRepository<GrapheConf
             Indicateur indicateur,
             GrapheType grapheType);
 
-    Optional<GrapheConfiguration> findByIndicateurIdAndIsDefaultTrue(Long indicateurId);
+    List<GrapheConfiguration> findByIndicateurIdAndIsDefaultTrue(Long indicateurId);
 
 }
