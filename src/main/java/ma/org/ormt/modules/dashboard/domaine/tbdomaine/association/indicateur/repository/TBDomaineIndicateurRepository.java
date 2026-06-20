@@ -12,4 +12,7 @@ public interface TBDomaineIndicateurRepository extends BaseRepository<TBDomaineI
 
     @Query("SELECT ed FROM TBDomaineIndicateur ed WHERE ed.tbDomaine.id = :tbDomaineId ORDER BY ed.ordre ASC")
     List<TBDomaineIndicateur> findByTBDomaineIdOrderByOrdreAsc(@Param("tbDomaineId") Long tbDomaineId);
+
+    @Query("SELECT ed FROM TBDomaineIndicateur ed WHERE ed.tbDomaine IS NOT NULL AND ed.categorie IS NOT NULL AND TRIM(ed.categorie) <> '' ORDER BY ed.tbDomaine.libelle ASC, ed.ordre ASC")
+    List<TBDomaineIndicateur> findCategorizedByDomaineOrderByDomaineAndOrdre();
 }

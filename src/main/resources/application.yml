@@ -27,7 +27,7 @@ spring:
       # Allow up to 10MB per file and per request (can be overridden per profile or via env vars)
       max-file-size: ${UPLOAD_MAX_FILE_SIZE:10MB}
       max-request-size: ${UPLOAD_MAX_REQUEST_SIZE:10MB}
- 
+
 flyway:
   enabled: true
   baseline-on-migrate: true
@@ -38,20 +38,20 @@ flyway:
 data:
   external:
     data_path: ./data
-    territoire: 'regional'  #  Can be 'national', 'regional' 
- 
+    territoire: "national" #  Can be 'national', 'regional'
+
 jwt:
   auth:
     converter:
       principle-attribute: preferred_username
- 
+
 springdoc:
   api-docs:
     enabled: true
   swagger-ui:
-    path: /swagger-ui.html 
+    path: /swagger-ui.html
     filter: false
- 
+
 # logging:
 #   level:
 #     com.zaxxer.hikari: DEBUG
@@ -60,6 +60,5 @@ springdoc:
 file:
   token:
     secret: ${FILE_TOKEN_SECRET:OrmtFileSecurityTokenSecretKey}
-    validitySeconds: ${FILE_TOKEN_VALIDITY:300}  # 5 minutes by default
- 
-    
+    validitySeconds: ${FILE_TOKEN_VALIDITY:300} # 5 minutes by default
+
