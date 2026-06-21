@@ -66,6 +66,38 @@ public class TbdDashboardController {
                 .build());
     }
 
+    @Operation(summary = "Get published dashboard assigned to a sous-domaine (public)")
+    @GetMapping("/public/by-sous-domaine/{sousDomaineId}")
+    public ResponseEntity<TbdDashboardFullDto> findPublishedBySousDomaine(@PathVariable Long sousDomaineId) {
+        return service.findPublishedBySousDomaine(sousDomaineId)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.noContent().build());
+    }
+
+    @Operation(summary = "Get dashboard assigned to a categorie (admin, any status)")
+    @GetMapping("/admin/by-categorie/{categorieId}")
+    public ResponseEntity<RestResponse<TbdDashboardSummaryDto>> findByCategorieAdmin(@PathVariable Long categorieId) {
+        return service.findAssignedByCategorieAdmin(categorieId)
+                .map(dto -> ResponseEntity.ok(RestResponse.<TbdDashboardSummaryDto>builder()
+                        .success(true)
+                        .status(HttpStatus.OK)
+                        .data(dto)
+                        .build()))
+                .orElse(ResponseEntity.noContent().build());
+    }
+
+    @Operation(summary = "Get dashboard assigned to a sous-domaine (admin, any status)")
+    @GetMapping("/admin/by-sous-domaine/{sousDomaineId}")
+    public ResponseEntity<RestResponse<TbdDashboardSummaryDto>> findBySousDomaineAdmin(@PathVariable Long sousDomaineId) {
+        return service.findAssignedBySousDomaineAdmin(sousDomaineId)
+                .map(dto -> ResponseEntity.ok(RestResponse.<TbdDashboardSummaryDto>builder()
+                        .success(true)
+                        .status(HttpStatus.OK)
+                        .data(dto)
+                        .build()))
+                .orElse(ResponseEntity.noContent().build());
+    }
+
     @Operation(summary = "Get full dashboard by ID")
     @GetMapping("/{id}")
     public ResponseEntity<RestResponse<TbdDashboardFullDto>> findById(@PathVariable Long id) {

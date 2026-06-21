@@ -54,7 +54,7 @@
       "badge": "Produit",
       "title": "Dashboards",
       "description": "Acceder aux tableaux de bord et aux visualisations publiees dans la plateforme ORMT.",
-      "link": "/public/dashboards-v2",
+      "link": "/public/dashboards",
       "external": false,
       "cta": "Ouvrir les dashboards"
     },

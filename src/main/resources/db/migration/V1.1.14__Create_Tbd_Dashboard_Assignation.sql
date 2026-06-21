@@ -12,4 +12,4 @@ CREATE TABLE tbd_assignation (
     CONSTRAINT chk_tbd_assignation_type CHECK (cible_type IN ('DOMAINE', 'CATEGORIE')),
     CONSTRAINT uq_tbd_assignation UNIQUE (dashboard_id)
 );
-COMMENT ON COLUMN tbd_assignation.cible_type IS 'DOMAINE → domaine.id | CATEGORIE → tableau_bord_v2_categorie.id';
+COMMENT ON COLUMN tbd_assignation.cible_type IS 'DOMAINE → domaine.id | CATEGORIE → tbd_categorie.id';

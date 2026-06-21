@@ -21,7 +21,6 @@ public class TbdDashboardFullDto {
     private String sousTitre;
     private String description;
     private String sourceText;
-    private String periodeLabel;
     private Boolean actif;
     private String status;
     private TbdAssignationDto assignation;

@@ -129,7 +129,6 @@ public class TbdDashboardJsonSeeder implements CommandLineRunner {
                 .sousTitre(seed.getSousTitre())
                 .description(seed.getDescription())
                 .sourceText(seed.getSourceText())
-                .periodeLabel(seed.getPeriodeLabel())
                 .status(seed.getStatus() == null || seed.getStatus().isBlank() ? "DRAFT" : seed.getStatus())
                 .actif(seed.getActif() == null ? true : seed.getActif())
                 .build());
@@ -216,7 +215,6 @@ public class TbdDashboardJsonSeeder implements CommandLineRunner {
         private String sousTitre;
         private String description;
         private String sourceText;
-        private String periodeLabel;
         private String status;
         private Boolean actif;
         private List<TbdSourceSeed> sources;

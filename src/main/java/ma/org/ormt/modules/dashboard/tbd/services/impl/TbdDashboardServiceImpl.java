@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
-import ma.org.ormt.modules.dashboard.tableaubord.v2.repositories.TableauBordV2CategorieRepository;
+import ma.org.ormt.modules.dashboard.tbd.categories.repositories.TbdCategoryRepository;
 import ma.org.ormt.modules.dashboard.tbd.dtos.TbdAssignationDto;
 import ma.org.ormt.modules.dashboard.tbd.dtos.TbdDashboardFullDto;
 import ma.org.ormt.modules.dashboard.tbd.dtos.TbdDashboardSummaryDto;
@@ -49,6 +49,7 @@ import ma.org.ormt.modules.dashboard.tbd.repositories.TbdWidgetRepository;
 import ma.org.ormt.modules.dashboard.tbd.repositories.TbdWidgetRowRepository;
 import ma.org.ormt.modules.dashboard.tbd.services.TbdDashboardService;
 import ma.org.ormt.modules.domaines.domaine.repositories.DomaineRepository;
+import ma.org.ormt.modules.domaines.sousdomaine.repositories.SousDomaineRepository;
 import ma.org.ormt.modules.indicateurs.indicateur.repositories.IndicateurRepository;
 
 @Service
@@ -69,8 +70,9 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
     private final TbdWidgetRowRepository widgetRowRepository;
     private final TbdWidgetRepository widgetRepository;
     private final DomaineRepository domaineRepository;
-    private final TableauBordV2CategorieRepository categorieRepository;
+    private final TbdCategoryRepository categorieRepository;
     private final IndicateurRepository indicateurRepository;
+    private final SousDomaineRepository sousDomaineRepository;
 
     @Override
     public TbdDashboardFullDto findById(Long id) {
@@ -145,7 +147,6 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
                 .sousTitre(dashboard.getSousTitre())
                 .description(dashboard.getDescription())
                 .sourceText(dashboard.getSourceText())
-                .periodeLabel(dashboard.getPeriodeLabel())
                 .actif(dashboard.getActif())
                 .status(dashboard.getStatus())
                 .assignation(assignationDto)
@@ -177,6 +178,49 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
     }
 
     @Override
+    @Transactional(readOnly = true)
+    public Optional<TbdDashboardFullDto> findPublishedBySousDomaine(Long sousDomaineId) {
+        return assignationRepository.findByCibleTypeAndCibleId("SOUS_DOMAINE", sousDomaineId)
+                .map(assignation -> dashboardRepository.findById(assignation.getDashboardId()).orElse(null))
+                .filter(d -> d != null && "PUBLISHED".equals(d.getStatus()) && Boolean.TRUE.equals(d.getActif()))
+                .map(d -> findById(d.getId()));
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Optional<TbdDashboardSummaryDto> findAssignedByCategorieAdmin(Long categorieId) {
+        return assignationRepository.findByCibleTypeAndCibleId("CATEGORIE", categorieId)
+                .flatMap(assignation -> dashboardRepository.findById(assignation.getDashboardId()))
+                .filter(d -> Boolean.TRUE.equals(d.getActif()))
+                .map(d -> TbdDashboardSummaryDto.builder()
+                        .id(d.getId())
+                        .nom(d.getNom())
+                        .titre(d.getTitre())
+                        .sousTitre(d.getSousTitre())
+                        .status(d.getStatus())
+                        .actif(d.getActif())
+                        .lastModifiedDate(d.getLastModifiedDate())
+                        .build());
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Optional<TbdDashboardSummaryDto> findAssignedBySousDomaineAdmin(Long sousDomaineId) {
+        return assignationRepository.findByCibleTypeAndCibleId("SOUS_DOMAINE", sousDomaineId)
+                .flatMap(assignation -> dashboardRepository.findById(assignation.getDashboardId()))
+                .filter(d -> Boolean.TRUE.equals(d.getActif()))
+                .map(d -> TbdDashboardSummaryDto.builder()
+                        .id(d.getId())
+                        .nom(d.getNom())
+                        .titre(d.getTitre())
+                        .sousTitre(d.getSousTitre())
+                        .status(d.getStatus())
+                        .actif(d.getActif())
+                        .lastModifiedDate(d.getLastModifiedDate())
+                        .build());
+    }
+
+    @Override
     @Transactional
     public TbdDashboard create(TbdDashboardCreateRequest request) {
         validateUniqueTitre(request.getTitre(), null);
@@ -186,7 +230,6 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
                 .sousTitre(request.getSousTitre())
                 .description(request.getDescription())
                 .sourceText(request.getSourceText())
-                .periodeLabel(request.getPeriodeLabel())
                 .actif(true)
                 .status("DRAFT")
                 .build();
@@ -204,7 +247,6 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
         dashboard.setSousTitre(request.getSousTitre());
         dashboard.setDescription(request.getDescription());
         dashboard.setSourceText(request.getSourceText());
-        dashboard.setPeriodeLabel(request.getPeriodeLabel());
         return dashboardRepository.save(dashboard);
     }
 
@@ -225,7 +267,6 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
                 .sousTitre(sourceDashboard.getSousTitre())
                 .description(sourceDashboard.getDescription())
                 .sourceText(sourceDashboard.getSourceText())
-                .periodeLabel(sourceDashboard.getPeriodeLabel())
                 .actif(true)
                 .status("DRAFT")
                 .build());
@@ -650,6 +691,16 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
                             return categorieNom;
                         }
                         return domaineNom + " - " + categorieNom;
+                    })
+                    .orElse(null);
+        } else if ("SOUS_DOMAINE".equals(cibleType)) {
+            return sousDomaineRepository.findById(cibleId)
+                    .map(sd -> {
+                        String domaineNom = sd.getDomaine() != null ? sd.getDomaine().getNom() : null;
+                        if (domaineNom == null || domaineNom.isBlank()) {
+                            return sd.getNom();
+                        }
+                        return domaineNom + " / " + sd.getNom();
                     })
                     .orElse(null);
         }

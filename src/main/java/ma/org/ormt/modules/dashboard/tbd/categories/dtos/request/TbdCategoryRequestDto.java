@@ -1,4 +1,4 @@
-package ma.org.ormt.modules.dashboard.tableaubord.v2.dtos.request;
+package ma.org.ormt.modules.dashboard.tbd.categories.dtos.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -12,7 +12,7 @@ import ma.org.ormt.core.commun.base.dto.Dto;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class TableauBordV2CategorieRequestDto extends Dto {
+public class TbdCategoryRequestDto extends Dto {
 
     @NotBlank(message = "Ce champ est requis.")
     private String libelle;

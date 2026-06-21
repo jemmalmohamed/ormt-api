@@ -4,7 +4,6 @@ CREATE TABLE tbd_dashboard (
     titre               VARCHAR(255),
     sous_titre          VARCHAR(255),
     description         TEXT,
-    periode_label       VARCHAR(100),
     actif               BOOLEAN DEFAULT TRUE,
     status              VARCHAR(30) DEFAULT 'DRAFT',
     status_code         INTEGER DEFAULT 1,

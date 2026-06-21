@@ -3,6 +3,9 @@ package ma.org.ormt.modules.dashboard.tbd.repositories;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,5 +22,7 @@ public interface TbdAssignationRepository extends BaseRepository<TbdAssignation>
     List<TbdAssignation> findByCibleType(String cibleType);
 
     @Transactional
-    void deleteByDashboardId(Long dashboardId);
+    @Modifying(clearAutomatically = true)
+    @Query("DELETE FROM TbdAssignation a WHERE a.dashboardId = :dashboardId")
+    void deleteByDashboardId(@Param("dashboardId") Long dashboardId);
 }

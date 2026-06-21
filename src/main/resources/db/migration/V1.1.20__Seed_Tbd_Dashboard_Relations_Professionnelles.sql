@@ -1,10 +1,9 @@
-INSERT INTO tbd_dashboard (nom, titre, sous_titre, description, periode_label, status, created_by)
+INSERT INTO tbd_dashboard (nom, titre, sous_titre, description, status, created_by)
 VALUES (
     'relations-professionnelles-marrakech',
     'Relations Professionnelles et Climat Social',
     'Région Marrakech-Safi',
     'Cette analyse présente l''évolution des relations professionnelles, les mécanismes de dialogue social et les tendances sectorielles pour optimiser le climat social régional.',
-    'Données 2021–2024',
     'PUBLISHED',
     'seed'
 );

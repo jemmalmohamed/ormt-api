@@ -31,6 +31,12 @@ public interface TbdDashboardService {
 
     Page<TbdDashboardSummaryDto> findAll(Pageable pageable);
 
+    java.util.Optional<TbdDashboardFullDto> findPublishedBySousDomaine(Long sousDomaineId);
+
+    java.util.Optional<TbdDashboardSummaryDto> findAssignedBySousDomaineAdmin(Long sousDomaineId);
+
+    java.util.Optional<TbdDashboardSummaryDto> findAssignedByCategorieAdmin(Long categorieId);
+
     TbdDashboard create(TbdDashboardCreateRequest request);
 
     TbdDashboard update(Long id, TbdDashboardUpdateRequest request);

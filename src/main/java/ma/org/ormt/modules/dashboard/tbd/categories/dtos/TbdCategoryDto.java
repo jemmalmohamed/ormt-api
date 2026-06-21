@@ -1,4 +1,4 @@
-package ma.org.ormt.modules.dashboard.tableaubord.v2.dtos;
+package ma.org.ormt.modules.dashboard.tbd.categories.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,7 +11,7 @@ import ma.org.ormt.modules.dashboard.domaine.tbdomaine.dtos.TBDomaineDto;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class TableauBordV2CategorieDto extends BaseDto {
+public class TbdCategoryDto extends BaseDto {
 
     private String nom;
 

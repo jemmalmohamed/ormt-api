@@ -22,6 +22,4 @@ public class TbdDashboardUpdateRequest {
     private String description;
 
     private String sourceText;
-
-    private String periodeLabel;
 }
