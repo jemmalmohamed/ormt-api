@@ -34,7 +34,6 @@ public class TableauBordV2Mapper {
         dto.setSousTitre(entity.getSousTitre());
         dto.setDescription(entity.getDescription());
         dto.setSource(entity.getSource());
-        dto.setPeriodeLabel(entity.getPeriodeLabel());
         dto.setActif(entity.getActif());
         dto.setStatus(entity.getStatus());
         dto.setCategorieId(entity.getCategorie() != null ? entity.getCategorie().getId() : null);

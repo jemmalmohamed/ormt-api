@@ -47,9 +47,6 @@ public class TableauBordV2 extends BaseEntity {
 
     private String source;
 
-    @Column(name = "periode_label")
-    private String periodeLabel;
-
     @lombok.Builder.Default
     private Boolean actif = true;
 

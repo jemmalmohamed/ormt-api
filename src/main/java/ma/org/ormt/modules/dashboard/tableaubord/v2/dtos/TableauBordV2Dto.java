@@ -26,8 +26,6 @@ public class TableauBordV2Dto extends BaseDto {
 
     private String source;
 
-    private String periodeLabel;
-
     private Boolean actif;
 
     private TableauBordV2Status status;

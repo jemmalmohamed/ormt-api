@@ -27,8 +27,6 @@ public class TableauBordV2RequestDto extends Dto {
 
     private String source;
 
-    private String periodeLabel;
-
     @NotNull(message = "Ce champ est requis.")
     private Boolean actif;
 

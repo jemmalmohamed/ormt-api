@@ -210,7 +210,6 @@ public class TableauBordV2ServiceImpl implements TableauBordV2Service {
         dashboard.setSousTitre(requestDto.getSousTitre());
         dashboard.setDescription(requestDto.getDescription());
         dashboard.setSource(requestDto.getSource());
-        dashboard.setPeriodeLabel(requestDto.getPeriodeLabel());
         dashboard.setActif(requestDto.getActif());
         dashboard.setStatus(requestDto.getStatus() != null ? requestDto.getStatus() : TableauBordV2Status.DRAFT);
         dashboard.setCategorie(resolveCategorie(requestDto.getCategorieId()));
