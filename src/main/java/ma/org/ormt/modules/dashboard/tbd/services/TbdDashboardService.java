@@ -16,6 +16,7 @@ import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdSectionResizeRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetCreateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetResizeRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowCreateRequest;
+import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowHeightUpdateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateContentRequest;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdAssignation;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdDashboard;
@@ -33,7 +34,11 @@ public interface TbdDashboardService {
 
     TbdDashboard update(Long id, TbdDashboardUpdateRequest request);
 
+    void delete(Long id);
+
     void publish(Long id);
+
+    void setDraft(Long id);
 
     void archive(Long id);
 
@@ -54,6 +59,8 @@ public interface TbdDashboardService {
     void resizeRows(Long sectionId, TbdRowResizeRequest request);
 
     void reorderRows(Long sectionId, List<Long> orderedRowIds);
+
+    void updateRowHeight(Long rowId, TbdWidgetRowHeightUpdateRequest request);
 
     void deleteRow(Long rowId);
 

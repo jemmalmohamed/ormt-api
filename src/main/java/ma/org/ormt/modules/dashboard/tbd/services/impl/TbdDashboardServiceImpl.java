@@ -32,6 +32,7 @@ import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdSectionResizeRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetCreateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetResizeRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowCreateRequest;
+import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowHeightUpdateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateContentRequest;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdAssignation;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdDashboard;
@@ -110,6 +111,7 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
                         .id(row.getId())
                         .ordre(row.getOrdre())
                         .sizePercent(row.getSizePercent())
+                        .heightPx(row.getHeightPx())
                         .widgets(widgetDtos)
                         .build();
             }).collect(Collectors.toList());
@@ -138,6 +140,7 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
                 .titre(dashboard.getTitre())
                 .sousTitre(dashboard.getSousTitre())
                 .description(dashboard.getDescription())
+                .sourceText(dashboard.getSourceText())
                 .periodeLabel(dashboard.getPeriodeLabel())
                 .actif(dashboard.getActif())
                 .status(dashboard.getStatus())
@@ -177,6 +180,7 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
                 .titre(request.getTitre())
                 .sousTitre(request.getSousTitre())
                 .description(request.getDescription())
+                .sourceText(request.getSourceText())
                 .periodeLabel(request.getPeriodeLabel())
                 .actif(true)
                 .status("DRAFT")
@@ -193,8 +197,19 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
         dashboard.setTitre(request.getTitre());
         dashboard.setSousTitre(request.getSousTitre());
         dashboard.setDescription(request.getDescription());
+        dashboard.setSourceText(request.getSourceText());
         dashboard.setPeriodeLabel(request.getPeriodeLabel());
         return dashboardRepository.save(dashboard);
+    }
+
+    @Override
+    @Transactional
+    public void delete(Long id) {
+        TbdDashboard dashboard = dashboardRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(DASHBOARD_NOT_FOUND));
+        assignationRepository.deleteByDashboardId(id);
+        dashboard.setActif(false);
+        dashboardRepository.save(dashboard);
     }
 
     @Override
@@ -203,6 +218,15 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
         TbdDashboard dashboard = dashboardRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException(DASHBOARD_NOT_FOUND));
         dashboard.setStatus("PUBLISHED");
+        dashboardRepository.save(dashboard);
+    }
+
+    @Override
+    @Transactional
+    public void setDraft(Long id) {
+        TbdDashboard dashboard = dashboardRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(DASHBOARD_NOT_FOUND));
+        dashboard.setStatus("DRAFT");
         dashboardRepository.save(dashboard);
     }
 
@@ -291,6 +315,7 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
                 .sectionId(sectionId)
                 .ordre(request.getOrdre() != null ? request.getOrdre() : 0)
                 .sizePercent(request.getSizePercent() != null ? request.getSizePercent() : 50)
+                .heightPx(request.getHeightPx() != null ? request.getHeightPx() : 200)
                 .build();
         TbdWidgetRow saved = widgetRowRepository.save(row);
         redistributeRows(sectionId);
@@ -321,6 +346,15 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
             row.setOrdre(i + 1);
             widgetRowRepository.save(row);
         }
+    }
+
+    @Override
+    @Transactional
+    public void updateRowHeight(Long rowId, TbdWidgetRowHeightUpdateRequest request) {
+        TbdWidgetRow row = widgetRowRepository.findById(rowId)
+                .orElseThrow(() -> new EntityNotFoundException(ROW_NOT_FOUND));
+        row.setHeightPx(Math.max(80, request.getHeightPx()));
+        widgetRowRepository.save(row);
     }
 
     @Override

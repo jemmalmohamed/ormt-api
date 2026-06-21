@@ -18,5 +18,6 @@ public class TbdWidgetRowDto {
     private Long id;
     private Integer ordre;
     private Integer sizePercent;
+    private Integer heightPx;
     private List<TbdWidgetDto> widgets;
 }

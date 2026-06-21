@@ -34,6 +34,7 @@ import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdSectionResizeRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetCreateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetResizeRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowCreateRequest;
+import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowHeightUpdateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateContentRequest;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdAssignation;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdDashboard;
@@ -100,10 +101,24 @@ public class TbdDashboardController {
                 .build());
     }
 
+    @Operation(summary = "Delete a dashboard")
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        service.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+
     @Operation(summary = "Publish a dashboard")
     @PutMapping("/{id}/publish")
     public ResponseEntity<Void> publish(@PathVariable Long id) {
         service.publish(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @Operation(summary = "Set dashboard as draft")
+    @PutMapping("/{id}/draft")
+    public ResponseEntity<Void> setDraft(@PathVariable Long id) {
+        service.setDraft(id);
         return ResponseEntity.noContent().build();
     }
 
@@ -204,6 +219,15 @@ public class TbdDashboardController {
             @PathVariable Long sectionId,
             @RequestBody List<Long> orderedRowIds) {
         service.reorderRows(sectionId, orderedRowIds);
+        return ResponseEntity.noContent().build();
+    }
+
+    @Operation(summary = "Update row height")
+    @PutMapping("/rows/{rowId}/height")
+    public ResponseEntity<Void> updateRowHeight(
+            @PathVariable Long rowId,
+            @Validated @RequestBody TbdWidgetRowHeightUpdateRequest request) {
+        service.updateRowHeight(rowId, request);
         return ResponseEntity.noContent().build();
     }
 

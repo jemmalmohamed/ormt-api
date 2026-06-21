@@ -30,4 +30,8 @@ public class TbdWidgetRow extends BaseEntity {
 
     @Builder.Default
     private Integer sizePercent = 50;
+
+    @Builder.Default
+    @Column(nullable = false)
+    private Integer heightPx = 200;
 }

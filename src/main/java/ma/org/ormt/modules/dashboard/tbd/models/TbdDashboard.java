@@ -32,6 +32,9 @@ public class TbdDashboard extends BaseEntity {
     @Column(columnDefinition = "TEXT")
     private String description;
 
+    @Column(columnDefinition = "TEXT")
+    private String sourceText;
+
     private String periodeLabel;
 
     @Builder.Default

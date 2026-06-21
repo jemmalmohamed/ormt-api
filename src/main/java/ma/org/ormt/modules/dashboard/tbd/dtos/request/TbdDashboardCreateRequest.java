@@ -21,5 +21,7 @@ public class TbdDashboardCreateRequest {
 
     private String description;
 
+    private String sourceText;
+
     private String periodeLabel;
 }

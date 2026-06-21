@@ -1,5 +1,7 @@
 package ma.org.ormt.modules.dashboard.tbd.dtos.request;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,11 +11,9 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class TbdWidgetRowCreateRequest {
+public class TbdWidgetRowHeightUpdateRequest {
 
-    private Integer ordre;
-
-    private Integer sizePercent;
-
+    @NotNull
+    @Min(80)
     private Integer heightPx;
 }
