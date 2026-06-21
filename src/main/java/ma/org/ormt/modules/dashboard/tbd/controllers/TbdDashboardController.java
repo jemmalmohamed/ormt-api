@@ -36,6 +36,7 @@ import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetResizeRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowCreateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowHeightUpdateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateContentRequest;
+import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateIndicatorRequest;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdAssignation;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdDashboard;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdSection;
@@ -308,6 +309,15 @@ public class TbdDashboardController {
             @PathVariable Long widgetId,
             @RequestBody TbdWidgetUpdateContentRequest request) {
         service.updateWidgetContent(widgetId, request);
+        return ResponseEntity.noContent().build();
+    }
+
+    @Operation(summary = "Update widget indicator source (CHART)")
+    @PutMapping("/widgets/{widgetId}/source")
+    public ResponseEntity<Void> updateWidgetIndicator(
+            @PathVariable Long widgetId,
+            @RequestBody TbdWidgetUpdateIndicatorRequest request) {
+        service.updateWidgetIndicator(widgetId, request);
         return ResponseEntity.noContent().build();
     }
 }

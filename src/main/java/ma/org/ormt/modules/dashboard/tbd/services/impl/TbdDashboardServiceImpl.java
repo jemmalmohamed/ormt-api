@@ -34,6 +34,7 @@ import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetResizeRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowCreateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowHeightUpdateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateContentRequest;
+import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateIndicatorRequest;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdAssignation;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdDashboard;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdSection;
@@ -479,6 +480,20 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
         TbdWidget widget = widgetRepository.findById(widgetId)
                 .orElseThrow(() -> new EntityNotFoundException(WIDGET_NOT_FOUND));
         widget.setContentJson(request.getContentJson());
+        widgetRepository.save(widget);
+    }
+
+    @Override
+    @Transactional
+    public void updateWidgetIndicator(Long widgetId, TbdWidgetUpdateIndicatorRequest request) {
+        TbdWidget widget = widgetRepository.findById(widgetId)
+                .orElseThrow(() -> new EntityNotFoundException(WIDGET_NOT_FOUND));
+        if (request.getIndicateurId() == null) {
+            widget.setIndicateur(null);
+        } else {
+            widget.setIndicateur(indicateurRepository.findById(request.getIndicateurId())
+                    .orElseThrow(() -> new EntityNotFoundException("Indicateur introuvable.")));
+        }
         widgetRepository.save(widget);
     }
 

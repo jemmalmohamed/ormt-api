@@ -18,6 +18,7 @@ import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetResizeRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowCreateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowHeightUpdateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateContentRequest;
+import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateIndicatorRequest;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdAssignation;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdDashboard;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdSection;
@@ -77,4 +78,6 @@ public interface TbdDashboardService {
     void deleteWidget(Long widgetId);
 
     void updateWidgetContent(Long widgetId, TbdWidgetUpdateContentRequest request);
+
+    void updateWidgetIndicator(Long widgetId, TbdWidgetUpdateIndicatorRequest request);
 }
