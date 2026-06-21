@@ -10,7 +10,7 @@ CREATE TABLE tbd_section (
     last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
     version BIGINT NOT NULL DEFAULT 0,
     created_by VARCHAR(50),
-    last_modified_by VARCHAR(50)
+    last_modified_by VARCHAR(50),
     CONSTRAINT chk_tbd_section_size CHECK (size_percent BETWEEN 5 AND 100)
 );
 COMMENT ON COLUMN tbd_section.size_percent IS 'Hauteur % de la section dans le splitter vertical global. Somme des sections = 100.';

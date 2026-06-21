@@ -1,0 +1,80 @@
+{
+  "kicker": "Observatoire regional",
+  "badgeTitle": "Observatoire",
+  "badgeSubtitle": "Regional du Marche du Travail",
+  "heroTagline": "Votre partenaire pour des decisions eclairees",
+  "introText": "L'Observatoire Regional du Marche du Travail aspire a devenir un pole d'intelligence strategique au service de l'emploi territorial, guide par une vision d'un marche du travail plus inclusif, resilient et durable. Notre mission est d'accompagner les decideurs et les acteurs economiques en fournissant des analyses approfondies et des donnees fiables, permettant de prendre des decisions eclairees pour repondre aux defis actuels et futurs du marche du travail.\n\nNos objectifs se declinent en plusieurs dimensions cles: renforcer la connaissance des dynamiques de l'emploi en collectant des donnees diversifiees, assurer une analyse rigoureuse et prospective, puis diffuser des connaissances directement utiles aux institutions, aux entreprises et au grand public.\n\nA travers un reseau de partenaires et des outils de visualisation, l'Observatoire se positionne comme un acteur de reference pour une intelligence collective au service de politiques d'emploi efficaces et d'une competitivite regionale renforcee.",
+  "visionText": "Ambitionner une plateforme regionale de reference en matiere d'intelligence strategique pour l'emploi, contribuant a des decisions eclairees pour le developpement economique et social du territoire.",
+  "missionText": "Collecter, analyser et diffuser des informations fiables sur le marche du travail afin d'anticiper les evolutions, de repondre aux besoins des acteurs et de soutenir des politiques publiques et strategies d'emploi efficaces.",
+  "partnershipText": "L'Observatoire Regional du Marche du Travail se positionne comme un acteur central de l'ecosysteme de l'emploi, avec l'objectif de fournir une intelligence collective qui oriente les politiques publiques et favorise un developpement economique durable.",
+  "objectives": [
+    "Offrir une comprehension approfondie des dynamiques du marche du travail regional.",
+    "Renforcer l'anticipation des tendances pour mieux orienter les decisions strategiques.",
+    "Faciliter l'adequation entre les competences disponibles et les besoins des secteurs clefs.",
+    "Promouvoir une culture de la collaboration entre institutions, entreprises et partenaires."
+  ],
+  "pillars": [
+    {
+      "title": "Collecte de donnees",
+      "description": "Rassembler des donnees exhaustives et diversifiees issues des sources administratives, d'enquetes partenaires et du web."
+    },
+    {
+      "title": "Analyse et prospective",
+      "description": "Decrypter les tendances de l'emploi, identifier les secteurs porteurs et eclairer les besoins en competences."
+    },
+    {
+      "title": "Diffusion utile",
+      "description": "Mettre a disposition des analyses, rapports et tableaux de bord accessibles aux acteurs du territoire."
+    }
+  ],
+  "team": [
+    {
+      "name": "Hajar Mortaji",
+      "role": "Directrice de l'Observatoire regional du Marche du Travail"
+    },
+    {
+      "name": "Abderrazzak El Maqdouri",
+      "role": "Chef de la division des etudes et de l'evaluation des programmes d'emploi"
+    },
+    {
+      "name": "Amine Seghir",
+      "role": "Chef de service systeme d'information"
+    },
+    {
+      "name": "Mustapha Hadd",
+      "role": "Charge d'etudes sur les dynamiques du marche du travail"
+    },
+    {
+      "name": "Fatima Aouragh",
+      "role": "Chargee d'etudes et de suivi des indicateurs regionaux"
+    }
+  ],
+  "actions": [
+    {
+      "badge": "Produit",
+      "title": "Dashboards",
+      "description": "Acceder aux tableaux de bord et aux visualisations publiees dans la plateforme ORMT.",
+      "link": "/public/dashboards-v2",
+      "external": false,
+      "cta": "Ouvrir les dashboards"
+    },
+    {
+      "badge": "Information",
+      "title": "Newsletter",
+      "description": "Recevoir les nouvelles publications, analyses et temps forts de l'Observatoire regional.",
+      "link": "/public/newsletter",
+      "external": false,
+      "cta": "Voir la newsletter"
+    },
+    {
+      "badge": "Bientot",
+      "title": "Votre avis",
+      "description": "Un espace de contribution sera ajoute pour recueillir vos retours sur les travaux de l'Observatoire regional.",
+      "link": null,
+      "external": false,
+      "cta": "Disponible prochainement"
+    }
+  ],
+  "actif": true,
+  "published": true
+}

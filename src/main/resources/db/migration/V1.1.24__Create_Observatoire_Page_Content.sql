@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS observatoire_page_content (
+    id BIGSERIAL PRIMARY KEY,
+    kicker VARCHAR(255) NOT NULL,
+    badge_title VARCHAR(255) NOT NULL,
+    badge_subtitle VARCHAR(255) NOT NULL,
+    hero_tagline VARCHAR(255) NOT NULL,
+    intro_text TEXT NOT NULL,
+    vision_text TEXT NOT NULL,
+    mission_text TEXT NOT NULL,
+    partnership_text TEXT NOT NULL,
+    objectives_json TEXT NOT NULL,
+    pillars_json TEXT NOT NULL,
+    team_json TEXT NOT NULL,
+    actions_json TEXT NOT NULL,
+    actif BOOLEAN NOT NULL DEFAULT TRUE,
+    published BOOLEAN NOT NULL DEFAULT TRUE,
+    status_code INT NULL,
+    created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+    version BIGINT NOT NULL DEFAULT 0,
+    created_by VARCHAR(50),
+    last_modified_by VARCHAR(50)
+);

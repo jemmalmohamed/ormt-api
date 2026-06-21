@@ -8,7 +8,7 @@ CREATE TABLE tbd_assignation (
     last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
     version BIGINT NOT NULL DEFAULT 0,
     created_by VARCHAR(50),
-    last_modified_by VARCHAR(50)
+    last_modified_by VARCHAR(50),
     CONSTRAINT chk_tbd_assignation_type CHECK (cible_type IN ('DOMAINE', 'CATEGORIE')),
     CONSTRAINT uq_tbd_assignation UNIQUE (dashboard_id)
 );

@@ -14,7 +14,7 @@ CREATE TABLE tbd_widget (
     last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
     version BIGINT NOT NULL DEFAULT 0,
     created_by VARCHAR(50),
-    last_modified_by VARCHAR(50)
+    last_modified_by VARCHAR(50),
     CONSTRAINT chk_tbd_widget_type CHECK (type IN ('CHART', 'KPI_CARD', 'EDITOR', 'TEXT')),
     CONSTRAINT chk_tbd_widget_size CHECK (size_percent BETWEEN 5 AND 100)
 );

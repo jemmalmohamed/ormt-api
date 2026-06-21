@@ -8,6 +8,6 @@ CREATE TABLE tbd_source_listing (
     last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
     version BIGINT NOT NULL DEFAULT 0,
     created_by VARCHAR(50),
-    last_modified_by VARCHAR(50)
+    last_modified_by VARCHAR(50),
     CONSTRAINT uq_tbd_source_listing UNIQUE (dashboard_id, source_id)
 );
