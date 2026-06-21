@@ -34,6 +34,10 @@ public interface TbdDashboardService {
 
     TbdDashboard update(Long id, TbdDashboardUpdateRequest request);
 
+    TbdDashboard duplicate(Long id);
+
+    List<Long> findAssignedCategoryIds(Long excludeDashboardId);
+
     void delete(Long id);
 
     void publish(Long id);

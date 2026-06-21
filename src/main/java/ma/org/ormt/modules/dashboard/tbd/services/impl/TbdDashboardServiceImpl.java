@@ -37,6 +37,7 @@ import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateContentRequ
 import ma.org.ormt.modules.dashboard.tbd.models.TbdAssignation;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdDashboard;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdSection;
+import ma.org.ormt.modules.dashboard.tbd.models.TbdSourceListing;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdWidget;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdWidgetRow;
 import ma.org.ormt.modules.dashboard.tbd.repositories.TbdAssignationRepository;
@@ -54,6 +55,8 @@ import ma.org.ormt.modules.indicateurs.indicateur.repositories.IndicateurReposit
 public class TbdDashboardServiceImpl implements TbdDashboardService {
 
     private static final String DASHBOARD_NOT_FOUND = "Dashboard not found";
+    private static final String DASHBOARD_TITLE_ALREADY_EXISTS = "Un dashboard avec ce titre existe deja";
+    private static final String CATEGORY_ALREADY_ASSIGNED = "Cette categorie est deja assignee a un autre dashboard";
     private static final String SECTION_NOT_FOUND = "Section not found";
     private static final String ROW_NOT_FOUND = "Row not found";
     private static final String WIDGET_NOT_FOUND = "Widget not found";
@@ -175,6 +178,7 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
     @Override
     @Transactional
     public TbdDashboard create(TbdDashboardCreateRequest request) {
+        validateUniqueTitre(request.getTitre(), null);
         TbdDashboard dashboard = TbdDashboard.builder()
                 .nom(request.getNom())
                 .titre(request.getTitre())
@@ -193,6 +197,7 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
     public TbdDashboard update(Long id, TbdDashboardUpdateRequest request) {
         TbdDashboard dashboard = dashboardRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException(DASHBOARD_NOT_FOUND));
+        validateUniqueTitre(request.getTitre(), id);
         dashboard.setNom(request.getNom());
         dashboard.setTitre(request.getTitre());
         dashboard.setSousTitre(request.getSousTitre());
@@ -200,6 +205,42 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
         dashboard.setSourceText(request.getSourceText());
         dashboard.setPeriodeLabel(request.getPeriodeLabel());
         return dashboardRepository.save(dashboard);
+    }
+
+    @Override
+    @Transactional
+    public TbdDashboard duplicate(Long id) {
+        TbdDashboard sourceDashboard = dashboardRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(DASHBOARD_NOT_FOUND));
+
+        String duplicatedNom = nextDuplicatedLabel(sourceDashboard.getNom());
+        String duplicatedTitre = sourceDashboard.getTitre() == null || sourceDashboard.getTitre().isBlank()
+                ? null
+                : nextDuplicatedTitre(sourceDashboard.getTitre());
+
+        TbdDashboard duplicatedDashboard = dashboardRepository.save(TbdDashboard.builder()
+                .nom(duplicatedNom)
+                .titre(duplicatedTitre)
+                .sousTitre(sourceDashboard.getSousTitre())
+                .description(sourceDashboard.getDescription())
+                .sourceText(sourceDashboard.getSourceText())
+                .periodeLabel(sourceDashboard.getPeriodeLabel())
+                .actif(true)
+                .status("DRAFT")
+                .build());
+
+        duplicateSources(id, duplicatedDashboard.getId());
+        duplicateSections(id, duplicatedDashboard.getId());
+        return duplicatedDashboard;
+    }
+
+    @Override
+    public List<Long> findAssignedCategoryIds(Long excludeDashboardId) {
+        return assignationRepository.findByCibleType("CATEGORIE").stream()
+                .filter(assignation -> excludeDashboardId == null || !assignation.getDashboardId().equals(excludeDashboardId))
+                .map(TbdAssignation::getCibleId)
+                .distinct()
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -242,6 +283,14 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
     @Override
     @Transactional
     public TbdAssignation assign(Long dashboardId, TbdDashboardAssignRequest request) {
+        if ("CATEGORIE".equals(request.getCibleType())) {
+            assignationRepository.findByCibleTypeAndCibleId(request.getCibleType(), request.getCibleId())
+                    .ifPresent(existing -> {
+                        if (!existing.getDashboardId().equals(dashboardId)) {
+                            throw new IllegalArgumentException(CATEGORY_ALREADY_ASSIGNED);
+                        }
+                    });
+        }
         assignationRepository.deleteByDashboardId(dashboardId);
         TbdAssignation assignation = TbdAssignation.builder()
                 .dashboardId(dashboardId)
@@ -481,11 +530,113 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
         }
     }
 
+    private void duplicateSources(Long sourceDashboardId, Long targetDashboardId) {
+        List<TbdSourceListing> sourceListings = sourceListingRepository.findByDashboardIdOrderByOrdreAsc(sourceDashboardId);
+        for (TbdSourceListing sourceListing : sourceListings) {
+            sourceListingRepository.save(TbdSourceListing.builder()
+                    .dashboardId(targetDashboardId)
+                    .source(sourceListing.getSource())
+                    .ordre(sourceListing.getOrdre())
+                    .build());
+        }
+    }
+
+    private void duplicateSections(Long sourceDashboardId, Long targetDashboardId) {
+        List<TbdSection> sourceSections = sectionRepository.findByDashboardIdOrderByOrdreAsc(sourceDashboardId);
+        for (TbdSection sourceSection : sourceSections) {
+            TbdSection duplicatedSection = sectionRepository.save(TbdSection.builder()
+                    .dashboardId(targetDashboardId)
+                    .label(sourceSection.getLabel())
+                    .ordre(sourceSection.getOrdre())
+                    .sizePercent(sourceSection.getSizePercent())
+                    .actif(sourceSection.getActif())
+                    .build());
+            duplicateRows(sourceSection.getId(), duplicatedSection.getId());
+        }
+    }
+
+    private void duplicateRows(Long sourceSectionId, Long targetSectionId) {
+        List<TbdWidgetRow> sourceRows = widgetRowRepository.findBySectionIdOrderByOrdreAsc(sourceSectionId);
+        for (TbdWidgetRow sourceRow : sourceRows) {
+            TbdWidgetRow duplicatedRow = widgetRowRepository.save(TbdWidgetRow.builder()
+                    .sectionId(targetSectionId)
+                    .ordre(sourceRow.getOrdre())
+                    .sizePercent(sourceRow.getSizePercent())
+                    .heightPx(sourceRow.getHeightPx())
+                    .build());
+            duplicateWidgets(sourceRow.getId(), duplicatedRow.getId());
+        }
+    }
+
+    private void duplicateWidgets(Long sourceRowId, Long targetRowId) {
+        List<TbdWidget> sourceWidgets = widgetRepository.findByRowIdOrderByOrdreAsc(sourceRowId);
+        for (TbdWidget sourceWidget : sourceWidgets) {
+            widgetRepository.save(TbdWidget.builder()
+                    .rowId(targetRowId)
+                    .type(sourceWidget.getType())
+                    .indicateur(sourceWidget.getIndicateur())
+                    .kpiId(sourceWidget.getKpiId())
+                    .contentJson(sourceWidget.getContentJson())
+                    .titre(sourceWidget.getTitre())
+                    .ordre(sourceWidget.getOrdre())
+                    .sizePercent(sourceWidget.getSizePercent())
+                    .actif(sourceWidget.getActif())
+                    .build());
+        }
+    }
+
+    private String nextDuplicatedLabel(String sourceLabel) {
+        String baseLabel = (sourceLabel == null || sourceLabel.isBlank()) ? "dashboard" : sourceLabel.trim();
+        String candidate = baseLabel + " copie";
+        int suffix = 1;
+        while (dashboardRepository.findByNomIgnoreCaseAndActifTrue(candidate).isPresent()) {
+            candidate = baseLabel + " copie " + suffix;
+            suffix++;
+        }
+        return candidate;
+    }
+
+    private String nextDuplicatedTitre(String sourceTitre) {
+        String baseTitre = sourceTitre.trim();
+        String candidate = baseTitre + " copie";
+        int suffix = 1;
+        while (dashboardRepository.findByTitreIgnoreCaseAndActifTrue(candidate).isPresent()) {
+            candidate = baseTitre + " copie " + suffix;
+            suffix++;
+        }
+        return candidate;
+    }
+
+    private void validateUniqueTitre(String titre, Long currentDashboardId) {
+        if (titre == null || titre.isBlank()) {
+            return;
+        }
+
+        dashboardRepository.findByTitreIgnoreCaseAndActifTrue(titre.trim()).ifPresent(existing -> {
+            if (currentDashboardId == null || !existing.getId().equals(currentDashboardId)) {
+                throw new IllegalArgumentException(DASHBOARD_TITLE_ALREADY_EXISTS);
+            }
+        });
+    }
+
     private String resolveCibleNom(String cibleType, Long cibleId) {
         if ("DOMAINE".equals(cibleType)) {
             return domaineRepository.findById(cibleId).map(d -> d.getNom()).orElse(null);
         } else if ("CATEGORIE".equals(cibleType)) {
-            return categorieRepository.findById(cibleId).map(c -> c.getLibelle()).orElse(null);
+            return categorieRepository.findById(cibleId)
+                    .map(c -> {
+                        String domaineNom = c.getTbDomaine() != null
+                                ? (c.getTbDomaine().getLibelle() != null && !c.getTbDomaine().getLibelle().isBlank()
+                                        ? c.getTbDomaine().getLibelle()
+                                        : c.getTbDomaine().getNom())
+                                : null;
+                        String categorieNom = c.getLibelle();
+                        if (domaineNom == null || domaineNom.isBlank()) {
+                            return categorieNom;
+                        }
+                        return domaineNom + " - " + categorieNom;
+                    })
+                    .orElse(null);
         }
         return null;
     }

@@ -20,4 +20,6 @@ public interface TbdDashboardRepository extends BaseRepository<TbdDashboard> {
     Optional<TbdDashboard> findByIdAndActifTrue(Long id);
 
     Optional<TbdDashboard> findByNomIgnoreCaseAndActifTrue(String nom);
+
+    Optional<TbdDashboard> findByTitreIgnoreCaseAndActifTrue(String titre);
 }

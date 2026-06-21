@@ -76,6 +76,18 @@ public class TbdDashboardController {
                 .build());
     }
 
+    @Operation(summary = "List assigned category ids")
+    @GetMapping("/assigned-categories")
+    public ResponseEntity<RestResponse<List<Long>>> findAssignedCategoryIds(
+            @RequestParam(required = false) Long excludeDashboardId) {
+        List<Long> ids = service.findAssignedCategoryIds(excludeDashboardId);
+        return ResponseEntity.ok(RestResponse.<List<Long>>builder()
+                .success(true)
+                .status(HttpStatus.OK)
+                .data(ids)
+                .build());
+    }
+
     @Operation(summary = "Create a new dashboard")
     @PostMapping("")
     public ResponseEntity<RestResponse<TbdDashboard>> create(
@@ -97,6 +109,17 @@ public class TbdDashboardController {
         return ResponseEntity.ok(RestResponse.<TbdDashboard>builder()
                 .success(true)
                 .status(HttpStatus.OK)
+                .data(dashboard)
+                .build());
+    }
+
+    @Operation(summary = "Duplicate a dashboard")
+    @PostMapping("/{id}/duplicate")
+    public ResponseEntity<RestResponse<TbdDashboard>> duplicate(@PathVariable Long id) {
+        TbdDashboard dashboard = service.duplicate(id);
+        return ResponseEntity.status(HttpStatus.CREATED).body(RestResponse.<TbdDashboard>builder()
+                .success(true)
+                .status(HttpStatus.CREATED)
                 .data(dashboard)
                 .build());
     }
