@@ -9,6 +9,8 @@ public interface TbdCategoryService {
 
     List<TbdCategory> findActiveCategories();
 
+    List<TbdCategory> findCategoriesWithPublishedTbd();
+
     void syncCategoriesFromDomaines();
 
     TbdCategory createCategory(TbdCategoryRequestDto requestDto);

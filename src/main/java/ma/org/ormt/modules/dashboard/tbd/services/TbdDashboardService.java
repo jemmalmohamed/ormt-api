@@ -29,6 +29,8 @@ public interface TbdDashboardService {
 
     TbdDashboardFullDto findById(Long id);
 
+    java.util.Optional<TbdDashboardFullDto> findPublishedById(Long id);
+
     Page<TbdDashboardSummaryDto> findAll(Pageable pageable);
 
     java.util.Optional<TbdDashboardFullDto> findPublishedBySousDomaine(Long sousDomaineId);

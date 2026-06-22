@@ -1,5 +1,6 @@
 package ma.org.ormt.modules.dashboard.tbd.categories.repositories;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,4 +15,6 @@ public interface TbdCategoryRepository extends BaseRepository<TbdCategory> {
     Optional<TbdCategory> findByTbDomaineAndNom(TBDomaine tbDomaine, String nom);
 
     List<TbdCategory> findByActifTrueOrderByTbDomaineLibelleAscOrdreAscLibelleAsc();
+
+    List<TbdCategory> findByIdInAndActifTrueOrderByTbDomaineLibelleAscOrdreAscLibelleAsc(Collection<Long> ids);
 }

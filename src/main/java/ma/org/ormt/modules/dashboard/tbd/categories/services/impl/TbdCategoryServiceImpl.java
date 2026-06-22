@@ -4,6 +4,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,6 +21,7 @@ import ma.org.ormt.modules.dashboard.tbd.categories.models.TbdCategory;
 import ma.org.ormt.modules.dashboard.tbd.categories.repositories.TbdCategoryRepository;
 import ma.org.ormt.modules.dashboard.tbd.categories.services.TbdCategoryService;
 import ma.org.ormt.modules.dashboard.tbd.repositories.TbdAssignationRepository;
+import ma.org.ormt.modules.dashboard.tbd.repositories.TbdDashboardRepository;
 
 @Service
 @Transactional
@@ -29,11 +32,27 @@ public class TbdCategoryServiceImpl implements TbdCategoryService {
     private final TBDomaineIndicateurRepository tbDomaineIndicateurRepository;
     private final TBDomaineRepository tbDomaineRepository;
     private final TbdAssignationRepository tbdAssignationRepository;
+    private final TbdDashboardRepository dashboardRepository;
 
     @Override
     @Transactional(readOnly = true)
     public List<TbdCategory> findActiveCategories() {
         return categoryRepository.findByActifTrueOrderByTbDomaineLibelleAscOrdreAscLibelleAsc();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<TbdCategory> findCategoriesWithPublishedTbd() {
+        Set<Long> categoryIds = tbdAssignationRepository.findByCibleType("CATEGORIE").stream()
+                .filter(a -> dashboardRepository.findById(a.getDashboardId())
+                        .filter(d -> "PUBLISHED".equals(d.getStatus()) && Boolean.TRUE.equals(d.getActif()))
+                        .isPresent())
+                .map(a -> a.getCibleId())
+                .collect(Collectors.toSet());
+        if (categoryIds.isEmpty()) {
+            return List.of();
+        }
+        return categoryRepository.findByIdInAndActifTrueOrderByTbDomaineLibelleAscOrdreAscLibelleAsc(categoryIds);
     }
 
     @Override

@@ -179,6 +179,14 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
 
     @Override
     @Transactional(readOnly = true)
+    public Optional<TbdDashboardFullDto> findPublishedById(Long id) {
+        return dashboardRepository.findById(id)
+                .filter(d -> "PUBLISHED".equals(d.getStatus()) && Boolean.TRUE.equals(d.getActif()))
+                .map(d -> findById(d.getId()));
+    }
+
+    @Override
+    @Transactional(readOnly = true)
     public Optional<TbdDashboardFullDto> findPublishedByCategorie(Long categorieId) {
         return assignationRepository.findByCibleTypeAndCibleId("CATEGORIE", categorieId)
                 .map(assignation -> dashboardRepository.findById(assignation.getDashboardId()).orElse(null))
@@ -334,7 +342,7 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
     @Override
     @Transactional
     public TbdAssignation assign(Long dashboardId, TbdDashboardAssignRequest request) {
-        if ("CATEGORIE".equals(request.getCibleType())) {
+        if ("CATEGORIE".equals(request.getCibleType()) || "SOUS_DOMAINE".equals(request.getCibleType())) {
             assignationRepository.findByCibleTypeAndCibleId(request.getCibleType(), request.getCibleId())
                     .ifPresent(existing -> {
                         if (!existing.getDashboardId().equals(dashboardId)) {
