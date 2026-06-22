@@ -42,6 +42,18 @@ public class AnalyticsSeedJsonBuilder {
         return toJson(payload);
     }
 
+    public String editorContent(String html, String backgroundColor, String color) {
+        Map<String, Object> payload = new LinkedHashMap<>();
+        payload.put("html", html == null ? "" : html);
+
+        Map<String, Object> widgetStyle = new LinkedHashMap<>();
+        widgetStyle.put("backgroundColor", backgroundColor == null ? "" : backgroundColor);
+        widgetStyle.put("color", color == null ? "" : color);
+        payload.put("widgetStyle", widgetStyle);
+
+        return toJson(payload);
+    }
+
     private String toJson(Map<String, Object> payload) {
         try {
             return objectMapper.writeValueAsString(payload);

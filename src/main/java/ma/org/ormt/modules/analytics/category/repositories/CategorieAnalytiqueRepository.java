@@ -3,6 +3,7 @@ package ma.org.ormt.modules.analytics.category.repositories;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import ma.org.ormt.core.commun.base.repository.BaseRepository;
@@ -20,4 +21,14 @@ public interface CategorieAnalytiqueRepository extends BaseRepository<CategorieA
     Optional<CategorieAnalytique> findByTbdDashboardId(Long tbdDashboardId);
 
     List<CategorieAnalytique> findByTbdDashboardIdIsNotNullOrderByLibelleAsc();
+
+    @Query("""
+            select category
+            from CategorieAnalytique category
+            join fetch category.domaineAnalytique domain
+            where category.actif = true
+              and category.tbdDashboard is null
+            order by domain.titre asc, category.ordre asc, category.libelle asc
+            """)
+    List<CategorieAnalytique> findActiveWithoutDashboardOrderByDomainAndCategory();
 }

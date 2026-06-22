@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import ma.org.ormt.modules.analytics.category.repositories.CategorieAnalytiqueSectionRepository;
 import ma.org.ormt.modules.analytics.category.dtos.request.CategorieAnalytiqueSectionRequestDto;
 import ma.org.ormt.modules.analytics.domain.services.DomaineAnalytiqueService;
 
@@ -20,6 +21,7 @@ public class CategorieAnalytiqueSectionSeeder implements CommandLineRunner {
     private boolean seeding;
 
     private final DomaineAnalytiqueService domaineAnalytiqueService;
+    private final CategorieAnalytiqueSectionRepository categorieAnalytiqueSectionRepository;
     private final AnalyticsSeedJsonBuilder analyticsSeedJsonBuilder;
 
     @Override
@@ -32,7 +34,7 @@ public class CategorieAnalytiqueSectionSeeder implements CommandLineRunner {
                 .forEach(category -> {
                     try {
                         if (category.getTbdDashboard() == null
-                                || (category.getSections() != null && !category.getSections().isEmpty())) {
+                                || categorieAnalytiqueSectionRepository.existsByCategorieAnalytiqueId(category.getId())) {
                             return;
                         }
                         CategorieAnalytiqueSectionRequestDto requestDto = new CategorieAnalytiqueSectionRequestDto();

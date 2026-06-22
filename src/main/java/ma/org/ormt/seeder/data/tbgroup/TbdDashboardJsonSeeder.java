@@ -4,7 +4,9 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.Normalizer;
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -129,13 +131,33 @@ public class TbdDashboardJsonSeeder implements CommandLineRunner {
                 .sousTitre(seed.getSousTitre())
                 .description(seed.getDescription())
                 .sourceText(seed.getSourceText())
-                .status(seed.getStatus() == null || seed.getStatus().isBlank() ? "DRAFT" : seed.getStatus())
+                .status(normalizeStatus(seed.getStatus()))
                 .actif(seed.getActif() == null ? true : seed.getActif())
                 .build());
 
         createSources(dashboard.getId(), seed.getSources());
         createSections(dashboard.getId(), seed.getSections());
         log.info("Created TDB dashboard: {} (id={})", dashboard.getNom(), dashboard.getId());
+    }
+
+    private String normalizeStatus(String rawStatus) {
+        if (rawStatus == null || rawStatus.isBlank()) {
+            return "DRAFT";
+        }
+
+        String normalized = Normalizer.normalize(rawStatus.trim(), Normalizer.Form.NFD)
+                .replaceAll("\\p{M}", "")
+                .toUpperCase(Locale.ROOT);
+
+        return switch (normalized) {
+            case "PUBLISHED", "PUBLISH", "PUBLIE", "PUBLIEE", "PUBLIER" -> "PUBLISHED";
+            case "ARCHIVED", "ARCHIVE", "ARCHIVEE", "ARCHIVER" -> "ARCHIVED";
+            case "DRAFT", "BROUILLON" -> "DRAFT";
+            default -> {
+                log.warn("Unknown TDB dashboard status '{}'. Falling back to DRAFT.", rawStatus);
+                yield "DRAFT";
+            }
+        };
     }
 
     private void createSources(Long dashboardId, List<TbdSourceSeed> sources) {

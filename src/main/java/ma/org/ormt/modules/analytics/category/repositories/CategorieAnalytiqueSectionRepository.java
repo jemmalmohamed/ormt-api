@@ -11,4 +11,6 @@ import ma.org.ormt.modules.analytics.category.models.CategorieAnalytiqueSection;
 public interface CategorieAnalytiqueSectionRepository extends BaseRepository<CategorieAnalytiqueSection> {
 
     List<CategorieAnalytiqueSection> findByCategorieAnalytiqueIdOrderByOrdreAsc(Long categorieAnalytiqueId);
+
+    boolean existsByCategorieAnalytiqueId(Long categorieAnalytiqueId);
 }
