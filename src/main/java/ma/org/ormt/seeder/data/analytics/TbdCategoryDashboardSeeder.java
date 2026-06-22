@@ -51,8 +51,8 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
 
     private static final String SEED_MARKER = "seed:tbd-category-auto";
     private static final String SEED_SOURCE_TEXT = "Dashboard initial genere automatiquement pour categorie analytique.";
-    private static final int KPI_ROW_HEIGHT_PX = 220;
-    private static final int CHART_ROW_HEIGHT_PX = 260;
+    private static final int KPI_ROW_HEIGHT_PX = 180;
+    private static final int CHART_ROW_HEIGHT_PX = 290;
     private static final int INLINE_EDITOR_ROW_HEIGHT_PX = 170;
     private static final int SECTION_EDITOR_ROW_HEIGHT_PX = 210;
     private static final Comparator<SousDomaine> SOUS_DOMAINE_COMPARATOR = Comparator
