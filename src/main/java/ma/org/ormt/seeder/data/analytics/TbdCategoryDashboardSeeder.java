@@ -51,6 +51,10 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
 
     private static final String SEED_MARKER = "seed:tbd-category-auto";
     private static final String SEED_SOURCE_TEXT = "Dashboard initial genere automatiquement pour categorie analytique.";
+    private static final int KPI_ROW_HEIGHT_PX = 220;
+    private static final int CHART_ROW_HEIGHT_PX = 260;
+    private static final int INLINE_EDITOR_ROW_HEIGHT_PX = 170;
+    private static final int SECTION_EDITOR_ROW_HEIGHT_PX = 210;
     private static final Comparator<SousDomaine> SOUS_DOMAINE_COMPARATOR = Comparator
             .comparing(TbdCategoryDashboardSeeder::safeInteger)
             .thenComparing(TbdCategoryDashboardSeeder::safeString);
@@ -249,7 +253,7 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                 .sectionId(section.getId())
                 .ordre(1)
                 .sizePercent(100)
-                .heightPx(200)
+                .heightPx(KPI_ROW_HEIGHT_PX)
                 .createdBy(SEED_MARKER)
                 .lastModifiedBy(SEED_MARKER)
                 .build());
@@ -283,34 +287,50 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
         int rowOrder = 1;
         for (SousDomaineIndicators group : groups) {
             List<Indicateur> indicators = group.indicators();
+            int groupRowCount = 0;
             for (int startIndex = 0; startIndex < indicators.size(); startIndex += 2) {
                 List<Indicateur> chunk = indicators.subList(startIndex, Math.min(startIndex + 2, indicators.size()));
                 TbdWidgetRow row = tbdWidgetRowRepository.save(TbdWidgetRow.builder()
                         .sectionId(section.getId())
                         .ordre(rowOrder++)
                         .sizePercent(100)
-                        .heightPx(220)
+                        .heightPx(CHART_ROW_HEIGHT_PX)
                         .createdBy(SEED_MARKER)
                         .lastModifiedBy(SEED_MARKER)
                         .build());
 
-                for (int widgetIndex = 0; widgetIndex < chunk.size(); widgetIndex++) {
-                    Indicateur indicator = chunk.get(widgetIndex);
-                    int widgetSize = chunk.size() == 1 ? 100 : 50;
-                    String title = buildChartTitle(group.sousDomaine().getNom(), indicator);
-                    tbdWidgetRepository.save(TbdWidget.builder()
-                            .rowId(row.getId())
-                            .type("CHART")
-                            .titre(title)
-                            .indicateur(indicator)
-                            .ordre(widgetIndex + 1)
-                            .sizePercent(widgetSize)
-                            .actif(true)
-                            .createdBy(SEED_MARKER)
-                            .lastModifiedBy(SEED_MARKER)
-                            .build());
+                if (chunk.size() == 1) {
+                    createEmptyWidget(row.getId(), 1, 20, "Marge gauche");
+                    createChartWidget(row.getId(), chunk.get(0), buildChartTitle(group.sousDomaine().getNom(), chunk.get(0)), 2, 60);
+                    createEmptyWidget(row.getId(), 3, 20, "Marge droite");
+                } else {
+                    for (int widgetIndex = 0; widgetIndex < chunk.size(); widgetIndex++) {
+                        Indicateur indicator = chunk.get(widgetIndex);
+                        createChartWidget(
+                                row.getId(),
+                                indicator,
+                                buildChartTitle(group.sousDomaine().getNom(), indicator),
+                                widgetIndex + 1,
+                                50);
+                    }
+                }
+
+                groupRowCount++;
+                if (groupRowCount % 3 == 0) {
+                    createInlineEditorRow(
+                            section.getId(),
+                            rowOrder++,
+                            buildInlineEditorTitle(group.sousDomaine().getNom(), groupRowCount / 3),
+                            buildInlineEditorContent(group.sousDomaine().getNom(), "groupe de 3 rangées"));
                 }
             }
+
+            createInlineEditorRow(
+                    section.getId(),
+                    rowOrder++,
+                    "Synthese " + defaultString(group.sousDomaine().getNom(), "sous-domaine"),
+                    buildInlineEditorContent(group.sousDomaine().getNom(), "fin de section sous-domaine"),
+                    SECTION_EDITOR_ROW_HEIGHT_PX);
         }
     }
 
@@ -329,7 +349,7 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                 .sectionId(section.getId())
                 .ordre(1)
                 .sizePercent(100)
-                .heightPx(240)
+                .heightPx(SECTION_EDITOR_ROW_HEIGHT_PX)
                 .createdBy(SEED_MARKER)
                 .lastModifiedBy(SEED_MARKER)
                 .build());
@@ -341,6 +361,60 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                 .ordre(1)
                 .sizePercent(100)
                 .contentJson(buildEditorTemplate(category, canonicalDomain))
+                .actif(true)
+                .createdBy(SEED_MARKER)
+                .lastModifiedBy(SEED_MARKER)
+                .build());
+    }
+
+    private void createChartWidget(Long rowId, Indicateur indicator, String title, int order, int sizePercent) {
+        tbdWidgetRepository.save(TbdWidget.builder()
+                .rowId(rowId)
+                .type("CHART")
+                .titre(title)
+                .indicateur(indicator)
+                .ordre(order)
+                .sizePercent(sizePercent)
+                .actif(true)
+                .createdBy(SEED_MARKER)
+                .lastModifiedBy(SEED_MARKER)
+                .build());
+    }
+
+    private void createEmptyWidget(Long rowId, int order, int sizePercent, String title) {
+        tbdWidgetRepository.save(TbdWidget.builder()
+                .rowId(rowId)
+                .type("EMPTY")
+                .titre(title)
+                .ordre(order)
+                .sizePercent(sizePercent)
+                .actif(true)
+                .createdBy(SEED_MARKER)
+                .lastModifiedBy(SEED_MARKER)
+                .build());
+    }
+
+    private void createInlineEditorRow(Long sectionId, int rowOrder, String title, String contentJson) {
+        createInlineEditorRow(sectionId, rowOrder, title, contentJson, INLINE_EDITOR_ROW_HEIGHT_PX);
+    }
+
+    private void createInlineEditorRow(Long sectionId, int rowOrder, String title, String contentJson, int heightPx) {
+        TbdWidgetRow editorRow = tbdWidgetRowRepository.save(TbdWidgetRow.builder()
+                .sectionId(sectionId)
+                .ordre(rowOrder)
+                .sizePercent(100)
+                .heightPx(heightPx)
+                .createdBy(SEED_MARKER)
+                .lastModifiedBy(SEED_MARKER)
+                .build());
+
+        tbdWidgetRepository.save(TbdWidget.builder()
+                .rowId(editorRow.getId())
+                .type("EDITOR")
+                .titre(title)
+                .ordre(1)
+                .sizePercent(100)
+                .contentJson(contentJson)
                 .actif(true)
                 .createdBy(SEED_MARKER)
                 .lastModifiedBy(SEED_MARKER)
@@ -386,6 +460,27 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                 .formatted(
                         escapeHtml(defaultString(category.getLibelle(), "Categorie")),
                         escapeHtml(defaultString(canonicalDomain.getNom(), "Domaine")));
+        return analyticsSeedJsonBuilder.editorContent(html, "#fcfbf8", "#1f2937");
+    }
+
+    private String buildInlineEditorTitle(String sousDomaineName, int blockIndex) {
+        return "Analyse " + defaultString(sousDomaineName, "sous-domaine") + " " + blockIndex;
+    }
+
+    private String buildInlineEditorContent(String sousDomaineName, String marker) {
+        String html = """
+                <p><strong>Note d'analyse</strong></p>
+                <p>Cette zone accompagne le sous-domaine <em>%s</em>.</p>
+                <ul>
+                  <li>Documenter ici les points saillants observes sur ce bloc.</li>
+                  <li>Ajouter les evolutions, alertes ou explications utiles.</li>
+                  <li>Completer avec les hypotheses metier et les lectures des indicateurs.</li>
+                </ul>
+                <p><em>Repere seed: %s.</em></p>
+                """
+                .formatted(
+                        escapeHtml(defaultString(sousDomaineName, "Sous-domaine")),
+                        escapeHtml(marker));
         return analyticsSeedJsonBuilder.editorContent(html, "#fcfbf8", "#1f2937");
     }
 
