@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 import ma.org.ormt.modules.analytics.association.espace.EspaceDomaineAnalytique;
 import ma.org.ormt.modules.analytics.association.espace.dtos.EspaceDomaineAnalytiqueLinkDto;
-import ma.org.ormt.modules.analytics.association.tbgroup.TableauBordDomaineAnalytique;
-import ma.org.ormt.modules.analytics.association.tbgroup.dtos.TableauBordDomaineAnalytiqueLinkDto;
+import ma.org.ormt.modules.analytics.association.tbgroup.TbGroupDomaineAnalytique;
+import ma.org.ormt.modules.analytics.association.tbgroup.dtos.TbGroupDomaineAnalytiqueLinkDto;
 import ma.org.ormt.modules.analytics.category.dtos.CategorieAnalytiqueDto;
 import ma.org.ormt.modules.analytics.category.dtos.CategorieAnalytiqueSectionDto;
 import ma.org.ormt.modules.analytics.category.models.CategorieAnalytique;
@@ -115,15 +115,15 @@ public class DomaineAnalytiqueMapper {
         return dto;
     }
 
-    public TableauBordDomaineAnalytiqueLinkDto toTbGroupLinkDto(TableauBordDomaineAnalytique link) {
+    public TbGroupDomaineAnalytiqueLinkDto toTbGroupLinkDto(TbGroupDomaineAnalytique link) {
         if (link == null) {
             return null;
         }
-        TableauBordDomaineAnalytiqueLinkDto dto = new TableauBordDomaineAnalytiqueLinkDto();
+        TbGroupDomaineAnalytiqueLinkDto dto = new TbGroupDomaineAnalytiqueLinkDto();
         dto.setId(link.getId());
         dto.setOrdre(link.getOrdre());
-        dto.setTbGroupId(link.getTableauBord() != null ? link.getTableauBord().getId() : null);
-        dto.setTbGroupNom(link.getTableauBord() != null ? link.getTableauBord().getNom() : null);
+        dto.setTbGroupId(link.getTbGroup() != null ? link.getTbGroup().getId() : null);
+        dto.setTbGroupNom(link.getTbGroup() != null ? link.getTbGroup().getNom() : null);
         dto.setDomaineAnalytiqueId(link.getDomaineAnalytique() != null ? link.getDomaineAnalytique().getId() : null);
         dto.setDomaineAnalytiqueNom(link.getDomaineAnalytique() != null ? link.getDomaineAnalytique().getNom() : null);
         dto.setDomaineAnalytiqueTitre(link.getDomaineAnalytique() != null ? link.getDomaineAnalytique().getTitre() : null);

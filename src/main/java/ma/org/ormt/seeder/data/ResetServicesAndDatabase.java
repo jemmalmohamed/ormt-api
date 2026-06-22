@@ -42,7 +42,6 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
         truncateTable("domaine");
         truncateTable("sous_domaine");
 
-        truncateTable("espace_domaine");
         truncateTable("espace");
         truncateTable("source");
 
@@ -54,11 +53,7 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
         truncateTable("graphe_configuration");
         truncateTable("graphe_type");
 
-        // dashboard
-        truncateTable("tb_domaine_indicateur");
-        truncateTable("tb_domaine");
-
-        truncateTable("tableau_bord");
+        truncateTable("tb_group");
 
     }
 

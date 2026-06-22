@@ -23,11 +23,11 @@ public interface DomaineAnalytiqueRepository extends BaseRepository<DomaineAnaly
 
     boolean existsByIdAndEspaceDomainesAnalytiquesEspaceId(Long id, Long espaceId);
 
-    boolean existsByIdAndTableauBordDomainesAnalytiquesTableauBordId(Long id, Long tableauBordId);
+    boolean existsByIdAndTbGroupDomainesAnalytiquesTbGroupId(Long id, Long tbGroupId);
 
     @Query("select da.id from DomaineAnalytique da join da.espaceDomainesAnalytiques eda where eda.espace.id = :espaceId order by eda.ordre asc")
     List<Long> findIdsByEspaceId(@Param("espaceId") Long espaceId);
 
-    @Query("select da.id from DomaineAnalytique da join da.tableauBordDomainesAnalytiques tda where tda.tableauBord.id = :tableauBordId order by tda.ordre asc")
-    List<Long> findIdsByTableauBordId(@Param("tableauBordId") Long tableauBordId);
+    @Query("select da.id from DomaineAnalytique da join da.tbGroupDomainesAnalytiques tda where tda.tbGroup.id = :tbGroupId order by tda.ordre asc")
+    List<Long> findIdsByTbGroupId(@Param("tbGroupId") Long tbGroupId);
 }

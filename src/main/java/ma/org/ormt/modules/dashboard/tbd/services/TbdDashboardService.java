@@ -7,6 +7,7 @@ import org.springframework.data.domain.Pageable;
 
 import ma.org.ormt.modules.dashboard.tbd.dtos.TbdDashboardFullDto;
 import ma.org.ormt.modules.dashboard.tbd.dtos.TbdDashboardSummaryDto;
+import ma.org.ormt.modules.dashboard.tbd.dtos.TbdAssignationDto;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdDashboardAssignRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdDashboardCreateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdDashboardUpdateRequest;
@@ -19,7 +20,6 @@ import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowCreateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowHeightUpdateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateContentRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateIndicatorRequest;
-import ma.org.ormt.modules.dashboard.tbd.models.TbdAssignation;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdDashboard;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdSection;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdWidget;
@@ -33,11 +33,7 @@ public interface TbdDashboardService {
 
     Page<TbdDashboardSummaryDto> findAll(Pageable pageable);
 
-    java.util.Optional<TbdDashboardFullDto> findPublishedBySousDomaine(Long sousDomaineId);
-
     java.util.Optional<TbdDashboardFullDto> findPublishedByCategorie(Long categorieId);
-
-    java.util.Optional<TbdDashboardSummaryDto> findAssignedBySousDomaineAdmin(Long sousDomaineId);
 
     java.util.Optional<TbdDashboardSummaryDto> findAssignedByCategorieAdmin(Long categorieId);
 
@@ -57,7 +53,7 @@ public interface TbdDashboardService {
 
     void archive(Long id);
 
-    TbdAssignation assign(Long dashboardId, TbdDashboardAssignRequest request);
+    TbdAssignationDto assign(Long dashboardId, TbdDashboardAssignRequest request);
 
     void removeAssignation(Long dashboardId);
 

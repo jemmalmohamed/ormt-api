@@ -5,6 +5,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,8 +15,8 @@ import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import ma.org.ormt.modules.analytics.association.espace.EspaceDomaineAnalytique;
 import ma.org.ormt.modules.analytics.association.espace.EspaceDomaineAnalytiqueRepository;
-import ma.org.ormt.modules.analytics.association.tbgroup.TableauBordDomaineAnalytique;
-import ma.org.ormt.modules.analytics.association.tbgroup.TableauBordDomaineAnalytiqueRepository;
+import ma.org.ormt.modules.analytics.association.tbgroup.TbGroupDomaineAnalytique;
+import ma.org.ormt.modules.analytics.association.tbgroup.TbGroupDomaineAnalytiqueRepository;
 import ma.org.ormt.modules.analytics.category.dtos.request.CategorieAnalytiqueRequestDto;
 import ma.org.ormt.modules.analytics.category.dtos.request.CategorieAnalytiqueSectionRequestDto;
 import ma.org.ormt.modules.analytics.category.models.CategorieAnalytique;
@@ -32,15 +34,12 @@ import ma.org.ormt.modules.analytics.domain.models.DomaineAnalytiqueSection;
 import ma.org.ormt.modules.analytics.domain.repositories.DomaineAnalytiqueRepository;
 import ma.org.ormt.modules.analytics.domain.repositories.DomaineAnalytiqueSectionRepository;
 import ma.org.ormt.modules.analytics.domain.services.DomaineAnalytiqueService;
-import ma.org.ormt.modules.dashboard.domaine.tbdomaine.repositories.TBDomaineRepository;
-import ma.org.ormt.modules.dashboard.tableaubord.models.TableauBord;
-import ma.org.ormt.modules.dashboard.tableaubord.association.domaine.repository.TableauBordDomaineRepository;
-import ma.org.ormt.modules.dashboard.tableaubord.repositories.TableauBordRepository;
+import ma.org.ormt.modules.dashboard.tbgroup.models.TbGroup;
+import ma.org.ormt.modules.dashboard.tbgroup.repositories.TbGroupRepository;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdDashboard;
-import ma.org.ormt.modules.dashboard.tbd.categories.repositories.TbdCategoryRepository;
 import ma.org.ormt.modules.dashboard.tbd.repositories.TbdDashboardRepository;
+import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 import ma.org.ormt.modules.domaines.domaine.repositories.DomaineRepository;
-import ma.org.ormt.modules.espaces.association.domaine.repository.EspaceDomaineRepository;
 import ma.org.ormt.modules.espaces.models.Espace;
 import ma.org.ormt.modules.espaces.repositories.EspaceRepository;
 
@@ -54,16 +53,12 @@ public class DomaineAnalytiqueServiceImpl implements DomaineAnalytiqueService {
     private final CategorieAnalytiqueRepository categorieAnalytiqueRepository;
     private final CategorieAnalytiqueSectionRepository categorieAnalytiqueSectionRepository;
     private final EspaceDomaineAnalytiqueRepository espaceDomaineAnalytiqueRepository;
-    private final TableauBordDomaineAnalytiqueRepository tableauBordDomaineAnalytiqueRepository;
+    private final TbGroupDomaineAnalytiqueRepository tbGroupDomaineAnalytiqueRepository;
     private final EspaceRepository espaceRepository;
-    private final TableauBordRepository tableauBordRepository;
+    private final TbGroupRepository tbGroupRepository;
     private final TbdDashboardRepository tbdDashboardRepository;
     private final DomaineAnalytiqueNamingService namingService;
     private final DomaineRepository domaineRepository;
-    private final TBDomaineRepository tbDomaineRepository;
-    private final EspaceDomaineRepository espaceDomaineRepository;
-    private final TableauBordDomaineRepository tableauBordDomaineRepository;
-    private final TbdCategoryRepository tbdCategoryRepository;
 
     @Override
     @Transactional(readOnly = true)
@@ -98,7 +93,7 @@ public class DomaineAnalytiqueServiceImpl implements DomaineAnalytiqueService {
     @Override
     @Transactional(readOnly = true)
     public List<DomaineAnalytique> findByTbGroup(Long tbGroupId) {
-        return findAllByIds(domaineAnalytiqueRepository.findIdsByTableauBordId(tbGroupId));
+        return findAllByIds(domaineAnalytiqueRepository.findIdsByTbGroupId(tbGroupId));
     }
 
     @Override
@@ -320,71 +315,94 @@ public class DomaineAnalytiqueServiceImpl implements DomaineAnalytiqueService {
     }
 
     @Override
-    public TableauBordDomaineAnalytique attachToTbGroup(Long tableauBordId, DomaineAnalytiqueLinkRequestDto requestDto) {
-        TableauBord tableauBord = tableauBordRepository.findById(tableauBordId)
+    public TbGroupDomaineAnalytique attachToTbGroup(Long tbGroupId, DomaineAnalytiqueLinkRequestDto requestDto) {
+        TbGroup tbGroup = tbGroupRepository.findById(tbGroupId)
                 .orElseThrow(() -> new EntityNotFoundException("TB group non trouvé"));
         DomaineAnalytique domain = getDomainOrThrow(requestDto.getDomaineAnalytiqueId());
-        TableauBordDomaineAnalytique link = tableauBordDomaineAnalytiqueRepository
-                .findByTableauBordIdAndDomaineAnalytiqueId(tableauBordId, requestDto.getDomaineAnalytiqueId())
-                .orElseGet(() -> TableauBordDomaineAnalytique.builder()
-                        .tableauBord(tableauBord)
+        TbGroupDomaineAnalytique link = tbGroupDomaineAnalytiqueRepository
+                .findByTbGroupIdAndDomaineAnalytiqueId(tbGroupId, requestDto.getDomaineAnalytiqueId())
+                .orElseGet(() -> TbGroupDomaineAnalytique.builder()
+                        .tbGroup(tbGroup)
                         .domaineAnalytique(domain)
                         .build());
         link.setOrdre(requestDto.getOrdre() != null ? requestDto.getOrdre() : 0);
-        return tableauBordDomaineAnalytiqueRepository.save(link);
+        return tbGroupDomaineAnalytiqueRepository.save(link);
     }
 
     @Override
-    public void reorderTbGroupLinks(Long tableauBordId, List<ReorderByIdItem> items) {
-        tableauBordRepository.findById(tableauBordId)
+    public void reorderTbGroupLinks(Long tbGroupId, List<ReorderByIdItem> items) {
+        tbGroupRepository.findById(tbGroupId)
                 .orElseThrow(() -> new EntityNotFoundException("TB group non trouvé"));
-        List<TableauBordDomaineAnalytique> existing = tableauBordDomaineAnalytiqueRepository
-                .findByTableauBordIdOrderByOrdreAsc(tableauBordId);
-        reorderOwnedItems(existing, items, TableauBordDomaineAnalytique::getId, TableauBordDomaineAnalytique::setOrdre,
+        List<TbGroupDomaineAnalytique> existing = tbGroupDomaineAnalytiqueRepository
+                .findByTbGroupIdOrderByOrdreAsc(tbGroupId);
+        reorderOwnedItems(existing, items, TbGroupDomaineAnalytique::getId, TbGroupDomaineAnalytique::setOrdre,
                 "les liens de ce tb_group");
-        tableauBordDomaineAnalytiqueRepository.saveAll(existing);
+        tbGroupDomaineAnalytiqueRepository.saveAll(existing);
     }
 
     @Override
-    public void detachFromTbGroup(Long tableauBordId, Long domaineAnalytiqueId) {
-        TableauBordDomaineAnalytique link = tableauBordDomaineAnalytiqueRepository
-                .findByTableauBordIdAndDomaineAnalytiqueId(tableauBordId, domaineAnalytiqueId)
+    public void detachFromTbGroup(Long tbGroupId, Long domaineAnalytiqueId) {
+        TbGroupDomaineAnalytique link = tbGroupDomaineAnalytiqueRepository
+                .findByTbGroupIdAndDomaineAnalytiqueId(tbGroupId, domaineAnalytiqueId)
                 .orElseThrow(() -> new EntityNotFoundException("Association tb_group/domaine analytique non trouvée"));
-        tableauBordDomaineAnalytiqueRepository.delete(link);
+        tbGroupDomaineAnalytiqueRepository.delete(link);
     }
 
     @Override
     @Transactional(readOnly = true)
-    public List<TableauBordDomaineAnalytique> findTbGroupLinks(Long tableauBordId) {
-        return tableauBordDomaineAnalytiqueRepository.findByTableauBordIdOrderByOrdreAsc(tableauBordId);
+    public List<TbGroupDomaineAnalytique> findTbGroupLinks(Long tbGroupId) {
+        return tbGroupDomaineAnalytiqueRepository.findByTbGroupIdOrderByOrdreAsc(tbGroupId);
     }
 
     @Override
     @Transactional(readOnly = true)
     public PortailAnalytiqueTransitionSummaryDto getTransitionSummary() {
         PortailAnalytiqueTransitionSummaryDto dto = new PortailAnalytiqueTransitionSummaryDto();
-        dto.setLegacyDomaines(domaineRepository.count());
-        dto.setLegacyTbDomaines(tbDomaineRepository.count());
-        dto.setLegacyEspacesDomaines(espaceDomaineRepository.count());
-        dto.setLegacyTableauBordDomaines(tableauBordDomaineRepository.count());
-        dto.setLegacyTbdCategories(tbdCategoryRepository.count());
-        dto.setDomainesAnalytiques(domaineAnalytiqueRepository.count());
+        List<Domaine> legacyDomaines = domaineRepository.findAll();
+        List<DomaineAnalytique> domainesAnalytiques = domaineAnalytiqueRepository.findAll();
+        List<CategorieAnalytique> categoriesAnalytiques = categorieAnalytiqueRepository.findAll();
+        dto.setLegacyDomaines(legacyDomaines.size());
+        dto.setLegacyTbDomaines(0L);
+        dto.setLegacyEspacesDomaines(0L);
+        dto.setLegacyTbGroupDomaines(0L);
+        dto.setLegacyTbdCategories(0L);
+        dto.setDomainesAnalytiques(domainesAnalytiques.size());
         dto.setEspaceDomaineAnalytiquesLinks(espaceDomaineAnalytiqueRepository.count());
-        dto.setTbGroupDomaineAnalytiquesLinks(tableauBordDomaineAnalytiqueRepository.count());
-        dto.setCategoriesAnalytiques(categorieAnalytiqueRepository.count());
+        dto.setTbGroupDomaineAnalytiquesLinks(tbGroupDomaineAnalytiqueRepository.count());
+        dto.setCategoriesAnalytiques(categoriesAnalytiques.size());
 
-        List<CategorieAnalytique> categories = categorieAnalytiqueRepository.findAll();
-        long categoriesAvecTbd = categories.stream()
+        Set<String> analyticsThemeKeys = domainesAnalytiques.stream()
+                .flatMap(domain -> java.util.stream.Stream.of(domain.getSourceThemeKey(), domain.getNom()))
+                .filter(this::hasText)
+                .map(namingService::normalizeThemeKey)
+                .filter(this::hasText)
+                .collect(Collectors.toSet());
+
+        dto.setLegacyDomainesAvecContenuEditorial(0L);
+        dto.setLegacyDomainesSansMappingAnalytique(legacyDomaines.stream()
+                .map(Domaine::getNom)
+                .map(namingService::normalizeThemeKey)
+                .filter(this::hasText)
+                .filter(themeKey -> !analyticsThemeKeys.contains(themeKey))
+                .count());
+        dto.setLegacyTbDomainesSansMappingAnalytique(0L);
+
+        long categoriesAvecTbd = categoriesAnalytiques.stream()
                 .filter(category -> category.getTbdDashboard() != null)
                 .count();
         dto.setCategoriesAnalytiquesAvecTbd(categoriesAvecTbd);
-        dto.setCategoriesAnalytiquesSansTbd(categories.size() - categoriesAvecTbd);
+        dto.setCategoriesAnalytiquesSansTbd(categoriesAnalytiques.size() - categoriesAvecTbd);
 
-        dto.setDomainesAnalytiquesAvecHeroSection(domaineAnalytiqueSectionRepository.findAll().stream()
+        Set<Long> domainIdsWithHeroSection = domaineAnalytiqueSectionRepository.findAll().stream()
                 .filter(section -> "hero".equalsIgnoreCase(section.getType()))
                 .map(section -> section.getDomaineAnalytique() != null ? section.getDomaineAnalytique().getId() : null)
                 .filter(java.util.Objects::nonNull)
-                .distinct()
+                .collect(Collectors.toSet());
+        dto.setDomainesAnalytiquesAvecHeroSection(domainIdsWithHeroSection.size());
+
+        dto.setDomainesAnalytiquesSansContenuEditorial(domainesAnalytiques.stream()
+                .filter(domain -> !hasEditorialContent(domain.getDescription(), domain.getApropos(), domain.getImageUrl()))
+                .filter(domain -> !domainIdsWithHeroSection.contains(domain.getId()))
                 .count());
 
         dto.setCategoriesAnalytiquesAvecSectionTbdEmbed(categorieAnalytiqueSectionRepository.findAll().stream()
@@ -394,16 +412,38 @@ public class DomaineAnalytiqueServiceImpl implements DomaineAnalytiqueService {
                 .distinct()
                 .count());
 
-        java.util.Set<Long> espaceDomainIds = espaceDomaineAnalytiqueRepository.findAll().stream()
+        Map<Long, String> analyticsDomainThemeById = domainesAnalytiques.stream()
+                .filter(domain -> domain.getId() != null)
+                .collect(Collectors.toMap(
+                        DomaineAnalytique::getId,
+                        domain -> normalizedAnalyticsThemeKey(domain),
+                        (left, right) -> left,
+                        LinkedHashMap::new));
+        dto.setLegacyTbdCategoriesSansMappingAnalytique(0L);
+
+        Set<Long> espaceDomainIds = espaceDomaineAnalytiqueRepository.findAll().stream()
                 .map(link -> link.getDomaineAnalytique() != null ? link.getDomaineAnalytique().getId() : null)
                 .filter(java.util.Objects::nonNull)
-                .collect(java.util.stream.Collectors.toSet());
-        java.util.Set<Long> tbGroupDomainIds = tableauBordDomaineAnalytiqueRepository.findAll().stream()
+                .collect(Collectors.toSet());
+        Set<Long> tbGroupDomainIds = tbGroupDomaineAnalytiqueRepository.findAll().stream()
                 .map(link -> link.getDomaineAnalytique() != null ? link.getDomaineAnalytique().getId() : null)
                 .filter(java.util.Objects::nonNull)
-                .collect(java.util.stream.Collectors.toSet());
+                .collect(Collectors.toSet());
         espaceDomainIds.retainAll(tbGroupDomainIds);
         dto.setDomainesAnalytiquesPartages(espaceDomainIds.size());
+
+        dto.setReadyToDeprecateDomaineEditorialFields(
+                dto.getLegacyDomainesSansMappingAnalytique() == 0
+                        && (dto.getLegacyDomainesAvecContenuEditorial() == 0
+                                || dto.getDomainesAnalytiquesSansContenuEditorial() == 0));
+        dto.setReadyToDeprecateTbDomaine(
+                dto.getLegacyTbDomainesSansMappingAnalytique() == 0
+                        && dto.getTbGroupDomaineAnalytiquesLinks() >= 0);
+        dto.setReadyToDeprecateTbdCategorie(
+                dto.getLegacyTbdCategoriesSansMappingAnalytique() == 0
+                        && dto.getLegacyTbdCategories() <= dto.getCategoriesAnalytiques());
+        dto.setReadyToDeprecateLegacyPortalTaxonomy(
+                dto.isReadyToDeprecateTbDomaine() && dto.isReadyToDeprecateTbdCategorie());
         return dto;
     }
 
@@ -431,6 +471,31 @@ public class DomaineAnalytiqueServiceImpl implements DomaineAnalytiqueService {
         domaineAnalytique.setSourceThemeKey(requestDto.getSourceThemeKey());
         domaineAnalytique.setMetadataJson(requestDto.getMetadataJson());
         domaineAnalytique.setActif(requestDto.getActif());
+    }
+
+    private String normalizedAnalyticsThemeKey(DomaineAnalytique domain) {
+        if (domain == null) {
+            return "";
+        }
+        String themeKey = hasText(domain.getSourceThemeKey()) ? domain.getSourceThemeKey() : domain.getNom();
+        return namingService.normalizeThemeKey(themeKey);
+    }
+
+    private String buildCategoryMappingKey(String themeKey, String categoryKey) {
+        String normalizedThemeKey = namingService.normalizeThemeKey(themeKey);
+        String normalizedCategoryKey = namingService.normalizeSlug(categoryKey);
+        if (!hasText(normalizedThemeKey) || !hasText(normalizedCategoryKey)) {
+            return "";
+        }
+        return normalizedThemeKey + "::" + normalizedCategoryKey;
+    }
+
+    private boolean hasEditorialContent(String description, String apropos, String imageUrl) {
+        return hasText(description) || hasText(apropos) || hasText(imageUrl);
+    }
+
+    private boolean hasText(String value) {
+        return value != null && !value.isBlank();
     }
 
     private void applyDomainSectionRequest(DomaineAnalytiqueSection section, DomaineAnalytiqueSectionRequestDto requestDto) {

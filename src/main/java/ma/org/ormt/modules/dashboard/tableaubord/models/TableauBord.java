@@ -1,11 +1,7 @@
 package ma.org.ormt.modules.dashboard.tableaubord.models;
 
-import java.util.List;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -14,7 +10,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 import ma.org.ormt.core.commun.base.entity.BaseEntity;
-import ma.org.ormt.modules.dashboard.tableaubord.association.domaine.TableauBordDomaine;
 
 @Setter
 @Getter
@@ -23,7 +18,7 @@ import ma.org.ormt.modules.dashboard.tableaubord.association.domaine.TableauBord
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "tableau_bord")
+@Table(name = "tb_group")
 public class TableauBord extends BaseEntity {
 
     @Column(unique = true, nullable = false)
@@ -33,8 +28,4 @@ public class TableauBord extends BaseEntity {
     private boolean actif = true;
 
     private String description;
-
-    @OneToMany(mappedBy = "tableauBord", fetch = FetchType.LAZY)
-    private List<TableauBordDomaine> tableauBordDomaines;
-
 }

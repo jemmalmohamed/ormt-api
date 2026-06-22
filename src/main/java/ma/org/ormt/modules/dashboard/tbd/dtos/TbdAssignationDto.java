@@ -16,4 +16,6 @@ public class TbdAssignationDto {
     private String cibleType;
     private Long cibleId;
     private String cibleNom;
+    private Long domaineAnalytiqueId;
+    private String domaineAnalytiqueNom;
 }

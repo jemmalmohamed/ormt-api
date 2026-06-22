@@ -75,15 +75,36 @@ public class PortailAnalytiquePublicController extends BaseController<Object> {
         return buildItemResponse(dto.get(), HttpStatus.OK);
     }
 
+    @GetMapping("/espaces/{espaceId}/domaines-analytiques/{id}/categories/{categoryId}/tbd")
+    public ResponseEntity<RestResponse<TbdDashboardFullDto>> getCategoryTbdInEspace(@PathVariable Long espaceId,
+            @PathVariable Long id,
+            @PathVariable Long categoryId) {
+        Optional<CategorieAnalytique> categoryOpt = findAccessibleCategoryInEspace(espaceId, id, categoryId);
+        Long tbdId = categoryOpt
+                .map(CategorieAnalytique::getTbdDashboard)
+                .filter(Objects::nonNull)
+                .map(tbd -> tbd.getId())
+                .orElse(null);
+        if (tbdId == null) {
+            return createForbiddenResponse();
+        }
+        TbdDashboardFullDto dto = tbdDashboardService.findById(tbdId);
+        return ResponseEntity.ok(RestResponse.<TbdDashboardFullDto>builder()
+                .status(HttpStatus.OK)
+                .success(true)
+                .data(dto)
+                .build());
+    }
+
     @GetMapping("/tb-groups/{tbGroupId}/domaines-analytiques")
     public ResponseEntity<RestResponse<List<DomaineAnalytiqueDto>>> getByTbGroup(@PathVariable Long tbGroupId) {
-        if (!hasResourceAccess(tbGroupId, "tableauBord", "lecture")) {
+        if (!hasResourceAccess(tbGroupId, "tbGroup", "lecture")) {
             return createForbiddenResponse();
         }
         List<DomaineAnalytiqueDto> dtos = service.findByTbGroup(tbGroupId).stream()
                 .filter(this::isActif)
                 .map(domain -> mapper.toDto(domain,
-                        RoleAccesMappingUtil.mapForRessource(roleAccesService, "tableauBord", tbGroupId)))
+                        RoleAccesMappingUtil.mapForRessource(roleAccesService, "tbGroup", tbGroupId)))
                 .toList();
         return buildListResponse(dtos, HttpStatus.OK);
     }
@@ -93,7 +114,7 @@ public class PortailAnalytiquePublicController extends BaseController<Object> {
             @PathVariable Long id) {
         Optional<DomaineAnalytiqueDto> dto = findAccessibleDomainInTbGroup(tbGroupId, id)
                 .map(domain -> mapper.toDto(domain,
-                        RoleAccesMappingUtil.mapForRessource(roleAccesService, "tableauBord", tbGroupId)));
+                        RoleAccesMappingUtil.mapForRessource(roleAccesService, "tbGroup", tbGroupId)));
         if (dto.isEmpty()) {
             return createForbiddenResponse();
         }
@@ -171,7 +192,7 @@ public class PortailAnalytiquePublicController extends BaseController<Object> {
     }
 
     private Optional<DomaineAnalytique> findAccessibleDomainInTbGroup(Long tbGroupId, Long domaineAnalytiqueId) {
-        if (!hasResourceAccess(tbGroupId, "tableauBord", "lecture")) {
+        if (!hasResourceAccess(tbGroupId, "tbGroup", "lecture")) {
             return Optional.empty();
         }
         return service.findByTbGroup(tbGroupId).stream()

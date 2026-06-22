@@ -8,18 +8,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
-
 import jakarta.persistence.EntityNotFoundException;
 import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
 import ma.org.ormt.core.commun.base.service.SpecificationService;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
 import ma.org.ormt.core.commun.rest.responses.MessageResponse;
 import ma.org.ormt.core.exceptions.handlers.DependencyException;
-import ma.org.ormt.core.minio.MinioService;
 import ma.org.ormt.core.utilities.EntityInspector;
 import ma.org.ormt.core.utilities.PaginationUtils;
-import ma.org.ormt.core.utilities.files.ImageUtils;
 import ma.org.ormt.core.validators.ObjectsValidator;
 import ma.org.ormt.modules.domaines.domaine.dtos.request.DomaineRequestDto;
 import ma.org.ormt.modules.domaines.domaine.dtos.request.DomaineRequestDtoMapper;
@@ -39,9 +35,6 @@ public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements Doma
 
     @Autowired
     private ObjectsValidator<DomaineRequestDto> validator;
-
-    @Autowired
-    private MinioService minioService;
 
     @Autowired
     private DomaineRequestDtoMapper domaineRequestMapper;
@@ -112,14 +105,7 @@ public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements Doma
     public Domaine create(DomaineRequestDto requestDto) throws Exception {
 
         validator.validate(requestDto);
-        MultipartFile optimizedImage = requestDto.getImageFile();
-        if (optimizedImage != null && !optimizedImage.isEmpty()) {
-            optimizedImage = ImageUtils.optimizeImageWithConverter(
-                    optimizedImage, 1024, 1024, 0.8);
-        }
-        String imageFileName = minioService.uploadFile(optimizedImage);
         Domaine domaineToCreate = domaineRequestMapper.mapToEntity(requestDto);
-        domaineToCreate.setImageUrl(imageFileName); // Store just the filename
         return domaineRepository.save(domaineToCreate);
 
     }
@@ -131,7 +117,6 @@ public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements Doma
         Domaine domaine = domaineRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
         updateDomaineFields(domaine, requestDto);
-        handleImageUpdate(domaine, requestDto);
         return domaineRepository.save(domaine);
     }
 
@@ -154,17 +139,6 @@ public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements Doma
         domaine.setNom(entityToUpdate.getNom());
         domaine.setDescription(entityToUpdate.getDescription());
         domaine.setActif(entityToUpdate.getActif());
-        domaine.setApropos(entityToUpdate.getApropos());
-
-    }
-
-    private void handleImageUpdate(Domaine domaine, DomaineRequestDto dto) throws Exception {
-        if (dto.getImageFile() != null && !dto.getImageFile().isEmpty()) {
-            MultipartFile optimizedImage = ImageUtils.optimizeImageWithConverter(
-                    dto.getImageFile(), 1024, 1024, 0.8);
-            String imageFileName = minioService.uploadFile(optimizedImage);
-            domaine.setImageUrl(imageFileName);
-        }
     }
 
     private void validateDomaineDependencies(Long id) {
@@ -183,15 +157,4 @@ public class DomaineServiceImpl extends BaseServiceImpl<Domaine> implements Doma
 
         }
     }
-
-    @Override
-    public boolean existsInEspace(Long domaineId, Long espaceId) {
-        return domaineRepository.existsByIdAndEspaceDomainesEspaceId(domaineId, espaceId);
-    }
-
-    @Override
-    public List<Long> getDomaineIdsByEspaceId(Long espaceId) {
-        return domaineRepository.findIdsByEspaceId(espaceId);
-    }
-
 }

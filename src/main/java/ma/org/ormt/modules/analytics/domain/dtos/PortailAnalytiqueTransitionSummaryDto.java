@@ -9,17 +9,27 @@ public class PortailAnalytiqueTransitionSummaryDto {
 
     private long legacyDomaines;
 
+    private long legacyDomainesAvecContenuEditorial;
+
+    private long legacyDomainesSansMappingAnalytique;
+
     private long legacyTbDomaines;
+
+    private long legacyTbDomainesSansMappingAnalytique;
 
     private long legacyEspacesDomaines;
 
-    private long legacyTableauBordDomaines;
+    private long legacyTbGroupDomaines;
 
     private long legacyTbdCategories;
+
+    private long legacyTbdCategoriesSansMappingAnalytique;
 
     private long domainesAnalytiques;
 
     private long domainesAnalytiquesAvecHeroSection;
+
+    private long domainesAnalytiquesSansContenuEditorial;
 
     private long domainesAnalytiquesPartages;
 
@@ -34,4 +44,12 @@ public class PortailAnalytiqueTransitionSummaryDto {
     private long categoriesAnalytiquesSansTbd;
 
     private long categoriesAnalytiquesAvecSectionTbdEmbed;
+
+    private boolean readyToDeprecateDomaineEditorialFields;
+
+    private boolean readyToDeprecateTbDomaine;
+
+    private boolean readyToDeprecateTbdCategorie;
+
+    private boolean readyToDeprecateLegacyPortalTaxonomy;
 }

@@ -21,6 +21,7 @@ public class TbdDashboardSummaryDto {
     private String sousTitre;
     private String status;
     private Boolean actif;
+    private Long categorieAnalytiqueId;
     private String assignationNom;
     private Integer nbSections;
     private LocalDateTime lastModifiedDate;

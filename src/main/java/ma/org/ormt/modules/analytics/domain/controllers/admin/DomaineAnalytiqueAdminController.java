@@ -19,8 +19,8 @@ import lombok.RequiredArgsConstructor;
 import ma.org.ormt.core.commun.rest.responses.RestResponse;
 import ma.org.ormt.modules.analytics.association.espace.EspaceDomaineAnalytique;
 import ma.org.ormt.modules.analytics.association.espace.dtos.EspaceDomaineAnalytiqueLinkDto;
-import ma.org.ormt.modules.analytics.association.tbgroup.TableauBordDomaineAnalytique;
-import ma.org.ormt.modules.analytics.association.tbgroup.dtos.TableauBordDomaineAnalytiqueLinkDto;
+import ma.org.ormt.modules.analytics.association.tbgroup.TbGroupDomaineAnalytique;
+import ma.org.ormt.modules.analytics.association.tbgroup.dtos.TbGroupDomaineAnalytiqueLinkDto;
 import ma.org.ormt.modules.analytics.category.dtos.CategorieAnalytiqueDto;
 import ma.org.ormt.modules.analytics.category.dtos.CategorieAnalytiqueSectionDto;
 import ma.org.ormt.modules.analytics.category.dtos.request.CategorieAnalytiqueRequestDto;
@@ -282,7 +282,7 @@ public class DomaineAnalytiqueAdminController {
     @PreAuthorize("hasAuthority('dashboard:read')")
     public ResponseEntity<RestResponse<List<DomaineAnalytiqueDto>>> getTbGroupLinks(@PathVariable Long tbGroupId) {
         List<DomaineAnalytiqueDto> dtos = service.findTbGroupLinks(tbGroupId).stream()
-                .map(TableauBordDomaineAnalytique::getDomaineAnalytique)
+                .map(TbGroupDomaineAnalytique::getDomaineAnalytique)
                 .map(domain -> mapper.toDto(service.findById(domain.getId()).orElseThrow(), List.of()))
                 .toList();
         return response(dtos, HttpStatus.OK);
@@ -290,9 +290,9 @@ public class DomaineAnalytiqueAdminController {
 
     @GetMapping("/tb-groups/{tbGroupId}/associations")
     @PreAuthorize("hasAuthority('dashboard:read')")
-    public ResponseEntity<RestResponse<List<TableauBordDomaineAnalytiqueLinkDto>>> getTbGroupAssociationLinks(
+    public ResponseEntity<RestResponse<List<TbGroupDomaineAnalytiqueLinkDto>>> getTbGroupAssociationLinks(
             @PathVariable Long tbGroupId) {
-        List<TableauBordDomaineAnalytiqueLinkDto> dtos = service.findTbGroupLinks(tbGroupId).stream()
+        List<TbGroupDomaineAnalytiqueLinkDto> dtos = service.findTbGroupLinks(tbGroupId).stream()
                 .map(mapper::toTbGroupLinkDto)
                 .toList();
         return response(dtos, HttpStatus.OK);

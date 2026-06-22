@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import ma.org.ormt.modules.analytics.association.espace.EspaceDomaineAnalytique;
-import ma.org.ormt.modules.analytics.association.tbgroup.TableauBordDomaineAnalytique;
+import ma.org.ormt.modules.analytics.association.tbgroup.TbGroupDomaineAnalytique;
 import ma.org.ormt.modules.analytics.category.dtos.request.CategorieAnalytiqueRequestDto;
 import ma.org.ormt.modules.analytics.category.dtos.request.CategorieAnalytiqueSectionRequestDto;
 import ma.org.ormt.modules.analytics.category.models.CategorieAnalytique;
@@ -83,13 +83,13 @@ public interface DomaineAnalytiqueService {
 
     List<EspaceDomaineAnalytique> findEspaceLinks(Long espaceId);
 
-    TableauBordDomaineAnalytique attachToTbGroup(Long tableauBordId, DomaineAnalytiqueLinkRequestDto requestDto);
+    TbGroupDomaineAnalytique attachToTbGroup(Long tbGroupId, DomaineAnalytiqueLinkRequestDto requestDto);
 
-    void reorderTbGroupLinks(Long tableauBordId, List<ReorderByIdItem> items);
+    void reorderTbGroupLinks(Long tbGroupId, List<ReorderByIdItem> items);
 
-    void detachFromTbGroup(Long tableauBordId, Long domaineAnalytiqueId);
+    void detachFromTbGroup(Long tbGroupId, Long domaineAnalytiqueId);
 
-    List<TableauBordDomaineAnalytique> findTbGroupLinks(Long tableauBordId);
+    List<TbGroupDomaineAnalytique> findTbGroupLinks(Long tbGroupId);
 
     PortailAnalytiqueTransitionSummaryDto getTransitionSummary();
 }

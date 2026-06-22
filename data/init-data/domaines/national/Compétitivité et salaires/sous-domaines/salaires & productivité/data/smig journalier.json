@@ -1,0 +1,25 @@
+{
+    "indicateur": "smig journalier",
+    "data": [
+        {
+            "annuel": "2019",
+            "valeur": 113.04
+        },
+        {
+            "annuel": "2020",
+            "valeur": 118.48
+        },
+        {
+            "annuel": "2021",
+            "valeur": 118.48
+        },
+        {
+            "annuel": "2022",
+            "valeur": 124.4
+        },
+        {
+            "annuel": "2023",
+            "valeur": 130.32
+        }
+    ]
+}

@@ -15,7 +15,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
-import ma.org.ormt.modules.dashboard.tbd.categories.repositories.TbdCategoryRepository;
+import ma.org.ormt.modules.analytics.category.models.CategorieAnalytique;
+import ma.org.ormt.modules.analytics.category.repositories.CategorieAnalytiqueRepository;
 import ma.org.ormt.modules.dashboard.tbd.dtos.TbdAssignationDto;
 import ma.org.ormt.modules.dashboard.tbd.dtos.TbdDashboardFullDto;
 import ma.org.ormt.modules.dashboard.tbd.dtos.TbdDashboardSummaryDto;
@@ -35,21 +36,17 @@ import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowCreateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowHeightUpdateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateContentRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateIndicatorRequest;
-import ma.org.ormt.modules.dashboard.tbd.models.TbdAssignation;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdDashboard;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdSection;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdSourceListing;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdWidget;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdWidgetRow;
-import ma.org.ormt.modules.dashboard.tbd.repositories.TbdAssignationRepository;
 import ma.org.ormt.modules.dashboard.tbd.repositories.TbdDashboardRepository;
 import ma.org.ormt.modules.dashboard.tbd.repositories.TbdSectionRepository;
 import ma.org.ormt.modules.dashboard.tbd.repositories.TbdSourceListingRepository;
 import ma.org.ormt.modules.dashboard.tbd.repositories.TbdWidgetRepository;
 import ma.org.ormt.modules.dashboard.tbd.repositories.TbdWidgetRowRepository;
 import ma.org.ormt.modules.dashboard.tbd.services.TbdDashboardService;
-import ma.org.ormt.modules.domaines.domaine.repositories.DomaineRepository;
-import ma.org.ormt.modules.domaines.sousdomaine.repositories.SousDomaineRepository;
 import ma.org.ormt.modules.indicateurs.indicateur.repositories.IndicateurRepository;
 
 @Service
@@ -64,22 +61,19 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
     private static final String WIDGET_NOT_FOUND = "Widget not found";
 
     private final TbdDashboardRepository dashboardRepository;
-    private final TbdAssignationRepository assignationRepository;
     private final TbdSourceListingRepository sourceListingRepository;
     private final TbdSectionRepository sectionRepository;
     private final TbdWidgetRowRepository widgetRowRepository;
     private final TbdWidgetRepository widgetRepository;
-    private final DomaineRepository domaineRepository;
-    private final TbdCategoryRepository categorieRepository;
+    private final CategorieAnalytiqueRepository categorieRepository;
     private final IndicateurRepository indicateurRepository;
-    private final SousDomaineRepository sousDomaineRepository;
 
     @Override
     public TbdDashboardFullDto findById(Long id) {
         TbdDashboard dashboard = dashboardRepository.findByIdAndActifTrue(id)
                 .orElseThrow(() -> new EntityNotFoundException(DASHBOARD_NOT_FOUND));
 
-        Optional<TbdAssignation> assignation = assignationRepository.findByDashboardId(id);
+        Optional<CategorieAnalytique> assignation = categorieRepository.findByTbdDashboardId(id);
 
         List<TbdSourceDto> sources = sourceListingRepository.findByDashboardIdOrderByOrdreAsc(id).stream()
                 .map(sl -> TbdSourceDto.builder()
@@ -131,14 +125,7 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
                     .build();
         }).collect(Collectors.toList());
 
-        TbdAssignationDto assignationDto = assignation.map(a -> {
-            String cibleNom = resolveCibleNom(a.getCibleType(), a.getCibleId());
-            return TbdAssignationDto.builder()
-                    .cibleType(a.getCibleType())
-                    .cibleId(a.getCibleId())
-                    .cibleNom(cibleNom)
-                    .build();
-        }).orElse(null);
+        TbdAssignationDto assignationDto = assignation.map(this::toAssignationDto).orElse(null);
 
         return TbdDashboardFullDto.builder()
                 .id(dashboard.getId())
@@ -159,8 +146,7 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
     public Page<TbdDashboardSummaryDto> findAll(Pageable pageable) {
         Page<TbdDashboard> page = dashboardRepository.findByActifTrueOrderByLastModifiedDateDesc(pageable);
         List<TbdDashboardSummaryDto> dtos = page.getContent().stream().map(d -> {
-            Optional<TbdAssignation> assignation = assignationRepository.findByDashboardId(d.getId());
-            String assignationNom = assignation.map(a -> resolveCibleNom(a.getCibleType(), a.getCibleId())).orElse(null);
+            Optional<CategorieAnalytique> assignation = categorieRepository.findByTbdDashboardId(d.getId());
             int nbSections = sectionRepository.findByDashboardIdAndActifTrue(d.getId()).size();
             return TbdDashboardSummaryDto.builder()
                     .id(d.getId())
@@ -169,7 +155,8 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
                     .sousTitre(d.getSousTitre())
                     .status(d.getStatus())
                     .actif(d.getActif())
-                    .assignationNom(assignationNom)
+                    .categorieAnalytiqueId(assignation.map(CategorieAnalytique::getId).orElse(null))
+                    .assignationNom(assignation.map(this::buildCategoryDisplayName).orElse(null))
                     .nbSections(nbSections)
                     .lastModifiedDate(d.getLastModifiedDate())
                     .build();
@@ -188,17 +175,8 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
     @Override
     @Transactional(readOnly = true)
     public Optional<TbdDashboardFullDto> findPublishedByCategorie(Long categorieId) {
-        return assignationRepository.findByCibleTypeAndCibleId("CATEGORIE", categorieId)
-                .map(assignation -> dashboardRepository.findById(assignation.getDashboardId()).orElse(null))
-                .filter(d -> d != null && "PUBLISHED".equals(d.getStatus()) && Boolean.TRUE.equals(d.getActif()))
-                .map(d -> findById(d.getId()));
-    }
-
-    @Override
-    @Transactional(readOnly = true)
-    public Optional<TbdDashboardFullDto> findPublishedBySousDomaine(Long sousDomaineId) {
-        return assignationRepository.findByCibleTypeAndCibleId("SOUS_DOMAINE", sousDomaineId)
-                .map(assignation -> dashboardRepository.findById(assignation.getDashboardId()).orElse(null))
+        return categorieRepository.findById(categorieId)
+                .map(CategorieAnalytique::getTbdDashboard)
                 .filter(d -> d != null && "PUBLISHED".equals(d.getStatus()) && Boolean.TRUE.equals(d.getActif()))
                 .map(d -> findById(d.getId()));
     }
@@ -206,25 +184,8 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
     @Override
     @Transactional(readOnly = true)
     public Optional<TbdDashboardSummaryDto> findAssignedByCategorieAdmin(Long categorieId) {
-        return assignationRepository.findByCibleTypeAndCibleId("CATEGORIE", categorieId)
-                .flatMap(assignation -> dashboardRepository.findById(assignation.getDashboardId()))
-                .filter(d -> Boolean.TRUE.equals(d.getActif()))
-                .map(d -> TbdDashboardSummaryDto.builder()
-                        .id(d.getId())
-                        .nom(d.getNom())
-                        .titre(d.getTitre())
-                        .sousTitre(d.getSousTitre())
-                        .status(d.getStatus())
-                        .actif(d.getActif())
-                        .lastModifiedDate(d.getLastModifiedDate())
-                        .build());
-    }
-
-    @Override
-    @Transactional(readOnly = true)
-    public Optional<TbdDashboardSummaryDto> findAssignedBySousDomaineAdmin(Long sousDomaineId) {
-        return assignationRepository.findByCibleTypeAndCibleId("SOUS_DOMAINE", sousDomaineId)
-                .flatMap(assignation -> dashboardRepository.findById(assignation.getDashboardId()))
+        return categorieRepository.findById(categorieId)
+                .map(CategorieAnalytique::getTbdDashboard)
                 .filter(d -> Boolean.TRUE.equals(d.getActif()))
                 .map(d -> TbdDashboardSummaryDto.builder()
                         .id(d.getId())
@@ -295,9 +256,11 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
 
     @Override
     public List<Long> findAssignedCategoryIds(Long excludeDashboardId) {
-        return assignationRepository.findByCibleType("CATEGORIE").stream()
-                .filter(assignation -> excludeDashboardId == null || !assignation.getDashboardId().equals(excludeDashboardId))
-                .map(TbdAssignation::getCibleId)
+        return categorieRepository.findByTbdDashboardIdIsNotNullOrderByLibelleAsc().stream()
+                .filter(category -> excludeDashboardId == null
+                        || category.getTbdDashboard() == null
+                        || !excludeDashboardId.equals(category.getTbdDashboard().getId()))
+                .map(CategorieAnalytique::getId)
                 .distinct()
                 .collect(Collectors.toList());
     }
@@ -307,7 +270,7 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
     public void delete(Long id) {
         TbdDashboard dashboard = dashboardRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException(DASHBOARD_NOT_FOUND));
-        assignationRepository.deleteByDashboardId(id);
+        removeAssignation(id);
         dashboard.setActif(false);
         dashboardRepository.save(dashboard);
     }
@@ -341,28 +304,34 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
 
     @Override
     @Transactional
-    public TbdAssignation assign(Long dashboardId, TbdDashboardAssignRequest request) {
-        if ("CATEGORIE".equals(request.getCibleType()) || "SOUS_DOMAINE".equals(request.getCibleType())) {
-            assignationRepository.findByCibleTypeAndCibleId(request.getCibleType(), request.getCibleId())
-                    .ifPresent(existing -> {
-                        if (!existing.getDashboardId().equals(dashboardId)) {
-                            throw new IllegalArgumentException(CATEGORY_ALREADY_ASSIGNED);
-                        }
-                    });
+    public TbdAssignationDto assign(Long dashboardId, TbdDashboardAssignRequest request) {
+        TbdDashboard dashboard = dashboardRepository.findById(dashboardId)
+                .orElseThrow(() -> new EntityNotFoundException(DASHBOARD_NOT_FOUND));
+        CategorieAnalytique category = categorieRepository.findById(request.getCategorieAnalytiqueId())
+                .orElseThrow(() -> new EntityNotFoundException("Categorie analytique non trouvée"));
+
+        if (category.getTbdDashboard() != null && !dashboardId.equals(category.getTbdDashboard().getId())) {
+            throw new IllegalArgumentException(CATEGORY_ALREADY_ASSIGNED);
         }
-        assignationRepository.deleteByDashboardId(dashboardId);
-        TbdAssignation assignation = TbdAssignation.builder()
-                .dashboardId(dashboardId)
-                .cibleType(request.getCibleType())
-                .cibleId(request.getCibleId())
-                .build();
-        return assignationRepository.save(assignation);
+
+        categorieRepository.findByTbdDashboardId(dashboardId)
+                .filter(existing -> !existing.getId().equals(category.getId()))
+                .ifPresent(existing -> {
+                    existing.setTbdDashboard(null);
+                    categorieRepository.save(existing);
+                });
+
+        category.setTbdDashboard(dashboard);
+        return toAssignationDto(categorieRepository.save(category));
     }
 
     @Override
     @Transactional
     public void removeAssignation(Long dashboardId) {
-        assignationRepository.deleteByDashboardId(dashboardId);
+        categorieRepository.findByTbdDashboardId(dashboardId).ifPresent(category -> {
+            category.setTbdDashboard(null);
+            categorieRepository.save(category);
+        });
     }
 
     @Override
@@ -692,36 +661,40 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
         });
     }
 
-    private String resolveCibleNom(String cibleType, Long cibleId) {
-        if ("DOMAINE".equals(cibleType)) {
-            return domaineRepository.findById(cibleId).map(d -> d.getNom()).orElse(null);
-        } else if ("CATEGORIE".equals(cibleType)) {
-            return categorieRepository.findById(cibleId)
-                    .map(c -> {
-                        String domaineNom = c.getTbDomaine() != null
-                                ? (c.getTbDomaine().getLibelle() != null && !c.getTbDomaine().getLibelle().isBlank()
-                                        ? c.getTbDomaine().getLibelle()
-                                        : c.getTbDomaine().getNom())
-                                : null;
-                        String categorieNom = c.getLibelle();
-                        if (domaineNom == null || domaineNom.isBlank()) {
-                            return categorieNom;
-                        }
-                        return domaineNom + " - " + categorieNom;
-                    })
-                    .orElse(null);
-        } else if ("SOUS_DOMAINE".equals(cibleType)) {
-            return sousDomaineRepository.findById(cibleId)
-                    .map(sd -> {
-                        String domaineNom = sd.getDomaine() != null ? sd.getDomaine().getNom() : null;
-                        if (domaineNom == null || domaineNom.isBlank()) {
-                            return sd.getNom();
-                        }
-                        return domaineNom + " / " + sd.getNom();
-                    })
-                    .orElse(null);
+    private TbdAssignationDto toAssignationDto(CategorieAnalytique category) {
+        if (category == null) {
+            return null;
         }
-        return null;
+        String domaineNom = category.getDomaineAnalytique() != null
+                ? (category.getDomaineAnalytique().getTitre() != null && !category.getDomaineAnalytique().getTitre().isBlank()
+                        ? category.getDomaineAnalytique().getTitre()
+                        : category.getDomaineAnalytique().getNom())
+                : null;
+        return TbdAssignationDto.builder()
+                .cibleType("CATEGORIE_ANALYTIQUE")
+                .cibleId(category.getId())
+                .cibleNom(buildCategoryDisplayName(category))
+                .domaineAnalytiqueId(category.getDomaineAnalytique() != null ? category.getDomaineAnalytique().getId() : null)
+                .domaineAnalytiqueNom(domaineNom)
+                .build();
+    }
+
+    private String buildCategoryDisplayName(CategorieAnalytique category) {
+        if (category == null) {
+            return null;
+        }
+        String domaineNom = category.getDomaineAnalytique() != null
+                ? (category.getDomaineAnalytique().getTitre() != null && !category.getDomaineAnalytique().getTitre().isBlank()
+                        ? category.getDomaineAnalytique().getTitre()
+                        : category.getDomaineAnalytique().getNom())
+                : null;
+        String categorieNom = category.getLibelle() != null && !category.getLibelle().isBlank()
+                ? category.getLibelle()
+                : category.getNom();
+        if (domaineNom == null || domaineNom.isBlank()) {
+            return categorieNom;
+        }
+        return domaineNom + " - " + categorieNom;
     }
 
     private TbdWidgetDto toWidgetDto(TbdWidget widget) {

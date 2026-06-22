@@ -17,7 +17,7 @@ import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 import ma.org.ormt.core.commun.base.entity.BaseEntity;
 import ma.org.ormt.modules.analytics.association.espace.EspaceDomaineAnalytique;
-import ma.org.ormt.modules.analytics.association.tbgroup.TableauBordDomaineAnalytique;
+import ma.org.ormt.modules.analytics.association.tbgroup.TbGroupDomaineAnalytique;
 import ma.org.ormt.modules.analytics.category.models.CategorieAnalytique;
 
 @Setter
@@ -71,5 +71,5 @@ public class DomaineAnalytique extends BaseEntity {
 
     @lombok.Builder.Default
     @OneToMany(mappedBy = "domaineAnalytique", fetch = FetchType.LAZY)
-    private List<TableauBordDomaineAnalytique> tableauBordDomainesAnalytiques = new ArrayList<>();
+    private List<TbGroupDomaineAnalytique> tbGroupDomainesAnalytiques = new ArrayList<>();
 }

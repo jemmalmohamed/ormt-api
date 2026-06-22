@@ -68,9 +68,9 @@ CREATE TABLE IF NOT EXISTS espace_domaine_analytique (
 CREATE INDEX IF NOT EXISTS idx_espace_domaine_analytique_espace
     ON espace_domaine_analytique (id_espace, ordre);
 
-CREATE TABLE IF NOT EXISTS tableau_bord_domaine_analytique (
+CREATE TABLE IF NOT EXISTS tb_group_domaine_analytique (
     id BIGSERIAL PRIMARY KEY,
-    id_tableau_bord BIGINT NOT NULL,
+    id_tb_group BIGINT NOT NULL,
     id_domaine_analytique BIGINT NOT NULL,
     ordre INT NOT NULL DEFAULT 0,
     status_code INT NULL,
@@ -79,15 +79,15 @@ CREATE TABLE IF NOT EXISTS tableau_bord_domaine_analytique (
     version BIGINT NOT NULL DEFAULT 0,
     created_by VARCHAR(50),
     last_modified_by VARCHAR(50),
-    CONSTRAINT fk_tableau_bord_domaine_analytique_tableau_bord
-        FOREIGN KEY (id_tableau_bord) REFERENCES tableau_bord (id) ON DELETE CASCADE,
-    CONSTRAINT fk_tableau_bord_domaine_analytique_domaine_analytique
+    CONSTRAINT fk_tb_group_domaine_analytique_tb_group
+        FOREIGN KEY (id_tb_group) REFERENCES tb_group (id) ON DELETE CASCADE,
+    CONSTRAINT fk_tb_group_domaine_analytique_domaine_analytique
         FOREIGN KEY (id_domaine_analytique) REFERENCES domaine_analytique (id) ON DELETE CASCADE,
-    CONSTRAINT uk_tableau_bord_domaine_analytique UNIQUE (id_tableau_bord, id_domaine_analytique)
+    CONSTRAINT uk_tb_group_domaine_analytique UNIQUE (id_tb_group, id_domaine_analytique)
 );
 
-CREATE INDEX IF NOT EXISTS idx_tableau_bord_domaine_analytique_tb
-    ON tableau_bord_domaine_analytique (id_tableau_bord, ordre);
+CREATE INDEX IF NOT EXISTS idx_tb_group_domaine_analytique_tb
+    ON tb_group_domaine_analytique (id_tb_group, ordre);
 
 CREATE TABLE IF NOT EXISTS domaine_analytique_section (
     id BIGSERIAL PRIMARY KEY,

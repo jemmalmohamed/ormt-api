@@ -25,6 +25,9 @@ public class DomaineAnalytiqueSeeder implements CommandLineRunner {
     @Value("${starter.database.seed}")
     private boolean seeding;
 
+    @Value("${starter.database.seed-analytics-transition:false}")
+    private boolean analyticsTransitionSeeding;
+
     private final DomaineRepository domaineRepository;
     private final DomaineAnalytiqueService domaineAnalytiqueService;
     private final DomaineAnalytiqueNamingService namingService;
@@ -32,7 +35,7 @@ public class DomaineAnalytiqueSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        if (!seeding) {
+        if (!seeding || !analyticsTransitionSeeding) {
             return;
         }
         List<Domaine> domaines = domaineRepository.findAll();
@@ -46,8 +49,6 @@ public class DomaineAnalytiqueSeeder implements CommandLineRunner {
                 requestDto.setNom(themeKey);
                 requestDto.setTitre(domaine.getNom());
                 requestDto.setDescription(domaine.getDescription());
-                requestDto.setApropos(domaine.getApropos());
-                requestDto.setImageUrl(domaine.getImageUrl());
                 requestDto.setSlug(themeKey);
                 requestDto.setSourceThemeKey(themeKey);
                 requestDto.setActif(domaine.getActif() == null ? true : domaine.getActif());

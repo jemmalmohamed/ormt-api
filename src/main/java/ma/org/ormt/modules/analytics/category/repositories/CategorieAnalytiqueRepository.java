@@ -16,4 +16,8 @@ public interface CategorieAnalytiqueRepository extends BaseRepository<CategorieA
     Optional<CategorieAnalytique> findByDomaineAnalytiqueIdAndNom(Long domaineAnalytiqueId, String nom);
 
     boolean existsByIdAndDomaineAnalytiqueId(Long id, Long domaineAnalytiqueId);
+
+    Optional<CategorieAnalytique> findByTbdDashboardId(Long tbdDashboardId);
+
+    List<CategorieAnalytique> findByTbdDashboardIdIsNotNullOrderByLibelleAsc();
 }

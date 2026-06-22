@@ -1,0 +1,25 @@
+{
+    "indicateur": "smag journalier",
+    "data": [
+        {
+            "annuel": "2019",
+            "valeur": 73.22
+        },
+        {
+            "annuel": "2020",
+            "valeur": 76.7
+        },
+        {
+            "annuel": "2021",
+            "valeur": 76.7
+        },
+        {
+            "annuel": "2022",
+            "valeur": 84.37
+        },
+        {
+            "annuel": "2023",
+            "valeur": 88.58
+        }
+    ]
+}

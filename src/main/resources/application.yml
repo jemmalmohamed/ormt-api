@@ -52,6 +52,11 @@ springdoc:
     path: /swagger-ui.html
     filter: false
 
+starter:
+  database:
+    seed-legacy-portail: false
+    seed-analytics-transition: false
+
 # logging:
 #   level:
 #     com.zaxxer.hikari: DEBUG
@@ -61,4 +66,3 @@ file:
   token:
     secret: ${FILE_TOKEN_SECRET:OrmtFileSecurityTokenSecretKey}
     validitySeconds: ${FILE_TOKEN_VALIDITY:300} # 5 minutes by default
-

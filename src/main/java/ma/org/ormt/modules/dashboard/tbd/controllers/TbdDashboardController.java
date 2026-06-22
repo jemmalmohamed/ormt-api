@@ -25,6 +25,7 @@ import lombok.RequiredArgsConstructor;
 import ma.org.ormt.core.commun.rest.responses.RestResponse;
 import ma.org.ormt.modules.dashboard.tbd.dtos.TbdDashboardFullDto;
 import ma.org.ormt.modules.dashboard.tbd.dtos.TbdDashboardSummaryDto;
+import ma.org.ormt.modules.dashboard.tbd.dtos.TbdAssignationDto;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdDashboardAssignRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdDashboardCreateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdDashboardUpdateRequest;
@@ -37,7 +38,6 @@ import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowCreateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowHeightUpdateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateContentRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateIndicatorRequest;
-import ma.org.ormt.modules.dashboard.tbd.models.TbdAssignation;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdDashboard;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdSection;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdWidget;
@@ -70,18 +70,6 @@ public class TbdDashboardController {
     @GetMapping("/admin/by-categorie/{categorieId}")
     public ResponseEntity<RestResponse<TbdDashboardSummaryDto>> findByCategorieAdmin(@PathVariable Long categorieId) {
         return service.findAssignedByCategorieAdmin(categorieId)
-                .map(dto -> ResponseEntity.ok(RestResponse.<TbdDashboardSummaryDto>builder()
-                        .success(true)
-                        .status(HttpStatus.OK)
-                        .data(dto)
-                        .build()))
-                .orElse(ResponseEntity.noContent().build());
-    }
-
-    @Operation(summary = "Get dashboard assigned to a sous-domaine (admin, any status)")
-    @GetMapping("/admin/by-sous-domaine/{sousDomaineId}")
-    public ResponseEntity<RestResponse<TbdDashboardSummaryDto>> findBySousDomaineAdmin(@PathVariable Long sousDomaineId) {
-        return service.findAssignedBySousDomaineAdmin(sousDomaineId)
                 .map(dto -> ResponseEntity.ok(RestResponse.<TbdDashboardSummaryDto>builder()
                         .success(true)
                         .status(HttpStatus.OK)
@@ -177,13 +165,13 @@ public class TbdDashboardController {
         return ResponseEntity.noContent().build();
     }
 
-    @Operation(summary = "Assign dashboard to a domain or category")
+    @Operation(summary = "Assign dashboard to an analytic category")
     @PutMapping("/{id}/assign")
-    public ResponseEntity<RestResponse<TbdAssignation>> assign(
+    public ResponseEntity<RestResponse<TbdAssignationDto>> assign(
             @PathVariable Long id,
             @Validated @RequestBody TbdDashboardAssignRequest request) {
-        TbdAssignation assignation = service.assign(id, request);
-        return ResponseEntity.ok(RestResponse.<TbdAssignation>builder()
+        TbdAssignationDto assignation = service.assign(id, request);
+        return ResponseEntity.ok(RestResponse.<TbdAssignationDto>builder()
                 .success(true)
                 .status(HttpStatus.OK)
                 .data(assignation)

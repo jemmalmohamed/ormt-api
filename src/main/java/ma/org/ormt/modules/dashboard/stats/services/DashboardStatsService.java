@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
 import ma.org.ormt.modules.chiffres.repositories.ChiffreCleRepository;
 import ma.org.ormt.modules.dashboard.stats.dtos.DashboardStatsDto;
-import ma.org.ormt.modules.dashboard.tableaubord.repositories.TableauBordRepository;
+import ma.org.ormt.modules.dashboard.tbgroup.repositories.TbGroupRepository;
 import ma.org.ormt.modules.domaines.domaine.repositories.DomaineRepository;
 import ma.org.ormt.modules.domaines.sousdomaine.repositories.SousDomaineRepository;
 import ma.org.ormt.modules.espaces.repositories.EspaceRepository;
@@ -23,7 +23,7 @@ public class DashboardStatsService {
     private final IndicateurRepository indicateurRepository;
     private final PublicationRepository publicationRepository;
     private final SourceRepository sourceRepository;
-    private final TableauBordRepository tableauBordRepository;
+    private final TbGroupRepository tbGroupRepository;
     private final ChiffreCleRepository chiffreCleRepository;
 
     public DashboardStatsDto getStats() {
@@ -34,7 +34,7 @@ public class DashboardStatsService {
                 .indicateurs(indicateurRepository.count())
                 .publications(publicationRepository.count())
                 .sources(sourceRepository.count())
-                .tableauxBord(tableauBordRepository.count())
+                .tableauxBord(tbGroupRepository.count())
                 .chiffresCles(chiffreCleRepository.count())
                 .build();
     }
