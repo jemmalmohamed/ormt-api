@@ -31,9 +31,9 @@ public interface DomaineAnalytiqueService {
 
     Optional<DomaineAnalytique> findBySourceThemeKey(String sourceThemeKey);
 
-    DomaineAnalytique create(DomaineAnalytiqueRequestDto requestDto);
+    DomaineAnalytique create(DomaineAnalytiqueRequestDto requestDto) throws Exception;
 
-    DomaineAnalytique update(Long id, DomaineAnalytiqueRequestDto requestDto);
+    DomaineAnalytique update(Long id, DomaineAnalytiqueRequestDto requestDto) throws Exception;
 
     void delete(Long id);
 

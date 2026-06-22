@@ -1,6 +1,5 @@
 package ma.org.ormt.modules.analytics.category.dtos.request;
 
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,10 +16,9 @@ public class CategorieAnalytiqueRequestDto extends Dto {
     @NotNull(message = "Ce champ est requis.")
     private Long domaineAnalytiqueId;
 
-    @NotBlank(message = "Ce champ est requis.")
     private String nom;
 
-    @NotBlank(message = "Ce champ est requis.")
+    @jakarta.validation.constraints.NotBlank(message = "Ce champ est requis.")
     private String libelle;
 
     private String description;

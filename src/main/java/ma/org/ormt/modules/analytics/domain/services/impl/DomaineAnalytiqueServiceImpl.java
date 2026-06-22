@@ -1,5 +1,7 @@
 package ma.org.ormt.modules.analytics.domain.services.impl;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -10,9 +12,12 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import ma.org.ormt.core.minio.MinioService;
+import ma.org.ormt.core.utilities.files.ImageUtils;
 import ma.org.ormt.modules.analytics.association.espace.EspaceDomaineAnalytique;
 import ma.org.ormt.modules.analytics.association.espace.EspaceDomaineAnalytiqueRepository;
 import ma.org.ormt.modules.analytics.association.tbgroup.TbGroupDomaineAnalytique;
@@ -59,6 +64,8 @@ public class DomaineAnalytiqueServiceImpl implements DomaineAnalytiqueService {
     private final TbdDashboardRepository tbdDashboardRepository;
     private final DomaineAnalytiqueNamingService namingService;
     private final DomaineRepository domaineRepository;
+    private final MinioService minioService;
+    private final ObjectMapper objectMapper;
 
     @Override
     @Transactional(readOnly = true)
@@ -109,14 +116,14 @@ public class DomaineAnalytiqueServiceImpl implements DomaineAnalytiqueService {
     }
 
     @Override
-    public DomaineAnalytique create(DomaineAnalytiqueRequestDto requestDto) {
+    public DomaineAnalytique create(DomaineAnalytiqueRequestDto requestDto) throws Exception {
         DomaineAnalytique domaineAnalytique = DomaineAnalytique.builder().build();
         applyDomainRequest(domaineAnalytique, requestDto, null);
         return hydrateDomain(domaineAnalytiqueRepository.save(domaineAnalytique));
     }
 
     @Override
-    public DomaineAnalytique update(Long id, DomaineAnalytiqueRequestDto requestDto) {
+    public DomaineAnalytique update(Long id, DomaineAnalytiqueRequestDto requestDto) throws Exception {
         DomaineAnalytique domaineAnalytique = domaineAnalytiqueRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Domaine analytique non trouvé"));
         applyDomainRequest(domaineAnalytique, requestDto, id);
@@ -447,11 +454,12 @@ public class DomaineAnalytiqueServiceImpl implements DomaineAnalytiqueService {
         return dto;
     }
 
-    private void applyDomainRequest(DomaineAnalytique domaineAnalytique, DomaineAnalytiqueRequestDto requestDto, Long currentId) {
-        String nom = requestDto.getNom().trim().toLowerCase();
-        String slug = requestDto.getSlug() == null || requestDto.getSlug().isBlank()
-                ? namingService.normalizeSlug(requestDto.getTitre())
-                : namingService.normalizeSlug(requestDto.getSlug());
+    private void applyDomainRequest(DomaineAnalytique domaineAnalytique, DomaineAnalytiqueRequestDto requestDto, Long currentId)
+            throws Exception {
+        String titre = requestDto.getTitre().trim();
+        String nom = namingService.normalizeSlug(titre);
+        String slug = namingService.normalizeSlug(titre);
+        String sourceThemeKey = namingService.normalizeThemeKey(titre);
         domaineAnalytiqueRepository.findByNom(nom)
                 .filter(existing -> !existing.getId().equals(currentId))
                 .ifPresent(existing -> {
@@ -463,14 +471,45 @@ public class DomaineAnalytiqueServiceImpl implements DomaineAnalytiqueService {
                     throw new IllegalStateException("Un domaine analytique avec ce slug existe déjà.");
                 });
         domaineAnalytique.setNom(nom);
-        domaineAnalytique.setTitre(requestDto.getTitre().trim());
+        domaineAnalytique.setTitre(titre);
         domaineAnalytique.setDescription(requestDto.getDescription());
         domaineAnalytique.setApropos(requestDto.getApropos());
-        domaineAnalytique.setImageUrl(requestDto.getImageUrl());
+        domaineAnalytique.setImageUrl(resolveDomainImageUrl(domaineAnalytique, requestDto));
         domaineAnalytique.setSlug(slug);
-        domaineAnalytique.setSourceThemeKey(requestDto.getSourceThemeKey());
-        domaineAnalytique.setMetadataJson(requestDto.getMetadataJson());
+        domaineAnalytique.setSourceThemeKey(sourceThemeKey);
+        domaineAnalytique.setMetadataJson(buildGeneratedMetadataJson(titre, nom, slug, sourceThemeKey));
         domaineAnalytique.setActif(requestDto.getActif());
+    }
+
+    private String buildGeneratedMetadataJson(String titre, String nom, String slug, String sourceThemeKey) {
+        Map<String, Object> metadata = new LinkedHashMap<>();
+        metadata.put("generated", true);
+        metadata.put("source", "admin_domaines_analytiques");
+        metadata.put("titre", titre);
+        metadata.put("nom", nom);
+        metadata.put("slug", slug);
+        metadata.put("sourceThemeKey", sourceThemeKey);
+
+        try {
+            return objectMapper.writeValueAsString(metadata);
+        } catch (JsonProcessingException exception) {
+            throw new IllegalStateException("Impossible de generer le metadataJson du domaine analytique.", exception);
+        }
+    }
+
+    private String resolveDomainImageUrl(DomaineAnalytique domaineAnalytique, DomaineAnalytiqueRequestDto requestDto)
+            throws Exception {
+        MultipartFile imageFile = requestDto.getImageFile();
+        if (imageFile != null && !imageFile.isEmpty()) {
+            MultipartFile optimizedImage = ImageUtils.optimizeImageWithConverter(imageFile, 1024, 1024, 0.8);
+            return minioService.uploadFile(optimizedImage);
+        }
+
+        if (requestDto.getImageUrl() != null) {
+            return requestDto.getImageUrl();
+        }
+
+        return domaineAnalytique.getImageUrl();
     }
 
     private String normalizedAnalyticsThemeKey(DomaineAnalytique domain) {
@@ -508,10 +547,9 @@ public class DomaineAnalytiqueServiceImpl implements DomaineAnalytiqueService {
 
     private void applyCategoryRequest(CategorieAnalytique category, CategorieAnalytiqueRequestDto requestDto, Long currentId) {
         DomaineAnalytique domain = getDomainOrThrow(requestDto.getDomaineAnalytiqueId());
-        String nom = requestDto.getNom().trim().toLowerCase();
-        String slug = requestDto.getSlug() == null || requestDto.getSlug().isBlank()
-                ? namingService.normalizeSlug(requestDto.getLibelle())
-                : namingService.normalizeSlug(requestDto.getSlug());
+        String libelle = requestDto.getLibelle().trim();
+        String nom = namingService.normalizeSlug(libelle);
+        String slug = namingService.normalizeSlug(libelle);
         categorieAnalytiqueRepository.findByDomaineAnalytiqueIdAndNom(domain.getId(), nom)
                 .filter(existing -> !existing.getId().equals(currentId))
                 .ifPresent(existing -> {
@@ -524,7 +562,7 @@ public class DomaineAnalytiqueServiceImpl implements DomaineAnalytiqueService {
         }
         category.setDomaineAnalytique(domain);
         category.setNom(nom);
-        category.setLibelle(requestDto.getLibelle().trim());
+        category.setLibelle(libelle);
         category.setDescription(requestDto.getDescription());
         category.setSlug(slug);
         category.setOrdre(requestDto.getOrdre() != null ? requestDto.getOrdre() : 0);

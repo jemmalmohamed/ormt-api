@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -80,7 +81,7 @@ public class DomaineAnalytiqueAdminController {
     @PostMapping
     @PreAuthorize("hasAuthority('dashboard:create')")
     public ResponseEntity<RestResponse<DomaineAnalytiqueDto>> create(
-            @Validated @RequestBody DomaineAnalytiqueRequestDto requestDto) {
+            @Validated @ModelAttribute DomaineAnalytiqueRequestDto requestDto) throws Exception {
         return response(mapper.toDto(service.create(requestDto), List.of()), HttpStatus.CREATED);
     }
 
@@ -88,7 +89,7 @@ public class DomaineAnalytiqueAdminController {
     @PreAuthorize("hasAuthority('dashboard:edit')")
     public ResponseEntity<RestResponse<DomaineAnalytiqueDto>> update(
             @PathVariable Long id,
-            @Validated @RequestBody DomaineAnalytiqueRequestDto requestDto) {
+            @Validated @ModelAttribute DomaineAnalytiqueRequestDto requestDto) throws Exception {
         return response(mapper.toDto(service.update(id, requestDto), List.of()), HttpStatus.OK);
     }
 
