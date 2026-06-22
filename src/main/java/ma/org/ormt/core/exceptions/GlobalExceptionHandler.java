@@ -78,6 +78,14 @@ public class GlobalExceptionHandler {
 
     }
 
+    @ExceptionHandler(IllegalStateException.class)
+    public ResponseEntity<ErrorResponse> handleException(IllegalStateException exception) {
+
+        return buildErrorResponse(HttpStatus.UNPROCESSABLE_ENTITY, exception.getMessage(),
+                "exception.error.validation.message", "Validation Data");
+
+    }
+
     @ResponseStatus(HttpStatus.FORBIDDEN)
     @ExceptionHandler(AccessDeniedException.class)
     public ResponseEntity<ErrorResponse> handleAccessDeniedException(AccessDeniedException exception) {
