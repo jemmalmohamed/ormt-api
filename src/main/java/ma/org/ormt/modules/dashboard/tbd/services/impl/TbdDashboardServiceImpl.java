@@ -179,6 +179,15 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
 
     @Override
     @Transactional(readOnly = true)
+    public Optional<TbdDashboardFullDto> findPublishedByCategorie(Long categorieId) {
+        return assignationRepository.findByCibleTypeAndCibleId("CATEGORIE", categorieId)
+                .map(assignation -> dashboardRepository.findById(assignation.getDashboardId()).orElse(null))
+                .filter(d -> d != null && "PUBLISHED".equals(d.getStatus()) && Boolean.TRUE.equals(d.getActif()))
+                .map(d -> findById(d.getId()));
+    }
+
+    @Override
+    @Transactional(readOnly = true)
     public Optional<TbdDashboardFullDto> findPublishedBySousDomaine(Long sousDomaineId) {
         return assignationRepository.findByCibleTypeAndCibleId("SOUS_DOMAINE", sousDomaineId)
                 .map(assignation -> dashboardRepository.findById(assignation.getDashboardId()).orElse(null))

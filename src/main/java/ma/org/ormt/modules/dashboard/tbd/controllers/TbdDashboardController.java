@@ -66,14 +66,6 @@ public class TbdDashboardController {
                 .build());
     }
 
-    @Operation(summary = "Get published dashboard assigned to a sous-domaine (public)")
-    @GetMapping("/public/by-sous-domaine/{sousDomaineId}")
-    public ResponseEntity<TbdDashboardFullDto> findPublishedBySousDomaine(@PathVariable Long sousDomaineId) {
-        return service.findPublishedBySousDomaine(sousDomaineId)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.noContent().build());
-    }
-
     @Operation(summary = "Get dashboard assigned to a categorie (admin, any status)")
     @GetMapping("/admin/by-categorie/{categorieId}")
     public ResponseEntity<RestResponse<TbdDashboardSummaryDto>> findByCategorieAdmin(@PathVariable Long categorieId) {

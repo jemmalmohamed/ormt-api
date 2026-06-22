@@ -61,6 +61,14 @@ public class TbdCategoryAdminController {
         return response(mapper.mapCategoryToDto(service.updateCategory(id, requestDto)), HttpStatus.OK);
     }
 
+    @PutMapping("/reorder")
+    @PreAuthorize("hasAuthority('dashboard:edit')")
+    public ResponseEntity<Void> reorderCategories(
+            @RequestBody java.util.List<ma.org.ormt.modules.dashboard.tbd.categories.services.TbdCategoryService.ReorderItem> items) {
+        service.reorderCategories(items);
+        return ResponseEntity.noContent().build();
+    }
+
     @DeleteMapping("/{id}")
     @PreAuthorize("hasAuthority('dashboard:delete')")
     public ResponseEntity<Void> deleteCategory(@PathVariable Long id) {

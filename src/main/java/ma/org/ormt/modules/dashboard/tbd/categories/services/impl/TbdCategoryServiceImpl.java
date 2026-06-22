@@ -93,6 +93,15 @@ public class TbdCategoryServiceImpl implements TbdCategoryService {
         categoryRepository.delete(category);
     }
 
+    @Override
+    public void reorderCategories(List<TbdCategoryService.ReorderItem> items) {
+        items.forEach(item -> categoryRepository.findById(item.id())
+                .ifPresent(cat -> {
+                    cat.setOrdre(item.ordre());
+                    categoryRepository.save(cat);
+                }));
+    }
+
     private void applyCategoryRequest(TbdCategory category, TbdCategoryRequestDto requestDto) {
         TBDomaine tbDomaine = tbDomaineRepository.findById(requestDto.getTbDomaineId())
                 .orElseThrow(() -> new EntityNotFoundException("Domaine TB non trouvé"));

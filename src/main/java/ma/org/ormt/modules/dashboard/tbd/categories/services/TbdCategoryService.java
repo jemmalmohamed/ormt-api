@@ -16,4 +16,8 @@ public interface TbdCategoryService {
     TbdCategory updateCategory(Long id, TbdCategoryRequestDto requestDto);
 
     void deleteCategory(Long id);
+
+    void reorderCategories(List<ReorderItem> items);
+
+    record ReorderItem(Long id, Integer ordre) {}
 }

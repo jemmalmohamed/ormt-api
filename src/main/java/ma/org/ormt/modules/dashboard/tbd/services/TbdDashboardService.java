@@ -33,6 +33,8 @@ public interface TbdDashboardService {
 
     java.util.Optional<TbdDashboardFullDto> findPublishedBySousDomaine(Long sousDomaineId);
 
+    java.util.Optional<TbdDashboardFullDto> findPublishedByCategorie(Long categorieId);
+
     java.util.Optional<TbdDashboardSummaryDto> findAssignedBySousDomaineAdmin(Long sousDomaineId);
 
     java.util.Optional<TbdDashboardSummaryDto> findAssignedByCategorieAdmin(Long categorieId);
