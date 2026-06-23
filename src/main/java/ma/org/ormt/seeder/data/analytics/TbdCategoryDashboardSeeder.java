@@ -3,6 +3,7 @@ package ma.org.ormt.seeder.data.analytics;
 import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
@@ -22,10 +23,17 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import ma.org.ormt.core.commun.base.dto.Dto;
 import ma.org.ormt.modules.analytics.category.models.CategorieAnalytique;
 import ma.org.ormt.modules.analytics.category.repositories.CategorieAnalytiqueRepository;
 import ma.org.ormt.modules.analytics.domain.DomaineAnalytiqueNamingService;
 import ma.org.ormt.modules.analytics.domain.models.DomaineAnalytique;
+import ma.org.ormt.modules.chiffres.dtos.request.ChiffreCleRequestDto;
+import ma.org.ormt.modules.chiffres.models.ChiffreCle;
+import ma.org.ormt.modules.chiffres.models.enums.KpiEvolutionMode;
+import ma.org.ormt.modules.chiffres.models.enums.KpiFormatType;
+import ma.org.ormt.modules.chiffres.models.enums.KpiModeSource;
+import ma.org.ormt.modules.chiffres.services.ChiffreCleService;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdDashboard;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdSection;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdSourceListing;
@@ -40,8 +48,12 @@ import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 import ma.org.ormt.modules.domaines.domaine.repositories.DomaineRepository;
 import ma.org.ormt.modules.domaines.sousdomaine.models.SousDomaine;
 import ma.org.ormt.modules.domaines.sousdomaine.repositories.SousDomaineRepository;
+import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 import ma.org.ormt.modules.indicateurs.source.models.Source;
+import ma.org.ormt.modules.indicateurs.valeurdimension.models.ValeurDimension;
 
 @Log4j2
 @Component
@@ -51,10 +63,23 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
 
     private static final String SEED_MARKER = "seed:tbd-category-auto";
     private static final String SEED_SOURCE_TEXT = "Dashboard initial genere automatiquement pour categorie analytique.";
-    private static final int KPI_ROW_HEIGHT_PX = 180;
+    private static final int KPI_ROW_HEIGHT_PX = 90;
+    private static final int KPI_SECONDARY_ROW_HEIGHT_PX = 90;
     private static final int CHART_ROW_HEIGHT_PX = 290;
     private static final int INLINE_EDITOR_ROW_HEIGHT_PX = 170;
     private static final int SECTION_EDITOR_ROW_HEIGHT_PX = 210;
+    private static final SeedKpiStylePalette[] KPI_SEED_STYLES = new SeedKpiStylePalette[] {
+            new SeedKpiStylePalette("#e74c3c", "#ffffff", "#cf3f31", "0 10px 24px rgba(231, 76, 60, 0.18)"),
+            new SeedKpiStylePalette("#39b563", "#ffffff", "#2f9953", "0 10px 24px rgba(57, 181, 99, 0.18)"),
+            new SeedKpiStylePalette("#9b59b6", "#ffffff", "#854aa0", "0 10px 24px rgba(155, 89, 182, 0.18)"),
+            new SeedKpiStylePalette("#f5a623", "#ffffff", "#dc9219", "0 10px 24px rgba(245, 166, 35, 0.18)")
+    };
+    private static final SeedKpiStylePalette[] KPI_SECONDARY_SEED_STYLES = new SeedKpiStylePalette[] {
+            new SeedKpiStylePalette("#f3f4f6", "#1f3a5a", "#ef4444", "0 8px 20px rgba(148, 163, 184, 0.12)", 0, 0, 0, 4),
+            new SeedKpiStylePalette("#f3f4f6", "#1f3a5a", "#22c55e", "0 8px 20px rgba(148, 163, 184, 0.12)", 0, 0, 0, 4),
+            new SeedKpiStylePalette("#f3f4f6", "#1f3a5a", "#3b82f6", "0 8px 20px rgba(148, 163, 184, 0.12)", 0, 0, 0, 4),
+            new SeedKpiStylePalette("#f3f4f6", "#1f3a5a", "#8b5cf6", "0 8px 20px rgba(148, 163, 184, 0.12)", 0, 0, 0, 4)
+    };
     private static final Comparator<SousDomaine> SOUS_DOMAINE_COMPARATOR = Comparator
             .comparing(TbdCategoryDashboardSeeder::safeInteger)
             .thenComparing(TbdCategoryDashboardSeeder::safeString);
@@ -75,6 +100,8 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
     private final SousDomaineRepository sousDomaineRepository;
     private final DomaineAnalytiqueNamingService namingService;
     private final AnalyticsSeedJsonBuilder analyticsSeedJsonBuilder;
+    private final ChiffreCleService chiffreCleService;
+    private final IndicateurService indicateurService;
     private final ObjectMapper objectMapper;
 
     @Override
@@ -163,7 +190,7 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
 
         createSourceListings(dashboard.getId(), perimeterIndicators);
         createKpiSection(dashboard.getId(), perimeterIndicators);
-        createIndicatorSection(dashboard.getId(), groups);
+        createIndicatorSection(dashboard.getId(), groups, perimeterIndicators);
         createEditorSection(dashboard.getId(), category, canonicalDomain);
 
         category.setTbdDashboard(dashboard);
@@ -207,6 +234,8 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                         sousDomaine.getIndicateurs().stream()
                                 .filter(Objects::nonNull)
                                 .filter(indicator -> !Boolean.FALSE.equals(indicator.getActif()))
+                                .map(this::hydrateIndicatorForSeed)
+                                .filter(Objects::nonNull)
                                 .sorted(INDICATEUR_COMPARATOR)
                                 .collect(Collectors.collectingAndThen(
                                         Collectors.toMap(Indicateur::getId, indicator -> indicator, (left, _) -> left,
@@ -258,14 +287,22 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                 .lastModifiedBy(SEED_MARKER)
                 .build());
 
-        List<String> titles = topKpiTitles(perimeterIndicators);
+        List<KpiSeedCandidate> candidates = selectTopKpiCandidates(perimeterIndicators);
         for (int index = 0; index < 4; index++) {
+            KpiSeedCandidate candidate = candidates.size() > index ? candidates.get(index) : null;
+            if (candidate == null) {
+                createEmptyWidget(row.getId(), index + 1, 25, "KPI indisponible");
+                continue;
+            }
+
+            ChiffreCle seededKpi = createOrReuseIndicatorKpi(candidate, index, false);
             tbdWidgetRepository.save(TbdWidget.builder()
                     .rowId(row.getId())
                     .type("KPI_CARD")
-                    .titre(titles.get(index))
+                    .titre(indicatorDisplayTitle(candidate.indicator()))
                     .ordre(index + 1)
                     .sizePercent(25)
+                    .kpiId(seededKpi.getId())
                     .actif(true)
                     .createdBy(SEED_MARKER)
                     .lastModifiedBy(SEED_MARKER)
@@ -273,7 +310,7 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
         }
     }
 
-    private void createIndicatorSection(Long dashboardId, List<SousDomaineIndicators> groups) {
+    private void createIndicatorSection(Long dashboardId, List<SousDomaineIndicators> groups, List<Indicateur> perimeterIndicators) {
         TbdSection section = tbdSectionRepository.save(TbdSection.builder()
                 .dashboardId(dashboardId)
                 .label("Indicateurs")
@@ -285,6 +322,8 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                 .build());
 
         int rowOrder = 1;
+        boolean shouldInsertSecondaryKpis = perimeterIndicators != null && perimeterIndicators.size() > 8;
+        boolean secondaryKpisInserted = false;
         for (SousDomaineIndicators group : groups) {
             List<Indicateur> indicators = group.indicators();
             int groupRowCount = 0;
@@ -315,6 +354,11 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                     }
                 }
 
+                if (shouldInsertSecondaryKpis && !secondaryKpisInserted) {
+                    createSecondaryKpiRow(section.getId(), rowOrder++, perimeterIndicators);
+                    secondaryKpisInserted = true;
+                }
+
                 groupRowCount++;
                 if (groupRowCount % 3 == 0) {
                     createInlineEditorRow(
@@ -331,6 +375,10 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                     "Synthese " + defaultString(group.sousDomaine().getNom(), "sous-domaine"),
                     buildInlineEditorContent(group.sousDomaine().getNom(), "fin de section sous-domaine"),
                     SECTION_EDITOR_ROW_HEIGHT_PX);
+        }
+
+        if (shouldInsertSecondaryKpis && !secondaryKpisInserted) {
+            createSecondaryKpiRow(section.getId(), rowOrder, perimeterIndicators);
         }
     }
 
@@ -421,15 +469,205 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                 .build());
     }
 
-    private List<String> topKpiTitles(List<Indicateur> perimeterIndicators) {
-        List<String> titles = perimeterIndicators.stream()
-                .limit(4)
-                .map(TbdCategoryDashboardSeeder::indicatorDisplayTitle)
-                .collect(Collectors.toCollection(ArrayList::new));
-        while (titles.size() < 4) {
-            titles.add("KPI " + (titles.size() + 1) + " a completer");
+    private List<KpiSeedCandidate> selectTopKpiCandidates(List<Indicateur> perimeterIndicators) {
+        return selectTopKpiCandidates(perimeterIndicators, 0);
+    }
+
+    private List<KpiSeedCandidate> selectTopKpiCandidates(List<Indicateur> perimeterIndicators, int skip) {
+        if (perimeterIndicators == null || perimeterIndicators.isEmpty()) {
+            return Collections.emptyList();
         }
-        return titles;
+        return perimeterIndicators.stream()
+                .skip(Math.max(0, skip))
+                .map(this::buildKpiSeedCandidate)
+                .filter(Objects::nonNull)
+                .limit(4)
+                .collect(Collectors.toList());
+    }
+
+    private KpiSeedCandidate buildKpiSeedCandidate(Indicateur indicator) {
+        if (indicator == null || Boolean.FALSE.equals(indicator.getActif())) {
+            return null;
+        }
+        DonneeIndicateur latestDonnee = extractLatestTemporalDonnee(indicator);
+        if (latestDonnee == null) {
+            return null;
+        }
+        String latestDate = extractTemporalValue(indicator, latestDonnee);
+        if (!hasText(latestDate)) {
+            return null;
+        }
+        return new KpiSeedCandidate(indicator, latestDonnee, latestDate);
+    }
+
+    private ChiffreCle createOrReuseIndicatorKpi(KpiSeedCandidate candidate, int paletteIndex, boolean secondaryStyle) {
+        String libelle = secondaryStyle
+                ? indicatorDisplayTitle(candidate.indicator()) + " - focus"
+                : indicatorDisplayTitle(candidate.indicator());
+        Optional<ChiffreCle> existing = chiffreCleService.findByLibelle(libelle);
+        if (existing.isPresent()) {
+            return existing.get();
+        }
+
+        ChiffreCleRequestDto request = new ChiffreCleRequestDto();
+        request.setLibelle(libelle);
+        request.setDescription(candidate.indicator().getDescription());
+        request.setValeur(candidate.donnee().getValeur());
+        request.setUnite(candidate.indicator().getUnite());
+        request.setActif(Boolean.TRUE);
+        request.setAfficherDate(Boolean.TRUE);
+        request.setAfficherDescription(Boolean.FALSE);
+        request.setModeSource(KpiModeSource.INDICATEUR_VALUE);
+        request.setFormatType(resolveKpiFormatType(candidate.indicator()));
+        request.setEvolutionMode(KpiEvolutionMode.NONE);
+        request.setStyleJson(resolveSeedStyleJson(paletteIndex, secondaryStyle));
+        request.setIndicateur(buildReferenceDto(candidate.indicator().getId()));
+        request.setDonneeIndicateur(buildReferenceDto(candidate.donnee().getId()));
+
+        try {
+            return chiffreCleService.create(request);
+        } catch (Exception exception) {
+            throw new IllegalStateException(
+                    "Impossible de creer le KPI seed pour l'indicateur '" + libelle + "'.",
+                    exception);
+        }
+    }
+
+    private KpiFormatType resolveKpiFormatType(Indicateur indicator) {
+        String unite = indicator != null ? indicator.getUnite() : null;
+        return "%".equals(unite) ? KpiFormatType.PERCENT : KpiFormatType.NUMBER;
+    }
+
+    private void createSecondaryKpiRow(Long sectionId, int rowOrder, List<Indicateur> perimeterIndicators) {
+        List<KpiSeedCandidate> candidates = selectTopKpiCandidates(perimeterIndicators, 4);
+        if (candidates.isEmpty()) {
+            return;
+        }
+
+        TbdWidgetRow row = tbdWidgetRowRepository.save(TbdWidgetRow.builder()
+                .sectionId(sectionId)
+                .ordre(rowOrder)
+                .sizePercent(100)
+                .heightPx(KPI_SECONDARY_ROW_HEIGHT_PX)
+                .createdBy(SEED_MARKER)
+                .lastModifiedBy(SEED_MARKER)
+                .build());
+
+        for (int index = 0; index < 4; index++) {
+            KpiSeedCandidate candidate = candidates.size() > index ? candidates.get(index) : null;
+            if (candidate == null) {
+                createEmptyWidget(row.getId(), index + 1, 25, "KPI indisponible");
+                continue;
+            }
+
+            ChiffreCle seededKpi = createOrReuseIndicatorKpi(candidate, index, true);
+            tbdWidgetRepository.save(TbdWidget.builder()
+                    .rowId(row.getId())
+                    .type("KPI_CARD")
+                    .titre(indicatorDisplayTitle(candidate.indicator()))
+                    .ordre(index + 1)
+                    .sizePercent(25)
+                    .kpiId(seededKpi.getId())
+                    .actif(true)
+                    .createdBy(SEED_MARKER)
+                    .lastModifiedBy(SEED_MARKER)
+                    .build());
+        }
+    }
+
+    private DonneeIndicateur extractLatestTemporalDonnee(Indicateur indicator) {
+        if (indicator == null || indicator.getDonnees() == null || indicator.getDonnees().isEmpty()) {
+            return null;
+        }
+        Long temporalDimensionId = indicator.getIndicateurDimensions().stream()
+                .filter(Objects::nonNull)
+                .filter(indicateurDimension -> Boolean.TRUE.equals(indicateurDimension.getTemporelle()))
+                .map(IndicateurDimension::getDimension)
+                .filter(Objects::nonNull)
+                .map(dimension -> dimension.getId())
+                .filter(Objects::nonNull)
+                .findFirst()
+                .orElse(null);
+        if (temporalDimensionId == null) {
+            return null;
+        }
+
+        return indicator.getDonnees().stream()
+                .filter(Objects::nonNull)
+                .filter(donnee -> hasText(extractTemporalValue(temporalDimensionId, donnee)))
+                .max((left, right) -> compareTemporalValues(
+                        extractTemporalValue(temporalDimensionId, left),
+                        extractTemporalValue(temporalDimensionId, right)))
+                .orElse(null);
+    }
+
+    private String extractTemporalValue(Indicateur indicator, DonneeIndicateur donnee) {
+        if (indicator == null || donnee == null) {
+            return null;
+        }
+        Long temporalDimensionId = indicator.getIndicateurDimensions().stream()
+                .filter(Objects::nonNull)
+                .filter(indicateurDimension -> Boolean.TRUE.equals(indicateurDimension.getTemporelle()))
+                .map(IndicateurDimension::getDimension)
+                .filter(Objects::nonNull)
+                .map(dimension -> dimension.getId())
+                .filter(Objects::nonNull)
+                .findFirst()
+                .orElse(null);
+        if (temporalDimensionId == null) {
+            return null;
+        }
+        return extractTemporalValue(temporalDimensionId, donnee);
+    }
+
+    private String extractTemporalValue(Long temporalDimensionId, DonneeIndicateur donnee) {
+        if (temporalDimensionId == null || donnee == null || donnee.getValeurDimensions() == null) {
+            return null;
+        }
+        return donnee.getValeurDimensions().stream()
+                .filter(Objects::nonNull)
+                .filter(valeurDimension -> valeurDimension.getDimension() != null)
+                .filter(valeurDimension -> temporalDimensionId.equals(valeurDimension.getDimension().getId()))
+                .map(ValeurDimension::getValeur)
+                .filter(TbdCategoryDashboardSeeder::hasText)
+                .findFirst()
+                .orElse(null);
+    }
+
+    private int compareTemporalValues(String left, String right) {
+        if (!hasText(left) && !hasText(right)) {
+            return 0;
+        }
+        if (!hasText(left)) {
+            return -1;
+        }
+        if (!hasText(right)) {
+            return 1;
+        }
+        try {
+            return Integer.compare(Integer.parseInt(left.trim()), Integer.parseInt(right.trim()));
+        } catch (NumberFormatException ignored) {
+            return left.trim().compareTo(right.trim());
+        }
+    }
+
+    private String resolveSeedStyleJson(int index, boolean secondaryStyle) {
+        SeedKpiStylePalette[] palettes = secondaryStyle ? KPI_SECONDARY_SEED_STYLES : KPI_SEED_STYLES;
+        SeedKpiStylePalette palette = palettes[Math.floorMod(index, palettes.length)];
+        return palette.toStyleJson();
+    }
+
+    private Dto buildReferenceDto(Long id) {
+        Dto dto = new Dto();
+        dto.setId(id);
+        return dto;
+    }
+
+    private Indicateur hydrateIndicatorForSeed(Indicateur indicator) {
+        if (indicator == null || !hasText(indicator.getNom())) {
+            return null;
+        }
+        return indicateurService.findByNomWithDonneesAndDimensions(indicator.getNom()).orElse(indicator);
     }
 
     private String buildDashboardName(CategorieAnalytique category) {
@@ -442,8 +680,13 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
     }
 
     private String buildDashboardDescription(CategorieAnalytique category) {
-        return "Dashboard initial seede automatiquement pour la categorie analytique '"
-                + defaultString(category.getLibelle(), "Sans libelle") + "'.";
+        String categoryLabel = defaultString(category.getLibelle(), "Sans libelle");
+        return "Ce tableau de bord initial a ete genere automatiquement pour la categorie analytique '"
+                + categoryLabel
+                + "'. Il propose une premiere lecture des principaux KPI et indicateurs disponibles, "
+                + "avec une structure prete a etre enrichie par les equipes metier. "
+                + "Utilisez cette base pour completer l'analyse, ajouter le contexte utile "
+                + "et affiner progressivement le contenu avant publication finale.";
     }
 
     private String buildEditorTemplate(CategorieAnalytique category, Domaine canonicalDomain) {
@@ -568,5 +811,40 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
     }
 
     private record SousDomaineIndicators(SousDomaine sousDomaine, List<Indicateur> indicators) {
+    }
+
+    private record KpiSeedCandidate(Indicateur indicator, DonneeIndicateur donnee, String latestDate) {
+    }
+
+    private record SeedKpiStylePalette(
+            String backgroundColor,
+            String textColor,
+            String borderColor,
+            String shadow,
+            int borderTopWidth,
+            int borderRightWidth,
+            int borderBottomWidth,
+            int borderLeftWidth) {
+        private SeedKpiStylePalette(String backgroundColor, String textColor, String borderColor, String shadow) {
+            this(backgroundColor, textColor, borderColor, shadow, 1, 1, 1, 1);
+        }
+
+        private String toStyleJson() {
+            return """
+                    {"backgroundColor":"%s","textColor":"%s","borderTopColor":"%s","borderRightColor":"%s","borderBottomColor":"%s","borderLeftColor":"%s","borderTopWidth":%d,"borderRightWidth":%d,"borderBottomWidth":%d,"borderLeftWidth":%d,"borderTopLeftRadius":0,"borderTopRightRadius":0,"borderBottomRightRadius":0,"borderBottomLeftRadius":0,"paddingTop":4,"paddingRight":4,"paddingBottom":4,"paddingLeft":4,"shadow":"%s","textAlign":"center"}
+                    """
+                    .formatted(
+                            backgroundColor,
+                            textColor,
+                            borderColor,
+                            borderColor,
+                            borderColor,
+                            borderColor,
+                            borderTopWidth,
+                            borderRightWidth,
+                            borderBottomWidth,
+                            borderLeftWidth,
+                            shadow);
+        }
     }
 }

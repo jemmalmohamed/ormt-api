@@ -447,7 +447,7 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
     public void updateRowHeight(Long rowId, TbdWidgetRowHeightUpdateRequest request) {
         TbdWidgetRow row = widgetRowRepository.findById(rowId)
                 .orElseThrow(() -> new EntityNotFoundException(ROW_NOT_FOUND));
-        row.setHeightPx(Math.max(80, request.getHeightPx()));
+        row.setHeightPx(Math.max(48, request.getHeightPx()));
         widgetRowRepository.save(row);
     }
 

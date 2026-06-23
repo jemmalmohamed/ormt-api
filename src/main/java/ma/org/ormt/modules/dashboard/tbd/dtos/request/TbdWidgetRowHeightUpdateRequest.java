@@ -14,6 +14,6 @@ import lombok.Setter;
 public class TbdWidgetRowHeightUpdateRequest {
 
     @NotNull
-    @Min(80)
+    @Min(48)
     private Integer heightPx;
 }
