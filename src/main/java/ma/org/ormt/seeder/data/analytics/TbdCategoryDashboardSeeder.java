@@ -235,6 +235,7 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                                 .filter(Objects::nonNull)
                                 .filter(indicator -> !Boolean.FALSE.equals(indicator.getActif()))
                                 .map(this::hydrateIndicatorForSeed)
+                                .filter(this::hasSeedableIndicatorData)
                                 .filter(Objects::nonNull)
                                 .sorted(INDICATEUR_COMPARATOR)
                                 .collect(Collectors.collectingAndThen(
@@ -383,9 +384,10 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
     }
 
     private void createEditorSection(Long dashboardId, CategorieAnalytique category, Domaine canonicalDomain) {
+        String editorSectionTitle = buildMainEditorTitle(category, canonicalDomain);
         TbdSection section = tbdSectionRepository.save(TbdSection.builder()
                 .dashboardId(dashboardId)
-                .label("Analyse et tendances")
+                .label(editorSectionTitle)
                 .ordre(3)
                 .sizePercent(25)
                 .actif(true)
@@ -405,7 +407,7 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
         tbdWidgetRepository.save(TbdWidget.builder()
                 .rowId(row.getId())
                 .type("EDITOR")
-                .titre("Analyse et tendances")
+                .titre(editorSectionTitle)
                 .ordre(1)
                 .sizePercent(100)
                 .contentJson(buildEditorTemplate(category, canonicalDomain))
@@ -670,6 +672,20 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
         return indicateurService.findByNomWithDonneesAndDimensions(indicator.getNom()).orElse(indicator);
     }
 
+    private boolean hasSeedableIndicatorData(Indicateur indicator) {
+        if (indicator == null || indicator.getDonnees() == null || indicator.getDonnees().isEmpty()) {
+            return false;
+        }
+
+        return indicator.getDonnees().stream()
+                .filter(Objects::nonNull)
+                .anyMatch(donnee -> hasText(donnee.getValeur())
+                        || (donnee.getValeurDimensions() != null && donnee.getValeurDimensions().stream()
+                                .filter(Objects::nonNull)
+                                .map(ValeurDimension::getValeur)
+                                .anyMatch(TbdCategoryDashboardSeeder::hasText)));
+    }
+
     private String buildDashboardName(CategorieAnalytique category) {
         String base = hasText(category.getSlug()) ? category.getSlug() : category.getLibelle();
         String normalized = normalize(base);
@@ -690,41 +706,167 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
     }
 
     private String buildEditorTemplate(CategorieAnalytique category, Domaine canonicalDomain) {
+        String categoryLabel = escapeHtml(defaultString(category.getLibelle(), "Categorie"));
+        String domainLabel = escapeHtml(defaultString(canonicalDomain.getNom(), "Domaine"));
+        EditorialTheme theme = resolveEditorialTheme(
+                category != null ? category.getLibelle() : null,
+                canonicalDomain != null ? canonicalDomain.getNom() : null,
+                null);
         String html = """
-                <p><strong>Analyse initiale</strong></p>
-                <p>Cette zone est pre-remplie pour accompagner la categorie <em>%s</em> du domaine <em>%s</em>.</p>
+                <p><strong>Lecture d'ensemble du tableau de bord</strong></p>
+                <p>Le present espace editorial accompagne la categorie <em>%s</em> rattachee au domaine <em>%s</em>.</p>
+                <p>%s</p>
                 <ul>
-                  <li>Ajouter ici les points saillants observes sur les indicateurs.</li>
-                  <li>Documenter les evolutions marquantes et les tendances a surveiller.</li>
-                  <li>Completer avec le contexte metier, les sources et les hypotheses utiles.</li>
+                  <li>%s</li>
+                  <li>%s</li>
+                  <li>%s</li>
+                  <li>%s</li>
                 </ul>
-                <p><em>Contenu a enrichir par les equipes metier avant publication editoriale finale.</em></p>
+                <p><em>Ce contenu est genere comme base de travail et doit etre consolide par les equipes metier avant publication.</em></p>
                 """
                 .formatted(
-                        escapeHtml(defaultString(category.getLibelle(), "Categorie")),
-                        escapeHtml(defaultString(canonicalDomain.getNom(), "Domaine")));
+                        categoryLabel,
+                        domainLabel,
+                        escapeHtml(theme.intro()),
+                        escapeHtml(theme.bullet1()),
+                        escapeHtml(theme.bullet2()),
+                        escapeHtml(theme.bullet3()),
+                        escapeHtml(theme.bullet4()));
         return analyticsSeedJsonBuilder.editorContent(html, "#fcfbf8", "#1f2937");
     }
 
     private String buildInlineEditorTitle(String sousDomaineName, int blockIndex) {
-        return "Analyse " + defaultString(sousDomaineName, "sous-domaine") + " " + blockIndex;
+        EditorialTheme theme = resolveEditorialTheme(sousDomaineName, null, null);
+        return theme.inlineTitlePrefix() + " " + defaultString(sousDomaineName, "sous-domaine") + " " + blockIndex;
+    }
+
+    private String buildMainEditorTitle(CategorieAnalytique category, Domaine canonicalDomain) {
+        EditorialTheme theme = resolveEditorialTheme(
+                category != null ? category.getLibelle() : null,
+                canonicalDomain != null ? canonicalDomain.getNom() : null,
+                null);
+        return theme.mainTitle();
     }
 
     private String buildInlineEditorContent(String sousDomaineName, String marker) {
+        String sousDomaineLabel = escapeHtml(defaultString(sousDomaineName, "Sous-domaine"));
+        EditorialTheme theme = resolveEditorialTheme(sousDomaineName, marker, null);
         String html = """
-                <p><strong>Note d'analyse</strong></p>
-                <p>Cette zone accompagne le sous-domaine <em>%s</em>.</p>
+                <p><strong>Repere de lecture</strong></p>
+                <p>Ce bloc editorial accompagne le sous-domaine <em>%s</em> et sert a contextualiser les visualisations voisines.</p>
                 <ul>
-                  <li>Documenter ici les points saillants observes sur ce bloc.</li>
-                  <li>Ajouter les evolutions, alertes ou explications utiles.</li>
-                  <li>Completer avec les hypotheses metier et les lectures des indicateurs.</li>
+                  <li>%s</li>
+                  <li>%s</li>
+                  <li>%s</li>
                 </ul>
                 <p><em>Repere seed: %s.</em></p>
                 """
                 .formatted(
-                        escapeHtml(defaultString(sousDomaineName, "Sous-domaine")),
+                        sousDomaineLabel,
+                        escapeHtml(theme.inline1()),
+                        escapeHtml(theme.inline2()),
+                        escapeHtml(theme.inline3()),
                         escapeHtml(marker));
         return analyticsSeedJsonBuilder.editorContent(html, "#fcfbf8", "#1f2937");
+    }
+
+    private EditorialTheme resolveEditorialTheme(String first, String second, String third) {
+        String joined = normalizeForTheme(first + " " + second + " " + third);
+
+        if (containsAny(joined, "salaire", "remuneration", "revenu")) {
+            return new EditorialTheme(
+                    "Analyse des remunerations",
+                    "Cette synthese a vocation a mettre en perspective le niveau, la dispersion et l'evolution des remunerations observees dans le perimetre analyse.",
+                    "Comparer les niveaux de salaire selon les profils, secteurs ou territoires les plus significatifs.",
+                    "Identifier les evolutions recentes, les effets de rattrapage ou les poches de decalage persistantes.",
+                    "Preciser les facteurs explicatifs possibles : qualification, structure d'emploi, saisonnalite ou formalisation.",
+                    "Conclure sur les principaux enjeux d'attractivite, de pouvoir d'achat ou d'equite de remuneration.",
+                    "Lecture salaires",
+                    "Resumer les variations de niveau de remuneration les plus visibles sur ce bloc.",
+                    "Signaler les ecarts entre profils ou territoires qui meritent une lecture prioritaire.",
+                    "Formuler une interpretation courte sur la dynamique salariale observee.");
+        }
+
+        if (containsAny(joined, "emploi", "chomage", "insertion", "intermediation", "marche-du-travail", "travail")) {
+            return new EditorialTheme(
+                    "Analyse du marche du travail",
+                    "Cette synthese doit aider a lire les dynamiques d'emploi, d'insertion ou de tension du marche du travail sur la periode recente.",
+                    "Presenter les evolutions majeures concernant l'acces a l'emploi, les volumes ou les taux les plus structurants.",
+                    "Mettre en evidence les profils, territoires ou segments du marche qui progressent, stagnent ou reculent.",
+                    "Ajouter les facteurs d'explication utiles : saisonnalite, conjoncture, qualification, genre ou age.",
+                    "Conclure avec les implications possibles pour l'accompagnement, le placement ou le suivi des publics.",
+                    "Lecture emploi",
+                    "Resumer les dynamiques d'emploi ou d'insertion qui ressortent de ce groupe d'indicateurs.",
+                    "Signaler les tensions, decrochages ou reprises visibles selon les publics ou les territoires.",
+                    "Ajouter une lecture metier courte sur les implications pour le suivi du marche du travail.");
+        }
+
+        if (containsAny(joined, "entreprise", "entrepreneuriat", "creation", "productivite", "competitivite", "investissement")) {
+            return new EditorialTheme(
+                    "Analyse des dynamiques d'entreprise",
+                    "Cette synthese vise a eclairer les dynamiques de creation, de developpement ou de performance des entreprises suivies dans ce perimetre.",
+                    "Mettre en avant les indicateurs qui traduisent le mieux le rythme de creation, d'expansion ou de ralentissement.",
+                    "Comparer les profils d'entreprises, branches ou zones qui concentrent les evolutions les plus notables.",
+                    "Documenter les facteurs de contexte : financement, demande, climat des affaires ou organisation productive.",
+                    "Conclure sur les enjeux de competitivite, de resilience ou d'accompagnement des acteurs economiques.",
+                    "Lecture entreprises",
+                    "Resumer les dynamiques de creation, de performance ou de structuration visibles sur ce bloc.",
+                    "Souligner les contrastes entre segments, branches ou implantations les plus marquants.",
+                    "Ajouter une interpretation concise sur les leviers ou freins qui ressortent.");
+        }
+
+        if (containsAny(joined, "formation", "education", "diplome", "competence", "apprentissage")) {
+            return new EditorialTheme(
+                    "Analyse formation et competences",
+                    "Cette synthese doit faciliter la lecture des parcours de formation, des acquis en competences et de leur articulation avec l'insertion professionnelle.",
+                    "Presenter les niveaux, progressions ou disparites les plus visibles selon les filieres et les publics.",
+                    "Mettre en avant les transitions vers l'emploi, les points de rupture ou les segments qui performent le mieux.",
+                    "Completer avec les facteurs explicatifs utiles : niveau de diplome, specialite, territoire ou type d'etablissement.",
+                    "Conclure sur les priorites de rapprochement entre offre de formation et besoins du marche du travail.",
+                    "Lecture formation",
+                    "Resumer les enseignements les plus utiles sur les parcours, resultats ou debouches visibles ici.",
+                    "Signaler les ecarts de performance ou d'insertion a surveiller dans ce sous-domaine.",
+                    "Ajouter une courte interpretation sur l'adequation formation-emploi.");
+        }
+
+        if (containsAny(joined, "loi", "inspection", "conflit", "securite", "relations-professionnelles", "controle")) {
+            return new EditorialTheme(
+                    "Analyse controle et conformite",
+                    "Cette synthese a pour objectif de restituer les principaux constats sur l'application de la reglementation, les situations de controle et les eventuelles tensions sociales.",
+                    "Mettre en avant les volumes, taux ou situations qui traduisent le mieux l'etat du respect des obligations observees.",
+                    "Comparer les secteurs, territoires ou types de situation ou les ecarts sont les plus marquants.",
+                    "Ajouter les explications utiles : intensite des controles, nature des infractions, cadre sectoriel ou risque social.",
+                    "Conclure sur les priorites de prevention, de suivi ou de mediation qui decoulent de la lecture du bloc.",
+                    "Lecture conformite",
+                    "Resumer les constats de conformite, de controle ou de tension sociale les plus saillants.",
+                    "Signaler les situations atypiques ou recurrentes qui meritent un suivi particulier.",
+                    "Ajouter une lecture metier courte sur les risques ou actions prioritaires.");
+        }
+
+        return new EditorialTheme(
+                "Analyse et tendances",
+                "Il permet d'introduire les principaux enseignements du tableau de bord avant d'entrer dans le detail des indicateurs et des KPI affiches plus haut.",
+                "Presenter les evolutions majeures observees sur la periode la plus recente.",
+                "Mettre en avant les ruptures, contrastes territoriaux ou profils qui ressortent le plus.",
+                "Ajouter les facteurs d'explication, limites de lecture et points de vigilance utiles.",
+                "Conclure avec une courte synthese orientee decision ou suivi operationnel.",
+                "Lecture metier",
+                "Resumer les faits marquants qui ressortent de ce groupe d'indicateurs.",
+                "Signaler les evolutions atypiques, decrochages ou convergences utiles a retenir.",
+                "Ajouter une interpretation courte pour aider la lecture metier du bloc.");
+    }
+
+    private boolean containsAny(String value, String... tokens) {
+        for (String token : tokens) {
+            if (value.contains(token)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private String normalizeForTheme(String value) {
+        return normalize(value).replace('-', ' ');
     }
 
     private Long extractCanonicalDomainId(String metadataJson) {
@@ -814,6 +956,19 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
     }
 
     private record KpiSeedCandidate(Indicateur indicator, DonneeIndicateur donnee, String latestDate) {
+    }
+
+    private record EditorialTheme(
+            String mainTitle,
+            String intro,
+            String bullet1,
+            String bullet2,
+            String bullet3,
+            String bullet4,
+            String inlineTitlePrefix,
+            String inline1,
+            String inline2,
+            String inline3) {
     }
 
     private record SeedKpiStylePalette(
