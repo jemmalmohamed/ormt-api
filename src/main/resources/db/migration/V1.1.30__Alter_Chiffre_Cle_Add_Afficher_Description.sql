@@ -1,0 +1,2 @@
+ALTER TABLE chiffre_cle
+    ADD COLUMN IF NOT EXISTS afficher_description BOOLEAN NOT NULL DEFAULT FALSE;

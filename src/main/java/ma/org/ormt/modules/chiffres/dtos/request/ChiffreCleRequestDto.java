@@ -11,6 +11,9 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.Dto;
 import ma.org.ormt.core.validators.unique.Unique;
+import ma.org.ormt.modules.chiffres.models.enums.KpiEvolutionMode;
+import ma.org.ormt.modules.chiffres.models.enums.KpiFormatType;
+import ma.org.ormt.modules.chiffres.models.enums.KpiModeSource;
 
 @Setter
 @Getter
@@ -35,9 +38,25 @@ public class ChiffreCleRequestDto extends Dto {
 
     private Boolean afficherDate;
 
+    private Boolean afficherDescription;
+
     private String description;
 
     private String accessType;
+
+    private KpiModeSource modeSource;
+
+    private KpiFormatType formatType;
+
+    private String prefixLabel;
+
+    private String suffixLabel;
+
+    private KpiEvolutionMode evolutionMode;
+
+    private String metadataJson;
+
+    private String styleJson;
 
     private Dto indicateur;
 

@@ -11,6 +11,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ma.org.ormt.core.commun.base.dto.Dto;
+import ma.org.ormt.modules.chiffres.models.enums.KpiEvolutionMode;
+import ma.org.ormt.modules.chiffres.models.enums.KpiFormatType;
+import ma.org.ormt.modules.chiffres.models.enums.KpiModeSource;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
 import ma.org.ormt.modules.roleacces.dtos.summary.RoleAccesSummaryDto;
 import ma.org.ormt.security.users.RoleAccesContentFilter;
@@ -35,7 +38,23 @@ public class ChiffreCleDto extends Dto {
 
     private Boolean afficherDate;
 
+    private Boolean afficherDescription;
+
     private String accessType;
+
+    private KpiModeSource modeSource;
+
+    private KpiFormatType formatType;
+
+    private String prefixLabel;
+
+    private String suffixLabel;
+
+    private KpiEvolutionMode evolutionMode;
+
+    private String metadataJson;
+
+    private String styleJson;
 
     private DonneeIndicateurDto donneeIndicateur;
 

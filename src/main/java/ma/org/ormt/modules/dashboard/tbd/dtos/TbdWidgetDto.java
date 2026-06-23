@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import ma.org.ormt.modules.chiffres.dtos.ChiffreCleDto;
 
 @Setter
 @Getter
@@ -22,5 +23,6 @@ public class TbdWidgetDto {
     private String indicateurNom;
     private String indicateurTitre;
     private Long kpiId;
+    private ChiffreCleDto kpi;
     private String contentJson;
 }

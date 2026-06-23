@@ -17,6 +17,10 @@ import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import ma.org.ormt.modules.analytics.category.models.CategorieAnalytique;
 import ma.org.ormt.modules.analytics.category.repositories.CategorieAnalytiqueRepository;
+import ma.org.ormt.modules.chiffres.dtos.ChiffreCleDto;
+import ma.org.ormt.modules.chiffres.dtos.ChiffreCleDtoMapper;
+import ma.org.ormt.modules.chiffres.models.ChiffreCle;
+import ma.org.ormt.modules.chiffres.repositories.ChiffreCleRepository;
 import ma.org.ormt.modules.dashboard.tbd.dtos.TbdAssignationDto;
 import ma.org.ormt.modules.dashboard.tbd.dtos.TbdDashboardFullDto;
 import ma.org.ormt.modules.dashboard.tbd.dtos.TbdDashboardSummaryDto;
@@ -36,6 +40,7 @@ import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowCreateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetRowHeightUpdateRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateContentRequest;
 import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateIndicatorRequest;
+import ma.org.ormt.modules.dashboard.tbd.dtos.request.TbdWidgetUpdateKpiRequest;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdDashboard;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdSection;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdSourceListing;
@@ -67,6 +72,8 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
     private final TbdWidgetRepository widgetRepository;
     private final CategorieAnalytiqueRepository categorieRepository;
     private final IndicateurRepository indicateurRepository;
+    private final ChiffreCleRepository chiffreCleRepository;
+    private final ChiffreCleDtoMapper chiffreCleDtoMapper;
 
     @Override
     public TbdDashboardFullDto findById(Long id) {
@@ -95,6 +102,14 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
         List<TbdWidget> allWidgets = rowIds.isEmpty()
                 ? new ArrayList<>()
                 : widgetRepository.findByRowIdInOrderByRowIdAscOrdreAsc(rowIds);
+        Map<Long, ChiffreCle> kpisById = chiffreCleRepository.findAllById(
+                allWidgets.stream()
+                        .map(TbdWidget::getKpiId)
+                        .filter(java.util.Objects::nonNull)
+                        .distinct()
+                        .collect(Collectors.toList()))
+                .stream()
+                .collect(Collectors.toMap(ChiffreCle::getId, kpi -> kpi));
 
         Map<Long, List<TbdWidget>> widgetsByRowId = allWidgets.stream()
                 .collect(Collectors.groupingBy(TbdWidget::getRowId));
@@ -106,7 +121,9 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
             List<TbdWidgetRow> rows = rowsBySectionId.getOrDefault(section.getId(), new ArrayList<>());
             List<TbdWidgetRowDto> rowDtos = rows.stream().map(row -> {
                 List<TbdWidget> widgets = widgetsByRowId.getOrDefault(row.getId(), new ArrayList<>());
-                List<TbdWidgetDto> widgetDtos = widgets.stream().map(this::toWidgetDto).collect(Collectors.toList());
+                List<TbdWidgetDto> widgetDtos = widgets.stream()
+                        .map(widget -> toWidgetDto(widget, kpisById))
+                        .collect(Collectors.toList());
                 return TbdWidgetRowDto.builder()
                         .id(row.getId())
                         .ordre(row.getOrdre())
@@ -447,10 +464,11 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
     @Override
     @Transactional
     public TbdWidget addWidget(TbdWidgetCreateRequest request) {
+        validateWidgetSourceForCreate(request);
         TbdWidget widget = TbdWidget.builder()
                 .rowId(request.getRowId())
                 .type(request.getType())
-                .kpiId(request.getKpiId())
+                .kpiId("KPI_CARD".equals(request.getType()) ? request.getKpiId() : null)
                 .contentJson(request.getContentJson())
                 .titre(request.getTitre())
                 .ordre(request.getOrdre() != null ? request.getOrdre() : 0)
@@ -459,6 +477,11 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
                 .build();
         if (request.getIndicateurId() != null) {
             indicateurRepository.findById(request.getIndicateurId()).ifPresent(widget::setIndicateur);
+        }
+        if ("KPI_CARD".equals(request.getType()) && request.getKpiId() != null) {
+            chiffreCleRepository.findById(request.getKpiId())
+                    .orElseThrow(() -> new EntityNotFoundException("KPI introuvable."));
+            widget.setIndicateur(null);
         }
         TbdWidget saved = widgetRepository.save(widget);
         redistributeWidgets(request.getRowId());
@@ -515,12 +538,35 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
     public void updateWidgetIndicator(Long widgetId, TbdWidgetUpdateIndicatorRequest request) {
         TbdWidget widget = widgetRepository.findById(widgetId)
                 .orElseThrow(() -> new EntityNotFoundException(WIDGET_NOT_FOUND));
+        if (!"CHART".equals(widget.getType())) {
+            throw new IllegalArgumentException("Seuls les widgets CHART peuvent etre relies a un indicateur.");
+        }
         if (request.getIndicateurId() == null) {
             widget.setIndicateur(null);
         } else {
             widget.setIndicateur(indicateurRepository.findById(request.getIndicateurId())
                     .orElseThrow(() -> new EntityNotFoundException("Indicateur introuvable.")));
         }
+        widget.setKpiId(null);
+        widgetRepository.save(widget);
+    }
+
+    @Override
+    @Transactional
+    public void updateWidgetKpi(Long widgetId, TbdWidgetUpdateKpiRequest request) {
+        TbdWidget widget = widgetRepository.findById(widgetId)
+                .orElseThrow(() -> new EntityNotFoundException(WIDGET_NOT_FOUND));
+        if (!"KPI_CARD".equals(widget.getType())) {
+            throw new IllegalArgumentException("Seuls les widgets KPI_CARD peuvent etre relies a un KPI.");
+        }
+        if (request.getKpiId() == null) {
+            widget.setKpiId(null);
+        } else {
+            ChiffreCle kpi = chiffreCleRepository.findById(request.getKpiId())
+                    .orElseThrow(() -> new EntityNotFoundException("KPI introuvable."));
+            widget.setKpiId(kpi.getId());
+        }
+        widget.setIndicateur(null);
         widgetRepository.save(widget);
     }
 
@@ -697,7 +743,7 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
         return domaineNom + " - " + categorieNom;
     }
 
-    private TbdWidgetDto toWidgetDto(TbdWidget widget) {
+    private TbdWidgetDto toWidgetDto(TbdWidget widget, Map<Long, ChiffreCle> kpisById) {
         String indicateurNom = null;
         String indicateurTitre = null;
         Long indicateurId = null;
@@ -706,6 +752,10 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
             indicateurNom = widget.getIndicateur().getNom();
             indicateurTitre = widget.getIndicateur().getTitre();
         }
+        ChiffreCleDto kpiDto = Optional.ofNullable(widget.getKpiId())
+                .map(kpisById::get)
+                .map(chiffreCleDtoMapper::mapToDto)
+                .orElse(null);
         return TbdWidgetDto.builder()
                 .id(widget.getId())
                 .type(widget.getType())
@@ -716,7 +766,14 @@ public class TbdDashboardServiceImpl implements TbdDashboardService {
                 .indicateurNom(indicateurNom)
                 .indicateurTitre(indicateurTitre)
                 .kpiId(widget.getKpiId())
+                .kpi(kpiDto)
                 .contentJson(widget.getContentJson())
                 .build();
+    }
+
+    private void validateWidgetSourceForCreate(TbdWidgetCreateRequest request) {
+        if ("KPI_CARD".equals(request.getType()) && request.getKpiId() == null) {
+            throw new IllegalArgumentException("Un widget KPI_CARD doit etre lie a un KPI.");
+        }
     }
 }
