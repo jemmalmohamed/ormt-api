@@ -53,6 +53,12 @@ public class IndicateurDimensionServiceImpl extends BaseServiceImpl<IndicateurDi
                 IndicateurDimension indicateurDimension = indicateurDimensionRepository.findById(id)
                                 .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_STRING));
 
+                validateDimensionTypeConstraints(
+                                indicateurDimension.getIndicateur().getId(),
+                                requestDto.getPrincipale(),
+                                requestDto.getTemporelle(),
+                                id);
+
                 indicateurDimension.setPrincipale(requestDto.getPrincipale());
                 indicateurDimension.setTemporelle(requestDto.getTemporelle());
 
@@ -62,12 +68,27 @@ public class IndicateurDimensionServiceImpl extends BaseServiceImpl<IndicateurDi
         @Override
         @Transactional
         public IndicateurDimension associateDimensionToIndicateur(IndicateurDimensionRequestDto requestDto) {
+                validator.validate(requestDto);
+
                 Indicateur indicateur = indicateurRepository.findById(
                                 requestDto.getIndicateur().getId())
-                                .orElseThrow(() -> new RuntimeException("Indicateur not found"));
+                                .orElseThrow(() -> new EntityNotFoundException("Indicateur non trouvé"));
 
                 Dimension dimension = dimensionRepository.findById(requestDto.getDimension().getId())
-                                .orElseThrow(() -> new RuntimeException("Dimension not found"));
+                                .orElseThrow(() -> new EntityNotFoundException("Dimension non trouvée"));
+
+                if (indicateurDimensionRepository.existsByIndicateurIdAndDimensionId(indicateur.getId(),
+                                dimension.getId())) {
+                        throw new IllegalArgumentException(buildMessage(
+                                        "Association déjà existante",
+                                        "Cette dimension est déjà liée à cet indicateur."));
+                }
+
+                validateDimensionTypeConstraints(
+                                indicateur.getId(),
+                                requestDto.getPrincipale(),
+                                requestDto.getTemporelle(),
+                                null);
 
                 IndicateurDimension indicateurDimension = new IndicateurDimension();
                 indicateurDimension.setIndicateur(indicateur);
@@ -130,5 +151,32 @@ public class IndicateurDimensionServiceImpl extends BaseServiceImpl<IndicateurDi
                                 throw new DependencyException(message);
                         }
                 });
+        }
+
+        private void validateDimensionTypeConstraints(Long indicateurId, Boolean principale, Boolean temporelle,
+                        Long excludeAssociationId) {
+                if (Boolean.TRUE.equals(principale)
+                                && indicateurDimensionRepository.existsPrincipaleForIndicateur(indicateurId,
+                                                excludeAssociationId)) {
+                        throw new IllegalArgumentException(buildMessage(
+                                        "Dimension principale déjà définie",
+                                        "Cet indicateur possède déjà une dimension principale. Veuillez modifier l'association existante."));
+                }
+
+                if (Boolean.TRUE.equals(temporelle)
+                                && indicateurDimensionRepository.existsTemporelleForIndicateur(indicateurId,
+                                                excludeAssociationId)) {
+                        throw new IllegalArgumentException(buildMessage(
+                                        "Dimension temporelle déjà définie",
+                                        "Cet indicateur possède déjà une dimension temporelle. Veuillez modifier l'association existante."));
+                }
+        }
+
+        private String buildMessage(String title, String mainMessage) {
+                return MessageResponse.builder()
+                                .title(title)
+                                .mainMessage(mainMessage)
+                                .build()
+                                .format();
         }
 }
