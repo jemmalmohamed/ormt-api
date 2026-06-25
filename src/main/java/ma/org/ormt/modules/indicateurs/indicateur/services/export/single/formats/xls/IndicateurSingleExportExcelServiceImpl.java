@@ -3,17 +3,20 @@ package ma.org.ormt.modules.indicateurs.indicateur.services.export.single.format
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xssf.streaming.SXSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import ma.org.ormt.core.utilities.ExcelUtils;
+import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.association.dimension.models.IndicateurDimension;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
-import ma.org.ormt.modules.indicateurs.indicateur.services.export.data.builders.IndicateurFlatDataTable;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.data.builders.IndicateurPivotDataTable;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.dtos.IndicateurExportRequestDto;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.meta.excel.IndicateurExportExcelMetaDataService;
@@ -23,6 +26,8 @@ import ma.org.ormt.modules.indicateurs.indicateur.services.export.meta.models.Me
 
 @Service
 public class IndicateurSingleExportExcelServiceImpl implements IndicateurSingleExportExcelService {
+    private static final int STREAM_WINDOW_SIZE = 200;
+    private static final int DEFAULT_DATA_COLUMN_WIDTH = 18;
 
     @Autowired
     private IndicateurExportExcelMetaDataService indicateurExportExcelMetaDataService;
@@ -44,7 +49,9 @@ public class IndicateurSingleExportExcelServiceImpl implements IndicateurSingleE
             return ResponseEntity.badRequest().body(new byte[0]);
         }
 
-        try (Workbook workbook = new XSSFWorkbook(); ByteArrayOutputStream out = new ByteArrayOutputStream()) {
+        try (SXSSFWorkbook workbook = new SXSSFWorkbook(STREAM_WINDOW_SIZE);
+                ByteArrayOutputStream out = new ByteArrayOutputStream()) {
+            workbook.setCompressTempFiles(true);
             var borderStyle = ExcelUtils.createBorderedStyle(workbook);
             var headerStyle = ExcelUtils.createHeaderStyle(workbook);
 
@@ -149,17 +156,37 @@ public class IndicateurSingleExportExcelServiceImpl implements IndicateurSingleE
      */
     private void createFlatDataSheet(Workbook workbook, Indicateur indicateur) {
         Sheet flatSheet = workbook.createSheet("Données");
-        var flatData = IndicateurFlatDataTable.buildFlatTableData(indicateur);
-        for (int i = 0; i < flatData.size(); i++) {
-            var row = flatSheet.createRow(i);
-            List<String> rowData = flatData.get(i);
-            for (int j = 0; j < rowData.size(); j++) {
-                String value = rowData.get(j);
-                var cell = row.createCell(j);
-                ExcelUtils.setCellValueAutoType(cell, value);
-            }
+        List<IndicateurDimension> dimensions = indicateur.getIndicateurDimensions();
+        if (dimensions == null || dimensions.isEmpty()) {
+            return;
         }
-        ExcelUtils.autoSizeColumns(flatSheet);
+
+        List<String> headers = dimensions.stream()
+                .map(dim -> dim.getDimension().getLibelle() != null ? dim.getDimension().getLibelle()
+                        : dim.getDimension().getNom())
+                .collect(Collectors.toList());
+        headers.add(indicateur.getNom() != null ? indicateur.getNom() : "Valeur");
+
+        writeRow(flatSheet, 0, headers);
+        applyDefaultColumnWidths(flatSheet, headers.size());
+
+        List<DonneeIndicateur> donnees = indicateur.getDonnees();
+        if (donnees == null || donnees.isEmpty()) {
+            return;
+        }
+
+        int rowIndex = 1;
+        for (DonneeIndicateur donnee : donnees) {
+            var row = flatSheet.createRow(rowIndex++);
+            int cellIndex = 0;
+            for (IndicateurDimension dimension : dimensions) {
+                Cell cell = row.createCell(cellIndex++);
+                ExcelUtils.setCellValueAutoType(cell,
+                        IndicateurPivotDataTable.getValeurDimension(donnee, dimension.getDimension().getNom()));
+            }
+            Cell valueCell = row.createCell(cellIndex);
+            ExcelUtils.setCellValueAutoType(valueCell, donnee.getValeur());
+        }
     }
 
     /**
@@ -177,7 +204,9 @@ public class IndicateurSingleExportExcelServiceImpl implements IndicateurSingleE
                 ExcelUtils.setCellValueAutoType(cell, value);
             }
         }
-        ExcelUtils.autoSizeColumns(pivotSheet);
+        if (!pivotData.isEmpty()) {
+            applyDefaultColumnWidths(pivotSheet, pivotData.get(0).size());
+        }
     }
 
     /**
@@ -196,5 +225,17 @@ public class IndicateurSingleExportExcelServiceImpl implements IndicateurSingleE
                 dataTableType == IndicateurExportRequestDto.DataTableType.BOTH;
     }
 
-    // ...existing code... (keep existing private methods)
+    private void writeRow(Sheet sheet, int rowIndex, List<String> values) {
+        var row = sheet.createRow(rowIndex);
+        for (int i = 0; i < values.size(); i++) {
+            Cell cell = row.createCell(i);
+            ExcelUtils.setCellValueAutoType(cell, values.get(i));
+        }
+    }
+
+    private void applyDefaultColumnWidths(Sheet sheet, int columnCount) {
+        for (int columnIndex = 0; columnIndex < columnCount; columnIndex++) {
+            sheet.setColumnWidth(columnIndex, DEFAULT_DATA_COLUMN_WIDTH * 256);
+        }
+    }
 }
