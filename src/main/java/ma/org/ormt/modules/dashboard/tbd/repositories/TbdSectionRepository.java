@@ -13,4 +13,6 @@ public interface TbdSectionRepository extends BaseRepository<TbdSection> {
     List<TbdSection> findByDashboardIdOrderByOrdreAsc(Long dashboardId);
 
     List<TbdSection> findByDashboardIdAndActifTrue(Long dashboardId);
+
+    List<TbdSection> findByIdIn(List<Long> ids);
 }

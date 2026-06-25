@@ -12,6 +12,8 @@ import lombok.Setter;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
 import ma.org.ormt.modules.indicateurs.graphe.configuration.dtos.GrapheConfigurationDto;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.IndicateurDto;
+import ma.org.ormt.modules.indicateurs.indicateur.dtos.link.IndicateurLinkedAnalyticsCategoryDto;
+import ma.org.ormt.modules.indicateurs.indicateur.dtos.link.IndicateurLinkedDashboardDto;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.data.dtos.PivotTableWithMetadataDto;
 
 @Setter
@@ -36,6 +38,10 @@ public class IndicateurDetailDto extends IndicateurDto {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(description = "Pivot table data with metadata for chart mapping and dimension understanding")
     private PivotTableWithMetadataDto pivotTableData;
+
+    private List<IndicateurLinkedAnalyticsCategoryDto> linkedAnalyticsCategories;
+
+    private List<IndicateurLinkedDashboardDto> linkedDashboards;
 
     private List<GrapheConfigurationDto> grapheConfigurations;
 

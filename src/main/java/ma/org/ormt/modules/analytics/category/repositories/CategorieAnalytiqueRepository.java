@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import ma.org.ormt.core.commun.base.repository.BaseRepository;
@@ -21,6 +22,15 @@ public interface CategorieAnalytiqueRepository extends BaseRepository<CategorieA
     Optional<CategorieAnalytique> findByTbdDashboardId(Long tbdDashboardId);
 
     List<CategorieAnalytique> findByTbdDashboardIdIsNotNullOrderByLibelleAsc();
+
+    @Query("""
+            select distinct category
+            from CategorieAnalytique category
+            join fetch category.domaineAnalytique domain
+            where category.tbdDashboard.id in :dashboardIds
+            order by domain.titre asc, category.ordre asc, category.libelle asc
+            """)
+    List<CategorieAnalytique> findByTbdDashboardIdInWithDomain(@Param("dashboardIds") List<Long> dashboardIds);
 
     @Query("""
             select category

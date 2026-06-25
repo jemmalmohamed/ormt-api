@@ -2,8 +2,14 @@ package ma.org.ormt.modules.indicateurs.indicateur.services.indicateur;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Stream;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,11 +30,25 @@ import ma.org.ormt.modules.indicateurs.indicateur.dtos.request.IndicateurRequest
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.request.IndicateurRequestDtoMapper;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.detail.IndicateurDetailDto;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.detail.IndicateurDetailDtoMapper;
+import ma.org.ormt.modules.indicateurs.indicateur.dtos.link.IndicateurLinkedAnalyticsCategoryDto;
+import ma.org.ormt.modules.indicateurs.indicateur.dtos.link.IndicateurLinkedDashboardDto;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.repositories.IndicateurRepository;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.data.builders.IndicateurCrudDataTable;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.data.builders.IndicateurFlatDataTable;
 import ma.org.ormt.modules.indicateurs.indicateur.services.export.data.builders.IndicateurPivotDataTable;
+import ma.org.ormt.modules.analytics.category.models.CategorieAnalytique;
+import ma.org.ormt.modules.analytics.category.repositories.CategorieAnalytiqueRepository;
+import ma.org.ormt.modules.chiffres.models.ChiffreCle;
+import ma.org.ormt.modules.chiffres.repositories.ChiffreCleRepository;
+import ma.org.ormt.modules.dashboard.tbd.models.TbdDashboard;
+import ma.org.ormt.modules.dashboard.tbd.models.TbdSection;
+import ma.org.ormt.modules.dashboard.tbd.models.TbdWidget;
+import ma.org.ormt.modules.dashboard.tbd.models.TbdWidgetRow;
+import ma.org.ormt.modules.dashboard.tbd.repositories.TbdDashboardRepository;
+import ma.org.ormt.modules.dashboard.tbd.repositories.TbdSectionRepository;
+import ma.org.ormt.modules.dashboard.tbd.repositories.TbdWidgetRepository;
+import ma.org.ormt.modules.dashboard.tbd.repositories.TbdWidgetRowRepository;
 import ma.org.ormt.modules.indicateurs.dimension.models.Dimension;
 import ma.org.ormt.modules.indicateurs.source.models.Source;
 import ma.org.ormt.modules.indicateurs.source.services.SourceService;
@@ -50,6 +70,24 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
 
     @Autowired
     private IndicateurDetailDtoMapper indicateurDetailMapper;
+
+    @Autowired
+    private TbdWidgetRepository tbdWidgetRepository;
+
+    @Autowired
+    private TbdWidgetRowRepository tbdWidgetRowRepository;
+
+    @Autowired
+    private TbdSectionRepository tbdSectionRepository;
+
+    @Autowired
+    private TbdDashboardRepository tbdDashboardRepository;
+
+    @Autowired
+    private ChiffreCleRepository chiffreCleRepository;
+
+    @Autowired
+    private CategorieAnalytiqueRepository categorieAnalytiqueRepository;
 
     static final String NOT_FOUND_STRING = "Indicateur not found";
     static final String SOUS_DOMAINE_NOT_FOUND = "SousDomaine not found";
@@ -327,6 +365,141 @@ public class IndicateurServiceImpl extends BaseServiceImpl<Indicateur> implement
                 return "Régional (pas de données Marrakech, autres territoires)";
             }
         }
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<IndicateurLinkedAnalyticsCategoryDto> resolveLinkedAnalyticsCategories(Indicateur indicateur) {
+        DerivedAnalyticsLinks derivedLinks = buildDerivedAnalyticsLinks(indicateur);
+        return derivedLinks.categories().values().stream()
+                .sorted(Comparator
+                        .comparing((IndicateurLinkedAnalyticsCategoryDto item) -> defaultText(item.getDomaineAnalytiqueTitre(), item.getDomaineAnalytiqueNom()))
+                        .thenComparing(item -> defaultText(item.getCategorieAnalytiqueLibelle(), item.getCategorieAnalytiqueNom())))
+                .toList();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<IndicateurLinkedDashboardDto> resolveLinkedDashboards(Indicateur indicateur) {
+        DerivedAnalyticsLinks derivedLinks = buildDerivedAnalyticsLinks(indicateur);
+        return derivedLinks.dashboards().values().stream()
+                .sorted(Comparator
+                        .comparing((IndicateurLinkedDashboardDto item) -> defaultText(item.getTitre(), item.getNom()))
+                        .thenComparing(item -> item.getId() != null ? item.getId() : Long.MAX_VALUE))
+                .toList();
+    }
+
+    private DerivedAnalyticsLinks buildDerivedAnalyticsLinks(Indicateur indicateur) {
+        Long indicateurId = indicateur != null ? indicateur.getId() : null;
+        if (indicateurId == null) {
+            return new DerivedAnalyticsLinks(new LinkedHashMap<>(), new LinkedHashMap<>());
+        }
+
+        List<TbdWidget> directWidgets = tbdWidgetRepository.findByIndicateurId(indicateurId);
+        List<ChiffreCle> chiffres = chiffreCleRepository.findByIndicateurId(indicateurId);
+        List<Long> kpiIds = chiffres.stream()
+                .map(ChiffreCle::getId)
+                .filter(Objects::nonNull)
+                .distinct()
+                .toList();
+        List<TbdWidget> kpiWidgets = kpiIds.isEmpty() ? List.of() : tbdWidgetRepository.findByKpiIdIn(kpiIds);
+
+        List<TbdWidget> widgets = Stream.concat(directWidgets.stream(), kpiWidgets.stream())
+                .filter(Objects::nonNull)
+                .filter(widget -> Boolean.TRUE.equals(widget.getActif()))
+                .collect(Collectors.collectingAndThen(
+                        Collectors.toMap(TbdWidget::getId, widget -> widget, (left, right) -> left, LinkedHashMap::new),
+                        map -> new ArrayList<>(map.values())));
+
+        if (widgets.isEmpty()) {
+            return new DerivedAnalyticsLinks(new LinkedHashMap<>(), new LinkedHashMap<>());
+        }
+
+        List<Long> rowIds = widgets.stream()
+                .map(TbdWidget::getRowId)
+                .filter(Objects::nonNull)
+                .distinct()
+                .toList();
+        Map<Long, TbdWidgetRow> rowsById = tbdWidgetRowRepository.findByIdIn(rowIds).stream()
+                .collect(Collectors.toMap(TbdWidgetRow::getId, row -> row));
+
+        List<Long> sectionIds = rowsById.values().stream()
+                .map(TbdWidgetRow::getSectionId)
+                .filter(Objects::nonNull)
+                .distinct()
+                .toList();
+        Map<Long, TbdSection> sectionsById = tbdSectionRepository.findByIdIn(sectionIds).stream()
+                .collect(Collectors.toMap(TbdSection::getId, section -> section));
+
+        List<Long> dashboardIds = sectionsById.values().stream()
+                .map(TbdSection::getDashboardId)
+                .filter(Objects::nonNull)
+                .distinct()
+                .toList();
+        Map<Long, TbdDashboard> dashboardsById = tbdDashboardRepository.findAllById(dashboardIds).stream()
+                .collect(Collectors.toMap(TbdDashboard::getId, dashboard -> dashboard));
+
+        Map<Long, CategorieAnalytique> categoriesByDashboardId = dashboardIds.isEmpty()
+                ? Map.of()
+                : categorieAnalytiqueRepository.findByTbdDashboardIdInWithDomain(dashboardIds).stream()
+                        .filter(category -> category.getTbdDashboard() != null && category.getTbdDashboard().getId() != null)
+                        .collect(Collectors.toMap(
+                                category -> category.getTbdDashboard().getId(),
+                                category -> category,
+                                (left, right) -> left,
+                                LinkedHashMap::new));
+
+        LinkedHashMap<Long, IndicateurLinkedDashboardDto> dashboards = new LinkedHashMap<>();
+        for (Long dashboardId : dashboardIds) {
+            TbdDashboard dashboard = dashboardsById.get(dashboardId);
+            if (dashboard == null) {
+                continue;
+            }
+            CategorieAnalytique category = categoriesByDashboardId.get(dashboardId);
+            dashboards.put(dashboardId, IndicateurLinkedDashboardDto.builder()
+                    .id(dashboard.getId())
+                    .nom(dashboard.getNom())
+                    .titre(dashboard.getTitre())
+                    .status(dashboard.getStatus())
+                    .actif(dashboard.getActif())
+                    .lastModifiedDate(dashboard.getLastModifiedDate())
+                    .categorieAnalytiqueId(category != null ? category.getId() : null)
+                    .categorieAnalytiqueLibelle(category != null ? category.getLibelle() : null)
+                    .build());
+        }
+
+        LinkedHashMap<Long, IndicateurLinkedAnalyticsCategoryDto> categories = new LinkedHashMap<>();
+        for (CategorieAnalytique category : categoriesByDashboardId.values()) {
+            if (category.getId() == null) {
+                continue;
+            }
+            categories.put(category.getId(), IndicateurLinkedAnalyticsCategoryDto.builder()
+                    .categorieAnalytiqueId(category.getId())
+                    .categorieAnalytiqueNom(category.getNom())
+                    .categorieAnalytiqueLibelle(category.getLibelle())
+                    .domaineAnalytiqueId(category.getDomaineAnalytique() != null ? category.getDomaineAnalytique().getId() : null)
+                    .domaineAnalytiqueNom(category.getDomaineAnalytique() != null ? category.getDomaineAnalytique().getNom() : null)
+                    .domaineAnalytiqueTitre(category.getDomaineAnalytique() != null ? category.getDomaineAnalytique().getTitre() : null)
+                    .tbdDashboardId(category.getTbdDashboard() != null ? category.getTbdDashboard().getId() : null)
+                    .build());
+        }
+
+        return new DerivedAnalyticsLinks(categories, dashboards);
+    }
+
+    private String defaultText(String primary, String fallback) {
+        if (primary != null && !primary.isBlank()) {
+            return primary;
+        }
+        if (fallback != null && !fallback.isBlank()) {
+            return fallback;
+        }
+        return "";
+    }
+
+    private record DerivedAnalyticsLinks(
+            Map<Long, IndicateurLinkedAnalyticsCategoryDto> categories,
+            Map<Long, IndicateurLinkedDashboardDto> dashboards) {
     }
 
 }

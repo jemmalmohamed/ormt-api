@@ -13,4 +13,6 @@ public interface TbdWidgetRowRepository extends BaseRepository<TbdWidgetRow> {
     List<TbdWidgetRow> findBySectionIdOrderByOrdreAsc(Long sectionId);
 
     List<TbdWidgetRow> findBySectionIdInOrderBySectionIdAscOrdreAsc(List<Long> sectionIds);
+
+    List<TbdWidgetRow> findByIdIn(List<Long> ids);
 }

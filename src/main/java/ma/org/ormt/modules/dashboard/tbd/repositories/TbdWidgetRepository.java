@@ -13,4 +13,8 @@ public interface TbdWidgetRepository extends BaseRepository<TbdWidget> {
     List<TbdWidget> findByRowIdOrderByOrdreAsc(Long rowId);
 
     List<TbdWidget> findByRowIdInOrderByRowIdAscOrdreAsc(List<Long> rowIds);
+
+    List<TbdWidget> findByIndicateurId(Long indicateurId);
+
+    List<TbdWidget> findByKpiIdIn(List<Long> kpiIds);
 }

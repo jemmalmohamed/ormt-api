@@ -9,6 +9,8 @@ import ma.org.ormt.core.commun.rest.queries.QueryParams;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.request.IndicateurRequestDto;
 import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
 import ma.org.ormt.modules.indicateurs.indicateur.dtos.detail.IndicateurDetailDto;
+import ma.org.ormt.modules.indicateurs.indicateur.dtos.link.IndicateurLinkedAnalyticsCategoryDto;
+import ma.org.ormt.modules.indicateurs.indicateur.dtos.link.IndicateurLinkedDashboardDto;
 
 public interface IndicateurService extends BaseService<Indicateur> {
 
@@ -33,5 +35,9 @@ public interface IndicateurService extends BaseService<Indicateur> {
     List<IndicateurDetailDto> getIndicateurListWithTableData(String tableFormat);
 
     String analyzeTerritoireStatus(Indicateur indicateur);
+
+    List<IndicateurLinkedAnalyticsCategoryDto> resolveLinkedAnalyticsCategories(Indicateur indicateur);
+
+    List<IndicateurLinkedDashboardDto> resolveLinkedDashboards(Indicateur indicateur);
 
 }
