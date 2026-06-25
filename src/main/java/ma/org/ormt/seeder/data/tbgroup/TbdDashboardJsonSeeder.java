@@ -14,6 +14,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 
@@ -21,6 +22,8 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import ma.org.ormt.core.utilities.files.FileDataService;
+import ma.org.ormt.modules.chiffres.models.ChiffreCle;
+import ma.org.ormt.modules.chiffres.repositories.ChiffreCleRepository;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdDashboard;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdSection;
 import ma.org.ormt.modules.dashboard.tbd.models.TbdSourceListing;
@@ -31,6 +34,8 @@ import ma.org.ormt.modules.dashboard.tbd.repositories.TbdSectionRepository;
 import ma.org.ormt.modules.dashboard.tbd.repositories.TbdSourceListingRepository;
 import ma.org.ormt.modules.dashboard.tbd.repositories.TbdWidgetRepository;
 import ma.org.ormt.modules.dashboard.tbd.repositories.TbdWidgetRowRepository;
+import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
 import ma.org.ormt.modules.indicateurs.source.models.Source;
 import ma.org.ormt.modules.indicateurs.source.repositories.SourceRepository;
 
@@ -58,6 +63,8 @@ public class TbdDashboardJsonSeeder implements CommandLineRunner {
     private final TbdWidgetRowRepository widgetRowRepository;
     private final TbdWidgetRepository widgetRepository;
     private final SourceRepository sourceRepository;
+    private final ChiffreCleRepository chiffreCleRepository;
+    private final IndicateurService indicateurService;
 
     @Override
     public void run(String... args) {
@@ -165,12 +172,14 @@ public class TbdDashboardJsonSeeder implements CommandLineRunner {
             return;
         }
         for (TbdSourceSeed sourceSeed : sources) {
-            if (sourceSeed.getNom() == null || sourceSeed.getNom().isBlank()) {
+            String sourceNom = firstNonBlank(sourceSeed.getNom(), sourceSeed.getSourceNom());
+            String sourceAbreviation = firstNonBlank(sourceSeed.getAbreviation(), sourceSeed.getSourceAbreviation());
+            if (!StringUtils.hasText(sourceNom) && !StringUtils.hasText(sourceAbreviation)) {
                 continue;
             }
-            Optional<Source> sourceOpt = sourceRepository.findByNomIgnoreCase(sourceSeed.getNom());
+            Optional<Source> sourceOpt = resolveSource(sourceNom, sourceAbreviation);
             if (sourceOpt.isEmpty()) {
-                log.warn("Source '{}' not found for TDB dashboard {}", sourceSeed.getNom(), dashboardId);
+                log.warn("Source '{}'/'{}' not found for TDB dashboard {}", sourceNom, sourceAbreviation, dashboardId);
                 continue;
             }
             sourceListingRepository.save(TbdSourceListing.builder()
@@ -217,17 +226,74 @@ public class TbdDashboardJsonSeeder implements CommandLineRunner {
             return;
         }
         for (TbdWidgetSeed widgetSeed : widgets) {
-            widgetRepository.save(TbdWidget.builder()
+            TbdWidget.TbdWidgetBuilder<?, ?> builder = TbdWidget.builder()
                     .rowId(rowId)
                     .type(widgetSeed.getType())
                     .titre(widgetSeed.getTitre())
                     .ordre(widgetSeed.getOrdre() == null ? 0 : widgetSeed.getOrdre())
                     .sizePercent(widgetSeed.getSizePercent() == null ? 50 : widgetSeed.getSizePercent())
                     .contentJson(widgetSeed.getContentJson())
-                    .kpiId(widgetSeed.getKpiId())
-                    .actif(true)
-                    .build());
+                    .actif(widgetSeed.getActif() == null ? true : widgetSeed.getActif());
+
+            Long resolvedKpiId = resolveKpiId(widgetSeed);
+            if (resolvedKpiId != null) {
+                builder.kpiId(resolvedKpiId);
+            }
+
+            resolveIndicateur(widgetSeed).ifPresent(builder::indicateur);
+
+            widgetRepository.save(builder.build());
         }
+    }
+
+    private Optional<Source> resolveSource(String sourceNom, String sourceAbreviation) {
+        if (StringUtils.hasText(sourceNom)) {
+            Optional<Source> byName = sourceRepository.findByNomIgnoreCase(sourceNom);
+            if (byName.isPresent()) {
+                return byName;
+            }
+        }
+        if (StringUtils.hasText(sourceAbreviation)) {
+            return sourceRepository.findByAbreviation(sourceAbreviation);
+        }
+        return Optional.empty();
+    }
+
+    private Long resolveKpiId(TbdWidgetSeed widgetSeed) {
+        if (widgetSeed.getKpiId() != null) {
+            return widgetSeed.getKpiId();
+        }
+        if (!StringUtils.hasText(widgetSeed.getChiffreCleLibelle())) {
+            return null;
+        }
+
+        Optional<ChiffreCle> chiffreCle = chiffreCleRepository.findByLibelle(widgetSeed.getChiffreCleLibelle());
+        if (chiffreCle.isEmpty()) {
+            log.warn("KPI '{}' not found for TDB widget '{}'.", widgetSeed.getChiffreCleLibelle(), widgetSeed.getTitre());
+            return null;
+        }
+        return chiffreCle.get().getId();
+    }
+
+    private Optional<Indicateur> resolveIndicateur(TbdWidgetSeed widgetSeed) {
+        if (!StringUtils.hasText(widgetSeed.getIndicateurNom())) {
+            return Optional.empty();
+        }
+
+        Optional<Indicateur> indicateur = indicateurService.findByNom(widgetSeed.getIndicateurNom());
+        if (indicateur.isEmpty()) {
+            log.warn("Indicateur '{}' not found for TDB widget '{}'.", widgetSeed.getIndicateurNom(), widgetSeed.getTitre());
+        }
+        return indicateur;
+    }
+
+    private String firstNonBlank(String... values) {
+        for (String value : values) {
+            if (StringUtils.hasText(value)) {
+                return value;
+            }
+        }
+        return null;
     }
 
     @Data
@@ -246,6 +312,9 @@ public class TbdDashboardJsonSeeder implements CommandLineRunner {
     @Data
     private static class TbdSourceSeed {
         private String nom;
+        private String sourceNom;
+        private String abreviation;
+        private String sourceAbreviation;
         private Integer ordre;
     }
 
@@ -272,6 +341,9 @@ public class TbdDashboardJsonSeeder implements CommandLineRunner {
         private Integer ordre;
         private Integer sizePercent;
         private Long kpiId;
+        private String chiffreCleLibelle;
+        private String indicateurNom;
         private String contentJson;
+        private Boolean actif;
     }
 }

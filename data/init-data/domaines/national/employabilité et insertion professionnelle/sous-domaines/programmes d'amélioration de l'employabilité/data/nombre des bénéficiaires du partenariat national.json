@@ -1,0 +1,22 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "valeur" : "3317"
+  }, {
+    "annuel" : "2020",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "valeur" : "2113"
+  }, {
+    "annuel" : "2022",
+    "valeur" : "2831"
+  }, {
+    "annuel" : "2023",
+    "valeur" : "3020"
+  }, {
+    "annuel" : "2024",
+    "valeur" : "2843"
+  } ],
+  "indicateur" : "nombre des bénéficiaires du partenariat national"
+}

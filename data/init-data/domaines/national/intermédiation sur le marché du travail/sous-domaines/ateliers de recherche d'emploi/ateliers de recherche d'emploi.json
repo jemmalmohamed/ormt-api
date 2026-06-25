@@ -1,0 +1,218 @@
+{
+  "actif" : true,
+  "description" : "statistiques sur les ateliers de recherche d'emploi organisés par l'anapec.",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "ateliers de recherche d'emploi",
+    "description" : "répartition des bénéficiaires d'ateliers de recherche d'emploi par diplôme",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "bénéficiaires d'are par diplôme - Camembert"
+    } ],
+    "nom" : "bénéficiaires d'are par diplôme",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires d'are par diplôme",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "ateliers de recherche d'emploi",
+    "description" : "répartition des bénéficiaires d'ateliers de recherche d'emploi par genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "bénéficiaires d'are par genre - Camembert"
+    } ],
+    "nom" : "bénéficiaires d'are par genre",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires d'are par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "ateliers de recherche d'emploi",
+    "description" : "répartition des bénéficiaires d'ateliers de recherche d'emploi ",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "bénéficiaires d'are - CHOROPLETH"
+    } ],
+    "nom" : "bénéficiaires d'are par région",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires d'are",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "ateliers de recherche d'emploi",
+    "description" : "répartition des bénéficiaires d'ateliers de recherche d'emploi par âge",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "age",
+      "nom" : "age",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "bénéficiaires d'are par âge - Camembert"
+    } ],
+    "nom" : "bénéficiaires d'are par âge",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires d'are par âge",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "ateliers de recherche d'emploi",
+    "description" : "nombre de bénéficiaires d'ateliers de recherche d'emploi",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "nombre de bénéficiaires d'ateliers de recherche d'emploi - Histogramme"
+    } ],
+    "nom" : "nombre de bénéficiaires d'ateliers de recherche d'emploi",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre de bénéficiaires d'ateliers de recherche d'emploi",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "ateliers de recherche d'emploi",
+    "description" : "objectif ciblé d'ateliers de recherche d'emploi",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "objectif ciblé d'ateliers de recherche d'emploi - Histogramme"
+    } ],
+    "nom" : "objectif ciblé d'ateliers de recherche d'emploi",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "objectif ciblé d'ateliers de recherche d'emploi",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  } ],
+  "nom" : "ateliers de recherche d'emploi"
+}

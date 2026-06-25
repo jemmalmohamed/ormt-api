@@ -1,0 +1,224 @@
+{
+  "data" : [ {
+    "annuel" : "2012",
+    "composante" : "Enseignement supérieur privé (EP)",
+    "valeur" : "5821"
+  }, {
+    "annuel" : "2012",
+    "composante" : "Enseignement universitaire public (EUP)",
+    "valeur" : "58061"
+  }, {
+    "annuel" : "2012",
+    "composante" : "Foramation des cadres (FC)",
+    "valeur" : "8891"
+  }, {
+    "annuel" : "2012",
+    "composante" : "Foramation professionnelle (FP)",
+    "valeur" : "148061"
+  }, {
+    "annuel" : "2012",
+    "composante" : "Total",
+    "valeur" : "220834"
+  }, {
+    "annuel" : "2013",
+    "composante" : "Enseignement supérieur privé (EP)",
+    "valeur" : "11339"
+  }, {
+    "annuel" : "2013",
+    "composante" : "Enseignement universitaire public (EUP)",
+    "valeur" : "62931"
+  }, {
+    "annuel" : "2013",
+    "composante" : "Foramation des cadres (FC)",
+    "valeur" : "12721"
+  }, {
+    "annuel" : "2013",
+    "composante" : "Foramation professionnelle (FP)",
+    "valeur" : "150529"
+  }, {
+    "annuel" : "2013",
+    "composante" : "Total",
+    "valeur" : "237520"
+  }, {
+    "annuel" : "2014",
+    "composante" : "Enseignement supérieur privé (EP)",
+    "valeur" : "8957"
+  }, {
+    "annuel" : "2014",
+    "composante" : "Enseignement universitaire public (EUP)",
+    "valeur" : "71486"
+  }, {
+    "annuel" : "2014",
+    "composante" : "Foramation des cadres (FC)",
+    "valeur" : "12885"
+  }, {
+    "annuel" : "2014",
+    "composante" : "Foramation professionnelle (FP)",
+    "valeur" : "158972"
+  }, {
+    "annuel" : "2014",
+    "composante" : "Total",
+    "valeur" : "252300"
+  }, {
+    "annuel" : "2015",
+    "composante" : "Enseignement supérieur privé (EP)",
+    "valeur" : "8186"
+  }, {
+    "annuel" : "2015",
+    "composante" : "Enseignement universitaire public (EUP)",
+    "valeur" : "87857"
+  }, {
+    "annuel" : "2015",
+    "composante" : "Foramation des cadres (FC)",
+    "valeur" : "15905"
+  }, {
+    "annuel" : "2015",
+    "composante" : "Foramation professionnelle (FP)",
+    "valeur" : "169128"
+  }, {
+    "annuel" : "2015",
+    "composante" : "Total",
+    "valeur" : "281076"
+  }, {
+    "annuel" : "2016",
+    "composante" : "Enseignement supérieur privé (EP)",
+    "valeur" : "7840"
+  }, {
+    "annuel" : "2016",
+    "composante" : "Enseignement universitaire public (EUP)",
+    "valeur" : "95167"
+  }, {
+    "annuel" : "2016",
+    "composante" : "Foramation des cadres (FC)",
+    "valeur" : "7572"
+  }, {
+    "annuel" : "2016",
+    "composante" : "Foramation professionnelle (FP)",
+    "valeur" : "182093"
+  }, {
+    "annuel" : "2016",
+    "composante" : "Total",
+    "valeur" : "292672"
+  }, {
+    "annuel" : "2017",
+    "composante" : "Enseignement supérieur privé (EP)",
+    "valeur" : "9814"
+  }, {
+    "annuel" : "2017",
+    "composante" : "Enseignement universitaire public (EUP)",
+    "valeur" : "103173"
+  }, {
+    "annuel" : "2017",
+    "composante" : "Foramation des cadres (FC)",
+    "valeur" : "8479"
+  }, {
+    "annuel" : "2017",
+    "composante" : "Foramation professionnelle (FP)",
+    "valeur" : "186333"
+  }, {
+    "annuel" : "2017",
+    "composante" : "Total",
+    "valeur" : "307799"
+  }, {
+    "annuel" : "2018",
+    "composante" : "Enseignement supérieur privé (EP)",
+    "valeur" : "10184"
+  }, {
+    "annuel" : "2018",
+    "composante" : "Enseignement universitaire public (EUP)",
+    "valeur" : "111843"
+  }, {
+    "annuel" : "2018",
+    "composante" : "Foramation des cadres (FC)",
+    "valeur" : "10682"
+  }, {
+    "annuel" : "2018",
+    "composante" : "Foramation professionnelle (FP)",
+    "valeur" : "195594"
+  }, {
+    "annuel" : "2018",
+    "composante" : "Total",
+    "valeur" : "328303"
+  }, {
+    "annuel" : "2019",
+    "composante" : "Enseignement supérieur privé (EP)",
+    "valeur" : "11624"
+  }, {
+    "annuel" : "2019",
+    "composante" : "Enseignement universitaire public (EUP)",
+    "valeur" : "119263"
+  }, {
+    "annuel" : "2019",
+    "composante" : "Foramation des cadres (FC)",
+    "valeur" : "10671"
+  }, {
+    "annuel" : "2019",
+    "composante" : "Foramation professionnelle (FP)",
+    "valeur" : "191122"
+  }, {
+    "annuel" : "2019",
+    "composante" : "Total",
+    "valeur" : "332680"
+  }, {
+    "annuel" : "2020",
+    "composante" : "Enseignement supérieur privé (EP)",
+    "valeur" : "11762"
+  }, {
+    "annuel" : "2020",
+    "composante" : "Enseignement universitaire public (EUP)",
+    "valeur" : "126764"
+  }, {
+    "annuel" : "2020",
+    "composante" : "Foramation des cadres (FC)",
+    "valeur" : "12789"
+  }, {
+    "annuel" : "2020",
+    "composante" : "Foramation professionnelle (FP)",
+    "valeur" : "177526"
+  }, {
+    "annuel" : "2020",
+    "composante" : "Total",
+    "valeur" : "328841"
+  }, {
+    "annuel" : "2021",
+    "composante" : "Enseignement supérieur privé (EP)",
+    "valeur" : "13236"
+  }, {
+    "annuel" : "2021",
+    "composante" : "Enseignement universitaire public (EUP)",
+    "valeur" : "143242"
+  }, {
+    "annuel" : "2021",
+    "composante" : "Foramation des cadres (FC)",
+    "valeur" : "24911"
+  }, {
+    "annuel" : "2021",
+    "composante" : "Foramation professionnelle (FP)",
+    "valeur" : "179979"
+  }, {
+    "annuel" : "2021",
+    "composante" : "Total",
+    "valeur" : "361368"
+  }, {
+    "annuel" : "2022",
+    "composante" : "Enseignement supérieur privé (EP)",
+    "valeur" : "14394"
+  }, {
+    "annuel" : "2022",
+    "composante" : "Enseignement universitaire public (EUP)",
+    "valeur" : "140227"
+  }, {
+    "annuel" : "2022",
+    "composante" : "Foramation des cadres (FC)",
+    "valeur" : "27245"
+  }, {
+    "annuel" : "2022",
+    "composante" : "Foramation professionnelle (FP)",
+    "valeur" : "146861"
+  }, {
+    "annuel" : "2022",
+    "composante" : "Total",
+    "valeur" : "328727"
+  } ],
+  "indicateur" : "nouveaux entrants potentiels sur le mt par composante"
+}

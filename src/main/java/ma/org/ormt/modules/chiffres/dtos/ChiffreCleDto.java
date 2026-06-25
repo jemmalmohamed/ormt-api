@@ -60,7 +60,30 @@ public class ChiffreCleDto extends Dto {
 
     private Dto indicateur;
 
+    private String indicateurNom;
+
+    private DonneeReferenceDto donneeReference;
+
     @JsonInclude(content = JsonInclude.Include.CUSTOM, contentFilter = RoleAccesContentFilter.class)
     private List<RoleAccesSummaryDto> roleAcces;
+
+    @Setter
+    @Getter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class DonneeReferenceDto {
+        private String indicateurNom;
+        private String valeur;
+        private List<DimensionValueDto> dimensions;
+    }
+
+    @Setter
+    @Getter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class DimensionValueDto {
+        private String dimensionNom;
+        private String valeur;
+    }
 
 }

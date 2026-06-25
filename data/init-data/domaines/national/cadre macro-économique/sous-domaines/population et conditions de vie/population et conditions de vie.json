@@ -1,0 +1,166 @@
+{
+  "actif" : true,
+  "description" : "population et conditions de vie",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "population et conditions de vie",
+    "description" : "incidence de la pauvreté absolue",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "incidence de la pauvreté absolue - Choropleth"
+    } ],
+    "nom" : "incidence de la pauvreté absolue par région",
+    "regleCalcul" : null,
+    "source" : null,
+    "titre" : "incidence de la pauvreté absolue",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "population et conditions de vie",
+    "description" : "population municipale",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "population municipale - Histogramme"
+    } ],
+    "nom" : "population municipale",
+    "regleCalcul" : null,
+    "source" : null,
+    "titre" : "population municipale",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "population et conditions de vie",
+    "description" : "taux de pauvreté multidimensionnelle",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "taux de pauvreté multidimensionnelle - Choropleth"
+    } ],
+    "nom" : "taux de pauvreté multidimensionnelle par région",
+    "regleCalcul" : null,
+    "source" : null,
+    "titre" : "taux de pauvreté multidimensionnelle",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "population et conditions de vie",
+    "description" : "taux de vulnérabilité à la pauvreté",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "taux de vulnérabilité à la pauvreté - Choropleth"
+    } ],
+    "nom" : "taux de vulnérabilité à la pauvreté par région",
+    "regleCalcul" : null,
+    "source" : null,
+    "titre" : "taux de vulnérabilité à la pauvreté",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  } ],
+  "nom" : "population et conditions de vie"
+}

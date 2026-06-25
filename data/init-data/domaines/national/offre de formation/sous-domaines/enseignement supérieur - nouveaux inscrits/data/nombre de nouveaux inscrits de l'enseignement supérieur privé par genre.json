@@ -1,0 +1,100 @@
+{
+  "data" : [ {
+    "annuel" : "2016",
+    "genre" : "Total",
+    "valeur" : "11100"
+  }, {
+    "annuel" : "2016",
+    "genre" : "femme",
+    "valeur" : "6000"
+  }, {
+    "annuel" : "2016",
+    "genre" : "homme",
+    "valeur" : "5100"
+  }, {
+    "annuel" : "2017",
+    "genre" : "Total",
+    "valeur" : "12300"
+  }, {
+    "annuel" : "2017",
+    "genre" : "femme",
+    "valeur" : "6000"
+  }, {
+    "annuel" : "2017",
+    "genre" : "homme",
+    "valeur" : "6300"
+  }, {
+    "annuel" : "2018",
+    "genre" : "Total",
+    "valeur" : "19000"
+  }, {
+    "annuel" : "2018",
+    "genre" : "femme",
+    "valeur" : "9000"
+  }, {
+    "annuel" : "2018",
+    "genre" : "homme",
+    "valeur" : "10100"
+  }, {
+    "annuel" : "2019",
+    "genre" : "Total",
+    "valeur" : "21100"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "valeur" : "10000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "valeur" : "11100"
+  }, {
+    "annuel" : "2020",
+    "genre" : "Total",
+    "valeur" : "21000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "valeur" : "10000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "valeur" : "10900"
+  }, {
+    "annuel" : "2021",
+    "genre" : "Total",
+    "valeur" : "25000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "valeur" : "12000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "valeur" : "12600"
+  }, {
+    "annuel" : "2022",
+    "genre" : "Total",
+    "valeur" : "28000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "valeur" : "14000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "valeur" : "14400"
+  }, {
+    "annuel" : "2023",
+    "genre" : "Total",
+    "valeur" : "28000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "valeur" : "14000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "valeur" : "14000"
+  } ],
+  "indicateur" : "nombre de nouveaux inscrits de l'enseignement supérieur privé par genre"
+}

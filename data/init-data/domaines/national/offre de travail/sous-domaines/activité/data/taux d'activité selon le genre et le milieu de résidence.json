@@ -1,0 +1,154 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "milieu" : "National",
+    "valeur" : "21.5"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "milieu" : "Rural",
+    "valeur" : "27.1"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "milieu" : "Urbain",
+    "valeur" : "18.5"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "milieu" : "National",
+    "valeur" : "71.0"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "milieu" : "Rural",
+    "valeur" : "77.0"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "milieu" : "Urbain",
+    "valeur" : "67.6"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "milieu" : "National",
+    "valeur" : "19.9"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "milieu" : "Rural",
+    "valeur" : "23.7"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "milieu" : "Urbain",
+    "valeur" : "17.9"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "milieu" : "National",
+    "valeur" : "70.4"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "milieu" : "Rural",
+    "valeur" : "75.9"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "milieu" : "Urbain",
+    "valeur" : "67.4"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "milieu" : "National",
+    "valeur" : "20.9"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "milieu" : "Rural",
+    "valeur" : "25.2"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "milieu" : "Urbain",
+    "valeur" : "18.7"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "milieu" : "National",
+    "valeur" : "70.4"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "milieu" : "Rural",
+    "valeur" : "76.0"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "milieu" : "Urbain",
+    "valeur" : "67.3"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "milieu" : "National",
+    "valeur" : "19.8"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "milieu" : "Rural",
+    "valeur" : "22.8"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "milieu" : "Urbain",
+    "valeur" : "18.3"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "milieu" : "National",
+    "valeur" : "69.6"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "milieu" : "Rural",
+    "valeur" : "74.4"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "milieu" : "Urbain",
+    "valeur" : "67.0"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "milieu" : "National",
+    "valeur" : "19.0"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "milieu" : "Rural",
+    "valeur" : "19.9"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "milieu" : "Urbain",
+    "valeur" : "18.5"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "milieu" : "National",
+    "valeur" : "69.0"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "milieu" : "Rural",
+    "valeur" : "73.6"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "milieu" : "Urbain",
+    "valeur" : "66.5"
+  } ],
+  "indicateur" : "taux d'activité selon le genre et le milieu de résidence"
+}

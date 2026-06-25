@@ -1,0 +1,19 @@
+{
+  "data" : [ {
+    "annuel" : "2021",
+    "valeur" : "230"
+  }, {
+    "annuel" : "2022",
+    "valeur" : "245"
+  }, {
+    "annuel" : "2023",
+    "valeur" : "300"
+  }, {
+    "annuel" : "2024",
+    "valeur" : "335"
+  }, {
+    "annuel" : "2025",
+    "valeur" : "340"
+  } ],
+  "indicateur" : "volume global de l'investissement public"
+}

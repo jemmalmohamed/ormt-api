@@ -1,0 +1,160 @@
+{
+  "data" : [ {
+    "annuel" : "2021",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "region" : "casablanca-settat",
+    "valeur" : "3"
+  }, {
+    "annuel" : "2021",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "region" : "drâa-tafilalet",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "region" : "fès-meknès",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "region" : "guelmim-oued noun",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "region" : "l'oriental",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "region" : "souss-massa",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2021",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "2"
+  }, {
+    "annuel" : "2021",
+    "region" : "total",
+    "valeur" : "6"
+  }, {
+    "annuel" : "2022",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2022",
+    "region" : "casablanca-settat",
+    "valeur" : "4"
+  }, {
+    "annuel" : "2022",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "region" : "drâa-tafilalet",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "region" : "fès-meknès",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "region" : "guelmim-oued noun",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "region" : "l'oriental",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2022",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2022",
+    "region" : "souss-massa",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "5"
+  }, {
+    "annuel" : "2022",
+    "region" : "total",
+    "valeur" : "12"
+  }, {
+    "annuel" : "2023",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "region" : "casablanca-settat",
+    "valeur" : "8"
+  }, {
+    "annuel" : "2023",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "region" : "drâa-tafilalet",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "region" : "fès-meknès",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "region" : "guelmim-oued noun",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "region" : "l'oriental",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "region" : "marrakech-safi",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "region" : "souss-massa",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "region" : "total",
+    "valeur" : "8"
+  } ],
+  "indicateur" : "nombre de conventions collectives par région"
+}

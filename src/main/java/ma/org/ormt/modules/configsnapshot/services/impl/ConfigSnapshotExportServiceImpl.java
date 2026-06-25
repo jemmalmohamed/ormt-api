@@ -100,15 +100,7 @@ public class ConfigSnapshotExportServiceImpl implements ConfigSnapshotExportServ
                 ? ConfigSnapshotExportRequestDto.builder().build()
                 : requestDto;
 
-        ConfigSnapshotArchive archive = ConfigSnapshotArchive.builder()
-                .manifest(buildManifest())
-                .indicators(buildIndicatorsFile())
-                .donnees(buildDonneesFile())
-                .graphes(buildGraphesFile())
-                .chiffres(buildChiffresFile())
-                .dashboards(buildDashboardsFile())
-                .analytics(buildAnalyticsFile())
-                .build();
+        ConfigSnapshotArchive archive = buildArchive();
 
         List<ConfigSnapshotZipEntry> entries = new ArrayList<>();
         try {
@@ -126,6 +118,29 @@ public class ConfigSnapshotExportServiceImpl implements ConfigSnapshotExportServ
         } catch (IOException exception) {
             throw new IllegalStateException("Unable to export config snapshot", exception);
         }
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public byte[] exportLegacyInitData(ConfigSnapshotExportRequestDto requestDto) {
+        ConfigSnapshotArchive archive = buildArchive();
+        try {
+            return zipService.writeEntries(legacyInitDataConverter.buildLegacyEntries(archive));
+        } catch (IOException exception) {
+            throw new IllegalStateException("Unable to export legacy init-data", exception);
+        }
+    }
+
+    private ConfigSnapshotArchive buildArchive() {
+        return ConfigSnapshotArchive.builder()
+                .manifest(buildManifest())
+                .indicators(buildIndicatorsFile())
+                .donnees(buildDonneesFile())
+                .graphes(buildGraphesFile())
+                .chiffres(buildChiffresFile())
+                .dashboards(buildDashboardsFile())
+                .analytics(buildAnalyticsFile())
+                .build();
     }
 
     private ConfigSnapshotManifestDto buildManifest() {

@@ -1,0 +1,164 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "3"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "2"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "autres services",
+    "valeur" : "4"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "2"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "commerce",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "ensemble",
+    "valeur" : "2"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "3"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "2"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "autres services",
+    "valeur" : "5"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "2"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "commerce",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "ensemble",
+    "valeur" : "2"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "3"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "2"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "autres services",
+    "valeur" : "5"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "2"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "commerce",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "ensemble",
+    "valeur" : "2"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "3"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "2"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "autres services",
+    "valeur" : "5"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "2"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "commerce",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "ensemble",
+    "valeur" : "2"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "3"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "3"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "autres services",
+    "valeur" : "4"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "2"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "commerce",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "ensemble",
+    "valeur" : "2"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "1"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "1"
+  } ],
+  "indicateur" : "indice de rotation de salariés par poste par secteur d'activité"
+}

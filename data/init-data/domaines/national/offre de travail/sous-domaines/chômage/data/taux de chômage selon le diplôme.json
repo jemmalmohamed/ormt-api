@@ -1,0 +1,64 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "diplome" : "Niveau moyen",
+    "valeur" : "12.4"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Niveau supérieur",
+    "valeur" : "21.6"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Sans diplôme",
+    "valeur" : "3.1"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Niveau moyen",
+    "valeur" : "15.5"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Niveau supérieur",
+    "valeur" : "23.9"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Sans diplôme",
+    "valeur" : "5.6"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Niveau moyen",
+    "valeur" : "15.9"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Niveau supérieur",
+    "valeur" : "25.9"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Sans diplôme",
+    "valeur" : "4.6"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Niveau moyen",
+    "valeur" : "14.1"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Niveau supérieur",
+    "valeur" : "25.8"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Sans diplôme",
+    "valeur" : "4.2"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Niveau moyen",
+    "valeur" : "15.8"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Niveau supérieur",
+    "valeur" : "25.9"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Sans diplôme",
+    "valeur" : "4.9"
+  } ],
+  "indicateur" : "taux de chômage selon le diplôme"
+}

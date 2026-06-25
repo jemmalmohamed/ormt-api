@@ -1,0 +1,124 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "sae_fse" : "Automobile",
+    "valeur" : "44.3"
+  }, {
+    "annuel" : "2019",
+    "sae_fse" : "Aéronautique",
+    "valeur" : "2.4"
+  }, {
+    "annuel" : "2019",
+    "sae_fse" : "Offshoring",
+    "valeur" : "52.8"
+  }, {
+    "annuel" : "2019",
+    "sae_fse" : "Électronique",
+    "valeur" : "0.2"
+  }, {
+    "annuel" : "2019",
+    "sae_fse" : "Énergies renouvelables",
+    "valeur" : "0.2"
+  }, {
+    "annuel" : "2020",
+    "sae_fse" : "Automobile",
+    "valeur" : "57.6"
+  }, {
+    "annuel" : "2020",
+    "sae_fse" : "Aéronautique",
+    "valeur" : "1.1"
+  }, {
+    "annuel" : "2020",
+    "sae_fse" : "Offshoring",
+    "valeur" : "41.0"
+  }, {
+    "annuel" : "2020",
+    "sae_fse" : "Électronique",
+    "valeur" : "0.4"
+  }, {
+    "annuel" : "2020",
+    "sae_fse" : "Énergies renouvelables",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2021",
+    "sae_fse" : "Automobile",
+    "valeur" : "51.2"
+  }, {
+    "annuel" : "2021",
+    "sae_fse" : "Aéronautique",
+    "valeur" : "0.8"
+  }, {
+    "annuel" : "2021",
+    "sae_fse" : "Offshoring",
+    "valeur" : "48.0"
+  }, {
+    "annuel" : "2021",
+    "sae_fse" : "Électronique",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2021",
+    "sae_fse" : "Énergies renouvelables",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2022",
+    "sae_fse" : "Automobile",
+    "valeur" : "32.1"
+  }, {
+    "annuel" : "2022",
+    "sae_fse" : "Aéronautique",
+    "valeur" : "7.2"
+  }, {
+    "annuel" : "2022",
+    "sae_fse" : "Offshoring",
+    "valeur" : "60.6"
+  }, {
+    "annuel" : "2022",
+    "sae_fse" : "Électronique",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2022",
+    "sae_fse" : "Énergies renouvelables",
+    "valeur" : "0.1"
+  }, {
+    "annuel" : "2023",
+    "sae_fse" : "Automobile",
+    "valeur" : "52.7"
+  }, {
+    "annuel" : "2023",
+    "sae_fse" : "Aéronautique",
+    "valeur" : "3.7"
+  }, {
+    "annuel" : "2023",
+    "sae_fse" : "Offshoring",
+    "valeur" : "43.6"
+  }, {
+    "annuel" : "2023",
+    "sae_fse" : "Électronique",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2023",
+    "sae_fse" : "Énergies renouvelables",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2024",
+    "sae_fse" : "Automobile",
+    "valeur" : "56.8"
+  }, {
+    "annuel" : "2024",
+    "sae_fse" : "Aéronautique",
+    "valeur" : "3.0"
+  }, {
+    "annuel" : "2024",
+    "sae_fse" : "Offshoring",
+    "valeur" : "39.5"
+  }, {
+    "annuel" : "2024",
+    "sae_fse" : "Électronique",
+    "valeur" : "0.7"
+  }, {
+    "annuel" : "2024",
+    "sae_fse" : "Énergies renouvelables",
+    "valeur" : "0.0"
+  } ],
+  "indicateur" : "bénéficiaires de la fse par secteur d'activité économique"
+}

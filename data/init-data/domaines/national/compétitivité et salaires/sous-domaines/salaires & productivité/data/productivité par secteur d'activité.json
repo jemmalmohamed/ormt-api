@@ -1,0 +1,44 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "AGRICOLE",
+    "valeur" : "22587"
+  }, {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "NON AGRICOLE",
+    "valeur" : "89117"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "AGRICOLE",
+    "valeur" : "19525"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "NON AGRICOLE",
+    "valeur" : "75932"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "AGRICOLE",
+    "valeur" : "29104"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "NON AGRICOLE",
+    "valeur" : "79013"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "AGRICOLE",
+    "valeur" : "19073"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "NON AGRICOLE",
+    "valeur" : "94194"
+  } ],
+  "indicateur" : "productivité par secteur d'activité"
+}

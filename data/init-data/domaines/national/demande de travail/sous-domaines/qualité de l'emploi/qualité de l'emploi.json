@@ -1,0 +1,470 @@
+{
+  "actif" : true,
+  "description" : "étude des caractéristiques qualitatives du marché de l'emploi",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "qualité de l'emploi",
+    "description" : "part de l'emploi de type occasionnel ou saisonnier par genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "part de l'emploi de type occasionnel ou saisonnier par genre-Courbes"
+    } ],
+    "nom" : "part de l'emploi de type occasionnel ou saisonnier par genre",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "part de l'emploi de type occasionnel ou saisonnier par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "qualité de l'emploi",
+    "description" : "part de l'emploi de type occasionnel ou saisonnier par milieu de résidence",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "part de l'emploi de type occasionnel ou saisonnier par milieu de résidence-Courbes"
+    } ],
+    "nom" : "part de l'emploi de type occasionnel ou saisonnier par milieu de résidence",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "part de l'emploi de type occasionnel ou saisonnier par milieu de résidence",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi",
+    "description" : "part de l'emploi informel par secteur d'activité",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "part de l'emploi informel par secteur d'activité-Courbes"
+    } ],
+    "nom" : "part de l'emploi informel par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "hcp-cnss",
+    "titre" : "part de l'emploi informel par secteur d'activité",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi",
+    "description" : "part de l'emploi rémunéré par secteur d'activité",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "part de l'emploi rémunéré par secteur d'activité-Courbes"
+    } ],
+    "nom" : "part de l'emploi rémunéré par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "part de l'emploi rémunéré par secteur d'activité",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "qualité de l'emploi",
+    "description" : "part des actifs occupés bénéficiant d'une couverture médicale par genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "part des actifs occupés bénéficiant d'une couverture médicale par genre-Courbes"
+    } ],
+    "nom" : "part des actifs occupés bénéficiant d'une couverture médicale par genre",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "part des actifs occupés bénéficiant d'une couverture médicale par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "qualité de l'emploi",
+    "description" : "part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence-Courbes"
+    } ],
+    "nom" : "part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "qualité de l'emploi",
+    "description" : "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par genre-Courbes"
+    } ],
+    "nom" : "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par genre",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "qualité de l'emploi",
+    "description" : "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par milieu de résidence",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par milieu de résidence-Courbes"
+    } ],
+    "nom" : "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par milieu de résidence",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par milieu de résidence",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "qualité de l'emploi",
+    "description" : "part des salariés disposant d'un contrat de travail",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "part des salariés disposant d'un contrat de travail-Courbes"
+    } ],
+    "nom" : "part des salariés disposant d'un contrat de travail",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "part des salariés disposant d'un contrat de travail",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "salaires",
+    "description" : "part des salariés touchant un salaire inférieur au smig par secteur d'activité",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité cnss",
+      "nom" : "secteur_activite_cnss",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "part des salariés touchant un salaire inférieur au smig par secteur d'activité-Courbes"
+    } ],
+    "nom" : "part des salariés touchant un salaire inférieur au smig par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "part des salariés touchant un salaire inférieur au smig par secteur d'activité",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "salaires",
+    "description" : "salariés (stables) déclarés à la cnss par secteur d'activité-cnss",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité cnss",
+      "nom" : "secteur_activite_cnss",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "salariés (stables) déclarés à la cnss par secteur d'activité-Courbes"
+    } ],
+    "nom" : "salariés (stables) déclarés à la cnss par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "salariés (stables) déclarés à la cnss par secteur d'activité",
+    "typeTb" : "grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "qualité de l'emploi",
+    "description" : "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle-Courbes"
+    } ],
+    "nom" : "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  } ],
+  "nom" : "qualité de l'emploi"
+}

@@ -1,0 +1,56 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "genre" : "Femme",
+    "valeur" : "41.0"
+  }, {
+    "annuel" : "2019",
+    "genre" : "Non renseigné",
+    "valeur" : "3.9"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "valeur" : "55.1"
+  }, {
+    "annuel" : "2020",
+    "genre" : "Femme",
+    "valeur" : "44.5"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "valeur" : "55.5"
+  }, {
+    "annuel" : "2021",
+    "genre" : "Femme",
+    "valeur" : "46.5"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "valeur" : "53.5"
+  }, {
+    "annuel" : "2022",
+    "genre" : "Femme",
+    "valeur" : "42.5"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "valeur" : "57.5"
+  }, {
+    "annuel" : "2023",
+    "genre" : "Femme",
+    "valeur" : "44.4"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "valeur" : "55.6"
+  }, {
+    "annuel" : "2024",
+    "genre" : "Femme",
+    "valeur" : "48.5"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "valeur" : "51.5"
+  } ],
+  "indicateur" : "nouveaux inscrits à l'anapec par genre"
+}

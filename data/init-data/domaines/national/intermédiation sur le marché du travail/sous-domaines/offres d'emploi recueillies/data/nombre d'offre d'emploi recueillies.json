@@ -1,0 +1,22 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "valeur" : "137000"
+  }, {
+    "annuel" : "2020",
+    "valeur" : "98000"
+  }, {
+    "annuel" : "2021",
+    "valeur" : "112000"
+  }, {
+    "annuel" : "2022",
+    "valeur" : "126000"
+  }, {
+    "annuel" : "2023",
+    "valeur" : "143000"
+  }, {
+    "annuel" : "2024",
+    "valeur" : "206000"
+  } ],
+  "indicateur" : "nombre d'offre d'emploi recueillies"
+}

@@ -1,0 +1,136 @@
+{
+  "data" : [ {
+    "age" : "20 à 25 ans",
+    "annuel" : "2019",
+    "valeur" : "15.5"
+  }, {
+    "age" : "20 à 25 ans",
+    "annuel" : "2020",
+    "valeur" : "14.1"
+  }, {
+    "age" : "20 à 25 ans",
+    "annuel" : "2021",
+    "valeur" : "13.4"
+  }, {
+    "age" : "20 à 25 ans",
+    "annuel" : "2022",
+    "valeur" : "11.6"
+  }, {
+    "age" : "20 à 25 ans",
+    "annuel" : "2023",
+    "valeur" : "11.9"
+  }, {
+    "age" : "25 à 35 ans",
+    "annuel" : "2019",
+    "valeur" : "42.3"
+  }, {
+    "age" : "25 à 35 ans",
+    "annuel" : "2020",
+    "valeur" : "39.7"
+  }, {
+    "age" : "25 à 35 ans",
+    "annuel" : "2021",
+    "valeur" : "38.3"
+  }, {
+    "age" : "25 à 35 ans",
+    "annuel" : "2022",
+    "valeur" : "37.0"
+  }, {
+    "age" : "25 à 35 ans",
+    "annuel" : "2023",
+    "valeur" : "36.6"
+  }, {
+    "age" : "35 à 45 ans",
+    "annuel" : "2019",
+    "valeur" : "23.9"
+  }, {
+    "age" : "35 à 45 ans",
+    "annuel" : "2020",
+    "valeur" : "26.6"
+  }, {
+    "age" : "35 à 45 ans",
+    "annuel" : "2021",
+    "valeur" : "27.0"
+  }, {
+    "age" : "35 à 45 ans",
+    "annuel" : "2022",
+    "valeur" : "29.2"
+  }, {
+    "age" : "35 à 45 ans",
+    "annuel" : "2023",
+    "valeur" : "27.9"
+  }, {
+    "age" : "Ensemble",
+    "annuel" : "2019",
+    "valeur" : "100.0"
+  }, {
+    "age" : "Ensemble",
+    "annuel" : "2020",
+    "valeur" : "100.0"
+  }, {
+    "age" : "Ensemble",
+    "annuel" : "2021",
+    "valeur" : "100.0"
+  }, {
+    "age" : "Ensemble",
+    "annuel" : "2022",
+    "valeur" : "100.0"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2019",
+    "valeur" : "3.5"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2020",
+    "valeur" : "2.8"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2021",
+    "valeur" : "3.6"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2022",
+    "valeur" : "0.7"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2023",
+    "valeur" : "0.9"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2019",
+    "valeur" : "0.8"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2020",
+    "valeur" : "0.7"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2021",
+    "valeur" : "0.9"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2022",
+    "valeur" : "3.1"
+  }, {
+    "age" : "Plus de 45 ans",
+    "annuel" : "2019",
+    "valeur" : "13.9"
+  }, {
+    "age" : "Plus de 45 ans",
+    "annuel" : "2020",
+    "valeur" : "16.2"
+  }, {
+    "age" : "Plus de 45 ans",
+    "annuel" : "2021",
+    "valeur" : "16.7"
+  }, {
+    "age" : "Plus de 45 ans",
+    "annuel" : "2022",
+    "valeur" : "18.4"
+  }, {
+    "age" : "Plus de 45 ans",
+    "annuel" : "2023",
+    "valeur" : "18.5"
+  } ],
+  "indicateur" : "salariés bénéficiaires tahfiz par âge"
+}

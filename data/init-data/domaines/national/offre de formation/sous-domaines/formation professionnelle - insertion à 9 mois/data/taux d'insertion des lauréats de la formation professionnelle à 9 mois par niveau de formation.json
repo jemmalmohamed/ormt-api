@@ -1,0 +1,124 @@
+{
+  "data" : [ {
+    "annuel" : "2013",
+    "niveau_formation" : "CAP",
+    "valeur" : "66.2"
+  }, {
+    "annuel" : "2013",
+    "niveau_formation" : "Qualification",
+    "valeur" : "61.1"
+  }, {
+    "annuel" : "2013",
+    "niveau_formation" : "Specialisation",
+    "valeur" : "63.2"
+  }, {
+    "annuel" : "2013",
+    "niveau_formation" : "TOTAL",
+    "valeur" : "61.4"
+  }, {
+    "annuel" : "2013",
+    "niveau_formation" : "Technicien spécialisé",
+    "valeur" : "62.4"
+  }, {
+    "annuel" : "2013",
+    "niveau_formation" : "Technicien",
+    "valeur" : "58.2"
+  }, {
+    "annuel" : "2014",
+    "niveau_formation" : "CAP",
+    "valeur" : "75.8"
+  }, {
+    "annuel" : "2014",
+    "niveau_formation" : "Qualification",
+    "valeur" : "64.4"
+  }, {
+    "annuel" : "2014",
+    "niveau_formation" : "Specialisation",
+    "valeur" : "65.0"
+  }, {
+    "annuel" : "2014",
+    "niveau_formation" : "TOTAL",
+    "valeur" : "64.8"
+  }, {
+    "annuel" : "2014",
+    "niveau_formation" : "Technicien spécialisé",
+    "valeur" : "66.5"
+  }, {
+    "annuel" : "2014",
+    "niveau_formation" : "Technicien",
+    "valeur" : "61.7"
+  }, {
+    "annuel" : "2015",
+    "niveau_formation" : "CAP",
+    "valeur" : "69.8"
+  }, {
+    "annuel" : "2015",
+    "niveau_formation" : "Qualification",
+    "valeur" : "60.8"
+  }, {
+    "annuel" : "2015",
+    "niveau_formation" : "Specialisation",
+    "valeur" : "64.8"
+  }, {
+    "annuel" : "2015",
+    "niveau_formation" : "TOTAL",
+    "valeur" : "62.9"
+  }, {
+    "annuel" : "2015",
+    "niveau_formation" : "Technicien spécialisé",
+    "valeur" : "63.8"
+  }, {
+    "annuel" : "2015",
+    "niveau_formation" : "Technicien",
+    "valeur" : "61.2"
+  }, {
+    "annuel" : "2016",
+    "niveau_formation" : "CAP",
+    "valeur" : "70.8"
+  }, {
+    "annuel" : "2016",
+    "niveau_formation" : "Qualification",
+    "valeur" : "64.4"
+  }, {
+    "annuel" : "2016",
+    "niveau_formation" : "Specialisation",
+    "valeur" : "67.3"
+  }, {
+    "annuel" : "2016",
+    "niveau_formation" : "TOTAL",
+    "valeur" : "67.1"
+  }, {
+    "annuel" : "2016",
+    "niveau_formation" : "Technicien spécialisé",
+    "valeur" : "68.5"
+  }, {
+    "annuel" : "2016",
+    "niveau_formation" : "Technicien",
+    "valeur" : "67.6"
+  }, {
+    "annuel" : "2019",
+    "niveau_formation" : "CAP",
+    "valeur" : "87.5"
+  }, {
+    "annuel" : "2019",
+    "niveau_formation" : "Qualification",
+    "valeur" : "71.0"
+  }, {
+    "annuel" : "2019",
+    "niveau_formation" : "Specialisation",
+    "valeur" : "67.8"
+  }, {
+    "annuel" : "2019",
+    "niveau_formation" : "TOTAL",
+    "valeur" : "69.8"
+  }, {
+    "annuel" : "2019",
+    "niveau_formation" : "Technicien spécialisé",
+    "valeur" : "68.8"
+  }, {
+    "annuel" : "2019",
+    "niveau_formation" : "Technicien",
+    "valeur" : "69.7"
+  } ],
+  "indicateur" : "taux d'insertion des lauréats de la formation professionnelle à 9 mois par niveau de formation"
+}

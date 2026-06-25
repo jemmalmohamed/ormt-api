@@ -1,0 +1,244 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "sae_pi" : "Agriculture",
+    "valeur" : "96.8"
+  }, {
+    "annuel" : "2019",
+    "sae_pi" : "Autre",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2019",
+    "sae_pi" : "Autres services",
+    "valeur" : "0.1"
+  }, {
+    "annuel" : "2019",
+    "sae_pi" : "BTP",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2019",
+    "sae_pi" : "Boulangerie pâtisserie",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2019",
+    "sae_pi" : "Grande distribution",
+    "valeur" : "2.1"
+  }, {
+    "annuel" : "2019",
+    "sae_pi" : "Génie civil",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2019",
+    "sae_pi" : "Hôtellerie et restauration",
+    "valeur" : "1.0"
+  }, {
+    "annuel" : "2019",
+    "sae_pi" : "Industrie",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2019",
+    "sae_pi" : "Transport",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2020",
+    "sae_pi" : "Agriculture",
+    "valeur" : "97.6"
+  }, {
+    "annuel" : "2020",
+    "sae_pi" : "Autre",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2020",
+    "sae_pi" : "Autres services",
+    "valeur" : "0.9"
+  }, {
+    "annuel" : "2020",
+    "sae_pi" : "BTP",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2020",
+    "sae_pi" : "Boulangerie pâtisserie",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2020",
+    "sae_pi" : "Grande distribution",
+    "valeur" : "1.0"
+  }, {
+    "annuel" : "2020",
+    "sae_pi" : "Génie civil",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2020",
+    "sae_pi" : "Hôtellerie et restauration",
+    "valeur" : "0.6"
+  }, {
+    "annuel" : "2020",
+    "sae_pi" : "Industrie",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2020",
+    "sae_pi" : "Transport",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2021",
+    "sae_pi" : "Agriculture",
+    "valeur" : "98.8"
+  }, {
+    "annuel" : "2021",
+    "sae_pi" : "Autre",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2021",
+    "sae_pi" : "Autres services",
+    "valeur" : "0.7"
+  }, {
+    "annuel" : "2021",
+    "sae_pi" : "BTP",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2021",
+    "sae_pi" : "Boulangerie pâtisserie",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2021",
+    "sae_pi" : "Grande distribution",
+    "valeur" : "0.4"
+  }, {
+    "annuel" : "2021",
+    "sae_pi" : "Génie civil",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2021",
+    "sae_pi" : "Hôtellerie et restauration",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2021",
+    "sae_pi" : "Industrie",
+    "valeur" : "0.1"
+  }, {
+    "annuel" : "2021",
+    "sae_pi" : "Transport",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2022",
+    "sae_pi" : "Agriculture",
+    "valeur" : "97.6"
+  }, {
+    "annuel" : "2022",
+    "sae_pi" : "Autre",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2022",
+    "sae_pi" : "Autres services",
+    "valeur" : "1.2"
+  }, {
+    "annuel" : "2022",
+    "sae_pi" : "BTP",
+    "valeur" : "0.3"
+  }, {
+    "annuel" : "2022",
+    "sae_pi" : "Boulangerie pâtisserie",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2022",
+    "sae_pi" : "Grande distribution",
+    "valeur" : "0.1"
+  }, {
+    "annuel" : "2022",
+    "sae_pi" : "Génie civil",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2022",
+    "sae_pi" : "Hôtellerie et restauration",
+    "valeur" : "0.5"
+  }, {
+    "annuel" : "2022",
+    "sae_pi" : "Industrie",
+    "valeur" : "0.3"
+  }, {
+    "annuel" : "2022",
+    "sae_pi" : "Transport",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2023",
+    "sae_pi" : "Agriculture",
+    "valeur" : "98.6"
+  }, {
+    "annuel" : "2023",
+    "sae_pi" : "Autre",
+    "valeur" : "0.8"
+  }, {
+    "annuel" : "2023",
+    "sae_pi" : "Autres services",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2023",
+    "sae_pi" : "BTP",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2023",
+    "sae_pi" : "Boulangerie pâtisserie",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2023",
+    "sae_pi" : "Grande distribution",
+    "valeur" : "0.1"
+  }, {
+    "annuel" : "2023",
+    "sae_pi" : "Génie civil",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2023",
+    "sae_pi" : "Hôtellerie et restauration",
+    "valeur" : "0.1"
+  }, {
+    "annuel" : "2023",
+    "sae_pi" : "Industrie",
+    "valeur" : "0.4"
+  }, {
+    "annuel" : "2023",
+    "sae_pi" : "Transport",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2024",
+    "sae_pi" : "Agriculture",
+    "valeur" : "98.1"
+  }, {
+    "annuel" : "2024",
+    "sae_pi" : "Autre",
+    "valeur" : "0.2"
+  }, {
+    "annuel" : "2024",
+    "sae_pi" : "Autres services",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2024",
+    "sae_pi" : "BTP",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2024",
+    "sae_pi" : "Boulangerie pâtisserie",
+    "valeur" : "0.2"
+  }, {
+    "annuel" : "2024",
+    "sae_pi" : "Grande distribution",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2024",
+    "sae_pi" : "Génie civil",
+    "valeur" : "0.3"
+  }, {
+    "annuel" : "2024",
+    "sae_pi" : "Hôtellerie et restauration",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2024",
+    "sae_pi" : "Industrie",
+    "valeur" : "0.9"
+  }, {
+    "annuel" : "2024",
+    "sae_pi" : "Transport",
+    "valeur" : "0.3"
+  } ],
+  "indicateur" : "bénéficiaires du pi par sae"
+}

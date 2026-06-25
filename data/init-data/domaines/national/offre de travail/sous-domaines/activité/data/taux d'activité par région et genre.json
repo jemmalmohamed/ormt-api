@@ -1,0 +1,554 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "21.4"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "region" : "casablanca-settat",
+    "valeur" : "28.2"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "region" : "drâa-tafilalet",
+    "valeur" : "20.2"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "region" : "fès-meknès",
+    "valeur" : "18.7"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "region" : "l'oriental",
+    "valeur" : "15.6"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "region" : "marrakech-safi",
+    "valeur" : "20.2"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "22.9"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "region" : "régions du sud",
+    "valeur" : "18.3"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "region" : "souss-massa",
+    "valeur" : "18.9"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "18.3"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "region" : "total",
+    "valeur" : "21.5"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "70.5"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "region" : "casablanca-settat",
+    "valeur" : "72.6"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "region" : "drâa-tafilalet",
+    "valeur" : "64.6"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "region" : "fès-meknès",
+    "valeur" : "68.5"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "region" : "l'oriental",
+    "valeur" : "72.0"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "region" : "marrakech-safi",
+    "valeur" : "74.6"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "69.0"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "region" : "régions du sud",
+    "valeur" : "71.2"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "region" : "souss-massa",
+    "valeur" : "68.8"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "72.8"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "region" : "total",
+    "valeur" : "71.0"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "18.7"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "region" : "casablanca-settat",
+    "valeur" : "25.0"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "region" : "drâa-tafilalet",
+    "valeur" : "19.0"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "region" : "fès-meknès",
+    "valeur" : "18.0"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "region" : "l'oriental",
+    "valeur" : "14.5"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "region" : "marrakech-safi",
+    "valeur" : "19.0"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "20.8"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "region" : "régions du sud",
+    "valeur" : "16.3"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "region" : "souss-massa",
+    "valeur" : "16.8"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "20.0"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "region" : "total",
+    "valeur" : "19.9"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "70.1"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "region" : "casablanca-settat",
+    "valeur" : "71.4"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "region" : "drâa-tafilalet",
+    "valeur" : "64.5"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "region" : "fès-meknès",
+    "valeur" : "68.2"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "region" : "l'oriental",
+    "valeur" : "71.9"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "region" : "marrakech-safi",
+    "valeur" : "74.1"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "68.6"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "region" : "régions du sud",
+    "valeur" : "69.5"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "region" : "souss-massa",
+    "valeur" : "68.1"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "72.6"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "region" : "total",
+    "valeur" : "70.4"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "18.4"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "region" : "casablanca-settat",
+    "valeur" : "25.2"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "region" : "drâa-tafilalet",
+    "valeur" : "23.1"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "region" : "fès-meknès",
+    "valeur" : "18.6"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "region" : "l'oriental",
+    "valeur" : "15.0"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "region" : "marrakech-safi",
+    "valeur" : "19.2"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "21.3"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "region" : "régions du sud",
+    "valeur" : "17.4"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "region" : "souss-massa",
+    "valeur" : "16.0"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "26.2"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "region" : "total",
+    "valeur" : "20.9"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "72.3"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "region" : "casablanca-settat",
+    "valeur" : "71.0"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "region" : "drâa-tafilalet",
+    "valeur" : "65.5"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "region" : "fès-meknès",
+    "valeur" : "67.2"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "region" : "l'oriental",
+    "valeur" : "71.6"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "region" : "marrakech-safi",
+    "valeur" : "74.2"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "68.1"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "region" : "régions du sud",
+    "valeur" : "69.2"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "region" : "souss-massa",
+    "valeur" : "68.3"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "72.8"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "region" : "total",
+    "valeur" : "70.4"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "16.2"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "region" : "casablanca-settat",
+    "valeur" : "23.9"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "region" : "drâa-tafilalet",
+    "valeur" : "19.8"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "region" : "fès-meknès",
+    "valeur" : "18.6"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "region" : "l'oriental",
+    "valeur" : "14.9"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "region" : "marrakech-safi",
+    "valeur" : "17.3"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "20.9"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "region" : "régions du sud",
+    "valeur" : "15.6"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "region" : "souss-massa",
+    "valeur" : "12.1"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "27.2"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "region" : "total",
+    "valeur" : "19.8"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "70.0"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "region" : "casablanca-settat",
+    "valeur" : "70.2"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "region" : "drâa-tafilalet",
+    "valeur" : "63.7"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "region" : "fès-meknès",
+    "valeur" : "67.0"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "region" : "l'oriental",
+    "valeur" : "70.7"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "region" : "marrakech-safi",
+    "valeur" : "72.5"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "68.7"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "region" : "régions du sud",
+    "valeur" : "70.8"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "region" : "souss-massa",
+    "valeur" : "66.3"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "72.4"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "region" : "total",
+    "valeur" : "69.6"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "13.3"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "region" : "casablanca-settat",
+    "valeur" : "23.1"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "region" : "drâa-tafilalet",
+    "valeur" : "20.0"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "region" : "fès-meknès",
+    "valeur" : "18.2"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "region" : "l'oriental",
+    "valeur" : "13.6"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "region" : "marrakech-safi",
+    "valeur" : "16.5"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "20.9"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "region" : "régions du sud",
+    "valeur" : "15.9"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "region" : "souss-massa",
+    "valeur" : "12.9"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "25.0"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "region" : "total",
+    "valeur" : "19.0"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "68.5"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "region" : "casablanca-settat",
+    "valeur" : "69.9"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "region" : "drâa-tafilalet",
+    "valeur" : "64.7"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "region" : "fès-meknès",
+    "valeur" : "66.5"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "region" : "l'oriental",
+    "valeur" : "68.1"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "region" : "marrakech-safi",
+    "valeur" : "71.2"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "68.1"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "region" : "régions du sud",
+    "valeur" : "72.2"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "region" : "souss-massa",
+    "valeur" : "66.7"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "71.8"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "region" : "total",
+    "valeur" : "69.0"
+  } ],
+  "indicateur" : "taux d'activité par région et genre"
+}

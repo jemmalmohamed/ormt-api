@@ -70,6 +70,9 @@ public class DomaineCreateRequestDto {
             private Boolean isDefault = false;
             private String dimensionMappingJson; // optional; default {"default":"standard"}
             private String chartOptionsJson; // optional
+            private Integer chartSpecVersion; // optional
+            private String chartSpecJson; // optional
+            private String configSystem; // optional
         }
     }
 

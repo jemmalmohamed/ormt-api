@@ -1,0 +1,541 @@
+{
+  "actif" : true,
+  "description" : "Indicateurs relatifs au chômage sur le marché du travail (population active en chômage, taux de chômage, etc.)",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "volume",
+    "description" : "population active en chômage selon diplôme et genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Population active en chômage par diplôme et genre - Histogramme"
+    } ],
+    "nom" : "population active en chômage par diplôme et genre",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "population active en chômage par diplôme et genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "volume",
+    "description" : "population active en chômage selon diplôme et milieu de résidence",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Population active en chômage par diplôme et milieu de résidence - Histogramme"
+    } ],
+    "nom" : "population active en chômage par diplôme et milieu de résidence",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "population active en chômage par diplôme et milieu de résidence",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "volume",
+    "description" : "population active en chômage selon le genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Population active en chômage par genre - Histogramme"
+    } ],
+    "nom" : "population active en chômage par genre",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "population active en chômage par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "volume",
+    "description" : "population active en chômage selon le milieu de résidence",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Population active en chômage par milieu de résidence - Histogramme"
+    } ],
+    "nom" : "population active en chômage par milieu de résidence",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "population active en chômage par milieu de résidence",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "volume",
+    "description" : "population active en chômage selon l'expérience professionnelle",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "expérience",
+      "nom" : "experience",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Population active en chômage selon l'expérience - Histogramme"
+    } ],
+    "nom" : "population active en chômage selon l'expérience",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "population active en chômage selon l'expérience",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "volume",
+    "description" : "population active en chômage selon la durée du chômage",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "durée",
+      "nom" : "duree",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Population active en chômage selon la durée - Histogramme"
+    } ],
+    "nom" : "population active en chômage selon la durée",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "population active en chômage selon la durée",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "volume",
+    "description" : "population active en chômage selon les causes du chômage",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "cause",
+      "nom" : "cause",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Population active en chômage selon les causes - Histogramme"
+    } ],
+    "nom" : "population active en chômage selon les causes",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "population active en chômage selon les causes",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux de chômage",
+    "description" : "taux de chômage par genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Taux de chômage par genre - Choropleth"
+    } ],
+    "nom" : "taux de chômage par région et genre",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux de chômage par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux de chômage",
+    "description" : "taux de chômage par milieu de résidence",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Taux de chômage par milieu de résidence - CHOROPLETH"
+    } ],
+    "nom" : "taux de chômage par région et milieu de résidence",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux de chômage par milieu de résidence",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux de chômage",
+    "description" : "taux de chômage selon le diplôme",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Taux de chômage selon le diplôme - Courbes"
+    } ],
+    "nom" : "taux de chômage selon le diplôme",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux de chômage selon le diplôme",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux de chômage",
+    "description" : "taux de chômage selon le genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Taux de chômage selon le genre - Courbes"
+    } ],
+    "nom" : "taux de chômage selon le genre",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux de chômage selon le genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux de chômage",
+    "description" : "taux de chômage selon le groupe d'âge",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "groupe d'âge",
+      "nom" : "groupe_age",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Taux de chômage selon le groupe d'âge - Courbes"
+    } ],
+    "nom" : "taux de chômage selon le groupe d'âge",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux de chômage selon le groupe d'âge",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux de chômage",
+    "description" : "taux de chômage selon le milieu de résidence",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Taux de chômage selon le milieu de résidence - Courbes"
+    }, {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Taux de chômage selon le milieu de résidence - Histogramme"
+    } ],
+    "nom" : "taux de chômage selon le milieu de résidence",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux de chômage selon le milieu de résidence",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  } ],
+  "nom" : "chômage "
+}

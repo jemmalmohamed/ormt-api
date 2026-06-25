@@ -1,0 +1,408 @@
+{
+  "actif" : true,
+  "description" : "Sous domaine du domaine Employabilité et insertion professionnelle.",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "entreprises  bénéficiaires",
+    "description" : "entreprises bénéficiaires tahfiz.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Entreprises bénéficiaires TAHFIZ - CHOROPLETH"
+    } ],
+    "nom" : "entreprises bénéficiaires tahfiz par région",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "entreprises bénéficiaires tahfiz",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "entreprises  bénéficiaires",
+    "description" : "entreprises bénéficiaires tahfiz ventilées par secteur d'activité économique (sae).",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "sae tahfiz",
+      "nom" : "sae_tahfiz",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Entreprises bénéficiaires TAHFIZ par SAE - Camembert"
+    } ],
+    "nom" : "entreprises bénéficiaires tahfiz par sae",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "entreprises bénéficiaires tahfiz par sae",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "entreprises  bénéficiaires",
+    "description" : "entreprises bénéficiaires tahfiz ventilées par taille d'entreprise.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "taille d'entreprise",
+      "nom" : "taille_entreprise",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Entreprises bénéficiaires TAHFIZ par taille d'entreprise - Camembert"
+    } ],
+    "nom" : "entreprises bénéficiaires tahfiz par taille d'entreprise",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "entreprises bénéficiaires tahfiz par taille d'entreprise",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "entreprises  bénéficiaires",
+    "description" : "nombre total d'entreprises bénéficiaires du programme tahfiz.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre d'entreprises bénéficiaires TAHFIZ - Histogramme"
+    } ],
+    "nom" : "nombre d'entreprises bénéficiaires tahfiz",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre d'entreprises bénéficiaires tahfiz",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "salariés bénéficiaires",
+    "description" : "nombre total des salariés bénéficiaires du programme tahfiz.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre des salariés bénéficiaires TAHFIZ - Histogramme"
+    } ],
+    "nom" : "nombre des salariés bénéficiaires tahfiz",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre des salariés bénéficiaires tahfiz",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "salariés bénéficiaires",
+    "description" : "salariés bénéficiaires tahfiz ventilés par diplôme.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Salariés bénéficiaires TAHFIZ par diplôme - Camembert"
+    } ],
+    "nom" : "salariés bénéficiaires tahfiz par diplôme",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "salariés bénéficiaires tahfiz par diplôme",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "salariés bénéficiaires",
+    "description" : "salariés bénéficiaires tahfiz ventilés par genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Salariés bénéficiaires TAHFIZ par genre - Camembert"
+    } ],
+    "nom" : "salariés bénéficiaires tahfiz par genre",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "salariés bénéficiaires tahfiz par genre",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "salariés bénéficiaires",
+    "description" : "salariés bénéficiaires tahfiz.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Salariés bénéficiaires TAHFIZ - CHOROPLETH"
+    } ],
+    "nom" : "salariés bénéficiaires tahfiz par région",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "salariés bénéficiaires tahfiz",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "salariés bénéficiaires",
+    "description" : "salariés bénéficiaires tahfiz ventilés par secteur d'activité économique (sae).",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "sae",
+      "nom" : "sae",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Salariés bénéficiaires TAHFIZ par SAE - Camembert"
+    } ],
+    "nom" : "salariés bénéficiaires tahfiz par sae",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "salariés bénéficiaires tahfiz par sae",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "salariés bénéficiaires",
+    "description" : "salariés bénéficiaires tahfiz ventilés par taille d'entreprise.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "taille d'entreprise",
+      "nom" : "taille_entreprise",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Salariés bénéficiaires TAHFIZ par taille d'entreprise - Camembert"
+    } ],
+    "nom" : "salariés bénéficiaires tahfiz par taille d'entreprise",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "salariés bénéficiaires tahfiz par taille d'entreprise",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "salariés bénéficiaires",
+    "description" : "salariés bénéficiaires tahfiz ventilés par âge.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "age",
+      "nom" : "age",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Salariés bénéficiaires TAHFIZ par âge - Camembert"
+    } ],
+    "nom" : "salariés bénéficiaires tahfiz par âge",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "salariés bénéficiaires tahfiz par âge",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  } ],
+  "nom" : "tahfiz"
+}

@@ -1,0 +1,150 @@
+{
+  "actif" : true,
+  "description" : "statistiques sur les offres d'emploi recueillies par l'anapec.",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "offres d'emploi",
+    "description" : "nombre d'offre d'emploi recueillies",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "nombre d'offre d'emploi recueillies - Histogramme"
+    } ],
+    "nom" : "nombre d'offre d'emploi recueillies",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre d'offre d'emploi recueillies",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "offres d'emploi",
+    "description" : "répartition des offres d'emploi recueillies par type de contrat",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "type de contrat",
+      "nom" : "type_contrat",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "offre d'emploi recueillies par contrat - Camembert"
+    } ],
+    "nom" : "offre d'emploi recueillies par contrat",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "offre d'emploi recueillies par contrat",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "offres d'emploi",
+    "description" : "répartition des offres d'emploi recueillies",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "offre d'emploi recueillies - Camembert"
+    } ],
+    "nom" : "offre d'emploi recueillies par région",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "offre d'emploi recueillies",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "offres d'emploi",
+    "description" : "répartition des offres d'emploi recueillies par taille d'entreprise",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "taille d'entreprise",
+      "nom" : "taille",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "offre d'emploi recueillies par taille d'entreprise - Camembert"
+    } ],
+    "nom" : "offre d'emploi recueillies par taille d'entreprise",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "offre d'emploi recueillies par taille d'entreprise",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  } ],
+  "nom" : "offres d'emploi recueillies"
+}

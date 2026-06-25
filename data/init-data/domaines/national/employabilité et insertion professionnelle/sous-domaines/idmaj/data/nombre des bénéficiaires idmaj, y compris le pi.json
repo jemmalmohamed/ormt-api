@@ -1,0 +1,22 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "valeur" : "109000"
+  }, {
+    "annuel" : "2020",
+    "valeur" : "76000"
+  }, {
+    "annuel" : "2021",
+    "valeur" : "97000"
+  }, {
+    "annuel" : "2022",
+    "valeur" : "114000"
+  }, {
+    "annuel" : "2023",
+    "valeur" : "120000"
+  }, {
+    "annuel" : "2024",
+    "valeur" : "125000"
+  } ],
+  "indicateur" : "nombre des bénéficiaires idmaj, y compris le pi"
+}

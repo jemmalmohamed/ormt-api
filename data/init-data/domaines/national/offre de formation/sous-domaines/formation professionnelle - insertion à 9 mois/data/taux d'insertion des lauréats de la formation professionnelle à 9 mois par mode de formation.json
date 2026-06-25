@@ -1,0 +1,36 @@
+{
+  "data" : [ {
+    "annuel" : "2016",
+    "mode_formation" : "Formation Résidentielle",
+    "valeur" : "66.1"
+  }, {
+    "annuel" : "2016",
+    "mode_formation" : "Formation altérnée",
+    "valeur" : "70.4"
+  }, {
+    "annuel" : "2016",
+    "mode_formation" : "Formation par apprentissage",
+    "valeur" : "68.6"
+  }, {
+    "annuel" : "2016",
+    "mode_formation" : "TOTAL",
+    "valeur" : "67.1"
+  }, {
+    "annuel" : "2019",
+    "mode_formation" : "Formation Résidentielle",
+    "valeur" : "68.5"
+  }, {
+    "annuel" : "2019",
+    "mode_formation" : "Formation altérnée",
+    "valeur" : "69.6"
+  }, {
+    "annuel" : "2019",
+    "mode_formation" : "Formation par apprentissage",
+    "valeur" : "78.4"
+  }, {
+    "annuel" : "2019",
+    "mode_formation" : "TOTAL",
+    "valeur" : "69.8"
+  } ],
+  "indicateur" : "taux d'insertion des lauréats de la formation professionnelle à 9 mois par mode de formation"
+}

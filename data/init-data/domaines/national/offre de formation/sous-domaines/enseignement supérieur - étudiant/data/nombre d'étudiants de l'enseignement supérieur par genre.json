@@ -1,0 +1,112 @@
+{
+  "data" : [ {
+    "annuel" : "2016",
+    "genre" : "Total",
+    "valeur" : "821000"
+  }, {
+    "annuel" : "2016",
+    "genre" : "femme",
+    "valeur" : "393400"
+  }, {
+    "annuel" : "2016",
+    "genre" : "homme",
+    "valeur" : "427100"
+  }, {
+    "annuel" : "2017",
+    "genre" : "Total",
+    "valeur" : "852000"
+  }, {
+    "annuel" : "2017",
+    "genre" : "femme",
+    "valeur" : "412600"
+  }, {
+    "annuel" : "2017",
+    "genre" : "homme",
+    "valeur" : "439600"
+  }, {
+    "annuel" : "2018",
+    "genre" : "Total",
+    "valeur" : "891000"
+  }, {
+    "annuel" : "2018",
+    "genre" : "femme",
+    "valeur" : "435000"
+  }, {
+    "annuel" : "2018",
+    "genre" : "homme",
+    "valeur" : "456300"
+  }, {
+    "annuel" : "2019",
+    "genre" : "Total",
+    "valeur" : "961000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "valeur" : "474200"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "valeur" : "486500"
+  }, {
+    "annuel" : "2020",
+    "genre" : "Total",
+    "valeur" : "1010000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "valeur" : "505700"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "valeur" : "503900"
+  }, {
+    "annuel" : "2021",
+    "genre" : "Total",
+    "valeur" : "1085000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "valeur" : "560300"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "valeur" : "524800"
+  }, {
+    "annuel" : "2022",
+    "genre" : "Total",
+    "valeur" : "1171000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "valeur" : "617000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "valeur" : "553800"
+  }, {
+    "annuel" : "2023",
+    "genre" : "Total",
+    "valeur" : "1219000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "valeur" : "654100"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "valeur" : "564600"
+  }, {
+    "annuel" : "2024",
+    "genre" : "Total",
+    "valeur" : "1241000"
+  }, {
+    "annuel" : "2024",
+    "genre" : "femme",
+    "valeur" : "684500"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "valeur" : "556600"
+  } ],
+  "indicateur" : "nombre d'étudiants de l'enseignement supérieur par genre"
+}

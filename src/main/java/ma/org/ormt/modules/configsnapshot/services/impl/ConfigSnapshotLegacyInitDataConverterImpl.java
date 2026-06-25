@@ -186,6 +186,9 @@ public class ConfigSnapshotLegacyInitDataConverterImpl implements ConfigSnapshot
                                     grapheJson.put("isDefault", graphe.getIsDefault());
                                     grapheJson.put("dimensionMappingJson", graphe.getDimensionMappingJson());
                                     grapheJson.put("chartOptionsJson", graphe.getChartOptionsJson());
+                                    grapheJson.put("chartSpecVersion", graphe.getChartSpecVersion());
+                                    grapheJson.put("chartSpecJson", graphe.getChartSpecJson());
+                                    grapheJson.put("configSystem", graphe.getConfigSystem());
                                     return grapheJson;
                                 })
                                 .toList());

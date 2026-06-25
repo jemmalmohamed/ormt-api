@@ -1,0 +1,22 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "valeur" : "22"
+  }, {
+    "annuel" : "2020",
+    "valeur" : "34"
+  }, {
+    "annuel" : "2021",
+    "valeur" : "38"
+  }, {
+    "annuel" : "2022",
+    "valeur" : "27"
+  }, {
+    "annuel" : "2023",
+    "valeur" : "32"
+  }, {
+    "annuel" : "2024",
+    "valeur" : "37"
+  } ],
+  "indicateur" : "objectif ciblé (hors formation en ligne)"
+}

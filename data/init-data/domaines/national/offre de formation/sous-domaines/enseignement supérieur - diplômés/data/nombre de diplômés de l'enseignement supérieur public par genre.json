@@ -1,0 +1,100 @@
+{
+  "data" : [ {
+    "annuel" : "2016",
+    "genre" : "Total",
+    "valeur" : "95000"
+  }, {
+    "annuel" : "2016",
+    "genre" : "femme",
+    "valeur" : "47000"
+  }, {
+    "annuel" : "2016",
+    "genre" : "homme",
+    "valeur" : "48400"
+  }, {
+    "annuel" : "2017",
+    "genre" : "Total",
+    "valeur" : "103000"
+  }, {
+    "annuel" : "2017",
+    "genre" : "femme",
+    "valeur" : "51000"
+  }, {
+    "annuel" : "2017",
+    "genre" : "homme",
+    "valeur" : "51800"
+  }, {
+    "annuel" : "2018",
+    "genre" : "Total",
+    "valeur" : "112000"
+  }, {
+    "annuel" : "2018",
+    "genre" : "femme",
+    "valeur" : "56000"
+  }, {
+    "annuel" : "2018",
+    "genre" : "homme",
+    "valeur" : "55700"
+  }, {
+    "annuel" : "2019",
+    "genre" : "Total",
+    "valeur" : "119000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "valeur" : "61000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "valeur" : "57900"
+  }, {
+    "annuel" : "2020",
+    "genre" : "Total",
+    "valeur" : "127000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "valeur" : "67000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "valeur" : "59900"
+  }, {
+    "annuel" : "2021",
+    "genre" : "Total",
+    "valeur" : "143000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "valeur" : "79000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "valeur" : "64700"
+  }, {
+    "annuel" : "2022",
+    "genre" : "Total",
+    "valeur" : "140000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "valeur" : "80000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "valeur" : "60400"
+  }, {
+    "annuel" : "2023",
+    "genre" : "Total",
+    "valeur" : "135000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "valeur" : "81000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "valeur" : "54600"
+  } ],
+  "indicateur" : "nombre de diplômés de l'enseignement supérieur public par genre"
+}

@@ -1,0 +1,52 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "valeur" : "96.7"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "valeur" : "3.3"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "valeur" : "97.7"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "valeur" : "2.3"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "valeur" : "98.5"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "valeur" : "1.5"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "valeur" : "96.1"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "valeur" : "3.9"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "valeur" : "98.6"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "valeur" : "1.4"
+  }, {
+    "annuel" : "2024",
+    "genre" : "femme",
+    "valeur" : "95.8"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "valeur" : "4.2"
+  } ],
+  "indicateur" : "bénéficiaires du pi par genre"
+}

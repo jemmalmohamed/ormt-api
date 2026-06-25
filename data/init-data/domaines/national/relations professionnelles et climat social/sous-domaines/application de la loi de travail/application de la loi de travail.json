@@ -1,0 +1,232 @@
+{
+  "actif" : true,
+  "description" : "application de la loi de travail",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "application de la loi",
+    "description" : "nombre d'observations par motif d'observation",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "motif d'observation",
+      "nom" : "motif_observation",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Nombre d'observations par motif d'observation - Courbes"
+    } ],
+    "nom" : "nombre d'observations par motif d'observation",
+    "regleCalcul" : null,
+    "source" : "miepeec",
+    "titre" : "nombre d'observations par motif d'observation",
+    "typeTb" : "grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "application de la loi",
+    "description" : "nombre d'observations par secteur",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Nombre d'observations par secteur - Courbes"
+    } ],
+    "nom" : "nombre d'observations par secteur",
+    "regleCalcul" : null,
+    "source" : "miepeec",
+    "titre" : "nombre d'observations par secteur",
+    "typeTb" : "grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "application de la loi",
+    "description" : "nombre de contraventions",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : true,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Nombre de contraventions - Courbes"
+    } ],
+    "nom" : "nombre de contraventions",
+    "regleCalcul" : null,
+    "source" : "miepeec",
+    "titre" : "nombre de contraventions",
+    "typeTb" : "grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "application de la loi",
+    "description" : "nombre de délits",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : true,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Nombre de délits - Courbes"
+    } ],
+    "nom" : "nombre de délits",
+    "regleCalcul" : null,
+    "source" : "miepeec",
+    "titre" : "nombre de délits",
+    "typeTb" : "grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "application de la loi",
+    "description" : "nombre de observations émises",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : true,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Nombre de observations émises - Courbes"
+    } ],
+    "nom" : "nombre de observations émises",
+    "regleCalcul" : null,
+    "source" : "miepeec",
+    "titre" : "nombre de observations émises",
+    "typeTb" : "grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "application de la loi",
+    "description" : "nombre de pv",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : true,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Nombre de PV - Courbes"
+    } ],
+    "nom" : "nombre de pv",
+    "regleCalcul" : null,
+    "source" : "miepeec",
+    "titre" : "nombre de pv",
+    "typeTb" : "grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "application de la loi",
+    "description" : "nombre de visites des inspecteurs de travail",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : true,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Nombre de visites des inspecteurs de travail - Courbes"
+    } ],
+    "nom" : "nombre de visites des inspecteurs de travail",
+    "regleCalcul" : null,
+    "source" : "miepeec",
+    "titre" : "nombre de visites des inspecteurs de travail",
+    "typeTb" : "grand public",
+    "unite" : ""
+  } ],
+  "nom" : "application de la loi de travail"
+}

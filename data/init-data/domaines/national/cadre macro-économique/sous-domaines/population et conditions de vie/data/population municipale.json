@@ -1,0 +1,184 @@
+{
+  "data" : [ {
+    "annuel" : "2024",
+    "genre" : "ensemble",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "2510799"
+  }, {
+    "annuel" : "2024",
+    "genre" : "ensemble",
+    "region" : "casablanca-settat",
+    "valeur" : "7651096"
+  }, {
+    "annuel" : "2024",
+    "genre" : "ensemble",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "186611"
+  }, {
+    "annuel" : "2024",
+    "genre" : "ensemble",
+    "region" : "drâa-tafilalet",
+    "valeur" : "1643144"
+  }, {
+    "annuel" : "2024",
+    "genre" : "ensemble",
+    "region" : "fès-meknès",
+    "valeur" : "4436873"
+  }, {
+    "annuel" : "2024",
+    "genre" : "ensemble",
+    "region" : "guelmim-oued noun",
+    "valeur" : "419169"
+  }, {
+    "annuel" : "2024",
+    "genre" : "ensemble",
+    "region" : "l'oriental",
+    "valeur" : "2269378"
+  }, {
+    "annuel" : "2024",
+    "genre" : "ensemble",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "417663"
+  }, {
+    "annuel" : "2024",
+    "genre" : "ensemble",
+    "region" : "marrakech-safi",
+    "valeur" : "4864187"
+  }, {
+    "annuel" : "2024",
+    "genre" : "ensemble",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "5088656"
+  }, {
+    "annuel" : "2024",
+    "genre" : "ensemble",
+    "region" : "souss-massa",
+    "valeur" : "2994360"
+  }, {
+    "annuel" : "2024",
+    "genre" : "ensemble",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "4008655"
+  }, {
+    "annuel" : "2024",
+    "genre" : "femme",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "1283936"
+  }, {
+    "annuel" : "2024",
+    "genre" : "femme",
+    "region" : "casablanca-settat",
+    "valeur" : "3834806"
+  }, {
+    "annuel" : "2024",
+    "genre" : "femme",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "77573"
+  }, {
+    "annuel" : "2024",
+    "genre" : "femme",
+    "region" : "drâa-tafilalet",
+    "valeur" : "834796"
+  }, {
+    "annuel" : "2024",
+    "genre" : "femme",
+    "region" : "fès-meknès",
+    "valeur" : "2232578"
+  }, {
+    "annuel" : "2024",
+    "genre" : "femme",
+    "region" : "guelmim-oued noun",
+    "valeur" : "211832"
+  }, {
+    "annuel" : "2024",
+    "genre" : "femme",
+    "region" : "l'oriental",
+    "valeur" : "1159757"
+  }, {
+    "annuel" : "2024",
+    "genre" : "femme",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "205193"
+  }, {
+    "annuel" : "2024",
+    "genre" : "femme",
+    "region" : "marrakech-safi",
+    "valeur" : "2411225"
+  }, {
+    "annuel" : "2024",
+    "genre" : "femme",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "2560370"
+  }, {
+    "annuel" : "2024",
+    "genre" : "femme",
+    "region" : "souss-massa",
+    "valeur" : "1509876"
+  }, {
+    "annuel" : "2024",
+    "genre" : "femme",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "1973161"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "1226863"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "region" : "casablanca-settat",
+    "valeur" : "3816290"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "109038"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "region" : "drâa-tafilalet",
+    "valeur" : "808348"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "region" : "fès-meknès",
+    "valeur" : "2204295"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "region" : "guelmim-oued noun",
+    "valeur" : "213976"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "region" : "l'oriental",
+    "valeur" : "1109621"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "205831"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "region" : "marrakech-safi",
+    "valeur" : "2452962"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "2528286"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "region" : "souss-massa",
+    "valeur" : "1484484"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "2035494"
+  } ],
+  "indicateur" : "population municipale"
+}

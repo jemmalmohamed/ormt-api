@@ -1,0 +1,346 @@
+{
+  "actif" : true,
+  "description" : "Sous domaine du domaine Employabilité et insertion professionnelle.",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "programmes d'amélioration de l'employabilité",
+    "description" : "bénéficiaires de la fce.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires de la FCE - Camembert"
+    } ],
+    "nom" : "bénéficiaires de la fce par région",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires de la fce",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "programmes d'amélioration de l'employabilité",
+    "description" : "bénéficiaires de la fqr.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires de la FQR  - CHOROPLETH"
+    } ],
+    "nom" : "bénéficiaires de la fqr par région",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires de la fqr",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "programmes d'amélioration de l'employabilité",
+    "description" : "bénéficiaires de la fse.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires de la FSE - CHOROPLETH"
+    } ],
+    "nom" : "bénéficiaires de la fse par région",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires de la fse",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "programmes d'amélioration de l'employabilité",
+    "description" : "bénéficiaires de la fse ventilés par secteur d'activité économique.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "sae_fse",
+      "nom" : "sae_fse",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires de la FSE par secteur d'activité économique - Camembert"
+    } ],
+    "nom" : "bénéficiaires de la fse par secteur d'activité économique",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires de la fse par secteur d'activité économique",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "programmes d'amélioration de l'employabilité",
+    "description" : "bénéficiaires des programmes d'amélioration de l'employabilité ventilés par composante.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "composante",
+      "nom" : "composante",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires des Programmes d'amélioration de l'employabilité par composante - Camembert"
+    } ],
+    "nom" : "bénéficiaires des programmes d'amélioration de l'employabilité par composante",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires des programmes d'amélioration de l'employabilité par composante",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "programmes d'amélioration de l'employabilité",
+    "description" : "nombre total de bénéficiaires des programmes d'amélioration de l'employabilité.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre de bénéficiaires des Programmes d'amélioration de l'employabilité - Histogramme"
+    } ],
+    "nom" : "nombre de bénéficiaires des programmes d'amélioration de l'employabilité",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre de bénéficiaires des programmes d'amélioration de l'employabilité",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "programmes d'amélioration de l'employabilité",
+    "description" : "nombre des bénéficiaires de la formation en ligne.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre des bénéficiaires de la formation en ligne - Histogramme"
+    } ],
+    "nom" : "nombre des bénéficiaires de la formation en ligne",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre des bénéficiaires de la formation en ligne",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "programmes d'amélioration de l'employabilité",
+    "description" : "nombre des bénéficiaires du partenariat national.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre des bénéficiaires du partenariat national - Histogramme"
+    } ],
+    "nom" : "nombre des bénéficiaires du partenariat national",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre des bénéficiaires du partenariat national",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "programmes d'amélioration de l'employabilité",
+    "description" : "nombre des bénéficiaires du partenariat régional.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre des bénéficiaires du partenariat régional - Histogramme"
+    } ],
+    "nom" : "nombre des bénéficiaires du partenariat régional",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre des bénéficiaires du partenariat régional",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "programmes d'amélioration de l'employabilité",
+    "description" : "objectif ciblé (hors formation en ligne)",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Objectif ciblé (hors formation en ligne) - Histogramme"
+    } ],
+    "nom" : "objectif ciblé (hors formation en ligne)",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "objectif ciblé (hors formation en ligne)",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  } ],
+  "nom" : "programmes d'amélioration de l'employabilité"
+}

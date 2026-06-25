@@ -1,0 +1,49 @@
+{
+  "data" : [ {
+    "annuel" : "2014",
+    "genre" : "ensemble",
+    "type_acces" : "Total",
+    "valeur" : "16.4"
+  }, {
+    "annuel" : "2014",
+    "genre" : "ensemble",
+    "type_acces" : "Université Accès ouvert",
+    "valeur" : "18.7"
+  }, {
+    "annuel" : "2014",
+    "genre" : "ensemble",
+    "type_acces" : "Université Accès régulé",
+    "valeur" : "8.5"
+  }, {
+    "annuel" : "2014",
+    "genre" : "femme",
+    "type_acces" : "Total",
+    "valeur" : "21.3"
+  }, {
+    "annuel" : "2014",
+    "genre" : "femme",
+    "type_acces" : "Université Accès ouvert",
+    "valeur" : "24.7"
+  }, {
+    "annuel" : "2014",
+    "genre" : "femme",
+    "type_acces" : "Université Accès régulé",
+    "valeur" : "10.5"
+  }, {
+    "annuel" : "2014",
+    "genre" : "homme",
+    "type_acces" : "Total",
+    "valeur" : "12.4"
+  }, {
+    "annuel" : "2014",
+    "genre" : "homme",
+    "type_acces" : "Université Accès ouvert",
+    "valeur" : "13.9"
+  }, {
+    "annuel" : "2014",
+    "genre" : "homme",
+    "type_acces" : "Université Accès régulé",
+    "valeur" : "6.5"
+  } ],
+  "indicateur" : "taux de chômage des diplômés de l'enseignement universitaire public après 4 ans (promotion 2014) par type d'accès"
+}

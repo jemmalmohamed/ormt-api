@@ -1,0 +1,204 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "secteur_activite" : "BTP",
+    "valeur" : "18744"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "3962"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "commerce",
+    "valeur" : "31466"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "enseignement",
+    "valeur" : "2425"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "ensemble",
+    "valeur" : "130762"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "hébergement et restauration",
+    "valeur" : "11279"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "industries",
+    "valeur" : "6061"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "santé humaine et action sociale",
+    "valeur" : "6408"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "services",
+    "valeur" : "44569"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "transport",
+    "valeur" : "5849"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "BTP",
+    "valeur" : "-20835"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "4858"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "commerce",
+    "valeur" : "-15240"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "enseignement",
+    "valeur" : "-3630"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "ensemble",
+    "valeur" : "-133325"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "hébergement et restauration",
+    "valeur" : "-36436"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "industries",
+    "valeur" : "-39162"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "santé humaine et action sociale",
+    "valeur" : "-407"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "services",
+    "valeur" : "-17637"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "transport",
+    "valeur" : "-4836"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "BTP",
+    "valeur" : "57252"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "25704"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "commerce",
+    "valeur" : "57051"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "enseignement",
+    "valeur" : "11240"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "ensemble",
+    "valeur" : "309028"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "hébergement et restauration",
+    "valeur" : "19718"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "industries",
+    "valeur" : "53181"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "santé humaine et action sociale",
+    "valeur" : "7552"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "services",
+    "valeur" : "62464"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "transport",
+    "valeur" : "14867"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "BTP",
+    "valeur" : "8295"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "12790"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "commerce",
+    "valeur" : "20934"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "enseignement",
+    "valeur" : "19162"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "ensemble",
+    "valeur" : "188858"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "hébergement et restauration",
+    "valeur" : "23895"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "industries",
+    "valeur" : "17329"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "santé humaine et action sociale",
+    "valeur" : "5791"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "services",
+    "valeur" : "73162"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "transport",
+    "valeur" : "7500"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "BTP",
+    "valeur" : "5147"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "2067"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "commerce",
+    "valeur" : "12375"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "enseignement",
+    "valeur" : "12518"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "ensemble",
+    "valeur" : "113789"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "hébergement et restauration",
+    "valeur" : "14843"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "industries",
+    "valeur" : "10970"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "santé humaine et action sociale",
+    "valeur" : "5496"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "services",
+    "valeur" : "44721"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "transport",
+    "valeur" : "5651"
+  } ],
+  "indicateur" : "création d'emploi eqtp par secteur d'activité"
+}

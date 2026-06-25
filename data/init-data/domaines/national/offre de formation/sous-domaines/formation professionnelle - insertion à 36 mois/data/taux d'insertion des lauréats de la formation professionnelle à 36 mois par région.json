@@ -1,0 +1,56 @@
+{
+  "data" : [ {
+    "annuel" : "2016",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "60.0"
+  }, {
+    "annuel" : "2016",
+    "region" : "casablanca-settat",
+    "valeur" : "85.2"
+  }, {
+    "annuel" : "2016",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "81.2"
+  }, {
+    "annuel" : "2016",
+    "region" : "drâa-tafilalet",
+    "valeur" : "92.4"
+  }, {
+    "annuel" : "2016",
+    "region" : "fès-meknès",
+    "valeur" : "93.8"
+  }, {
+    "annuel" : "2016",
+    "region" : "guelmim-oued noun",
+    "valeur" : "80.0"
+  }, {
+    "annuel" : "2016",
+    "region" : "l'oriental",
+    "valeur" : "73.1"
+  }, {
+    "annuel" : "2016",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "77.6"
+  }, {
+    "annuel" : "2016",
+    "region" : "marrakech-safi",
+    "valeur" : "86.0"
+  }, {
+    "annuel" : "2016",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "84.6"
+  }, {
+    "annuel" : "2016",
+    "region" : "souss-massa",
+    "valeur" : "93.5"
+  }, {
+    "annuel" : "2016",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "86.3"
+  }, {
+    "annuel" : "2016",
+    "region" : "total",
+    "valeur" : "84.4"
+  } ],
+  "indicateur" : "taux d'insertion des lauréats de la formation professionnelle à 36 mois par région"
+}

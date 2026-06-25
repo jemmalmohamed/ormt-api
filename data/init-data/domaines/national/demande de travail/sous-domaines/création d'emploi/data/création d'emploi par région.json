@@ -1,0 +1,224 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "43000"
+  }, {
+    "annuel" : "2019",
+    "region" : "casablanca-settat",
+    "valeur" : "45000"
+  }, {
+    "annuel" : "2019",
+    "region" : "drâa-tafilalet",
+    "valeur" : "29000"
+  }, {
+    "annuel" : "2019",
+    "region" : "ensemble",
+    "valeur" : "165000"
+  }, {
+    "annuel" : "2019",
+    "region" : "fès-meknès",
+    "valeur" : "28000"
+  }, {
+    "annuel" : "2019",
+    "region" : "l'oriental",
+    "valeur" : "7000"
+  }, {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "valeur" : "24000"
+  }, {
+    "annuel" : "2019",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "7000"
+  }, {
+    "annuel" : "2019",
+    "region" : "régions du sud",
+    "valeur" : "-1000"
+  }, {
+    "annuel" : "2019",
+    "region" : "souss-massa",
+    "valeur" : "20000"
+  }, {
+    "annuel" : "2019",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "-37000"
+  }, {
+    "annuel" : "2020",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "-38000"
+  }, {
+    "annuel" : "2020",
+    "region" : "casablanca-settat",
+    "valeur" : "-158000"
+  }, {
+    "annuel" : "2020",
+    "region" : "drâa-tafilalet",
+    "valeur" : "-19000"
+  }, {
+    "annuel" : "2020",
+    "region" : "ensemble",
+    "valeur" : "-432000"
+  }, {
+    "annuel" : "2020",
+    "region" : "fès-meknès",
+    "valeur" : "-55000"
+  }, {
+    "annuel" : "2020",
+    "region" : "l'oriental",
+    "valeur" : "-54000"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "valeur" : "-26000"
+  }, {
+    "annuel" : "2020",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "-53000"
+  }, {
+    "annuel" : "2020",
+    "region" : "régions du sud",
+    "valeur" : "-19000"
+  }, {
+    "annuel" : "2020",
+    "region" : "souss-massa",
+    "valeur" : "-26000"
+  }, {
+    "annuel" : "2020",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "14000"
+  }, {
+    "annuel" : "2021",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "6000"
+  }, {
+    "annuel" : "2021",
+    "region" : "casablanca-settat",
+    "valeur" : "1000"
+  }, {
+    "annuel" : "2021",
+    "region" : "drâa-tafilalet",
+    "valeur" : "30000"
+  }, {
+    "annuel" : "2021",
+    "region" : "ensemble",
+    "valeur" : "230000"
+  }, {
+    "annuel" : "2021",
+    "region" : "fès-meknès",
+    "valeur" : "-4000"
+  }, {
+    "annuel" : "2021",
+    "region" : "l'oriental",
+    "valeur" : "32000"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "valeur" : "15000"
+  }, {
+    "annuel" : "2021",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "28000"
+  }, {
+    "annuel" : "2021",
+    "region" : "régions du sud",
+    "valeur" : "6000"
+  }, {
+    "annuel" : "2021",
+    "region" : "souss-massa",
+    "valeur" : "14000"
+  }, {
+    "annuel" : "2021",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "101000"
+  }, {
+    "annuel" : "2022",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "-40000"
+  }, {
+    "annuel" : "2022",
+    "region" : "casablanca-settat",
+    "valeur" : "10000"
+  }, {
+    "annuel" : "2022",
+    "region" : "drâa-tafilalet",
+    "valeur" : "-24000"
+  }, {
+    "annuel" : "2022",
+    "region" : "ensemble",
+    "valeur" : "-24000"
+  }, {
+    "annuel" : "2022",
+    "region" : "fès-meknès",
+    "valeur" : "9000"
+  }, {
+    "annuel" : "2022",
+    "region" : "l'oriental",
+    "valeur" : "8000"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "valeur" : "-26000"
+  }, {
+    "annuel" : "2022",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "44000"
+  }, {
+    "annuel" : "2022",
+    "region" : "régions du sud",
+    "valeur" : "5000"
+  }, {
+    "annuel" : "2022",
+    "region" : "souss-massa",
+    "valeur" : "-45000"
+  }, {
+    "annuel" : "2022",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "37000"
+  }, {
+    "annuel" : "2023",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "-50000"
+  }, {
+    "annuel" : "2023",
+    "region" : "casablanca-settat",
+    "valeur" : "-25000"
+  }, {
+    "annuel" : "2023",
+    "region" : "drâa-tafilalet",
+    "valeur" : "1000"
+  }, {
+    "annuel" : "2023",
+    "region" : "ensemble",
+    "valeur" : "-157000"
+  }, {
+    "annuel" : "2023",
+    "region" : "fès-meknès",
+    "valeur" : "-11000"
+  }, {
+    "annuel" : "2023",
+    "region" : "l'oriental",
+    "valeur" : "-38000"
+  }, {
+    "annuel" : "2023",
+    "region" : "marrakech-safi",
+    "valeur" : "-28000"
+  }, {
+    "annuel" : "2023",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "region" : "régions du sud",
+    "valeur" : "10000"
+  }, {
+    "annuel" : "2023",
+    "region" : "souss-massa",
+    "valeur" : "8000"
+  }, {
+    "annuel" : "2023",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "-24000"
+  } ],
+  "indicateur" : "création d'emploi par région"
+}

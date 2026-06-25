@@ -1,0 +1,108 @@
+{
+  "data" : [ {
+    "annuel" : "2016",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "43.5"
+  }, {
+    "annuel" : "2016",
+    "region" : "casablanca-settat",
+    "valeur" : "65.6"
+  }, {
+    "annuel" : "2016",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "75.5"
+  }, {
+    "annuel" : "2016",
+    "region" : "drâa-tafilalet",
+    "valeur" : "70.0"
+  }, {
+    "annuel" : "2016",
+    "region" : "fès-meknès",
+    "valeur" : "85.2"
+  }, {
+    "annuel" : "2016",
+    "region" : "guelmim-oued noun",
+    "valeur" : "81.0"
+  }, {
+    "annuel" : "2016",
+    "region" : "l'oriental",
+    "valeur" : "50.0"
+  }, {
+    "annuel" : "2016",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "70.2"
+  }, {
+    "annuel" : "2016",
+    "region" : "marrakech-safi",
+    "valeur" : "66.5"
+  }, {
+    "annuel" : "2016",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "62.4"
+  }, {
+    "annuel" : "2016",
+    "region" : "souss-massa",
+    "valeur" : "79.5"
+  }, {
+    "annuel" : "2016",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "72.6"
+  }, {
+    "annuel" : "2016",
+    "region" : "total",
+    "valeur" : "67.1"
+  }, {
+    "annuel" : "2019",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "71.7"
+  }, {
+    "annuel" : "2019",
+    "region" : "casablanca-settat",
+    "valeur" : "67.7"
+  }, {
+    "annuel" : "2019",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "78.4"
+  }, {
+    "annuel" : "2019",
+    "region" : "drâa-tafilalet",
+    "valeur" : "85.5"
+  }, {
+    "annuel" : "2019",
+    "region" : "fès-meknès",
+    "valeur" : "78.5"
+  }, {
+    "annuel" : "2019",
+    "region" : "guelmim-oued noun",
+    "valeur" : "71.1"
+  }, {
+    "annuel" : "2019",
+    "region" : "l'oriental",
+    "valeur" : "71.4"
+  }, {
+    "annuel" : "2019",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "72.9"
+  }, {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "valeur" : "64.2"
+  }, {
+    "annuel" : "2019",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "62.9"
+  }, {
+    "annuel" : "2019",
+    "region" : "souss-massa",
+    "valeur" : "76.8"
+  }, {
+    "annuel" : "2019",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "69.8"
+  }, {
+    "annuel" : "2019",
+    "region" : "total",
+    "valeur" : "69.8"
+  } ],
+  "indicateur" : "taux d'insertion des lauréats de la formation professionnelle à 9 mois par région"
+}

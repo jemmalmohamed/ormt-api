@@ -1,0 +1,76 @@
+{
+  "data" : [ {
+    "annuel" : "2021",
+    "secteur_activite" : "Agriculture",
+    "valeur" : "351"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "BTP",
+    "valeur" : "106"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "Commerce",
+    "valeur" : "79"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "Industrie (y compris l'artisanat)",
+    "valeur" : "270"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "Services",
+    "valeur" : "428"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "Total",
+    "valeur" : "1234"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "Agriculture",
+    "valeur" : "291"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "BTP",
+    "valeur" : "87"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "Commerce",
+    "valeur" : "52"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "Industrie (y compris l'artisanat)",
+    "valeur" : "228"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "Services",
+    "valeur" : "331"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "Total",
+    "valeur" : "989"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "Agriculture",
+    "valeur" : "240"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "BTP",
+    "valeur" : "85"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "Commerce",
+    "valeur" : "48"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "Industrie (y compris l'artisanat)",
+    "valeur" : "254"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "Services",
+    "valeur" : "315"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "Total",
+    "valeur" : "942"
+  } ],
+  "indicateur" : "nombre de grèves évitées par secteur"
+}

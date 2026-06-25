@@ -1,0 +1,829 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "milieu" : "Ensemble",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "5.4"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Ensemble",
+    "region" : "casablanca-settat",
+    "valeur" : "10.0"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Ensemble",
+    "region" : "drâa-tafilalet",
+    "valeur" : "5.6"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Ensemble",
+    "region" : "ensemble",
+    "valeur" : "9.2"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Ensemble",
+    "region" : "fès-meknès",
+    "valeur" : "8.7"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Ensemble",
+    "region" : "l'oriental",
+    "valeur" : "13.8"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Ensemble",
+    "region" : "marrakech-safi",
+    "valeur" : "5.7"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Ensemble",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "10.7"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Ensemble",
+    "region" : "régions du sud",
+    "valeur" : "16.3"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Ensemble",
+    "region" : "souss-massa",
+    "valeur" : "10.3"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Ensemble",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "8.6"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Rural",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "1.9"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Rural",
+    "region" : "casablanca-settat",
+    "valeur" : "2.7"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Rural",
+    "region" : "drâa-tafilalet",
+    "valeur" : "3.8"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Rural",
+    "region" : "ensemble",
+    "valeur" : "3.7"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Rural",
+    "region" : "fès-meknès",
+    "valeur" : "3.0"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Rural",
+    "region" : "l'oriental",
+    "valeur" : "9.2"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Rural",
+    "region" : "marrakech-safi",
+    "valeur" : "2.9"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Rural",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "3.9"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Rural",
+    "region" : "régions du sud",
+    "valeur" : "7.1"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Rural",
+    "region" : "souss-massa",
+    "valeur" : "6.5"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Rural",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "3.6"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Urbain",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "9.9"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Urbain",
+    "region" : "casablanca-settat",
+    "valeur" : "13.0"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Urbain",
+    "region" : "drâa-tafilalet",
+    "valeur" : "9.6"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Urbain",
+    "region" : "ensemble",
+    "valeur" : "12.9"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Urbain",
+    "region" : "fès-meknès",
+    "valeur" : "12.9"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Urbain",
+    "region" : "l'oriental",
+    "valeur" : "16.0"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Urbain",
+    "region" : "marrakech-safi",
+    "valeur" : "9.8"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Urbain",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "13.7"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Urbain",
+    "region" : "régions du sud",
+    "valeur" : "19.7"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Urbain",
+    "region" : "souss-massa",
+    "valeur" : "12.7"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Urbain",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "11.9"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Ensemble",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "7.4"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Ensemble",
+    "region" : "casablanca-settat",
+    "valeur" : "13.4"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Ensemble",
+    "region" : "drâa-tafilalet",
+    "valeur" : "8.9"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Ensemble",
+    "region" : "ensemble",
+    "valeur" : "11.9"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Ensemble",
+    "region" : "fès-meknès",
+    "valeur" : "12.5"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Ensemble",
+    "region" : "l'oriental",
+    "valeur" : "20.7"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Ensemble",
+    "region" : "marrakech-safi",
+    "valeur" : "6.9"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Ensemble",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "12.7"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Ensemble",
+    "region" : "régions du sud",
+    "valeur" : "19.8"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Ensemble",
+    "region" : "souss-massa",
+    "valeur" : "11.8"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Ensemble",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "10.4"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Rural",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "3.8"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Rural",
+    "region" : "casablanca-settat",
+    "valeur" : "4.5"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Rural",
+    "region" : "drâa-tafilalet",
+    "valeur" : "7.0"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Rural",
+    "region" : "ensemble",
+    "valeur" : "5.9"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Rural",
+    "region" : "fès-meknès",
+    "valeur" : "6.5"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Rural",
+    "region" : "l'oriental",
+    "valeur" : "15.9"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Rural",
+    "region" : "marrakech-safi",
+    "valeur" : "4.3"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Rural",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "6.3"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Rural",
+    "region" : "régions du sud",
+    "valeur" : "10.0"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Rural",
+    "region" : "souss-massa",
+    "valeur" : "7.5"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Rural",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "4.7"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Urbain",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "12.0"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Urbain",
+    "region" : "casablanca-settat",
+    "valeur" : "16.6"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Urbain",
+    "region" : "drâa-tafilalet",
+    "valeur" : "12.9"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Urbain",
+    "region" : "ensemble",
+    "valeur" : "15.8"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Urbain",
+    "region" : "fès-meknès",
+    "valeur" : "16.6"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Urbain",
+    "region" : "l'oriental",
+    "valeur" : "22.8"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Urbain",
+    "region" : "marrakech-safi",
+    "valeur" : "10.5"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Urbain",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "15.5"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Urbain",
+    "region" : "régions du sud",
+    "valeur" : "22.8"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Urbain",
+    "region" : "souss-massa",
+    "valeur" : "14.4"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Urbain",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "14.1"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Ensemble",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "9.6"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Ensemble",
+    "region" : "casablanca-settat",
+    "valeur" : "14.6"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Ensemble",
+    "region" : "drâa-tafilalet",
+    "valeur" : "9.6"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Ensemble",
+    "region" : "ensemble",
+    "valeur" : "12.3"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Ensemble",
+    "region" : "fès-meknès",
+    "valeur" : "13.4"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Ensemble",
+    "region" : "l'oriental",
+    "valeur" : "18.1"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Ensemble",
+    "region" : "marrakech-safi",
+    "valeur" : "7.6"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Ensemble",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "12.2"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Ensemble",
+    "region" : "régions du sud",
+    "valeur" : "20.1"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Ensemble",
+    "region" : "souss-massa",
+    "valeur" : "11.3"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Ensemble",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "10.4"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Rural",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "5.5"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Rural",
+    "region" : "casablanca-settat",
+    "valeur" : "4.3"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Rural",
+    "region" : "drâa-tafilalet",
+    "valeur" : "6.4"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Rural",
+    "region" : "ensemble",
+    "valeur" : "5.0"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Rural",
+    "region" : "fès-meknès",
+    "valeur" : "4.7"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Rural",
+    "region" : "l'oriental",
+    "valeur" : "11.9"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Rural",
+    "region" : "marrakech-safi",
+    "valeur" : "3.2"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Rural",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "5.3"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Rural",
+    "region" : "régions du sud",
+    "valeur" : "10.5"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Rural",
+    "region" : "souss-massa",
+    "valeur" : "5.9"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Rural",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "3.2"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Urbain",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "14.4"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Urbain",
+    "region" : "casablanca-settat",
+    "valeur" : "18.2"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Urbain",
+    "region" : "drâa-tafilalet",
+    "valeur" : "16.0"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Urbain",
+    "region" : "ensemble",
+    "valeur" : "16.9"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Urbain",
+    "region" : "fès-meknès",
+    "valeur" : "18.9"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Urbain",
+    "region" : "l'oriental",
+    "valeur" : "20.8"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Urbain",
+    "region" : "marrakech-safi",
+    "valeur" : "13.9"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Urbain",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "15.1"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Urbain",
+    "region" : "régions du sud",
+    "valeur" : "22.9"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Urbain",
+    "region" : "souss-massa",
+    "valeur" : "14.4"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Urbain",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "15.5"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Ensemble",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "10.5"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Ensemble",
+    "region" : "casablanca-settat",
+    "valeur" : "13.8"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Ensemble",
+    "region" : "drâa-tafilalet",
+    "valeur" : "9.7"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Ensemble",
+    "region" : "ensemble",
+    "valeur" : "11.8"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Ensemble",
+    "region" : "fès-meknès",
+    "valeur" : "13.5"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Ensemble",
+    "region" : "l'oriental",
+    "valeur" : "17.4"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Ensemble",
+    "region" : "marrakech-safi",
+    "valeur" : "6.9"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Ensemble",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "11.0"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Ensemble",
+    "region" : "régions du sud",
+    "valeur" : "20.1"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Ensemble",
+    "region" : "souss-massa",
+    "valeur" : "11.4"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Ensemble",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "9.7"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Rural",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "6.3"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Rural",
+    "region" : "casablanca-settat",
+    "valeur" : "5.0"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Rural",
+    "region" : "drâa-tafilalet",
+    "valeur" : "7.6"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Rural",
+    "region" : "ensemble",
+    "valeur" : "5.2"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Rural",
+    "region" : "fès-meknès",
+    "valeur" : "5.3"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Rural",
+    "region" : "l'oriental",
+    "valeur" : "12.4"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Rural",
+    "region" : "marrakech-safi",
+    "valeur" : "3.2"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Rural",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "4.2"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Rural",
+    "region" : "régions du sud",
+    "valeur" : "10.3"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Rural",
+    "region" : "souss-massa",
+    "valeur" : "6.6"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Rural",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "3.4"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Urbain",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "15.3"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Urbain",
+    "region" : "casablanca-settat",
+    "valeur" : "16.7"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Urbain",
+    "region" : "drâa-tafilalet",
+    "valeur" : "13.8"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Urbain",
+    "region" : "ensemble",
+    "valeur" : "15.8"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Urbain",
+    "region" : "fès-meknès",
+    "valeur" : "18.7"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Urbain",
+    "region" : "l'oriental",
+    "valeur" : "19.4"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Urbain",
+    "region" : "marrakech-safi",
+    "valeur" : "11.8"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Urbain",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "13.8"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Urbain",
+    "region" : "régions du sud",
+    "valeur" : "22.9"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Urbain",
+    "region" : "souss-massa",
+    "valeur" : "13.9"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Urbain",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "14.1"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Ensemble",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "12.8"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Ensemble",
+    "region" : "casablanca-settat",
+    "valeur" : "15.0"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Ensemble",
+    "region" : "drâa-tafilalet",
+    "valeur" : "11.9"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Ensemble",
+    "region" : "ensemble",
+    "valeur" : "13.0"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Ensemble",
+    "region" : "fès-meknès",
+    "valeur" : "14.2"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Ensemble",
+    "region" : "l'oriental",
+    "valeur" : "19.6"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Ensemble",
+    "region" : "marrakech-safi",
+    "valeur" : "7.7"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Ensemble",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "11.6"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Ensemble",
+    "region" : "régions du sud",
+    "valeur" : "20.3"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Ensemble",
+    "region" : "souss-massa",
+    "valeur" : "13.5"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Ensemble",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "10.1"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Rural",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "8.2"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Rural",
+    "region" : "casablanca-settat",
+    "valeur" : "6.1"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Rural",
+    "region" : "drâa-tafilalet",
+    "valeur" : "8.6"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Rural",
+    "region" : "ensemble",
+    "valeur" : "6.3"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Rural",
+    "region" : "fès-meknès",
+    "valeur" : "5.5"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Rural",
+    "region" : "l'oriental",
+    "valeur" : "15.2"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Rural",
+    "region" : "marrakech-safi",
+    "valeur" : "4.1"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Rural",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "4.3"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Rural",
+    "region" : "régions du sud",
+    "valeur" : "11.0"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Rural",
+    "region" : "souss-massa",
+    "valeur" : "9.5"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Rural",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "4.2"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Urbain",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "17.7"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Urbain",
+    "region" : "casablanca-settat",
+    "valeur" : "17.8"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Urbain",
+    "region" : "drâa-tafilalet",
+    "valeur" : "18.0"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Urbain",
+    "region" : "ensemble",
+    "valeur" : "16.8"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Urbain",
+    "region" : "fès-meknès",
+    "valeur" : "19.3"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Urbain",
+    "region" : "l'oriental",
+    "valeur" : "21.3"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Urbain",
+    "region" : "marrakech-safi",
+    "valeur" : "12.2"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Urbain",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "14.5"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Urbain",
+    "region" : "régions du sud",
+    "valeur" : "22.8"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Urbain",
+    "region" : "souss-massa",
+    "valeur" : "15.5"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Urbain",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "14.1"
+  } ],
+  "indicateur" : "taux de chômage par région et milieu de résidence"
+}

@@ -1,0 +1,100 @@
+{
+  "data" : [ {
+    "annuel" : "2016",
+    "genre" : "Total",
+    "valeur" : "111000"
+  }, {
+    "annuel" : "2016",
+    "genre" : "femme",
+    "valeur" : "53100"
+  }, {
+    "annuel" : "2016",
+    "genre" : "homme",
+    "valeur" : "57500"
+  }, {
+    "annuel" : "2017",
+    "genre" : "Total",
+    "valeur" : "122000"
+  }, {
+    "annuel" : "2017",
+    "genre" : "femme",
+    "valeur" : "60100"
+  }, {
+    "annuel" : "2017",
+    "genre" : "homme",
+    "valeur" : "61300"
+  }, {
+    "annuel" : "2018",
+    "genre" : "Total",
+    "valeur" : "133000"
+  }, {
+    "annuel" : "2018",
+    "genre" : "femme",
+    "valeur" : "65500"
+  }, {
+    "annuel" : "2018",
+    "genre" : "homme",
+    "valeur" : "67300"
+  }, {
+    "annuel" : "2019",
+    "genre" : "Total",
+    "valeur" : "142000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "valeur" : "71700"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "valeur" : "69800"
+  }, {
+    "annuel" : "2020",
+    "genre" : "Total",
+    "valeur" : "151000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "valeur" : "78600"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "valeur" : "72700"
+  }, {
+    "annuel" : "2021",
+    "genre" : "Total",
+    "valeur" : "181000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "valeur" : "98300"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "valeur" : "83100"
+  }, {
+    "annuel" : "2022",
+    "genre" : "Total",
+    "valeur" : "182000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "valeur" : "102800"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "valeur" : "79100"
+  }, {
+    "annuel" : "2023",
+    "genre" : "Total",
+    "valeur" : "180000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "valeur" : "106200"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "valeur" : "73800"
+  } ],
+  "indicateur" : "nombre de diplômés de l'enseignement supérieur par genre"
+}

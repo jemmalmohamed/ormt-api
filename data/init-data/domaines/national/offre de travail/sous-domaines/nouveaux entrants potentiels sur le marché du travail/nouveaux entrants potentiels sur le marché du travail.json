@@ -1,0 +1,82 @@
+{
+  "actif" : true,
+  "description" : "Indicateurs relatifs aux nouveaux entrants potentiels sur le marché du travail (par genre, par composante)",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "nouveaux entrants potentiels sur le marché du travail",
+    "description" : "nouveaux entrants potentiels sur le marché du travail selon la composante",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "composante",
+      "nom" : "composante",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Nouveaux entrants potentiels sur le MT par composante - Camembert"
+    } ],
+    "nom" : "nouveaux entrants potentiels sur le mt par composante",
+    "regleCalcul" : null,
+    "source" : "dfp et es",
+    "titre" : "nouveaux entrants potentiels sur le mt par composante",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "nouveaux entrants potentiels sur le marché du travail",
+    "description" : "nouveaux entrants potentiels sur le marché du travail selon le genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Nouveaux entrants potentiels sur le MT par genre - Camembert"
+    } ],
+    "nom" : "nouveaux entrants potentiels sur le mt par genre",
+    "regleCalcul" : null,
+    "source" : "dfp et es",
+    "titre" : "nouveaux entrants potentiels sur le mt par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  } ],
+  "nom" : "nouveaux entrants potentiels sur le marché du travail"
+}

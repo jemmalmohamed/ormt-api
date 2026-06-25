@@ -40,12 +40,15 @@ public class ConfigSnapshotAdminController {
     @Operation(summary = "Export the canonical config snapshot as a ZIP archive.")
     public ResponseEntity<byte[]> exportSnapshot(@RequestBody(required = false) ConfigSnapshotExportRequestDto requestDto) {
         byte[] archive = exportService.exportSnapshot(requestDto);
-        String timestamp = OffsetDateTime.now(ZoneOffset.UTC).format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
+        return zipResponse(archive, "config-snapshot-v1-");
+    }
 
-        return ResponseEntity.ok()
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"config-snapshot-v1-" + timestamp + ".zip\"")
-                .contentType(MediaType.parseMediaType("application/zip"))
-                .body(archive);
+    @PostMapping("/export-legacy")
+    @PreAuthorize(ADMIN_ACCESS)
+    @Operation(summary = "Export the derived legacy init-data ZIP archive from the canonical config snapshot.")
+    public ResponseEntity<byte[]> exportLegacyInitData(@RequestBody(required = false) ConfigSnapshotExportRequestDto requestDto) {
+        byte[] archive = exportService.exportLegacyInitData(requestDto);
+        return zipResponse(archive, "legacy-init-data-");
     }
 
     @PostMapping(value = "/restore", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
@@ -60,5 +63,13 @@ public class ConfigSnapshotAdminController {
                 .message("Config snapshot restored successfully.")
                 .data(result)
                 .build());
+    }
+
+    private ResponseEntity<byte[]> zipResponse(byte[] archive, String filePrefix) {
+        String timestamp = OffsetDateTime.now(ZoneOffset.UTC).format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
+        return ResponseEntity.ok()
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + filePrefix + timestamp + ".zip\"")
+                .contentType(MediaType.parseMediaType("application/zip"))
+                .body(archive);
     }
 }

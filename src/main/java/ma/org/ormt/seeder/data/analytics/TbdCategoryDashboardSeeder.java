@@ -66,7 +66,6 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
     private static final int KPI_ROW_HEIGHT_PX = 90;
     private static final int KPI_SECONDARY_ROW_HEIGHT_PX = 90;
     private static final int CHART_ROW_HEIGHT_PX = 290;
-    private static final int INLINE_EDITOR_ROW_HEIGHT_PX = 170;
     private static final int SECTION_EDITOR_ROW_HEIGHT_PX = 210;
     private static final SeedKpiStylePalette[] KPI_SEED_STYLES = new SeedKpiStylePalette[] {
             new SeedKpiStylePalette("#e74c3c", "#ffffff", "#cf3f31", "0 10px 24px rgba(231, 76, 60, 0.18)"),
@@ -75,9 +74,12 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
             new SeedKpiStylePalette("#f5a623", "#ffffff", "#dc9219", "0 10px 24px rgba(245, 166, 35, 0.18)")
     };
     private static final SeedKpiStylePalette[] KPI_SECONDARY_SEED_STYLES = new SeedKpiStylePalette[] {
-            new SeedKpiStylePalette("#f3f4f6", "#1f3a5a", "#ef4444", "0 8px 20px rgba(148, 163, 184, 0.12)", 0, 0, 0, 4),
-            new SeedKpiStylePalette("#f3f4f6", "#1f3a5a", "#22c55e", "0 8px 20px rgba(148, 163, 184, 0.12)", 0, 0, 0, 4),
-            new SeedKpiStylePalette("#f3f4f6", "#1f3a5a", "#3b82f6", "0 8px 20px rgba(148, 163, 184, 0.12)", 0, 0, 0, 4),
+            new SeedKpiStylePalette("#f3f4f6", "#1f3a5a", "#ef4444", "0 8px 20px rgba(148, 163, 184, 0.12)", 0, 0, 0,
+                    4),
+            new SeedKpiStylePalette("#f3f4f6", "#1f3a5a", "#22c55e", "0 8px 20px rgba(148, 163, 184, 0.12)", 0, 0, 0,
+                    4),
+            new SeedKpiStylePalette("#f3f4f6", "#1f3a5a", "#3b82f6", "0 8px 20px rgba(148, 163, 184, 0.12)", 0, 0, 0,
+                    4),
             new SeedKpiStylePalette("#f3f4f6", "#1f3a5a", "#8b5cf6", "0 8px 20px rgba(148, 163, 184, 0.12)", 0, 0, 0, 4)
     };
     private static final Comparator<SousDomaine> SOUS_DOMAINE_COMPARATOR = Comparator
@@ -110,32 +112,34 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
             return;
         }
 
-        List<CategorieAnalytique> categories = categorieAnalytiqueRepository
-                .findActiveWithoutDashboardOrderByDomainAndCategory();
-        if (categories.isEmpty()) {
-            log.info("Aucune categorie analytique active sans dashboard a seeder.");
-            return;
-        }
+        // List<CategorieAnalytique> categories = categorieAnalytiqueRepository
+        // .findActiveWithoutDashboardOrderByDomainAndCategory();
+        // if (categories.isEmpty()) {
+        // log.info("Aucune categorie analytique active sans dashboard a seeder.");
+        // return;
+        // }
 
-        Map<Long, Domaine> domainsById = domaineRepository.findAll().stream()
-                .filter(Objects::nonNull)
-                .collect(Collectors.toMap(Domaine::getId, domain -> domain, (left, _) -> left, LinkedHashMap::new));
-        Map<String, Domaine> domainsByThemeKey = domainsById.values().stream()
-                .filter(domain -> domain.getNom() != null)
-                .collect(Collectors.toMap(
-                        domain -> namingService.normalizeThemeKey(domain.getNom()),
-                        domain -> domain,
-                        (left, _) -> left,
-                        LinkedHashMap::new));
+        // Map<Long, Domaine> domainsById = domaineRepository.findAll().stream()
+        // .filter(Objects::nonNull)
+        // .collect(Collectors.toMap(Domaine::getId, domain -> domain, (left, _) ->
+        // left, LinkedHashMap::new));
+        // Map<String, Domaine> domainsByThemeKey = domainsById.values().stream()
+        // .filter(domain -> domain.getNom() != null)
+        // .collect(Collectors.toMap(
+        // domain -> namingService.normalizeThemeKey(domain.getNom()),
+        // domain -> domain,
+        // (left, _) -> left,
+        // LinkedHashMap::new));
 
-        for (CategorieAnalytique category : categories) {
-            try {
-                seedCategoryDashboard(category, domainsById, domainsByThemeKey);
-            } catch (Exception exception) {
-                log.error("Erreur lors du seed du dashboard initial pour la categorie '{}': {}",
-                        category.getLibelle(), exception.getMessage(), exception);
-            }
-        }
+        // for (CategorieAnalytique category : categories) {
+        // try {
+        // seedCategoryDashboard(category, domainsById, domainsByThemeKey);
+        // } catch (Exception exception) {
+        // log.error("Erreur lors du seed du dashboard initial pour la categorie '{}':
+        // {}",
+        // category.getLibelle(), exception.getMessage(), exception);
+        // }
+        // }
     }
 
     @Transactional
@@ -162,7 +166,7 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
             return;
         }
 
-        List<SousDomaineIndicators> groups = buildIndicatorGroups(canonicalDomain);
+        List<SousDomaineIndicators> groups = buildIndicatorGroups(canonicalDomain, category);
         if (groups.isEmpty()) {
             log.info("Aucun indicateur exploitable pour la categorie '{}' sur le domaine '{}'. Seed ignore.",
                     category.getLibelle(), canonicalDomain.getNom());
@@ -226,8 +230,29 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
         return Optional.empty();
     }
 
-    private List<SousDomaineIndicators> buildIndicatorGroups(Domaine canonicalDomain) {
-        return sousDomaineRepository.findByDomaineIdOrderByOrdreAsc(canonicalDomain.getId()).stream()
+    private List<SousDomaineIndicators> buildIndicatorGroups(Domaine canonicalDomain, CategorieAnalytique category) {
+        List<SousDomaine> allSousDomaines = sousDomaineRepository
+                .findByDomaineIdOrderByOrdreAsc(canonicalDomain.getId());
+
+        String categoryKey = hasText(category.getSlug())
+                ? category.getSlug()
+                : normalize(category.getLibelle());
+
+        List<SousDomaine> matched = allSousDomaines.stream()
+                .filter(sd -> normalize(sd.getNom()).equals(categoryKey))
+                .collect(Collectors.toList());
+
+        List<SousDomaine> target = matched.isEmpty() ? allSousDomaines : matched;
+        if (matched.isEmpty()) {
+            log.info(
+                    "Aucun sous-domaine avec slug exact '{}' pour la categorie '{}'. Fallback sur tous les sous-domaines du domaine '{}'.",
+                    categoryKey, category.getLibelle(), canonicalDomain.getNom());
+        } else {
+            log.info("Sous-domaine retenu pour la categorie '{}': '{}'.",
+                    category.getLibelle(), matched.get(0).getNom());
+        }
+
+        return target.stream()
                 .sorted(SOUS_DOMAINE_COMPARATOR)
                 .map(sousDomaine -> new SousDomaineIndicators(
                         sousDomaine,
@@ -311,7 +336,8 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
         }
     }
 
-    private void createIndicatorSection(Long dashboardId, List<SousDomaineIndicators> groups, List<Indicateur> perimeterIndicators) {
+    private void createIndicatorSection(Long dashboardId, List<SousDomaineIndicators> groups,
+            List<Indicateur> perimeterIndicators) {
         TbdSection section = tbdSectionRepository.save(TbdSection.builder()
                 .dashboardId(dashboardId)
                 .label("Indicateurs")
@@ -327,7 +353,6 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
         boolean secondaryKpisInserted = false;
         for (SousDomaineIndicators group : groups) {
             List<Indicateur> indicators = group.indicators();
-            int groupRowCount = 0;
             for (int startIndex = 0; startIndex < indicators.size(); startIndex += 2) {
                 List<Indicateur> chunk = indicators.subList(startIndex, Math.min(startIndex + 2, indicators.size()));
                 TbdWidgetRow row = tbdWidgetRowRepository.save(TbdWidgetRow.builder()
@@ -341,7 +366,8 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
 
                 if (chunk.size() == 1) {
                     createEmptyWidget(row.getId(), 1, 20, "Marge gauche");
-                    createChartWidget(row.getId(), chunk.get(0), buildChartTitle(group.sousDomaine().getNom(), chunk.get(0)), 2, 60);
+                    createChartWidget(row.getId(), chunk.get(0),
+                            buildChartTitle(group.sousDomaine().getNom(), chunk.get(0)), 2, 60);
                     createEmptyWidget(row.getId(), 3, 20, "Marge droite");
                 } else {
                     for (int widgetIndex = 0; widgetIndex < chunk.size(); widgetIndex++) {
@@ -359,23 +385,7 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                     createSecondaryKpiRow(section.getId(), rowOrder++, perimeterIndicators);
                     secondaryKpisInserted = true;
                 }
-
-                groupRowCount++;
-                if (groupRowCount % 3 == 0) {
-                    createInlineEditorRow(
-                            section.getId(),
-                            rowOrder++,
-                            buildInlineEditorTitle(group.sousDomaine().getNom(), groupRowCount / 3),
-                            buildInlineEditorContent(group.sousDomaine().getNom(), "groupe de 3 rangées"));
-                }
             }
-
-            createInlineEditorRow(
-                    section.getId(),
-                    rowOrder++,
-                    "Synthese " + defaultString(group.sousDomaine().getNom(), "sous-domaine"),
-                    buildInlineEditorContent(group.sousDomaine().getNom(), "fin de section sous-domaine"),
-                    SECTION_EDITOR_ROW_HEIGHT_PX);
         }
 
         if (shouldInsertSecondaryKpis && !secondaryKpisInserted) {
@@ -438,33 +448,6 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                 .titre(title)
                 .ordre(order)
                 .sizePercent(sizePercent)
-                .actif(true)
-                .createdBy(SEED_MARKER)
-                .lastModifiedBy(SEED_MARKER)
-                .build());
-    }
-
-    private void createInlineEditorRow(Long sectionId, int rowOrder, String title, String contentJson) {
-        createInlineEditorRow(sectionId, rowOrder, title, contentJson, INLINE_EDITOR_ROW_HEIGHT_PX);
-    }
-
-    private void createInlineEditorRow(Long sectionId, int rowOrder, String title, String contentJson, int heightPx) {
-        TbdWidgetRow editorRow = tbdWidgetRowRepository.save(TbdWidgetRow.builder()
-                .sectionId(sectionId)
-                .ordre(rowOrder)
-                .sizePercent(100)
-                .heightPx(heightPx)
-                .createdBy(SEED_MARKER)
-                .lastModifiedBy(SEED_MARKER)
-                .build());
-
-        tbdWidgetRepository.save(TbdWidget.builder()
-                .rowId(editorRow.getId())
-                .type("EDITOR")
-                .titre(title)
-                .ordre(1)
-                .sizePercent(100)
-                .contentJson(contentJson)
                 .actif(true)
                 .createdBy(SEED_MARKER)
                 .lastModifiedBy(SEED_MARKER)
@@ -735,39 +718,12 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
         return analyticsSeedJsonBuilder.editorContent(html, "#fcfbf8", "#1f2937");
     }
 
-    private String buildInlineEditorTitle(String sousDomaineName, int blockIndex) {
-        EditorialTheme theme = resolveEditorialTheme(sousDomaineName, null, null);
-        return theme.inlineTitlePrefix() + " " + defaultString(sousDomaineName, "sous-domaine") + " " + blockIndex;
-    }
-
     private String buildMainEditorTitle(CategorieAnalytique category, Domaine canonicalDomain) {
         EditorialTheme theme = resolveEditorialTheme(
                 category != null ? category.getLibelle() : null,
                 canonicalDomain != null ? canonicalDomain.getNom() : null,
                 null);
         return theme.mainTitle();
-    }
-
-    private String buildInlineEditorContent(String sousDomaineName, String marker) {
-        String sousDomaineLabel = escapeHtml(defaultString(sousDomaineName, "Sous-domaine"));
-        EditorialTheme theme = resolveEditorialTheme(sousDomaineName, marker, null);
-        String html = """
-                <p><strong>Repere de lecture</strong></p>
-                <p>Ce bloc editorial accompagne le sous-domaine <em>%s</em> et sert a contextualiser les visualisations voisines.</p>
-                <ul>
-                  <li>%s</li>
-                  <li>%s</li>
-                  <li>%s</li>
-                </ul>
-                <p><em>Repere seed: %s.</em></p>
-                """
-                .formatted(
-                        sousDomaineLabel,
-                        escapeHtml(theme.inline1()),
-                        escapeHtml(theme.inline2()),
-                        escapeHtml(theme.inline3()),
-                        escapeHtml(marker));
-        return analyticsSeedJsonBuilder.editorContent(html, "#fcfbf8", "#1f2937");
     }
 
     private EditorialTheme resolveEditorialTheme(String first, String second, String third) {
@@ -780,11 +736,7 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                     "Comparer les niveaux de salaire selon les profils, secteurs ou territoires les plus significatifs.",
                     "Identifier les evolutions recentes, les effets de rattrapage ou les poches de decalage persistantes.",
                     "Preciser les facteurs explicatifs possibles : qualification, structure d'emploi, saisonnalite ou formalisation.",
-                    "Conclure sur les principaux enjeux d'attractivite, de pouvoir d'achat ou d'equite de remuneration.",
-                    "Lecture salaires",
-                    "Resumer les variations de niveau de remuneration les plus visibles sur ce bloc.",
-                    "Signaler les ecarts entre profils ou territoires qui meritent une lecture prioritaire.",
-                    "Formuler une interpretation courte sur la dynamique salariale observee.");
+                    "Conclure sur les principaux enjeux d'attractivite, de pouvoir d'achat ou d'equite de remuneration.");
         }
 
         if (containsAny(joined, "emploi", "chomage", "insertion", "intermediation", "marche-du-travail", "travail")) {
@@ -794,25 +746,18 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                     "Presenter les evolutions majeures concernant l'acces a l'emploi, les volumes ou les taux les plus structurants.",
                     "Mettre en evidence les profils, territoires ou segments du marche qui progressent, stagnent ou reculent.",
                     "Ajouter les facteurs d'explication utiles : saisonnalite, conjoncture, qualification, genre ou age.",
-                    "Conclure avec les implications possibles pour l'accompagnement, le placement ou le suivi des publics.",
-                    "Lecture emploi",
-                    "Resumer les dynamiques d'emploi ou d'insertion qui ressortent de ce groupe d'indicateurs.",
-                    "Signaler les tensions, decrochages ou reprises visibles selon les publics ou les territoires.",
-                    "Ajouter une lecture metier courte sur les implications pour le suivi du marche du travail.");
+                    "Conclure avec les implications possibles pour l'accompagnement, le placement ou le suivi des publics.");
         }
 
-        if (containsAny(joined, "entreprise", "entrepreneuriat", "creation", "productivite", "competitivite", "investissement")) {
+        if (containsAny(joined, "entreprise", "entrepreneuriat", "creation", "productivite", "competitivite",
+                "investissement")) {
             return new EditorialTheme(
                     "Analyse des dynamiques d'entreprise",
                     "Cette synthese vise a eclairer les dynamiques de creation, de developpement ou de performance des entreprises suivies dans ce perimetre.",
                     "Mettre en avant les indicateurs qui traduisent le mieux le rythme de creation, d'expansion ou de ralentissement.",
                     "Comparer les profils d'entreprises, branches ou zones qui concentrent les evolutions les plus notables.",
                     "Documenter les facteurs de contexte : financement, demande, climat des affaires ou organisation productive.",
-                    "Conclure sur les enjeux de competitivite, de resilience ou d'accompagnement des acteurs economiques.",
-                    "Lecture entreprises",
-                    "Resumer les dynamiques de creation, de performance ou de structuration visibles sur ce bloc.",
-                    "Souligner les contrastes entre segments, branches ou implantations les plus marquants.",
-                    "Ajouter une interpretation concise sur les leviers ou freins qui ressortent.");
+                    "Conclure sur les enjeux de competitivite, de resilience ou d'accompagnement des acteurs economiques.");
         }
 
         if (containsAny(joined, "formation", "education", "diplome", "competence", "apprentissage")) {
@@ -822,11 +767,7 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                     "Presenter les niveaux, progressions ou disparites les plus visibles selon les filieres et les publics.",
                     "Mettre en avant les transitions vers l'emploi, les points de rupture ou les segments qui performent le mieux.",
                     "Completer avec les facteurs explicatifs utiles : niveau de diplome, specialite, territoire ou type d'etablissement.",
-                    "Conclure sur les priorites de rapprochement entre offre de formation et besoins du marche du travail.",
-                    "Lecture formation",
-                    "Resumer les enseignements les plus utiles sur les parcours, resultats ou debouches visibles ici.",
-                    "Signaler les ecarts de performance ou d'insertion a surveiller dans ce sous-domaine.",
-                    "Ajouter une courte interpretation sur l'adequation formation-emploi.");
+                    "Conclure sur les priorites de rapprochement entre offre de formation et besoins du marche du travail.");
         }
 
         if (containsAny(joined, "loi", "inspection", "conflit", "securite", "relations-professionnelles", "controle")) {
@@ -836,11 +777,7 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                     "Mettre en avant les volumes, taux ou situations qui traduisent le mieux l'etat du respect des obligations observees.",
                     "Comparer les secteurs, territoires ou types de situation ou les ecarts sont les plus marquants.",
                     "Ajouter les explications utiles : intensite des controles, nature des infractions, cadre sectoriel ou risque social.",
-                    "Conclure sur les priorites de prevention, de suivi ou de mediation qui decoulent de la lecture du bloc.",
-                    "Lecture conformite",
-                    "Resumer les constats de conformite, de controle ou de tension sociale les plus saillants.",
-                    "Signaler les situations atypiques ou recurrentes qui meritent un suivi particulier.",
-                    "Ajouter une lecture metier courte sur les risques ou actions prioritaires.");
+                    "Conclure sur les priorites de prevention, de suivi ou de mediation qui decoulent de la lecture du bloc.");
         }
 
         return new EditorialTheme(
@@ -849,11 +786,7 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
                 "Presenter les evolutions majeures observees sur la periode la plus recente.",
                 "Mettre en avant les ruptures, contrastes territoriaux ou profils qui ressortent le plus.",
                 "Ajouter les facteurs d'explication, limites de lecture et points de vigilance utiles.",
-                "Conclure avec une courte synthese orientee decision ou suivi operationnel.",
-                "Lecture metier",
-                "Resumer les faits marquants qui ressortent de ce groupe d'indicateurs.",
-                "Signaler les evolutions atypiques, decrochages ou convergences utiles a retenir.",
-                "Ajouter une interpretation courte pour aider la lecture metier du bloc.");
+                "Conclure avec une courte synthese orientee decision ou suivi operationnel.");
     }
 
     private boolean containsAny(String value, String... tokens) {
@@ -964,11 +897,7 @@ public class TbdCategoryDashboardSeeder implements CommandLineRunner {
             String bullet1,
             String bullet2,
             String bullet3,
-            String bullet4,
-            String inlineTitlePrefix,
-            String inline1,
-            String inline2,
-            String inline3) {
+            String bullet4) {
     }
 
     private record SeedKpiStylePalette(

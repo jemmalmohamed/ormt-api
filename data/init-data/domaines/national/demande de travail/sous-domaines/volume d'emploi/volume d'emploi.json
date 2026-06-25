@@ -1,0 +1,716 @@
+{
+  "actif" : true,
+  "description" : "étude du volume d'emplois disponibles sur le marché",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi salarié",
+    "description" : "travailleurs indépendants déclarés à la cnss selon la région",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "emploi indépendants déclarés à la cnss par région - Histogramme"
+    } ],
+    "nom" : "emploi indépendants déclarés à la cnss par région",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "emploi indépendants déclarés à la cnss",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi indépendant",
+    "description" : "travailleurs indépendants déclarés à la cnss selon le secteur",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "emploi indépendants déclarés à la cnss par secteur d'activité - Histogramme"
+    } ],
+    "nom" : "emploi indépendants déclarés à la cnss par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "emploi indépendants déclarés à la cnss par secteur d'activité",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi informel",
+    "description" : "données sur l'emploi informel dans chaque secteur économique",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité hcp",
+      "nom" : "secteur_activite_hcp",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "emploi informel par secteur d'activité - Camembert"
+    } ],
+    "nom" : "emploi informel par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "hcp-cnss",
+    "titre" : "emploi informel par secteur d'activité",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi total",
+    "description" : "données détaillées sur la répartition de l'emploi selon le niveau d'éducation",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "emploi par diplôme - Courbes"
+    } ],
+    "nom" : "emploi par diplôme",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "emploi par diplôme",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi total",
+    "description" : "données détaillées sur la répartition de l'emploi par genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "emploi par genre - Courbes"
+    } ],
+    "nom" : "emploi par genre",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "emploi par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi indépendant",
+    "description" : "répartition de l'emploi à travers les différentes régions",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "emploi par région - Choropleth"
+    } ],
+    "nom" : "emploi par région",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "emploi",
+    "typeTb" : "grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi total",
+    "description" : "répartition de l'emploi dans divers secteurs économiques",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "emploi par secteur d'activité - Courbes"
+    } ],
+    "nom" : "emploi par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "emploi par secteur d'activité",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi total",
+    "description" : "répartition des emplois dans différents secteurs d'activité",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'emploi",
+      "nom" : "secteur_emploi",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "emploi par secteur d'emploi - Courbes"
+    } ],
+    "nom" : "emploi par secteur d'emploi",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "emploi par secteur d'emploi",
+    "typeTb" : "grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi total",
+    "description" : "statut professionnel incluant salarié ou indépendant",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "statut professionnel",
+      "nom" : "statut",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "emploi par statut professionnel - Courbes"
+    } ],
+    "nom" : "emploi par statut professionnel",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "emploi par statut professionnel",
+    "typeTb" : "grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi total",
+    "description" : "variations de postes ou statuts au sein de la population active",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "type d'emploi",
+      "nom" : "type_emploi",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "emploi par type d'emploi - Courbes"
+    } ],
+    "nom" : "emploi par type d'emploi",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "emploi par type d'emploi",
+    "typeTb" : "grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi total",
+    "description" : "données détaillées sur la répartition de l'emploi par tranches d'âge",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "age",
+      "nom" : "age",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "emploi par âge - Courbes"
+    } ],
+    "nom" : "emploi par âge",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "emploi par âge",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi salarié",
+    "description" : "emplois en équivalent temps plein par secteur d'activité",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "emploi salarié eqtp par secteur d'activité - Camembert"
+    } ],
+    "nom" : "emploi salarié eqtp par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "emploi salarié eqtp par secteur d'activité",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi salarié",
+    "description" : "indice de rotation des salariés par poste et par secteur",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "indicateur",
+      "isDefault" : true,
+      "nom" : "indice de rotation de salariés par poste par secteur d'activité - Indicateur"
+    } ],
+    "nom" : "indice de rotation de salariés par poste par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "indice de rotation de salariés par poste par secteur d'activité",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi salarié",
+    "description" : "nombre de déclarations à la cnss selon le secteur d'activité",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "nombre de déclaration cnss par secteur d'activité - Histogramme"
+    } ],
+    "nom" : "nombre de déclaration cnss par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "nombre de déclaration cnss par secteur d'activité",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi public",
+    "description" : "répartition des salariés du secteur public par secteur d'activité",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité hcp",
+      "nom" : "secteur_activite_hcp",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "salarié public par secteur - Camembert"
+    } ],
+    "nom" : "salarié public par secteur",
+    "regleCalcul" : null,
+    "source" : "mef",
+    "titre" : "salarié public par secteur",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi salarié",
+    "description" : "salariés déclarés à la cnss dans les différentes régions",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "salariés déclarés à la cnss par région - Choropleth"
+    } ],
+    "nom" : "salariés déclarés à la cnss par région",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "salariés déclarés à la cnss",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi salarié",
+    "description" : "salariés déclarés à la cnss dans différents secteurs d'activité",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "salariés déclarés à la cnss par secteur d'activité - Histogramme"
+    } ],
+    "nom" : "salariés déclarés à la cnss par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "salariés déclarés à la cnss par secteur d'activité",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  } ],
+  "nom" : "volume d'emploi"
+}

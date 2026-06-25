@@ -1,0 +1,158 @@
+{
+  "actif" : true,
+  "description" : "Indicateurs relatifs à l'insertion des lauréats de la formation professionnelle à 9 mois par mode de formation, genre, niveau de formation et région.",
+  "indicateurs" : [ {
+    "abreviation" : "fp",
+    "actif" : true,
+    "categorie" : "insertion",
+    "description" : "taux d'insertion des lauréats de la formation professionnelle à 9 mois par genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par genre - Histogramme"
+    } ],
+    "nom" : "taux d'insertion des lauréats de la formation professionnelle à 9 mois par genre",
+    "regleCalcul" : null,
+    "source" : "dfp",
+    "titre" : "taux d'insertion des lauréats de la formation professionnelle à 9 mois par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "fp",
+    "actif" : true,
+    "categorie" : "insertion",
+    "description" : "taux d'insertion des lauréats de la formation professionnelle à 9 mois par mode de formation.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "mode de formation",
+      "nom" : "mode_formation",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par mode de formation - Histogramme"
+    } ],
+    "nom" : "taux d'insertion des lauréats de la formation professionnelle à 9 mois par mode de formation",
+    "regleCalcul" : null,
+    "source" : "dfp",
+    "titre" : "taux d'insertion des lauréats de la formation professionnelle à 9 mois par mode de formation",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "fp",
+    "actif" : true,
+    "categorie" : "insertion",
+    "description" : "taux d'insertion des lauréats de la formation professionnelle à 9 mois par niveau de formation.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "niveau de formation",
+      "nom" : "niveau_formation",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par niveau de formation - Histogramme"
+    } ],
+    "nom" : "taux d'insertion des lauréats de la formation professionnelle à 9 mois par niveau de formation",
+    "regleCalcul" : null,
+    "source" : "dfp",
+    "titre" : "taux d'insertion des lauréats de la formation professionnelle à 9 mois par niveau de formation",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "fp",
+    "actif" : true,
+    "categorie" : "insertion",
+    "description" : "taux d'insertion des lauréats de la formation professionnelle à 9 mois.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Taux d'insertion des lauréats de la formation professionnelle à 9 mois  - Histogramme"
+    } ],
+    "nom" : "taux d'insertion des lauréats de la formation professionnelle à 9 mois par région",
+    "regleCalcul" : null,
+    "source" : "dfp",
+    "titre" : "taux d'insertion des lauréats de la formation professionnelle à 9 mois",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  } ],
+  "nom" : "formation professionnelle - insertion à 9 mois"
+}

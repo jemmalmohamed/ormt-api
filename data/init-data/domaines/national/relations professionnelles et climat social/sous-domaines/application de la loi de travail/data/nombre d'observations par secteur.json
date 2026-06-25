@@ -1,0 +1,40 @@
+{
+  "data" : [ {
+    "annuel" : "2021",
+    "secteur_activite" : "Agriculture",
+    "valeur" : "20244"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "Industrie, BTP, commerce et services",
+    "valeur" : "207586"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "Total",
+    "valeur" : "227830"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "Agriculture",
+    "valeur" : "31935"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "Industrie, BTP, commerce et services",
+    "valeur" : "265377"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "Total",
+    "valeur" : "297312"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "Agriculture",
+    "valeur" : "16470"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "Industrie, BTP, commerce et services",
+    "valeur" : "476537"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "Total",
+    "valeur" : "493007"
+  } ],
+  "indicateur" : "nombre d'observations par secteur"
+}

@@ -1,0 +1,52 @@
+{
+  "data" : [ {
+    "annuel" : "2020",
+    "diplome" : "Niveau moyen",
+    "valeur" : "43.1"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Niveau superieur",
+    "valeur" : "80.0"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Sans diplôme",
+    "valeur" : "25.6"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Niveau moyen",
+    "valeur" : "42.9"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Niveau superieur",
+    "valeur" : "80.6"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Sans diplôme",
+    "valeur" : "26.2"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Niveau moyen",
+    "valeur" : "44.6"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Niveau superieur",
+    "valeur" : "85.6"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Sans diplôme",
+    "valeur" : "28.8"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Niveau moyen",
+    "valeur" : "44.5"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Niveau superieur",
+    "valeur" : "84.9"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Sans diplôme",
+    "valeur" : "28.5"
+  } ],
+  "indicateur" : "part des salariés disposant d'un contrat de travail"
+}

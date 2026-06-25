@@ -1,0 +1,64 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "milieu" : "Ensemble",
+    "valeur" : "24.2"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Rural",
+    "valeur" : "7.8"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Urbain",
+    "valeur" : "36.5"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Ensemble",
+    "valeur" : "24.8"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Rural",
+    "valeur" : "8.2"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Urbain",
+    "valeur" : "36.7"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Ensemble",
+    "valeur" : "25.1"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Rural",
+    "valeur" : "7.9"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Urbain",
+    "valeur" : "37.6"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Ensemble",
+    "valeur" : "26.6"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Rural",
+    "valeur" : "9.4"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Urbain",
+    "valeur" : "38.4"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Ensemble",
+    "valeur" : "29.4"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Rural",
+    "valeur" : "10.8"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Urbain",
+    "valeur" : "41.5"
+  } ],
+  "indicateur" : "part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence"
+}

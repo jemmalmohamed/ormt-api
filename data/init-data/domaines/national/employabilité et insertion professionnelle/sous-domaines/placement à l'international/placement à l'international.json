@@ -1,0 +1,217 @@
+{
+  "actif" : true,
+  "description" : "Sous domaine du domaine Employabilité et insertion professionnelle.",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "placement à l'international",
+    "description" : "bénéficiaires du pi ventilés par genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires du PI par genre - Camembert"
+    } ],
+    "nom" : "bénéficiaires du pi par genre",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires du pi par genre",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "placement à l'international",
+    "description" : "bénéficiaires du pi ventilés par pays d'accueil.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "pays d'accueil",
+      "nom" : "pays_accueil",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ ],
+    "nom" : "bénéficiaires du pi par pays d'accueil",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires du pi par pays d'accueil",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "placement à l'international",
+    "description" : "bénéficiaires du pi.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires du PI - CHOROPLETH"
+    } ],
+    "nom" : "bénéficiaires du pi par région",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires du pi",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "placement à l'international",
+    "description" : "bénéficiaires du pi ventilés par sae.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "sae_pi",
+      "nom" : "sae_pi",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires du PI par SAE - Camembert"
+    } ],
+    "nom" : "bénéficiaires du pi par sae",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires du pi par sae",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "placement à l'international",
+    "description" : "bénéficiaires du pi ventilés par type de contrat.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "type de contrat_pi",
+      "nom" : "type_contrat_pi",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires du PI par type de contrat - Camembert"
+    } ],
+    "nom" : "bénéficiaires du pi par type de contrat",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires du pi par type de contrat",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "placement à l'international",
+    "description" : "nombre total des bénéficiaires du placement à l'international.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre des bénéficiaires du PI - Histogramme"
+    } ],
+    "nom" : "nombre des bénéficiaires du pi",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre des bénéficiaires du pi",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  } ],
+  "nom" : "placement à l'international"
+}

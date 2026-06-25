@@ -128,6 +128,9 @@ public class IndicateurSeeder {
                                 : grapheType.getNom() + " - " + indicateur.getNom())
                         .dimensionMappingJson(dimensionMapping)
                         .chartOptionsJson(cfg.getChartOptionsJson())
+                        .chartSpecVersion(cfg.getChartSpecVersion())
+                        .chartSpecJson(cfg.getChartSpecJson())
+                        .configSystem(cfg.getConfigSystem())
                         .isDefault(cfg.getIsDefault() != null ? cfg.getIsDefault() : false)
                         .build();
                 grapheConfigurationService.save(grapheConfiguration);

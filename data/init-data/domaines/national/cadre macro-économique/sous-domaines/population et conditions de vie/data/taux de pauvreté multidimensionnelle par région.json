@@ -1,0 +1,108 @@
+{
+  "data" : [ {
+    "annuel" : "2014",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "16"
+  }, {
+    "annuel" : "2014",
+    "region" : "casablanca-settat",
+    "valeur" : "4.5"
+  }, {
+    "annuel" : "2014",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "0.7"
+  }, {
+    "annuel" : "2014",
+    "region" : "drâa-tafilalet",
+    "valeur" : "18.1"
+  }, {
+    "annuel" : "2014",
+    "region" : "fès-meknès",
+    "valeur" : "8.9"
+  }, {
+    "annuel" : "2014",
+    "region" : "guelmim-oued noun",
+    "valeur" : "7.1"
+  }, {
+    "annuel" : "2014",
+    "region" : "l'oriental",
+    "valeur" : "9.3"
+  }, {
+    "annuel" : "2014",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "2.5"
+  }, {
+    "annuel" : "2014",
+    "region" : "marrakech-safi",
+    "valeur" : "13.8"
+  }, {
+    "annuel" : "2014",
+    "region" : "national",
+    "valeur" : "9.1"
+  }, {
+    "annuel" : "2014",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "7.8"
+  }, {
+    "annuel" : "2014",
+    "region" : "souss-massa",
+    "valeur" : "8"
+  }, {
+    "annuel" : "2014",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "6.5"
+  }, {
+    "annuel" : "2022",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "11.6"
+  }, {
+    "annuel" : "2022",
+    "region" : "casablanca-settat",
+    "valeur" : "2.4"
+  }, {
+    "annuel" : "2022",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "1.6"
+  }, {
+    "annuel" : "2022",
+    "region" : "drâa-tafilalet",
+    "valeur" : "5.5"
+  }, {
+    "annuel" : "2022",
+    "region" : "fès-meknès",
+    "valeur" : "10.4"
+  }, {
+    "annuel" : "2022",
+    "region" : "guelmim-oued noun",
+    "valeur" : "9.3"
+  }, {
+    "annuel" : "2022",
+    "region" : "l'oriental",
+    "valeur" : "5.9"
+  }, {
+    "annuel" : "2022",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "1.2"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "valeur" : "5.2"
+  }, {
+    "annuel" : "2022",
+    "region" : "national",
+    "valeur" : "5.7"
+  }, {
+    "annuel" : "2022",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "4.9"
+  }, {
+    "annuel" : "2022",
+    "region" : "souss-massa",
+    "valeur" : "4.7"
+  }, {
+    "annuel" : "2022",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "4.8"
+  } ],
+  "indicateur" : "taux de pauvreté multidimensionnelle par région"
+}

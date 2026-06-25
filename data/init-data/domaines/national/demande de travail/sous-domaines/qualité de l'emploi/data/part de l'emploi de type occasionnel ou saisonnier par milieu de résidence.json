@@ -1,0 +1,64 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "milieu" : "Ensemble",
+    "valeur" : "9.2"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Rural",
+    "valeur" : "11.6"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Urbain",
+    "valeur" : "7.4"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Ensemble",
+    "valeur" : "9.5"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Rural",
+    "valeur" : "12.3"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Urbain",
+    "valeur" : "7.5"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Ensemble",
+    "valeur" : "10.5"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Rural",
+    "valeur" : "13.9"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Urbain",
+    "valeur" : "8.0"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Ensemble",
+    "valeur" : "10.7"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Rural",
+    "valeur" : "14.4"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Urbain",
+    "valeur" : "8.2"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Ensemble",
+    "valeur" : "10.2"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Rural",
+    "valeur" : "15.5"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Urbain",
+    "valeur" : "6.8"
+  } ],
+  "indicateur" : "part de l'emploi de type occasionnel ou saisonnier par milieu de résidence"
+}

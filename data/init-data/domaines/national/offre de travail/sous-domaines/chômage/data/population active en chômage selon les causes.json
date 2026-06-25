@@ -1,0 +1,124 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "cause" : "Arrivée à l'âge de travailler",
+    "valeur" : "112000"
+  }, {
+    "annuel" : "2019",
+    "cause" : "Arrêt de l'activité de l'établissement, licenciement",
+    "valeur" : "200000"
+  }, {
+    "annuel" : "2019",
+    "cause" : "Autres causes",
+    "valeur" : "95000"
+  }, {
+    "annuel" : "2019",
+    "cause" : "Cessation d'activité indépendante, saisonnière ou pour raison de revenu",
+    "valeur" : "200000"
+  }, {
+    "annuel" : "2019",
+    "cause" : "Ensemble",
+    "valeur" : "1107000"
+  }, {
+    "annuel" : "2019",
+    "cause" : "Fin d'études ou de formation",
+    "valeur" : "496000"
+  }, {
+    "annuel" : "2020",
+    "cause" : "Arrivée à l'âge de travailler",
+    "valeur" : "114000"
+  }, {
+    "annuel" : "2020",
+    "cause" : "Arrêt de l'activité de l'établissement, licenciement",
+    "valeur" : "372000"
+  }, {
+    "annuel" : "2020",
+    "cause" : "Autres causes",
+    "valeur" : "189000"
+  }, {
+    "annuel" : "2020",
+    "cause" : "Cessation d'activité indépendante, saisonnière ou pour raison de revenu",
+    "valeur" : "269000"
+  }, {
+    "annuel" : "2020",
+    "cause" : "Ensemble",
+    "valeur" : "1429000"
+  }, {
+    "annuel" : "2020",
+    "cause" : "Fin d'études ou de formation",
+    "valeur" : "480000"
+  }, {
+    "annuel" : "2021",
+    "cause" : "Arrivée à l'âge de travailler",
+    "valeur" : "140000"
+  }, {
+    "annuel" : "2021",
+    "cause" : "Arrêt de l'activité de l'établissement, licenciement",
+    "valeur" : "437000"
+  }, {
+    "annuel" : "2021",
+    "cause" : "Autres causes",
+    "valeur" : "98000"
+  }, {
+    "annuel" : "2021",
+    "cause" : "Cessation d'activité indépendante, saisonnière ou pour raison de revenu",
+    "valeur" : "284000"
+  }, {
+    "annuel" : "2021",
+    "cause" : "Ensemble",
+    "valeur" : "1508000"
+  }, {
+    "annuel" : "2021",
+    "cause" : "Fin d'études ou de formation",
+    "valeur" : "550000"
+  }, {
+    "annuel" : "2022",
+    "cause" : "Arrivée à l'âge de travailler",
+    "valeur" : "143000"
+  }, {
+    "annuel" : "2022",
+    "cause" : "Arrêt de l'activité de l'établissement, licenciement",
+    "valeur" : "375000"
+  }, {
+    "annuel" : "2022",
+    "cause" : "Autres causes",
+    "valeur" : "68000"
+  }, {
+    "annuel" : "2022",
+    "cause" : "Cessation d'activité indépendante, saisonnière ou pour raison de revenu",
+    "valeur" : "273000"
+  }, {
+    "annuel" : "2022",
+    "cause" : "Ensemble",
+    "valeur" : "1442000"
+  }, {
+    "annuel" : "2022",
+    "cause" : "Fin d'études ou de formation",
+    "valeur" : "585000"
+  }, {
+    "annuel" : "2023",
+    "cause" : "Arrivée à l'âge de travailler",
+    "valeur" : "174000"
+  }, {
+    "annuel" : "2023",
+    "cause" : "Arrêt de l'activité de l'établissement, licenciement",
+    "valeur" : "427000"
+  }, {
+    "annuel" : "2023",
+    "cause" : "Autres causes",
+    "valeur" : "44000"
+  }, {
+    "annuel" : "2023",
+    "cause" : "Cessation d'activité indépendante, saisonnière ou pour raison de revenu",
+    "valeur" : "332000"
+  }, {
+    "annuel" : "2023",
+    "cause" : "Ensemble",
+    "valeur" : "1580000"
+  }, {
+    "annuel" : "2023",
+    "cause" : "Fin d'études ou de formation",
+    "valeur" : "605000"
+  } ],
+  "indicateur" : "population active en chômage selon les causes"
+}

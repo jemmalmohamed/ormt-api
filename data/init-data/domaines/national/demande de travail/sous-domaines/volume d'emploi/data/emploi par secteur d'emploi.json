@@ -1,0 +1,76 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "secteur_emploi" : "ensemble",
+    "valeur" : "10975000"
+  }, {
+    "annuel" : "2019",
+    "secteur_emploi" : "privé",
+    "valeur" : "10020000"
+  }, {
+    "annuel" : "2019",
+    "secteur_emploi" : "public - semi public",
+    "valeur" : "955000"
+  }, {
+    "annuel" : "2020",
+    "secteur_emploi" : "ensemble",
+    "valeur" : "10542000"
+  }, {
+    "annuel" : "2020",
+    "secteur_emploi" : "privé",
+    "valeur" : "9625000"
+  }, {
+    "annuel" : "2020",
+    "secteur_emploi" : "public - semi public",
+    "valeur" : "917000"
+  }, {
+    "annuel" : "2021",
+    "secteur_emploi" : "ensemble",
+    "valeur" : "10772000"
+  }, {
+    "annuel" : "2021",
+    "secteur_emploi" : "privé",
+    "valeur" : "9835000"
+  }, {
+    "annuel" : "2021",
+    "secteur_emploi" : "public - semi public",
+    "valeur" : "937000"
+  }, {
+    "annuel" : "2022",
+    "secteur_emploi" : "ensemble",
+    "valeur" : "10749000"
+  }, {
+    "annuel" : "2022",
+    "secteur_emploi" : "privé",
+    "valeur" : "9846000"
+  }, {
+    "annuel" : "2022",
+    "secteur_emploi" : "public - semi public",
+    "valeur" : "903000"
+  }, {
+    "annuel" : "2023",
+    "secteur_emploi" : "ensemble",
+    "valeur" : "10591000"
+  }, {
+    "annuel" : "2023",
+    "secteur_emploi" : "privé",
+    "valeur" : "9680000"
+  }, {
+    "annuel" : "2023",
+    "secteur_emploi" : "public - semi public",
+    "valeur" : "911000"
+  }, {
+    "annuel" : "2024",
+    "secteur_emploi" : "ensemble",
+    "valeur" : "10673000"
+  }, {
+    "annuel" : "2024",
+    "secteur_emploi" : "privé",
+    "valeur" : "9744000"
+  }, {
+    "annuel" : "2024",
+    "secteur_emploi" : "public - semi public",
+    "valeur" : "929000"
+  } ],
+  "indicateur" : "emploi par secteur d'emploi"
+}

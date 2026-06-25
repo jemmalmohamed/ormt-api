@@ -1,0 +1,164 @@
+[
+    {
+        "titre": "Enquête Panel Entreprises Rapport Analytique",
+        "description": "Rapport analytique sur l'enquête panel entreprises.",
+        "auteur": "Ministère du Travail",
+        "datePublication": "2023-01-15",
+        "fichierUrl": "/pdf/Enquete-Panel-Entreprises-Rapport-Analytique.pdf",
+        "nomFichier": "Enquete-Panel-Entreprises-Rapport-Analytique.pdf",
+        "tailleFichier": 1234567,
+        "categorie": "Rapport",
+        "tags": "panel, entreprises, analytique",
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
+    },
+    {
+        "titre": "Enquête auprès des bénéficiaires du programme Idmaj 1",
+        "description": "Analyse des bénéficiaires du programme Idmaj 1.",
+        "auteur": "ANAPEC",
+        "datePublication": "2022-11-10",
+        "fichierUrl": "/pdf/Enquête-auprès-des-bénéficiaires-du-programme-Idmaj-1.pdf",
+        "nomFichier": "Enquête-auprès-des-bénéficiaires-du-programme-Idmaj-1.pdf",
+        "tailleFichier": 2345678,
+        "categorie": "Programme",
+        "tags": "idmaj, bénéficiaires, enquête",
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
+    },
+    {
+        "titre": "Étude sur les gains et pertes d'emploi dans l'industrie en 2001",
+        "description": "Étude détaillée sur les gains et pertes d'emploi dans l'industrie.",
+        "auteur": "Observatoire National",
+        "datePublication": "2002-05-20",
+        "fichierUrl": "/pdf/Etude-sur-les-gains-et-pertes-demploi-dans-lindustrie-en-2001.pdf",
+        "nomFichier": "Etude-sur-les-gains-et-pertes-demploi-dans-lindustrie-en-2001.pdf",
+        "tailleFichier": 3456789,
+        "categorie": "Étude",
+        "tags": "industrie, emploi, gains, pertes",
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
+    },
+    {
+        "titre": "Le marché du travail en 2022",
+        "description": "Analyse du marché du travail pour l'année 2022.",
+        "auteur": "Ministère du Travail",
+        "datePublication": "2023-03-01",
+        "fichierUrl": "/pdf/Le-marche-du-travail-en-2022.pdf",
+        "nomFichier": "Le-marche-du-travail-en-2022.pdf",
+        "tailleFichier": 4567890,
+        "categorie": "Marché du travail",
+        "tags": "marché, travail, 2022",
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
+    },
+    {
+        "titre": "Le marché du travail en 2019",
+        "description": "Analyse du marché du travail pour l'année 2019.",
+        "auteur": "Ministère du Travail",
+        "datePublication": "2020-02-15",
+        "fichierUrl": "/pdf/Le-marché-du-travail-en-2019.pdf",
+        "nomFichier": "Le-marché-du-travail-en-2019.pdf",
+        "tailleFichier": 5678901,
+        "categorie": "Marché du travail",
+        "tags": "marché, travail, 2019",
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
+    },
+    {
+        "titre": "Le marché du travail en 2020",
+        "description": "Analyse du marché du travail pour l'année 2020.",
+        "auteur": "Ministère du Travail",
+        "datePublication": "2021-02-15",
+        "fichierUrl": "/pdf/Le-marché-du-travail-en-2020.pdf",
+        "nomFichier": "Le-marché-du-travail-en-2020.pdf",
+        "tailleFichier": 6789012,
+        "categorie": "Marché du travail",
+        "tags": "marché, travail, 2020",
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
+    },
+    {
+        "titre": "Le marché du travail en 2021",
+        "description": "Analyse du marché du travail pour l'année 2021.",
+        "auteur": "Ministère du Travail",
+        "datePublication": "2022-02-15",
+        "fichierUrl": "/pdf/Le-marché-du-travail-en-2021.pdf",
+        "nomFichier": "Le-marché-du-travail-en-2021.pdf",
+        "tailleFichier": 7890123,
+        "categorie": "Marché du travail",
+        "tags": "marché, travail, 2021",
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
+    },
+    {
+        "titre": "Le Travail sur les Plateformes Digitales au Maroc",
+        "description": "Étude sur le travail digital au Maroc.",
+        "auteur": "Observatoire Digital",
+        "datePublication": "2024-04-10",
+        "fichierUrl": "/pdf/Le_Travail_sur_les_Plateformes_Digitales_au_Maroc.pdf",
+        "nomFichier": "Le_Travail_sur_les_Plateformes_Digitales_au_Maroc.pdf",
+        "tailleFichier": 8901234,
+        "categorie": "Digital",
+        "tags": "plateformes, digital, Maroc",
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
+    },
+    {
+        "titre": "Les nouvelles formes et les formes atypiques d'emploi au Maroc",
+        "description": "Rapport sur les nouvelles formes d'emploi au Maroc.",
+        "auteur": "Ministère du Travail",
+        "datePublication": "2023-09-05",
+        "fichierUrl": "/pdf/Les-nouvelles-formes-et-les-formes-atypiques-d'emploi-au-Maroc.pdf",
+        "nomFichier": "Les-nouvelles-formes-et-les-formes-atypiques-d'emploi-au-Maroc.pdf",
+        "tailleFichier": 9012345,
+        "categorie": "Emploi",
+        "tags": "formes, emploi, Maroc",
+        "nombreTelechargements": 0,
+        "roleAcces": [
+            {
+                "roleCode": "role_public",
+                "niveauAcces": "lecture"
+            }
+        ]
+    }
+]

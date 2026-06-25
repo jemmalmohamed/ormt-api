@@ -1,0 +1,79 @@
+{
+  "data" : [ {
+    "annuel" : "2014",
+    "diplome" : "Bachelor",
+    "genre" : "ensemble",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Bachelor",
+    "genre" : "femme",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Bachelor",
+    "genre" : "homme",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Diplôme d'ingénieur Privé",
+    "genre" : "ensemble",
+    "valeur" : "6.8"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Diplôme d'ingénieur Privé",
+    "genre" : "femme",
+    "valeur" : "3.2"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Diplôme d'ingénieur Privé",
+    "genre" : "homme",
+    "valeur" : "8.4"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Licence du privé",
+    "genre" : "ensemble",
+    "valeur" : "6.1"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Licence du privé",
+    "genre" : "femme",
+    "valeur" : "8.6"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Licence du privé",
+    "genre" : "homme",
+    "valeur" : "3.6"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Master du privé",
+    "genre" : "ensemble",
+    "valeur" : "5.3"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Master du privé",
+    "genre" : "femme",
+    "valeur" : "7.7"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Master du privé",
+    "genre" : "homme",
+    "valeur" : "4.3"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Total",
+    "genre" : "ensemble",
+    "valeur" : "5.6"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Total",
+    "genre" : "femme",
+    "valeur" : "7.1"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Total",
+    "genre" : "homme",
+    "valeur" : "4.6"
+  } ],
+  "indicateur" : "taux de chômage des diplômés de l'enseignement supérieur privé après 4 ans (promotion 2014) par diplôme et genre"
+}

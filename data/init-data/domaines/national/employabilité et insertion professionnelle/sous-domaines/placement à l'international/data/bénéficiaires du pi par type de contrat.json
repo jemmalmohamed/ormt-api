@@ -1,0 +1,52 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "type_contrat_pi" : "CDI (2-3 années renouvelables)",
+    "valeur" : "3.9"
+  }, {
+    "annuel" : "2019",
+    "type_contrat_pi" : "Saisonnier",
+    "valeur" : "96.1"
+  }, {
+    "annuel" : "2020",
+    "type_contrat_pi" : "CDI (2-3 années renouvelables)",
+    "valeur" : "2.4"
+  }, {
+    "annuel" : "2020",
+    "type_contrat_pi" : "Saisonnier",
+    "valeur" : "97.6"
+  }, {
+    "annuel" : "2021",
+    "type_contrat_pi" : "CDI (2-3 années renouvelables)",
+    "valeur" : "1.2"
+  }, {
+    "annuel" : "2021",
+    "type_contrat_pi" : "Saisonnier",
+    "valeur" : "98.8"
+  }, {
+    "annuel" : "2022",
+    "type_contrat_pi" : "CDI (2-3 années renouvelables)",
+    "valeur" : "3.3"
+  }, {
+    "annuel" : "2022",
+    "type_contrat_pi" : "Saisonnier",
+    "valeur" : "96.7"
+  }, {
+    "annuel" : "2023",
+    "type_contrat_pi" : "CDI (2-3 années renouvelables)",
+    "valeur" : "1.4"
+  }, {
+    "annuel" : "2023",
+    "type_contrat_pi" : "Saisonnier",
+    "valeur" : "98.6"
+  }, {
+    "annuel" : "2024",
+    "type_contrat_pi" : "CDI (2-3 années renouvelables)",
+    "valeur" : "1.9"
+  }, {
+    "annuel" : "2024",
+    "type_contrat_pi" : "Saisonnier",
+    "valeur" : "98.1"
+  } ],
+  "indicateur" : "bénéficiaires du pi par type de contrat"
+}

@@ -1,0 +1,370 @@
+{
+  "actif" : true,
+  "description" : "statistiques des inscrits à l'anapec et leurs caractéristiques.",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "cumul des inscrits à l'anapec",
+    "description" : "répartition des inscrits à l'anapec par diplôme",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "inscrits à l'anapec par diplôme - Camembert"
+    } ],
+    "nom" : "inscrits à l'anapec par diplôme",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "inscrits à l'anapec par diplôme",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "cumul des inscrits à l'anapec",
+    "description" : "répartition des inscrits à l'anapec par genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "inscrits à l'anapec par genre - Camembert"
+    } ],
+    "nom" : "inscrits à l'anapec par genre",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "inscrits à l'anapec par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "cumul des inscrits à l'anapec",
+    "description" : "répartition des inscrits à l'anapec",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "inscrits à l'anapec - Camembert"
+    } ],
+    "nom" : "inscrits à l'anapec par région",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "inscrits à l'anapec",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "cumul des inscrits à l'anapec",
+    "description" : "répartition des inscrits à l'anapec par âge",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "age",
+      "nom" : "age",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "inscrits à l'anapec par âge - Camembert"
+    } ],
+    "nom" : "inscrits à l'anapec par âge",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "inscrits à l'anapec par âge",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "cumul des inscrits à l'anapec",
+    "description" : "nombre de nouveaux inscrits à l'anapec",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "nombre de nouveaux inscrits à l'anapec - Histogramme"
+    } ],
+    "nom" : "nombre de nouveaux inscrits à l'anapec",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre de nouveaux inscrits à l'anapec",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "cumul des inscrits à l'anapec",
+    "description" : "nombre total des inscrits à l'anapec",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "nombre total des inscrits à l'anapec - Histogramme"
+    } ],
+    "nom" : "nombre total des inscrits à l'anapec",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre total des inscrits à l'anapec",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "cumul des inscrits à l'anapec",
+    "description" : "répartition des nouveaux inscrits à l'anapec par diplôme",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "nouveaux inscrits à l'anapec par diplôme - Camembert"
+    } ],
+    "nom" : "nouveaux inscrits à l'anapec par diplôme",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nouveaux inscrits à l'anapec par diplôme",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "cumul des inscrits à l'anapec",
+    "description" : "répartition des nouveaux inscrits à l'anapec par genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "nouveaux inscrits à l'anapec par genre - Camembert"
+    } ],
+    "nom" : "nouveaux inscrits à l'anapec par genre",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nouveaux inscrits à l'anapec par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "cumul des inscrits à l'anapec",
+    "description" : "répartition des nouveaux inscrits à l'anapec",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "nouveaux inscrits à l'anapec - Camembert"
+    } ],
+    "nom" : "nouveaux inscrits à l'anapec par région",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nouveaux inscrits à l'anapec",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "cumul des inscrits à l'anapec",
+    "description" : "répartition des nouveaux inscrits à l'anapec par âge",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "age",
+      "nom" : "age",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "nouveaux inscrits à l'anapec par âge - Camembert"
+    } ],
+    "nom" : "nouveaux inscrits à l'anapec par âge",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nouveaux inscrits à l'anapec par âge",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  } ],
+  "nom" : "inscrits à l'anapec"
+}

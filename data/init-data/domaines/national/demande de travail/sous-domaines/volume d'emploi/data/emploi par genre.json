@@ -1,0 +1,229 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "genre" : "ensemble",
+    "milieu" : "national",
+    "valeur" : "10975000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "ensemble",
+    "milieu" : "rural",
+    "valeur" : "4698000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "ensemble",
+    "milieu" : "urbain",
+    "valeur" : "6277000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "milieu" : "national",
+    "valeur" : "2491000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "milieu" : "rural",
+    "valeur" : "1221000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "milieu" : "urbain",
+    "valeur" : "1268000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "milieu" : "national",
+    "valeur" : "8484000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "milieu" : "rural",
+    "valeur" : "3477000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "milieu" : "urbain",
+    "valeur" : "5009000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "ensemble",
+    "milieu" : "national",
+    "valeur" : "10542000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "ensemble",
+    "milieu" : "rural",
+    "valeur" : "4403000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "ensemble",
+    "milieu" : "urbain",
+    "valeur" : "6140000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "milieu" : "national",
+    "valeur" : "2267000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "milieu" : "rural",
+    "valeur" : "1057000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "milieu" : "urbain",
+    "valeur" : "1210000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "milieu" : "national",
+    "valeur" : "8275000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "milieu" : "rural",
+    "valeur" : "3346000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "milieu" : "urbain",
+    "valeur" : "4930000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "ensemble",
+    "milieu" : "national",
+    "valeur" : "10772000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "ensemble",
+    "milieu" : "rural",
+    "valeur" : "4533000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "ensemble",
+    "milieu" : "urbain",
+    "valeur" : "6239000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "milieu" : "national",
+    "valeur" : "2402000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "milieu" : "rural",
+    "valeur" : "1124000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "milieu" : "urbain",
+    "valeur" : "1273000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "milieu" : "national",
+    "valeur" : "8370000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "milieu" : "rural",
+    "valeur" : "3409000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "milieu" : "urbain",
+    "valeur" : "4966000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "ensemble",
+    "milieu" : "national",
+    "valeur" : "10749000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "ensemble",
+    "milieu" : "rural",
+    "valeur" : "4359000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "ensemble",
+    "milieu" : "urbain",
+    "valeur" : "6390000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "milieu" : "national",
+    "valeur" : "2290000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "milieu" : "rural",
+    "valeur" : "1011000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "milieu" : "urbain",
+    "valeur" : "1278000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "milieu" : "national",
+    "valeur" : "8459000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "milieu" : "rural",
+    "valeur" : "3348000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "milieu" : "urbain",
+    "valeur" : "5112000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "ensemble",
+    "milieu" : "national",
+    "valeur" : "10591000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "ensemble",
+    "milieu" : "rural",
+    "valeur" : "4160000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "ensemble",
+    "milieu" : "urbain",
+    "valeur" : "6431000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "milieu" : "national",
+    "valeur" : "2192000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "milieu" : "rural",
+    "valeur" : "865000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "milieu" : "urbain",
+    "valeur" : "1325000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "milieu" : "national",
+    "valeur" : "8399000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "milieu" : "rural",
+    "valeur" : "3295000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "milieu" : "urbain",
+    "valeur" : "5106000"
+  } ],
+  "indicateur" : "emploi par genre"
+}

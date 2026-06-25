@@ -1,0 +1,148 @@
+{
+  "data" : [ {
+    "age" : "20 à 25 ans",
+    "annuel" : "2019",
+    "valeur" : "49.3"
+  }, {
+    "age" : "20 à 25 ans",
+    "annuel" : "2020",
+    "valeur" : "50.0"
+  }, {
+    "age" : "20 à 25 ans",
+    "annuel" : "2021",
+    "valeur" : "51.4"
+  }, {
+    "age" : "20 à 25 ans",
+    "annuel" : "2022",
+    "valeur" : "null"
+  }, {
+    "age" : "20 à 25 ans",
+    "annuel" : "2023",
+    "valeur" : "null"
+  }, {
+    "age" : "20 à 25 ans",
+    "annuel" : "2024",
+    "valeur" : "48.7"
+  }, {
+    "age" : "25 à 35 ans",
+    "annuel" : "2019",
+    "valeur" : "34.4"
+  }, {
+    "age" : "25 à 35 ans",
+    "annuel" : "2020",
+    "valeur" : "32.9"
+  }, {
+    "age" : "25 à 35 ans",
+    "annuel" : "2021",
+    "valeur" : "32.4"
+  }, {
+    "age" : "25 à 35 ans",
+    "annuel" : "2022",
+    "valeur" : "null"
+  }, {
+    "age" : "25 à 35 ans",
+    "annuel" : "2023",
+    "valeur" : "null"
+  }, {
+    "age" : "25 à 35 ans",
+    "annuel" : "2024",
+    "valeur" : "38.5"
+  }, {
+    "age" : "35 à 45",
+    "annuel" : "2019",
+    "valeur" : "4.7"
+  }, {
+    "age" : "35 à 45",
+    "annuel" : "2020",
+    "valeur" : "3.8"
+  }, {
+    "age" : "35 à 45",
+    "annuel" : "2021",
+    "valeur" : "4.4"
+  }, {
+    "age" : "35 à 45",
+    "annuel" : "2022",
+    "valeur" : "null"
+  }, {
+    "age" : "35 à 45",
+    "annuel" : "2023",
+    "valeur" : "null"
+  }, {
+    "age" : "35 à 45",
+    "annuel" : "2024",
+    "valeur" : "4.3"
+  }, {
+    "age" : "Moins de 20",
+    "annuel" : "2019",
+    "valeur" : "9.5"
+  }, {
+    "age" : "Moins de 20",
+    "annuel" : "2020",
+    "valeur" : "11.6"
+  }, {
+    "age" : "Moins de 20",
+    "annuel" : "2021",
+    "valeur" : "9.5"
+  }, {
+    "age" : "Moins de 20",
+    "annuel" : "2022",
+    "valeur" : "null"
+  }, {
+    "age" : "Moins de 20",
+    "annuel" : "2023",
+    "valeur" : "null"
+  }, {
+    "age" : "Moins de 20",
+    "annuel" : "2024",
+    "valeur" : "4.9"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2019",
+    "valeur" : "0.0"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2020",
+    "valeur" : "0.0"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2021",
+    "valeur" : "0.0"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2022",
+    "valeur" : "null"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2023",
+    "valeur" : "null"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2024",
+    "valeur" : "1.2"
+  }, {
+    "age" : "Plus de 45",
+    "annuel" : "2019",
+    "valeur" : "2.1"
+  }, {
+    "age" : "Plus de 45",
+    "annuel" : "2020",
+    "valeur" : "1.7"
+  }, {
+    "age" : "Plus de 45",
+    "annuel" : "2021",
+    "valeur" : "2.3"
+  }, {
+    "age" : "Plus de 45",
+    "annuel" : "2022",
+    "valeur" : "null"
+  }, {
+    "age" : "Plus de 45",
+    "annuel" : "2023",
+    "valeur" : "null"
+  }, {
+    "age" : "Plus de 45",
+    "annuel" : "2024",
+    "valeur" : "2.4"
+  } ],
+  "indicateur" : "bénéficiaires idmaj par âge (hors pi)"
+}
