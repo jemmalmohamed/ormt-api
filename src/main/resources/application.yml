@@ -38,7 +38,7 @@ flyway:
 data:
   external:
     data_path: ./data
-    territoire: "national" #  Can be 'national', 'regional'
+    territoire: "regional" #  Can be 'national', 'regional'
 
 jwt:
   auth:
