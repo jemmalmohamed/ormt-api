@@ -3,6 +3,7 @@ package ma.org.ormt.modules.indicateurs.donnee.controllers;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
@@ -30,6 +31,10 @@ import ma.org.ormt.core.validators.groups.OnCreate;
 import ma.org.ormt.core.validators.groups.OnUpdate;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDto;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.DonneeIndicateurDtoMapper;
+import ma.org.ormt.modules.indicateurs.donnee.dtos.imports.DonneeImportCommitDto;
+import ma.org.ormt.modules.indicateurs.donnee.dtos.imports.DonneeImportCommitRequest;
+import ma.org.ormt.modules.indicateurs.donnee.dtos.imports.DonneeImportPreviewDto;
+import ma.org.ormt.modules.indicateurs.donnee.dtos.imports.DonneeImportPreviewRequest;
 import ma.org.ormt.modules.indicateurs.donnee.dtos.request.DonneeIndicateurRequestDto;
 import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
 import ma.org.ormt.modules.indicateurs.donnee.services.DonneeIndicateurService;
@@ -76,6 +81,47 @@ public class DonneeIndicateurCrudController extends BaseController<DonneeIndicat
 
                 return buildResponseEntity(donneeIndicateurs, DonneeIndicateurDto.class,
                                 HttpStatus.CREATED, true);
+        }
+
+        @Operation(summary = "Preview import for " + ENTITY_NAME + "s", responses = {
+                        @ApiResponse(responseCode = "200", description = "Success", content = @Content(mediaType = "application/json", schema = @Schema(implementation = DonneeImportPreviewDto.class))),
+                        @ApiResponse(responseCode = "402", description = "Unprocessable entity", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @PostMapping("{indicateurId}/donnees/import-preview")
+        @PreAuthorize("hasAuthority('domaine:create')")
+        public ResponseEntity<RestResponse<DonneeImportPreviewDto>> previewImport(
+                        @PathVariable Long indicateurId,
+                        @RequestBody DonneeImportPreviewRequest request) {
+                DonneeImportPreviewDto preview = donneeIndicateurService.previewImport(indicateurId, request.getRows());
+                return ResponseEntity.ok(RestResponse.<DonneeImportPreviewDto>builder()
+                                .success(true)
+                                .data(preview)
+                                .message("Import preview generated")
+                                .build());
+        }
+
+        @Operation(summary = "Commit import for " + ENTITY_NAME + "s", responses = {
+                        @ApiResponse(responseCode = "200", description = "Success", content = @Content(mediaType = "application/json", schema = @Schema(implementation = DonneeImportCommitDto.class))),
+                        @ApiResponse(responseCode = "402", description = "Unprocessable entity", content = @Content(mediaType = "ErrorResponse")),
+                        @ApiResponse(responseCode = "403", description = "Permission denied", content = @Content(mediaType = "ErrorResponse"))
+        })
+        @PostMapping("{indicateurId}/donnees/import-commit")
+        @PreAuthorize("hasAuthority('domaine:create')")
+        public ResponseEntity<RestResponse<DonneeImportCommitDto>> commitImport(
+                        @PathVariable Long indicateurId,
+                        @RequestBody DonneeImportCommitRequest request) {
+                DonneeImportCommitDto result = donneeIndicateurService.commitImport(
+                                indicateurId,
+                                request.getRows(),
+                                request.isOverwriteConflicts(),
+                                request.isReplaceExistingData(),
+                                request.getSelectedRowNumbers() == null ? Set.of() : Set.copyOf(request.getSelectedRowNumbers()));
+                return ResponseEntity.ok(RestResponse.<DonneeImportCommitDto>builder()
+                                .success(true)
+                                .data(result)
+                                .message("Import committed")
+                                .build());
         }
 
         // *********** UPDATE OPERATIONS ***********
