@@ -1,24 +1,9 @@
-[
-    {
-        "nom": "public",
-        "description": "tableau de bord public",
-        "roleAcces": [
-            {
-                "roleCode": "role_public",
-                "niveauAcces": "lecture"
-            }
-        ],
-        "actif": true
-    },
-    {
-        "nom": "décisionnel",
-        "description": "partenaires économiques et sociaux",
-        "roleAcces": [
-            {
-                "roleCode": "role_decideur",
-                "niveauAcces": "lecture"
-            }
-        ],
-        "actif": true
-    }
-]
+[ {
+  "actif" : true,
+  "description" : null,
+  "nom" : "public"
+}, {
+  "actif" : true,
+  "description" : null,
+  "nom" : "décisionnel"
+} ]

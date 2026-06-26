@@ -259,7 +259,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "hcp",
-    "sourceNom" : "Haut Commissariat au Plan"
+    "sourceNom" : "hcp"
   } ],
   "sousTitre" : "Offre de Travail",
   "status" : "PUBLISHED",
@@ -369,7 +369,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "miepeec",
-    "sourceNom" : "Ministère de l'inclusion économique, de la petite entreprise, de l'emploi et des compétences"
+    "sourceNom" : "miepeec"
   } ],
   "sousTitre" : "Intermédiation sur le marché du travail",
   "status" : "PUBLISHED",
@@ -557,7 +557,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "miepeec",
-    "sourceNom" : "Ministère de l'inclusion économique, de la petite entreprise, de l'emploi et des compétences"
+    "sourceNom" : "miepeec"
   } ],
   "sousTitre" : "Relations Professionnelles et Climat Social",
   "status" : "PUBLISHED",
@@ -713,7 +713,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "anapec",
-    "sourceNom" : "agence nationale de promotion de l'emploi et des compétences"
+    "sourceNom" : "anapec"
   } ],
   "sousTitre" : "Intermédiation sur le marché du travail",
   "status" : "PUBLISHED",
@@ -956,7 +956,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "anapec",
-    "sourceNom" : "agence nationale de promotion de l'emploi et des compétences"
+    "sourceNom" : "anapec"
   } ],
   "sousTitre" : "Employabilité et Insertion Professionnelle",
   "status" : "PUBLISHED",
@@ -1254,7 +1254,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "hcp",
-    "sourceNom" : "Haut Commissariat au Plan"
+    "sourceNom" : "hcp"
   } ],
   "sousTitre" : "Offre de Travail",
   "status" : "PUBLISHED",
@@ -1419,7 +1419,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "miepeec",
-    "sourceNom" : "Ministère de l'inclusion économique, de la petite entreprise, de l'emploi et des compétences"
+    "sourceNom" : "miepeec"
   } ],
   "sousTitre" : "Relations Professionnelles et Climat Social",
   "status" : "PUBLISHED",
@@ -1552,7 +1552,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "hcp",
-    "sourceNom" : "Haut Commissariat au Plan"
+    "sourceNom" : "hcp"
   } ],
   "sousTitre" : "Cadre Macro-économique",
   "status" : "PUBLISHED",
@@ -1804,7 +1804,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "anapec",
-    "sourceNom" : "agence nationale de promotion de l'emploi et des compétences"
+    "sourceNom" : "anapec"
   } ],
   "sousTitre" : "Employabilité et Insertion Professionnelle",
   "status" : "PUBLISHED",
@@ -2079,11 +2079,11 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "hcp",
-    "sourceNom" : "Haut Commissariat au Plan"
+    "sourceNom" : "hcp"
   }, {
     "ordre" : 2,
     "sourceAbreviation" : "cnss",
-    "sourceNom" : "caisse nationale de sécurité sociale"
+    "sourceNom" : "cnss"
   } ],
   "sousTitre" : "Demande de Travail",
   "status" : "PUBLISHED",
@@ -2225,7 +2225,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "miepeec",
-    "sourceNom" : "Ministère de l'inclusion économique, de la petite entreprise, de l'emploi et des compétences"
+    "sourceNom" : "miepeec"
   } ],
   "sousTitre" : "Relations Professionnelles et Climat Social",
   "status" : "PUBLISHED",
@@ -2390,7 +2390,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "anapec",
-    "sourceNom" : "agence nationale de promotion de l'emploi et des compétences"
+    "sourceNom" : "anapec"
   } ],
   "sousTitre" : "Employabilité et Insertion Professionnelle",
   "status" : "PUBLISHED",
@@ -2523,7 +2523,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "mesrsi",
-    "sourceNom" : "ministère de l'Enseignement supérieur, de la Recherche scientifique et de l'Innovation"
+    "sourceNom" : "mesrsi"
   } ],
   "sousTitre" : "Offre de Formation",
   "status" : "PUBLISHED",
@@ -2702,7 +2702,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "mesrsi",
-    "sourceNom" : "ministère de l'Enseignement supérieur, de la Recherche scientifique et de l'Innovation"
+    "sourceNom" : "mesrsi"
   } ],
   "sousTitre" : "Offre de Formation",
   "status" : "PUBLISHED",
@@ -2881,7 +2881,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "mesrsi",
-    "sourceNom" : "ministère de l'Enseignement supérieur, de la Recherche scientifique et de l'Innovation"
+    "sourceNom" : "mesrsi"
   } ],
   "sousTitre" : "Offre de Formation",
   "status" : "PUBLISHED",
@@ -3060,7 +3060,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "mesrsi",
-    "sourceNom" : "ministère de l'Enseignement supérieur, de la Recherche scientifique et de l'Innovation"
+    "sourceNom" : "mesrsi"
   } ],
   "sousTitre" : "Offre de Formation",
   "status" : "PUBLISHED",
@@ -3239,7 +3239,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "mesrsi",
-    "sourceNom" : "ministère de l'Enseignement supérieur, de la Recherche scientifique et de l'Innovation"
+    "sourceNom" : "mesrsi"
   } ],
   "sousTitre" : "Offre de Formation",
   "status" : "PUBLISHED",
@@ -3395,7 +3395,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "anapec",
-    "sourceNom" : "agence nationale de promotion de l'emploi et des compétences"
+    "sourceNom" : "anapec"
   } ],
   "sousTitre" : "Intermédiation sur le marché du travail",
   "status" : "PUBLISHED",
@@ -3528,7 +3528,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "dfp",
-    "sourceNom" : "Direction de la Formation Professionnelle"
+    "sourceNom" : "dfp"
   } ],
   "sousTitre" : "Offre de Formation",
   "status" : "PUBLISHED",
@@ -3661,7 +3661,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "dfp",
-    "sourceNom" : "Direction de la Formation Professionnelle"
+    "sourceNom" : "dfp"
   } ],
   "sousTitre" : "Offre de Formation",
   "status" : "PUBLISHED",
@@ -3794,7 +3794,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "dfp",
-    "sourceNom" : "Direction de la Formation Professionnelle"
+    "sourceNom" : "dfp"
   } ],
   "sousTitre" : "Offre de Formation",
   "status" : "PUBLISHED",
@@ -3927,7 +3927,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "dfp",
-    "sourceNom" : "Direction de la Formation Professionnelle"
+    "sourceNom" : "dfp"
   } ],
   "sousTitre" : "Offre de Formation",
   "status" : "PUBLISHED",
@@ -4115,7 +4115,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "anapec",
-    "sourceNom" : "agence nationale de promotion de l'emploi et des compétences"
+    "sourceNom" : "anapec"
   } ],
   "sousTitre" : "Employabilité et Insertion Professionnelle",
   "status" : "PUBLISHED",
@@ -4358,7 +4358,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "anapec",
-    "sourceNom" : "agence nationale de promotion de l'emploi et des compétences"
+    "sourceNom" : "anapec"
   } ],
   "sousTitre" : "Intermédiation sur le marché du travail",
   "status" : "PUBLISHED",
@@ -4610,7 +4610,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "donmt",
-    "sourceNom" : "Observatoire National du Marché du Travail"
+    "sourceNom" : "donmt"
   } ],
   "sousTitre" : "Employabilité et Insertion Professionnelle",
   "status" : "PUBLISHED",
@@ -4743,15 +4743,15 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "oc",
-    "sourceNom" : "Office des Changes"
+    "sourceNom" : "oc"
   }, {
     "ordre" : 2,
     "sourceAbreviation" : "hcp",
-    "sourceNom" : "Haut Commissariat au Plan"
+    "sourceNom" : "hcp"
   }, {
     "ordre" : 3,
     "sourceAbreviation" : "mef",
-    "sourceNom" : "Ministère de l'Économie et des Finances"
+    "sourceNom" : "mef"
   } ],
   "sousTitre" : "Cadre Macro-économique",
   "status" : "PUBLISHED",
@@ -4916,7 +4916,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "hcp",
-    "sourceNom" : "Haut Commissariat au Plan"
+    "sourceNom" : "hcp"
   } ],
   "sousTitre" : "Offre de Travail",
   "status" : "PUBLISHED",
@@ -5035,7 +5035,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "dfp et es",
-    "sourceNom" : "Direction de la Formation Professionnelle et enseignement Supérieur"
+    "sourceNom" : "dfp et es"
   } ],
   "sousTitre" : "Offre de Travail",
   "status" : "PUBLISHED",
@@ -5168,7 +5168,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "anapec",
-    "sourceNom" : "agence nationale de promotion de l'emploi et des compétences"
+    "sourceNom" : "anapec"
   } ],
   "sousTitre" : "Intermédiation sur le marché du travail",
   "status" : "PUBLISHED",
@@ -5324,7 +5324,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "anapec",
-    "sourceNom" : "agence nationale de promotion de l'emploi et des compétences"
+    "sourceNom" : "anapec"
   } ],
   "sousTitre" : "Employabilité et Insertion Professionnelle",
   "status" : "PUBLISHED",
@@ -5705,19 +5705,19 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "cnss",
-    "sourceNom" : "caisse nationale de sécurité sociale"
+    "sourceNom" : "cnss"
   }, {
     "ordre" : 2,
     "sourceAbreviation" : "hcp",
-    "sourceNom" : "Haut Commissariat au Plan"
+    "sourceNom" : "hcp"
   }, {
     "ordre" : 3,
     "sourceAbreviation" : "miepeec",
-    "sourceNom" : "Ministère de l'inclusion économique, de la petite entreprise, de l'emploi et des compétences"
+    "sourceNom" : "miepeec"
   }, {
     "ordre" : 4,
     "sourceAbreviation" : "banque mondiale/fmi",
-    "sourceNom" : "Fonds Monétaire International"
+    "sourceNom" : "banque mondiale/fmi"
   } ],
   "sousTitre" : "Compétitivité et Salaires",
   "status" : "PUBLISHED",
@@ -5960,7 +5960,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "anapec",
-    "sourceNom" : "agence nationale de promotion de l'emploi et des compétences"
+    "sourceNom" : "anapec"
   } ],
   "sousTitre" : "Employabilité et Insertion Professionnelle",
   "status" : "PUBLISHED",
@@ -6203,11 +6203,11 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "hcp",
-    "sourceNom" : "Haut Commissariat au Plan"
+    "sourceNom" : "hcp"
   }, {
     "ordre" : 2,
     "sourceAbreviation" : "cnss",
-    "sourceNom" : "caisse nationale de sécurité sociale"
+    "sourceNom" : "cnss"
   } ],
   "sousTitre" : "Demande de Travail",
   "status" : "PUBLISHED",
@@ -6349,7 +6349,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "miepeec",
-    "sourceNom" : "Ministère de l'inclusion économique, de la petite entreprise, de l'emploi et des compétences"
+    "sourceNom" : "miepeec"
   } ],
   "sousTitre" : "Région Marrakech-Safi",
   "status" : "PUBLISHED",
@@ -6601,19 +6601,19 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "cnss",
-    "sourceNom" : "caisse nationale de sécurité sociale"
+    "sourceNom" : "cnss"
   }, {
     "ordre" : 2,
     "sourceAbreviation" : "hcp",
-    "sourceNom" : "Haut Commissariat au Plan"
+    "sourceNom" : "hcp"
   }, {
     "ordre" : 3,
     "sourceAbreviation" : "miepeec",
-    "sourceNom" : "Ministère de l'inclusion économique, de la petite entreprise, de l'emploi et des compétences"
+    "sourceNom" : "miepeec"
   }, {
     "ordre" : 4,
     "sourceAbreviation" : "banque mondiale/fmi",
-    "sourceNom" : "Fonds Monétaire International"
+    "sourceNom" : "banque mondiale/fmi"
   } ],
   "sousTitre" : "Compétitivité et Salaires",
   "status" : "PUBLISHED",
@@ -6668,549 +6668,38 @@
         "type" : "KPI_CARD"
       } ]
     } ],
-    "sizePercent" : 20
-  }, {
-    "actif" : true,
-    "label" : "Indicateurs",
-    "ordre" : 2,
-    "rows" : [ {
-      "heightPx" : 290,
-      "ordre" : 1,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "création d'emploi par région",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "création d'emploi - création d'emploi",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "création d'emploi eqtp par secteur d'activité",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "création d'emploi - création d'emploi eqtp par secteur d'activité",
-        "type" : "CHART"
-      } ]
-    }, {
-      "heightPx" : 90,
-      "ordre" : 2,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : "création d'emploi par secteur d'activité -2p - focus",
-        "contentJson" : null,
-        "indicateurNom" : null,
-        "ordre" : 1,
-        "sizePercent" : 25,
-        "titre" : "création d'emploi par secteur d'activité -2p",
-        "type" : "KPI_CARD"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : "création d'emploi par secteur d'activité -7p - focus",
-        "contentJson" : null,
-        "indicateurNom" : null,
-        "ordre" : 2,
-        "sizePercent" : 25,
-        "titre" : "création d'emploi par secteur d'activité -7p",
-        "type" : "KPI_CARD"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : "création d'emploi par secteur d'emploi - focus",
-        "contentJson" : null,
-        "indicateurNom" : null,
-        "ordre" : 3,
-        "sizePercent" : 25,
-        "titre" : "création d'emploi par secteur d'emploi",
-        "type" : "KPI_CARD"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : "création d'emploi par statut professionnel - focus",
-        "contentJson" : null,
-        "indicateurNom" : null,
-        "ordre" : 4,
-        "sizePercent" : 25,
-        "titre" : "création d'emploi par statut professionnel",
-        "type" : "KPI_CARD"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 3,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "création d'emploi par diplôme",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "création d'emploi - création d'emploi par diplôme",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "création d'emploi par genre",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "création d'emploi - création d'emploi par genre",
-        "type" : "CHART"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 4,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "création d'emploi par secteur d'activité -2p",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "création d'emploi - création d'emploi par secteur d'activité -2p",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "création d'emploi par secteur d'activité -7p",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "création d'emploi - création d'emploi par secteur d'activité -7p",
-        "type" : "CHART"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 5,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "création d'emploi par secteur d'emploi",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "création d'emploi - création d'emploi par secteur d'emploi",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "création d'emploi par statut professionnel",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "création d'emploi - création d'emploi par statut professionnel",
-        "type" : "CHART"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 6,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "création d'emploi par type d'emploi",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "création d'emploi - création d'emploi par type d'emploi",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "création d'emploi salariés par région",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "création d'emploi - création d'emploi salariés",
-        "type" : "CHART"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 7,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : null,
-        "ordre" : 1,
-        "sizePercent" : 20,
-        "titre" : "Marge gauche",
-        "type" : "EMPTY"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "création d'emploi salariés par secteur d'activité",
-        "ordre" : 2,
-        "sizePercent" : 60,
-        "titre" : "création d'emploi - création d'emploi salariés par secteur d'activité",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : null,
-        "ordre" : 3,
-        "sizePercent" : 20,
-        "titre" : "Marge droite",
-        "type" : "EMPTY"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 8,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "nombre d'entreprises",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "tissu économique - nombre d'entreprises",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "nombre d'entreprises entrantes",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "tissu économique - nombre d'entreprises entrantes",
-        "type" : "CHART"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 9,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : null,
-        "ordre" : 1,
-        "sizePercent" : 20,
-        "titre" : "Marge gauche",
-        "type" : "EMPTY"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "nombre d'entreprises sortantes",
-        "ordre" : 2,
-        "sizePercent" : 60,
-        "titre" : "tissu économique - nombre d'entreprises sortantes",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : null,
-        "ordre" : 3,
-        "sizePercent" : 20,
-        "titre" : "Marge droite",
-        "type" : "EMPTY"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 10,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "emploi par région",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "volume d'emploi - emploi",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "emploi par âge",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "volume d'emploi - emploi par âge",
-        "type" : "CHART"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 11,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "emploi par diplôme",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "volume d'emploi - emploi par diplôme",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "emploi par genre",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "volume d'emploi - emploi par genre",
-        "type" : "CHART"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 12,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "emploi par secteur d'activité",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "volume d'emploi - emploi par secteur d'activité",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "emploi par secteur d'emploi",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "volume d'emploi - emploi par secteur d'emploi",
-        "type" : "CHART"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 13,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "emploi par statut professionnel",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "volume d'emploi - emploi par statut professionnel",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "emploi par type d'emploi",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "volume d'emploi - emploi par type d'emploi",
-        "type" : "CHART"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 14,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "emploi salarié eqtp par secteur d'activité",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "volume d'emploi - emploi salarié eqtp par secteur d'activité",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "indice de rotation de salariés par poste par secteur d'activité",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "volume d'emploi - indice de rotation de salariés par poste par secteur d'activité",
-        "type" : "CHART"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 15,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "nombre de déclaration cnss par secteur d'activité",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "volume d'emploi - nombre de déclaration cnss par secteur d'activité",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "salariés déclarés à la cnss par région",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "volume d'emploi - salariés déclarés à la cnss",
-        "type" : "CHART"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 16,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : null,
-        "ordre" : 1,
-        "sizePercent" : 20,
-        "titre" : "Marge gauche",
-        "type" : "EMPTY"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "salariés déclarés à la cnss par secteur d'activité",
-        "ordre" : 2,
-        "sizePercent" : 60,
-        "titre" : "volume d'emploi - salariés déclarés à la cnss par secteur d'activité",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : null,
-        "ordre" : 3,
-        "sizePercent" : 20,
-        "titre" : "Marge droite",
-        "type" : "EMPTY"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 17,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "part de l'emploi de type occasionnel ou saisonnier par genre",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "qualité de l'emploi - part de l'emploi de type occasionnel ou saisonnier par genre",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "part de l'emploi de type occasionnel ou saisonnier par milieu de résidence",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "qualité de l'emploi - part de l'emploi de type occasionnel ou saisonnier par milieu de résidence",
-        "type" : "CHART"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 18,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "part des actifs occupés bénéficiant d'une couverture médicale par genre",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "qualité de l'emploi - part des actifs occupés bénéficiant d'une couverture médicale par genre",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "qualité de l'emploi - part des actifs occupés bénéficiant d'une couverture médicale par milieu de résidence",
-        "type" : "CHART"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 19,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par genre",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "qualité de l'emploi - part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par genre",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par milieu de résidence",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "qualité de l'emploi - part des actifs occupés travaillant plus de 48h/semaine (durée du travail excessive) par milieu de résidence",
-        "type" : "CHART"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 20,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "part des salariés disposant d'un contrat de travail",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "qualité de l'emploi - part des salariés disposant d'un contrat de travail",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "part des salariés touchant un salaire inférieur au smig par secteur d'activité",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "qualité de l'emploi - part des salariés touchant un salaire inférieur au smig par secteur d'activité",
-        "type" : "CHART"
-      } ]
-    }, {
-      "heightPx" : 290,
-      "ordre" : 21,
-      "sizePercent" : 100,
-      "widgets" : [ {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "salariés (stables) déclarés à la cnss par secteur d'activité",
-        "ordre" : 1,
-        "sizePercent" : 50,
-        "titre" : "qualité de l'emploi - salariés (stables) déclarés à la cnss par secteur d'activité",
-        "type" : "CHART"
-      }, {
-        "actif" : true,
-        "chiffreCleLibelle" : null,
-        "contentJson" : null,
-        "indicateurNom" : "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle",
-        "ordre" : 2,
-        "sizePercent" : 50,
-        "titre" : "qualité de l'emploi - taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle",
-        "type" : "CHART"
-      } ]
-    } ],
-    "sizePercent" : 55
+    "sizePercent" : 50
   }, {
     "actif" : true,
     "label" : "Analyse des remunerations",
     "ordre" : 3,
     "rows" : [ {
+      "heightPx" : 200,
+      "ordre" : 0,
+      "sizePercent" : 50,
+      "widgets" : [ {
+        "actif" : true,
+        "chiffreCleLibelle" : null,
+        "contentJson" : null,
+        "indicateurNom" : "masse salariale par secteur d'activité",
+        "ordre" : 0,
+        "sizePercent" : 50,
+        "titre" : null,
+        "type" : "CHART"
+      }, {
+        "actif" : true,
+        "chiffreCleLibelle" : null,
+        "contentJson" : null,
+        "indicateurNom" : "variation productivité",
+        "ordre" : 0,
+        "sizePercent" : 50,
+        "titre" : null,
+        "type" : "CHART"
+      } ]
+    }, {
       "heightPx" : 210,
       "ordre" : 1,
-      "sizePercent" : 100,
+      "sizePercent" : 50,
       "widgets" : [ {
         "actif" : true,
         "chiffreCleLibelle" : null,
@@ -7222,17 +6711,17 @@
         "type" : "EDITOR"
       } ]
     } ],
-    "sizePercent" : 25
+    "sizePercent" : 50
   } ],
   "sourceText" : "Dashboard initial genere automatiquement pour categorie analytique.",
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "hcp",
-    "sourceNom" : "Haut Commissariat au Plan"
+    "sourceNom" : "hcp"
   }, {
     "ordre" : 2,
     "sourceAbreviation" : "cnss",
-    "sourceNom" : "caisse nationale de sécurité sociale"
+    "sourceNom" : "cnss"
   } ],
   "sousTitre" : "Demande de Travail",
   "status" : "PUBLISHED",
@@ -7507,7 +6996,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "anapec",
-    "sourceNom" : "agence nationale de promotion de l'emploi et des compétences"
+    "sourceNom" : "anapec"
   } ],
   "sousTitre" : "Employabilité et Insertion Professionnelle",
   "status" : "PUBLISHED",
@@ -7640,7 +7129,7 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "cnss",
-    "sourceNom" : "caisse nationale de sécurité sociale"
+    "sourceNom" : "cnss"
   } ],
   "sousTitre" : "Demande de Travail",
   "status" : "PUBLISHED",
@@ -7938,11 +7427,11 @@
   "sources" : [ {
     "ordre" : 1,
     "sourceAbreviation" : "hcp",
-    "sourceNom" : "Haut Commissariat au Plan"
+    "sourceNom" : "hcp"
   }, {
     "ordre" : 2,
     "sourceAbreviation" : "cnss",
-    "sourceNom" : "caisse nationale de sécurité sociale"
+    "sourceNom" : "cnss"
   } ],
   "sousTitre" : "Demande de Travail",
   "status" : "PUBLISHED",

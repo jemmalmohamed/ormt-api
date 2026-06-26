@@ -399,12 +399,21 @@
     } ],
     "grapheConfigurations" : [ {
       "chartOptionsJson" : null,
+      "chartSpecJson" : "{\n  \"version\" : 1,\n  \"kind\" : \"pie\",\n  \"family\" : \"partition\",\n  \"mapping\" : {\n    \"category\" : \"annuel\",\n    \"value\" : \"metric\"\n  },\n  \"filters\" : [ ],\n  \"presentation\" : {\n    \"title\" : \"variation productivité\",\n    \"subtitle\" : null,\n    \"palette\" : \"default\",\n    \"legend\" : {\n      \"visible\" : true,\n      \"position\" : \"bottom\"\n    },\n    \"labels\" : {\n      \"visible\" : false,\n      \"mode\" : \"hidden\"\n    },\n    \"stacking\" : \"none\",\n    \"orientation\" : \"vertical\",\n    \"lineStyle\" : {\n      \"curve\" : true,\n      \"points\" : true\n    },\n    \"mapStyle\" : {\n      \"projection\" : \"mercator\",\n      \"showInternalLabels\" : true\n    }\n  },\n  \"interactions\" : {\n    \"export\" : true,\n    \"zoom\" : false,\n    \"hover\" : true,\n    \"tooltips\" : true,\n    \"selection\" : false\n  },\n  \"dataView\" : {\n    \"visibility\" : {\n      \"hiddenRowValues\" : [ ],\n      \"hiddenColumnValues\" : { }\n    },\n    \"ordering\" : {\n      \"principalOrder\" : [ ],\n      \"seriesOrder\" : [ ]\n    }\n  },\n  \"meta\" : {\n    \"source\" : \"user-authored\",\n    \"seedKind\" : \"nuage_du_point\",\n    \"generatedAt\" : \"2026-06-25T23:55:39.172Z\",\n    \"configSystem\" : \"chartspec\",\n    \"migratedFromLegacy\" : false\n  }\n}",
+      "chartSpecVersion" : 1,
+      "configSystem" : "chartspec",
+      "dimensionMappingJson" : "{\n  \"category\" : \"annuel\",\n  \"value\" : \"metric\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "variation productivité - Chart Studio line"
+    }, {
+      "chartOptionsJson" : null,
       "chartSpecJson" : null,
       "chartSpecVersion" : null,
       "configSystem" : null,
       "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
       "grapheTypeCode" : "nuage_du_point",
-      "isDefault" : true,
+      "isDefault" : false,
       "nom" : "variation productivité-Nuage_Du_Point"
     } ],
     "nom" : "variation productivité",
