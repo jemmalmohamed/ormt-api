@@ -1,0 +1,125 @@
+{
+    "indicateur": "Nombre de diplômés de la formation des cadres par genre",
+    "data": [
+        {
+            "genre": "femme",
+            "annuel": "2016",
+            "valeur": 2700
+        },
+        {
+            "genre": "homme",
+            "annuel": "2016",
+            "valeur": 4900
+        },
+        {
+            "genre": "Total",
+            "annuel": "2016",
+            "valeur": 7600
+        },
+        {
+            "genre": "femme",
+            "annuel": "2017",
+            "valeur": 4300
+        },
+        {
+            "genre": "homme",
+            "annuel": "2017",
+            "valeur": 4200
+        },
+        {
+            "genre": "Total",
+            "annuel": "2017",
+            "valeur": 8500
+        },
+        {
+            "genre": "femme",
+            "annuel": "2018",
+            "valeur": 4500
+        },
+        {
+            "genre": "homme",
+            "annuel": "2018",
+            "valeur": 6100
+        },
+        {
+            "genre": "Total",
+            "annuel": "2018",
+            "valeur": 10700
+        },
+        {
+            "genre": "femme",
+            "annuel": "2019",
+            "valeur": 4900
+        },
+        {
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": 5800
+        },
+        {
+            "genre": "Total",
+            "annuel": "2019",
+            "valeur": 10700
+        },
+        {
+            "genre": "femme",
+            "annuel": "2020",
+            "valeur": 6100
+        },
+        {
+            "genre": "homme",
+            "annuel": "2020",
+            "valeur": 6600
+        },
+        {
+            "genre": "Total",
+            "annuel": "2020",
+            "valeur": 12800
+        },
+        {
+            "genre": "femme",
+            "annuel": "2021",
+            "valeur": 13400
+        },
+        {
+            "genre": "homme",
+            "annuel": "2021",
+            "valeur": 11500
+        },
+        {
+            "genre": "Total",
+            "annuel": "2021",
+            "valeur": 24900
+        },
+        {
+            "genre": "femme",
+            "annuel": "2022",
+            "valeur": 15800
+        },
+        {
+            "genre": "homme",
+            "annuel": "2022",
+            "valeur": 11400
+        },
+        {
+            "genre": "Total",
+            "annuel": "2022",
+            "valeur": 27200
+        },
+        {
+            "genre": "femme",
+            "annuel": "2023",
+            "valeur": 17700
+        },
+        {
+            "genre": "homme",
+            "annuel": "2023",
+            "valeur": 11500
+        },
+        {
+            "genre": "Total",
+            "annuel": "2023",
+            "valeur": 29200
+        }
+    ]
+}

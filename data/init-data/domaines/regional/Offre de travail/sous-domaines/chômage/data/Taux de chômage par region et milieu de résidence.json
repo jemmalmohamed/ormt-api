@@ -1,0 +1,185 @@
+{
+  "indicateur": "Taux de chômage par région et milieu de résidence",
+  "data": [
+    {
+      "region": "marrakech-safi",
+      "milieu": "Urbain",
+      "annuel": "2019",
+      "valeur": 9.8
+    },
+    {
+      "region": "marrakech-safi",
+      "milieu": "Rural",
+      "annuel": "2019",
+      "valeur": 2.9
+    },
+    {
+      "region": "marrakech-safi",
+      "milieu": "Ensemble",
+      "annuel": "2019",
+      "valeur": 5.7
+    },
+    {
+      "region": "marrakech-safi",
+      "milieu": "Urbain",
+      "annuel": "2020",
+      "valeur": 10.5
+    },
+    {
+      "region": "marrakech-safi",
+      "milieu": "Rural",
+      "annuel": "2020",
+      "valeur": 4.3
+    },
+    {
+      "region": "marrakech-safi",
+      "milieu": "Ensemble",
+      "annuel": "2020",
+      "valeur": 6.9
+    },
+    {
+      "region": "marrakech-safi",
+      "milieu": "Urbain",
+      "annuel": "2021",
+      "valeur": 13.9
+    },
+    {
+      "region": "marrakech-safi",
+      "milieu": "Rural",
+      "annuel": "2021",
+      "valeur": 3.2
+    },
+    {
+      "region": "marrakech-safi",
+      "milieu": "Ensemble",
+      "annuel": "2021",
+      "valeur": 7.6
+    },
+    {
+      "region": "marrakech-safi",
+      "milieu": "Urbain",
+      "annuel": "2022",
+      "valeur": 11.8
+    },
+    {
+      "region": "marrakech-safi",
+      "milieu": "Rural",
+      "annuel": "2022",
+      "valeur": 3.2
+    },
+    {
+      "region": "marrakech-safi",
+      "milieu": "Ensemble",
+      "annuel": "2022",
+      "valeur": 6.9
+    },
+    {
+      "region": "marrakech-safi",
+      "milieu": "Urbain",
+      "annuel": "2023",
+      "valeur": 12.2
+    },
+    {
+      "region": "marrakech-safi",
+      "milieu": "Rural",
+      "annuel": "2023",
+      "valeur": 4.1
+    },
+    {
+      "region": "marrakech-safi",
+      "milieu": "Ensemble",
+      "annuel": "2023",
+      "valeur": 7.7
+    },
+    {
+      "region": "ensemble",
+      "milieu": "Urbain",
+      "annuel": "2019",
+      "valeur": 12.9
+    },
+    {
+      "region": "ensemble",
+      "milieu": "Rural",
+      "annuel": "2019",
+      "valeur": 3.7
+    },
+    {
+      "region": "ensemble",
+      "milieu": "Ensemble",
+      "annuel": "2019",
+      "valeur": 9.2
+    },
+    {
+      "region": "ensemble",
+      "milieu": "Urbain",
+      "annuel": "2020",
+      "valeur": 15.8
+    },
+    {
+      "region": "ensemble",
+      "milieu": "Rural",
+      "annuel": "2020",
+      "valeur": 5.9
+    },
+    {
+      "region": "ensemble",
+      "milieu": "Ensemble",
+      "annuel": "2020",
+      "valeur": 11.9
+    },
+    {
+      "region": "ensemble",
+      "milieu": "Urbain",
+      "annuel": "2021",
+      "valeur": 16.9
+    },
+    {
+      "region": "ensemble",
+      "milieu": "Rural",
+      "annuel": "2021",
+      "valeur": 5.0
+    },
+    {
+      "region": "ensemble",
+      "milieu": "Ensemble",
+      "annuel": "2021",
+      "valeur": 12.3
+    },
+    {
+      "region": "ensemble",
+      "milieu": "Urbain",
+      "annuel": "2022",
+      "valeur": 15.8
+    },
+    {
+      "region": "ensemble",
+      "milieu": "Rural",
+      "annuel": "2022",
+      "valeur": 5.2
+    },
+    {
+      "region": "ensemble",
+      "milieu": "Ensemble",
+      "annuel": "2022",
+      "valeur": 11.8
+    },
+    {
+      "region": "ensemble",
+      "milieu": "Urbain",
+      "annuel": "2023",
+      "valeur": 16.8
+    },
+    {
+      "region": "ensemble",
+      "milieu": "Rural",
+      "annuel": "2023",
+      "valeur": 6.3
+    },
+    {
+      "region": "ensemble",
+      "milieu": "Ensemble",
+      "annuel": "2023",
+      "valeur": 13.0
+    }
+  ]
+}

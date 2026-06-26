@@ -1,0 +1,125 @@
+{
+    "indicateur": "Nombre de diplômés de l'enseignement supérieur public par genre",
+    "data": [
+        {
+            "genre": "femme",
+            "annuel": "2016",
+            "valeur": 47000
+        },
+        {
+            "genre": "homme",
+            "annuel": "2016",
+            "valeur": 48400
+        },
+        {
+            "genre": "Total",
+            "annuel": "2016",
+            "valeur": 95000
+        },
+        {
+            "genre": "femme",
+            "annuel": "2017",
+            "valeur": 51000
+        },
+        {
+            "genre": "homme",
+            "annuel": "2017",
+            "valeur": 51800
+        },
+        {
+            "genre": "Total",
+            "annuel": "2017",
+            "valeur": 103000
+        },
+        {
+            "genre": "femme",
+            "annuel": "2018",
+            "valeur": 56000
+        },
+        {
+            "genre": "homme",
+            "annuel": "2018",
+            "valeur": 55700
+        },
+        {
+            "genre": "Total",
+            "annuel": "2018",
+            "valeur": 112000
+        },
+        {
+            "genre": "femme",
+            "annuel": "2019",
+            "valeur": 61000
+        },
+        {
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": 57900
+        },
+        {
+            "genre": "Total",
+            "annuel": "2019",
+            "valeur": 119000
+        },
+        {
+            "genre": "femme",
+            "annuel": "2020",
+            "valeur": 67000
+        },
+        {
+            "genre": "homme",
+            "annuel": "2020",
+            "valeur": 59900
+        },
+        {
+            "genre": "Total",
+            "annuel": "2020",
+            "valeur": 127000
+        },
+        {
+            "genre": "femme",
+            "annuel": "2021",
+            "valeur": 79000
+        },
+        {
+            "genre": "homme",
+            "annuel": "2021",
+            "valeur": 64700
+        },
+        {
+            "genre": "Total",
+            "annuel": "2021",
+            "valeur": 143000
+        },
+        {
+            "genre": "femme",
+            "annuel": "2022",
+            "valeur": 80000
+        },
+        {
+            "genre": "homme",
+            "annuel": "2022",
+            "valeur": 60400
+        },
+        {
+            "genre": "Total",
+            "annuel": "2022",
+            "valeur": 140000
+        },
+        {
+            "genre": "femme",
+            "annuel": "2023",
+            "valeur": 81000
+        },
+        {
+            "genre": "homme",
+            "annuel": "2023",
+            "valeur": 54600
+        },
+        {
+            "genre": "Total",
+            "annuel": "2023",
+            "valeur": 135000
+        }
+    ]
+}

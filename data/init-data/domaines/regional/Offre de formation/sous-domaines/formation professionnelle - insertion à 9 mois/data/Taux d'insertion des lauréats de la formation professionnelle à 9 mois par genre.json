@@ -1,0 +1,80 @@
+{
+    "indicateur": "Taux d'insertion des lauréats de la formation professionnelle à 9 mois par genre",
+    "data": [
+        {
+            "genre": "femme",
+            "annuel": "2013",
+            "valeur": 58.5
+        },
+        {
+            "genre": "femme",
+            "annuel": "2014",
+            "valeur": 61.0
+        },
+        {
+            "genre": "femme",
+            "annuel": "2015",
+            "valeur": 58.2
+        },
+        {
+            "genre": "femme",
+            "annuel": "2016",
+            "valeur": 65.7
+        },
+        {
+            "genre": "femme",
+            "annuel": "2019",
+            "valeur": 65.0
+        },
+        {
+            "genre": "homme",
+            "annuel": "2013",
+            "valeur": 63.0
+        },
+        {
+            "genre": "homme",
+            "annuel": "2014",
+            "valeur": 67.0
+        },
+        {
+            "genre": "homme",
+            "annuel": "2015",
+            "valeur": 65.4
+        },
+        {
+            "genre": "homme",
+            "annuel": "2016",
+            "valeur": 68.0
+        },
+        {
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": 72.6
+        },
+        {
+            "genre": "TOTAL",
+            "annuel": "2013",
+            "valeur": 61.4
+        },
+        {
+            "genre": "TOTAL",
+            "annuel": "2014",
+            "valeur": 64.8
+        },
+        {
+            "genre": "TOTAL",
+            "annuel": "2015",
+            "valeur": 62.9
+        },
+        {
+            "genre": "TOTAL",
+            "annuel": "2016",
+            "valeur": 67.1
+        },
+        {
+            "genre": "TOTAL",
+            "annuel": "2019",
+            "valeur": 69.8
+        }
+    ]
+}

@@ -1,0 +1,1265 @@
+{
+  "indicateur": "nombre d'entreprises entrantes",
+  "data": [
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 240
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 350
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 295
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 25
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 162
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 89
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 30
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 401
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 45
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 2
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 21
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 11
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 3
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 24
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 5
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 1
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 23
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 5
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 4
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 2
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 2
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 1
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 2
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 316
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 461
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 367
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 51
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 206
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 112
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 43
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 556
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 70
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 11
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 34
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 24
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 16
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 23
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 4
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 3
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 55
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 4
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 6
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 3
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 5
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 1
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 2
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 212
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 368
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 332
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 39
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 464
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 104
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 43
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 704
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 180
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 16
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 24
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 22
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 7
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 52
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 12
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 8
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 330
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 21
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 1
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 4
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 1
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 5
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 2
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 1
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 29
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 2
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 1
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 206
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 325
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 286
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 35
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 296
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 96
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 47
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 576
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "1 à 9 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 101
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 184
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 37
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 20
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 3
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 45
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 18
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 9
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 206
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "10-49 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 4
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 35
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 2
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 1
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 7
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 2
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 12
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "50 à 199 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 2
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "200 à 499 salariés",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Agriculture, forêt et pêche",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "BTP",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 1
+    },
+    {
+      "secteur_activite": "Commerce",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Enseignement",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Hébérgement et restauration",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Industries",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Santé humaine et action sociale",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Services",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    },
+    {
+      "secteur_activite": "Transport",
+      "taille": "500 salariés et plus",
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 0
+    }
+  ]
+}

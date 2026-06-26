@@ -1,0 +1,125 @@
+{
+    "indicateur": "Nombre de nouveaux inscrits de l'enseignement supérieur privé par genre",
+    "data": [
+        {
+            "genre": "femme",
+            "annuel": "2016",
+            "valeur": 6000
+        },
+        {
+            "genre": "femme",
+            "annuel": "2017",
+            "valeur": 6000
+        },
+        {
+            "genre": "femme",
+            "annuel": "2018",
+            "valeur": 9000
+        },
+        {
+            "genre": "femme",
+            "annuel": "2019",
+            "valeur": 10000
+        },
+        {
+            "genre": "femme",
+            "annuel": "2020",
+            "valeur": 10000
+        },
+        {
+            "genre": "femme",
+            "annuel": "2021",
+            "valeur": 12000
+        },
+        {
+            "genre": "femme",
+            "annuel": "2022",
+            "valeur": 14000
+        },
+        {
+            "genre": "femme",
+            "annuel": "2023",
+            "valeur": 14000
+        },
+        {
+            "genre": "homme",
+            "annuel": "2016",
+            "valeur": 5100
+        },
+        {
+            "genre": "homme",
+            "annuel": "2017",
+            "valeur": 6300
+        },
+        {
+            "genre": "homme",
+            "annuel": "2018",
+            "valeur": 10100
+        },
+        {
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": 11100
+        },
+        {
+            "genre": "homme",
+            "annuel": "2020",
+            "valeur": 10900
+        },
+        {
+            "genre": "homme",
+            "annuel": "2021",
+            "valeur": 12600
+        },
+        {
+            "genre": "homme",
+            "annuel": "2022",
+            "valeur": 14400
+        },
+        {
+            "genre": "homme",
+            "annuel": "2023",
+            "valeur": 14000
+        },
+        {
+            "genre": "Total",
+            "annuel": "2016",
+            "valeur": 11100
+        },
+        {
+            "genre": "Total",
+            "annuel": "2017",
+            "valeur": 12300
+        },
+        {
+            "genre": "Total",
+            "annuel": "2018",
+            "valeur": 19000
+        },
+        {
+            "genre": "Total",
+            "annuel": "2019",
+            "valeur": 21100
+        },
+        {
+            "genre": "Total",
+            "annuel": "2020",
+            "valeur": 21000
+        },
+        {
+            "genre": "Total",
+            "annuel": "2021",
+            "valeur": 25000
+        },
+        {
+            "genre": "Total",
+            "annuel": "2022",
+            "valeur": 28000
+        },
+        {
+            "genre": "Total",
+            "annuel": "2023",
+            "valeur": 28000
+        }
+    ]
+}

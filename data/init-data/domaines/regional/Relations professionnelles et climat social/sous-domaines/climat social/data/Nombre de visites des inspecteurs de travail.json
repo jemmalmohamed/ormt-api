@@ -1,0 +1,35 @@
+{
+  "indicateur": "nombre de conflits par région",
+  "data": [
+    {
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 3951
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 5752
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 4282
+    },
+    {
+      "region": "total",
+      "annuel": "2021",
+      "valeur": 56509
+    },
+    {
+      "region": "total",
+      "annuel": "2022",
+      "valeur": 57884
+    },
+    {
+      "region": "total",
+      "annuel": "2023",
+      "valeur": 54588
+    }
+  ]
+}

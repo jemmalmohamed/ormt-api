@@ -1,0 +1,35 @@
+{
+  "indicateur": "nombre de grèves évitées par région",
+  "data": [
+    {
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 207
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 93
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 80
+    },
+    {
+      "region": "total",
+      "annuel": "2021",
+      "valeur": 1234
+    },
+    {
+      "region": "total",
+      "annuel": "2022",
+      "valeur": 989
+    },
+    {
+      "region": "total",
+      "annuel": "2023",
+      "valeur": 942
+    }
+  ]
+}

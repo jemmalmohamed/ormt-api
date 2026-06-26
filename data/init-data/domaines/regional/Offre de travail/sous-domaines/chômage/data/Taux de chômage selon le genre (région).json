@@ -1,0 +1,41 @@
+{
+    "indicateur": "Taux de chômage selon le genre",
+    "data": [
+        {
+            "genre": "homme",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 5.7
+        },
+        {
+            "genre": "homme",
+            "region": "marrakech-safi",
+            "annuel": "2023",
+            "valeur": 6.4
+        },
+        {
+            "genre": "homme",
+            "region": "marrakech-safi",
+            "annuel": "2024",
+            "valeur": 7.6
+        },
+        {
+            "genre": "femme",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 11.7
+        },
+        {
+            "genre": "femme",
+            "region": "marrakech-safi",
+            "annuel": "2023",
+            "valeur": 13.0
+        },
+        {
+            "genre": "femme",
+            "region": "marrakech-safi",
+            "annuel": "2024",
+            "valeur": 15.1
+        }
+    ]
+}

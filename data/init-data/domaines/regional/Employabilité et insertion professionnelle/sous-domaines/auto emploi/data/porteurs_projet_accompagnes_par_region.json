@@ -1,0 +1,35 @@
+{
+  "indicateur": "Porteurs de projet accompagnés par région",
+  "data": [
+    {
+      "annuel": 2019,
+      "region": "marrakech-safi",
+      "valeur": 5.3
+    },
+    {
+      "annuel": 2020,
+      "region": "marrakech-safi",
+      "valeur": 8.2
+    },
+    {
+      "annuel": 2021,
+      "region": "marrakech-safi",
+      "valeur": 5.5
+    },
+    {
+      "annuel": 2022,
+      "region": "marrakech-safi",
+      "valeur": 5.7
+    },
+    {
+      "annuel": 2023,
+      "region": "marrakech-safi",
+      "valeur": 6.6
+    },
+    {
+      "annuel": 2024,
+      "region": "marrakech-safi",
+      "valeur": 5.1
+    }
+  ]
+}

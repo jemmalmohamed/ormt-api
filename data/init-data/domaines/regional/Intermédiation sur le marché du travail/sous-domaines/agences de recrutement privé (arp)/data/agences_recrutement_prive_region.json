@@ -1,0 +1,30 @@
+{
+  "indicateur": "Agences de recrutement privé par région",
+  "data": [
+    {
+      "annuel": "2019",
+      "region": "marrakech-safi",
+      "valeur": 9
+    },
+    {
+      "annuel": "2020",
+      "region": "marrakech-safi",
+      "valeur": 8
+    },
+    {
+      "annuel": "2021",
+      "region": "marrakech-safi",
+      "valeur": 9
+    },
+    {
+      "annuel": "2022",
+      "region": "marrakech-safi",
+      "valeur": 8
+    },
+    {
+      "annuel": "2023",
+      "region": "marrakech-safi",
+      "valeur": 7
+    }
+  ]
+}

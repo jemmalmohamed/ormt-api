@@ -1,0 +1,185 @@
+{
+    "indicateur": "Bénéficiaires d'ARE par âge",
+    "data": [
+        {
+            "annuel": "2019",
+            "age": "Moins de 20 ans",
+            "valeur": 6
+        },
+        {
+            "annuel": "2019",
+            "age": "20 à 24 ans",
+            "valeur": 38
+        },
+        {
+            "annuel": "2019",
+            "age": "25 à moins de 35 ans",
+            "valeur": 40
+        },
+        {
+            "annuel": "2019",
+            "age": "35 à moins de 45 ans",
+            "valeur": 6
+        },
+        {
+            "annuel": "2019",
+            "age": "45 et Plus",
+            "valeur": 2
+        },
+        {
+            "annuel": "2019",
+            "age": "Non renseigné",
+            "valeur": 7
+        },
+        {
+            "annuel": "2020",
+            "age": "Moins de 20 ans",
+            "valeur": 5
+        },
+        {
+            "annuel": "2020",
+            "age": "20 à 24 ans",
+            "valeur": 42
+        },
+        {
+            "annuel": "2020",
+            "age": "25 à moins de 35 ans",
+            "valeur": 43
+        },
+        {
+            "annuel": "2020",
+            "age": "35 à moins de 45 ans",
+            "valeur": 7
+        },
+        {
+            "annuel": "2020",
+            "age": "45 et Plus",
+            "valeur": 3
+        },
+        {
+            "annuel": "2020",
+            "age": "Non renseigné",
+            "valeur": 0
+        },
+        {
+            "annuel": "2021",
+            "age": "Moins de 20 ans",
+            "valeur": 5
+        },
+        {
+            "annuel": "2021",
+            "age": "20 à 24 ans",
+            "valeur": 42
+        },
+        {
+            "annuel": "2021",
+            "age": "25 à moins de 35 ans",
+            "valeur": 41
+        },
+        {
+            "annuel": "2021",
+            "age": "35 à moins de 45 ans",
+            "valeur": 8
+        },
+        {
+            "annuel": "2021",
+            "age": "45 et Plus",
+            "valeur": 4
+        },
+        {
+            "annuel": "2021",
+            "age": "Non renseigné",
+            "valeur": 0
+        },
+        {
+            "annuel": "2022",
+            "age": "Moins de 20 ans",
+            "valeur": 6
+        },
+        {
+            "annuel": "2022",
+            "age": "20 à 24 ans",
+            "valeur": 44
+        },
+        {
+            "annuel": "2022",
+            "age": "25 à moins de 35 ans",
+            "valeur": 39
+        },
+        {
+            "annuel": "2022",
+            "age": "35 à moins de 45 ans",
+            "valeur": 7
+        },
+        {
+            "annuel": "2022",
+            "age": "45 et Plus",
+            "valeur": 4
+        },
+        {
+            "annuel": "2022",
+            "age": "Non renseigné",
+            "valeur": 0
+        },
+        {
+            "annuel": "2023",
+            "age": "Moins de 20 ans",
+            "valeur": 7
+        },
+        {
+            "annuel": "2023",
+            "age": "20 à 24 ans",
+            "valeur": 43
+        },
+        {
+            "annuel": "2023",
+            "age": "25 à moins de 35 ans",
+            "valeur": 40
+        },
+        {
+            "annuel": "2023",
+            "age": "35 à moins de 45 ans",
+            "valeur": 7
+        },
+        {
+            "annuel": "2023",
+            "age": "45 et Plus",
+            "valeur": 3
+        },
+        {
+            "annuel": "2023",
+            "age": "Non renseigné",
+            "valeur": 0
+        },
+        {
+            "annuel": "2024",
+            "age": "Moins de 20 ans",
+            "valeur": 8
+        },
+        {
+            "annuel": "2024",
+            "age": "20 à 24 ans",
+            "valeur": 42
+        },
+        {
+            "annuel": "2024",
+            "age": "25 à moins de 35 ans",
+            "valeur": 35
+        },
+        {
+            "annuel": "2024",
+            "age": "35 à moins de 45 ans",
+            "valeur": 9
+        },
+        {
+            "annuel": "2024",
+            "age": "45 et Plus",
+            "valeur": 5
+        },
+        {
+            "annuel": "2024",
+            "age": "Non renseigné",
+            "valeur": 0
+        }
+    ]
+}

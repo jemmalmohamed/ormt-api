@@ -1,0 +1,65 @@
+{
+    "indicateur": "Bénéficiaires du CI par genre",
+    "data": [
+        {
+            "annuel": 2019,
+            "genre": "homme",
+            "valeur": 50.7
+        },
+        {
+            "annuel": 2019,
+            "genre": "femme",
+            "valeur": 49.3
+        },
+        {
+            "annuel": 2020,
+            "genre": "homme",
+            "valeur": 49.4
+        },
+        {
+            "annuel": 2020,
+            "genre": "femme",
+            "valeur": 50.6
+        },
+        {
+            "annuel": 2021,
+            "genre": "homme",
+            "valeur": 49.7
+        },
+        {
+            "annuel": 2021,
+            "genre": "femme",
+            "valeur": 50.3
+        },
+        {
+            "annuel": 2022,
+            "genre": "homme",
+            "valeur": 51.8
+        },
+        {
+            "annuel": 2022,
+            "genre": "femme",
+            "valeur": 48.2
+        },
+        {
+            "annuel": 2023,
+            "genre": "homme",
+            "valeur": 51.2
+        },
+        {
+            "annuel": 2023,
+            "genre": "femme",
+            "valeur": 48.8
+        },
+        {
+            "annuel": 2024,
+            "genre": "homme",
+            "valeur": 54.8
+        },
+        {
+            "annuel": 2024,
+            "genre": "femme",
+            "valeur": 45.2
+        }
+    ]
+}

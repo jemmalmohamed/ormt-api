@@ -1,0 +1,25 @@
+{
+    "indicateur": "Taux d'insertion des lauréats de la formation professionnelle à 36 mois par mode de formation",
+    "data": [
+        {
+            "mode_formation": "Formation Résidentielle",
+            "annuel": "2016",
+            "valeur": 84.0
+        },
+        {
+            "mode_formation": "Formation altérnée",
+            "annuel": "2016",
+            "valeur": 86.9
+        },
+        {
+            "mode_formation": "Formation par apprentissage",
+            "annuel": "2016",
+            "valeur": 81.7
+        },
+        {
+            "mode_formation": "TOTAL",
+            "annuel": "2016",
+            "valeur": 84.4
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "indicateur": "nombre de observations émises",
+    "data": [
+        {
+            "annuel": "2021",
+            "valeur": 227830
+        },
+        {
+            "annuel": "2022",
+            "valeur": 297312
+        },
+        {
+            "annuel": "2023",
+            "valeur": 493007
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+  "indicateur": "Nombre de lauréats de la formation professionnelle par niveau de formation",
+  "data": [
+    {
+      "region": "marrakech-safi",
+      "niveau_formation": "CAP",
+      "annuel": "2024",
+      "valeur": 56
+    },
+    {
+      "region": "marrakech-safi",
+      "niveau_formation": "Qualification",
+      "annuel": "2024",
+      "valeur": 3803
+    },
+    {
+      "region": "marrakech-safi",
+      "niveau_formation": "Specialisation",
+      "annuel": "2024",
+      "valeur": 4496
+    },
+    {
+      "region": "marrakech-safi",
+      "niveau_formation": "Technicien",
+      "annuel": "2024",
+      "valeur": 2784
+    },
+    {
+      "region": "marrakech-safi",
+      "niveau_formation": "Technicien spécialisé",
+      "annuel": "2024",
+      "valeur": 4718
+    },
+    {
+      "region": "marrakech-safi",
+      "niveau_formation": "TOTAL",
+      "annuel": "2024",
+      "valeur": 15857
+    }
+  ]
+}

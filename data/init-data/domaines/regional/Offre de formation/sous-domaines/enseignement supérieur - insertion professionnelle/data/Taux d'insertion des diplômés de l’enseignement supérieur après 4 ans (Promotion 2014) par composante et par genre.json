@@ -1,0 +1,77 @@
+{
+    "indicateur": "Taux d'emploi des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante et par genre",
+    "data": [
+        {
+            "composante": "Enseignement supérieur privé",
+            "genre": "femme",
+            "annuel": "2014",
+            "valeur": 68.3
+        },
+        {
+            "composante": "Enseignement supérieur privé",
+            "genre": "homme",
+            "annuel": "2014",
+            "valeur": 88.0
+        },
+        {
+            "composante": "Enseignement universitaire public",
+            "genre": "femme",
+            "annuel": "2014",
+            "valeur": 59.6
+        },
+        {
+            "composante": "Enseignement universitaire public",
+            "genre": "homme",
+            "annuel": "2014",
+            "valeur": 76.4
+        },
+        {
+            "composante": "Formation professionnelle post-baccalauréat",
+            "genre": "femme",
+            "annuel": "2014",
+            "valeur": 54.9
+        },
+        {
+            "composante": "Formation professionnelle post-baccalauréat",
+            "genre": "homme",
+            "annuel": "2014",
+            "valeur": 76.4
+        },
+        {
+            "composante": "Total",
+            "genre": "femme",
+            "annuel": "2014",
+            "valeur": 60.30
+        },
+        {
+            "composante": "Total",
+            "genre": "homme",
+            "annuel": "2014",
+            "valeur": 78.10
+        },
+        {
+            "composante": "Total",
+            "genre": "Taux d'emploi",
+            "annuel": "2014",
+            "valeur": 69.40
+        },
+        {
+            "composante": "Enseignement supérieur privé",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 79.1
+        },
+        {
+            "composante": "Enseignement universitaire public",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 68.1
+        },
+        {
+            "composante": "Formation professionnelle post-baccalauréat",
+            "genre": "ensemble",
+            "annuel": "2014",
+            "valeur": 66.0
+        }
+    ]
+}

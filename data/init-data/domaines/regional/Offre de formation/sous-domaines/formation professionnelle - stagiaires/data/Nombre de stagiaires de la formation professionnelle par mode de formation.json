@@ -1,0 +1,30 @@
+{
+    "indicateur": "Nombre de stagiaires de la formation professionnelle par mode de formation",
+    "region": "Marrakech-Safi",
+    "data": [
+        {
+            "region": "Marrakech-Safi",
+            "mode_formation": "Alterné",
+            "valeur": 7342,
+            "annuel": "2024"
+        },
+        {
+            "region": "Marrakech-Safi",
+            "mode_formation": "Apprentissage",
+            "valeur": 4721,
+            "annuel": "2024"
+        },
+        {
+            "region": "Marrakech-Safi",
+            "mode_formation": "Résidentielle",
+            "valeur": 29897,
+            "annuel": "2024"
+        },
+        {
+            "region": "Marrakech-Safi",
+            "mode_formation": "Total",
+            "valeur": 41960,
+            "annuel": "2024"
+        }
+    ]
+}

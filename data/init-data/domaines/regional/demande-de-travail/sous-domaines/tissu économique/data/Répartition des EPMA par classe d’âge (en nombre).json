@@ -1,0 +1,65 @@
+{
+    "indicateur": "répartition des epma par classe d'âge",
+    "data": [
+        {
+            "classe_age": "Moins de 2 ans",
+            "region": "marrakech-safi",
+            "annuel": "2020",
+            "valeur": 8573
+        },
+        {
+            "classe_age": "2 à 5 ans",
+            "region": "marrakech-safi",
+            "annuel": "2020",
+            "valeur": 9353
+        },
+        {
+            "classe_age": "6 à 10 ans",
+            "region": "marrakech-safi",
+            "annuel": "2020",
+            "valeur": 5862
+        },
+        {
+            "classe_age": "Plus de 10 ans",
+            "region": "marrakech-safi",
+            "annuel": "2020",
+            "valeur": 6150
+        },
+        {
+            "classe_age": "Total",
+            "region": "marrakech-safi",
+            "annuel": "2020",
+            "valeur": 29938
+        },
+        {
+            "classe_age": "Moins de 2 ans",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 9872
+        },
+        {
+            "classe_age": "2 à 5 ans",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 9797
+        },
+        {
+            "classe_age": "6 à 10 ans",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 5966
+        },
+        {
+            "classe_age": "Plus de 10 ans",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 6550
+        },
+        {
+            "classe_age": "Total",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 32185
+        }
+    ]
+}

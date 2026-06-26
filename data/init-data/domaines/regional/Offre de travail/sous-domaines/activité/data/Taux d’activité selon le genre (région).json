@@ -1,0 +1,41 @@
+{
+    "indicateur": "Taux d'activité selon le genre",
+    "data": [
+        {
+            "genre": "homme",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 72.5
+        },
+        {
+            "genre": "homme",
+            "region": "marrakech-safi",
+            "annuel": "2023",
+            "valeur": 71.2
+        },
+        {
+            "genre": "homme",
+            "region": "marrakech-safi",
+            "annuel": "2024",
+            "valeur": 71.1
+        },
+        {
+            "genre": "femme",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 17.3
+        },
+        {
+            "genre": "femme",
+            "region": "marrakech-safi",
+            "annuel": "2023",
+            "valeur": 16.5
+        },
+        {
+            "genre": "femme",
+            "region": "marrakech-safi",
+            "annuel": "2024",
+            "valeur": 16.0
+        }
+    ]
+}

@@ -1,0 +1,297 @@
+{
+  "nom": "application de la loi de travail",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "description": "application de la loi de travail",
+  "indicateurs": [
+    {
+      "nom": "Nombre de visites des inspecteurs de travail",
+      "titre": "Nombre de visites des inspecteurs de travail",
+      "categorie": "Application de la loi",
+      "abreviation": "",
+      "typeTb": "grand public",
+      "source": "MIEPEEC",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2021-2023",
+      "description": "Nombre de visites des inspecteurs de travail",
+      "dimensions": [
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de visites des inspecteurs de travail - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre de observations émises",
+      "titre": "Nombre de observations émises",
+      "categorie": "Application de la loi",
+      "abreviation": "",
+      "typeTb": "grand public",
+      "source": "MIEPEEC",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2021-2023",
+      "description": "Nombre de observations émises",
+      "dimensions": [
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de observations émises - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre d'observations par motif d'observation",
+      "titre": "Nombre d'observations par motif d'observation",
+      "categorie": "Application de la loi",
+      "abreviation": "",
+      "typeTb": "grand public",
+      "source": "MIEPEEC",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2021-2023",
+      "description": "Nombre d'observations par motif d'observation",
+      "dimensions": [
+        {
+          "nom": "motif_observation",
+          "libelle": "motif d'observation",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre d'observations par motif d'observation - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre d'observations par secteur",
+      "titre": "Nombre d'observations par secteur",
+      "categorie": "Application de la loi",
+      "abreviation": "",
+      "typeTb": "grand public",
+      "source": "MIEPEEC",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2021-2023",
+      "description": "Nombre d'observations par secteur",
+      "dimensions": [
+        {
+          "nom": "secteur_activite",
+          "libelle": "secteur d'activité",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre d'observations par secteur - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre de PV",
+      "titre": "Nombre de PV",
+      "categorie": "Application de la loi",
+      "abreviation": "",
+      "typeTb": "grand public",
+      "source": "MIEPEEC",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2021-2023",
+      "description": "Nombre de PV",
+      "dimensions": [
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de PV - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre de contraventions",
+      "titre": "Nombre de contraventions",
+      "categorie": "Application de la loi",
+      "abreviation": "",
+      "typeTb": "grand public",
+      "source": "MIEPEEC",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2021-2023",
+      "description": "Nombre de contraventions",
+      "dimensions": [
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de contraventions - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre de délits",
+      "titre": "Nombre de délits",
+      "categorie": "Application de la loi",
+      "abreviation": "",
+      "typeTb": "grand public",
+      "source": "MIEPEEC",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "reglecalcul": "",
+      "unite": "",
+      "periode": "2021-2023",
+      "description": "Nombre de délits",
+      "dimensions": [
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de délits - Courbes",
+          "grapheTypeCode": "COURBES",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    }
+  ]
+}

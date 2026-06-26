@@ -1,0 +1,545 @@
+{
+    "indicateur": "salariés déclarés à la cnss par secteur d'activité",
+    "data": [
+        {
+            "secteur_activite": "agriculture, forêt et pêche",
+            "annuel": "2019",
+            "genre": "femme",
+            "valeur": 102000
+        },
+        {
+            "secteur_activite": "agriculture, forêt et pêche",
+            "annuel": "2019",
+            "genre": "homme",
+            "valeur": 270000
+        },
+        {
+            "secteur_activite": "agriculture, forêt et pêche",
+            "annuel": "2020",
+            "genre": "femme",
+            "valeur": 106000
+        },
+        {
+            "secteur_activite": "agriculture, forêt et pêche",
+            "annuel": "2020",
+            "genre": "homme",
+            "valeur": 274000
+        },
+        {
+            "secteur_activite": "agriculture, forêt et pêche",
+            "annuel": "2021",
+            "genre": "femme",
+            "valeur": 123000
+        },
+        {
+            "secteur_activite": "agriculture, forêt et pêche",
+            "annuel": "2021",
+            "genre": "homme",
+            "valeur": 302000
+        },
+        {
+            "secteur_activite": "agriculture, forêt et pêche",
+            "annuel": "2022",
+            "genre": "femme",
+            "valeur": 134000
+        },
+        {
+            "secteur_activite": "agriculture, forêt et pêche",
+            "annuel": "2022",
+            "genre": "homme",
+            "valeur": 328000
+        },
+        {
+            "secteur_activite": "agriculture, forêt et pêche",
+            "annuel": "2023",
+            "genre": "femme",
+            "valeur": 135000
+        },
+        {
+            "secteur_activite": "agriculture, forêt et pêche",
+            "annuel": "2023",
+            "genre": "homme",
+            "valeur": 335000
+        },
+        {
+            "secteur_activite": "btp",
+            "annuel": "2019",
+            "genre": "femme",
+            "valeur": 45000
+        },
+        {
+            "secteur_activite": "btp",
+            "annuel": "2019",
+            "genre": "homme",
+            "valeur": 421000
+        },
+        {
+            "secteur_activite": "btp",
+            "annuel": "2020",
+            "genre": "femme",
+            "valeur": 49000
+        },
+        {
+            "secteur_activite": "btp",
+            "annuel": "2020",
+            "genre": "homme",
+            "valeur": 430000
+        },
+        {
+            "secteur_activite": "btp",
+            "annuel": "2021",
+            "genre": "femme",
+            "valeur": 54000
+        },
+        {
+            "secteur_activite": "btp",
+            "annuel": "2021",
+            "genre": "homme",
+            "valeur": 460000
+        },
+        {
+            "secteur_activite": "btp",
+            "annuel": "2022",
+            "genre": "femme",
+            "valeur": 55000
+        },
+        {
+            "secteur_activite": "btp",
+            "annuel": "2022",
+            "genre": "homme",
+            "valeur": 465000
+        },
+        {
+            "secteur_activite": "btp",
+            "annuel": "2023",
+            "genre": "femme",
+            "valeur": 56000
+        },
+        {
+            "secteur_activite": "btp",
+            "annuel": "2023",
+            "genre": "homme",
+            "valeur": 471000
+        },
+        {
+            "secteur_activite": "commerce",
+            "annuel": "2019",
+            "genre": "femme",
+            "valeur": 168000
+        },
+        {
+            "secteur_activite": "commerce",
+            "annuel": "2019",
+            "genre": "homme",
+            "valeur": 350000
+        },
+        {
+            "secteur_activite": "commerce",
+            "annuel": "2020",
+            "genre": "femme",
+            "valeur": 174000
+        },
+        {
+            "secteur_activite": "commerce",
+            "annuel": "2020",
+            "genre": "homme",
+            "valeur": 358000
+        },
+        {
+            "secteur_activite": "commerce",
+            "annuel": "2021",
+            "genre": "femme",
+            "valeur": 184000
+        },
+        {
+            "secteur_activite": "commerce",
+            "annuel": "2021",
+            "genre": "homme",
+            "valeur": 381000
+        },
+        {
+            "secteur_activite": "commerce",
+            "annuel": "2022",
+            "genre": "femme",
+            "valeur": 192000
+        },
+        {
+            "secteur_activite": "commerce",
+            "annuel": "2022",
+            "genre": "homme",
+            "valeur": 398000
+        },
+        {
+            "secteur_activite": "commerce",
+            "annuel": "2023",
+            "genre": "femme",
+            "valeur": 197000
+        },
+        {
+            "secteur_activite": "commerce",
+            "annuel": "2023",
+            "genre": "homme",
+            "valeur": 409000
+        },
+        {
+            "secteur_activite": "enseignement",
+            "annuel": "2019",
+            "genre": "femme",
+            "valeur": 83000
+        },
+        {
+            "secteur_activite": "enseignement",
+            "annuel": "2019",
+            "genre": "homme",
+            "valeur": 38000
+        },
+        {
+            "secteur_activite": "enseignement",
+            "annuel": "2020",
+            "genre": "femme",
+            "valeur": 87000
+        },
+        {
+            "secteur_activite": "enseignement",
+            "annuel": "2020",
+            "genre": "homme",
+            "valeur": 40000
+        },
+        {
+            "secteur_activite": "enseignement",
+            "annuel": "2021",
+            "genre": "femme",
+            "valeur": 99000
+        },
+        {
+            "secteur_activite": "enseignement",
+            "annuel": "2021",
+            "genre": "homme",
+            "valeur": 43000
+        },
+        {
+            "secteur_activite": "enseignement",
+            "annuel": "2022",
+            "genre": "femme",
+            "valeur": 110000
+        },
+        {
+            "secteur_activite": "enseignement",
+            "annuel": "2022",
+            "genre": "homme",
+            "valeur": 48000
+        },
+        {
+            "secteur_activite": "enseignement",
+            "annuel": "2023",
+            "genre": "femme",
+            "valeur": 120000
+        },
+        {
+            "secteur_activite": "enseignement",
+            "annuel": "2023",
+            "genre": "homme",
+            "valeur": 50000
+        },
+        {
+            "secteur_activite": "hébérgement et restauration",
+            "annuel": "2019",
+            "genre": "femme",
+            "valeur": 48000
+        },
+        {
+            "secteur_activite": "hébérgement et restauration",
+            "annuel": "2019",
+            "genre": "homme",
+            "valeur": 114000
+        },
+        {
+            "secteur_activite": "hébérgement et restauration",
+            "annuel": "2020",
+            "genre": "femme",
+            "valeur": 47000
+        },
+        {
+            "secteur_activite": "hébérgement et restauration",
+            "annuel": "2020",
+            "genre": "homme",
+            "valeur": 113000
+        },
+        {
+            "secteur_activite": "hébérgement et restauration",
+            "annuel": "2021",
+            "genre": "femme",
+            "valeur": 46000
+        },
+        {
+            "secteur_activite": "hébérgement et restauration",
+            "annuel": "2021",
+            "genre": "homme",
+            "valeur": 111000
+        },
+        {
+            "secteur_activite": "hébérgement et restauration",
+            "annuel": "2022",
+            "genre": "femme",
+            "valeur": 56000
+        },
+        {
+            "secteur_activite": "hébérgement et restauration",
+            "annuel": "2022",
+            "genre": "homme",
+            "valeur": 127000
+        },
+        {
+            "secteur_activite": "hébérgement et restauration",
+            "annuel": "2023",
+            "genre": "femme",
+            "valeur": 62000
+        },
+        {
+            "secteur_activite": "hébérgement et restauration",
+            "annuel": "2023",
+            "genre": "homme",
+            "valeur": 135000
+        },
+        {
+            "secteur_activite": "industries",
+            "annuel": "2019",
+            "genre": "femme",
+            "valeur": 265000
+        },
+        {
+            "secteur_activite": "industries",
+            "annuel": "2019",
+            "genre": "homme",
+            "valeur": 337000
+        },
+        {
+            "secteur_activite": "industries",
+            "annuel": "2020",
+            "genre": "femme",
+            "valeur": 257000
+        },
+        {
+            "secteur_activite": "industries",
+            "annuel": "2020",
+            "genre": "homme",
+            "valeur": 341000
+        },
+        {
+            "secteur_activite": "industries",
+            "annuel": "2021",
+            "genre": "femme",
+            "valeur": 260000
+        },
+        {
+            "secteur_activite": "industries",
+            "annuel": "2021",
+            "genre": "homme",
+            "valeur": 353000
+        },
+        {
+            "secteur_activite": "industries",
+            "annuel": "2022",
+            "genre": "femme",
+            "valeur": 268000
+        },
+        {
+            "secteur_activite": "industries",
+            "annuel": "2022",
+            "genre": "homme",
+            "valeur": 368000
+        },
+        {
+            "secteur_activite": "industries",
+            "annuel": "2023",
+            "genre": "femme",
+            "valeur": 271000
+        },
+        {
+            "secteur_activite": "industries",
+            "annuel": "2023",
+            "genre": "homme",
+            "valeur": 375000
+        },
+        {
+            "secteur_activite": "santé humaine et action sociale",
+            "annuel": "2019",
+            "genre": "femme",
+            "valeur": 45000
+        },
+        {
+            "secteur_activite": "santé humaine et action sociale",
+            "annuel": "2019",
+            "genre": "homme",
+            "valeur": 15000
+        },
+        {
+            "secteur_activite": "santé humaine et action sociale",
+            "annuel": "2020",
+            "genre": "femme",
+            "valeur": 47000
+        },
+        {
+            "secteur_activite": "santé humaine et action sociale",
+            "annuel": "2020",
+            "genre": "homme",
+            "valeur": 16000
+        },
+        {
+            "secteur_activite": "santé humaine et action sociale",
+            "annuel": "2021",
+            "genre": "femme",
+            "valeur": 52000
+        },
+        {
+            "secteur_activite": "santé humaine et action sociale",
+            "annuel": "2021",
+            "genre": "homme",
+            "valeur": 17000
+        },
+        {
+            "secteur_activite": "santé humaine et action sociale",
+            "annuel": "2022",
+            "genre": "femme",
+            "valeur": 58000
+        },
+        {
+            "secteur_activite": "santé humaine et action sociale",
+            "annuel": "2022",
+            "genre": "homme",
+            "valeur": 23000
+        },
+        {
+            "secteur_activite": "santé humaine et action sociale",
+            "annuel": "2023",
+            "genre": "femme",
+            "valeur": 64000
+        },
+        {
+            "secteur_activite": "santé humaine et action sociale",
+            "annuel": "2023",
+            "genre": "homme",
+            "valeur": 25000
+        },
+        {
+            "secteur_activite": "services",
+            "annuel": "2019",
+            "genre": "femme",
+            "valeur": 293000
+        },
+        {
+            "secteur_activite": "services",
+            "annuel": "2019",
+            "genre": "homme",
+            "valeur": 562000
+        },
+        {
+            "secteur_activite": "services",
+            "annuel": "2020",
+            "genre": "femme",
+            "valeur": 303000
+        },
+        {
+            "secteur_activite": "services",
+            "annuel": "2020",
+            "genre": "homme",
+            "valeur": 556000
+        },
+        {
+            "secteur_activite": "services",
+            "annuel": "2021",
+            "genre": "femme",
+            "valeur": 322000
+        },
+        {
+            "secteur_activite": "services",
+            "annuel": "2021",
+            "genre": "homme",
+            "valeur": 583000
+        },
+        {
+            "secteur_activite": "services",
+            "annuel": "2022",
+            "genre": "femme",
+            "valeur": 362000
+        },
+        {
+            "secteur_activite": "services",
+            "annuel": "2022",
+            "genre": "homme",
+            "valeur": 684000
+        },
+        {
+            "secteur_activite": "services",
+            "annuel": "2023",
+            "genre": "femme",
+            "valeur": 395000
+        },
+        {
+            "secteur_activite": "services",
+            "annuel": "2023",
+            "genre": "homme",
+            "valeur": 728000
+        },
+        {
+            "secteur_activite": "transport",
+            "annuel": "2019",
+            "genre": "femme",
+            "valeur": 17000
+        },
+        {
+            "secteur_activite": "transport",
+            "annuel": "2019",
+            "genre": "homme",
+            "valeur": 104000
+        },
+        {
+            "secteur_activite": "transport",
+            "annuel": "2020",
+            "genre": "femme",
+            "valeur": 18000
+        },
+        {
+            "secteur_activite": "transport",
+            "annuel": "2020",
+            "genre": "homme",
+            "valeur": 103000
+        },
+        {
+            "secteur_activite": "transport",
+            "annuel": "2021",
+            "genre": "femme",
+            "valeur": 19000
+        },
+        {
+            "secteur_activite": "transport",
+            "annuel": "2021",
+            "genre": "homme",
+            "valeur": 108000
+        },
+        {
+            "secteur_activite": "transport",
+            "annuel": "2022",
+            "genre": "femme",
+            "valeur": 20000
+        },
+        {
+            "secteur_activite": "transport",
+            "annuel": "2022",
+            "genre": "homme",
+            "valeur": 115000
+        },
+        {
+            "secteur_activite": "transport",
+            "annuel": "2023",
+            "genre": "femme",
+            "valeur": 21000
+        },
+        {
+            "secteur_activite": "transport",
+            "annuel": "2023",
+            "genre": "homme",
+            "valeur": 119000
+        }
+    ]
+}

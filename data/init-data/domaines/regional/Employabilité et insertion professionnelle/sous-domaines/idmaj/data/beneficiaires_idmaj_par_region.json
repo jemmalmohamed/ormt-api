@@ -1,0 +1,35 @@
+{
+  "indicateur": "Bénéficiaires IDMAJ par région (hors PI)",
+  "data": [
+    {
+      "annuel": 2019,
+      "region": "marrakech-safi",
+      "valeur": 6.2
+    },
+    {
+      "annuel": 2020,
+      "region": "marrakech-safi",
+      "valeur": 4.1
+    },
+    {
+      "annuel": 2021,
+      "region": "marrakech-safi",
+      "valeur": 4.6
+    },
+    {
+      "annuel": 2022,
+      "region": "marrakech-safi",
+      "valeur": 5.9
+    },
+    {
+      "annuel": 2023,
+      "region": "marrakech-safi",
+      "valeur": 5.4
+    },
+    {
+      "annuel": 2024,
+      "region": "marrakech-safi",
+      "valeur": 5.6
+    }
+  ]
+}

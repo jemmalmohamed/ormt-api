@@ -1,0 +1,55 @@
+{
+  "indicateur": "salariés déclarés à la cnss par région",
+  "data": [
+    {
+      "region": "marrakech-safi",
+      "annuel": "2019",
+      "valeur": 228000
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 229000
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 235000
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 263000
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 284000
+    },
+    {
+      "region": "national",
+      "annuel": "2019",
+      "valeur": 3278000
+    },
+    {
+      "region": "national",
+      "annuel": "2020",
+      "valeur": 3323000
+    },
+    {
+      "region": "national",
+      "annuel": "2021",
+      "valeur": 3524000
+    },
+    {
+      "region": "national",
+      "annuel": "2022",
+      "valeur": 3819000
+    },
+    {
+      "region": "national",
+      "annuel": "2023",
+      "valeur": 3978000
+    }
+  ]
+}

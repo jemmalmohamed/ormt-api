@@ -1,0 +1,35 @@
+{
+  "indicateur": "nombre de grèves déclenchées par région",
+  "data": [
+    {
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 3
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 4
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 16
+    },
+    {
+      "region": "total",
+      "annuel": "2021",
+      "valeur": 80
+    },
+    {
+      "region": "total",
+      "annuel": "2022",
+      "valeur": 65
+    },
+    {
+      "region": "total",
+      "annuel": "2023",
+      "valeur": 51
+    }
+  ]
+}

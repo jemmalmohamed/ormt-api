@@ -1,0 +1,75 @@
+{
+  "indicateur": "emploi par région",
+  "data": [
+    {
+      "region": "ensemble",
+      "annuel": "2017",
+      "valeur": 10699000
+    },
+    {
+      "region": "ensemble",
+      "annuel": "2018",
+      "valeur": 10810000
+    },
+    {
+      "region": "ensemble",
+      "annuel": "2019",
+      "valeur": 10975000
+    },
+    {
+      "region": "ensemble",
+      "annuel": "2020",
+      "valeur": 10542000
+    },
+    {
+      "region": "ensemble",
+      "annuel": "2021",
+      "valeur": 10772000
+    },
+    {
+      "region": "ensemble",
+      "annuel": "2022",
+      "valeur": 10749000
+    },
+    {
+      "region": "ensemble",
+      "annuel": "2023",
+      "valeur": 10591000
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2017",
+      "valeur": 1474000
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2018",
+      "valeur": 1500000
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2019",
+      "valeur": 1524000
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 1499000
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 1514000
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 1488000
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2023",
+      "valeur": 1460000
+    }
+  ]
+}

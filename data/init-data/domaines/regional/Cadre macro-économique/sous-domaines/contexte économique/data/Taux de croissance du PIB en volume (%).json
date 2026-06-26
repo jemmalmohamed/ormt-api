@@ -1,0 +1,95 @@
+{
+  "indicateur": "taux de croissance du pib en volume",
+  "data": [
+    {
+      "region": "national",
+      "annuel": "2015",
+      "valeur": 4.5
+    },
+    {
+      "region": "national",
+      "annuel": "2016",
+      "valeur": 1.1
+    },
+    {
+      "region": "national",
+      "annuel": "2017",
+      "valeur": 4.2
+    },
+    {
+      "region": "national",
+      "annuel": "2018",
+      "valeur": 3.1
+    },
+    {
+      "region": "national",
+      "annuel": "2019",
+      "valeur": 2.9
+    },
+    {
+      "region": "national",
+      "annuel": "2020",
+      "valeur": -7.2
+    },
+    {
+      "region": "national",
+      "annuel": "2021",
+      "valeur": 7.9
+    },
+    {
+      "region": "national",
+      "annuel": "2022",
+      "valeur": 1.3
+    },
+    {
+      "region": "national",
+      "annuel": "2023",
+      "valeur": 2.9
+    },
+    {
+      "region": "national",
+      "annuel": "2024",
+      "valeur": 3.2
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2015",
+      "valeur": 2.3
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2016",
+      "valeur": -4.6
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2017",
+      "valeur": 4.9
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2018",
+      "valeur": 4.6
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2019",
+      "valeur": 4.6
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": -15.5
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 9.2
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 4.6
+    }
+  ]
+}

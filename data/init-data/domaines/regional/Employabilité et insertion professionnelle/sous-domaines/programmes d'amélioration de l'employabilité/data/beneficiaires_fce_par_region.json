@@ -1,0 +1,35 @@
+{
+  "indicateur": "Bénéficiaires de la FCE par région",
+  "data": [
+    {
+      "annuel": 2019,
+      "region": "marrakech-safi",
+      "valeur": 10.3
+    },
+    {
+      "annuel": 2020,
+      "region": "marrakech-safi",
+      "valeur": 4.7
+    },
+    {
+      "annuel": 2021,
+      "region": "marrakech-safi",
+      "valeur": 19.2
+    },
+    {
+      "annuel": 2022,
+      "region": "marrakech-safi",
+      "valeur": 3.6
+    },
+    {
+      "annuel": 2023,
+      "region": "marrakech-safi",
+      "valeur": 0.7
+    },
+    {
+      "annuel": 2024,
+      "region": "marrakech-safi",
+      "valeur": 0.4
+    }
+  ]
+}

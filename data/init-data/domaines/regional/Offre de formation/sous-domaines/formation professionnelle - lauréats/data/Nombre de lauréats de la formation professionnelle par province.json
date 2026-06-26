@@ -1,0 +1,64 @@
+{
+  "indicateur": "Nombre de lauréats de la formation professionnelle par province",
+  "data": [
+    {
+      "province": "Marrakech",
+      "region": "marrakech-safi",
+      "annuel": "2024",
+      "valeur": 8697
+    },
+    {
+      "province": "Al Haouz",
+      "region": "marrakech-safi",
+      "annuel": "2024",
+      "valeur": 397
+    },
+    {
+      "province": "Chichaoua",
+      "region": "marrakech-safi",
+      "annuel": "2024",
+      "valeur": 170
+    },
+    {
+      "province": "El kalaa des Sraghna",
+      "region": "marrakech-safi",
+      "annuel": "2024",
+      "valeur": 547
+    },
+    {
+      "province": "Essaouira",
+      "region": "marrakech-safi",
+      "annuel": "2024",
+      "valeur": 625
+    },
+    {
+      "province": "Marrakech (Préfecture)",
+      "region": "marrakech-safi",
+      "annuel": "2024",
+      "valeur": 1910
+    },
+    {
+      "province": "Rehamna",
+      "region": "marrakech-safi",
+      "annuel": "2024",
+      "valeur": 723
+    },
+    {
+      "province": "Safi",
+      "region": "marrakech-safi",
+      "annuel": "2024",
+      "valeur": 2405
+    },
+    {
+      "province": "Youssoufia",
+      "region": "marrakech-safi",
+      "annuel": "2024",
+      "valeur": 383
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2024",
+      "valeur": 15857
+    }
+  ]
+}

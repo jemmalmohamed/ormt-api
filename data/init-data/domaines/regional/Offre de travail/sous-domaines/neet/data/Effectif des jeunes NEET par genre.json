@@ -1,0 +1,80 @@
+{
+    "indicateur": "Effectif des jeunes NEET par genre",
+    "data": [
+        {
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": 347591
+        },
+        {
+            "genre": "homme",
+            "annuel": "2020",
+            "valeur": 415908
+        },
+        {
+            "genre": "homme",
+            "annuel": "2021",
+            "valeur": 406800
+        },
+        {
+            "genre": "homme",
+            "annuel": "2022",
+            "valeur": 404045
+        },
+        {
+            "genre": "homme",
+            "annuel": "2023",
+            "valeur": 460836
+        },
+        {
+            "genre": "femme",
+            "annuel": "2019",
+            "valeur": 1215549
+        },
+        {
+            "genre": "femme",
+            "annuel": "2020",
+            "valeur": 1149796
+        },
+        {
+            "genre": "femme",
+            "annuel": "2021",
+            "valeur": 1122427
+        },
+        {
+            "genre": "femme",
+            "annuel": "2022",
+            "valeur": 1079146
+        },
+        {
+            "genre": "femme",
+            "annuel": "2023",
+            "valeur": 1082094.2
+        },
+        {
+            "genre": "National",
+            "annuel": "2019",
+            "valeur": 1563140
+        },
+        {
+            "genre": "National",
+            "annuel": "2020",
+            "valeur": 1565704
+        },
+        {
+            "genre": "National",
+            "annuel": "2021",
+            "valeur": 1529227
+        },
+        {
+            "genre": "National",
+            "annuel": "2022",
+            "valeur": 1483191
+        },
+        {
+            "genre": "National",
+            "annuel": "2023",
+            "valeur": 1541283.3
+        }
+    ]
+}

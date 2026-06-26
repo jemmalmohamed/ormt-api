@@ -1,0 +1,381 @@
+{
+  "nom": "enseignement supérieur - Diplômés",
+  "description": "Indicateurs relatifs aux diplômés de l'enseignement supérieur (public, privé, formation des cadres) par genre, composante et domaine d'études.",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauacces": "lecture"
+    }
+  ],
+  "actif": true,
+  "indicateurs": [
+    {
+      "nom": "Nombre de diplômés de l'enseignement supérieur par composante",
+      "titre": "Nombre de diplômés de l'enseignement supérieur par composante",
+      "description": "Nombre de diplômés de l'enseignement supérieur par composante.",
+      "categorie": "Diplômés",
+      "abreviation": "ES",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "MESRSI",
+      "reglecalcul": "",
+      "periode": "2016-2023",
+      "dimensions": [
+        {
+          "nom": "composante",
+          "libelle": "Composante",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de diplômés de l'enseignement supérieur par composante - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre de diplômés de l'enseignement supérieur par genre",
+      "titre": "Nombre de diplômés de l'enseignement supérieur par genre",
+      "description": "Nombre de diplômés de l'enseignement supérieur par genre.",
+      "categorie": "Diplômés",
+      "abreviation": "ES",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "MESRSI",
+      "reglecalcul": "",
+      "periode": "2016-2023",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "Genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "Année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de diplômés de l'enseignement supérieur par genre - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre de diplômés de l'enseignement universitaire public par domaine d'études",
+      "titre": "Nombre de diplômés de l'enseignement universitaire public par domaine d'études",
+      "description": "Nombre de diplômés de l'enseignement universitaire public par domaine d'études.",
+      "categorie": "Diplômés",
+      "abreviation": "ES",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "MESRSI",
+      "reglecalcul": "",
+      "periode": "2016-2023",
+      "dimensions": [
+        {
+          "nom": "domaine_etudes",
+          "libelle": "Domaine d'études",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "Année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de diplômés de l'enseignement universitaire public par domaine d'études - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre de diplômés de l'enseignement supérieur public par genre",
+      "titre": "Nombre de diplômés de l'enseignement supérieur public par genre",
+      "description": "Nombre de diplômés de l'enseignement supérieur public par genre.",
+      "categorie": "Diplômés",
+      "abreviation": "ES",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "MESRSI",
+      "reglecalcul": "",
+      "periode": "2016-2023",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "Genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "Année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de diplômés de l'enseignement supérieur public par genre - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre de diplômés de l'enseignement supérieur privé par domaine d'études",
+      "titre": "Nombre de diplômés de l'enseignement supérieur privé par domaine d'études",
+      "description": "Nombre de diplômés de l'enseignement supérieur privé par domaine d'études.",
+      "categorie": "Diplômés",
+      "abreviation": "ES",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "MESRSI",
+      "reglecalcul": "",
+      "periode": "2016-2023",
+      "dimensions": [
+        {
+          "nom": "domaine_etudes",
+          "libelle": "Domaine d'études",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "Année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de diplômés de l'enseignement supérieur privé par domaine d'études - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre de diplômés de l'enseignement supérieur privé par genre",
+      "titre": "Nombre de diplômés de l'enseignement supérieur privé par genre",
+      "description": "Nombre de diplômés de l'enseignement supérieur privé par genre.",
+      "categorie": "Diplômés",
+      "abreviation": "ES",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "MESRSI",
+      "reglecalcul": "",
+      "periode": "2016-2023",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "Genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "Année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de diplômés de l'enseignement supérieur privé par genre - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre de diplômés de la formation des cadres par domaine d'études",
+      "titre": "Nombre de diplômés de la formation des cadres par domaine d'études",
+      "description": "Nombre de diplômés de la formation des cadres par domaine d'études.",
+      "categorie": "Diplômés",
+      "abreviation": "ES",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "MESRSI",
+      "reglecalcul": "",
+      "periode": "2016-2023",
+      "dimensions": [
+        {
+          "nom": "domaine_etudes",
+          "libelle": "Domaine d'études",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "Année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de diplômés de la formation des cadres par domaine d'études - Histogramme",
+          "grapheTypeCode": "HISTOGRAMME",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    },
+    {
+      "nom": "Nombre de diplômés de la formation des cadres par genre",
+      "titre": "Nombre de diplômés de la formation des cadres par genre",
+      "description": "Nombre de diplômés de la formation des cadres par genre.",
+      "categorie": "Diplômés",
+      "abreviation": "ES",
+      "roleAcces": [
+        {
+          "roleCode": "role_public",
+          "niveauacces": "lecture"
+        }
+      ],
+      "actif": true,
+      "typeTb": "décisionnel / grand public",
+      "source": "MESRSI",
+      "reglecalcul": "",
+      "periode": "2016-2023",
+      "dimensions": [
+        {
+          "nom": "genre",
+          "libelle": "Genre",
+          "type": "texte",
+          "association": {
+            "principale": true,
+            "temporelle": false
+          }
+        },
+        {
+          "nom": "annuel",
+          "libelle": "Année",
+          "type": "texte",
+          "association": {
+            "principale": false,
+            "temporelle": true
+          }
+        }
+      ],
+      "grapheConfigurations": [
+        {
+          "nom": "Nombre de diplômés de la formation des cadres par genre - Camembert",
+          "grapheTypeCode": "CAMEMBERT",
+          "isDefault": true,
+          "chartOptionsJson": ""
+        }
+      ]
+    }
+  ]
+}

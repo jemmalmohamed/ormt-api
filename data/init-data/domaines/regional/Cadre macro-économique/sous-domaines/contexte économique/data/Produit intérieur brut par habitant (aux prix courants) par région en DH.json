@@ -1,0 +1,95 @@
+{
+  "indicateur": "produit intérieur brut par habitant (aux prix courants) par région",
+  "data": [
+    {
+      "region": "marrakech-safi",
+      "annuel": "2014",
+      "valeur": 20763
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2015",
+      "valeur": 21599
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2016",
+      "valeur": 20698
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2017",
+      "valeur": 21294
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2018",
+      "valeur": 21920
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2019",
+      "valeur": 22319
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2020",
+      "valeur": 18675
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2021",
+      "valeur": 20930
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 22730
+    },
+    {
+      "region": "national",
+      "annuel": "2014",
+      "valeur": 29656
+    },
+    {
+      "region": "national",
+      "annuel": "2015",
+      "valeur": 31593
+    },
+    {
+      "region": "national",
+      "annuel": "2016",
+      "valeur": 31730
+    },
+    {
+      "region": "national",
+      "annuel": "2017",
+      "valeur": 32965
+    },
+    {
+      "region": "national",
+      "annuel": "2018",
+      "valeur": 33937
+    },
+    {
+      "region": "national",
+      "annuel": "2019",
+      "valeur": 34840
+    },
+    {
+      "region": "national",
+      "annuel": "2020",
+      "valeur": 32056
+    },
+    {
+      "region": "national",
+      "annuel": "2021",
+      "valeur": 35154
+    },
+    {
+      "region": "national",
+      "annuel": "2022",
+      "valeur": 36284
+    }
+  ]
+}

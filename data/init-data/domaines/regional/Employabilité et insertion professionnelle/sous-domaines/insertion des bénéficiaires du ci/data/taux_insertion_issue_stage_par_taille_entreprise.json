@@ -1,0 +1,25 @@
+{
+    "indicateur": "Taux d'insertion à l'issue de stage par taille d'entreprise",
+    "data": [
+        {
+            "annuel": 2023,
+            "taille_entreprise": "1 à 10 salariés",
+            "valeur": 51.8
+        },
+        {
+            "annuel": 2023,
+            "taille_entreprise": " 11 à 50 salariés",
+            "valeur": 57.9
+        },
+        {
+            "annuel": 2023,
+            "taille_entreprise": "51 à 100 salariés",
+            "valeur": 56.5
+        },
+        {
+            "annuel": 2023,
+            "taille_entreprise": "100 salariés et plus",
+            "valeur": 70.0
+        }
+    ]
+}

@@ -1,0 +1,185 @@
+{
+    "indicateur": "Bénéficiaires IDMAJ par diplôme (hors PI)",
+    "data": [
+        {
+            "annuel": 2019,
+            "diplome": "Baccalauréat",
+            "valeur": 36.0
+        },
+        {
+            "annuel": 2019,
+            "diplome": "Formation professionnelle",
+            "valeur": 29.2
+        },
+        {
+            "annuel": 2019,
+            "diplome": "Supérieur",
+            "valeur": 15.0
+        },
+        {
+            "annuel": 2019,
+            "diplome": "Autres",
+            "valeur": 8.9
+        },
+        {
+            "annuel": 2019,
+            "diplome": "Sans diplôme",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2019,
+            "diplome": "Non renseigné",
+            "valeur": 10.9
+        },
+        {
+            "annuel": 2020,
+            "diplome": "Baccalauréat",
+            "valeur": 32.8
+        },
+        {
+            "annuel": 2020,
+            "diplome": "Formation professionnelle",
+            "valeur": 41.5
+        },
+        {
+            "annuel": 2020,
+            "diplome": "Supérieur",
+            "valeur": 17.7
+        },
+        {
+            "annuel": 2020,
+            "diplome": "Autres",
+            "valeur": 4.2
+        },
+        {
+            "annuel": 2020,
+            "diplome": "Sans diplôme",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2020,
+            "diplome": "Non renseigné",
+            "valeur": 3.9
+        },
+        {
+            "annuel": 2021,
+            "diplome": "Baccalauréat",
+            "valeur": 31.4
+        },
+        {
+            "annuel": 2021,
+            "diplome": "Formation professionnelle",
+            "valeur": 38.4
+        },
+        {
+            "annuel": 2021,
+            "diplome": "Supérieur",
+            "valeur": 19.4
+        },
+        {
+            "annuel": 2021,
+            "diplome": "Autres",
+            "valeur": 5.3
+        },
+        {
+            "annuel": 2021,
+            "diplome": "Sans diplôme",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2021,
+            "diplome": "Non renseigné",
+            "valeur": 5.5
+        },
+        {
+            "annuel": 2022,
+            "diplome": "Baccalauréat",
+            "valeur": 33.5
+        },
+        {
+            "annuel": 2022,
+            "diplome": "Formation professionnelle",
+            "valeur": 37.0
+        },
+        {
+            "annuel": 2022,
+            "diplome": "Supérieur",
+            "valeur": 21.6
+        },
+        {
+            "annuel": 2022,
+            "diplome": "Autres",
+            "valeur": 4.7
+        },
+        {
+            "annuel": 2022,
+            "diplome": "Sans diplôme",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2022,
+            "diplome": "Non renseigné",
+            "valeur": 3.2
+        },
+        {
+            "annuel": 2023,
+            "diplome": "Baccalauréat",
+            "valeur": 35.8
+        },
+        {
+            "annuel": 2023,
+            "diplome": "Formation professionnelle",
+            "valeur": 33.9
+        },
+        {
+            "annuel": 2023,
+            "diplome": "Supérieur",
+            "valeur": 22.5
+        },
+        {
+            "annuel": 2023,
+            "diplome": "Autres",
+            "valeur": 4.2
+        },
+        {
+            "annuel": 2023,
+            "diplome": "Sans diplôme",
+            "valeur": 0.0
+        },
+        {
+            "annuel": 2023,
+            "diplome": "Non renseigné",
+            "valeur": 3.6
+        },
+        {
+            "annuel": 2024,
+            "diplome": "Baccalauréat",
+            "valeur": 38.3
+        },
+        {
+            "annuel": 2024,
+            "diplome": "Formation professionnelle",
+            "valeur": 33.9
+        },
+        {
+            "annuel": 2024,
+            "diplome": "Supérieur",
+            "valeur": 17.6
+        },
+        {
+            "annuel": 2024,
+            "diplome": "Autres",
+            "valeur": 0.5
+        },
+        {
+            "annuel": 2024,
+            "diplome": "Sans diplôme",
+            "valeur": 5.3
+        },
+        {
+            "annuel": 2024,
+            "diplome": "Non renseigné",
+            "valeur": 4.3
+        }
+    ]
+}

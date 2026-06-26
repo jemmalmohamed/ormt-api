@@ -1,0 +1,197 @@
+{
+    "indicateur": "créations d'entreprises personnes morales par secteur d'activités",
+    "data": [
+        {
+            "secteur_activite": "Commerce ; réparation auto/moto",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 2076
+        },
+        {
+            "secteur_activite": "Construction",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 1165
+        },
+        {
+            "secteur_activite": "Hébergement & restauration",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 661
+        },
+        {
+            "secteur_activite": "Services administratifs & soutien",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 591
+        },
+        {
+            "secteur_activite": "Activités scientifiques & techniques",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 390
+        },
+        {
+            "secteur_activite": "Industrie manufacturière",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 379
+        },
+        {
+            "secteur_activite": "Transports & entreposage",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 318
+        },
+        {
+            "secteur_activite": "Immobilier",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 185
+        },
+        {
+            "secteur_activite": "Enseignement",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 166
+        },
+        {
+            "secteur_activite": "Arts & spectacles",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 119
+        },
+        {
+            "secteur_activite": "Agriculture, sylviculture, pêche",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 199
+        },
+        {
+            "secteur_activite": "Autres services",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 149
+        },
+        {
+            "secteur_activite": "Information & communication",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 153
+        },
+        {
+            "secteur_activite": "activités financières et d'assurance",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 111
+        },
+        {
+            "secteur_activite": "Autres",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 138
+        },
+        {
+            "secteur_activite": "Commerce ; réparation auto/moto",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 1772
+        },
+        {
+            "secteur_activite": "Construction",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 1175
+        },
+        {
+            "secteur_activite": "Hébergement & restauration",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 815
+        },
+        {
+            "secteur_activite": "Services administratifs & soutien",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 646
+        },
+        {
+            "secteur_activite": "Activités scientifiques & techniques",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 445
+        },
+        {
+            "secteur_activite": "Industrie manufacturière",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 390
+        },
+        {
+            "secteur_activite": "Transports & entreposage",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 291
+        },
+        {
+            "secteur_activite": "Immobilier",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 283
+        },
+        {
+            "secteur_activite": "Enseignement",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 223
+        },
+        {
+            "secteur_activite": "Arts & spectacles",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 191
+        },
+        {
+            "secteur_activite": "Agriculture, sylviculture, pêche",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 164
+        },
+        {
+            "secteur_activite": "Autres services",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 159
+        },
+        {
+            "secteur_activite": "Information & communication",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 159
+        },
+        {
+            "secteur_activite": "activités financières et d'assurance",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 144
+        },
+        {
+            "secteur_activite": "Autres",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 176
+        },
+        {
+            "secteur_activite": "Total",
+            "region": "marrakech-safi",
+            "annuel": "2021",
+            "valeur": 6800
+        },
+        {
+            "secteur_activite": "Total",
+            "region": "marrakech-safi",
+            "annuel": "2022",
+            "valeur": 7033
+        }
+    ]
+}

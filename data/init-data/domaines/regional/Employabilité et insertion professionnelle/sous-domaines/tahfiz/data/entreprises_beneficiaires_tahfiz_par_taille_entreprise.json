@@ -1,0 +1,110 @@
+{
+    "indicateur": "Entreprises bénéficiaires Tahfiz par taille d'entreprise",
+    "data": [
+        {
+            "annuel": 2022,
+            "taille_entreprise": "1 à 5 salariés",
+            "valeur": 60.1
+        },
+        {
+            "annuel": 2022,
+            "taille_entreprise": "6 à 10 salariés",
+            "valeur": 22.5
+        },
+        {
+            "annuel": 2022,
+            "taille_entreprise": " 11 à 50 salariés",
+            "valeur": 5.6
+        },
+        {
+            "annuel": 2022,
+            "taille_entreprise": "51 à 100 salariés",
+            "valeur": 0.4
+        },
+        {
+            "annuel": 2022,
+            "taille_entreprise": "100 salariés et plus",
+            "valeur": 0.1
+        },
+        {
+            "annuel": 2022,
+            "taille_entreprise": "Non renseigné",
+            "valeur": 11.3
+        },
+        {
+            "annuel": 2022,
+            "taille_entreprise": "Ensemble",
+            "valeur": 100.0
+        },
+        {
+            "annuel": 2023,
+            "taille_entreprise": "1 à 5 salariés",
+            "valeur": 59.6
+        },
+        {
+            "annuel": 2023,
+            "taille_entreprise": "6 à 10 salariés",
+            "valeur": 22.4
+        },
+        {
+            "annuel": 2023,
+            "taille_entreprise": " 11 à 50 salariés",
+            "valeur": 5.2
+        },
+        {
+            "annuel": 2023,
+            "taille_entreprise": "51 à 100 salariés",
+            "valeur": 0.4
+        },
+        {
+            "annuel": 2023,
+            "taille_entreprise": "100 salariés et plus",
+            "valeur": 0.2
+        },
+        {
+            "annuel": 2023,
+            "taille_entreprise": "Non renseigné",
+            "valeur": 12.2
+        },
+        {
+            "annuel": 2023,
+            "taille_entreprise": "Ensemble",
+            "valeur": 100.0
+        },
+        {
+            "annuel": 2024,
+            "taille_entreprise": "1 à 5 salariés",
+            "valeur": 59.3
+        },
+        {
+            "annuel": 2024,
+            "taille_entreprise": "6 à 10 salariés",
+            "valeur": 20.7
+        },
+        {
+            "annuel": 2024,
+            "taille_entreprise": " 11 à 50 salariés",
+            "valeur": 5.6
+        },
+        {
+            "annuel": 2024,
+            "taille_entreprise": "51 à 100 salariés",
+            "valeur": 0.4
+        },
+        {
+            "annuel": 2024,
+            "taille_entreprise": "100 salariés et plus",
+            "valeur": 0.2
+        },
+        {
+            "annuel": 2024,
+            "taille_entreprise": "Non renseigné",
+            "valeur": 13.7
+        },
+        {
+            "annuel": 2024,
+            "taille_entreprise": "Ensemble",
+            "valeur": 100.0
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "indicateur": "Nombre de stagiaires de la formation professionnelle par opérateur de formation",
+    "data": [
+        {
+            "region": "Marrakech-Safi",
+            "operateur_formation": "Agriculture",
+            "annuel": "2024",
+            "valeur": 1070
+        },
+        {
+            "region": "Marrakech-Safi",
+            "operateur_formation": "Artisanat",
+            "annuel": "2024",
+            "valeur": 2298
+        },
+        {
+            "region": "Marrakech-Safi",
+            "operateur_formation": "Entraide Nationale",
+            "annuel": "2024",
+            "valeur": 732
+        },
+        {
+            "region": "Marrakech-Safi",
+            "operateur_formation": "M.J.C.C",
+            "annuel": "2024",
+            "valeur": 388
+        },
+        {
+            "region": "Marrakech-Safi",
+            "operateur_formation": "Ministère de l'Equipement et de l'Eau",
+            "annuel": "2024",
+            "valeur": 132
+        },
+        {
+            "region": "Marrakech-Safi",
+            "operateur_formation": "Ministère de la santé et de la protection sociale",
+            "annuel": "2024",
+            "valeur": 136
+        },
+        {
+            "region": "Marrakech-Safi",
+            "operateur_formation": "OFPPT",
+            "annuel": "2024",
+            "valeur": 20350
+        },
+        {
+            "region": "Marrakech-Safi",
+            "operateur_formation": "ONG",
+            "annuel": "2024",
+            "valeur": 1385
+        },
+        {
+            "region": "Marrakech-Safi",
+            "operateur_formation": "Pêche Maritime",
+            "annuel": "2024",
+            "valeur": 261
+        },
+        {
+            "region": "Marrakech-Safi",
+            "operateur_formation": "Privé",
+            "annuel": "2024",
+            "valeur": 15109
+        },
+        {
+            "region": "Marrakech-Safi",
+            "operateur_formation": "Transition énergétique",
+            "annuel": "2024",
+            "valeur": 99
+        },
+        {
+            "region": "Marrakech-Safi",
+            "operateur_formation": "TOTAL",
+            "annuel": "2024",
+            "valeur": 41960
+        }
+    ]
+}

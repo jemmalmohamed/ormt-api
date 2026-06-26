@@ -1,0 +1,95 @@
+{
+    "indicateur": "Nombre d'étudiants de la formation des cadres par genre",
+    "data": [
+        {
+            "genre": "femme",
+            "annuel": "2016",
+            "valeur": 17000
+        },
+        {
+            "genre": "femme",
+            "annuel": "2017",
+            "valeur": 15600
+        },
+        {
+            "genre": "femme",
+            "annuel": "2018",
+            "valeur": 14100
+        },
+        {
+            "genre": "femme",
+            "annuel": "2019",
+            "valeur": 18800
+        },
+        {
+            "genre": "femme",
+            "annuel": "2020",
+            "valeur": 14900
+        },
+        {
+            "genre": "femme",
+            "annuel": "2021",
+            "valeur": 21400
+        },
+        {
+            "genre": "femme",
+            "annuel": "2022",
+            "valeur": 27800
+        },
+        {
+            "genre": "femme",
+            "annuel": "2023",
+            "valeur": 32400
+        },
+        {
+            "genre": "femme",
+            "annuel": "2024",
+            "valeur": 35200
+        },
+        {
+            "genre": "homme",
+            "annuel": "2016",
+            "valeur": 14800
+        },
+        {
+            "genre": "homme",
+            "annuel": "2017",
+            "valeur": 13600
+        },
+        {
+            "genre": "homme",
+            "annuel": "2018",
+            "valeur": 11500
+        },
+        {
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": 16600
+        },
+        {
+            "genre": "homme",
+            "annuel": "2020",
+            "valeur": 19300
+        },
+        {
+            "genre": "homme",
+            "annuel": "2021",
+            "valeur": 16900
+        },
+        {
+            "genre": "homme",
+            "annuel": "2022",
+            "valeur": 19200
+        },
+        {
+            "genre": "homme",
+            "annuel": "2023",
+            "valeur": 20400
+        },
+        {
+            "genre": "homme",
+            "annuel": "2024",
+            "valeur": 20300
+        }
+    ]
+}

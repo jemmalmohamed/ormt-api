@@ -1,0 +1,15 @@
+{
+  "indicateur": "Taux de NEET par région",
+  "data": [
+    {
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 27.3
+    },
+    {
+      "region": "national",
+      "annuel": "2022",
+      "valeur": 25.2
+    }
+  ]
+}

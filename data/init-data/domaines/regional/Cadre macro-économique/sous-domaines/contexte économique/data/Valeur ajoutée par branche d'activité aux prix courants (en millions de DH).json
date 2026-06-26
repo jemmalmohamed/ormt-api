@@ -1,0 +1,83 @@
+{
+  "indicateur": "valeur ajoutée par branche d'activité aux prix courants",
+  "data": [
+    {
+      "branche_activite": "industrie de transformation",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 5266
+    },
+    {
+      "branche_activite": "production et distribution d'électricité et d'eau",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 1115
+    },
+    {
+      "branche_activite": "construction",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 6178
+    },
+    {
+      "branche_activite": "commerce",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 17851
+    },
+    {
+      "branche_activite": "transports et entreposage",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 3745
+    },
+    {
+      "branche_activite": "hôtels et restaurants",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 12434
+    },
+    {
+      "branche_activite": "information et communication",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 243
+    },
+    {
+      "branche_activite": "activités financières et d'assurance",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 2612
+    },
+    {
+      "branche_activite": "activités immobilières",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 7588
+    },
+    {
+      "branche_activite": "recherches et développement et services rendus aux entreprises",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 5592
+    },
+    {
+      "branche_activite": "administration publique; sécurité sociale obligatoire",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 7717
+    },
+    {
+      "branche_activite": "enseignement  santé humaine et action sociale",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 10543
+    },
+    {
+      "branche_activite": "autres services",
+      "region": "marrakech-safi",
+      "annuel": "2022",
+      "valeur": 2191
+    }
+  ]
+}

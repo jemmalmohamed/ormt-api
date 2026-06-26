@@ -1,0 +1,11 @@
+{
+  "nom": "Compétitivité et salaires",
+  "description": "Compétitivité et salaires",
+  "roleAcces": [
+    {
+      "roleCode": "role_public",
+      "niveauAcces": "lecture"
+    }
+  ],
+  "actif": true
+}

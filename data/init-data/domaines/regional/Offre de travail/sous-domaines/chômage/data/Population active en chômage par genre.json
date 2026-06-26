@@ -1,0 +1,80 @@
+{
+    "indicateur": "Population active en chômage par genre",
+    "data": [
+        {
+            "genre": "homme",
+            "annuel": "2019",
+            "valeur": 719000
+        },
+        {
+            "genre": "homme",
+            "annuel": "2020",
+            "valeur": 991000
+        },
+        {
+            "genre": "homme",
+            "annuel": "2021",
+            "valeur": 1025000
+        },
+        {
+            "genre": "homme",
+            "annuel": "2022",
+            "valeur": 968000
+        },
+        {
+            "genre": "homme",
+            "annuel": "2023",
+            "valeur": 1088000
+        },
+        {
+            "genre": "Femme",
+            "annuel": "2019",
+            "valeur": 388000
+        },
+        {
+            "genre": "Femme",
+            "annuel": "2020",
+            "valeur": 438000
+        },
+        {
+            "genre": "Femme",
+            "annuel": "2021",
+            "valeur": 483000
+        },
+        {
+            "genre": "Femme",
+            "annuel": "2022",
+            "valeur": 474000
+        },
+        {
+            "genre": "Femme",
+            "annuel": "2023",
+            "valeur": 492000
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": "2019",
+            "valeur": 1107000
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": "2020",
+            "valeur": 1429000
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": "2021",
+            "valeur": 1508000
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": "2022",
+            "valeur": 1442000
+        },
+        {
+            "genre": "Ensemble",
+            "annuel": "2023",
+            "valeur": 1580000
+        }
+    ]
+}

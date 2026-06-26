@@ -1,0 +1,255 @@
+{
+    "indicateur": "création d'emploi eqtp par secteur d'activité",
+    "data": [
+        {
+            "secteur_activite": "agriculture, forêt et pêche",
+            "annuel": "2019",
+            "valeur": 3962
+        },
+        {
+            "secteur_activite": "agriculture, forêt et pêche",
+            "annuel": "2020",
+            "valeur": 4858
+        },
+        {
+            "secteur_activite": "agriculture, forêt et pêche",
+            "annuel": "2021",
+            "valeur": 25704
+        },
+        {
+            "secteur_activite": "agriculture, forêt et pêche",
+            "annuel": "2022",
+            "valeur": 12790
+        },
+        {
+            "secteur_activite": "agriculture, forêt et pêche",
+            "annuel": "2023",
+            "valeur": 2067
+        },
+        {
+            "secteur_activite": "BTP",
+            "annuel": "2019",
+            "valeur": 18744
+        },
+        {
+            "secteur_activite": "BTP",
+            "annuel": "2020",
+            "valeur": -20835
+        },
+        {
+            "secteur_activite": "BTP",
+            "annuel": "2021",
+            "valeur": 57252
+        },
+        {
+            "secteur_activite": "BTP",
+            "annuel": "2022",
+            "valeur": 8295
+        },
+        {
+            "secteur_activite": "BTP",
+            "annuel": "2023",
+            "valeur": 5147
+        },
+        {
+            "secteur_activite": "commerce",
+            "annuel": "2019",
+            "valeur": 31466
+        },
+        {
+            "secteur_activite": "commerce",
+            "annuel": "2020",
+            "valeur": -15240
+        },
+        {
+            "secteur_activite": "commerce",
+            "annuel": "2021",
+            "valeur": 57051
+        },
+        {
+            "secteur_activite": "commerce",
+            "annuel": "2022",
+            "valeur": 20934
+        },
+        {
+            "secteur_activite": "commerce",
+            "annuel": "2023",
+            "valeur": 12375
+        },
+        {
+            "secteur_activite": "enseignement",
+            "annuel": "2019",
+            "valeur": 2425
+        },
+        {
+            "secteur_activite": "enseignement",
+            "annuel": "2020",
+            "valeur": -3630
+        },
+        {
+            "secteur_activite": "enseignement",
+            "annuel": "2021",
+            "valeur": 11240
+        },
+        {
+            "secteur_activite": "enseignement",
+            "annuel": "2022",
+            "valeur": 19162
+        },
+        {
+            "secteur_activite": "enseignement",
+            "annuel": "2023",
+            "valeur": 12518
+        },
+        {
+            "secteur_activite": "hébergement et restauration",
+            "annuel": "2019",
+            "valeur": 11279
+        },
+        {
+            "secteur_activite": "hébergement et restauration",
+            "annuel": "2020",
+            "valeur": -36436
+        },
+        {
+            "secteur_activite": "hébergement et restauration",
+            "annuel": "2021",
+            "valeur": 19718
+        },
+        {
+            "secteur_activite": "hébergement et restauration",
+            "annuel": "2022",
+            "valeur": 23895
+        },
+        {
+            "secteur_activite": "hébergement et restauration",
+            "annuel": "2023",
+            "valeur": 14843
+        },
+        {
+            "secteur_activite": "industries",
+            "annuel": "2019",
+            "valeur": 6061
+        },
+        {
+            "secteur_activite": "industries",
+            "annuel": "2020",
+            "valeur": -39162
+        },
+        {
+            "secteur_activite": "industries",
+            "annuel": "2021",
+            "valeur": 53181
+        },
+        {
+            "secteur_activite": "industries",
+            "annuel": "2022",
+            "valeur": 17329
+        },
+        {
+            "secteur_activite": "industries",
+            "annuel": "2023",
+            "valeur": 10970
+        },
+        {
+            "secteur_activite": "santé humaine et action sociale",
+            "annuel": "2019",
+            "valeur": 6408
+        },
+        {
+            "secteur_activite": "santé humaine et action sociale",
+            "annuel": "2020",
+            "valeur": -407
+        },
+        {
+            "secteur_activite": "santé humaine et action sociale",
+            "annuel": "2021",
+            "valeur": 7552
+        },
+        {
+            "secteur_activite": "santé humaine et action sociale",
+            "annuel": "2022",
+            "valeur": 5791
+        },
+        {
+            "secteur_activite": "santé humaine et action sociale",
+            "annuel": "2023",
+            "valeur": 5496
+        },
+        {
+            "secteur_activite": "services",
+            "annuel": "2019",
+            "valeur": 44569
+        },
+        {
+            "secteur_activite": "services",
+            "annuel": "2020",
+            "valeur": -17637
+        },
+        {
+            "secteur_activite": "services",
+            "annuel": "2021",
+            "valeur": 62464
+        },
+        {
+            "secteur_activite": "services",
+            "annuel": "2022",
+            "valeur": 73162
+        },
+        {
+            "secteur_activite": "services",
+            "annuel": "2023",
+            "valeur": 44721
+        },
+        {
+            "secteur_activite": "transport",
+            "annuel": "2019",
+            "valeur": 5849
+        },
+        {
+            "secteur_activite": "transport",
+            "annuel": "2020",
+            "valeur": -4836
+        },
+        {
+            "secteur_activite": "transport",
+            "annuel": "2021",
+            "valeur": 14867
+        },
+        {
+            "secteur_activite": "transport",
+            "annuel": "2022",
+            "valeur": 7500
+        },
+        {
+            "secteur_activite": "transport",
+            "annuel": "2023",
+            "valeur": 5651
+        },
+        {
+            "secteur_activite": "ensemble",
+            "annuel": "2019",
+            "valeur": 130762
+        },
+        {
+            "secteur_activite": "ensemble",
+            "annuel": "2020",
+            "valeur": -133325
+        },
+        {
+            "secteur_activite": "ensemble",
+            "annuel": "2021",
+            "valeur": 309028
+        },
+        {
+            "secteur_activite": "ensemble",
+            "annuel": "2022",
+            "valeur": 188858
+        },
+        {
+            "secteur_activite": "ensemble",
+            "annuel": "2023",
+            "valeur": 113789
+        }
+    ]
+}

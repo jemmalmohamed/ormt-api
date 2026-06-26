@@ -1,0 +1,23 @@
+{
+  "indicateur": "population municipale",
+  "data": [
+    {
+      "region": "marrakech-safi",
+      "annuel": "2024",
+      "genre": "ensemble",
+      "valeur": 4864187
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2024",
+      "genre": "femme",
+      "valeur": 2411225
+    },
+    {
+      "region": "marrakech-safi",
+      "annuel": "2024",
+      "genre": "homme",
+      "valeur": 2452962
+    }
+  ]
+}
