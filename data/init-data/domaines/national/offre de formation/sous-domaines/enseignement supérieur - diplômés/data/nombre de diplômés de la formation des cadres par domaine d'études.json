@@ -1,0 +1,228 @@
+{
+  "data" : [ {
+    "annuel" : "2016",
+    "domaine_etudes" : "Formation pédagogique",
+    "valeur" : "3300"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "1800"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Scientifique et technique",
+    "valeur" : "2500"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Sport",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Total",
+    "valeur" : "7600"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Formation pédagogique",
+    "valeur" : "1800"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "1500"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Scientifique et technique",
+    "valeur" : "5200"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Sport",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Total",
+    "valeur" : "8500"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Formation pédagogique",
+    "valeur" : "3300"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "2200"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Scientifique et technique",
+    "valeur" : "5200"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Sport",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Total",
+    "valeur" : "10700"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Formation pédagogique",
+    "valeur" : "3500"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "1200"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "1800"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "1500"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Scientifique et technique",
+    "valeur" : "2700"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Sport",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Total",
+    "valeur" : "10700"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Formation pédagogique",
+    "valeur" : "5500"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "900"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "2400"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "1300"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Scientifique et technique",
+    "valeur" : "2700"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Sport",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Total",
+    "valeur" : "12800"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Formation pédagogique",
+    "valeur" : "17700"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "900"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "2600"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "700"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Scientifique et technique",
+    "valeur" : "2900"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Sport",
+    "valeur" : "200"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Total",
+    "valeur" : "24900"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Formation pédagogique",
+    "valeur" : "19300"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "1100"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "2900"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "900"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Scientifique et technique",
+    "valeur" : "2900"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Sport",
+    "valeur" : "200"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Total",
+    "valeur" : "27200"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Formation pédagogique",
+    "valeur" : "21600"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "900"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "3300"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "500"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Scientifique et technique",
+    "valeur" : "2800"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Sport",
+    "valeur" : "100"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Total",
+    "valeur" : "29200"
+  } ],
+  "indicateur" : "nombre de diplômés de la formation des cadres par domaine d'études"
+}

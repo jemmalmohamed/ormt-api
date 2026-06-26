@@ -1,0 +1,658 @@
+{
+  "actif" : true,
+  "description" : "Indicateurs relatifs à l'activité de la population sur le marché du travail (population active, inactive, taux d'activité, etc.)",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "volume",
+    "description" : "population active selon groupe d'âge, milieu de résidence et genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "groupe d'âge",
+      "nom" : "groupe_age",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Population active - Histogramme"
+    } ],
+    "nom" : "population active",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "population active",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "volume",
+    "description" : "population active selon diplôme et milieu",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Population active par diplôme et milieu - Histogramme"
+    } ],
+    "nom" : "population active par diplôme et milieu",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "population active par diplôme et milieu",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "volume",
+    "description" : "population active selon diplôme et milieu de résidence",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Population en active par diplôme et milieu de résidence - Histogramme"
+    } ],
+    "nom" : "population en active par diplôme et milieu de résidence",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "population en active par diplôme et milieu de résidence",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "volume",
+    "description" : "population en âge d'activité selon groupe d'âge, milieu de résidence et genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "groupe d'âge",
+      "nom" : "groupe_age",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Population en âge d'activité - Histogramme"
+    } ],
+    "nom" : "population en âge d'activité",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "population en âge d'activité",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "volume",
+    "description" : "population inactive selon groupe d'âge, milieu de résidence et genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "groupe d'âge",
+      "nom" : "groupe_age",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Population inactive - Histogramme"
+    } ],
+    "nom" : "population inactive",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "population inactive",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux d'activité",
+    "description" : "taux d'activité par genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Taux d'activité par genre - CHOROPLETH"
+    } ],
+    "nom" : "taux d'activité par région et genre",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux d'activité par genre",
+    "typeTb" : "Décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux d'activité",
+    "description" : "taux d'activité par milieu de résidence",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Taux d'activité par milieu de résidence - CHOROPLETH"
+    } ],
+    "nom" : "taux d'activité par région et le milieu de résidence",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux d'activité par milieu de résidence",
+    "typeTb" : "Décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux d'activité",
+    "description" : "taux d'activité selon le diplôme et le genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Taux d'activité selon le diplôme et le genre - Courbes"
+    } ],
+    "nom" : "taux d'activité selon le diplôme et le genre",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux d'activité selon le diplôme et le genre",
+    "typeTb" : "Décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux d'activité",
+    "description" : "taux d'activité selon le diplôme et le milieu de résidence",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Taux d'activité selon le diplôme et le milieu de résidence - Courbes"
+    } ],
+    "nom" : "taux d'activité selon le diplôme et le milieu de résidence",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux d'activité selon le diplôme et le milieu de résidence",
+    "typeTb" : "Décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux d'activité",
+    "description" : "taux d'activité selon le genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Taux d'activité selon le genre - Courbes"
+    } ],
+    "nom" : "taux d'activité selon le genre",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux d'activité selon le genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux d'activité",
+    "description" : "taux d'activité selon le genre et le milieu de résidence",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Taux d'activité selon le genre et le milieu de résidence - Courbes"
+    } ],
+    "nom" : "taux d'activité selon le genre et le milieu de résidence",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux d'activité selon le genre et le milieu de résidence",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux d'activité",
+    "description" : "taux d'activité selon le groupe d'âge et le genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "groupe d'âge",
+      "nom" : "groupe_age",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : "{\n  \"version\" : 1,\n  \"kind\" : \"bar\",\n  \"family\" : \"cartesian\",\n  \"mapping\" : {\n    \"x\" : \"groupe_age\",\n    \"series\" : \"annuel\",\n    \"value\" : \"metric\",\n    \"secondarySeries\" : null,\n    \"bubbleSize\" : null,\n    \"mixteLineSeries\" : null\n  },\n  \"filters\" : [ {\n    \"dimension\" : \"genre\",\n    \"operator\" : \"eq\",\n    \"values\" : [ \"homme\" ],\n    \"enabled\" : true,\n    \"default\" : true\n  } ],\n  \"presentation\" : {\n    \"title\" : \"taux d'activité selon le groupe d'âge et le genre\",\n    \"subtitle\" : null,\n    \"palette\" : \"gender-binary\",\n    \"legend\" : {\n      \"visible\" : true,\n      \"position\" : \"bottom\"\n    },\n    \"labels\" : {\n      \"visible\" : false,\n      \"mode\" : \"hidden\"\n    },\n    \"stacking\" : \"none\",\n    \"orientation\" : \"vertical\",\n    \"lineStyle\" : {\n      \"curve\" : true,\n      \"points\" : true\n    },\n    \"mapStyle\" : {\n      \"projection\" : \"mercator\",\n      \"showInternalLabels\" : true\n    }\n  },\n  \"interactions\" : {\n    \"export\" : true,\n    \"zoom\" : false,\n    \"hover\" : true,\n    \"tooltips\" : true,\n    \"selection\" : false\n  },\n  \"dataView\" : {\n    \"visibility\" : {\n      \"hiddenRowValues\" : [ ],\n      \"hiddenColumnValues\" : { }\n    },\n    \"ordering\" : {\n      \"principalOrder\" : [ ],\n      \"seriesOrder\" : [ ]\n    }\n  },\n  \"meta\" : {\n    \"source\" : \"user-authored\",\n    \"seedKind\" : \"LINE\",\n    \"generatedAt\" : \"2026-06-25T23:31:48.538Z\",\n    \"configSystem\" : \"chartspec\",\n    \"migratedFromLegacy\" : false\n  }\n}",
+      "chartSpecVersion" : 1,
+      "configSystem" : "chartspec",
+      "dimensionMappingJson" : "{\n  \"x\" : \"groupe_age\",\n  \"series\" : \"annuel\",\n  \"value\" : \"metric\",\n  \"secondarySeries\" : null,\n  \"bubbleSize\" : null,\n  \"mixteLineSeries\" : null\n}",
+      "grapheTypeCode" : "histogramme_empilte_evolution",
+      "isDefault" : true,
+      "nom" : "taux d'activité selon le groupe d'âge et le genre - Chart Studio line"
+    } ],
+    "nom" : "taux d'activité selon le groupe d'âge et le genre",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux d'activité selon le groupe d'âge et le genre",
+    "typeTb" : "Décisionnel",
+    "unite" : null
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux d'activité",
+    "description" : "taux d'activité selon le groupe d'âge et le milieu de résidence",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "groupe d'âge",
+      "nom" : "groupe_age",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Taux d'activité selon le groupe d'âge et le milieu de résidence - Courbes"
+    } ],
+    "nom" : "taux d'activité selon le groupe d'âge et le milieu de résidence",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux d'activité selon le groupe d'âge et le milieu de résidence",
+    "typeTb" : "Décisionnel",
+    "unite" : null
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux d'activité",
+    "description" : "taux d'activité selon le milieu de résidence",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Taux d'activité selon le milieu de résidence - Courbes"
+    } ],
+    "nom" : "taux d'activité selon le milieu de résidence",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux d'activité selon le milieu de résidence",
+    "typeTb" : "Décisionnel",
+    "unite" : "%"
+  } ],
+  "nom" : "activité"
+}

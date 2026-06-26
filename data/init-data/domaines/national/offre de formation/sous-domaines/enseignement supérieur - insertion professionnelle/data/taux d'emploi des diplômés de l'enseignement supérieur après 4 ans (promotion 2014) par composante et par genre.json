@@ -1,0 +1,64 @@
+{
+  "data" : [ {
+    "annuel" : "2014",
+    "composante" : "Enseignement supérieur privé",
+    "genre" : "ensemble",
+    "valeur" : "79.1"
+  }, {
+    "annuel" : "2014",
+    "composante" : "Enseignement supérieur privé",
+    "genre" : "femme",
+    "valeur" : "68.3"
+  }, {
+    "annuel" : "2014",
+    "composante" : "Enseignement supérieur privé",
+    "genre" : "homme",
+    "valeur" : "88.0"
+  }, {
+    "annuel" : "2014",
+    "composante" : "Enseignement universitaire public",
+    "genre" : "ensemble",
+    "valeur" : "68.1"
+  }, {
+    "annuel" : "2014",
+    "composante" : "Enseignement universitaire public",
+    "genre" : "femme",
+    "valeur" : "59.6"
+  }, {
+    "annuel" : "2014",
+    "composante" : "Enseignement universitaire public",
+    "genre" : "homme",
+    "valeur" : "76.4"
+  }, {
+    "annuel" : "2014",
+    "composante" : "Formation professionnelle post-baccalauréat",
+    "genre" : "ensemble",
+    "valeur" : "66.0"
+  }, {
+    "annuel" : "2014",
+    "composante" : "Formation professionnelle post-baccalauréat",
+    "genre" : "femme",
+    "valeur" : "54.9"
+  }, {
+    "annuel" : "2014",
+    "composante" : "Formation professionnelle post-baccalauréat",
+    "genre" : "homme",
+    "valeur" : "76.4"
+  }, {
+    "annuel" : "2014",
+    "composante" : "Total",
+    "genre" : "Taux d'emploi",
+    "valeur" : "69.4"
+  }, {
+    "annuel" : "2014",
+    "composante" : "Total",
+    "genre" : "femme",
+    "valeur" : "60.3"
+  }, {
+    "annuel" : "2014",
+    "composante" : "Total",
+    "genre" : "homme",
+    "valeur" : "78.1"
+  } ],
+  "indicateur" : "taux d'emploi des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par composante et par genre"
+}

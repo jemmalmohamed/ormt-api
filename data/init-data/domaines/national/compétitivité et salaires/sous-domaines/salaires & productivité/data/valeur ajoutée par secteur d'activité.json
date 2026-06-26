@@ -1,0 +1,84 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "AGRICULTURE",
+    "valeur" : "13945"
+  }, {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "BTP",
+    "valeur" : "5559"
+  }, {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "INDUSTRIE",
+    "valeur" : "11058"
+  }, {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "SERVICE",
+    "valeur" : "64200"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "AGRICULTURE",
+    "valeur" : "11516"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "BTP",
+    "valeur" : "5026"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "INDUSTRIE",
+    "valeur" : "10329"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "SERVICE",
+    "valeur" : "53638"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "AGRICULTURE",
+    "valeur" : "15581"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "BTP",
+    "valeur" : "5300"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "INDUSTRIE",
+    "valeur" : "11570"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "SERVICE",
+    "valeur" : "58410"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "AGRICULTURE",
+    "valeur" : "10211"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "BTP",
+    "valeur" : "6178"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "INDUSTRIE",
+    "valeur" : "13049"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "SERVICE",
+    "valeur" : "70516"
+  } ],
+  "indicateur" : "valeur ajoutée par secteur d'activité"
+}

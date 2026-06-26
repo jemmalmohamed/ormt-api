@@ -26,11 +26,7 @@ public class DomaineDto extends BaseDto {
 
     private String description;
 
-    private String imageUrl;
-
     private Boolean actif;
-
-    private String apropos;
 
     @JsonInclude(content = JsonInclude.Include.CUSTOM, contentFilter = RoleAccesContentFilter.class)
     private List<RoleAccesSummaryDto> roleAcces;

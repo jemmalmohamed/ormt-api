@@ -1,0 +1,580 @@
+{
+  "data" : [ {
+    "annuel" : "2016",
+    "domaine_etudes" : "Commerce et gestion",
+    "valeur" : "12000"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Enseignement originel",
+    "valeur" : "14900"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+    "valeur" : "5000"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Lettres et Sciences Humaines",
+    "valeur" : "212200"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Médecine Dentaire",
+    "valeur" : "1900"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Médecine et Pharmacie",
+    "valeur" : "17100"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Sc.Juridiques, Economiques et Sociales",
+    "valeur" : "308300"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Sciences de l' ingénieur",
+    "valeur" : "18600"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Sciences de l'éducation",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Sciences de la santé (paramédical 2019)",
+    "valeur" : "300"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Sciences et Techniques(LST+LP)",
+    "valeur" : "22900"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Sciences",
+    "valeur" : "126900"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Sport",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Technologie(DUT)",
+    "valeur" : "9700"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Total",
+    "valeur" : "750000"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Traduction",
+    "valeur" : "300"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Commerce et gestion",
+    "valeur" : "12800"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Enseignement originel",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+    "valeur" : "6400"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Lettres et Sciences Humaines",
+    "valeur" : "223100"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Médecine Dentaire",
+    "valeur" : "1900"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Médecine et Pharmacie",
+    "valeur" : "18600"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Sc.Juridiques, Economiques et Sociales",
+    "valeur" : "345200"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Sciences de l' ingénieur",
+    "valeur" : "19700"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Sciences de l'éducation",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Sciences de la santé (paramédical 2019)",
+    "valeur" : "400"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Sciences et Techniques(LST+LP)",
+    "valeur" : "24800"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Sciences",
+    "valeur" : "116500"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Sport",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Technologie(DUT)",
+    "valeur" : "12000"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Total",
+    "valeur" : "782000"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Traduction",
+    "valeur" : "300"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Commerce et gestion",
+    "valeur" : "14400"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Enseignement originel",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+    "valeur" : "6500"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Lettres et Sciences Humaines",
+    "valeur" : "221500"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Médecine Dentaire",
+    "valeur" : "1800"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Médecine et Pharmacie",
+    "valeur" : "20300"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Sc.Juridiques, Economiques et Sociales",
+    "valeur" : "377500"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Sciences de l' ingénieur",
+    "valeur" : "20300"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Sciences de l'éducation",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Sciences de la santé (paramédical 2019)",
+    "valeur" : "600"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Sciences et Techniques(LST+LP)",
+    "valeur" : "28300"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Sciences",
+    "valeur" : "117500"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Sport",
+    "valeur" : "100"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Technologie(DUT)",
+    "valeur" : "11300"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Total",
+    "valeur" : "820000"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Traduction",
+    "valeur" : "300"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Commerce et gestion",
+    "valeur" : "16000"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Enseignement originel",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+    "valeur" : "7700"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Lettres et Sciences Humaines",
+    "valeur" : "224900"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Médecine Dentaire",
+    "valeur" : "1500"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Médecine et Pharmacie",
+    "valeur" : "19800"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Sc.Juridiques, Economiques et Sociales",
+    "valeur" : "424300"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Sciences de l' ingénieur",
+    "valeur" : "21600"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Sciences de l'éducation",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Sciences de la santé (paramédical 2019)",
+    "valeur" : "700"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Sciences et Techniques(LST+LP)",
+    "valeur" : "30900"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Sciences",
+    "valeur" : "115100"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Sport",
+    "valeur" : "400"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Technologie(DUT)",
+    "valeur" : "12800"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Total",
+    "valeur" : "876000"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Traduction",
+    "valeur" : "300"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Commerce et gestion",
+    "valeur" : "17900"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Enseignement originel",
+    "valeur" : "18600"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+    "valeur" : "9400"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Lettres et Sciences Humaines",
+    "valeur" : "206100"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Médecine Dentaire",
+    "valeur" : "1500"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Médecine et Pharmacie",
+    "valeur" : "22200"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Sc.Juridiques, Economiques et Sociales",
+    "valeur" : "462100"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Sciences de l' ingénieur",
+    "valeur" : "23200"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Sciences de l'éducation",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Sciences de la santé (paramédical 2019)",
+    "valeur" : "900"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Sciences et Techniques(LST+LP)",
+    "valeur" : "31200"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Sciences",
+    "valeur" : "113600"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Sport",
+    "valeur" : "300"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Technologie(DUT)",
+    "valeur" : "14500"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Total",
+    "valeur" : "922000"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Traduction",
+    "valeur" : "300"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Commerce et gestion",
+    "valeur" : "19900"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Enseignement originel",
+    "valeur" : "19000"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+    "valeur" : "11600"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Lettres et Sciences Humaines",
+    "valeur" : "216400"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Médecine Dentaire",
+    "valeur" : "1800"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Médecine et Pharmacie",
+    "valeur" : "24400"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Sc.Juridiques, Economiques et Sociales",
+    "valeur" : "503000"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Sciences de l' ingénieur",
+    "valeur" : "25100"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Sciences de l'éducation",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Sciences de la santé (paramédical 2019)",
+    "valeur" : "900"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Sciences et Techniques(LST+LP)",
+    "valeur" : "29700"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Sciences",
+    "valeur" : "120100"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Sport",
+    "valeur" : "400"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Technologie(DUT)",
+    "valeur" : "17400"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Total",
+    "valeur" : "990000"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Traduction",
+    "valeur" : "300"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Commerce et gestion",
+    "valeur" : "20900"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Enseignement originel",
+    "valeur" : "19400"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+    "valeur" : "10600"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Lettres et Sciences Humaines",
+    "valeur" : "239500"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Médecine Dentaire",
+    "valeur" : "1700"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Médecine et Pharmacie",
+    "valeur" : "25400"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Sc.Juridiques, Economiques et Sociales",
+    "valeur" : "544300"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Sciences de l' ingénieur",
+    "valeur" : "27600"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Sciences de l'éducation",
+    "valeur" : "2200"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Sciences de la santé (paramédical 2019)",
+    "valeur" : "900"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Sciences et Techniques(LST+LP)",
+    "valeur" : "30000"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Sciences",
+    "valeur" : "120600"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Sport",
+    "valeur" : "500"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Technologie(DUT)",
+    "valeur" : "17600"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Total",
+    "valeur" : "1061000"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Traduction",
+    "valeur" : "300"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Commerce et gestion",
+    "valeur" : "19600"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Enseignement originel",
+    "valeur" : "20400"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+    "valeur" : "18300"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Lettres et Sciences Humaines",
+    "valeur" : "239000"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Médecine Dentaire",
+    "valeur" : "1900"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Médecine et Pharmacie",
+    "valeur" : "28400"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Sc.Juridiques, Economiques et Sociales",
+    "valeur" : "561100"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Sciences de l' ingénieur",
+    "valeur" : "29700"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Sciences de l'éducation",
+    "valeur" : "3000"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Sciences de la santé (paramédical 2019)",
+    "valeur" : "900"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Sciences et Techniques(LST+LP)",
+    "valeur" : "28800"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Sciences",
+    "valeur" : "120600"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Sport",
+    "valeur" : "800"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Technologie(DUT)",
+    "valeur" : "23000"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Total",
+    "valeur" : "1096000"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Traduction",
+    "valeur" : "300"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Commerce et gestion",
+    "valeur" : "23800"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Enseignement originel",
+    "valeur" : "21900"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Formation des enseignants (Sciences de l'éducation et E.N.S et E.N.S.E.T)",
+    "valeur" : "34000"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Lettres et Sciences Humaines",
+    "valeur" : "255900"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Médecine Dentaire",
+    "valeur" : "2100"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Médecine et Pharmacie",
+    "valeur" : "31200"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Sc.Juridiques, Economiques et Sociales",
+    "valeur" : "534100"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Sciences de l' ingénieur",
+    "valeur" : "30800"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Sciences de l'éducation",
+    "valeur" : "4100"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Sciences de la santé (paramédical 2019)",
+    "valeur" : "1100"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Sciences et Techniques(LST+LP)",
+    "valeur" : "25300"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Sciences",
+    "valeur" : "120500"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Sport",
+    "valeur" : "1100"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Technologie(DUT)",
+    "valeur" : "20000"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Total",
+    "valeur" : "1106000"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Traduction",
+    "valeur" : "300"
+  } ],
+  "indicateur" : "nombre d'étudiants de l'enseignement universitaire public par domaine d'études"
+}

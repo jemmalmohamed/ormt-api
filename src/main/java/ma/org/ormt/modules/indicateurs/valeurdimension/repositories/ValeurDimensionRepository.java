@@ -1,5 +1,6 @@
 package ma.org.ormt.modules.indicateurs.valeurdimension.repositories;
 
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
@@ -39,5 +40,9 @@ public interface ValeurDimensionRepository extends BaseRepository<ValeurDimensio
             "AND vd.donneeIndicateur IS NOT NULL")
     boolean existsByDimensionAndIndicateurWithData(@Param("dimensionId") Long dimensionId,
             @Param("indicateurId") Long indicateurId);
+
+    @Modifying
+    @Query("DELETE FROM ValeurDimension vd WHERE vd.donneeIndicateur.indicateur.id = :indicateurId")
+    void deleteAllByIndicateurId(@Param("indicateurId") Long indicateurId);
 
 }

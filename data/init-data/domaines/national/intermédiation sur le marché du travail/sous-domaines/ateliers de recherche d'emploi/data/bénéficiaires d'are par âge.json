@@ -1,0 +1,148 @@
+{
+  "data" : [ {
+    "age" : "20 à 24 ans",
+    "annuel" : "2019",
+    "valeur" : "38"
+  }, {
+    "age" : "20 à 24 ans",
+    "annuel" : "2020",
+    "valeur" : "42"
+  }, {
+    "age" : "20 à 24 ans",
+    "annuel" : "2021",
+    "valeur" : "42"
+  }, {
+    "age" : "20 à 24 ans",
+    "annuel" : "2022",
+    "valeur" : "44"
+  }, {
+    "age" : "20 à 24 ans",
+    "annuel" : "2023",
+    "valeur" : "43"
+  }, {
+    "age" : "20 à 24 ans",
+    "annuel" : "2024",
+    "valeur" : "42"
+  }, {
+    "age" : "25 à moins de 35 ans",
+    "annuel" : "2019",
+    "valeur" : "40"
+  }, {
+    "age" : "25 à moins de 35 ans",
+    "annuel" : "2020",
+    "valeur" : "43"
+  }, {
+    "age" : "25 à moins de 35 ans",
+    "annuel" : "2021",
+    "valeur" : "41"
+  }, {
+    "age" : "25 à moins de 35 ans",
+    "annuel" : "2022",
+    "valeur" : "39"
+  }, {
+    "age" : "25 à moins de 35 ans",
+    "annuel" : "2023",
+    "valeur" : "40"
+  }, {
+    "age" : "25 à moins de 35 ans",
+    "annuel" : "2024",
+    "valeur" : "35"
+  }, {
+    "age" : "35 à moins de 45 ans",
+    "annuel" : "2019",
+    "valeur" : "6"
+  }, {
+    "age" : "35 à moins de 45 ans",
+    "annuel" : "2020",
+    "valeur" : "7"
+  }, {
+    "age" : "35 à moins de 45 ans",
+    "annuel" : "2021",
+    "valeur" : "8"
+  }, {
+    "age" : "35 à moins de 45 ans",
+    "annuel" : "2022",
+    "valeur" : "7"
+  }, {
+    "age" : "35 à moins de 45 ans",
+    "annuel" : "2023",
+    "valeur" : "7"
+  }, {
+    "age" : "35 à moins de 45 ans",
+    "annuel" : "2024",
+    "valeur" : "9"
+  }, {
+    "age" : "45 et Plus",
+    "annuel" : "2019",
+    "valeur" : "2"
+  }, {
+    "age" : "45 et Plus",
+    "annuel" : "2020",
+    "valeur" : "3"
+  }, {
+    "age" : "45 et Plus",
+    "annuel" : "2021",
+    "valeur" : "4"
+  }, {
+    "age" : "45 et Plus",
+    "annuel" : "2022",
+    "valeur" : "4"
+  }, {
+    "age" : "45 et Plus",
+    "annuel" : "2023",
+    "valeur" : "3"
+  }, {
+    "age" : "45 et Plus",
+    "annuel" : "2024",
+    "valeur" : "5"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2019",
+    "valeur" : "6"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2020",
+    "valeur" : "5"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2021",
+    "valeur" : "5"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2022",
+    "valeur" : "6"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2023",
+    "valeur" : "7"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2024",
+    "valeur" : "8"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2019",
+    "valeur" : "7"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2020",
+    "valeur" : "0"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2021",
+    "valeur" : "0"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2022",
+    "valeur" : "0"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2023",
+    "valeur" : "0"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2024",
+    "valeur" : "0"
+  } ],
+  "indicateur" : "bénéficiaires d'are par âge"
+}

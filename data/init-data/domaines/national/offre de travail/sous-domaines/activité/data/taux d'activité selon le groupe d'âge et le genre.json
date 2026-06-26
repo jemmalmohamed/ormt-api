@@ -1,0 +1,254 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "groupe_age" : "15-24 ans",
+    "valeur" : "13.2"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "groupe_age" : "25-34 ans",
+    "valeur" : "29.0"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "groupe_age" : "35-44 ans",
+    "valeur" : "27.2"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "groupe_age" : "45-59 ans",
+    "valeur" : "25.9"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "groupe_age" : "60 ans et plus",
+    "valeur" : "10.3"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "groupe_age" : "15-24 ans",
+    "valeur" : "36.8"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "groupe_age" : "25-34 ans",
+    "valeur" : "92.0"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "groupe_age" : "35-44 ans",
+    "valeur" : "95.7"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "groupe_age" : "45-59 ans",
+    "valeur" : "89.6"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "groupe_age" : "60 ans et plus",
+    "valeur" : "37.7"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "groupe_age" : "15-24 ans",
+    "valeur" : "11.4"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "groupe_age" : "25-34 ans",
+    "valeur" : "27.1"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "groupe_age" : "35-44 ans",
+    "valeur" : "26.0"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "groupe_age" : "45-59 ans",
+    "valeur" : "24.5"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "groupe_age" : "60 ans et plus",
+    "valeur" : "9.3"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "groupe_age" : "15-24 ans",
+    "valeur" : "35.3"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "groupe_age" : "25-34 ans",
+    "valeur" : "91.1"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "groupe_age" : "35-44 ans",
+    "valeur" : "96.0"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "groupe_age" : "45-59 ans",
+    "valeur" : "90.4"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "groupe_age" : "60 ans et plus",
+    "valeur" : "38.3"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "groupe_age" : "15-24 ans",
+    "valeur" : "12.1"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "groupe_age" : "25-34 ans",
+    "valeur" : "29.2"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "groupe_age" : "35-44 ans",
+    "valeur" : "27.2"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "groupe_age" : "45-59 ans",
+    "valeur" : "25.3"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "groupe_age" : "60 ans et plus",
+    "valeur" : "9.6"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "groupe_age" : "15-24 ans",
+    "valeur" : "35.4"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "groupe_age" : "25-34 ans",
+    "valeur" : "91.6"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "groupe_age" : "35-44 ans",
+    "valeur" : "95.3"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "groupe_age" : "45-59 ans",
+    "valeur" : "90.1"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "groupe_age" : "60 ans et plus",
+    "valeur" : "38.4"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "groupe_age" : "15-24 ans",
+    "valeur" : "11.7"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "groupe_age" : "25-34 ans",
+    "valeur" : "28.6"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "groupe_age" : "35-44 ans",
+    "valeur" : "25.2"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "groupe_age" : "45-59 ans",
+    "valeur" : "23.7"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "groupe_age" : "60 ans et plus",
+    "valeur" : "8.6"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "groupe_age" : "15-24 ans",
+    "valeur" : "33.5"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "groupe_age" : "25-34 ans",
+    "valeur" : "91.8"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "groupe_age" : "35-44 ans",
+    "valeur" : "95.0"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "groupe_age" : "45-59 ans",
+    "valeur" : "89.8"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "groupe_age" : "60 ans et plus",
+    "valeur" : "37.2"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "groupe_age" : "15-24 ans",
+    "valeur" : "11.4"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "groupe_age" : "25-34 ans",
+    "valeur" : "29.2"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "groupe_age" : "35-44 ans",
+    "valeur" : "23.4"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "groupe_age" : "45-59 ans",
+    "valeur" : "22.0"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "groupe_age" : "60 ans et plus",
+    "valeur" : "7.9"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "groupe_age" : "15-24 ans",
+    "valeur" : "33.4"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "groupe_age" : "25-34 ans",
+    "valeur" : "91.0"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "groupe_age" : "35-44 ans",
+    "valeur" : "94.2"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "groupe_age" : "45-59 ans",
+    "valeur" : "89.7"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "groupe_age" : "60 ans et plus",
+    "valeur" : "35.9"
+  } ],
+  "indicateur" : "taux d'activité selon le groupe d'âge et le genre"
+}

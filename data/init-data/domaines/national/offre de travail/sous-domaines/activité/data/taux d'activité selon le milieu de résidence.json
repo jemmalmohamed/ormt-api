@@ -1,0 +1,49 @@
+{
+  "data" : [ {
+    "annuel" : "2022",
+    "milieu" : "Ensemble",
+    "region" : "marrakech-safi",
+    "valeur" : "45.0"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Rural",
+    "region" : "marrakech-safi",
+    "valeur" : "48.2"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Urbain",
+    "region" : "marrakech-safi",
+    "valeur" : "41.4"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Ensemble",
+    "region" : "marrakech-safi",
+    "valeur" : "45.0"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Rural",
+    "region" : "marrakech-safi",
+    "valeur" : "46.0"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Urbain",
+    "region" : "marrakech-safi",
+    "valeur" : "41.7"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "Ensemble",
+    "region" : "marrakech-safi",
+    "valeur" : "43.8"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "Rural",
+    "region" : "marrakech-safi",
+    "valeur" : "45.1"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "Urbain",
+    "region" : "marrakech-safi",
+    "valeur" : "42.3"
+  } ],
+  "indicateur" : "taux d'activité selon le milieu de résidence"
+}

@@ -1,0 +1,64 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "duree" : "12 mois et plus",
+    "valeur" : "751000"
+  }, {
+    "annuel" : "2019",
+    "duree" : "Ensemble",
+    "valeur" : "1107000"
+  }, {
+    "annuel" : "2019",
+    "duree" : "moins de 12 mois",
+    "valeur" : "356000"
+  }, {
+    "annuel" : "2020",
+    "duree" : "12 mois et plus",
+    "valeur" : "805000"
+  }, {
+    "annuel" : "2020",
+    "duree" : "Ensemble",
+    "valeur" : "1429000"
+  }, {
+    "annuel" : "2020",
+    "duree" : "moins de 12 mois",
+    "valeur" : "624000"
+  }, {
+    "annuel" : "2021",
+    "duree" : "12 mois et plus",
+    "valeur" : "1093000"
+  }, {
+    "annuel" : "2021",
+    "duree" : "Ensemble",
+    "valeur" : "1508000"
+  }, {
+    "annuel" : "2021",
+    "duree" : "moins de 12 mois",
+    "valeur" : "415000"
+  }, {
+    "annuel" : "2022",
+    "duree" : "12 mois et plus",
+    "valeur" : "988000"
+  }, {
+    "annuel" : "2022",
+    "duree" : "Ensemble",
+    "valeur" : "1442000"
+  }, {
+    "annuel" : "2022",
+    "duree" : "moins de 12 mois",
+    "valeur" : "454000"
+  }, {
+    "annuel" : "2023",
+    "duree" : "12 mois et plus",
+    "valeur" : "1049000"
+  }, {
+    "annuel" : "2023",
+    "duree" : "Ensemble",
+    "valeur" : "1580000"
+  }, {
+    "annuel" : "2023",
+    "duree" : "moins de 12 mois",
+    "valeur" : "531000"
+  } ],
+  "indicateur" : "population active en chômage selon la durée"
+}

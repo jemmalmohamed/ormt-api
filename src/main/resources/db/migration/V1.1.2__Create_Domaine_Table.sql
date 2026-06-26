@@ -21,8 +21,6 @@ CREATE TABLE
         id BIGSERIAL PRIMARY KEY,
         nom varchar(255) NOT NULL UNIQUE,
         actif BOOLEAN NOT NULL DEFAULT TRUE,
-        apropos TEXT NULL,
-        image_url VARCHAR(255) NOT NULL,
          description varchar(255) NULL,
         status_code INT NULL,
         created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -32,21 +30,8 @@ CREATE TABLE
         last_modified_by VARCHAR(50)
     );
 
-CREATE TABLE
-    IF NOT EXISTS espace_domaine (
-        id BIGSERIAL PRIMARY KEY,
-        id_espace BIGINT NOT NULL,
-        id_domaine BIGINT NOT NULL,
-        ordre INT NULL DEFAULT 0,
-        status_code INT NULL,
-        created_date TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
-        last_modified_date TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
-        version BIGINT NOT NULL DEFAULT 0,
-        created_by VARCHAR(50),
-        last_modified_by VARCHAR(50),
-        CONSTRAINT fk_espace_domaine_espace FOREIGN KEY (id_espace) REFERENCES espace (id) ON DELETE CASCADE,
-        CONSTRAINT fk_espace_domaine_domaine FOREIGN KEY (id_domaine) REFERENCES domaine (id) ON DELETE CASCADE
-    );
+-- Legacy portail association removed.
+-- Espaces are now linked to domaine_analytique through espace_domaine_analytique.
 
 CREATE TABLE
     IF NOT EXISTS sous_domaine (

@@ -1,0 +1,120 @@
+{
+  "actif" : true,
+  "description" : "droit conventionnel",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "relations professionnelles",
+    "description" : "nombre de conventions collectives",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Nombre de conventions collectives - CHOROPLETH"
+    } ],
+    "nom" : "nombre de conventions collectives par région",
+    "regleCalcul" : null,
+    "source" : "miepeec",
+    "titre" : "nombre de conventions collectives",
+    "typeTb" : "grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "relations professionnelles",
+    "description" : "nombre de conventions collectives par secteur",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Nombre de conventions collectives par secteur - Courbes"
+    } ],
+    "nom" : "nombre de conventions collectives par secteur",
+    "regleCalcul" : null,
+    "source" : "miepeec",
+    "titre" : "nombre de conventions collectives par secteur",
+    "typeTb" : "grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "relations professionnelles",
+    "description" : "nombre de protocoles signés",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Nombre de protocoles signés - CHOROPLETH"
+    } ],
+    "nom" : "nombre de protocoles signés par région",
+    "regleCalcul" : null,
+    "source" : "miepeec",
+    "titre" : "nombre de protocoles signés",
+    "typeTb" : "grand public",
+    "unite" : ""
+  } ],
+  "nom" : "droit conventionnel"
+}

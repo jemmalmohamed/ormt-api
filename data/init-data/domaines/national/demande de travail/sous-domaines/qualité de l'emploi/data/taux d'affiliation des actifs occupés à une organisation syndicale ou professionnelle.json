@@ -1,0 +1,40 @@
+{
+  "data" : [ {
+    "annuel" : "2021",
+    "genre" : "Ensemble",
+    "valeur" : "4.7"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "valeur" : "3.2"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "valeur" : "2.7"
+  }, {
+    "annuel" : "2022",
+    "genre" : "Ensemble",
+    "valeur" : "4.0"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "valeur" : "3.0"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "valeur" : "2.4"
+  }, {
+    "annuel" : "2023",
+    "genre" : "Ensemble",
+    "valeur" : "3.8"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "valeur" : "3.3"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "valeur" : "2.4"
+  } ],
+  "indicateur" : "taux d'affiliation des actifs occupés à une organisation syndicale ou professionnelle"
+}

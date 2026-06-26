@@ -1,6 +1,7 @@
 package ma.org.ormt.modules.chiffres.controllers.admin;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort.Direction;
@@ -66,11 +67,14 @@ public class ChiffreCleAdminLoadController extends BaseController<ChiffreCle> {
                                 globalFilter);
 
                 Page<ChiffreCle> chiffreclePage = chiffrecleService.getEntityList(requestParams);
+                List<ChiffreCleDto> dtos = chiffreclePage.getContent().stream()
+                                .map(this::toListDto)
+                                .collect(Collectors.toList());
 
-                return buildResponseEntity(
-                                chiffreclePage.getContent(), ChiffreCleDto.class,
+                return buildResponseDtos(
+                                dtos,
                                 adjustQueryParamsToGetAllRecords(requestParams, chiffreclePage),
-                                HttpStatus.OK, true);
+                                HttpStatus.OK);
         }
 
         @Operation(summary = "Get " + ENTITY_NAME + " by id")
@@ -104,6 +108,14 @@ public class ChiffreCleAdminLoadController extends BaseController<ChiffreCle> {
                         return dtoClass.cast(chiffrecleDtoMapper.mapToDto(entity, roleAccesService));
                 }
                 throw new IllegalArgumentException("Unsupported DTO type: " + dtoClass.getName());
+        }
+
+        private ChiffreCleDto toListDto(ChiffreCle entity) {
+                ChiffreCleDto dto = chiffrecleDtoMapper.mapToDto(entity);
+                dto.setIndicateur(null);
+                dto.setDonneeIndicateur(null);
+                dto.setRoleAcces(null);
+                return dto;
         }
 
 }

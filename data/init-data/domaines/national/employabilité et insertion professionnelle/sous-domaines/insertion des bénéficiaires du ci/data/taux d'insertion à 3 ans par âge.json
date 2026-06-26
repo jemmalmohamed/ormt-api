@@ -1,0 +1,104 @@
+{
+  "data" : [ {
+    "age_insertion" : "25 à 29 ans",
+    "annuel" : "2019",
+    "valeur" : "64.2"
+  }, {
+    "age_insertion" : "25 à 29 ans",
+    "annuel" : "2020",
+    "valeur" : "61.9"
+  }, {
+    "age_insertion" : "25 à 29 ans",
+    "annuel" : "2021",
+    "valeur" : "62.1"
+  }, {
+    "age_insertion" : "25 à 29 ans",
+    "annuel" : "2022",
+    "valeur" : "67.0"
+  }, {
+    "age_insertion" : "25 à 29 ans",
+    "annuel" : "2023",
+    "valeur" : "67.1"
+  }, {
+    "age_insertion" : "30 à 34 ans",
+    "annuel" : "2019",
+    "valeur" : "62.0"
+  }, {
+    "age_insertion" : "30 à 34 ans",
+    "annuel" : "2020",
+    "valeur" : "61.4"
+  }, {
+    "age_insertion" : "30 à 34 ans",
+    "annuel" : "2021",
+    "valeur" : "61.0"
+  }, {
+    "age_insertion" : "30 à 34 ans",
+    "annuel" : "2022",
+    "valeur" : "66.9"
+  }, {
+    "age_insertion" : "30 à 34 ans",
+    "annuel" : "2023",
+    "valeur" : "67.5"
+  }, {
+    "age_insertion" : "35 ans et plus",
+    "annuel" : "2019",
+    "valeur" : "60.1"
+  }, {
+    "age_insertion" : "35 ans et plus",
+    "annuel" : "2020",
+    "valeur" : "62.2"
+  }, {
+    "age_insertion" : "35 ans et plus",
+    "annuel" : "2021",
+    "valeur" : "64.1"
+  }, {
+    "age_insertion" : "35 ans et plus",
+    "annuel" : "2022",
+    "valeur" : "68.6"
+  }, {
+    "age_insertion" : "35 ans et plus",
+    "annuel" : "2023",
+    "valeur" : "68.6"
+  }, {
+    "age_insertion" : "Ensemble",
+    "annuel" : "2019",
+    "valeur" : "63.4"
+  }, {
+    "age_insertion" : "Ensemble",
+    "annuel" : "2020",
+    "valeur" : "60.7"
+  }, {
+    "age_insertion" : "Ensemble",
+    "annuel" : "2021",
+    "valeur" : "60.8"
+  }, {
+    "age_insertion" : "Ensemble",
+    "annuel" : "2022",
+    "valeur" : "65.3"
+  }, {
+    "age_insertion" : "Ensemble",
+    "annuel" : "2023",
+    "valeur" : "64.4"
+  }, {
+    "age_insertion" : "Moins de 25 ans",
+    "annuel" : "2019",
+    "valeur" : "63.2"
+  }, {
+    "age_insertion" : "Moins de 25 ans",
+    "annuel" : "2020",
+    "valeur" : "59.9"
+  }, {
+    "age_insertion" : "Moins de 25 ans",
+    "annuel" : "2021",
+    "valeur" : "59.6"
+  }, {
+    "age_insertion" : "Moins de 25 ans",
+    "annuel" : "2022",
+    "valeur" : "64.3"
+  }, {
+    "age_insertion" : "Moins de 25 ans",
+    "annuel" : "2023",
+    "valeur" : "62.6"
+  } ],
+  "indicateur" : "taux d'insertion à 3 ans par âge"
+}

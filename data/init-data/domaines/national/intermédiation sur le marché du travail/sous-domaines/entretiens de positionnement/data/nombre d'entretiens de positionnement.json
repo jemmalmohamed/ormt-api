@@ -1,0 +1,22 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "valeur" : "69000"
+  }, {
+    "annuel" : "2020",
+    "valeur" : "72000"
+  }, {
+    "annuel" : "2021",
+    "valeur" : "79000"
+  }, {
+    "annuel" : "2022",
+    "valeur" : "75000"
+  }, {
+    "annuel" : "2023",
+    "valeur" : "86000"
+  }, {
+    "annuel" : "2024",
+    "valeur" : "89000"
+  } ],
+  "indicateur" : "nombre d'entretiens de positionnement"
+}

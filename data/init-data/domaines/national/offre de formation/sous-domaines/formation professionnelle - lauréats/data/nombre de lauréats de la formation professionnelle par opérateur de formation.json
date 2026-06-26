@@ -1,0 +1,132 @@
+{
+  "data" : [ {
+    "annuel" : "2016",
+    "operateur_formation" : "AUTRES OPERATEURS PUBLIC",
+    "valeur" : "24000"
+  }, {
+    "annuel" : "2016",
+    "operateur_formation" : "OFPPT",
+    "valeur" : "120000"
+  }, {
+    "annuel" : "2016",
+    "operateur_formation" : "PRIVE",
+    "valeur" : "39000"
+  }, {
+    "annuel" : "2016",
+    "operateur_formation" : "TOTAL",
+    "valeur" : "182000"
+  }, {
+    "annuel" : "2017",
+    "operateur_formation" : "AUTRES OPERATEURS PUBLIC",
+    "valeur" : "24000"
+  }, {
+    "annuel" : "2017",
+    "operateur_formation" : "OFPPT",
+    "valeur" : "122000"
+  }, {
+    "annuel" : "2017",
+    "operateur_formation" : "PRIVE",
+    "valeur" : "41000"
+  }, {
+    "annuel" : "2017",
+    "operateur_formation" : "TOTAL",
+    "valeur" : "186000"
+  }, {
+    "annuel" : "2018",
+    "operateur_formation" : "AUTRES OPERATEURS PUBLIC",
+    "valeur" : "19000"
+  }, {
+    "annuel" : "2018",
+    "operateur_formation" : "OFPPT",
+    "valeur" : "134000"
+  }, {
+    "annuel" : "2018",
+    "operateur_formation" : "PRIVE",
+    "valeur" : "43000"
+  }, {
+    "annuel" : "2018",
+    "operateur_formation" : "TOTAL",
+    "valeur" : "196000"
+  }, {
+    "annuel" : "2019",
+    "operateur_formation" : "AUTRES OPERATEURS PUBLIC",
+    "valeur" : "30000"
+  }, {
+    "annuel" : "2019",
+    "operateur_formation" : "OFPPT",
+    "valeur" : "119000"
+  }, {
+    "annuel" : "2019",
+    "operateur_formation" : "PRIVE",
+    "valeur" : "43000"
+  }, {
+    "annuel" : "2019",
+    "operateur_formation" : "TOTAL",
+    "valeur" : "191000"
+  }, {
+    "annuel" : "2020",
+    "operateur_formation" : "AUTRES OPERATEURS PUBLIC",
+    "valeur" : "26000"
+  }, {
+    "annuel" : "2020",
+    "operateur_formation" : "OFPPT",
+    "valeur" : "104000"
+  }, {
+    "annuel" : "2020",
+    "operateur_formation" : "PRIVE",
+    "valeur" : "48000"
+  }, {
+    "annuel" : "2020",
+    "operateur_formation" : "TOTAL",
+    "valeur" : "178000"
+  }, {
+    "annuel" : "2021",
+    "operateur_formation" : "AUTRES OPERATEURS PUBLIC",
+    "valeur" : "25000"
+  }, {
+    "annuel" : "2021",
+    "operateur_formation" : "OFPPT",
+    "valeur" : "113000"
+  }, {
+    "annuel" : "2021",
+    "operateur_formation" : "PRIVE",
+    "valeur" : "43000"
+  }, {
+    "annuel" : "2021",
+    "operateur_formation" : "TOTAL",
+    "valeur" : "180000"
+  }, {
+    "annuel" : "2022",
+    "operateur_formation" : "AUTRES OPERATEURS PUBLIC",
+    "valeur" : "27000"
+  }, {
+    "annuel" : "2022",
+    "operateur_formation" : "OFPPT",
+    "valeur" : "75000"
+  }, {
+    "annuel" : "2022",
+    "operateur_formation" : "PRIVE",
+    "valeur" : "45000"
+  }, {
+    "annuel" : "2022",
+    "operateur_formation" : "TOTAL",
+    "valeur" : "147000"
+  }, {
+    "annuel" : "2023",
+    "operateur_formation" : "AUTRES OPERATEURS PUBLIC",
+    "valeur" : "30000"
+  }, {
+    "annuel" : "2023",
+    "operateur_formation" : "OFPPT",
+    "valeur" : "71000"
+  }, {
+    "annuel" : "2023",
+    "operateur_formation" : "PRIVE",
+    "valeur" : "56000"
+  }, {
+    "annuel" : "2023",
+    "operateur_formation" : "TOTAL",
+    "valeur" : "156000"
+  } ],
+  "indicateur" : "nombre de lauréats de la formation professionnelle par opérateur de formation"
+}

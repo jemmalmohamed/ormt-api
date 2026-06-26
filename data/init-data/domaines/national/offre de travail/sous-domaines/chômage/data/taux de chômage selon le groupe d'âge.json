@@ -1,0 +1,104 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "groupe_age" : "15-24 ans",
+    "valeur" : "24.9"
+  }, {
+    "annuel" : "2019",
+    "groupe_age" : "25-34 ans",
+    "valeur" : "15.1"
+  }, {
+    "annuel" : "2019",
+    "groupe_age" : "35-44 ans",
+    "valeur" : "4.5"
+  }, {
+    "annuel" : "2019",
+    "groupe_age" : "45 ans et plus",
+    "valeur" : "2.1"
+  }, {
+    "annuel" : "2019",
+    "groupe_age" : "Ensemble",
+    "valeur" : "9.2"
+  }, {
+    "annuel" : "2020",
+    "groupe_age" : "15-24 ans",
+    "valeur" : "31.2"
+  }, {
+    "annuel" : "2020",
+    "groupe_age" : "25-34 ans",
+    "valeur" : "18.5"
+  }, {
+    "annuel" : "2020",
+    "groupe_age" : "35-44 ans",
+    "valeur" : "6.9"
+  }, {
+    "annuel" : "2020",
+    "groupe_age" : "45 ans et plus",
+    "valeur" : "4"
+  }, {
+    "annuel" : "2020",
+    "groupe_age" : "Ensemble",
+    "valeur" : "11.9"
+  }, {
+    "annuel" : "2021",
+    "groupe_age" : "15-24 ans",
+    "valeur" : "31.8"
+  }, {
+    "annuel" : "2021",
+    "groupe_age" : "25-34 ans",
+    "valeur" : "19.6"
+  }, {
+    "annuel" : "2021",
+    "groupe_age" : "35-44 ans",
+    "valeur" : "7"
+  }, {
+    "annuel" : "2021",
+    "groupe_age" : "45 ans et plus",
+    "valeur" : "3.8"
+  }, {
+    "annuel" : "2021",
+    "groupe_age" : "Ensemble",
+    "valeur" : "12.3"
+  }, {
+    "annuel" : "2022",
+    "groupe_age" : "15-24 ans",
+    "valeur" : "32.7"
+  }, {
+    "annuel" : "2022",
+    "groupe_age" : "25-34 ans",
+    "valeur" : "19.2"
+  }, {
+    "annuel" : "2022",
+    "groupe_age" : "35-44 ans",
+    "valeur" : "6.4"
+  }, {
+    "annuel" : "2022",
+    "groupe_age" : "45 ans et plus",
+    "valeur" : "3.3"
+  }, {
+    "annuel" : "2022",
+    "groupe_age" : "Ensemble",
+    "valeur" : "11.8"
+  }, {
+    "annuel" : "2023",
+    "groupe_age" : "15-24 ans",
+    "valeur" : "35.8"
+  }, {
+    "annuel" : "2023",
+    "groupe_age" : "25-34 ans",
+    "valeur" : "20.6"
+  }, {
+    "annuel" : "2023",
+    "groupe_age" : "35-44 ans",
+    "valeur" : "7.4"
+  }, {
+    "annuel" : "2023",
+    "groupe_age" : "45 ans et plus",
+    "valeur" : "4.3"
+  }, {
+    "annuel" : "2023",
+    "groupe_age" : "Ensemble",
+    "valeur" : "13"
+  } ],
+  "indicateur" : "taux de chômage selon le groupe d'âge"
+}

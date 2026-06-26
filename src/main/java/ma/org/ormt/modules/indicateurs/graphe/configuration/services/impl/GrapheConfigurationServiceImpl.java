@@ -1,5 +1,6 @@
 package ma.org.ormt.modules.indicateurs.graphe.configuration.services.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -112,8 +113,11 @@ public class GrapheConfigurationServiceImpl extends BaseServiceImpl<GrapheConfig
     private void updateFields(GrapheConfiguration grapheConfiguration, GrapheConfigurationRequestDto requestDto) {
 
         grapheConfiguration.setNom(requestDto.getNom());
-        grapheConfiguration.setDimensionMappingJson("{}");
+        grapheConfiguration.setDimensionMappingJson(resolveDimensionMappingJson(requestDto));
         grapheConfiguration.setChartOptionsJson(requestDto.getChartOptionsJson());
+        grapheConfiguration.setChartSpecVersion(resolveChartSpecVersion(requestDto));
+        grapheConfiguration.setChartSpecJson(requestDto.getChartSpecJson());
+        grapheConfiguration.setConfigSystem(resolveConfigSystem(requestDto));
         grapheConfiguration.setIsDefault(requestDto.getIsDefault());
 
         grapheConfiguration.setIndicateur(
@@ -126,6 +130,33 @@ public class GrapheConfigurationServiceImpl extends BaseServiceImpl<GrapheConfig
 
     }
 
+    private String resolveDimensionMappingJson(GrapheConfigurationRequestDto requestDto) {
+        if (requestDto.getDimensionMappingJson() == null || requestDto.getDimensionMappingJson().isBlank()) {
+            return "{}";
+        }
+        return requestDto.getDimensionMappingJson();
+    }
+
+    private Integer resolveChartSpecVersion(GrapheConfigurationRequestDto requestDto) {
+        if (requestDto.getChartSpecVersion() != null) {
+            return requestDto.getChartSpecVersion();
+        }
+        if (requestDto.getChartSpecJson() != null && !requestDto.getChartSpecJson().isBlank()) {
+            return 1;
+        }
+        return null;
+    }
+
+    private String resolveConfigSystem(GrapheConfigurationRequestDto requestDto) {
+        if (requestDto.getConfigSystem() != null && !requestDto.getConfigSystem().isBlank()) {
+            return requestDto.getConfigSystem();
+        }
+        if (requestDto.getChartSpecJson() != null && !requestDto.getChartSpecJson().isBlank()) {
+            return "chartspec";
+        }
+        return "legacy";
+    }
+
     @Override
     public GrapheConfiguration setDefaultGrapheConfiguration(Long indicateurId, Long grapheConfigurationId) {
         GrapheConfiguration grapheConfiguration = grapheConfigurationRepository.findById(grapheConfigurationId)
@@ -135,13 +166,16 @@ public class GrapheConfigurationServiceImpl extends BaseServiceImpl<GrapheConfig
             throw new IllegalArgumentException("La GrapheConfiguration n'appartient pas à l'indicateur spécifié");
         }
 
-        // Find current default configuration for this indicator and set it to false
-        Optional<GrapheConfiguration> currentDefault = grapheConfigurationRepository
+        // Récupère toutes les configurations par défaut pour cet indicateur et les remet à false
+        // (gère le cas où plusieurs doublons existent en base, qui causait un NonUniqueResultException)
+        List<GrapheConfiguration> currentDefaults = grapheConfigurationRepository
                 .findByIndicateurIdAndIsDefaultTrue(indicateurId);
 
-        if (currentDefault.isPresent() && !currentDefault.get().getId().equals(grapheConfigurationId)) {
-            currentDefault.get().setIsDefault(false);
-            grapheConfigurationRepository.save(currentDefault.get());
+        for (GrapheConfiguration current : currentDefaults) {
+            if (!current.getId().equals(grapheConfigurationId)) {
+                current.setIsDefault(false);
+                grapheConfigurationRepository.save(current);
+            }
         }
 
         grapheConfiguration.setIsDefault(true);

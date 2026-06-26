@@ -1,0 +1,172 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "region" : "casablanca-settat",
+    "valeur" : "32.9"
+  }, {
+    "annuel" : "2019",
+    "region" : "fès-meknès",
+    "valeur" : "4.2"
+  }, {
+    "annuel" : "2019",
+    "region" : "l'oriental",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2019",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "48.2"
+  }, {
+    "annuel" : "2019",
+    "region" : "souss-massa",
+    "valeur" : "1.6"
+  }, {
+    "annuel" : "2019",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "13.0"
+  }, {
+    "annuel" : "2020",
+    "region" : "casablanca-settat",
+    "valeur" : "26.6"
+  }, {
+    "annuel" : "2020",
+    "region" : "fès-meknès",
+    "valeur" : "3.7"
+  }, {
+    "annuel" : "2020",
+    "region" : "l'oriental",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2020",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "56.8"
+  }, {
+    "annuel" : "2020",
+    "region" : "souss-massa",
+    "valeur" : "1.7"
+  }, {
+    "annuel" : "2020",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "11.1"
+  }, {
+    "annuel" : "2021",
+    "region" : "casablanca-settat",
+    "valeur" : "30.8"
+  }, {
+    "annuel" : "2021",
+    "region" : "fès-meknès",
+    "valeur" : "4.1"
+  }, {
+    "annuel" : "2021",
+    "region" : "l'oriental",
+    "valeur" : "0.0"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "valeur" : "0.5"
+  }, {
+    "annuel" : "2021",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "48.2"
+  }, {
+    "annuel" : "2021",
+    "region" : "souss-massa",
+    "valeur" : "1.4"
+  }, {
+    "annuel" : "2021",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "15.0"
+  }, {
+    "annuel" : "2022",
+    "region" : "casablanca-settat",
+    "valeur" : "35.6"
+  }, {
+    "annuel" : "2022",
+    "region" : "fès-meknès",
+    "valeur" : "3.2"
+  }, {
+    "annuel" : "2022",
+    "region" : "l'oriental",
+    "valeur" : "0.3"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "valeur" : "1.7"
+  }, {
+    "annuel" : "2022",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "51.7"
+  }, {
+    "annuel" : "2022",
+    "region" : "souss-massa",
+    "valeur" : "3.0"
+  }, {
+    "annuel" : "2022",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "4.5"
+  }, {
+    "annuel" : "2023",
+    "region" : "casablanca-settat",
+    "valeur" : "28.6"
+  }, {
+    "annuel" : "2023",
+    "region" : "fès-meknès",
+    "valeur" : "5.9"
+  }, {
+    "annuel" : "2023",
+    "region" : "l'oriental",
+    "valeur" : "0.9"
+  }, {
+    "annuel" : "2023",
+    "region" : "marrakech-safi",
+    "valeur" : "0.9"
+  }, {
+    "annuel" : "2023",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "48.6"
+  }, {
+    "annuel" : "2023",
+    "region" : "souss-massa",
+    "valeur" : "3.9"
+  }, {
+    "annuel" : "2023",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "11.3"
+  }, {
+    "annuel" : "2024",
+    "region" : "casablanca-settat",
+    "valeur" : "27.6"
+  }, {
+    "annuel" : "2024",
+    "region" : "fès-meknès",
+    "valeur" : "2.1"
+  }, {
+    "annuel" : "2024",
+    "region" : "l'oriental",
+    "valeur" : "0.3"
+  }, {
+    "annuel" : "2024",
+    "region" : "marrakech-safi",
+    "valeur" : "0.4"
+  }, {
+    "annuel" : "2024",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "57.0"
+  }, {
+    "annuel" : "2024",
+    "region" : "souss-massa",
+    "valeur" : "3.2"
+  }, {
+    "annuel" : "2024",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "9.5"
+  } ],
+  "indicateur" : "bénéficiaires de la fse par région"
+}

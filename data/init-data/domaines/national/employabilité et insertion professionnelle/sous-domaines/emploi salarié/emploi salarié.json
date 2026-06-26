@@ -1,0 +1,172 @@
+{
+  "actif" : true,
+  "description" : "Sous domaine du domaine Employabilité et insertion professionnelle.",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi salarié",
+    "description" : "emploi salarié ventilé par genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Emploi salarié par genre - Camembert"
+    } ],
+    "nom" : "emploi salarié par genre",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "emploi salarié par genre",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi salarié",
+    "description" : "emploi salarié.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Emploi salarié - CHOROPLETH"
+    } ],
+    "nom" : "emploi salarié par région",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "emploi salarié",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi salarié",
+    "description" : "nombre des bénéficiaires de l'emploi salarié.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre des bénéficiaires de l'emploi salarié - Histogramme"
+    } ],
+    "nom" : "nombre des bénéficiaires de l'emploi salarié",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre des bénéficiaires de l'emploi salarié",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi salarié",
+    "description" : "objectif ciblé pour l'emploi salarié.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Objectif ciblé - Histogramme"
+    } ],
+    "nom" : "objectif ciblé",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "objectif ciblé",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "emploi salarié",
+    "description" : "taux de réalisation de l'objectif ciblé pour l'emploi salarié.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Taux de réalisation de l'objectif ciblé - Histogramme"
+    } ],
+    "nom" : "taux de réalisation de l'objectif ciblé",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "taux de réalisation de l'objectif ciblé",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  } ],
+  "nom" : "emploi salarié"
+}

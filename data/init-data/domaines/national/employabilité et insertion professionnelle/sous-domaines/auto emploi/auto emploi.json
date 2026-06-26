@@ -1,0 +1,354 @@
+{
+  "actif" : true,
+  "description" : "Sous domaine du domaine Employabilité et insertion professionnelle.",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "entreprises crées",
+    "description" : "emplois crées.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Emplois crées - CHOROPLETH"
+    } ],
+    "nom" : "emplois crées par région",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "emplois crées",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "entreprises crées",
+    "description" : "entreprises crées ventilées par genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Entreprises crées par genre - Camembert"
+    } ],
+    "nom" : "entreprises crées par genre",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "entreprises crées par genre",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "entreprises crées",
+    "description" : "entreprises crées.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Entreprises crées - CHOROPLETH"
+    } ],
+    "nom" : "entreprises crées par région",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "entreprises crées",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "entreprises crées",
+    "description" : "nombre total d'entreprises crées.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre d'entreprises crées - Histogramme"
+    } ],
+    "nom" : "nombre d'entreprises crées",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre d'entreprises crées",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "porteurs de projet accompagnés",
+    "description" : "nombre total de porteurs de projet accompagnés.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre de porteurs de projet accompagnés - Histogramme"
+    } ],
+    "nom" : "nombre de porteurs de projet accompagnés",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre de porteurs de projet accompagnés",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "entreprises crées",
+    "description" : "nombre total des emplois crées.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre des emplois crées - Histogramme"
+    } ],
+    "nom" : "nombre des emplois crées",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre des emplois crées",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "porteurs de projet accompagnés",
+    "description" : "objectif ciblé pour l'accompagnement à l'auto emploi.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Objectif ciblé (accompagnement) - Histogramme"
+    } ],
+    "nom" : "objectif ciblé (accompagnement)",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "objectif ciblé (accompagnement)",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "porteurs de projet accompagnés",
+    "description" : "porteurs de projet accompagnés ventilés par genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Porteurs de projet accompagnés par genre - Camembert"
+    } ],
+    "nom" : "porteurs de projet accompagnés par genre",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "porteurs de projet accompagnés par genre",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "entreprises crées",
+    "description" : "porteurs de projet accompagnés.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Porteurs de projet accompagnés - CHOROPLETH"
+    } ],
+    "nom" : "porteurs de projet accompagnés par région",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "porteurs de projet accompagnés",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "porteurs de projet accompagnés",
+    "description" : "porteurs de projet accompagnés ventilés par âge.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "age autoemploi",
+      "nom" : "age_autoemploi",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Porteurs de projet accompagnés par âge - Camembert"
+    } ],
+    "nom" : "porteurs de projet accompagnés par âge",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "porteurs de projet accompagnés par âge",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  } ],
+  "nom" : "auto emploi"
+}

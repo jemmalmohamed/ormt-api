@@ -1,0 +1,349 @@
+package ma.org.ormt.seeder.data.tbgroup;
+
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.text.Normalizer;
+import java.util.List;
+import java.util.Locale;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
+import ma.org.ormt.core.utilities.files.FileDataService;
+import ma.org.ormt.modules.chiffres.models.ChiffreCle;
+import ma.org.ormt.modules.chiffres.repositories.ChiffreCleRepository;
+import ma.org.ormt.modules.dashboard.tbd.models.TbdDashboard;
+import ma.org.ormt.modules.dashboard.tbd.models.TbdSection;
+import ma.org.ormt.modules.dashboard.tbd.models.TbdSourceListing;
+import ma.org.ormt.modules.dashboard.tbd.models.TbdWidget;
+import ma.org.ormt.modules.dashboard.tbd.models.TbdWidgetRow;
+import ma.org.ormt.modules.dashboard.tbd.repositories.TbdDashboardRepository;
+import ma.org.ormt.modules.dashboard.tbd.repositories.TbdSectionRepository;
+import ma.org.ormt.modules.dashboard.tbd.repositories.TbdSourceListingRepository;
+import ma.org.ormt.modules.dashboard.tbd.repositories.TbdWidgetRepository;
+import ma.org.ormt.modules.dashboard.tbd.repositories.TbdWidgetRowRepository;
+import ma.org.ormt.modules.indicateurs.indicateur.models.Indicateur;
+import ma.org.ormt.modules.indicateurs.indicateur.services.indicateur.IndicateurService;
+import ma.org.ormt.modules.indicateurs.source.models.Source;
+import ma.org.ormt.modules.indicateurs.source.repositories.SourceRepository;
+
+@Log4j2
+@Component
+@Order(8)
+@RequiredArgsConstructor
+public class TbdDashboardJsonSeeder implements CommandLineRunner {
+
+    private static final String TDB_DASHBOARDS_JSON_FILE = "tbd_dashboards.json";
+
+    @Value("${starter.database.seed}")
+    private boolean seeding;
+
+    @Value("${data.external.data_path}")
+    private String dataExternalPath;
+
+    @Value("${data.external.territoire}")
+    private String territoire;
+
+    private final FileDataService fileDataService;
+    private final TbdDashboardRepository dashboardRepository;
+    private final TbdSourceListingRepository sourceListingRepository;
+    private final TbdSectionRepository sectionRepository;
+    private final TbdWidgetRowRepository widgetRowRepository;
+    private final TbdWidgetRepository widgetRepository;
+    private final SourceRepository sourceRepository;
+    private final ChiffreCleRepository chiffreCleRepository;
+    private final IndicateurService indicateurService;
+
+    @Override
+    public void run(String... args) {
+        if (!seeding) {
+            log.info("Seeding is disabled. Skipping TDB dashboard JSON seeding.");
+            return;
+        }
+
+        try {
+            String initDataPath = dataExternalPath + "/init-data/tb_group/" + territoire;
+            Path resourcePath = Paths.get(initDataPath);
+            if (!Files.exists(resourcePath)) {
+                log.warn("Resource path {} does not exist. Skipping TDB dashboard JSON seeding.", resourcePath);
+                return;
+            }
+
+            File jsonFile = new File(resourcePath.toFile(), TDB_DASHBOARDS_JSON_FILE);
+            if (!fileDataService.fileExists(jsonFile)) {
+                log.warn("TDB dashboards JSON file not found at: {}", jsonFile.getAbsolutePath());
+                return;
+            }
+
+            createDashboardsFromJsonFile(jsonFile);
+            log.info("TDB dashboard JSON seeding completed successfully.");
+        } catch (Exception e) {
+            log.error("Error during TDB dashboard JSON seeding: {}", e.getMessage(), e);
+        }
+    }
+
+    @Transactional
+    private void createDashboardsFromJsonFile(File jsonFile) {
+        try {
+            List<TbdDashboardSeed> dashboardSeeds = fileDataService.readJsonFileAsList(
+                    jsonFile,
+                    new TypeReference<List<TbdDashboardSeed>>() {
+                    });
+
+            if (dashboardSeeds == null || dashboardSeeds.isEmpty()) {
+                log.warn("No TDB dashboards found in file: {}", jsonFile.getName());
+                return;
+            }
+
+            for (TbdDashboardSeed dashboardSeed : dashboardSeeds) {
+                try {
+                    createDashboard(dashboardSeed);
+                } catch (Exception e) {
+                    log.error("Error creating TDB dashboard {}: {}",
+                            dashboardSeed != null ? dashboardSeed.getNom() : "unknown", e.getMessage(), e);
+                }
+            }
+        } catch (Exception e) {
+            log.error("Error processing TDB dashboards file {}: {}", jsonFile.getName(), e.getMessage(), e);
+        }
+    }
+
+    private void createDashboard(TbdDashboardSeed seed) {
+        if (seed == null || seed.getNom() == null || seed.getNom().isBlank()) {
+            log.warn("Skipping invalid TDB dashboard seed without nom.");
+            return;
+        }
+
+        Optional<TbdDashboard> existing = dashboardRepository.findByNomIgnoreCaseAndActifTrue(seed.getNom());
+        if (existing.isPresent()) {
+            log.info("TDB dashboard '{}' already exists. Skipping.", seed.getNom());
+            return;
+        }
+
+        TbdDashboard dashboard = dashboardRepository.save(TbdDashboard.builder()
+                .nom(seed.getNom())
+                .titre(seed.getTitre())
+                .sousTitre(seed.getSousTitre())
+                .description(seed.getDescription())
+                .sourceText(seed.getSourceText())
+                .status(normalizeStatus(seed.getStatus()))
+                .actif(seed.getActif() == null ? true : seed.getActif())
+                .build());
+
+        createSources(dashboard.getId(), seed.getSources());
+        createSections(dashboard.getId(), seed.getSections());
+        log.info("Created TDB dashboard: {} (id={})", dashboard.getNom(), dashboard.getId());
+    }
+
+    private String normalizeStatus(String rawStatus) {
+        if (rawStatus == null || rawStatus.isBlank()) {
+            return "DRAFT";
+        }
+
+        String normalized = Normalizer.normalize(rawStatus.trim(), Normalizer.Form.NFD)
+                .replaceAll("\\p{M}", "")
+                .toUpperCase(Locale.ROOT);
+
+        return switch (normalized) {
+            case "PUBLISHED", "PUBLISH", "PUBLIE", "PUBLIEE", "PUBLIER" -> "PUBLISHED";
+            case "ARCHIVED", "ARCHIVE", "ARCHIVEE", "ARCHIVER" -> "ARCHIVED";
+            case "DRAFT", "BROUILLON" -> "DRAFT";
+            default -> {
+                log.warn("Unknown TDB dashboard status '{}'. Falling back to DRAFT.", rawStatus);
+                yield "DRAFT";
+            }
+        };
+    }
+
+    private void createSources(Long dashboardId, List<TbdSourceSeed> sources) {
+        if (sources == null || sources.isEmpty()) {
+            return;
+        }
+        for (TbdSourceSeed sourceSeed : sources) {
+            String sourceNom = firstNonBlank(sourceSeed.getNom(), sourceSeed.getSourceNom());
+            String sourceAbreviation = firstNonBlank(sourceSeed.getAbreviation(), sourceSeed.getSourceAbreviation());
+            if (!StringUtils.hasText(sourceNom) && !StringUtils.hasText(sourceAbreviation)) {
+                continue;
+            }
+            Optional<Source> sourceOpt = resolveSource(sourceNom, sourceAbreviation);
+            if (sourceOpt.isEmpty()) {
+                log.warn("Source '{}'/'{}' not found for TDB dashboard {}", sourceNom, sourceAbreviation, dashboardId);
+                continue;
+            }
+            sourceListingRepository.save(TbdSourceListing.builder()
+                    .dashboardId(dashboardId)
+                    .source(sourceOpt.get())
+                    .ordre(sourceSeed.getOrdre() == null ? 0 : sourceSeed.getOrdre())
+                    .build());
+        }
+    }
+
+    private void createSections(Long dashboardId, List<TbdSectionSeed> sections) {
+        if (sections == null || sections.isEmpty()) {
+            return;
+        }
+        for (TbdSectionSeed sectionSeed : sections) {
+            TbdSection section = sectionRepository.save(TbdSection.builder()
+                    .dashboardId(dashboardId)
+                    .label(sectionSeed.getLabel())
+                    .ordre(sectionSeed.getOrdre() == null ? 0 : sectionSeed.getOrdre())
+                    .sizePercent(sectionSeed.getSizePercent() == null ? 33 : sectionSeed.getSizePercent())
+                    .actif(true)
+                    .build());
+            createRows(section.getId(), sectionSeed.getRows());
+        }
+    }
+
+    private void createRows(Long sectionId, List<TbdRowSeed> rows) {
+        if (rows == null || rows.isEmpty()) {
+            return;
+        }
+        for (TbdRowSeed rowSeed : rows) {
+            TbdWidgetRow row = widgetRowRepository.save(TbdWidgetRow.builder()
+                    .sectionId(sectionId)
+                    .ordre(rowSeed.getOrdre() == null ? 0 : rowSeed.getOrdre())
+                    .sizePercent(rowSeed.getSizePercent() == null ? 100 : rowSeed.getSizePercent())
+                    .heightPx(rowSeed.getHeightPx() == null ? 200 : rowSeed.getHeightPx())
+                    .build());
+            createWidgets(row.getId(), rowSeed.getWidgets());
+        }
+    }
+
+    private void createWidgets(Long rowId, List<TbdWidgetSeed> widgets) {
+        if (widgets == null || widgets.isEmpty()) {
+            return;
+        }
+        for (TbdWidgetSeed widgetSeed : widgets) {
+            TbdWidget.TbdWidgetBuilder<?, ?> builder = TbdWidget.builder()
+                    .rowId(rowId)
+                    .type(widgetSeed.getType())
+                    .titre(widgetSeed.getTitre())
+                    .ordre(widgetSeed.getOrdre() == null ? 0 : widgetSeed.getOrdre())
+                    .sizePercent(widgetSeed.getSizePercent() == null ? 50 : widgetSeed.getSizePercent())
+                    .contentJson(widgetSeed.getContentJson())
+                    .actif(widgetSeed.getActif() == null ? true : widgetSeed.getActif());
+
+            Long resolvedKpiId = resolveKpiId(widgetSeed);
+            if (resolvedKpiId != null) {
+                builder.kpiId(resolvedKpiId);
+            }
+
+            resolveIndicateur(widgetSeed).ifPresent(builder::indicateur);
+
+            widgetRepository.save(builder.build());
+        }
+    }
+
+    private Optional<Source> resolveSource(String sourceNom, String sourceAbreviation) {
+        if (StringUtils.hasText(sourceNom)) {
+            Optional<Source> byName = sourceRepository.findByNomIgnoreCase(sourceNom);
+            if (byName.isPresent()) {
+                return byName;
+            }
+        }
+        if (StringUtils.hasText(sourceAbreviation)) {
+            return sourceRepository.findByAbreviation(sourceAbreviation);
+        }
+        return Optional.empty();
+    }
+
+    private Long resolveKpiId(TbdWidgetSeed widgetSeed) {
+        if (widgetSeed.getKpiId() != null) {
+            return widgetSeed.getKpiId();
+        }
+        if (!StringUtils.hasText(widgetSeed.getChiffreCleLibelle())) {
+            return null;
+        }
+
+        Optional<ChiffreCle> chiffreCle = chiffreCleRepository.findByLibelle(widgetSeed.getChiffreCleLibelle());
+        if (chiffreCle.isEmpty()) {
+            log.warn("KPI '{}' not found for TDB widget '{}'.", widgetSeed.getChiffreCleLibelle(), widgetSeed.getTitre());
+            return null;
+        }
+        return chiffreCle.get().getId();
+    }
+
+    private Optional<Indicateur> resolveIndicateur(TbdWidgetSeed widgetSeed) {
+        if (!StringUtils.hasText(widgetSeed.getIndicateurNom())) {
+            return Optional.empty();
+        }
+
+        Optional<Indicateur> indicateur = indicateurService.findByNom(widgetSeed.getIndicateurNom());
+        if (indicateur.isEmpty()) {
+            log.warn("Indicateur '{}' not found for TDB widget '{}'.", widgetSeed.getIndicateurNom(), widgetSeed.getTitre());
+        }
+        return indicateur;
+    }
+
+    private String firstNonBlank(String... values) {
+        for (String value : values) {
+            if (StringUtils.hasText(value)) {
+                return value;
+            }
+        }
+        return null;
+    }
+
+    @Data
+    private static class TbdDashboardSeed {
+        private String nom;
+        private String titre;
+        private String sousTitre;
+        private String description;
+        private String sourceText;
+        private String status;
+        private Boolean actif;
+        private List<TbdSourceSeed> sources;
+        private List<TbdSectionSeed> sections;
+    }
+
+    @Data
+    private static class TbdSourceSeed {
+        private String nom;
+        private String sourceNom;
+        private String abreviation;
+        private String sourceAbreviation;
+        private Integer ordre;
+    }
+
+    @Data
+    private static class TbdSectionSeed {
+        private String label;
+        private Integer ordre;
+        private Integer sizePercent;
+        private List<TbdRowSeed> rows;
+    }
+
+    @Data
+    private static class TbdRowSeed {
+        private Integer ordre;
+        private Integer sizePercent;
+        private Integer heightPx;
+        private List<TbdWidgetSeed> widgets;
+    }
+
+    @Data
+    private static class TbdWidgetSeed {
+        private String type;
+        private String titre;
+        private Integer ordre;
+        private Integer sizePercent;
+        private Long kpiId;
+        private String chiffreCleLibelle;
+        private String indicateurNom;
+        private String contentJson;
+        private Boolean actif;
+    }
+}

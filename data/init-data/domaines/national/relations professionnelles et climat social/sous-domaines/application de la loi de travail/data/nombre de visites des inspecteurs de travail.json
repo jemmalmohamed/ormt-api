@@ -1,0 +1,13 @@
+{
+  "data" : [ {
+    "annuel" : "2021",
+    "valeur" : "24860"
+  }, {
+    "annuel" : "2022",
+    "valeur" : "32179"
+  }, {
+    "annuel" : "2023",
+    "valeur" : "52580"
+  } ],
+  "indicateur" : "nombre de visites des inspecteurs de travail"
+}

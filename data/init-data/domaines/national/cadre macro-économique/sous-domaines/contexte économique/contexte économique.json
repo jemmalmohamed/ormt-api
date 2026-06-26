@@ -1,0 +1,166 @@
+{
+  "actif" : true,
+  "description" : "contexte économique",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "contexte économique",
+    "description" : "produit intérieur brut aux prix courants",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "produit intérieur brut aux prix courants - Choropleth"
+    } ],
+    "nom" : "produit intérieur brut aux prix courants",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "produit intérieur brut aux prix courants",
+    "typeTb" : "décisionnel",
+    "unite" : "millions de dh"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "contexte économique",
+    "description" : "montant du pib rapporté au nombre d'habitants d'une région.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "produit intérieur brut par habitant (aux prix courants) - Choropleth"
+    } ],
+    "nom" : "produit intérieur brut par habitant (aux prix courants) par région",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "produit intérieur brut par habitant (aux prix courants)",
+    "typeTb" : "décisionnel",
+    "unite" : "dh"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "contexte économique",
+    "description" : "variation annuelle en pourcentage du pib",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "taux de croissance du pib en volume - Choropleth"
+    } ],
+    "nom" : "taux de croissance du pib en volume",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux de croissance du pib en volume",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "contexte économique",
+    "description" : "valeur totale ajoutée par chaque branche d'activité économique, exprimée en millions de dirhams aux prix courants.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "branche d'activité",
+      "nom" : "branche_activite",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "valeur ajoutée par branche d'activité aux prix courants - Choropleth"
+    } ],
+    "nom" : "valeur ajoutée par branche d'activité aux prix courants",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "valeur ajoutée par branche d'activité aux prix courants",
+    "typeTb" : "décisionnel",
+    "unite" : "millions de dh"
+  } ],
+  "nom" : "contexte économique"
+}

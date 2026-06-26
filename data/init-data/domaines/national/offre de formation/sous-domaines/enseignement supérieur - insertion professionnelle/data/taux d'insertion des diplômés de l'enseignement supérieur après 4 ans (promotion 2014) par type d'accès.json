@@ -1,0 +1,16 @@
+{
+  "data" : [ {
+    "annuel" : "2014",
+    "type_acces" : "Total",
+    "valeur" : "83.9"
+  }, {
+    "annuel" : "2014",
+    "type_acces" : "Université Accès ouvert",
+    "valeur" : "81.3"
+  }, {
+    "annuel" : "2014",
+    "type_acces" : "Université Accès régulé",
+    "valeur" : "91.7"
+  } ],
+  "indicateur" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par type d'accès"
+}

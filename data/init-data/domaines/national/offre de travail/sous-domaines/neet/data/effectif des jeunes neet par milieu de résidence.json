@@ -1,0 +1,64 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "milieu" : "National",
+    "valeur" : "1563140"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Rural",
+    "valeur" : "777229"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Urbain",
+    "valeur" : "785911"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "National",
+    "valeur" : "1565704"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Rural",
+    "valeur" : "778367"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Urbain",
+    "valeur" : "787336"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "National",
+    "valeur" : "1529227"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Rural",
+    "valeur" : "755960"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Urbain",
+    "valeur" : "773267"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "National",
+    "valeur" : "1483191"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Rural",
+    "valeur" : "720574"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Urbain",
+    "valeur" : "762617"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "National",
+    "valeur" : "1541283.3"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Rural",
+    "valeur" : "744749"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Urbain",
+    "valeur" : "798435"
+  } ],
+  "indicateur" : "effectif des jeunes neet par milieu de résidence"
+}

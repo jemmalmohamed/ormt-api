@@ -1,0 +1,379 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "diplome" : "ensemble",
+    "genre" : "femme",
+    "valeur" : "2489000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "ensemble",
+    "genre" : "homme",
+    "valeur" : "8486000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "ensemble",
+    "genre" : "national",
+    "valeur" : "10975000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "niveau moyen",
+    "genre" : "femme",
+    "valeur" : "438000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "niveau moyen",
+    "genre" : "homme",
+    "valeur" : "2817000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "niveau moyen",
+    "genre" : "national",
+    "valeur" : "3249000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "niveau supérieur",
+    "genre" : "femme",
+    "valeur" : "535000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "niveau supérieur",
+    "genre" : "homme",
+    "valeur" : "1103000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "niveau supérieur",
+    "genre" : "national",
+    "valeur" : "1635000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "non déclaré",
+    "genre" : "femme",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "non déclaré",
+    "genre" : "homme",
+    "valeur" : "8000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "non déclaré",
+    "genre" : "national",
+    "valeur" : "11000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "sans diplôme",
+    "genre" : "femme",
+    "valeur" : "1518000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "sans diplôme",
+    "genre" : "homme",
+    "valeur" : "4565000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "sans diplôme",
+    "genre" : "national",
+    "valeur" : "6080000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "ensemble",
+    "genre" : "femme",
+    "valeur" : "2265000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "ensemble",
+    "genre" : "homme",
+    "valeur" : "8278000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "ensemble",
+    "genre" : "national",
+    "valeur" : "10542000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "niveau moyen",
+    "genre" : "femme",
+    "valeur" : "405000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "niveau moyen",
+    "genre" : "homme",
+    "valeur" : "2815000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "niveau moyen",
+    "genre" : "national",
+    "valeur" : "3215000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "niveau supérieur",
+    "genre" : "femme",
+    "valeur" : "512000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "niveau supérieur",
+    "genre" : "homme",
+    "valeur" : "1093000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "niveau supérieur",
+    "genre" : "national",
+    "valeur" : "1602000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "non déclaré",
+    "genre" : "femme",
+    "valeur" : "2000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "non déclaré",
+    "genre" : "homme",
+    "valeur" : "8000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "non déclaré",
+    "genre" : "national",
+    "valeur" : "11000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "sans diplôme",
+    "genre" : "femme",
+    "valeur" : "1348000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "sans diplôme",
+    "genre" : "homme",
+    "valeur" : "4371000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "sans diplôme",
+    "genre" : "national",
+    "valeur" : "5724000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "ensemble",
+    "genre" : "femme",
+    "valeur" : "2398000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "ensemble",
+    "genre" : "homme",
+    "valeur" : "8374000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "ensemble",
+    "genre" : "national",
+    "valeur" : "10772000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "niveau moyen",
+    "genre" : "femme",
+    "valeur" : "434000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "niveau moyen",
+    "genre" : "homme",
+    "valeur" : "2923000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "niveau moyen",
+    "genre" : "national",
+    "valeur" : "3361000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "niveau supérieur",
+    "genre" : "femme",
+    "valeur" : "566000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "niveau supérieur",
+    "genre" : "homme",
+    "valeur" : "1147000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "niveau supérieur",
+    "genre" : "national",
+    "valeur" : "1713000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "non déclaré",
+    "genre" : "femme",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "non déclaré",
+    "genre" : "homme",
+    "valeur" : "8000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "non déclaré",
+    "genre" : "national",
+    "valeur" : "11000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "sans diplôme",
+    "genre" : "femme",
+    "valeur" : "1398000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "sans diplôme",
+    "genre" : "homme",
+    "valeur" : "4296000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "sans diplôme",
+    "genre" : "national",
+    "valeur" : "5698000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "ensemble",
+    "genre" : "femme",
+    "valeur" : "2287000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "ensemble",
+    "genre" : "homme",
+    "valeur" : "8462000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "ensemble",
+    "genre" : "national",
+    "valeur" : "10749000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "niveau moyen",
+    "genre" : "femme",
+    "valeur" : "425000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "niveau moyen",
+    "genre" : "homme",
+    "valeur" : "2996000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "niveau moyen",
+    "genre" : "national",
+    "valeur" : "3418000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "niveau supérieur",
+    "genre" : "femme",
+    "valeur" : "574000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "niveau supérieur",
+    "genre" : "homme",
+    "valeur" : "1252000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "niveau supérieur",
+    "genre" : "national",
+    "valeur" : "1827000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "non déclaré",
+    "genre" : "femme",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "non déclaré",
+    "genre" : "homme",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "non déclaré",
+    "genre" : "national",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "sans diplôme",
+    "genre" : "femme",
+    "valeur" : "1288000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "sans diplôme",
+    "genre" : "homme",
+    "valeur" : "4214000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "sans diplôme",
+    "genre" : "national",
+    "valeur" : "5503000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "ensemble",
+    "genre" : "femme",
+    "valeur" : "2192000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "ensemble",
+    "genre" : "homme",
+    "valeur" : "8399000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "ensemble",
+    "genre" : "national",
+    "valeur" : "10591000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "niveau moyen",
+    "genre" : "femme",
+    "valeur" : "414000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "niveau moyen",
+    "genre" : "homme",
+    "valeur" : "2973000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "niveau moyen",
+    "genre" : "national",
+    "valeur" : "3389000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "niveau supérieur",
+    "genre" : "femme",
+    "valeur" : "625000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "niveau supérieur",
+    "genre" : "homme",
+    "valeur" : "1293000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "niveau supérieur",
+    "genre" : "national",
+    "valeur" : "1917000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "non déclaré",
+    "genre" : "femme",
+    "valeur" : "2000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "non déclaré",
+    "genre" : "homme",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "non déclaré",
+    "genre" : "national",
+    "valeur" : "11000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "sans diplôme",
+    "genre" : "femme",
+    "valeur" : "1153000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "sans diplôme",
+    "genre" : "homme",
+    "valeur" : "4124000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "sans diplôme",
+    "genre" : "national",
+    "valeur" : "5274000"
+  } ],
+  "indicateur" : "emploi par diplôme"
+}

@@ -1,5 +1,7 @@
 package ma.org.ormt.seeder.data;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
@@ -15,6 +17,35 @@ import lombok.extern.log4j.Log4j2;
 @RequiredArgsConstructor
 @Order(1)
 public class ResetServicesAndDatabase implements CommandLineRunner {
+
+    private static final List<String> TABLES_TO_TRUNCATE = List.of(
+            "categorie_analytique_section",
+            "domaine_analytique_section",
+            "tb_group_domaine_analytique",
+            "espace_domaine_analytique",
+            "categorie_analytique",
+            "domaine_analytique",
+            "tbd_widget",
+            "tbd_widget_row",
+            "tbd_section",
+            "tbd_source_listing",
+            "tbd_dashboard",
+            "observatoire_page_content",
+            "tb_group",
+            "graphe_configuration",
+            "graphe_type",
+            "indicateur_dimension",
+            "indicateur",
+            "dimension",
+            "source",
+            "publication",
+            "partenaire",
+            "espace",
+            "sous_domaine",
+            "domaine",
+            "province",
+            "region",
+            "role_acces");
 
     @Value("${starter.database.reset}")
     private boolean resetDatabase;
@@ -35,31 +66,7 @@ public class ResetServicesAndDatabase implements CommandLineRunner {
     }
 
     private void resetDatabase() {
-        truncateTable("role_acces");
-        truncateTable("province");
-        truncateTable("region");
-
-        truncateTable("domaine");
-        truncateTable("sous_domaine");
-
-        truncateTable("espace_domaine");
-        truncateTable("espace");
-        truncateTable("source");
-
-        truncateTable("indicateur_dimension");
-        truncateTable("dimension");
-        truncateTable("indicateur");
-        truncateTable("partenaire");
-        truncateTable("publication");
-        truncateTable("graphe_configuration");
-        truncateTable("graphe_type");
-
-        // dashboard
-        truncateTable("tb_domaine_indicateur");
-        truncateTable("tb_domaine");
-
-        truncateTable("tableau_bord");
-
+        TABLES_TO_TRUNCATE.forEach(this::truncateTable);
     }
 
     @Transactional

@@ -247,9 +247,23 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
         if (specification == null) {
             return additionalSpec;
         }
-        return (root, query, criteriaBuilder) -> criteriaBuilder.and(
-                specification.toPredicate(root, query, criteriaBuilder),
-                additionalSpec.toPredicate(root, query, criteriaBuilder));
+        if (additionalSpec == null) {
+            return specification;
+        }
+        return (root, query, criteriaBuilder) -> {
+            var predicate = specification.toPredicate(root, query, criteriaBuilder);
+            var additionalPredicate = additionalSpec.toPredicate(root, query, criteriaBuilder);
+
+            if (predicate == null) {
+                return additionalPredicate;
+            }
+
+            if (additionalPredicate == null) {
+                return predicate;
+            }
+
+            return criteriaBuilder.and(predicate, additionalPredicate);
+        };
     }
 
     /**

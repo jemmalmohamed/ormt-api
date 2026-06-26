@@ -1,0 +1,104 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "taille_entreprise" : "1 à 10 salariés",
+    "valeur" : "57.7"
+  }, {
+    "annuel" : "2019",
+    "taille_entreprise" : "100 salariés et plus",
+    "valeur" : "65.7"
+  }, {
+    "annuel" : "2019",
+    "taille_entreprise" : "11 à 50 salariés",
+    "valeur" : "61.2"
+  }, {
+    "annuel" : "2019",
+    "taille_entreprise" : "51 à 100 salariés",
+    "valeur" : "63.5"
+  }, {
+    "annuel" : "2019",
+    "taille_entreprise" : "Ensemble",
+    "valeur" : "63.4"
+  }, {
+    "annuel" : "2020",
+    "taille_entreprise" : "1 à 10 salariés",
+    "valeur" : "58.7"
+  }, {
+    "annuel" : "2020",
+    "taille_entreprise" : "100 salariés et plus",
+    "valeur" : "61.6"
+  }, {
+    "annuel" : "2020",
+    "taille_entreprise" : "11 à 50 salariés",
+    "valeur" : "58.4"
+  }, {
+    "annuel" : "2020",
+    "taille_entreprise" : "51 à 100 salariés",
+    "valeur" : "62.2"
+  }, {
+    "annuel" : "2020",
+    "taille_entreprise" : "Ensemble",
+    "valeur" : "60.7"
+  }, {
+    "annuel" : "2021",
+    "taille_entreprise" : "1 à 10 salariés",
+    "valeur" : "60.4"
+  }, {
+    "annuel" : "2021",
+    "taille_entreprise" : "100 salariés et plus",
+    "valeur" : "61.3"
+  }, {
+    "annuel" : "2021",
+    "taille_entreprise" : "11 à 50 salariés",
+    "valeur" : "60.7"
+  }, {
+    "annuel" : "2021",
+    "taille_entreprise" : "51 à 100 salariés",
+    "valeur" : "59.7"
+  }, {
+    "annuel" : "2021",
+    "taille_entreprise" : "Ensemble",
+    "valeur" : "60.8"
+  }, {
+    "annuel" : "2022",
+    "taille_entreprise" : "1 à 10 salariés",
+    "valeur" : "64.4"
+  }, {
+    "annuel" : "2022",
+    "taille_entreprise" : "100 salariés et plus",
+    "valeur" : "65.4"
+  }, {
+    "annuel" : "2022",
+    "taille_entreprise" : "11 à 50 salariés",
+    "valeur" : "66.5"
+  }, {
+    "annuel" : "2022",
+    "taille_entreprise" : "51 à 100 salariés",
+    "valeur" : "64.2"
+  }, {
+    "annuel" : "2022",
+    "taille_entreprise" : "Ensemble",
+    "valeur" : "65.3"
+  }, {
+    "annuel" : "2023",
+    "taille_entreprise" : "1 à 10 salariés",
+    "valeur" : "63.6"
+  }, {
+    "annuel" : "2023",
+    "taille_entreprise" : "100 salariés et plus",
+    "valeur" : "64.1"
+  }, {
+    "annuel" : "2023",
+    "taille_entreprise" : "11 à 50 salariés",
+    "valeur" : "66.7"
+  }, {
+    "annuel" : "2023",
+    "taille_entreprise" : "51 à 100 salariés",
+    "valeur" : "64.0"
+  }, {
+    "annuel" : "2023",
+    "taille_entreprise" : "Ensemble",
+    "valeur" : "64.4"
+  } ],
+  "indicateur" : "taux d'insertion à 3 ans par taille d'entreprise"
+}

@@ -1,0 +1,100 @@
+{
+  "data" : [ {
+    "annuel" : "2016",
+    "mode_formation" : "Formation Résidentielle et Alterné",
+    "valeur" : "165000"
+  }, {
+    "annuel" : "2016",
+    "mode_formation" : "Formation par apprentissage",
+    "valeur" : "17000"
+  }, {
+    "annuel" : "2016",
+    "mode_formation" : "TOTAL",
+    "valeur" : "182000"
+  }, {
+    "annuel" : "2017",
+    "mode_formation" : "Formation Résidentielle et Alterné",
+    "valeur" : "169000"
+  }, {
+    "annuel" : "2017",
+    "mode_formation" : "Formation par apprentissage",
+    "valeur" : "17000"
+  }, {
+    "annuel" : "2017",
+    "mode_formation" : "TOTAL",
+    "valeur" : "186000"
+  }, {
+    "annuel" : "2018",
+    "mode_formation" : "Formation Résidentielle et Alterné",
+    "valeur" : "173000"
+  }, {
+    "annuel" : "2018",
+    "mode_formation" : "Formation par apprentissage",
+    "valeur" : "22000"
+  }, {
+    "annuel" : "2018",
+    "mode_formation" : "TOTAL",
+    "valeur" : "196000"
+  }, {
+    "annuel" : "2019",
+    "mode_formation" : "Formation Résidentielle et Alterné",
+    "valeur" : "169000"
+  }, {
+    "annuel" : "2019",
+    "mode_formation" : "Formation par apprentissage",
+    "valeur" : "22000"
+  }, {
+    "annuel" : "2019",
+    "mode_formation" : "TOTAL",
+    "valeur" : "191000"
+  }, {
+    "annuel" : "2020",
+    "mode_formation" : "Formation Résidentielle et Alterné",
+    "valeur" : "159000"
+  }, {
+    "annuel" : "2020",
+    "mode_formation" : "Formation par apprentissage",
+    "valeur" : "18000"
+  }, {
+    "annuel" : "2020",
+    "mode_formation" : "TOTAL",
+    "valeur" : "178000"
+  }, {
+    "annuel" : "2021",
+    "mode_formation" : "Formation Résidentielle et Alterné",
+    "valeur" : "164000"
+  }, {
+    "annuel" : "2021",
+    "mode_formation" : "Formation par apprentissage",
+    "valeur" : "16000"
+  }, {
+    "annuel" : "2021",
+    "mode_formation" : "TOTAL",
+    "valeur" : "180000"
+  }, {
+    "annuel" : "2022",
+    "mode_formation" : "Formation Résidentielle et Alterné",
+    "valeur" : "125000"
+  }, {
+    "annuel" : "2022",
+    "mode_formation" : "Formation par apprentissage",
+    "valeur" : "22000"
+  }, {
+    "annuel" : "2022",
+    "mode_formation" : "TOTAL",
+    "valeur" : "147000"
+  }, {
+    "annuel" : "2023",
+    "mode_formation" : "Formation Résidentielle et Alterné",
+    "valeur" : "134000"
+  }, {
+    "annuel" : "2023",
+    "mode_formation" : "Formation par apprentissage",
+    "valeur" : "23000"
+  }, {
+    "annuel" : "2023",
+    "mode_formation" : "TOTAL",
+    "valeur" : "156000"
+  } ],
+  "indicateur" : "nombre de lauréats de la formation professionnelle par mode de formation"
+}

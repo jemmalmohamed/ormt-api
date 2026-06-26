@@ -215,18 +215,7 @@ public class IndicateurExportSimpleService {
     }
 
     public static void createEspacesCell(Row row, int colIdx, Indicateur indicateur) {
-        String espaces = indicateur.getSousDomaines() != null
-                ? indicateur.getSousDomaines().stream()
-                        .filter(sd -> sd.getDomaine() != null
-                                && sd.getDomaine().getEspaceDomaines() != null)
-                        .flatMap(sd -> sd.getDomaine().getEspaceDomaines().stream())
-                        .filter(ed -> ed.getEspace() != null && ed.getEspace().getNom() != null)
-                        .map(ed -> ed.getEspace().getNom())
-                        .distinct()
-                        .filter(nom -> !nom.isEmpty())
-                        .reduce((a, b) -> a + " - " + b).orElse("")
-                : "";
-        ExcelUtils.createCell(row, colIdx, espaces);
+        ExcelUtils.createCell(row, colIdx, "");
     }
 
     public static void createSousDomainesCell(Row row, int colIdx, Indicateur indicateur) {

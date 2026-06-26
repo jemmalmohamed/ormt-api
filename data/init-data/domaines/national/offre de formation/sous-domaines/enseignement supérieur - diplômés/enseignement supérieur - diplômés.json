@@ -1,0 +1,310 @@
+{
+  "actif" : true,
+  "description" : "Indicateurs relatifs aux diplômés de l'enseignement supérieur (public, privé, formation des cadres) par genre, composante et domaine d'études.",
+  "indicateurs" : [ {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "diplômés",
+    "description" : "nombre de diplômés de l'enseignement supérieur par composante.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "composante",
+      "nom" : "composante",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre de diplômés de l'enseignement supérieur par composante - Histogramme"
+    } ],
+    "nom" : "nombre de diplômés de l'enseignement supérieur par composante",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "nombre de diplômés de l'enseignement supérieur par composante",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "diplômés",
+    "description" : "nombre de diplômés de l'enseignement supérieur par genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Nombre de diplômés de l'enseignement supérieur par genre - Camembert"
+    } ],
+    "nom" : "nombre de diplômés de l'enseignement supérieur par genre",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "nombre de diplômés de l'enseignement supérieur par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "diplômés",
+    "description" : "nombre de diplômés de l'enseignement supérieur privé par domaine d'études.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "domaine d'études",
+      "nom" : "domaine_etudes",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre de diplômés de l'enseignement supérieur privé par domaine d'études - Histogramme"
+    } ],
+    "nom" : "nombre de diplômés de l'enseignement supérieur privé par domaine d'études",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "nombre de diplômés de l'enseignement supérieur privé par domaine d'études",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "diplômés",
+    "description" : "nombre de diplômés de l'enseignement supérieur privé par genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Nombre de diplômés de l'enseignement supérieur privé par genre - Camembert"
+    } ],
+    "nom" : "nombre de diplômés de l'enseignement supérieur privé par genre",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "nombre de diplômés de l'enseignement supérieur privé par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "diplômés",
+    "description" : "nombre de diplômés de l'enseignement supérieur public par genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Nombre de diplômés de l'enseignement supérieur public par genre - Camembert"
+    } ],
+    "nom" : "nombre de diplômés de l'enseignement supérieur public par genre",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "nombre de diplômés de l'enseignement supérieur public par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "diplômés",
+    "description" : "nombre de diplômés de l'enseignement universitaire public par domaine d'études.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "domaine d'études",
+      "nom" : "domaine_etudes",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre de diplômés de l'enseignement universitaire public par domaine d'études - Histogramme"
+    } ],
+    "nom" : "nombre de diplômés de l'enseignement universitaire public par domaine d'études",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "nombre de diplômés de l'enseignement universitaire public par domaine d'études",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "diplômés",
+    "description" : "nombre de diplômés de la formation des cadres par domaine d'études.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "domaine d'études",
+      "nom" : "domaine_etudes",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre de diplômés de la formation des cadres par domaine d'études - Histogramme"
+    } ],
+    "nom" : "nombre de diplômés de la formation des cadres par domaine d'études",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "nombre de diplômés de la formation des cadres par domaine d'études",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "diplômés",
+    "description" : "nombre de diplômés de la formation des cadres par genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Nombre de diplômés de la formation des cadres par genre - Camembert"
+    } ],
+    "nom" : "nombre de diplômés de la formation des cadres par genre",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "nombre de diplômés de la formation des cadres par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  } ],
+  "nom" : "enseignement supérieur - diplômés"
+}

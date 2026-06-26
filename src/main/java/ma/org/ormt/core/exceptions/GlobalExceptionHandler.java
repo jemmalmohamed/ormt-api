@@ -11,6 +11,7 @@ import org.hibernate.StaleObjectStateException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MaxUploadSizeExceededException;
 import org.springframework.orm.ObjectOptimisticLockingFailureException;
 import org.springframework.security.access.AccessDeniedException;
@@ -71,6 +72,14 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<ErrorResponse> handleException(IllegalArgumentException exception) {
+
+        return buildErrorResponse(HttpStatus.UNPROCESSABLE_ENTITY, exception.getMessage(),
+                "exception.error.validation.message", "Validation Data");
+
+    }
+
+    @ExceptionHandler(IllegalStateException.class)
+    public ResponseEntity<ErrorResponse> handleException(IllegalStateException exception) {
 
         return buildErrorResponse(HttpStatus.UNPROCESSABLE_ENTITY, exception.getMessage(),
                 "exception.error.validation.message", "Validation Data");
@@ -174,6 +183,10 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(IOException.class)
     public ResponseEntity<ErrorResponse> handleIOException(IOException exception) {
+        if (isClientDisconnect(exception)) {
+            log.warn("Client disconnected before response completed: {}", exception.getMessage());
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
+        }
 
         return buildErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, exception.getMessage(),
                 "exception.error.io.message", "Input/Output Error");
@@ -229,6 +242,22 @@ public class GlobalExceptionHandler {
             return matcher.group(1).substring(matcher.group(1).lastIndexOf('.') + 1);
         }
         return "UnknownEntity";
+    }
+
+    private boolean isClientDisconnect(Throwable throwable) {
+        Throwable current = throwable;
+        while (current != null) {
+            String message = current.getMessage();
+            String className = current.getClass().getName();
+            if ((StringUtils.hasText(message) && (message.contains("Broken pipe")
+                    || message.contains("Connection reset by peer")
+                    || message.contains("ClientAbortException")))
+                    || className.endsWith("ClientAbortException")) {
+                return true;
+            }
+            current = current.getCause();
+        }
+        return false;
     }
 
     private ResponseEntity<ErrorResponse> buildErrorResponse(HttpStatus status, String exceptionMessage,

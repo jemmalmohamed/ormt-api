@@ -1,0 +1,472 @@
+{
+  "data" : [ {
+    "annuel" : "2014",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "24576"
+  }, {
+    "annuel" : "2014",
+    "region" : "casablanca-settat",
+    "valeur" : "44863"
+  }, {
+    "annuel" : "2014",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "64032"
+  }, {
+    "annuel" : "2014",
+    "region" : "drâa-tafilalet",
+    "valeur" : "17784"
+  }, {
+    "annuel" : "2014",
+    "region" : "fès-meknès",
+    "valeur" : "21184"
+  }, {
+    "annuel" : "2014",
+    "region" : "guelmim-oued noun",
+    "valeur" : "28023"
+  }, {
+    "annuel" : "2014",
+    "region" : "l'oriental",
+    "valeur" : "23696"
+  }, {
+    "annuel" : "2014",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "40493"
+  }, {
+    "annuel" : "2014",
+    "region" : "marrakech-safi",
+    "valeur" : "20763"
+  }, {
+    "annuel" : "2014",
+    "region" : "national",
+    "valeur" : "29656"
+  }, {
+    "annuel" : "2014",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "36931"
+  }, {
+    "annuel" : "2014",
+    "region" : "souss-massa",
+    "valeur" : "25198"
+  }, {
+    "annuel" : "2014",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "25964"
+  }, {
+    "annuel" : "2015",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "26612"
+  }, {
+    "annuel" : "2015",
+    "region" : "casablanca-settat",
+    "valeur" : "48854"
+  }, {
+    "annuel" : "2015",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "72324"
+  }, {
+    "annuel" : "2015",
+    "region" : "drâa-tafilalet",
+    "valeur" : "19572"
+  }, {
+    "annuel" : "2015",
+    "region" : "fès-meknès",
+    "valeur" : "22483"
+  }, {
+    "annuel" : "2015",
+    "region" : "guelmim-oued noun",
+    "valeur" : "30946"
+  }, {
+    "annuel" : "2015",
+    "region" : "l'oriental",
+    "valeur" : "23536"
+  }, {
+    "annuel" : "2015",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "44757"
+  }, {
+    "annuel" : "2015",
+    "region" : "marrakech-safi",
+    "valeur" : "21599"
+  }, {
+    "annuel" : "2015",
+    "region" : "national",
+    "valeur" : "31593"
+  }, {
+    "annuel" : "2015",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "37724"
+  }, {
+    "annuel" : "2015",
+    "region" : "souss-massa",
+    "valeur" : "25887"
+  }, {
+    "annuel" : "2015",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "29037"
+  }, {
+    "annuel" : "2016",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "25707"
+  }, {
+    "annuel" : "2016",
+    "region" : "casablanca-settat",
+    "valeur" : "49273"
+  }, {
+    "annuel" : "2016",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "77279"
+  }, {
+    "annuel" : "2016",
+    "region" : "drâa-tafilalet",
+    "valeur" : "18811"
+  }, {
+    "annuel" : "2016",
+    "region" : "fès-meknès",
+    "valeur" : "22246"
+  }, {
+    "annuel" : "2016",
+    "region" : "guelmim-oued noun",
+    "valeur" : "33428"
+  }, {
+    "annuel" : "2016",
+    "region" : "l'oriental",
+    "valeur" : "24243"
+  }, {
+    "annuel" : "2016",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "45899"
+  }, {
+    "annuel" : "2016",
+    "region" : "marrakech-safi",
+    "valeur" : "20698"
+  }, {
+    "annuel" : "2016",
+    "region" : "national",
+    "valeur" : "31730"
+  }, {
+    "annuel" : "2016",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "37265"
+  }, {
+    "annuel" : "2016",
+    "region" : "souss-massa",
+    "valeur" : "26899"
+  }, {
+    "annuel" : "2016",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "30435"
+  }, {
+    "annuel" : "2017",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "24691"
+  }, {
+    "annuel" : "2017",
+    "region" : "casablanca-settat",
+    "valeur" : "51668"
+  }, {
+    "annuel" : "2017",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "86828"
+  }, {
+    "annuel" : "2017",
+    "region" : "drâa-tafilalet",
+    "valeur" : "19764"
+  }, {
+    "annuel" : "2017",
+    "region" : "fès-meknès",
+    "valeur" : "22272"
+  }, {
+    "annuel" : "2017",
+    "region" : "guelmim-oued noun",
+    "valeur" : "35564"
+  }, {
+    "annuel" : "2017",
+    "region" : "l'oriental",
+    "valeur" : "24615"
+  }, {
+    "annuel" : "2017",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "48349"
+  }, {
+    "annuel" : "2017",
+    "region" : "marrakech-safi",
+    "valeur" : "21294"
+  }, {
+    "annuel" : "2017",
+    "region" : "national",
+    "valeur" : "32965"
+  }, {
+    "annuel" : "2017",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "39776"
+  }, {
+    "annuel" : "2017",
+    "region" : "souss-massa",
+    "valeur" : "26216"
+  }, {
+    "annuel" : "2017",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "32882"
+  }, {
+    "annuel" : "2018",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "25341"
+  }, {
+    "annuel" : "2018",
+    "region" : "casablanca-settat",
+    "valeur" : "53653"
+  }, {
+    "annuel" : "2018",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "86364"
+  }, {
+    "annuel" : "2018",
+    "region" : "drâa-tafilalet",
+    "valeur" : "18031"
+  }, {
+    "annuel" : "2018",
+    "region" : "fès-meknès",
+    "valeur" : "22028"
+  }, {
+    "annuel" : "2018",
+    "region" : "guelmim-oued noun",
+    "valeur" : "37126"
+  }, {
+    "annuel" : "2018",
+    "region" : "l'oriental",
+    "valeur" : "26488"
+  }, {
+    "annuel" : "2018",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "52081"
+  }, {
+    "annuel" : "2018",
+    "region" : "marrakech-safi",
+    "valeur" : "21920"
+  }, {
+    "annuel" : "2018",
+    "region" : "national",
+    "valeur" : "33937"
+  }, {
+    "annuel" : "2018",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "39905"
+  }, {
+    "annuel" : "2018",
+    "region" : "souss-massa",
+    "valeur" : "27222"
+  }, {
+    "annuel" : "2018",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "35119"
+  }, {
+    "annuel" : "2019",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "26578"
+  }, {
+    "annuel" : "2019",
+    "region" : "casablanca-settat",
+    "valeur" : "54644"
+  }, {
+    "annuel" : "2019",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "83860"
+  }, {
+    "annuel" : "2019",
+    "region" : "drâa-tafilalet",
+    "valeur" : "20380"
+  }, {
+    "annuel" : "2019",
+    "region" : "fès-meknès",
+    "valeur" : "22676"
+  }, {
+    "annuel" : "2019",
+    "region" : "guelmim-oued noun",
+    "valeur" : "39487"
+  }, {
+    "annuel" : "2019",
+    "region" : "l'oriental",
+    "valeur" : "27219"
+  }, {
+    "annuel" : "2019",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "53631"
+  }, {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "valeur" : "22319"
+  }, {
+    "annuel" : "2019",
+    "region" : "national",
+    "valeur" : "34840"
+  }, {
+    "annuel" : "2019",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "40718"
+  }, {
+    "annuel" : "2019",
+    "region" : "souss-massa",
+    "valeur" : "27707"
+  }, {
+    "annuel" : "2019",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "36080"
+  }, {
+    "annuel" : "2020",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "23857"
+  }, {
+    "annuel" : "2020",
+    "region" : "casablanca-settat",
+    "valeur" : "50755"
+  }, {
+    "annuel" : "2020",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "79643"
+  }, {
+    "annuel" : "2020",
+    "region" : "drâa-tafilalet",
+    "valeur" : "19713"
+  }, {
+    "annuel" : "2020",
+    "region" : "fès-meknès",
+    "valeur" : "20659"
+  }, {
+    "annuel" : "2020",
+    "region" : "guelmim-oued noun",
+    "valeur" : "40369"
+  }, {
+    "annuel" : "2020",
+    "region" : "l'oriental",
+    "valeur" : "25061"
+  }, {
+    "annuel" : "2020",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "60458"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "valeur" : "18675"
+  }, {
+    "annuel" : "2020",
+    "region" : "national",
+    "valeur" : "32056"
+  }, {
+    "annuel" : "2020",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "38589"
+  }, {
+    "annuel" : "2020",
+    "region" : "souss-massa",
+    "valeur" : "24552"
+  }, {
+    "annuel" : "2020",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "32050"
+  }, {
+    "annuel" : "2021",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "27530"
+  }, {
+    "annuel" : "2021",
+    "region" : "casablanca-settat",
+    "valeur" : "55081"
+  }, {
+    "annuel" : "2021",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "84090"
+  }, {
+    "annuel" : "2021",
+    "region" : "drâa-tafilalet",
+    "valeur" : "22203"
+  }, {
+    "annuel" : "2021",
+    "region" : "fès-meknès",
+    "valeur" : "23554"
+  }, {
+    "annuel" : "2021",
+    "region" : "guelmim-oued noun",
+    "valeur" : "43021"
+  }, {
+    "annuel" : "2021",
+    "region" : "l'oriental",
+    "valeur" : "27282"
+  }, {
+    "annuel" : "2021",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "65339"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "valeur" : "20930"
+  }, {
+    "annuel" : "2021",
+    "region" : "national",
+    "valeur" : "35154"
+  }, {
+    "annuel" : "2021",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "41234"
+  }, {
+    "annuel" : "2021",
+    "region" : "souss-massa",
+    "valeur" : "27324"
+  }, {
+    "annuel" : "2021",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "34853"
+  }, {
+    "annuel" : "2022",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "30960"
+  }, {
+    "annuel" : "2022",
+    "region" : "casablanca-settat",
+    "valeur" : "54997"
+  }, {
+    "annuel" : "2022",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "80996"
+  }, {
+    "annuel" : "2022",
+    "region" : "drâa-tafilalet",
+    "valeur" : "22973"
+  }, {
+    "annuel" : "2022",
+    "region" : "fès-meknès",
+    "valeur" : "23707"
+  }, {
+    "annuel" : "2022",
+    "region" : "guelmim-oued noun",
+    "valeur" : "44432"
+  }, {
+    "annuel" : "2022",
+    "region" : "l'oriental",
+    "valeur" : "27304"
+  }, {
+    "annuel" : "2022",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "71246"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "valeur" : "22730"
+  }, {
+    "annuel" : "2022",
+    "region" : "national",
+    "valeur" : "36284"
+  }, {
+    "annuel" : "2022",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "43124"
+  }, {
+    "annuel" : "2022",
+    "region" : "souss-massa",
+    "valeur" : "29425"
+  }, {
+    "annuel" : "2022",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "35641"
+  } ],
+  "indicateur" : "produit intérieur brut par habitant (aux prix courants) par région"
+}

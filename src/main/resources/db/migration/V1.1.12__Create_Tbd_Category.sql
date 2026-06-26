@@ -1,0 +1,2 @@
+-- Legacy migration retired.
+-- Analytic categories now live in categorie_analytique and are linked directly to tbd_dashboard.

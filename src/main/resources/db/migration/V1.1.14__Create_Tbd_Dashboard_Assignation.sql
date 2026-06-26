@@ -1,0 +1,2 @@
+-- Legacy migration retired.
+-- Dashboard assignment is now stored directly on categorie_analytique.tbd_dashboard_id.

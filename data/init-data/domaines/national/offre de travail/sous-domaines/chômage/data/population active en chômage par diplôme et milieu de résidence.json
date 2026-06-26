@@ -1,0 +1,304 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "diplome" : "Niveau moyen",
+    "milieu" : "National",
+    "valeur" : "458000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Niveau moyen",
+    "milieu" : "Rural",
+    "valeur" : "76000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Niveau moyen",
+    "milieu" : "Urbain",
+    "valeur" : "382000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Niveau supérieur",
+    "milieu" : "National",
+    "valeur" : "451000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Niveau supérieur",
+    "milieu" : "Rural",
+    "valeur" : "43000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Niveau supérieur",
+    "milieu" : "Urbain",
+    "valeur" : "408000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Non déclaré",
+    "milieu" : "National",
+    "valeur" : "1000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Non déclaré",
+    "milieu" : "Rural",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Non déclaré",
+    "milieu" : "Urbain",
+    "valeur" : "1000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Sans diplôme",
+    "milieu" : "National",
+    "valeur" : "197000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Sans diplôme",
+    "milieu" : "Rural",
+    "valeur" : "60000"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Sans diplôme",
+    "milieu" : "Urbain",
+    "valeur" : "136000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Niveau moyen",
+    "milieu" : "National",
+    "valeur" : "589000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Niveau moyen",
+    "milieu" : "Rural",
+    "valeur" : "112000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Niveau moyen",
+    "milieu" : "Urbain",
+    "valeur" : "476000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Niveau supérieur",
+    "milieu" : "National",
+    "valeur" : "503000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Niveau supérieur",
+    "milieu" : "Rural",
+    "valeur" : "52000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Niveau supérieur",
+    "milieu" : "Urbain",
+    "valeur" : "452000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Non déclaré",
+    "milieu" : "National",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Non déclaré",
+    "milieu" : "Rural",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Non déclaré",
+    "milieu" : "Urbain",
+    "valeur" : "1000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Sans diplôme",
+    "milieu" : "National",
+    "valeur" : "337000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Sans diplôme",
+    "milieu" : "Rural",
+    "valeur" : "113000"
+  }, {
+    "annuel" : "2020",
+    "diplome" : "Sans diplôme",
+    "milieu" : "Urbain",
+    "valeur" : "223000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Niveau moyen",
+    "milieu" : "National",
+    "valeur" : "638000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Niveau moyen",
+    "milieu" : "Rural",
+    "valeur" : "108000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Niveau moyen",
+    "milieu" : "Urbain",
+    "valeur" : "529000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Niveau supérieur",
+    "milieu" : "National",
+    "valeur" : "597000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Niveau supérieur",
+    "milieu" : "Rural",
+    "valeur" : "56000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Niveau supérieur",
+    "milieu" : "Urbain",
+    "valeur" : "541000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Non déclaré",
+    "milieu" : "National",
+    "valeur" : "2000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Non déclaré",
+    "milieu" : "Rural",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Non déclaré",
+    "milieu" : "Urbain",
+    "valeur" : "1000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Sans diplôme",
+    "milieu" : "National",
+    "valeur" : "271000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Sans diplôme",
+    "milieu" : "Rural",
+    "valeur" : "72000"
+  }, {
+    "annuel" : "2021",
+    "diplome" : "Sans diplôme",
+    "milieu" : "Urbain",
+    "valeur" : "200000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Niveau moyen",
+    "milieu" : "National",
+    "valeur" : "562000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Niveau moyen",
+    "milieu" : "Rural",
+    "valeur" : "110000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Niveau moyen",
+    "milieu" : "Urbain",
+    "valeur" : "453000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Niveau supérieur",
+    "milieu" : "National",
+    "valeur" : "636000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Niveau supérieur",
+    "milieu" : "Rural",
+    "valeur" : "61000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Niveau supérieur",
+    "milieu" : "Urbain",
+    "valeur" : "575000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Non déclaré",
+    "milieu" : "National",
+    "valeur" : "1000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Non déclaré",
+    "milieu" : "Rural",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Non déclaré",
+    "milieu" : "Urbain",
+    "valeur" : "1000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Sans diplôme",
+    "milieu" : "National",
+    "valeur" : "242000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Sans diplôme",
+    "milieu" : "Rural",
+    "valeur" : "70000"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Sans diplôme",
+    "milieu" : "Urbain",
+    "valeur" : "173000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Niveau moyen",
+    "milieu" : "National",
+    "valeur" : "635000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Niveau moyen",
+    "milieu" : "Rural",
+    "valeur" : "124000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Niveau moyen",
+    "milieu" : "Urbain",
+    "valeur" : "512000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Niveau supérieur",
+    "milieu" : "National",
+    "valeur" : "672000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Niveau supérieur",
+    "milieu" : "Rural",
+    "valeur" : "75000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Niveau supérieur",
+    "milieu" : "Urbain",
+    "valeur" : "595000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Non déclaré",
+    "milieu" : "National",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Non déclaré",
+    "milieu" : "Rural",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Non déclaré",
+    "milieu" : "Urbain",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Sans diplôme",
+    "milieu" : "National",
+    "valeur" : "273000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Sans diplôme",
+    "milieu" : "Rural",
+    "valeur" : "81000"
+  }, {
+    "annuel" : "2023",
+    "diplome" : "Sans diplôme",
+    "milieu" : "Urbain",
+    "valeur" : "192000"
+  } ],
+  "indicateur" : "population active en chômage par diplôme et milieu de résidence"
+}

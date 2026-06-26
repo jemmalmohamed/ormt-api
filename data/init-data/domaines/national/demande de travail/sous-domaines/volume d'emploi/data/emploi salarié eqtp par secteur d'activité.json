@@ -1,0 +1,164 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "150000"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "223000"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "autres services",
+    "valeur" : "784000"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "338000"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "commerce",
+    "valeur" : "424000"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "ensemble",
+    "valeur" : "2512000"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "492000"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "101000"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "146000"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "228000"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "autres services",
+    "valeur" : "723000"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "315000"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "commerce",
+    "valeur" : "407000"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "ensemble",
+    "valeur" : "2363000"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "449000"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "95000"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "166000"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "262000"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "autres services",
+    "valeur" : "813000"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "378000"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "commerce",
+    "valeur" : "468000"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "ensemble",
+    "valeur" : "2704000"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "506000"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "111000"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "191000"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "278000"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "autres services",
+    "valeur" : "919000"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "388000"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "commerce",
+    "valeur" : "489000"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "ensemble",
+    "valeur" : "2908000"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "524000"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "119000"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "210000"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "294000"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "autres services",
+    "valeur" : "984000"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "394000"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "commerce",
+    "valeur" : "502000"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "ensemble",
+    "valeur" : "3044000"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "536000"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "125000"
+  } ],
+  "indicateur" : "emploi salarié eqtp par secteur d'activité"
+}

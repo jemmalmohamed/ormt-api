@@ -1,0 +1,205 @@
+{
+  "actif" : true,
+  "description" : "Indicateurs relatifs aux jeunes NEET (ni en emploi, ni en études, ni en formation)",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "volume",
+    "description" : "effectif des jeunes neet selon le genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Effectif des jeunes NEET par genre - Histogramme"
+    } ],
+    "nom" : "effectif des jeunes neet par genre",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "effectif des jeunes neet par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "volume",
+    "description" : "effectif des jeunes neet selon le milieu de résidence",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Effectif des jeunes NEET par milieu de résidence - Histogramme"
+    } ],
+    "nom" : "effectif des jeunes neet par milieu de résidence",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "effectif des jeunes neet par milieu de résidence",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux des neet",
+    "description" : "taux de neet selon le genre",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Taux de NEET par genre - Courbes"
+    } ],
+    "nom" : "taux de neet par genre",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux de neet par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux des neet",
+    "description" : "taux de neet selon le milieu de résidence",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "milieu de résidence",
+      "nom" : "milieu",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : "{\n  \"version\" : 1,\n  \"kind\" : \"bar\",\n  \"family\" : \"cartesian\",\n  \"mapping\" : {\n    \"x\" : \"milieu\",\n    \"series\" : \"annuel\",\n    \"value\" : \"metric\",\n    \"secondarySeries\" : null,\n    \"bubbleSize\" : null,\n    \"mixteLineSeries\" : null\n  },\n  \"filters\" : [ ],\n  \"presentation\" : {\n    \"title\" : \"taux de neet par milieu de résidence\",\n    \"subtitle\" : null,\n    \"palette\" : \"blue-shades\",\n    \"legend\" : {\n      \"visible\" : true,\n      \"position\" : \"bottom\"\n    },\n    \"labels\" : {\n      \"visible\" : true,\n      \"mode\" : \"hidden\"\n    },\n    \"stacking\" : \"none\",\n    \"orientation\" : \"vertical\",\n    \"lineStyle\" : {\n      \"curve\" : true,\n      \"points\" : true\n    },\n    \"mapStyle\" : {\n      \"projection\" : \"mercator\",\n      \"showInternalLabels\" : true\n    }\n  },\n  \"interactions\" : {\n    \"export\" : true,\n    \"zoom\" : false,\n    \"hover\" : true,\n    \"tooltips\" : true,\n    \"selection\" : false\n  },\n  \"dataView\" : {\n    \"visibility\" : {\n      \"hiddenRowValues\" : [ \"National\" ],\n      \"hiddenColumnValues\" : { }\n    },\n    \"ordering\" : {\n      \"principalOrder\" : [ ],\n      \"seriesOrder\" : [ ]\n    }\n  },\n  \"meta\" : {\n    \"source\" : \"user-authored\",\n    \"seedKind\" : \"courbes\",\n    \"generatedAt\" : \"2026-06-25T23:43:11.381Z\",\n    \"configSystem\" : \"chartspec\",\n    \"migratedFromLegacy\" : false\n  }\n}",
+      "chartSpecVersion" : 1,
+      "configSystem" : "chartspec",
+      "dimensionMappingJson" : "{\n  \"x\" : \"milieu\",\n  \"series\" : \"annuel\",\n  \"value\" : \"metric\",\n  \"secondarySeries\" : null,\n  \"bubbleSize\" : null,\n  \"mixteLineSeries\" : null\n}",
+      "grapheTypeCode" : "histogramme_empilte_evolution",
+      "isDefault" : true,
+      "nom" : "taux de neet par milieu de résidence - Chart Studio line"
+    }, {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : false,
+      "nom" : "Taux de NEET par milieu de résidence - Courbes"
+    } ],
+    "nom" : "taux de neet par milieu de résidence",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux de neet par milieu de résidence",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "taux des neet",
+    "description" : "taux de neet",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Taux de NEET - Choropleth"
+    } ],
+    "nom" : "taux de neet par région",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "taux de neet",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  } ],
+  "nom" : "neet"
+}

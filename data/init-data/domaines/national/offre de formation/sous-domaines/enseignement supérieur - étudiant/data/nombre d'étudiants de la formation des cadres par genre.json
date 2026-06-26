@@ -1,0 +1,76 @@
+{
+  "data" : [ {
+    "annuel" : "2016",
+    "genre" : "femme",
+    "valeur" : "17000"
+  }, {
+    "annuel" : "2016",
+    "genre" : "homme",
+    "valeur" : "14800"
+  }, {
+    "annuel" : "2017",
+    "genre" : "femme",
+    "valeur" : "15600"
+  }, {
+    "annuel" : "2017",
+    "genre" : "homme",
+    "valeur" : "13600"
+  }, {
+    "annuel" : "2018",
+    "genre" : "femme",
+    "valeur" : "14100"
+  }, {
+    "annuel" : "2018",
+    "genre" : "homme",
+    "valeur" : "11500"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "valeur" : "18800"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "valeur" : "16600"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "valeur" : "14900"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "valeur" : "19300"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "valeur" : "21400"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "valeur" : "16900"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "valeur" : "27800"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "valeur" : "19200"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "valeur" : "32400"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "valeur" : "20400"
+  }, {
+    "annuel" : "2024",
+    "genre" : "femme",
+    "valeur" : "35200"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "valeur" : "20300"
+  } ],
+  "indicateur" : "nombre d'étudiants de la formation des cadres par genre"
+}

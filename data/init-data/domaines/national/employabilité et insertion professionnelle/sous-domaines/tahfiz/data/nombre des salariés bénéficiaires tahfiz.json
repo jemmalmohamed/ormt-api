@@ -1,0 +1,22 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "valeur" : "9508"
+  }, {
+    "annuel" : "2020",
+    "valeur" : "9979"
+  }, {
+    "annuel" : "2021",
+    "valeur" : "15559"
+  }, {
+    "annuel" : "2022",
+    "valeur" : "18973"
+  }, {
+    "annuel" : "2023",
+    "valeur" : "18639"
+  }, {
+    "annuel" : "2024",
+    "valeur" : "21577"
+  } ],
+  "indicateur" : "nombre des salariés bénéficiaires tahfiz"
+}

@@ -1,0 +1,88 @@
+{
+  "data" : [ {
+    "annuel" : "2006",
+    "niveau_formation" : "Qualification",
+    "valeur" : "74.8"
+  }, {
+    "annuel" : "2006",
+    "niveau_formation" : "Specialisation",
+    "valeur" : "77.4"
+  }, {
+    "annuel" : "2006",
+    "niveau_formation" : "Technicien spécialisé",
+    "valeur" : "81.5"
+  }, {
+    "annuel" : "2006",
+    "niveau_formation" : "Technicien",
+    "valeur" : "75.0"
+  }, {
+    "annuel" : "2006",
+    "niveau_formation" : "Total",
+    "valeur" : "76.6"
+  }, {
+    "annuel" : "2008",
+    "niveau_formation" : "Qualification",
+    "valeur" : "65.7"
+  }, {
+    "annuel" : "2008",
+    "niveau_formation" : "Specialisation",
+    "valeur" : "77.5"
+  }, {
+    "annuel" : "2008",
+    "niveau_formation" : "Technicien spécialisé",
+    "valeur" : "82.0"
+  }, {
+    "annuel" : "2008",
+    "niveau_formation" : "Technicien",
+    "valeur" : "72.3"
+  }, {
+    "annuel" : "2008",
+    "niveau_formation" : "Total",
+    "valeur" : "74.1"
+  }, {
+    "annuel" : "2010",
+    "niveau_formation" : "Qualification",
+    "valeur" : "72.8"
+  }, {
+    "annuel" : "2010",
+    "niveau_formation" : "Specialisation",
+    "valeur" : "70.9"
+  }, {
+    "annuel" : "2010",
+    "niveau_formation" : "Technicien spécialisé",
+    "valeur" : "82.3"
+  }, {
+    "annuel" : "2010",
+    "niveau_formation" : "Technicien",
+    "valeur" : "75.4"
+  }, {
+    "annuel" : "2010",
+    "niveau_formation" : "Total",
+    "valeur" : "75.8"
+  }, {
+    "annuel" : "2016",
+    "niveau_formation" : "CAP",
+    "valeur" : "84.1"
+  }, {
+    "annuel" : "2016",
+    "niveau_formation" : "Qualification",
+    "valeur" : "82.7"
+  }, {
+    "annuel" : "2016",
+    "niveau_formation" : "Specialisation",
+    "valeur" : "83.2"
+  }, {
+    "annuel" : "2016",
+    "niveau_formation" : "Technicien spécialisé",
+    "valeur" : "86.7"
+  }, {
+    "annuel" : "2016",
+    "niveau_formation" : "Technicien",
+    "valeur" : "84.5"
+  }, {
+    "annuel" : "2016",
+    "niveau_formation" : "Total",
+    "valeur" : "84.4"
+  } ],
+  "indicateur" : "taux d'insertion des lauréats de la formation professionnelle à 36 mois par niveau de formation"
+}

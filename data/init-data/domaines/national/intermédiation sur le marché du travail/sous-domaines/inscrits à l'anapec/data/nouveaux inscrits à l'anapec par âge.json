@@ -1,0 +1,128 @@
+{
+  "data" : [ {
+    "age" : "20 à 24 ans",
+    "annuel" : "2019",
+    "valeur" : "45.2"
+  }, {
+    "age" : "20 à 24 ans",
+    "annuel" : "2020",
+    "valeur" : "48.3"
+  }, {
+    "age" : "20 à 24 ans",
+    "annuel" : "2021",
+    "valeur" : "50.8"
+  }, {
+    "age" : "20 à 24 ans",
+    "annuel" : "2022",
+    "valeur" : "42.5"
+  }, {
+    "age" : "20 à 24 ans",
+    "annuel" : "2023",
+    "valeur" : "43.0"
+  }, {
+    "age" : "20 à 24 ans",
+    "annuel" : "2024",
+    "valeur" : "49.0"
+  }, {
+    "age" : "25 à moins de 35 ans",
+    "annuel" : "2019",
+    "valeur" : "21.2"
+  }, {
+    "age" : "25 à moins de 35 ans",
+    "annuel" : "2020",
+    "valeur" : "27.6"
+  }, {
+    "age" : "25 à moins de 35 ans",
+    "annuel" : "2021",
+    "valeur" : "27.5"
+  }, {
+    "age" : "25 à moins de 35 ans",
+    "annuel" : "2022",
+    "valeur" : "27.6"
+  }, {
+    "age" : "25 à moins de 35 ans",
+    "annuel" : "2023",
+    "valeur" : "26.2"
+  }, {
+    "age" : "25 à moins de 35 ans",
+    "annuel" : "2024",
+    "valeur" : "24.9"
+  }, {
+    "age" : "35 à moins de 45 ans",
+    "annuel" : "2019",
+    "valeur" : "6.8"
+  }, {
+    "age" : "35 à moins de 45 ans",
+    "annuel" : "2020",
+    "valeur" : "7.4"
+  }, {
+    "age" : "35 à moins de 45 ans",
+    "annuel" : "2021",
+    "valeur" : "6.7"
+  }, {
+    "age" : "35 à moins de 45 ans",
+    "annuel" : "2022",
+    "valeur" : "10.3"
+  }, {
+    "age" : "35 à moins de 45 ans",
+    "annuel" : "2023",
+    "valeur" : "9.7"
+  }, {
+    "age" : "35 à moins de 45 ans",
+    "annuel" : "2024",
+    "valeur" : "7.3"
+  }, {
+    "age" : "45 et Plus",
+    "annuel" : "2019",
+    "valeur" : "4.0"
+  }, {
+    "age" : "45 et Plus",
+    "annuel" : "2020",
+    "valeur" : "5.3"
+  }, {
+    "age" : "45 et Plus",
+    "annuel" : "2021",
+    "valeur" : "5.0"
+  }, {
+    "age" : "45 et Plus",
+    "annuel" : "2022",
+    "valeur" : "10.7"
+  }, {
+    "age" : "45 et Plus",
+    "annuel" : "2023",
+    "valeur" : "10.0"
+  }, {
+    "age" : "45 et Plus",
+    "annuel" : "2024",
+    "valeur" : "5.7"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2019",
+    "valeur" : "18.8"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2020",
+    "valeur" : "11.4"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2021",
+    "valeur" : "10.1"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2022",
+    "valeur" : "8.8"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2023",
+    "valeur" : "11.0"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2024",
+    "valeur" : "13.1"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2019",
+    "valeur" : "4.0"
+  } ],
+  "indicateur" : "nouveaux inscrits à l'anapec par âge"
+}

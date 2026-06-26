@@ -27,8 +27,7 @@ public class SpecificationService {
 
         if (StringUtils.isNotBlank(globalFilter)) {
             Specification<T> dynamicGlobalSpecification = createDynamicGlobalSpecification(globalFilter, entityClass);
-            specification = specification == null ? dynamicGlobalSpecification
-                    : specification.and(dynamicGlobalSpecification);
+            specification = specification.and(dynamicGlobalSpecification);
         }
 
         return specification;
@@ -36,7 +35,7 @@ public class SpecificationService {
 
     public <T> Specification<T> createDynamicGlobalSpecification(String keyword, Class<T> entityClass) {
         if (StringUtils.isBlank(keyword)) {
-            return null;
+            return Specification.unrestricted();
         }
 
         List<String> filters = new ArrayList<>();
@@ -71,14 +70,14 @@ public class SpecificationService {
 
     public <T> Specification<T> createSpecification(List<String> filters, String operator) {
         if (filters == null || filters.isEmpty()) {
-            return null;
+            return Specification.unrestricted();
         }
 
         Map<String, BiFunction<Specification<T>, Specification<T>, Specification<T>>> operators = new HashMap<>();
         operators.put("and", Specification::and);
         operators.put("or", Specification::or);
 
-        Specification<T> specification = null;
+        Specification<T> specification = Specification.unrestricted();
 
         for (String filter : filters) {
             GenericSpecification<T> genericSpecification = createGenericSpecification(filter);
@@ -86,8 +85,7 @@ public class SpecificationService {
                 BiFunction<Specification<T>, Specification<T>, Specification<T>> operatorFunction = operators
                         .get(operator);
                 if (operatorFunction != null) {
-                    specification = specification == null ? Specification.where(genericSpecification)
-                            : operatorFunction.apply(specification, genericSpecification);
+                    specification = operatorFunction.apply(specification, genericSpecification);
                 } else {
                     String message = MessageResponse.builder()
                             .title("Invalid operator: " + operator)

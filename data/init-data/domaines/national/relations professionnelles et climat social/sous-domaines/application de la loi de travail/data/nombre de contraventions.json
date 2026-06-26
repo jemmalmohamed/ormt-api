@@ -1,0 +1,13 @@
+{
+  "data" : [ {
+    "annuel" : "2021",
+    "valeur" : "998"
+  }, {
+    "annuel" : "2022",
+    "valeur" : "624"
+  }, {
+    "annuel" : "2023",
+    "valeur" : "1170"
+  } ],
+  "indicateur" : "nombre de contraventions"
+}

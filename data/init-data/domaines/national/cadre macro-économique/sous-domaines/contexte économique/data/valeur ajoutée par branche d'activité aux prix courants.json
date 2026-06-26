@@ -1,0 +1,934 @@
+{
+  "data" : [ {
+    "annuel" : "2022",
+    "branche_activite" : "activités financières et d'assurance",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "658"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités financières et d'assurance",
+    "region" : "casablanca-settat",
+    "valeur" : "36903"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités financières et d'assurance",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "124"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités financières et d'assurance",
+    "region" : "drâa-tafilalet",
+    "valeur" : "302"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités financières et d'assurance",
+    "region" : "fès-meknès",
+    "valeur" : "2869"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités financières et d'assurance",
+    "region" : "guelmim-oued noun",
+    "valeur" : "101"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités financières et d'assurance",
+    "region" : "l'oriental",
+    "valeur" : "1278"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités financières et d'assurance",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "621"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités financières et d'assurance",
+    "region" : "marrakech-safi",
+    "valeur" : "2612"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités financières et d'assurance",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "10512"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités financières et d'assurance",
+    "region" : "souss-massa",
+    "valeur" : "2494"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités financières et d'assurance",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "2201"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités immobilières",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "3664"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités immobilières",
+    "region" : "casablanca-settat",
+    "valeur" : "29194"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités immobilières",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "883"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités immobilières",
+    "region" : "drâa-tafilalet",
+    "valeur" : "2239"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités immobilières",
+    "region" : "fès-meknès",
+    "valeur" : "7092"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités immobilières",
+    "region" : "guelmim-oued noun",
+    "valeur" : "1319"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités immobilières",
+    "region" : "l'oriental",
+    "valeur" : "4161"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités immobilières",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "1398"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités immobilières",
+    "region" : "marrakech-safi",
+    "valeur" : "7588"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités immobilières",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "15920"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités immobilières",
+    "region" : "souss-massa",
+    "valeur" : "6287"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "activités immobilières",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "10639"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "administration publique; sécurité sociale obligatoire",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "6094"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "administration publique; sécurité sociale obligatoire",
+    "region" : "casablanca-settat",
+    "valeur" : "20739"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "administration publique; sécurité sociale obligatoire",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "7038"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "administration publique; sécurité sociale obligatoire",
+    "region" : "drâa-tafilalet",
+    "valeur" : "3841"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "administration publique; sécurité sociale obligatoire",
+    "region" : "fès-meknès",
+    "valeur" : "10359"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "administration publique; sécurité sociale obligatoire",
+    "region" : "guelmim-oued noun",
+    "valeur" : "7338"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "administration publique; sécurité sociale obligatoire",
+    "region" : "l'oriental",
+    "valeur" : "8336"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "administration publique; sécurité sociale obligatoire",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "5667"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "administration publique; sécurité sociale obligatoire",
+    "region" : "marrakech-safi",
+    "valeur" : "7717"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "administration publique; sécurité sociale obligatoire",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "37045"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "administration publique; sécurité sociale obligatoire",
+    "region" : "souss-massa",
+    "valeur" : "8023"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "administration publique; sécurité sociale obligatoire",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "9522"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "agriculture",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "11515"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "agriculture",
+    "region" : "casablanca-settat",
+    "valeur" : "13277"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "agriculture",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "377"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "agriculture",
+    "region" : "drâa-tafilalet",
+    "valeur" : "7599"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "agriculture",
+    "region" : "fès-meknès",
+    "valeur" : "22528"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "agriculture",
+    "region" : "guelmim-oued noun",
+    "valeur" : "550"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "agriculture",
+    "region" : "l'oriental",
+    "valeur" : "10742"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "agriculture",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "177"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "agriculture",
+    "region" : "marrakech-safi",
+    "valeur" : "9907"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "agriculture",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "21465"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "agriculture",
+    "region" : "souss-massa",
+    "valeur" : "14083"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "agriculture",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "12107"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "autres services",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "983"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "autres services",
+    "region" : "casablanca-settat",
+    "valeur" : "4133"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "autres services",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "86"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "autres services",
+    "region" : "drâa-tafilalet",
+    "valeur" : "654"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "autres services",
+    "region" : "fès-meknès",
+    "valeur" : "1716"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "autres services",
+    "region" : "guelmim-oued noun",
+    "valeur" : "217"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "autres services",
+    "region" : "l'oriental",
+    "valeur" : "339"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "autres services",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "285"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "autres services",
+    "region" : "marrakech-safi",
+    "valeur" : "2191"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "autres services",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "3034"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "autres services",
+    "region" : "souss-massa",
+    "valeur" : "751"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "autres services",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "1761"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "commerce",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "8537"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "commerce",
+    "region" : "casablanca-settat",
+    "valeur" : "37605"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "commerce",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "471"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "commerce",
+    "region" : "drâa-tafilalet",
+    "valeur" : "4728"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "commerce",
+    "region" : "fès-meknès",
+    "valeur" : "16029"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "commerce",
+    "region" : "guelmim-oued noun",
+    "valeur" : "1290"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "commerce",
+    "region" : "l'oriental",
+    "valeur" : "12756"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "commerce",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "1330"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "commerce",
+    "region" : "marrakech-safi",
+    "valeur" : "17851"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "commerce",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "19397"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "commerce",
+    "region" : "souss-massa",
+    "valeur" : "11754"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "commerce",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "14143"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "construction",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "4715"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "construction",
+    "region" : "casablanca-settat",
+    "valeur" : "18541"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "construction",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "894"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "construction",
+    "region" : "drâa-tafilalet",
+    "valeur" : "4613"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "construction",
+    "region" : "fès-meknès",
+    "valeur" : "5824"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "construction",
+    "region" : "guelmim-oued noun",
+    "valeur" : "1811"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "construction",
+    "region" : "l'oriental",
+    "valeur" : "7824"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "construction",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "3519"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "construction",
+    "region" : "marrakech-safi",
+    "valeur" : "6178"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "construction",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "11127"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "construction",
+    "region" : "souss-massa",
+    "valeur" : "3370"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "construction",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "7342"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "enseignement  santé humaine et action sociale",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "6698"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "enseignement  santé humaine et action sociale",
+    "region" : "casablanca-settat",
+    "valeur" : "17537"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "enseignement  santé humaine et action sociale",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "992"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "enseignement  santé humaine et action sociale",
+    "region" : "drâa-tafilalet",
+    "valeur" : "4887"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "enseignement  santé humaine et action sociale",
+    "region" : "fès-meknès",
+    "valeur" : "12640"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "enseignement  santé humaine et action sociale",
+    "region" : "guelmim-oued noun",
+    "valeur" : "2516"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "enseignement  santé humaine et action sociale",
+    "region" : "l'oriental",
+    "valeur" : "5071"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "enseignement  santé humaine et action sociale",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "2447"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "enseignement  santé humaine et action sociale",
+    "region" : "marrakech-safi",
+    "valeur" : "10543"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "enseignement  santé humaine et action sociale",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "14682"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "enseignement  santé humaine et action sociale",
+    "region" : "souss-massa",
+    "valeur" : "8262"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "enseignement  santé humaine et action sociale",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "11009"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "hôtels et restaurants",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "1495"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "hôtels et restaurants",
+    "region" : "casablanca-settat",
+    "valeur" : "7976"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "hôtels et restaurants",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "95"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "hôtels et restaurants",
+    "region" : "drâa-tafilalet",
+    "valeur" : "1395"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "hôtels et restaurants",
+    "region" : "fès-meknès",
+    "valeur" : "3312"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "hôtels et restaurants",
+    "region" : "guelmim-oued noun",
+    "valeur" : "259"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "hôtels et restaurants",
+    "region" : "l'oriental",
+    "valeur" : "1592"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "hôtels et restaurants",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "402"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "hôtels et restaurants",
+    "region" : "marrakech-safi",
+    "valeur" : "12434"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "hôtels et restaurants",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "4233"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "hôtels et restaurants",
+    "region" : "souss-massa",
+    "valeur" : "7377"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "hôtels et restaurants",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "4514"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie de transformation",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "1376"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie de transformation",
+    "region" : "casablanca-settat",
+    "valeur" : "124119"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie de transformation",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "599"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie de transformation",
+    "region" : "drâa-tafilalet",
+    "valeur" : "163"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie de transformation",
+    "region" : "fès-meknès",
+    "valeur" : "6185"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie de transformation",
+    "region" : "guelmim-oued noun",
+    "valeur" : "622"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie de transformation",
+    "region" : "l'oriental",
+    "valeur" : "2594"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie de transformation",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "4287"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie de transformation",
+    "region" : "marrakech-safi",
+    "valeur" : "5266"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie de transformation",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "17039"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie de transformation",
+    "region" : "souss-massa",
+    "valeur" : "8692"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie de transformation",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "37724"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie extractive",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "21281"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie extractive",
+    "region" : "casablanca-settat",
+    "valeur" : "238"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie extractive",
+    "region" : "drâa-tafilalet",
+    "valeur" : "2048"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie extractive",
+    "region" : "fès-meknès",
+    "valeur" : "24"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie extractive",
+    "region" : "l'oriental",
+    "valeur" : "728"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie extractive",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "2300"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie extractive",
+    "region" : "marrakech-safi",
+    "valeur" : "6668"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie extractive",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "87"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "industrie extractive",
+    "region" : "souss-massa",
+    "valeur" : "746"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "information et communication",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "214"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "information et communication",
+    "region" : "casablanca-settat",
+    "valeur" : "14585"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "information et communication",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "8"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "information et communication",
+    "region" : "drâa-tafilalet",
+    "valeur" : "127"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "information et communication",
+    "region" : "fès-meknès",
+    "valeur" : "331"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "information et communication",
+    "region" : "guelmim-oued noun",
+    "valeur" : "28"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "information et communication",
+    "region" : "l'oriental",
+    "valeur" : "209"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "information et communication",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "42"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "information et communication",
+    "region" : "marrakech-safi",
+    "valeur" : "243"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "information et communication",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "16592"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "information et communication",
+    "region" : "souss-massa",
+    "valeur" : "218"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "information et communication",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "253"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "production et distribution d'électricité et d'eau",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "545"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "production et distribution d'électricité et d'eau",
+    "region" : "casablanca-settat",
+    "valeur" : "12605"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "production et distribution d'électricité et d'eau",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "135"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "production et distribution d'électricité et d'eau",
+    "region" : "drâa-tafilalet",
+    "valeur" : "119"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "production et distribution d'électricité et d'eau",
+    "region" : "fès-meknès",
+    "valeur" : "888"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "production et distribution d'électricité et d'eau",
+    "region" : "guelmim-oued noun",
+    "valeur" : "272"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "production et distribution d'électricité et d'eau",
+    "region" : "l'oriental",
+    "valeur" : "1908"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "production et distribution d'électricité et d'eau",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "185"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "production et distribution d'électricité et d'eau",
+    "region" : "marrakech-safi",
+    "valeur" : "1115"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "production et distribution d'électricité et d'eau",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "6553"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "production et distribution d'électricité et d'eau",
+    "region" : "souss-massa",
+    "valeur" : "351"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "production et distribution d'électricité et d'eau",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "1544"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "pêche",
+    "region" : "casablanca-settat",
+    "valeur" : "187"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "pêche",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "1840"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "pêche",
+    "region" : "guelmim-oued noun",
+    "valeur" : "707"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "pêche",
+    "region" : "l'oriental",
+    "valeur" : "71"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "pêche",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "1484"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "pêche",
+    "region" : "marrakech-safi",
+    "valeur" : "304"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "pêche",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "56"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "pêche",
+    "region" : "souss-massa",
+    "valeur" : "1188"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "pêche",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "471"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "recherches et développement et services rendus aux entreprises",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "3896"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "recherches et développement et services rendus aux entreprises",
+    "region" : "casablanca-settat",
+    "valeur" : "22130"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "recherches et développement et services rendus aux entreprises",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "875"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "recherches et développement et services rendus aux entreprises",
+    "region" : "drâa-tafilalet",
+    "valeur" : "1783"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "recherches et développement et services rendus aux entreprises",
+    "region" : "fès-meknès",
+    "valeur" : "4677"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "recherches et développement et services rendus aux entreprises",
+    "region" : "guelmim-oued noun",
+    "valeur" : "1130"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "recherches et développement et services rendus aux entreprises",
+    "region" : "l'oriental",
+    "valeur" : "3220"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "recherches et développement et services rendus aux entreprises",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "1615"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "recherches et développement et services rendus aux entreprises",
+    "region" : "marrakech-safi",
+    "valeur" : "5592"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "recherches et développement et services rendus aux entreprises",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "10808"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "recherches et développement et services rendus aux entreprises",
+    "region" : "souss-massa",
+    "valeur" : "4114"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "recherches et développement et services rendus aux entreprises",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "7013"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "transports et entreposage",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "2583"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "transports et entreposage",
+    "region" : "casablanca-settat",
+    "valeur" : "9848"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "transports et entreposage",
+    "region" : "dakhla-oued ed-dahab",
+    "valeur" : "56"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "transports et entreposage",
+    "region" : "drâa-tafilalet",
+    "valeur" : "1818"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "transports et entreposage",
+    "region" : "fès-meknès",
+    "valeur" : "3357"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "transports et entreposage",
+    "region" : "guelmim-oued noun",
+    "valeur" : "593"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "transports et entreposage",
+    "region" : "l'oriental",
+    "valeur" : "1769"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "transports et entreposage",
+    "region" : "laâyoune-sakia el hamra",
+    "valeur" : "425"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "transports et entreposage",
+    "region" : "marrakech-safi",
+    "valeur" : "3745"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "transports et entreposage",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "6944"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "transports et entreposage",
+    "region" : "souss-massa",
+    "valeur" : "2621"
+  }, {
+    "annuel" : "2022",
+    "branche_activite" : "transports et entreposage",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "4787"
+  } ],
+  "indicateur" : "valeur ajoutée par branche d'activité aux prix courants"
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "nom": "relations-professionnelles-marrakech",
+    "titre": "Relations Professionnelles et Climat Social",
+    "sousTitre": "Région Marrakech-Safi",
+    "description": "Cette analyse présente l'évolution des relations professionnelles, les mécanismes de dialogue social et les tendances sectorielles pour optimiser le climat social régional.",
+    "status": "PUBLISHED",
+    "actif": true,
+    "sources": [
+      {
+        "nom": "Ministère de l'inclusion économique, de la petite entreprise, de l'emploi et des compétences",
+        "ordre": 1
+      }
+    ],
+    "sections": [
+      {
+        "ordre": 1,
+        "sizePercent": 20,
+        "rows": [
+          {
+            "ordre": 1,
+            "sizePercent": 100,
+            "widgets": [
+              { "type": "KPI_CARD", "titre": "Entreprises sans conflits", "ordre": 1, "sizePercent": 25 },
+              { "type": "KPI_CARD", "titre": "Entreprises avec conflits", "ordre": 2, "sizePercent": 25 },
+              { "type": "KPI_CARD", "titre": "Conflits individuels", "ordre": 3, "sizePercent": 25 },
+              { "type": "KPI_CARD", "titre": "Total conflits 2023", "ordre": 4, "sizePercent": 25 }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Indicateurs",
+        "ordre": 2,
+        "sizePercent": 45,
+        "rows": [
+          {
+            "ordre": 1,
+            "sizePercent": 50,
+            "widgets": [
+              { "type": "CHART", "titre": "Évolution conflits sociaux 2021–2023", "ordre": 1, "sizePercent": 65 },
+              { "type": "CHART", "titre": "Grèves déclenchées vs évitées", "ordre": 2, "sizePercent": 35 }
+            ]
+          },
+          {
+            "ordre": 2,
+            "sizePercent": 50,
+            "widgets": [
+              { "type": "CHART", "titre": "Conflits par secteur et taille 2024", "ordre": 1, "sizePercent": 50 },
+              { "type": "CHART", "titre": "Nature des conflits", "ordre": 2, "sizePercent": 50 }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Analyse et tendances",
+        "ordre": 3,
+        "sizePercent": 35,
+        "rows": [
+          {
+            "ordre": 1,
+            "sizePercent": 100,
+            "widgets": [
+              {
+                "type": "EDITOR",
+                "titre": "Analyse et tendances",
+                "ordre": 1,
+                "sizePercent": 75,
+                "contentJson": "{\"html\":\"<p><strong>Analyse et tendances — Données 2024</strong></p><ul><li>Stabilité générale : 92,7% des entreprises sans conflit</li><li>Secteur le plus touché : agences de voyages (15,1%)</li><li>97,1% des conflits sont individuels</li></ul>\"}"
+              },
+              { "type": "KPI_CARD", "titre": "KPI sidebar", "ordre": 2, "sizePercent": 25 }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

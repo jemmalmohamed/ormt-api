@@ -1,0 +1,22 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "valeur" : "15268"
+  }, {
+    "annuel" : "2020",
+    "valeur" : "7260"
+  }, {
+    "annuel" : "2021",
+    "valeur" : "13025"
+  }, {
+    "annuel" : "2022",
+    "valeur" : "12036"
+  }, {
+    "annuel" : "2023",
+    "valeur" : "15462"
+  }, {
+    "annuel" : "2024",
+    "valeur" : "14671"
+  } ],
+  "indicateur" : "nombre des bénéficiaires du pi"
+}

@@ -29,6 +29,12 @@ public class GrapheConfigurationDto extends BaseDto {
 
     private String chartOptionsJson;
 
+    private Integer chartSpecVersion;
+
+    private String chartSpecJson;
+
+    private String configSystem;
+
     private Boolean isDefault;
 
 }

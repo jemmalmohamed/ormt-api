@@ -1,0 +1,148 @@
+{
+  "data" : [ {
+    "annuel" : "2021",
+    "motif_observation" : "Accidents de travail",
+    "valeur" : "7659"
+  }, {
+    "annuel" : "2021",
+    "motif_observation" : "Comité d'entreprise",
+    "valeur" : "1516"
+  }, {
+    "annuel" : "2021",
+    "motif_observation" : "Comité d'hygiène et de sécurité",
+    "valeur" : "1668"
+  }, {
+    "annuel" : "2021",
+    "motif_observation" : "Délégués des salariés",
+    "valeur" : "7397"
+  }, {
+    "annuel" : "2021",
+    "motif_observation" : "Délégués syndicaux",
+    "valeur" : "133"
+  }, {
+    "annuel" : "2021",
+    "motif_observation" : "Médecine de travail",
+    "valeur" : "1344"
+  }, {
+    "annuel" : "2021",
+    "motif_observation" : "Observations d'ordre général",
+    "valeur" : "151869"
+  }, {
+    "annuel" : "2021",
+    "motif_observation" : "Salaire Minimum Légal",
+    "valeur" : "17261"
+  }, {
+    "annuel" : "2021",
+    "motif_observation" : "Santé et sécurité",
+    "valeur" : "21449"
+  }, {
+    "annuel" : "2021",
+    "motif_observation" : "Sécurité sociale",
+    "valeur" : "17503"
+  }, {
+    "annuel" : "2021",
+    "motif_observation" : "Total",
+    "valeur" : "227830"
+  }, {
+    "annuel" : "2021",
+    "motif_observation" : "Travail des femmes et des enfants",
+    "valeur" : "31"
+  }, {
+    "annuel" : "2022",
+    "motif_observation" : "Accidents de travail",
+    "valeur" : "3896"
+  }, {
+    "annuel" : "2022",
+    "motif_observation" : "Comité d'entreprise",
+    "valeur" : "1488"
+  }, {
+    "annuel" : "2022",
+    "motif_observation" : "Comité d'hygiène et de sécurité",
+    "valeur" : "1774"
+  }, {
+    "annuel" : "2022",
+    "motif_observation" : "Délégués des salariés",
+    "valeur" : "4295"
+  }, {
+    "annuel" : "2022",
+    "motif_observation" : "Délégués syndicaux",
+    "valeur" : "18"
+  }, {
+    "annuel" : "2022",
+    "motif_observation" : "Médecine de travail",
+    "valeur" : "766"
+  }, {
+    "annuel" : "2022",
+    "motif_observation" : "Observations d'ordre général",
+    "valeur" : "250789"
+  }, {
+    "annuel" : "2022",
+    "motif_observation" : "Salaire Minimum Légal",
+    "valeur" : "16584"
+  }, {
+    "annuel" : "2022",
+    "motif_observation" : "Santé et sécurité",
+    "valeur" : "5038"
+  }, {
+    "annuel" : "2022",
+    "motif_observation" : "Sécurité sociale",
+    "valeur" : "11524"
+  }, {
+    "annuel" : "2022",
+    "motif_observation" : "Total",
+    "valeur" : "297312"
+  }, {
+    "annuel" : "2022",
+    "motif_observation" : "Travail des femmes et des enfants",
+    "valeur" : "1140"
+  }, {
+    "annuel" : "2023",
+    "motif_observation" : "Accidents de travail",
+    "valeur" : "19681"
+  }, {
+    "annuel" : "2023",
+    "motif_observation" : "Comité d'entreprise",
+    "valeur" : "823"
+  }, {
+    "annuel" : "2023",
+    "motif_observation" : "Comité d'hygiène et de sécurité",
+    "valeur" : "1304"
+  }, {
+    "annuel" : "2023",
+    "motif_observation" : "Délégués des salariés",
+    "valeur" : "8274"
+  }, {
+    "annuel" : "2023",
+    "motif_observation" : "Délégués syndicaux",
+    "valeur" : "8"
+  }, {
+    "annuel" : "2023",
+    "motif_observation" : "Médecine de travail",
+    "valeur" : "1036"
+  }, {
+    "annuel" : "2023",
+    "motif_observation" : "Observations d'ordre général",
+    "valeur" : "403207"
+  }, {
+    "annuel" : "2023",
+    "motif_observation" : "Salaire Minimum Légal",
+    "valeur" : "28139"
+  }, {
+    "annuel" : "2023",
+    "motif_observation" : "Santé et sécurité",
+    "valeur" : "4462"
+  }, {
+    "annuel" : "2023",
+    "motif_observation" : "Sécurité sociale",
+    "valeur" : "25219"
+  }, {
+    "annuel" : "2023",
+    "motif_observation" : "Total",
+    "valeur" : "493007"
+  }, {
+    "annuel" : "2023",
+    "motif_observation" : "Travail des femmes et des enfants",
+    "valeur" : "854"
+  } ],
+  "indicateur" : "nombre d'observations par motif d'observation"
+}

@@ -8,6 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import jakarta.persistence.EntityNotFoundException;
 import ma.org.ormt.core.commun.base.service.BaseServiceImpl;
 import ma.org.ormt.core.commun.base.service.SpecificationService;
@@ -16,6 +18,9 @@ import ma.org.ormt.core.validators.ObjectsValidator;
 import ma.org.ormt.modules.chiffres.dtos.request.ChiffreCleRequestDto;
 import ma.org.ormt.modules.chiffres.dtos.request.ChiffreCleRequestDtoMapper;
 import ma.org.ormt.modules.chiffres.models.ChiffreCle;
+import ma.org.ormt.modules.chiffres.models.enums.KpiEvolutionMode;
+import ma.org.ormt.modules.chiffres.models.enums.KpiFormatType;
+import ma.org.ormt.modules.chiffres.models.enums.KpiModeSource;
 import ma.org.ormt.modules.chiffres.repositories.ChiffreCleRepository;
 import ma.org.ormt.modules.chiffres.services.ChiffreCleService;
 import ma.org.ormt.modules.indicateurs.donnee.models.DonneeIndicateur;
@@ -40,6 +45,9 @@ public class ChiffreCleServiceImpl extends BaseServiceImpl<ChiffreCle> implement
 
     @Autowired
     private ChiffreCleRequestDtoMapper chiffrecleRequestMapper;
+
+    @Autowired
+    private ObjectMapper objectMapper;
 
     private static final String NOT_FOUND_STRING = "ChiffreCle non trouvée";
 
@@ -77,6 +85,7 @@ public class ChiffreCleServiceImpl extends BaseServiceImpl<ChiffreCle> implement
 
         validator.validate(requestDto);
         ChiffreCle chiffrecleToCreate = chiffrecleRequestMapper.mapToEntity(requestDto);
+        updateChiffreCleFields(chiffrecleToCreate, requestDto);
         ChiffreCle createdChiffreCle = chiffrecleRepository.save(chiffrecleToCreate);
         return createdChiffreCle;
 
@@ -94,14 +103,31 @@ public class ChiffreCleServiceImpl extends BaseServiceImpl<ChiffreCle> implement
     }
 
     private void updateChiffreCleFields(ChiffreCle chiffrecle, ChiffreCleRequestDto requestDto) {
-        chiffrecle.setLibelle(requestDto.getLibelle().toLowerCase());
-        chiffrecle.setUnite(requestDto.getUnite().toLowerCase());
-        chiffrecle.setDescription(requestDto.getDescription().toLowerCase());
-        chiffrecle.setAfficherDate(requestDto.getAfficherDate());
-        chiffrecle.setAccessType(requestDto.getAccessType());
+        KpiModeSource modeSource = requestDto.getModeSource() == null ? KpiModeSource.MANUAL : requestDto.getModeSource();
+        KpiFormatType formatType = requestDto.getFormatType() == null ? KpiFormatType.NUMBER : requestDto.getFormatType();
+        KpiEvolutionMode evolutionMode = requestDto.getEvolutionMode() == null ? KpiEvolutionMode.NONE
+                : requestDto.getEvolutionMode();
+
+        validateBusinessRules(requestDto, modeSource);
+        validateJsonPayload("styleJson", requestDto.getStyleJson());
+        validateJsonPayload("metadataJson", requestDto.getMetadataJson());
+
+        chiffrecle.setLibelle(normalize(requestDto.getLibelle()));
+        chiffrecle.setUnite(normalize(requestDto.getUnite()));
+        chiffrecle.setDescription(normalize(requestDto.getDescription()));
+        chiffrecle.setAfficherDescription(Boolean.TRUE.equals(requestDto.getAfficherDescription()));
+        chiffrecle.setAccessType(normalize(requestDto.getAccessType()));
         chiffrecle.setActif(requestDto.getActif());
-        chiffrecle.setValeur(requestDto.getValeur());
-        if (requestDto.getDonneeIndicateur() != null && requestDto.getIndicateur().getId() != null) {
+        chiffrecle.setModeSource(modeSource);
+        chiffrecle.setFormatType(formatType);
+        chiffrecle.setPrefixLabel(normalize(requestDto.getPrefixLabel()));
+        chiffrecle.setSuffixLabel(normalize(requestDto.getSuffixLabel()));
+        chiffrecle.setEvolutionMode(evolutionMode);
+        chiffrecle.setMetadataJson(normalizeJson(requestDto.getMetadataJson()));
+        chiffrecle.setStyleJson(normalizeJson(requestDto.getStyleJson()));
+        chiffrecle.setValeur(normalize(requestDto.getValeur()));
+
+        if (modeSource == KpiModeSource.INDICATEUR_VALUE) {
             DonneeIndicateur donneeIndicateur = donneeIndicateurService
                     .findById(requestDto.getDonneeIndicateur().getId())
                     .orElseThrow(() -> new EntityNotFoundException("Donnee Indicateur non trouvé"));
@@ -110,12 +136,60 @@ public class ChiffreCleServiceImpl extends BaseServiceImpl<ChiffreCle> implement
             chiffrecle.setDonneeIndicateur(donneeIndicateur);
             chiffrecle.setIndicateur(indicateur);
             chiffrecle.setValeur(donneeIndicateur.getValeur());
+            chiffrecle.setAfficherDate(hasTemporalDimension(indicateur) && Boolean.TRUE.equals(requestDto.getAfficherDate()));
         } else {
 
             chiffrecle.setDonneeIndicateur(null);
             chiffrecle.setIndicateur(null);
+            chiffrecle.setAfficherDate(Boolean.FALSE);
 
         }
+    }
+
+    private void validateBusinessRules(ChiffreCleRequestDto requestDto, KpiModeSource modeSource) {
+        if (modeSource == KpiModeSource.MANUAL) {
+            if (requestDto.getValeur() == null || requestDto.getValeur().isBlank()) {
+                throw new IllegalArgumentException("La valeur est obligatoire pour un KPI manuel.");
+            }
+            return;
+        }
+
+        if (requestDto.getIndicateur() == null || requestDto.getIndicateur().getId() == null) {
+            throw new IllegalArgumentException("L'indicateur est obligatoire pour un KPI issu d'un indicateur.");
+        }
+        if (requestDto.getDonneeIndicateur() == null || requestDto.getDonneeIndicateur().getId() == null) {
+            throw new IllegalArgumentException("La donnée indicateur est obligatoire pour un KPI issu d'un indicateur.");
+        }
+    }
+
+    private void validateJsonPayload(String fieldName, String payload) {
+        if (payload == null || payload.isBlank()) {
+            return;
+        }
+        try {
+            objectMapper.readTree(payload);
+        } catch (Exception exception) {
+            throw new IllegalArgumentException("Le champ " + fieldName + " doit contenir un JSON valide.");
+        }
+    }
+
+    private String normalize(String value) {
+        if (value == null) {
+            return null;
+        }
+        String trimmed = value.trim();
+        return trimmed.isEmpty() ? null : trimmed;
+    }
+
+    private String normalizeJson(String value) {
+        String normalized = normalize(value);
+        return normalized == null ? null : normalized;
+    }
+
+    private boolean hasTemporalDimension(Indicateur indicateur) {
+        return indicateur != null
+                && indicateur.getIndicateurDimensions() != null
+                && indicateur.getIndicateurDimensions().stream().anyMatch(dimension -> Boolean.TRUE.equals(dimension.getTemporelle()));
     }
 
 }

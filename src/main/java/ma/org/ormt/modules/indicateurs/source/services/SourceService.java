@@ -13,6 +13,8 @@ public interface SourceService extends BaseService<Source> {
 
     Optional<Source> findByAbreviation(String abreviation);
 
+    Optional<Source> findByNom(String nom);
+
     Page<Source> getEntityList(QueryParams requestParams);
 
     Source create(SourceRequestDto requestDto);
@@ -22,5 +24,7 @@ public interface SourceService extends BaseService<Source> {
     Source save(Source source);
 
     boolean existsById(Long id);
+
+    boolean existsByNom(String nom, Long excludeId);
 
 }

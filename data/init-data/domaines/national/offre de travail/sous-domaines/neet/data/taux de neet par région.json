@@ -1,0 +1,48 @@
+{
+  "data" : [ {
+    "annuel" : "2022",
+    "region" : "béni mellal-khénifra",
+    "valeur" : "30.6"
+  }, {
+    "annuel" : "2022",
+    "region" : "casablanca-settat",
+    "valeur" : "23.5"
+  }, {
+    "annuel" : "2022",
+    "region" : "drâa-tafilalet",
+    "valeur" : "23.5"
+  }, {
+    "annuel" : "2022",
+    "region" : "fès-meknès",
+    "valeur" : "27.4"
+  }, {
+    "annuel" : "2022",
+    "region" : "l'oriental",
+    "valeur" : "28.1"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "valeur" : "27.3"
+  }, {
+    "annuel" : "2022",
+    "region" : "national",
+    "valeur" : "25.2"
+  }, {
+    "annuel" : "2022",
+    "region" : "rabat-salé-kénitra",
+    "valeur" : "23.2"
+  }, {
+    "annuel" : "2022",
+    "region" : "régions du sud",
+    "valeur" : "22.6"
+  }, {
+    "annuel" : "2022",
+    "region" : "souss-massa",
+    "valeur" : "25.8"
+  }, {
+    "annuel" : "2022",
+    "region" : "tanger-tétouan-al hoceïma",
+    "valeur" : "21.0"
+  } ],
+  "indicateur" : "taux de neet par région"
+}

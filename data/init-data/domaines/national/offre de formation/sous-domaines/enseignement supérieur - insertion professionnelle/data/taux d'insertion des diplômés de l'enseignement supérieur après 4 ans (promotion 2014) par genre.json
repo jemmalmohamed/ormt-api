@@ -1,0 +1,16 @@
+{
+  "data" : [ {
+    "annuel" : "2014",
+    "genre" : "Total",
+    "valeur" : "83.9"
+  }, {
+    "annuel" : "2014",
+    "genre" : "femme",
+    "valeur" : "79.1"
+  }, {
+    "annuel" : "2014",
+    "genre" : "homme",
+    "valeur" : "87.8"
+  } ],
+  "indicateur" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par genre"
+}

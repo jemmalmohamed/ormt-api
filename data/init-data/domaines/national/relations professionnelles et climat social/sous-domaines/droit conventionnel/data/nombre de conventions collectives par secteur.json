@@ -1,0 +1,88 @@
+{
+  "data" : [ {
+    "annuel" : "2021",
+    "secteur_activite" : "Agriculture",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "Autres",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "BTP",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "Commerce",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "Industrie",
+    "valeur" : "3"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "Service",
+    "valeur" : "3"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite" : "Total",
+    "valeur" : "6"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "Agriculture",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "Autres",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "BTP",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "Commerce",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "Industrie",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "Service",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite" : "Total",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "Agriculture",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "Autres",
+    "valeur" : "2"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "BTP",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "Commerce",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "Industrie",
+    "valeur" : "6"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "Service",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite" : "Total",
+    "valeur" : "8"
+  } ],
+  "indicateur" : "nombre de conventions collectives par secteur"
+}

@@ -1,0 +1,37 @@
+{
+  "data" : [ {
+    "annuel" : "2013",
+    "valeur" : "263272"
+  }, {
+    "annuel" : "2014",
+    "valeur" : "270552"
+  }, {
+    "annuel" : "2015",
+    "valeur" : "278907"
+  }, {
+    "annuel" : "2016",
+    "valeur" : "313870"
+  }, {
+    "annuel" : "2017",
+    "valeur" : "323247"
+  }, {
+    "annuel" : "2018",
+    "valeur" : "332976"
+  }, {
+    "annuel" : "2019",
+    "valeur" : "337145"
+  }, {
+    "annuel" : "2020",
+    "valeur" : "302245"
+  }, {
+    "annuel" : "2021",
+    "valeur" : "335583"
+  }, {
+    "annuel" : "2022",
+    "valeur" : "354939"
+  }, {
+    "annuel" : "2023",
+    "valeur" : "371966"
+  } ],
+  "indicateur" : "formation brut de capital fixe"
+}

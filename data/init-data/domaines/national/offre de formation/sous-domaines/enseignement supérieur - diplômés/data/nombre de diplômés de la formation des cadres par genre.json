@@ -1,0 +1,100 @@
+{
+  "data" : [ {
+    "annuel" : "2016",
+    "genre" : "Total",
+    "valeur" : "7600"
+  }, {
+    "annuel" : "2016",
+    "genre" : "femme",
+    "valeur" : "2700"
+  }, {
+    "annuel" : "2016",
+    "genre" : "homme",
+    "valeur" : "4900"
+  }, {
+    "annuel" : "2017",
+    "genre" : "Total",
+    "valeur" : "8500"
+  }, {
+    "annuel" : "2017",
+    "genre" : "femme",
+    "valeur" : "4300"
+  }, {
+    "annuel" : "2017",
+    "genre" : "homme",
+    "valeur" : "4200"
+  }, {
+    "annuel" : "2018",
+    "genre" : "Total",
+    "valeur" : "10700"
+  }, {
+    "annuel" : "2018",
+    "genre" : "femme",
+    "valeur" : "4500"
+  }, {
+    "annuel" : "2018",
+    "genre" : "homme",
+    "valeur" : "6100"
+  }, {
+    "annuel" : "2019",
+    "genre" : "Total",
+    "valeur" : "10700"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "valeur" : "4900"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "valeur" : "5800"
+  }, {
+    "annuel" : "2020",
+    "genre" : "Total",
+    "valeur" : "12800"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "valeur" : "6100"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "valeur" : "6600"
+  }, {
+    "annuel" : "2021",
+    "genre" : "Total",
+    "valeur" : "24900"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "valeur" : "13400"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "valeur" : "11500"
+  }, {
+    "annuel" : "2022",
+    "genre" : "Total",
+    "valeur" : "27200"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "valeur" : "15800"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "valeur" : "11400"
+  }, {
+    "annuel" : "2023",
+    "genre" : "Total",
+    "valeur" : "29200"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "valeur" : "17700"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "valeur" : "11500"
+  } ],
+  "indicateur" : "nombre de diplômés de la formation des cadres par genre"
+}

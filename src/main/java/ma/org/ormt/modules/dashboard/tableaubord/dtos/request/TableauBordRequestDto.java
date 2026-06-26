@@ -13,11 +13,11 @@ import ma.org.ormt.core.validators.unique.Unique;
 
 @Setter
 @Getter
-@Schema(name = "tableauBordRequestDto", description = "Requête pour créer ou mettre à jour un tableau de bord.")
+@Schema(name = "tableauBordRequestDto", description = "Requête pour créer ou mettre à jour un tb_group.")
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Unique.List({
-        @Unique(message = "Le nom ${validatedValue.nom} existe déjà", fieldName = "nom", fieldId = "id", tableName = "tableau_bord"),
+        @Unique(message = "Le nom ${validatedValue.nom} existe déjà", fieldName = "nom", fieldId = "id", tableName = "tb_group"),
 })
 @JsonIgnoreProperties(value = { "tableauBord.id" }, allowGetters = true)
 public class TableauBordRequestDto extends Dto {

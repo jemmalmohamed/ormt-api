@@ -1,0 +1,454 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "102000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite" : "btp",
+    "valeur" : "45000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite" : "commerce",
+    "valeur" : "168000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite" : "enseignement",
+    "valeur" : "83000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite" : "hébérgement et restauration",
+    "valeur" : "48000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite" : "industries",
+    "valeur" : "265000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite" : "santé humaine et action sociale",
+    "valeur" : "45000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite" : "services",
+    "valeur" : "293000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite" : "transport",
+    "valeur" : "17000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "270000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite" : "btp",
+    "valeur" : "421000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite" : "commerce",
+    "valeur" : "350000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite" : "enseignement",
+    "valeur" : "38000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite" : "hébérgement et restauration",
+    "valeur" : "114000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite" : "industries",
+    "valeur" : "337000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite" : "santé humaine et action sociale",
+    "valeur" : "15000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite" : "services",
+    "valeur" : "562000"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite" : "transport",
+    "valeur" : "104000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "106000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite" : "btp",
+    "valeur" : "49000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite" : "commerce",
+    "valeur" : "174000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite" : "enseignement",
+    "valeur" : "87000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite" : "hébérgement et restauration",
+    "valeur" : "47000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite" : "industries",
+    "valeur" : "257000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite" : "santé humaine et action sociale",
+    "valeur" : "47000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite" : "services",
+    "valeur" : "303000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite" : "transport",
+    "valeur" : "18000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "274000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite" : "btp",
+    "valeur" : "430000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite" : "commerce",
+    "valeur" : "358000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite" : "enseignement",
+    "valeur" : "40000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite" : "hébérgement et restauration",
+    "valeur" : "113000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite" : "industries",
+    "valeur" : "341000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite" : "santé humaine et action sociale",
+    "valeur" : "16000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite" : "services",
+    "valeur" : "556000"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite" : "transport",
+    "valeur" : "103000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "123000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite" : "btp",
+    "valeur" : "54000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite" : "commerce",
+    "valeur" : "184000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite" : "enseignement",
+    "valeur" : "99000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite" : "hébérgement et restauration",
+    "valeur" : "46000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite" : "industries",
+    "valeur" : "260000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite" : "santé humaine et action sociale",
+    "valeur" : "52000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite" : "services",
+    "valeur" : "322000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite" : "transport",
+    "valeur" : "19000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "302000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite" : "btp",
+    "valeur" : "460000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite" : "commerce",
+    "valeur" : "381000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite" : "enseignement",
+    "valeur" : "43000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite" : "hébérgement et restauration",
+    "valeur" : "111000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite" : "industries",
+    "valeur" : "353000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite" : "santé humaine et action sociale",
+    "valeur" : "17000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite" : "services",
+    "valeur" : "583000"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite" : "transport",
+    "valeur" : "108000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "134000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite" : "btp",
+    "valeur" : "55000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite" : "commerce",
+    "valeur" : "192000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite" : "enseignement",
+    "valeur" : "110000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite" : "hébérgement et restauration",
+    "valeur" : "56000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite" : "industries",
+    "valeur" : "268000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite" : "santé humaine et action sociale",
+    "valeur" : "58000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite" : "services",
+    "valeur" : "362000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite" : "transport",
+    "valeur" : "20000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "328000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite" : "btp",
+    "valeur" : "465000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite" : "commerce",
+    "valeur" : "398000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite" : "enseignement",
+    "valeur" : "48000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite" : "hébérgement et restauration",
+    "valeur" : "127000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite" : "industries",
+    "valeur" : "368000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite" : "santé humaine et action sociale",
+    "valeur" : "23000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite" : "services",
+    "valeur" : "684000"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite" : "transport",
+    "valeur" : "115000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "135000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite" : "btp",
+    "valeur" : "56000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite" : "commerce",
+    "valeur" : "197000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite" : "enseignement",
+    "valeur" : "120000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite" : "hébérgement et restauration",
+    "valeur" : "62000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite" : "industries",
+    "valeur" : "271000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite" : "santé humaine et action sociale",
+    "valeur" : "64000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite" : "services",
+    "valeur" : "395000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite" : "transport",
+    "valeur" : "21000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "335000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite" : "btp",
+    "valeur" : "471000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite" : "commerce",
+    "valeur" : "409000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite" : "enseignement",
+    "valeur" : "50000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite" : "hébérgement et restauration",
+    "valeur" : "135000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite" : "industries",
+    "valeur" : "375000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite" : "santé humaine et action sociale",
+    "valeur" : "25000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite" : "services",
+    "valeur" : "728000"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite" : "transport",
+    "valeur" : "119000"
+  } ],
+  "indicateur" : "salariés déclarés à la cnss par secteur d'activité"
+}

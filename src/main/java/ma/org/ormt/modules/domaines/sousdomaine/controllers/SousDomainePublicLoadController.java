@@ -24,7 +24,6 @@ import lombok.RequiredArgsConstructor;
 import ma.org.ormt.core.commun.base.controller.BaseController;
 import ma.org.ormt.core.commun.rest.queries.QueryParams;
 import ma.org.ormt.core.commun.rest.responses.RestResponse;
-import ma.org.ormt.modules.domaines.domaine.models.Domaine;
 import ma.org.ormt.modules.domaines.domaine.services.DomaineService;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDto;
 import ma.org.ormt.modules.domaines.sousdomaine.dtos.SousDomaineDtoMapper;
@@ -143,13 +142,7 @@ public class SousDomainePublicLoadController extends BaseController<SousDomaine>
         // }
 
         private boolean hasAnyEspaceAccessForDomaine(Long domaineId) {
-                return domaineService.findById(domaineId)
-                                .map(Domaine::getEspaceDomaines)
-                                .orElse(java.util.Collections.emptyList())
-                                .stream()
-                                .map(ed -> ed.getEspace() != null ? ed.getEspace().getId() : null)
-                                .filter(Objects::nonNull)
-                                .anyMatch(espaceId -> hasResourceAccess(espaceId, "espace", "lecture"));
+                return false;
         }
 
 }

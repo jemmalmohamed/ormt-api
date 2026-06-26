@@ -1,0 +1,74 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "valeur" : "21.5"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "valeur" : "71.0"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "valeur" : "19.9"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "valeur" : "70.4"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "valeur" : "20.9"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "valeur" : "70.4"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "valeur" : "19.8"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "region" : "marrakech-safi",
+    "valeur" : "17.3"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "valeur" : "69.6"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "region" : "marrakech-safi",
+    "valeur" : "72.5"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "valeur" : "19.0"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "region" : "marrakech-safi",
+    "valeur" : "16.5"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "valeur" : "69.0"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "region" : "marrakech-safi",
+    "valeur" : "71.2"
+  }, {
+    "annuel" : "2024",
+    "genre" : "femme",
+    "region" : "marrakech-safi",
+    "valeur" : "16.0"
+  }, {
+    "annuel" : "2024",
+    "genre" : "homme",
+    "region" : "marrakech-safi",
+    "valeur" : "71.1"
+  } ],
+  "indicateur" : "taux d'activité selon le genre"
+}

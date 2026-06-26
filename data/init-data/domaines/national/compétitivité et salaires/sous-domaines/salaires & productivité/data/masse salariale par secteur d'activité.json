@@ -1,0 +1,229 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Agriculture, forêt et pêche",
+    "valeur" : "4.915737834E8"
+  }, {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "BTP",
+    "valeur" : "1.087435329E9"
+  }, {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Commerce",
+    "valeur" : "1.146770879E9"
+  }, {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Enseignement",
+    "valeur" : "5.338908919E8"
+  }, {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Hébérgement et restauration",
+    "valeur" : "1.799930878E9"
+  }, {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Industries",
+    "valeur" : "1.007762819E9"
+  }, {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Santé humaine et action sociale",
+    "valeur" : "2.068841632E8"
+  }, {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Services",
+    "valeur" : "1.532761804E9"
+  }, {
+    "annuel" : "2019",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Transport",
+    "valeur" : "3.317525392E8"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Agriculture, forêt et pêche",
+    "valeur" : "5.181867524E8"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "BTP",
+    "valeur" : "9.984108277E8"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Commerce",
+    "valeur" : "1.043226354E9"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Enseignement",
+    "valeur" : "6.260283928E8"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Hébérgement et restauration",
+    "valeur" : "9.578823779E8"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Industries",
+    "valeur" : "9.319818038E8"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Santé humaine et action sociale",
+    "valeur" : "2.150299211E8"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Services",
+    "valeur" : "1.272864258E9"
+  }, {
+    "annuel" : "2020",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Transport",
+    "valeur" : "2.700677586E8"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Agriculture, forêt et pêche",
+    "valeur" : "6.254719026E8"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "BTP",
+    "valeur" : "1.240187586E9"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Commerce",
+    "valeur" : "1.224122772E9"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Enseignement",
+    "valeur" : "7.78974066E8"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Hébérgement et restauration",
+    "valeur" : "9.623133532E8"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Industries",
+    "valeur" : "1.016260702E9"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Santé humaine et action sociale",
+    "valeur" : "2.546725133E8"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Services",
+    "valeur" : "1.565874082E9"
+  }, {
+    "annuel" : "2021",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Transport",
+    "valeur" : "3.231876784E8"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Agriculture, forêt et pêche",
+    "valeur" : "6.403646689E8"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "BTP",
+    "valeur" : "1.317300573E9"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Commerce",
+    "valeur" : "1.348127757E9"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Enseignement",
+    "valeur" : "9.639000443E8"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Hébérgement et restauration",
+    "valeur" : "1.615113554E9"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Industries",
+    "valeur" : "1.074894433E9"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Santé humaine et action sociale",
+    "valeur" : "2.851356301E8"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Services",
+    "valeur" : "1.971350505E9"
+  }, {
+    "annuel" : "2022",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Transport",
+    "valeur" : "3.938296225E8"
+  }, {
+    "annuel" : "2023",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Agriculture, forêt et pêche",
+    "valeur" : "5.479361159E8"
+  }, {
+    "annuel" : "2023",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "BTP",
+    "valeur" : "1.463263994E9"
+  }, {
+    "annuel" : "2023",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Commerce",
+    "valeur" : "1.438499406E9"
+  }, {
+    "annuel" : "2023",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Enseignement",
+    "valeur" : "1.167212215E9"
+  }, {
+    "annuel" : "2023",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Hébérgement et restauration",
+    "valeur" : "2.114316704E9"
+  }, {
+    "annuel" : "2023",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Industries",
+    "valeur" : "1.122175286E9"
+  }, {
+    "annuel" : "2023",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Santé humaine et action sociale",
+    "valeur" : "3.484667153E8"
+  }, {
+    "annuel" : "2023",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Services",
+    "valeur" : "2.30091448E9"
+  }, {
+    "annuel" : "2023",
+    "region" : "marrakech-safi",
+    "secteur_activite" : "Transport",
+    "valeur" : "4.409418377E8"
+  } ],
+  "indicateur" : "masse salariale par secteur d'activité"
+}

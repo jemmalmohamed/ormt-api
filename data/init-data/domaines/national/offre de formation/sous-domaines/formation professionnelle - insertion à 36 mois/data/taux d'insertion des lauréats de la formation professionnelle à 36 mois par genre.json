@@ -1,0 +1,52 @@
+{
+  "data" : [ {
+    "annuel" : "2006",
+    "genre" : "Total",
+    "valeur" : "76.6"
+  }, {
+    "annuel" : "2006",
+    "genre" : "femme",
+    "valeur" : "72.3"
+  }, {
+    "annuel" : "2006",
+    "genre" : "homme",
+    "valeur" : "80.0"
+  }, {
+    "annuel" : "2008",
+    "genre" : "Total",
+    "valeur" : "74.1"
+  }, {
+    "annuel" : "2008",
+    "genre" : "femme",
+    "valeur" : "75.6"
+  }, {
+    "annuel" : "2008",
+    "genre" : "homme",
+    "valeur" : "73.1"
+  }, {
+    "annuel" : "2010",
+    "genre" : "Total",
+    "valeur" : "75.8"
+  }, {
+    "annuel" : "2010",
+    "genre" : "femme",
+    "valeur" : "73.2"
+  }, {
+    "annuel" : "2010",
+    "genre" : "homme",
+    "valeur" : "77.5"
+  }, {
+    "annuel" : "2016",
+    "genre" : "Total",
+    "valeur" : "84.4"
+  }, {
+    "annuel" : "2016",
+    "genre" : "femme",
+    "valeur" : "81.4"
+  }, {
+    "annuel" : "2016",
+    "genre" : "homme",
+    "valeur" : "86.0"
+  } ],
+  "indicateur" : "taux d'insertion des lauréats de la formation professionnelle à 36 mois par genre"
+}

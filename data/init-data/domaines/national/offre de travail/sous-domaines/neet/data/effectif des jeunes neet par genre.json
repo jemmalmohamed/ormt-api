@@ -1,0 +1,64 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "genre" : "National",
+    "valeur" : "1563140"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "valeur" : "1215549"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "valeur" : "347591"
+  }, {
+    "annuel" : "2020",
+    "genre" : "National",
+    "valeur" : "1565704"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "valeur" : "1149796"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "valeur" : "415908"
+  }, {
+    "annuel" : "2021",
+    "genre" : "National",
+    "valeur" : "1529227"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "valeur" : "1122427"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "valeur" : "406800"
+  }, {
+    "annuel" : "2022",
+    "genre" : "National",
+    "valeur" : "1483191"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "valeur" : "1079146"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "valeur" : "404045"
+  }, {
+    "annuel" : "2023",
+    "genre" : "National",
+    "valeur" : "1541283.3"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "valeur" : "1082094.2"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "valeur" : "460836"
+  } ],
+  "indicateur" : "effectif des jeunes neet par genre"
+}

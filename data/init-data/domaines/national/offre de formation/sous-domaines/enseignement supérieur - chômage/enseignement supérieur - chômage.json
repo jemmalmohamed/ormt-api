@@ -1,0 +1,182 @@
+{
+  "actif" : true,
+  "description" : "Indicateurs relatifs au chômage des diplômés de l'enseignement supérieur après 4 ans, par composante, type d'accès, diplôme et genre.",
+  "indicateurs" : [ {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "chômage",
+    "description" : "taux de chômage des diplômés de l'enseignement supérieur après 4 ans par composante et genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "composante",
+      "nom" : "composante",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : "{\n  \"type\" : \"bar\",\n  \"orientation\" : \"horizontal\",\n  \"title\" : \"taux de chômage des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par composante et genre\",\n  \"dataDimension\" : \"composante\",\n  \"groupingDimension\" : \"genre\",\n  \"display\" : {\n    \"showDataLabels\" : false,\n    \"showLegend\" : true,\n    \"legendPosition\" : \"bottom\",\n    \"legendAlign\" : \"center\",\n    \"grouped\" : true,\n    \"chartStyle\" : \"bar\",\n    \"stacking\" : \"none\",\n    \"palette\" : \"default\"\n  },\n  \"filters\" : {\n    \"enabled\" : true,\n    \"logic\" : \"AND\",\n    \"items\" : [ {\n      \"dimension\" : \"annuel\",\n      \"operator\" : \"eq\",\n      \"value\" : \"2014\",\n      \"active\" : true\n    } ]\n  },\n  \"pivotVisibility\" : {\n    \"hiddenRowValues\" : [ \"total\" ],\n    \"hiddenColumnValues\" : {\n      \"genre\" : [ \"ensemble\" ]\n    }\n  },\n  \"ordering\" : {\n    \"principalOrder\" : [ \"total\", \"formation professionnelle post-baccalauréat\", \"enseignement supérieur privé\", \"enseignement universitaire public\" ]\n  }\n}",
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Taux de chômage des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante et genre - Histogramme"
+    } ],
+    "nom" : "taux de chômage des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par composante et genre",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "taux de chômage des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par composante et genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "chômage",
+    "description" : "taux de chômage des diplômés de l'enseignement supérieur privé après 4 ans par diplôme et genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Taux de chômage des diplômés de l'enseignement supérieur privé après 4 ans (Promotion 2014) par diplôme et genre - Histogramme"
+    } ],
+    "nom" : "taux de chômage des diplômés de l'enseignement supérieur privé après 4 ans (promotion 2014) par diplôme et genre",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "taux de chômage des diplômés de l'enseignement supérieur privé après 4 ans (promotion 2014) par diplôme et genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "chômage",
+    "description" : "taux de chômage des diplômés de l'enseignement universitaire public après 4 ans par diplôme et genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Taux de chômage des diplômés de l'enseignement universitaire public après 4 ans (Promotion 2014) par diplôme et genre - Histogramme"
+    } ],
+    "nom" : "taux de chômage des diplômés de l'enseignement universitaire public après 4 ans (promotion 2014) par diplôme et genre",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "taux de chômage des diplômés de l'enseignement universitaire public après 4 ans (promotion 2014) par diplôme et genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "chômage",
+    "description" : "taux de chômage des diplômés de l'enseignement universitaire public après 4 ans par type d'accès.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "type d'accès",
+      "nom" : "type_acces",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Taux de chômage des diplômés de l'enseignement universitaire public après 4 ans (Promotion 2014) par type d'accès - Histogramme"
+    } ],
+    "nom" : "taux de chômage des diplômés de l'enseignement universitaire public après 4 ans (promotion 2014) par type d'accès",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "taux de chômage des diplômés de l'enseignement universitaire public après 4 ans (promotion 2014) par type d'accès",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  } ],
+  "nom" : "enseignement supérieur - chômage"
+}

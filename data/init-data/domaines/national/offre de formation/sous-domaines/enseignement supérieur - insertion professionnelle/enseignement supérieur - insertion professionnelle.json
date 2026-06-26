@@ -1,0 +1,316 @@
+{
+  "actif" : true,
+  "description" : "Indicateurs relatifs à l'insertion professionnelle des diplômés de l'enseignement supérieur par composante, type d'accès, genre, diplôme et domaine d'études",
+  "indicateurs" : [ {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "insertion",
+    "description" : "taux d'emploi des diplômés de l'enseignement supérieur après 4 ans par composante et par genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "composante",
+      "nom" : "composante",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Taux d'emploi des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante et par genre - Histogramme"
+    } ],
+    "nom" : "taux d'emploi des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par composante et par genre",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "taux d'emploi des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par composante et par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "insertion",
+    "description" : "taux d'emploi des diplômés de l'enseignement supérieur privé après 4 ans par diplôme et par genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ ],
+    "nom" : "taux d'emploi des diplômés de l'enseignement supérieur privé après 4 ans (promotion 2014) par diplôme et par genre",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "taux d'emploi des diplômés de l'enseignement supérieur privé après 4 ans (promotion 2014) par diplôme et par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "insertion",
+    "description" : "taux d'emploi des diplômés de l'enseignement universitaire public après 4 ans par diplôme et par genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ ],
+    "nom" : "taux d'emploi des diplômés de l'enseignement universitaire public après 4 ans (promotion 2014) par diplôme et par genre",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "taux d'emploi des diplômés de l'enseignement universitaire public après 4 ans (promotion 2014) par diplôme et par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "insertion",
+    "description" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans par composante.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "composante",
+      "nom" : "composante",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par composante - Histogramme"
+    } ],
+    "nom" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par composante",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par composante",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "insertion",
+    "description" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans par diplôme.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par diplôme - Histogramme"
+    } ],
+    "nom" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par diplôme",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par diplôme",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "insertion",
+    "description" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans par domaine d'études.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "domaine d'études",
+      "nom" : "domaine_etudes",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par domaine d'études - Histogramme"
+    } ],
+    "nom" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par domaine d'études",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par domaine d'études",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "insertion",
+    "description" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans par genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par genre - Histogramme"
+    } ],
+    "nom" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par genre",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par genre",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "es",
+    "actif" : true,
+    "categorie" : "insertion",
+    "description" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans par type d'accès.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "type d'accès",
+      "nom" : "type_acces",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (Promotion 2014) par type d'accès - Histogramme"
+    } ],
+    "nom" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par type d'accès",
+    "regleCalcul" : null,
+    "source" : "mesrsi",
+    "titre" : "taux d'insertion des diplômés de l'enseignement supérieur après 4 ans (promotion 2014) par type d'accès",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  } ],
+  "nom" : "enseignement supérieur - insertion professionnelle"
+}

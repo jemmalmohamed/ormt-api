@@ -1,0 +1,64 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "genre" : "Ensemble",
+    "valeur" : "9.2"
+  }, {
+    "annuel" : "2019",
+    "genre" : "Femme",
+    "valeur" : "4.4"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "valeur" : "10.6"
+  }, {
+    "annuel" : "2020",
+    "genre" : "Ensemble",
+    "valeur" : "9.5"
+  }, {
+    "annuel" : "2020",
+    "genre" : "Femme",
+    "valeur" : "4.5"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "valeur" : "10.9"
+  }, {
+    "annuel" : "2021",
+    "genre" : "Ensemble",
+    "valeur" : "10.5"
+  }, {
+    "annuel" : "2021",
+    "genre" : "Femme",
+    "valeur" : "4.8"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "valeur" : "12.1"
+  }, {
+    "annuel" : "2022",
+    "genre" : "Ensemble",
+    "valeur" : "10.7"
+  }, {
+    "annuel" : "2022",
+    "genre" : "Femme",
+    "valeur" : "5.1"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "valeur" : "12.2"
+  }, {
+    "annuel" : "2023",
+    "genre" : "Ensemble",
+    "valeur" : "10.2"
+  }, {
+    "annuel" : "2023",
+    "genre" : "Femme",
+    "valeur" : "4.6"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "valeur" : "11.7"
+  } ],
+  "indicateur" : "part de l'emploi de type occasionnel ou saisonnier par genre"
+}

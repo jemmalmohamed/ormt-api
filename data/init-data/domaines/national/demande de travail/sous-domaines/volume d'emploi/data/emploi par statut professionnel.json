@@ -1,0 +1,634 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "milieu" : "national",
+    "statut" : "aides familiales",
+    "valeur" : "1613000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "national",
+    "statut" : "apprentis",
+    "valeur" : "55000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "national",
+    "statut" : "autres situations",
+    "valeur" : "241000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "national",
+    "statut" : "employeurs",
+    "valeur" : "263000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "national",
+    "statut" : "ensemble",
+    "valeur" : "10975000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "national",
+    "statut" : "indépendants",
+    "valeur" : "3314000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "national",
+    "statut" : "salariés",
+    "valeur" : "5498000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "statut" : "aides familiales",
+    "valeur" : "1456000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "statut" : "apprentis",
+    "valeur" : "19000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "statut" : "autres situations",
+    "valeur" : "85000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "statut" : "employeurs",
+    "valeur" : "38000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "statut" : "ensemble",
+    "valeur" : "4698000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "statut" : "indépendants",
+    "valeur" : "1705000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "statut" : "salariés",
+    "valeur" : "1400000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "statut" : "aides familiales",
+    "valeur" : "157000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "statut" : "apprentis",
+    "valeur" : "31000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "statut" : "autres situations",
+    "valeur" : "157000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "statut" : "employeurs",
+    "valeur" : "226000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "statut" : "ensemble",
+    "valeur" : "6277000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "statut" : "indépendants",
+    "valeur" : "1607000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "statut" : "salariés",
+    "valeur" : "4099000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "national",
+    "statut" : "aides familiales",
+    "valeur" : "1444000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "national",
+    "statut" : "apprentis",
+    "valeur" : "42000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "national",
+    "statut" : "autres situations",
+    "valeur" : "232000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "national",
+    "statut" : "employeurs",
+    "valeur" : "211000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "national",
+    "statut" : "ensemble",
+    "valeur" : "10542000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "national",
+    "statut" : "indépendants",
+    "valeur" : "3257000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "national",
+    "statut" : "salariés",
+    "valeur" : "5345000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "statut" : "aides familiales",
+    "valeur" : "1303000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "statut" : "apprentis",
+    "valeur" : "13000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "statut" : "autres situations",
+    "valeur" : "79000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "statut" : "employeurs",
+    "valeur" : "26000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "statut" : "ensemble",
+    "valeur" : "4403000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "statut" : "indépendants",
+    "valeur" : "1611000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "statut" : "salariés",
+    "valeur" : "1369000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "statut" : "aides familiales",
+    "valeur" : "141000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "statut" : "apprentis",
+    "valeur" : "31000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "statut" : "autres situations",
+    "valeur" : "166000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "statut" : "employeurs",
+    "valeur" : "184000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "statut" : "ensemble",
+    "valeur" : "6140000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "statut" : "indépendants",
+    "valeur" : "1646000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "statut" : "salariés",
+    "valeur" : "3979000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "national",
+    "statut" : "aides familiales",
+    "valeur" : "1476000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "national",
+    "statut" : "apprentis",
+    "valeur" : "43000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "national",
+    "statut" : "autres situations",
+    "valeur" : "248000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "national",
+    "statut" : "employeurs",
+    "valeur" : "237000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "national",
+    "statut" : "ensemble",
+    "valeur" : "10772000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "national",
+    "statut" : "indépendants",
+    "valeur" : "3189000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "national",
+    "statut" : "salariés",
+    "valeur" : "5580000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "statut" : "aides familiales",
+    "valeur" : "1346000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "statut" : "apprentis",
+    "valeur" : "18000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "statut" : "autres situations",
+    "valeur" : "77000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "statut" : "employeurs",
+    "valeur" : "27000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "statut" : "ensemble",
+    "valeur" : "4533000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "statut" : "indépendants",
+    "valeur" : "1600000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "statut" : "salariés",
+    "valeur" : "1464000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "statut" : "aides familiales",
+    "valeur" : "131000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "statut" : "apprentis",
+    "valeur" : "31000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "statut" : "autres situations",
+    "valeur" : "168000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "statut" : "employeurs",
+    "valeur" : "212000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "statut" : "ensemble",
+    "valeur" : "6239000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "statut" : "indépendants",
+    "valeur" : "1585000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "statut" : "salariés",
+    "valeur" : "4112000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "national",
+    "statut" : "aides familiales",
+    "valeur" : "1322000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "national",
+    "statut" : "apprentis",
+    "valeur" : "43000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "national",
+    "statut" : "autres situations",
+    "valeur" : "250000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "national",
+    "statut" : "employeurs",
+    "valeur" : "226000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "national",
+    "statut" : "ensemble",
+    "valeur" : "10749000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "national",
+    "statut" : "indépendants",
+    "valeur" : "3257000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "national",
+    "statut" : "salariés",
+    "valeur" : "5654000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "statut" : "aides familiales",
+    "valeur" : "1194000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "statut" : "apprentis",
+    "valeur" : "17000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "statut" : "autres situations",
+    "valeur" : "83000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "statut" : "employeurs",
+    "valeur" : "26000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "statut" : "ensemble",
+    "valeur" : "4359000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "statut" : "indépendants",
+    "valeur" : "1565000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "statut" : "salariés",
+    "valeur" : "1473000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "statut" : "aides familiales",
+    "valeur" : "121000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "statut" : "apprentis",
+    "valeur" : "26000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "statut" : "autres situations",
+    "valeur" : "166000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "statut" : "employeurs",
+    "valeur" : "198000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "statut" : "ensemble",
+    "valeur" : "6390000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "statut" : "indépendants",
+    "valeur" : "1693000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "statut" : "salariés",
+    "valeur" : "4185000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "national",
+    "statut" : "aides familiales",
+    "valeur" : "1261000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "national",
+    "statut" : "apprentis",
+    "valeur" : "40000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "national",
+    "statut" : "autres situations",
+    "valeur" : "242000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "national",
+    "statut" : "employeurs",
+    "valeur" : "216000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "national",
+    "statut" : "ensemble",
+    "valeur" : "10591000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "national",
+    "statut" : "indépendants",
+    "valeur" : "3185000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "national",
+    "statut" : "salariés",
+    "valeur" : "5647000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "statut" : "aides familiales",
+    "valeur" : "1143000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "statut" : "apprentis",
+    "valeur" : "14000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "statut" : "autres situations",
+    "valeur" : "80000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "statut" : "employeurs",
+    "valeur" : "25000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "statut" : "ensemble",
+    "valeur" : "4160000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "statut" : "indépendants",
+    "valeur" : "1485000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "statut" : "salariés",
+    "valeur" : "1413000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "statut" : "aides familiales",
+    "valeur" : "118000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "statut" : "apprentis",
+    "valeur" : "26000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "statut" : "autres situations",
+    "valeur" : "162000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "statut" : "employeurs",
+    "valeur" : "191000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "statut" : "ensemble",
+    "valeur" : "6431000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "statut" : "indépendants",
+    "valeur" : "1700000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "statut" : "salariés",
+    "valeur" : "4234000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "national",
+    "statut" : "aides familiales",
+    "valeur" : "1238000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "national",
+    "statut" : "apprentis",
+    "valeur" : "39000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "national",
+    "statut" : "autres situations",
+    "valeur" : "244000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "national",
+    "statut" : "employeurs",
+    "valeur" : "219000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "national",
+    "statut" : "ensemble",
+    "valeur" : "10673000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "national",
+    "statut" : "indépendants",
+    "valeur" : "3180000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "national",
+    "statut" : "salariés",
+    "valeur" : "5753000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "rural",
+    "statut" : "aides familiales",
+    "valeur" : "1123000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "rural",
+    "statut" : "apprentis",
+    "valeur" : "13000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "rural",
+    "statut" : "autres situations",
+    "valeur" : "77000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "rural",
+    "statut" : "employeurs",
+    "valeur" : "24000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "rural",
+    "statut" : "ensemble",
+    "valeur" : "4080000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "rural",
+    "statut" : "indépendants",
+    "valeur" : "1435000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "rural",
+    "statut" : "salariés",
+    "valeur" : "1408000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "urbain",
+    "statut" : "aides familiales",
+    "valeur" : "115000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "urbain",
+    "statut" : "apprentis",
+    "valeur" : "26000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "urbain",
+    "statut" : "autres situations",
+    "valeur" : "167000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "urbain",
+    "statut" : "employeurs",
+    "valeur" : "195000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "urbain",
+    "statut" : "ensemble",
+    "valeur" : "6593000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "urbain",
+    "statut" : "indépendants",
+    "valeur" : "1745000"
+  }, {
+    "annuel" : "2024",
+    "milieu" : "urbain",
+    "statut" : "salariés",
+    "valeur" : "4345000"
+  } ],
+  "indicateur" : "emploi par statut professionnel"
+}

@@ -145,11 +145,14 @@ public class JsonGrapheConfigurationSeeder implements CommandLineRunner {
         try {
             String grapheTypeCode = configNode.get("grapheTypeCode").asText();
             String configNom = configNode.has("nom") ? configNode.get("nom").asText() : null;
-            String dimensionMapping = configNode.has("dimensionMappingJson")
-                    ? configNode.get("dimensionMappingJson").asText()
-                    : "{\"default\": \"standard\"}";
-            String chartOptions = configNode.has("chartOptionsJson") && !configNode.get("chartOptionsJson").isNull()
-                    ? configNode.get("chartOptionsJson").asText()
+            String dimensionMapping = extractJsonPayload(configNode.get("dimensionMappingJson"), "{\"default\": \"standard\"}");
+            String chartOptions = extractJsonPayload(configNode.get("chartOptionsJson"), null);
+            String chartSpecJson = extractJsonPayload(configNode.get("chartSpecJson"), null);
+            Integer chartSpecVersion = configNode.has("chartSpecVersion") && !configNode.get("chartSpecVersion").isNull()
+                    ? configNode.get("chartSpecVersion").asInt()
+                    : null;
+            String configSystem = configNode.has("configSystem") && !configNode.get("configSystem").isNull()
+                    ? configNode.get("configSystem").asText()
                     : null;
             boolean isDefault = configNode.has("isDefault") ? configNode.get("isDefault").asBoolean() : false;
 
@@ -184,6 +187,9 @@ public class JsonGrapheConfigurationSeeder implements CommandLineRunner {
                     .nom(uniqueConfigName)
                     .dimensionMappingJson(dimensionMapping)
                     .chartOptionsJson(chartOptions)
+                    .chartSpecVersion(chartSpecVersion)
+                    .chartSpecJson(chartSpecJson)
+                    .configSystem(configSystem)
                     .isDefault(isDefault)
                     .build();
 
@@ -194,6 +200,29 @@ public class JsonGrapheConfigurationSeeder implements CommandLineRunner {
             log.error("Error creating graph configuration for indicator '{}': {}",
                     indicateur.getNom(), e.getMessage());
         }
+    }
+
+    private String extractJsonPayload(JsonNode node, String defaultValue) {
+        if (node == null || node.isNull()) {
+            return defaultValue;
+        }
+
+        if (node.isTextual()) {
+            String value = node.asText();
+            return value == null || value.isBlank() ? defaultValue : value;
+        }
+
+        if (node.isObject() || node.isArray()) {
+            try {
+                return objectMapper.writeValueAsString(node);
+            } catch (Exception exception) {
+                log.warn("Unable to serialize embedded JSON payload: {}", exception.getMessage());
+                return defaultValue;
+            }
+        }
+
+        String scalarValue = node.asText();
+        return scalarValue == null || scalarValue.isBlank() ? defaultValue : scalarValue;
     }
 
     /**

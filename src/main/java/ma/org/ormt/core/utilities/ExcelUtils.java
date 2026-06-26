@@ -4,6 +4,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.streaming.SXSSFSheet;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -103,6 +104,7 @@ public class ExcelUtils {
      * Auto-sizes columns in the given sheet up to the specified count.
      */
     public static void autoSizeColumns(Sheet sheet, int numColumns) {
+        ensureAutoSizeTracking(sheet);
         for (int i = 0; i < numColumns; i++) {
             sheet.autoSizeColumn(i);
         }
@@ -120,8 +122,15 @@ public class ExcelUtils {
                 maxCol = row.getLastCellNum();
             }
         }
+        ensureAutoSizeTracking(sheet);
         for (int colIdx = 0; colIdx < maxCol; colIdx++) {
             sheet.autoSizeColumn(colIdx);
+        }
+    }
+
+    private static void ensureAutoSizeTracking(Sheet sheet) {
+        if (sheet instanceof SXSSFSheet sxssfSheet) {
+            sxssfSheet.trackAllColumnsForAutoSizing();
         }
     }
 

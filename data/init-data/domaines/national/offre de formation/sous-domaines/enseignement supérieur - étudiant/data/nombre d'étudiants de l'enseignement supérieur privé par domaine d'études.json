@@ -1,0 +1,184 @@
+{
+  "data" : [ {
+    "annuel" : "2016",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "3000"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Sciences et Techniques",
+    "valeur" : "14000"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "22000"
+  }, {
+    "annuel" : "2016",
+    "domaine_etudes" : "Total",
+    "valeur" : "39000"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "5000"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Sciences et Techniques",
+    "valeur" : "15000"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "23000"
+  }, {
+    "annuel" : "2017",
+    "domaine_etudes" : "Total",
+    "valeur" : "42000"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "7000"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Sciences et Techniques",
+    "valeur" : "16000"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "23000"
+  }, {
+    "annuel" : "2018",
+    "domaine_etudes" : "Total",
+    "valeur" : "45000"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "0"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "19000"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Sciences et Techniques",
+    "valeur" : "7000"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "23000"
+  }, {
+    "annuel" : "2019",
+    "domaine_etudes" : "Total",
+    "valeur" : "49000"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "1000"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "8000"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Sciences et Techniques",
+    "valeur" : "23000"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "21000"
+  }, {
+    "annuel" : "2020",
+    "domaine_etudes" : "Total",
+    "valeur" : "54000"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "2000"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "9000"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Sciences et Techniques",
+    "valeur" : "26000"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "20000"
+  }, {
+    "annuel" : "2021",
+    "domaine_etudes" : "Total",
+    "valeur" : "57000"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "2000"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "11000"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Sciences et Techniques",
+    "valeur" : "30000"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "20000"
+  }, {
+    "annuel" : "2022",
+    "domaine_etudes" : "Total",
+    "valeur" : "63000"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "2000"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "13000"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Sciences et Techniques",
+    "valeur" : "34000"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "21000"
+  }, {
+    "annuel" : "2023",
+    "domaine_etudes" : "Total",
+    "valeur" : "70000"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Lettres, sciences humaines et arts",
+    "valeur" : "2000"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Sciences de la Santé",
+    "valeur" : "17000"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Sciences et Techniques",
+    "valeur" : "38000"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Sciences juridiques, économiques et de gestion",
+    "valeur" : "22000"
+  }, {
+    "annuel" : "2024",
+    "domaine_etudes" : "Total",
+    "valeur" : "79000"
+  } ],
+  "indicateur" : "nombre d'étudiants de l'enseignement supérieur privé par domaine d'études"
+}

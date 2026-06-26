@@ -1,0 +1,126 @@
+{
+  "actif" : true,
+  "description" : "investissement",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "investissement",
+    "description" : "flux des investissements directs marocains à l'étranger",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Flux des investissements directs marocains à l'étranger - Courbes"
+    } ],
+    "nom" : "flux des investissements directs marocains à l'étranger",
+    "regleCalcul" : null,
+    "source" : "oc",
+    "titre" : "flux des investissements directs marocains à l'étranger",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "investissement",
+    "description" : "flux net des investissements directs étrangers au maroc",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "courbes",
+      "isDefault" : true,
+      "nom" : "Flux net des investissements directs étrangers au Maroc - Courbes"
+    } ],
+    "nom" : "flux net des investissements directs étrangers au maroc",
+    "regleCalcul" : null,
+    "source" : "oc",
+    "titre" : "flux net des investissements directs étrangers au maroc",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "fbcf",
+    "actif" : true,
+    "categorie" : "investissement",
+    "description" : "formation brut de capital fixe",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Formation brut de capital fixe - Histogramme"
+    } ],
+    "nom" : "formation brut de capital fixe",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "formation brut de capital fixe",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "investissement",
+    "description" : "volume global de l'investissement public",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Volume global de l'investissement public - Histogramme"
+    } ],
+    "nom" : "volume global de l'investissement public",
+    "regleCalcul" : null,
+    "source" : "mef",
+    "titre" : "volume global de l'investissement public",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  } ],
+  "nom" : "investissement"
+}

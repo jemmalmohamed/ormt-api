@@ -1,0 +1,64 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "milieu" : "National",
+    "valeur" : "26.5"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Rural",
+    "valeur" : "32.7"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "Urbain",
+    "valeur" : "22.3"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "National",
+    "valeur" : "26.6"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Rural",
+    "valeur" : "32.8"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "Urbain",
+    "valeur" : "22.4"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "National",
+    "valeur" : "26.0"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Rural",
+    "valeur" : "32.0"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "Urbain",
+    "valeur" : "21.9"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "National",
+    "valeur" : "25.2"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Rural",
+    "valeur" : "30.3"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "Urbain",
+    "valeur" : "21.8"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "National",
+    "valeur" : "26.1"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Rural",
+    "valeur" : "31.6"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "Urbain",
+    "valeur" : "22.5"
+  } ],
+  "indicateur" : "taux de neet par milieu de résidence"
+}

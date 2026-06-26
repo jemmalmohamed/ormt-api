@@ -15,14 +15,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.StringUtils;
-import org.springframework.web.multipart.MultipartFile;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import ma.org.ormt.core.utilities.files.FileToMultipartFileConverter;
 import ma.org.ormt.modules.domaines.domaine.dtos.DomaineDto;
 import ma.org.ormt.modules.domaines.domaine.dtos.request.DomaineRequestDto;
 import ma.org.ormt.modules.domaines.domaine.models.Domaine;
@@ -179,10 +175,7 @@ public class DomaineSeeder implements CommandLineRunner {
             DomaineRequestDto requestDto = new DomaineRequestDto();
             requestDto.setNom(domaine.getNom().toLowerCase());
             requestDto.setDescription(domaine.getDescription());
-            requestDto.setApropos(domaine.getApropos());
             requestDto.setActif(domaine.getActif());
-
-            handleDomaineImage(domaine, requestDto, file.getParent());
 
             Domaine createdDomaine = domaineService.create(requestDto);
 
@@ -191,24 +184,6 @@ public class DomaineSeeder implements CommandLineRunner {
         } catch (Exception e) {
             log.error("Error processing domain file {}: {}", file.getName(), e.getMessage());
             return null;
-        }
-    }
-
-    private void handleDomaineImage(DomaineDto domaine, DomaineRequestDto requestDto,
-            String domaineDirPath) throws IOException {
-        if (StringUtils.hasText(domaine.getImageUrl())) {
-            Path imagePath = Paths.get(domaineDirPath, domaine.getImageUrl());
-            if (!Files.exists(imagePath)) {
-                log.error("Image not found at path: {}. Trying direct path.", imagePath);
-                imagePath = Paths.get(domaineDirPath, domaine.getImageUrl());
-            }
-            if (Files.exists(imagePath)) {
-                MultipartFile imageFile = FileToMultipartFileConverter.toMultipartFile(imagePath.toFile());
-                requestDto.setImageFile(imageFile);
-                log.info("Found image for domaine '{}' at: {}", domaine.getNom(), imagePath);
-            } else {
-                log.error("Image for domaine '{}' not found at: {}", domaine.getNom(), imagePath);
-            }
         }
     }
 

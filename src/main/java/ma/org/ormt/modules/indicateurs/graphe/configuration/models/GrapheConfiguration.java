@@ -41,6 +41,15 @@ public class GrapheConfiguration extends BaseEntity {
     @Column(name = "chart_options_json", columnDefinition = "TEXT")
     private String chartOptionsJson;
 
+    @Column(name = "chart_spec_version")
+    private Integer chartSpecVersion;
+
+    @Column(name = "chart_spec_json", columnDefinition = "TEXT")
+    private String chartSpecJson;
+
+    @Column(name = "config_system", length = 30)
+    private String configSystem;
+
     @Column(name = "is_default")
     private Boolean isDefault;
 

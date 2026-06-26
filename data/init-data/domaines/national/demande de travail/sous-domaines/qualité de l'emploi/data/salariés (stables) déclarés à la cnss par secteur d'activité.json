@@ -1,0 +1,204 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Agriculture, forêt et pêche",
+    "valeur" : "273588"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Autres services",
+    "valeur" : "676470"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "360217"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Commerce",
+    "valeur" : "430424"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Enseignement",
+    "valeur" : "102929"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Ensemble",
+    "valeur" : "2644102"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Hébérgement et restauration",
+    "valeur" : "130917"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Industries",
+    "valeur" : "510946"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Santé humaine et action humaine",
+    "valeur" : "51274"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Transport",
+    "valeur" : "104390"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Agriculture, forêt et pêche",
+    "valeur" : "286633"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Autres services",
+    "valeur" : "714075"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "379091"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Commerce",
+    "valeur" : "452110"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Enseignement",
+    "valeur" : "109444"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Ensemble",
+    "valeur" : "2768172"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Hébérgement et restauration",
+    "valeur" : "135933"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Industries",
+    "valeur" : "525419"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Santé humaine et action humaine",
+    "valeur" : "54445"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Transport",
+    "valeur" : "110947"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Agriculture, forêt et pêche",
+    "valeur" : "306128"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Autres services",
+    "valeur" : "725840"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "398781"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Commerce",
+    "valeur" : "473242"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Enseignement",
+    "valeur" : "113087"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Ensemble",
+    "valeur" : "2845529"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Hébérgement et restauration",
+    "valeur" : "127043"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Industries",
+    "valeur" : "529362"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Santé humaine et action humaine",
+    "valeur" : "57747"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Transport",
+    "valeur" : "114190"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Agriculture, forêt et pêche",
+    "valeur" : "332727"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Autres services",
+    "valeur" : "784577"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "418753"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Commerce",
+    "valeur" : "499147"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Enseignement",
+    "valeur" : "128953"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Ensemble",
+    "valeur" : "3033958"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Hébérgement et restauration",
+    "valeur" : "138830"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Industries",
+    "valeur" : "545502"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Santé humaine et action humaine",
+    "valeur" : "63188"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Transport",
+    "valeur" : "122128"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Agriculture, forêt et pêche",
+    "valeur" : "356103"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Autres services",
+    "valeur" : "858614"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "426694"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Commerce",
+    "valeur" : "517672"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Enseignement",
+    "valeur" : "144025"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Ensemble",
+    "valeur" : "3221690"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Hébérgement et restauration",
+    "valeur" : "157663"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Industries",
+    "valeur" : "559790"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Santé humaine et action humaine",
+    "valeur" : "71083"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Transport",
+    "valeur" : "129878"
+  } ],
+  "indicateur" : "salariés (stables) déclarés à la cnss par secteur d'activité"
+}

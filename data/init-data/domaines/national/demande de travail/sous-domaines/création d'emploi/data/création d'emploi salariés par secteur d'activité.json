@@ -1,0 +1,754 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "24405"
+  }, {
+    "annuel" : "2019",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "agriculture, forêt et pêche",
+    "valeur" : "4462"
+  }, {
+    "annuel" : "2019",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "commerce",
+    "valeur" : "43335"
+  }, {
+    "annuel" : "2019",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "enseignement",
+    "valeur" : "1400"
+  }, {
+    "annuel" : "2019",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "ensemble",
+    "valeur" : "173998"
+  }, {
+    "annuel" : "2019",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "hébergement et restauration",
+    "valeur" : "16068"
+  }, {
+    "annuel" : "2019",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "industries",
+    "valeur" : "9391"
+  }, {
+    "annuel" : "2019",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "santé humaine et action sociale",
+    "valeur" : "7427"
+  }, {
+    "annuel" : "2019",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "services",
+    "valeur" : "59622"
+  }, {
+    "annuel" : "2019",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "transport",
+    "valeur" : "7888"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "3183"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "agriculture, forêt et pêche",
+    "valeur" : "-6107"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "commerce",
+    "valeur" : "19523"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "enseignement",
+    "valeur" : "3590"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "ensemble",
+    "valeur" : "64968"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "hébergement et restauration",
+    "valeur" : "5839"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "industries",
+    "valeur" : "7612"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "santé humaine et action sociale",
+    "valeur" : "6013"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "services",
+    "valeur" : "24246"
+  }, {
+    "annuel" : "2019",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "transport",
+    "valeur" : "1069"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "21222"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "agriculture, forêt et pêche",
+    "valeur" : "10569"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "commerce",
+    "valeur" : "23812"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "enseignement",
+    "valeur" : "-2190"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "ensemble",
+    "valeur" : "109030"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "hébergement et restauration",
+    "valeur" : "10229"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "industries",
+    "valeur" : "1779"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "santé humaine et action sociale",
+    "valeur" : "1414"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "services",
+    "valeur" : "35376"
+  }, {
+    "annuel" : "2019",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "transport",
+    "valeur" : "6819"
+  }, {
+    "annuel" : "2020",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "12765"
+  }, {
+    "annuel" : "2020",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "agriculture, forêt et pêche",
+    "valeur" : "8239"
+  }, {
+    "annuel" : "2020",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "commerce",
+    "valeur" : "13795"
+  }, {
+    "annuel" : "2020",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "enseignement",
+    "valeur" : "4842"
+  }, {
+    "annuel" : "2020",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "ensemble",
+    "valeur" : "46151"
+  }, {
+    "annuel" : "2020",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "hébergement et restauration",
+    "valeur" : "-2563"
+  }, {
+    "annuel" : "2020",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "industries",
+    "valeur" : "-4137"
+  }, {
+    "annuel" : "2020",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "santé humaine et action sociale",
+    "valeur" : "2676"
+  }, {
+    "annuel" : "2020",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "services",
+    "valeur" : "4746"
+  }, {
+    "annuel" : "2020",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "transport",
+    "valeur" : "5788"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "3942"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "agriculture, forêt et pêche",
+    "valeur" : "3846"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "commerce",
+    "valeur" : "5725"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "enseignement",
+    "valeur" : "3486"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "ensemble",
+    "valeur" : "21778"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "hébergement et restauration",
+    "valeur" : "-954"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "industries",
+    "valeur" : "-7606"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "santé humaine et action sociale",
+    "valeur" : "2488"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "services",
+    "valeur" : "10427"
+  }, {
+    "annuel" : "2020",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "transport",
+    "valeur" : "424"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "8823"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "agriculture, forêt et pêche",
+    "valeur" : "4393"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "commerce",
+    "valeur" : "8070"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "enseignement",
+    "valeur" : "1356"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "ensemble",
+    "valeur" : "24373"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "hébergement et restauration",
+    "valeur" : "-1609"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "industries",
+    "valeur" : "3469"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "santé humaine et action sociale",
+    "valeur" : "188"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "services",
+    "valeur" : "-5681"
+  }, {
+    "annuel" : "2020",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "transport",
+    "valeur" : "5364"
+  }, {
+    "annuel" : "2021",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "34792"
+  }, {
+    "annuel" : "2021",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "agriculture, forêt et pêche",
+    "valeur" : "45291"
+  }, {
+    "annuel" : "2021",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "commerce",
+    "valeur" : "32990"
+  }, {
+    "annuel" : "2021",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "enseignement",
+    "valeur" : "15851"
+  }, {
+    "annuel" : "2021",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "ensemble",
+    "valeur" : "200286"
+  }, {
+    "annuel" : "2021",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "hébergement et restauration",
+    "valeur" : "-2664"
+  }, {
+    "annuel" : "2021",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "industries",
+    "valeur" : "15055"
+  }, {
+    "annuel" : "2021",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "santé humaine et action sociale",
+    "valeur" : "5968"
+  }, {
+    "annuel" : "2021",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "services",
+    "valeur" : "45679"
+  }, {
+    "annuel" : "2021",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "transport",
+    "valeur" : "7324"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "5033"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "agriculture, forêt et pêche",
+    "valeur" : "17150"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "commerce",
+    "valeur" : "10189"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "enseignement",
+    "valeur" : "12452"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "ensemble",
+    "valeur" : "71067"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "hébergement et restauration",
+    "valeur" : "-736"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "industries",
+    "valeur" : "3210"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "santé humaine et action sociale",
+    "valeur" : "4758"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "services",
+    "valeur" : "18336"
+  }, {
+    "annuel" : "2021",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "transport",
+    "valeur" : "675"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "29759"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "agriculture, forêt et pêche",
+    "valeur" : "28141"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "commerce",
+    "valeur" : "22801"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "enseignement",
+    "valeur" : "3399"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "ensemble",
+    "valeur" : "129219"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "hébergement et restauration",
+    "valeur" : "-1928"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "industries",
+    "valeur" : "11845"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "santé humaine et action sociale",
+    "valeur" : "1210"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "services",
+    "valeur" : "27343"
+  }, {
+    "annuel" : "2021",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "transport",
+    "valeur" : "6649"
+  }, {
+    "annuel" : "2022",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "5852"
+  }, {
+    "annuel" : "2022",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "agriculture, forêt et pêche",
+    "valeur" : "36996"
+  }, {
+    "annuel" : "2022",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "commerce",
+    "valeur" : "24708"
+  }, {
+    "annuel" : "2022",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "enseignement",
+    "valeur" : "15408"
+  }, {
+    "annuel" : "2022",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "ensemble",
+    "valeur" : "294679"
+  }, {
+    "annuel" : "2022",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "hébergement et restauration",
+    "valeur" : "26730"
+  }, {
+    "annuel" : "2022",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "industries",
+    "valeur" : "23260"
+  }, {
+    "annuel" : "2022",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "santé humaine et action sociale",
+    "valeur" : "12372"
+  }, {
+    "annuel" : "2022",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "services",
+    "valeur" : "141027"
+  }, {
+    "annuel" : "2022",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "transport",
+    "valeur" : "8326"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "711"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "agriculture, forêt et pêche",
+    "valeur" : "10804"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "commerce",
+    "valeur" : "7719"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "enseignement",
+    "valeur" : "10877"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "ensemble",
+    "valeur" : "95441"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "hébergement et restauration",
+    "valeur" : "10127"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "industries",
+    "valeur" : "8018"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "santé humaine et action sociale",
+    "valeur" : "6249"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "services",
+    "valeur" : "39814"
+  }, {
+    "annuel" : "2022",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "transport",
+    "valeur" : "1122"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "5141"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "agriculture, forêt et pêche",
+    "valeur" : "26192"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "commerce",
+    "valeur" : "16989"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "enseignement",
+    "valeur" : "4531"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "ensemble",
+    "valeur" : "199238"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "hébergement et restauration",
+    "valeur" : "16603"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "industries",
+    "valeur" : "15242"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "santé humaine et action sociale",
+    "valeur" : "6123"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "services",
+    "valeur" : "101213"
+  }, {
+    "annuel" : "2022",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "transport",
+    "valeur" : "7204"
+  }, {
+    "annuel" : "2023",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "8301"
+  }, {
+    "annuel" : "2023",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "agriculture, forêt et pêche",
+    "valeur" : "8490"
+  }, {
+    "annuel" : "2023",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "commerce",
+    "valeur" : "15682"
+  }, {
+    "annuel" : "2023",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "enseignement",
+    "valeur" : "12263"
+  }, {
+    "annuel" : "2023",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "ensemble",
+    "valeur" : "159435"
+  }, {
+    "annuel" : "2023",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "hébergement et restauration",
+    "valeur" : "13722"
+  }, {
+    "annuel" : "2023",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "industries",
+    "valeur" : "10259"
+  }, {
+    "annuel" : "2023",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "santé humaine et action sociale",
+    "valeur" : "8727"
+  }, {
+    "annuel" : "2023",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "services",
+    "valeur" : "76418"
+  }, {
+    "annuel" : "2023",
+    "genre" : "ensemble",
+    "secteur_activite_cnss" : "transport",
+    "valeur" : "5573"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "1838"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "agriculture, forêt et pêche",
+    "valeur" : "1250"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "commerce",
+    "valeur" : "4603"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "enseignement",
+    "valeur" : "9825"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "ensemble",
+    "valeur" : "65725"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "hébergement et restauration",
+    "valeur" : "5804"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "industries",
+    "valeur" : "2774"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "santé humaine et action sociale",
+    "valeur" : "6377"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "services",
+    "valeur" : "32956"
+  }, {
+    "annuel" : "2023",
+    "genre" : "femme",
+    "secteur_activite_cnss" : "transport",
+    "valeur" : "298"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "6463"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "agriculture, forêt et pêche",
+    "valeur" : "7240"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "commerce",
+    "valeur" : "11079"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "enseignement",
+    "valeur" : "2438"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "ensemble",
+    "valeur" : "93710"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "hébergement et restauration",
+    "valeur" : "7918"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "industries",
+    "valeur" : "7485"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "santé humaine et action sociale",
+    "valeur" : "2350"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "services",
+    "valeur" : "43462"
+  }, {
+    "annuel" : "2023",
+    "genre" : "homme",
+    "secteur_activite_cnss" : "transport",
+    "valeur" : "5275"
+  } ],
+  "indicateur" : "création d'emploi salariés par secteur d'activité"
+}

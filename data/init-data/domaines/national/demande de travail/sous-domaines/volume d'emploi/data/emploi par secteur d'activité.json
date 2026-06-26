@@ -1,0 +1,529 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "milieu" : "national",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "1152000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "national",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "3567000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "national",
+    "secteur_activite" : "autres services",
+    "valeur" : "1613000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "national",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "1152000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "national",
+    "secteur_activite" : "commerce",
+    "valeur" : "1877000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "national",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "1317000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "national",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "571000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "150000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "3260000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "secteur_activite" : "autres services",
+    "valeur" : "395000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "413000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "secteur_activite" : "commerce",
+    "valeur" : "362000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "221000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "127000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "1004000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "308000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "secteur_activite" : "autres services",
+    "valeur" : "1218000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "734000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "secteur_activite" : "commerce",
+    "valeur" : "1513000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "1098000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "439000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "national",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "1054000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "national",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "3300000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "national",
+    "secteur_activite" : "autres services",
+    "valeur" : "1682000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "national",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "1139000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "national",
+    "secteur_activite" : "commerce",
+    "valeur" : "1634000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "national",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "1276000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "national",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "559000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "141000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "2994000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "secteur_activite" : "autres services",
+    "valeur" : "319000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "414000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "secteur_activite" : "commerce",
+    "valeur" : "313000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "207000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "119000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "915000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "301000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "secteur_activite" : "autres services",
+    "valeur" : "1363000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "725000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "secteur_activite" : "commerce",
+    "valeur" : "1320000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "1075000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "436000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "national",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "1084000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "national",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "3361000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "national",
+    "secteur_activite" : "autres services",
+    "valeur" : "1819000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "national",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "1206000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "national",
+    "secteur_activite" : "commerce",
+    "valeur" : "1648000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "national",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "1260000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "national",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "582000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "154000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "3073000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "secteur_activite" : "autres services",
+    "valeur" : "362000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "431000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "secteur_activite" : "commerce",
+    "valeur" : "322000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "199000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "127000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "930000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "287000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "secteur_activite" : "autres services",
+    "valeur" : "1457000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "780000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "secteur_activite" : "commerce",
+    "valeur" : "1329000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "1061000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "455000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "national",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "1087000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "national",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "3149000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "national",
+    "secteur_activite" : "autres services",
+    "valeur" : "1844000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "national",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "1204000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "national",
+    "secteur_activite" : "commerce",
+    "valeur" : "1677000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "national",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "1290000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "national",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "613000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "151000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "2868000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "secteur_activite" : "autres services",
+    "valeur" : "383000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "423000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "secteur_activite" : "commerce",
+    "valeur" : "314000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "214000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "131000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "936000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "281000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "secteur_activite" : "autres services",
+    "valeur" : "1461000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "786000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "secteur_activite" : "commerce",
+    "valeur" : "1361000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "1080000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "479000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "national",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "1098000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "national",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "2955000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "national",
+    "secteur_activite" : "autres services",
+    "valeur" : "1899000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "national",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "1229000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "national",
+    "secteur_activite" : "commerce",
+    "valeur" : "1599000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "national",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "1292000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "national",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "614000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "148000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "2662000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "secteur_activite" : "autres services",
+    "valeur" : "383000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "445000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "secteur_activite" : "commerce",
+    "valeur" : "295000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "216000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "133000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "secteur_activite" : "administration générale et services sociaux fournis à la collectivité",
+    "valeur" : "950000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "secteur_activite" : "agriculture, forêt et pêche",
+    "valeur" : "283000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "secteur_activite" : "autres services",
+    "valeur" : "1516000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "secteur_activite" : "bâtiments et travaux publics",
+    "valeur" : "785000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "secteur_activite" : "commerce",
+    "valeur" : "1305000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "secteur_activite" : "industrie (y compris l'artisanat)",
+    "valeur" : "1080000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "secteur_activite" : "transport, entrepôts et communication",
+    "valeur" : "482000"
+  } ],
+  "indicateur" : "emploi par secteur d'activité"
+}

@@ -49,6 +49,19 @@ public class SourceServiceImpl extends BaseServiceImpl<Source> implements Source
     }
 
     @Override
+    public boolean existsByNom(String nom, Long excludeId) {
+        if (excludeId != null) {
+            return sourceRepository.existsByNomIgnoreCaseAndIdNot(nom, excludeId);
+        }
+        return sourceRepository.existsByNomIgnoreCase(nom);
+    }
+
+    @Override
+    public Optional<Source> findByNom(String nom) {
+        return sourceRepository.findByNomIgnoreCase(nom);
+    }
+
+    @Override
     public Optional<Source> findByAbreviation(String abreviation) {
         return sourceRepository.findByAbreviation(abreviation);
     }

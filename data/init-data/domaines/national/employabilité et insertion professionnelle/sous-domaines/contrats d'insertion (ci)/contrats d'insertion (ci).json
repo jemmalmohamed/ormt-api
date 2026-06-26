@@ -1,0 +1,332 @@
+{
+  "actif" : true,
+  "description" : "Sous domaine du domaine Employabilité et insertion professionnelle.",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "chercheurs d'emploi  bénéficiaires",
+    "description" : "bénéficiaires du ci ventilés par diplôme.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires du CI par diplôme - Camembert"
+    } ],
+    "nom" : "bénéficiaires du ci par diplôme",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires du ci par diplôme",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "chercheurs d'emploi  bénéficiaires",
+    "description" : "bénéficiaires du ci ventilés par genre.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires du CI par genre - Camembert"
+    } ],
+    "nom" : "bénéficiaires du ci par genre",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires du ci par genre",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "chercheurs d'emploi  bénéficiaires",
+    "description" : "bénéficiaires du ci.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires du CI  - CHOROPLETH"
+    } ],
+    "nom" : "bénéficiaires du ci par région",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires du ci",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "chercheurs d'emploi  bénéficiaires",
+    "description" : "bénéficiaires du ci ventilés par sae.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "sae",
+      "nom" : "sae",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires du CI par SAE - Camembert"
+    } ],
+    "nom" : "bénéficiaires du ci par sae",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires du ci par sae",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "entreprises  bénéficiaires",
+    "description" : "entreprises bénéficiaires du ci.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Entreprises bénéficiaires du CI - CHOROPLETH"
+    } ],
+    "nom" : "entreprises bénéficiaires du ci par région",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "entreprises bénéficiaires du ci",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "entreprises  bénéficiaires",
+    "description" : "entreprises bénéficiaires du ci ventilées par sae.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "sae_ci",
+      "nom" : "sae_ci",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Entreprises bénéficiaires du CI par SAE - Camembert"
+    } ],
+    "nom" : "entreprises bénéficiaires du ci par sae",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "entreprises bénéficiaires du ci par sae",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "entreprises  bénéficiaires",
+    "description" : "entreprises bénéficiaires du ci ventilées par taille d'entreprise.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "taille d'entreprise",
+      "nom" : "taille_entreprise",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Entreprises bénéficiaires du CI par taille d'entreprise - Camembert"
+    } ],
+    "nom" : "entreprises bénéficiaires du ci par taille d'entreprise",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "entreprises bénéficiaires du ci par taille d'entreprise",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "entreprises  bénéficiaires",
+    "description" : "nombre total d'entreprises bénéficiaires du ci.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre d'entreprises bénéficiaires du CI - Histogramme"
+    } ],
+    "nom" : "nombre d'entreprises bénéficiaires du ci",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre d'entreprises bénéficiaires du ci",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "chercheurs d'emploi  bénéficiaires",
+    "description" : "nombre total des bénéficiaires du contrat d'insertion.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre des bénéficiaires du contrats d'insertion - Histogramme"
+    } ],
+    "nom" : "nombre des bénéficiaires du contrats d'insertion",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre des bénéficiaires du contrats d'insertion",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  } ],
+  "nom" : "contrats d'insertion (ci)"
+}

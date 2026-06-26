@@ -26,6 +26,8 @@ public interface IndicateurDetailDtoMapper extends BaseDtoMapper<Indicateur, Ind
             // Get the territorial status
             String territoireStatus = indicateurService.analyzeTerritoireStatus(source);
             target.setTerritoire(territoireStatus);
+            target.setLinkedAnalyticsCategories(indicateurService.resolveLinkedAnalyticsCategories(source));
+            target.setLinkedDashboards(indicateurService.resolveLinkedDashboards(source));
 
             // Set regional to true if it's not "national" or "Pas de dimensions"
             target.setRegional(territoireStatus != null &&
@@ -35,6 +37,8 @@ public interface IndicateurDetailDtoMapper extends BaseDtoMapper<Indicateur, Ind
             // Fallback: set default values if service is not available
             target.setTerritoire("national");
             target.setRegional(false);
+            target.setLinkedAnalyticsCategories(java.util.List.of());
+            target.setLinkedDashboards(java.util.List.of());
         }
     }
 

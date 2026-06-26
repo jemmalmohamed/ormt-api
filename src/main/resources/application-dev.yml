@@ -1,37 +1,42 @@
 server:
   port: 8093
 
-starter: 
+starter:
   database:
     reset: true
     seed: true
-  minio: 
-    reset: true
-    seed: true
-  keycloak: 
-    reset: true
-    seed: true
-  faker :
-    seed : false
+  minio:
+    reset: false
+    seed: false
+  keycloak:
+    reset: false
+    seed: false
+  faker:
+    seed: false
 
- 
-spring:  
+spring:
   security:
     enabled: true
+  mail:
+    host: localhost
+    port: 1025
+    properties:
+      mail.smtp.auth: false
+      mail.smtp.starttls.enable: false
   servlet:
     multipart:
       # Dev can override via env vars if needed
       max-file-size: ${UPLOAD_MAX_FILE_SIZE:20MB}
       max-request-size: ${UPLOAD_MAX_REQUEST_SIZE:20MB}
   datasource:
-      url: jdbc:postgresql://localhost:5436/${spring.datasource.database} 
-      driver-class-name: org.postgresql.Driver
-      host: ormt-database
-      port: 5432
-      database: ormt
-      username: ormt
-      password: ormt@database
- 
+    url: jdbc:postgresql://localhost:5436/${spring.datasource.database}
+    driver-class-name: org.postgresql.Driver
+    host: ormt-database
+    port: 5432
+    database: ormt
+    username: ormt
+    password: ormt@database
+
 flyway:
   enabled: true
   baseline-on-migrate: true
@@ -56,20 +61,20 @@ keycloak:
     client: admin-cli
     username: admin
     password: admin
-  realm: ormt  # this is the realm name
+  realm: ormt # this is the realm name
   secret: "SSnam21521xFoFQAqi5TA68jKV3nBOyl"
   clients:
     backend:
-      id: ormt-api   # this is the client id (name )of the api
+      id: ormt-api # this is the client id (name )of the api
       name: ormt api
       root-url: http://localhost:8093
       valid-redirect-urls: http://${keycloak.clients.backend.root-url}/*
       web-origins: "*"
       authorization: true
     frontend:
-      id: ormt-web  # this is the client id (name) of the frontend
+      id: ormt-web # this is the client id (name) of the frontend
       name: ormt-ms
-      root-url:  http://localhost:3000
+      root-url: http://localhost:3000
       web-origins: "*"
       authorization: false
 
@@ -77,3 +82,7 @@ logging:
   level:
     org.hibernate.SQL: ERROR
     org.hibernate.tool.hbm2ddl: ERROR
+
+newsletter:
+  from-email: noreply@ormt.local
+  from-name: ORMT Newsletter

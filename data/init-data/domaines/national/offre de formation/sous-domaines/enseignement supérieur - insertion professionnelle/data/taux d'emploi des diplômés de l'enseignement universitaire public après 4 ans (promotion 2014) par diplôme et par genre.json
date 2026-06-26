@@ -1,0 +1,154 @@
+{
+  "data" : [ {
+    "annuel" : "2014",
+    "diplome" : "DEUST/DUT",
+    "genre" : "ensemble",
+    "valeur" : "57.8"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "DEUST/DUT",
+    "genre" : "femme",
+    "valeur" : "53.0"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "DEUST/DUT",
+    "genre" : "homme",
+    "valeur" : "63.6"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Diplôme d'ingénieur",
+    "genre" : "ensemble",
+    "valeur" : "87.9"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Diplôme d'ingénieur",
+    "genre" : "femme",
+    "valeur" : "87.1"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Diplôme d'ingénieur",
+    "genre" : "homme",
+    "valeur" : "88.7"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Diplôme de l'ENCG",
+    "genre" : "ensemble",
+    "valeur" : "84.9"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Diplôme de l'ENCG",
+    "genre" : "femme",
+    "valeur" : "80.6"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Diplôme de l'ENCG",
+    "genre" : "homme",
+    "valeur" : "94.3"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Doctorat",
+    "genre" : "ensemble",
+    "valeur" : "96.2"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Doctorat",
+    "genre" : "femme",
+    "valeur" : "100.0"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Doctorat",
+    "genre" : "homme",
+    "valeur" : "94.5"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Licence ST",
+    "genre" : "ensemble",
+    "valeur" : "68.2"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Licence ST",
+    "genre" : "femme",
+    "valeur" : "56.2"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Licence ST",
+    "genre" : "homme",
+    "valeur" : "79.6"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Licence fondamentale",
+    "genre" : "ensemble",
+    "valeur" : "63.9"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Licence fondamentale",
+    "genre" : "femme",
+    "valeur" : "54.0"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Licence fondamentale",
+    "genre" : "homme",
+    "valeur" : "73.4"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Licence professionnelle",
+    "genre" : "ensemble",
+    "valeur" : "76.7"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Licence professionnelle",
+    "genre" : "femme",
+    "valeur" : "71.7"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Licence professionnelle",
+    "genre" : "homme",
+    "valeur" : "82.5"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Master de recherche",
+    "genre" : "ensemble",
+    "valeur" : "72.2"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Master de recherche",
+    "genre" : "femme",
+    "valeur" : "53.5"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Master de recherche",
+    "genre" : "homme",
+    "valeur" : "83.8"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Master spécialisé",
+    "genre" : "ensemble",
+    "valeur" : "74.9"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Master spécialisé",
+    "genre" : "femme",
+    "valeur" : "69.3"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Master spécialisé",
+    "genre" : "homme",
+    "valeur" : "80.4"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Total",
+    "genre" : "ensemble",
+    "valeur" : "68.1"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Total",
+    "genre" : "femme",
+    "valeur" : "59.6"
+  }, {
+    "annuel" : "2014",
+    "diplome" : "Total",
+    "genre" : "homme",
+    "valeur" : "76.4"
+  } ],
+  "indicateur" : "taux d'emploi des diplômés de l'enseignement universitaire public après 4 ans (promotion 2014) par diplôme et par genre"
+}

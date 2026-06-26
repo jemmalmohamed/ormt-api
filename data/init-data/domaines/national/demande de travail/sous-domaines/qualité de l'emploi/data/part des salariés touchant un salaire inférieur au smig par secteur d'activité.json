@@ -1,0 +1,204 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Agriculture, forêt et pêche",
+    "valeur" : "72.2"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "53.6"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Commerce",
+    "valeur" : "36.5"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Enseignement",
+    "valeur" : "47.8"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Ensemble",
+    "valeur" : "45.7"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Hébérgement et restauration",
+    "valeur" : "47.1"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Industries",
+    "valeur" : "38.8"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Santé humaine et action sociale",
+    "valeur" : "37.6"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Services",
+    "valeur" : "42.8"
+  }, {
+    "annuel" : "2019",
+    "secteur_activite_cnss" : "Transport",
+    "valeur" : "29.1"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Agriculture, forêt et pêche",
+    "valeur" : "74.0"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "60.0"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Commerce",
+    "valeur" : "42.9"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Enseignement",
+    "valeur" : "55.6"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Ensemble",
+    "valeur" : "52.0"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Hébérgement et restauration",
+    "valeur" : "63.9"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Industries",
+    "valeur" : "46.2"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Santé humaine et action sociale",
+    "valeur" : "43.7"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Services",
+    "valeur" : "47.4"
+  }, {
+    "annuel" : "2020",
+    "secteur_activite_cnss" : "Transport",
+    "valeur" : "37.2"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Agriculture, forêt et pêche",
+    "valeur" : "72.4"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "48.8"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Commerce",
+    "valeur" : "33.3"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Enseignement",
+    "valeur" : "47.3"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Ensemble",
+    "valeur" : "44.0"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Hébérgement et restauration",
+    "valeur" : "60.5"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Industries",
+    "valeur" : "39.2"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Santé humaine et action sociale",
+    "valeur" : "31.5"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Services",
+    "valeur" : "38.6"
+  }, {
+    "annuel" : "2021",
+    "secteur_activite_cnss" : "Transport",
+    "valeur" : "23.1"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Agriculture, forêt et pêche",
+    "valeur" : "75.2"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "58.7"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Commerce",
+    "valeur" : "42.7"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Enseignement",
+    "valeur" : "53.9"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Ensemble",
+    "valeur" : "51.8"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Hébérgement et restauration",
+    "valeur" : "59.0"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Industries",
+    "valeur" : "43.4"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Santé humaine et action sociale",
+    "valeur" : "46.1"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Services",
+    "valeur" : "49.3"
+  }, {
+    "annuel" : "2022",
+    "secteur_activite_cnss" : "Transport",
+    "valeur" : "36.2"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Agriculture, forêt et pêche",
+    "valeur" : "76.9"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "BTP",
+    "valeur" : "60.3"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Commerce",
+    "valeur" : "43.8"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Enseignement",
+    "valeur" : "57.1"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Ensemble",
+    "valeur" : "53.2"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Hébérgement et restauration",
+    "valeur" : "58.5"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Industries",
+    "valeur" : "43.1"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Santé humaine et action sociale",
+    "valeur" : "47.7"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Services",
+    "valeur" : "51.2"
+  }, {
+    "annuel" : "2023",
+    "secteur_activite_cnss" : "Transport",
+    "valeur" : "41.0"
+  } ],
+  "indicateur" : "part des salariés touchant un salaire inférieur au smig par secteur d'activité"
+}

@@ -1,0 +1,2 @@
+-- Legacy migration retired.
+-- Clean databases now start directly with analytic-domain association tables only.

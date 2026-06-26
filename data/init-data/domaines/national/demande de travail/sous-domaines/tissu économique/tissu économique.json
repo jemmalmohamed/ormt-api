@@ -1,0 +1,240 @@
+{
+  "actif" : true,
+  "description" : "étude des entreprises et de leur dynamique sur le marché",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "économie",
+    "description" : "nombre d'entreprises",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "taille d'entreprise",
+      "nom" : "taille",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : "{\n  \"version\" : 1,\n  \"kind\" : \"line\",\n  \"family\" : \"cartesian\",\n  \"mapping\" : {\n    \"x\" : \"region\",\n    \"series\" : \"taille\",\n    \"value\" : \"metric\",\n    \"secondarySeries\" : null,\n    \"bubbleSize\" : null,\n    \"mixteLineSeries\" : null\n  },\n  \"filters\" : [ {\n    \"dimension\" : \"annuel\",\n    \"operator\" : \"eq\",\n    \"values\" : [ \"2023\" ],\n    \"enabled\" : true,\n    \"default\" : true\n  }, {\n    \"dimension\" : \"secteur_activite\",\n    \"operator\" : \"eq\",\n    \"values\" : [ \"Transport\" ],\n    \"enabled\" : true,\n    \"default\" : true\n  } ],\n  \"presentation\" : {\n    \"title\" : \"nombre d'entreprises\",\n    \"subtitle\" : null,\n    \"palette\" : \"sequential:blues\",\n    \"legend\" : {\n      \"visible\" : false,\n      \"position\" : \"bottom\"\n    },\n    \"labels\" : {\n      \"visible\" : false,\n      \"mode\" : \"hidden\"\n    },\n    \"stacking\" : \"none\",\n    \"orientation\" : \"vertical\",\n    \"lineStyle\" : {\n      \"curve\" : false,\n      \"points\" : false\n    },\n    \"mapStyle\" : {\n      \"projection\" : \"mercator\",\n      \"showInternalLabels\" : true\n    }\n  },\n  \"interactions\" : {\n    \"export\" : true,\n    \"zoom\" : false,\n    \"hover\" : true,\n    \"tooltips\" : true,\n    \"selection\" : false\n  },\n  \"dataView\" : {\n    \"visibility\" : {\n      \"hiddenRowValues\" : [ ],\n      \"hiddenColumnValues\" : { }\n    },\n    \"ordering\" : {\n      \"principalOrder\" : [ ],\n      \"seriesOrder\" : [ ]\n    }\n  },\n  \"meta\" : {\n    \"source\" : \"user-authored\",\n    \"seedKind\" : \"courbe_evolution\",\n    \"generatedAt\" : \"2026-06-25T23:19:36.618Z\",\n    \"configSystem\" : \"chartspec\",\n    \"migratedFromLegacy\" : false\n  }\n}",
+      "chartSpecVersion" : 1,
+      "configSystem" : "chartspec",
+      "dimensionMappingJson" : "{\n  \"x\" : \"region\",\n  \"series\" : \"taille\",\n  \"value\" : \"metric\",\n  \"secondarySeries\" : null,\n  \"bubbleSize\" : null,\n  \"mixteLineSeries\" : null\n}",
+      "grapheTypeCode" : "courbe_evolution",
+      "isDefault" : true,
+      "nom" : "nombre d'entreprises - Chart Studio choropleth"
+    }, {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"x\" : \"region\",\n  \"series\" : \"secteur_activite\",\n  \"value\" : \"metric\",\n  \"secondarySeries\" : null,\n  \"bubbleSize\" : null,\n  \"mixteLineSeries\" : null\n}",
+      "grapheTypeCode" : "courbe_evolution",
+      "isDefault" : false,
+      "nom" : "nombre d'entreprises - Chart Studio choropleth"
+    }, {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : false,
+      "nom" : "nombre d'entreprises - HISTOGRAMME"
+    } ],
+    "nom" : "nombre d'entreprises",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "nombre d'entreprises",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "économie",
+    "description" : "nombre d'entreprises entrantes",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "taille d'entreprise",
+      "nom" : "taille",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "nombre d'entreprises entrantes - HISTOGRAMME"
+    } ],
+    "nom" : "nombre d'entreprises entrantes",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "nombre d'entreprises entrantes",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "économie",
+    "description" : "nombre d'entreprises sortantes",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "taille d'entreprise",
+      "nom" : "taille",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "nombre d'entreprises sortantes - HISTOGRAMME"
+    } ],
+    "nom" : "nombre d'entreprises sortantes",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "nombre d'entreprises sortantes",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "économie",
+    "description" : "taux de survie des entreprises",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "taille d'entreprise",
+      "nom" : "taille",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "taux de survie des entreprises - CHOROPLETH"
+    } ],
+    "nom" : "taux de survie des entreprises",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "taux de survie des entreprises",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "%"
+  } ],
+  "nom" : "tissu économique"
+}

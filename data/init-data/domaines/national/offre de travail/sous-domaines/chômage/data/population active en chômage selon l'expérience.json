@@ -1,0 +1,64 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "experience" : "Ayant déjà travaillé",
+    "valeur" : "474000"
+  }, {
+    "annuel" : "2019",
+    "experience" : "Ensemble",
+    "valeur" : "1107000"
+  }, {
+    "annuel" : "2019",
+    "experience" : "N'ayant jamais travaillé",
+    "valeur" : "633000"
+  }, {
+    "annuel" : "2020",
+    "experience" : "Ayant déjà travaillé",
+    "valeur" : "803000"
+  }, {
+    "annuel" : "2020",
+    "experience" : "Ensemble",
+    "valeur" : "1429000"
+  }, {
+    "annuel" : "2020",
+    "experience" : "N'ayant jamais travaillé",
+    "valeur" : "626000"
+  }, {
+    "annuel" : "2021",
+    "experience" : "Ayant déjà travaillé",
+    "valeur" : "781000"
+  }, {
+    "annuel" : "2021",
+    "experience" : "Ensemble",
+    "valeur" : "1508000"
+  }, {
+    "annuel" : "2021",
+    "experience" : "N'ayant jamais travaillé",
+    "valeur" : "727000"
+  }, {
+    "annuel" : "2022",
+    "experience" : "Ayant déjà travaillé",
+    "valeur" : "673000"
+  }, {
+    "annuel" : "2022",
+    "experience" : "Ensemble",
+    "valeur" : "1442000"
+  }, {
+    "annuel" : "2022",
+    "experience" : "N'ayant jamais travaillé",
+    "valeur" : "769000"
+  }, {
+    "annuel" : "2023",
+    "experience" : "Ayant déjà travaillé",
+    "valeur" : "771000"
+  }, {
+    "annuel" : "2023",
+    "experience" : "Ensemble",
+    "valeur" : "1580000"
+  }, {
+    "annuel" : "2023",
+    "experience" : "N'ayant jamais travaillé",
+    "valeur" : "809000"
+  } ],
+  "indicateur" : "population active en chômage selon l'expérience"
+}

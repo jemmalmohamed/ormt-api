@@ -1,0 +1,82 @@
+{
+  "actif" : true,
+  "description" : "statistiques sur les agences de recrutement privé .",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "arp",
+    "description" : "répartition des agences de recrutement privé",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "agences de recrutement privé - CHOROPLETH"
+    } ],
+    "nom" : "agences de recrutement privé par région",
+    "regleCalcul" : null,
+    "source" : "miepeec",
+    "titre" : "agences de recrutement privé",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "arp",
+    "description" : "nombre des agences de recrutement privé",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "nombre des agences de recrutement privé - CHOROPLETH"
+    } ],
+    "nom" : "nombre des agences de recrutement privé par région",
+    "regleCalcul" : null,
+    "source" : "miepeec",
+    "titre" : "nombre des agences de recrutement privé",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : ""
+  } ],
+  "nom" : "agences de recrutement privé (arp)"
+}

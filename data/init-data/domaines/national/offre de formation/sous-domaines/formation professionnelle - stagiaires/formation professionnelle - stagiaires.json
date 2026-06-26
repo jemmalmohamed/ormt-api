@@ -1,0 +1,158 @@
+{
+  "actif" : true,
+  "description" : "Indicateurs relatifs aux stagiaires de la formation professionnelle par mode de formation, opérateur, niveau de formation et région.",
+  "indicateurs" : [ {
+    "abreviation" : "fp",
+    "actif" : true,
+    "categorie" : "stagiaires",
+    "description" : "nombre de stagiaires de la formation professionnelle par mode de formation.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "mode de formation",
+      "nom" : "mode_formation",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre de stagiaires de la formation professionnelle par mode de formation - Histogramme"
+    } ],
+    "nom" : "nombre de stagiaires de la formation professionnelle par mode de formation",
+    "regleCalcul" : null,
+    "source" : "dfp",
+    "titre" : "nombre de stagiaires de la formation professionnelle par mode de formation",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "fp",
+    "actif" : true,
+    "categorie" : "stagiaires",
+    "description" : "nombre de stagiaires de la formation professionnelle par niveau de formation.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "niveau de formation",
+      "nom" : "niveau_formation",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre de stagiaires de la formation professionnelle par niveau de formation - Histogramme"
+    } ],
+    "nom" : "nombre de stagiaires de la formation professionnelle par niveau de formation",
+    "regleCalcul" : null,
+    "source" : "dfp",
+    "titre" : "nombre de stagiaires de la formation professionnelle par niveau de formation",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "fp",
+    "actif" : true,
+    "categorie" : "stagiaires",
+    "description" : "nombre de stagiaires de la formation professionnelle par opérateur de formation.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "opérateur de formation",
+      "nom" : "operateur_formation",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre de stagiaires de la formation professionnelle par opérateur de formation - Histogramme"
+    } ],
+    "nom" : "nombre de stagiaires de la formation professionnelle par opérateur de formation",
+    "regleCalcul" : null,
+    "source" : "dfp",
+    "titre" : "nombre de stagiaires de la formation professionnelle par opérateur de formation",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  }, {
+    "abreviation" : "fp",
+    "actif" : true,
+    "categorie" : "stagiaires",
+    "description" : "nombre de stagiaires de la formation professionnelle.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre de stagiaires de la formation professionnelle - Histogramme"
+    } ],
+    "nom" : "nombre de stagiaires de la formation professionnelle par région",
+    "regleCalcul" : null,
+    "source" : "dfp",
+    "titre" : "nombre de stagiaires de la formation professionnelle",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : null
+  } ],
+  "nom" : "formation professionnelle - stagiaires"
+}

@@ -1,0 +1,76 @@
+{
+  "data" : [ {
+    "age" : "20 à 24 ans",
+    "annuel" : "2019",
+    "valeur" : "20"
+  }, {
+    "age" : "20 à 24 ans",
+    "annuel" : "2022",
+    "valeur" : "8"
+  }, {
+    "age" : "20 à 24 ans",
+    "annuel" : "2024",
+    "valeur" : "14"
+  }, {
+    "age" : "25 à moins de 35 ans",
+    "annuel" : "2019",
+    "valeur" : "45"
+  }, {
+    "age" : "25 à moins de 35 ans",
+    "annuel" : "2022",
+    "valeur" : "46"
+  }, {
+    "age" : "25 à moins de 35 ans",
+    "annuel" : "2024",
+    "valeur" : "41"
+  }, {
+    "age" : "35 à moins de 45 ans",
+    "annuel" : "2019",
+    "valeur" : "21"
+  }, {
+    "age" : "35 à moins de 45 ans",
+    "annuel" : "2022",
+    "valeur" : "28"
+  }, {
+    "age" : "35 à moins de 45 ans",
+    "annuel" : "2024",
+    "valeur" : "29"
+  }, {
+    "age" : "45 et Plus",
+    "annuel" : "2019",
+    "valeur" : "8"
+  }, {
+    "age" : "45 et Plus",
+    "annuel" : "2022",
+    "valeur" : "15"
+  }, {
+    "age" : "45 et Plus",
+    "annuel" : "2024",
+    "valeur" : "15"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2019",
+    "valeur" : "5"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2022",
+    "valeur" : "3"
+  }, {
+    "age" : "Moins de 20 ans",
+    "annuel" : "2024",
+    "valeur" : "2"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2019",
+    "valeur" : "1"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2022",
+    "valeur" : "0"
+  }, {
+    "age" : "Non renseigné",
+    "annuel" : "2024",
+    "valeur" : "0"
+  } ],
+  "indicateur" : "inscrits à l'anapec par âge"
+}

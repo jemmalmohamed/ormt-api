@@ -1,0 +1,457 @@
+{
+  "actif" : true,
+  "description" : "étude des salaires et de la productivité dans l'économie",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "salaires",
+    "description" : "masse salariale par secteur d'activité",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "masse salariale par secteur d'activité - Choropleth"
+    } ],
+    "nom" : "masse salariale par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "masse salariale par secteur d'activité",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "millions de dh"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "productivité",
+    "description" : "productivité par secteur d'activité",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "productivité par secteur d'activité - Histogramme"
+    } ],
+    "nom" : "productivité par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "productivité par secteur d'activité",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "dh"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "salaires",
+    "description" : "salaire moyen n-10 par secteur d'activité",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "salaire moyen n-10 par secteur d'activité - CHOROPLETH"
+    } ],
+    "nom" : "salaire moyen n-10 par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "salaire moyen n-10 par secteur d'activité",
+    "typeTb" : "décisionnel",
+    "unite" : "dh"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "salaires",
+    "description" : "salaire moyen par secteur d'activité",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "salaire moyen par secteur d'activité - Choropleth"
+    } ],
+    "nom" : "salaire moyen par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "salaire moyen par secteur d'activité",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "dh"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "salaires",
+    "description" : "salaire moyen à l'année n par secteur d'activité",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "salaire moyen à l'année n par secteur d'activité - Choropleth"
+    } ],
+    "nom" : "salaire moyen à l'année n par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "salaire moyen à l'année n par secteur d'activité",
+    "typeTb" : "décisionnel",
+    "unite" : "dh"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "salaires",
+    "description" : "smag journalier",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : true,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "indicateur",
+      "isDefault" : true,
+      "nom" : "smag journalier-Indicateur"
+    } ],
+    "nom" : "smag journalier",
+    "regleCalcul" : null,
+    "source" : "miepeec",
+    "titre" : "smag journalier",
+    "typeTb" : "décisionnel",
+    "unite" : "dh"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "salaires",
+    "description" : "smig journalier",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : true,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "indicateur",
+      "isDefault" : true,
+      "nom" : "smig journalier-Indicateur"
+    } ],
+    "nom" : "smig journalier",
+    "regleCalcul" : null,
+    "source" : "miepeec",
+    "titre" : "smig journalier",
+    "typeTb" : "décisionnel",
+    "unite" : "dh"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "productivité",
+    "description" : "valeur ajoutée par secteur d'activité",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "valeur ajoutée par secteur d'activité - Choropleth"
+    } ],
+    "nom" : "valeur ajoutée par secteur d'activité",
+    "regleCalcul" : null,
+    "source" : "hcp",
+    "titre" : "valeur ajoutée par secteur d'activité",
+    "typeTb" : "décisionnel / grand public",
+    "unite" : "millions de dh"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "salaires",
+    "description" : "variation de la masse salariale",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "secteur d'activité",
+      "nom" : "secteur_activite",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "nuage_du_point",
+      "isDefault" : true,
+      "nom" : "variation de la masse salariale - Nuage_Du_Point"
+    } ],
+    "nom" : "variation de la masse salariale",
+    "regleCalcul" : null,
+    "source" : "cnss",
+    "titre" : "variation de la masse salariale",
+    "typeTb" : "grand public",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "productivité",
+    "description" : "variation productivité",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : true,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : "{\n  \"version\" : 1,\n  \"kind\" : \"pie\",\n  \"family\" : \"partition\",\n  \"mapping\" : {\n    \"category\" : \"annuel\",\n    \"value\" : \"metric\"\n  },\n  \"filters\" : [ ],\n  \"presentation\" : {\n    \"title\" : \"variation productivité\",\n    \"subtitle\" : null,\n    \"palette\" : \"default\",\n    \"legend\" : {\n      \"visible\" : true,\n      \"position\" : \"bottom\"\n    },\n    \"labels\" : {\n      \"visible\" : false,\n      \"mode\" : \"hidden\"\n    },\n    \"stacking\" : \"none\",\n    \"orientation\" : \"vertical\",\n    \"lineStyle\" : {\n      \"curve\" : true,\n      \"points\" : true\n    },\n    \"mapStyle\" : {\n      \"projection\" : \"mercator\",\n      \"showInternalLabels\" : true\n    }\n  },\n  \"interactions\" : {\n    \"export\" : true,\n    \"zoom\" : false,\n    \"hover\" : true,\n    \"tooltips\" : true,\n    \"selection\" : false\n  },\n  \"dataView\" : {\n    \"visibility\" : {\n      \"hiddenRowValues\" : [ ],\n      \"hiddenColumnValues\" : { }\n    },\n    \"ordering\" : {\n      \"principalOrder\" : [ ],\n      \"seriesOrder\" : [ ]\n    }\n  },\n  \"meta\" : {\n    \"source\" : \"user-authored\",\n    \"seedKind\" : \"nuage_du_point\",\n    \"generatedAt\" : \"2026-06-25T23:55:39.172Z\",\n    \"configSystem\" : \"chartspec\",\n    \"migratedFromLegacy\" : false\n  }\n}",
+      "chartSpecVersion" : 1,
+      "configSystem" : "chartspec",
+      "dimensionMappingJson" : "{\n  \"category\" : \"annuel\",\n  \"value\" : \"metric\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "variation productivité - Chart Studio line"
+    }, {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "nuage_du_point",
+      "isDefault" : false,
+      "nom" : "variation productivité-Nuage_Du_Point"
+    } ],
+    "nom" : "variation productivité",
+    "regleCalcul" : null,
+    "source" : "banque mondiale/fmi",
+    "titre" : "variation productivité",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "productivité",
+    "description" : "variation valeur ajoutée",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : true,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "nuage_du_point",
+      "isDefault" : true,
+      "nom" : "variation valeur ajoutée-Nuage_Du_Point"
+    } ],
+    "nom" : "variation valeur ajoutée",
+    "regleCalcul" : null,
+    "source" : "banque mondiale/fmi",
+    "titre" : "variation valeur ajoutée",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  } ],
+  "nom" : "salaires & productivité"
+}

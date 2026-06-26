@@ -1,0 +1,2 @@
+-- Legacy migration retired.
+-- No assignment check constraint is needed because assignments no longer use tbd_assignation.

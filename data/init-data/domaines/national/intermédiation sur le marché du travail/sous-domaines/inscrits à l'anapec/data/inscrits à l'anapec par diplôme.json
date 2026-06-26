@@ -1,0 +1,64 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "diplome" : "Autres",
+    "valeur" : "13.4"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Baccalauréat",
+    "valeur" : "17.5"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Diplômés de l'enseignement supérieur",
+    "valeur" : "22.3"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Diplômés de la formation professionnelle",
+    "valeur" : "26.8"
+  }, {
+    "annuel" : "2019",
+    "diplome" : "Non renseigné",
+    "valeur" : "20.0"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Autres",
+    "valeur" : "7.6"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Baccalauréat",
+    "valeur" : "4.4"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Diplômés de l'enseignement supérieur",
+    "valeur" : "62.3"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Diplômés de la formation professionnelle",
+    "valeur" : "8.6"
+  }, {
+    "annuel" : "2022",
+    "diplome" : "Non renseigné",
+    "valeur" : "17.0"
+  }, {
+    "annuel" : "2024",
+    "diplome" : "Autres",
+    "valeur" : "0.5"
+  }, {
+    "annuel" : "2024",
+    "diplome" : "Baccalauréat",
+    "valeur" : "20.1"
+  }, {
+    "annuel" : "2024",
+    "diplome" : "Diplômés de l'enseignement supérieur",
+    "valeur" : "20.1"
+  }, {
+    "annuel" : "2024",
+    "diplome" : "Diplômés de la formation professionnelle",
+    "valeur" : "30.2"
+  }, {
+    "annuel" : "2024",
+    "diplome" : "Non renseigné",
+    "valeur" : "29.1"
+  } ],
+  "indicateur" : "inscrits à l'anapec par diplôme"
+}

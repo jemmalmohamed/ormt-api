@@ -1,0 +1,132 @@
+{
+  "data" : [ {
+    "annuel" : "2016",
+    "composante" : "Enseignement supérieur privé",
+    "valeur" : "11000"
+  }, {
+    "annuel" : "2016",
+    "composante" : "Enseignement supérieur public",
+    "valeur" : "203000"
+  }, {
+    "annuel" : "2016",
+    "composante" : "Formation des cadres",
+    "valeur" : "9000"
+  }, {
+    "annuel" : "2016",
+    "composante" : "Total",
+    "valeur" : "222000"
+  }, {
+    "annuel" : "2017",
+    "composante" : "Enseignement supérieur privé",
+    "valeur" : "12000"
+  }, {
+    "annuel" : "2017",
+    "composante" : "Enseignement supérieur public",
+    "valeur" : "211000"
+  }, {
+    "annuel" : "2017",
+    "composante" : "Formation des cadres",
+    "valeur" : "10000"
+  }, {
+    "annuel" : "2017",
+    "composante" : "Total",
+    "valeur" : "233000"
+  }, {
+    "annuel" : "2018",
+    "composante" : "Enseignement supérieur privé",
+    "valeur" : "19000"
+  }, {
+    "annuel" : "2018",
+    "composante" : "Enseignement supérieur public",
+    "valeur" : "240000"
+  }, {
+    "annuel" : "2018",
+    "composante" : "Formation des cadres",
+    "valeur" : "20000"
+  }, {
+    "annuel" : "2018",
+    "composante" : "Total",
+    "valeur" : "279000"
+  }, {
+    "annuel" : "2019",
+    "composante" : "Enseignement supérieur privé",
+    "valeur" : "21000"
+  }, {
+    "annuel" : "2019",
+    "composante" : "Enseignement supérieur public",
+    "valeur" : "258000"
+  }, {
+    "annuel" : "2019",
+    "composante" : "Formation des cadres",
+    "valeur" : "19000"
+  }, {
+    "annuel" : "2019",
+    "composante" : "Total",
+    "valeur" : "297000"
+  }, {
+    "annuel" : "2020",
+    "composante" : "Enseignement supérieur privé",
+    "valeur" : "21000"
+  }, {
+    "annuel" : "2020",
+    "composante" : "Enseignement supérieur public",
+    "valeur" : "275000"
+  }, {
+    "annuel" : "2020",
+    "composante" : "Formation des cadres",
+    "valeur" : "21000"
+  }, {
+    "annuel" : "2020",
+    "composante" : "Total",
+    "valeur" : "317000"
+  }, {
+    "annuel" : "2021",
+    "composante" : "Enseignement supérieur privé",
+    "valeur" : "25000"
+  }, {
+    "annuel" : "2021",
+    "composante" : "Enseignement supérieur public",
+    "valeur" : "291000"
+  }, {
+    "annuel" : "2021",
+    "composante" : "Formation des cadres",
+    "valeur" : "27000"
+  }, {
+    "annuel" : "2021",
+    "composante" : "Total",
+    "valeur" : "343000"
+  }, {
+    "annuel" : "2022",
+    "composante" : "Enseignement supérieur privé",
+    "valeur" : "28000"
+  }, {
+    "annuel" : "2022",
+    "composante" : "Enseignement supérieur public",
+    "valeur" : "295000"
+  }, {
+    "annuel" : "2022",
+    "composante" : "Formation des cadres",
+    "valeur" : "34000"
+  }, {
+    "annuel" : "2022",
+    "composante" : "Total",
+    "valeur" : "357000"
+  }, {
+    "annuel" : "2023",
+    "composante" : "Enseignement supérieur privé",
+    "valeur" : "28000"
+  }, {
+    "annuel" : "2023",
+    "composante" : "Enseignement supérieur public",
+    "valeur" : "298000"
+  }, {
+    "annuel" : "2023",
+    "composante" : "Formation des cadres",
+    "valeur" : "32000"
+  }, {
+    "annuel" : "2023",
+    "composante" : "Total",
+    "valeur" : "358000"
+  } ],
+  "indicateur" : "nombre de nouveaux inscrits de l'enseignement supérieur par composante"
+}

@@ -1,0 +1,229 @@
+{
+  "data" : [ {
+    "annuel" : "2019",
+    "milieu" : "ensemble",
+    "type_emploi" : "emploi non rémuneré",
+    "valeur" : "-70000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "ensemble",
+    "type_emploi" : "emploi rémuneré",
+    "valeur" : "235000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "ensemble",
+    "type_emploi" : "ensemble",
+    "valeur" : "165000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "type_emploi" : "emploi non rémuneré",
+    "valeur" : "-84000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "type_emploi" : "emploi rémuneré",
+    "valeur" : "-2000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "rural",
+    "type_emploi" : "ensemble",
+    "valeur" : "-86000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "type_emploi" : "emploi non rémuneré",
+    "valeur" : "14000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "type_emploi" : "emploi rémuneré",
+    "valeur" : "237000"
+  }, {
+    "annuel" : "2019",
+    "milieu" : "urbain",
+    "type_emploi" : "ensemble",
+    "valeur" : "251000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "ensemble",
+    "type_emploi" : "emploi non rémuneré",
+    "valeur" : "-175000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "ensemble",
+    "type_emploi" : "emploi rémuneré",
+    "valeur" : "-257000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "ensemble",
+    "type_emploi" : "ensemble",
+    "valeur" : "-432000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "type_emploi" : "emploi non rémuneré",
+    "valeur" : "-159000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "type_emploi" : "emploi rémuneré",
+    "valeur" : "-136000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "rural",
+    "type_emploi" : "ensemble",
+    "valeur" : "-295000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "type_emploi" : "emploi non rémuneré",
+    "valeur" : "-17000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "type_emploi" : "emploi rémuneré",
+    "valeur" : "-120000"
+  }, {
+    "annuel" : "2020",
+    "milieu" : "urbain",
+    "type_emploi" : "ensemble",
+    "valeur" : "-137000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "ensemble",
+    "type_emploi" : "emploi non rémuneré",
+    "valeur" : "32000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "ensemble",
+    "type_emploi" : "emploi rémuneré",
+    "valeur" : "197000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "ensemble",
+    "type_emploi" : "ensemble",
+    "valeur" : "229000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "type_emploi" : "emploi non rémuneré",
+    "valeur" : "48000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "type_emploi" : "emploi rémuneré",
+    "valeur" : "82000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "rural",
+    "type_emploi" : "ensemble",
+    "valeur" : "130000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "type_emploi" : "emploi non rémuneré",
+    "valeur" : "-16000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "type_emploi" : "emploi rémuneré",
+    "valeur" : "115000"
+  }, {
+    "annuel" : "2021",
+    "milieu" : "urbain",
+    "type_emploi" : "ensemble",
+    "valeur" : "99000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "ensemble",
+    "type_emploi" : "emploi non rémuneré",
+    "valeur" : "-161000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "ensemble",
+    "type_emploi" : "emploi rémuneré",
+    "valeur" : "138000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "ensemble",
+    "type_emploi" : "ensemble",
+    "valeur" : "-23000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "type_emploi" : "emploi non rémuneré",
+    "valeur" : "-153000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "type_emploi" : "emploi rémuneré",
+    "valeur" : "-21000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "rural",
+    "type_emploi" : "ensemble",
+    "valeur" : "-174000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "type_emploi" : "emploi non rémuneré",
+    "valeur" : "-9000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "type_emploi" : "emploi rémuneré",
+    "valeur" : "160000"
+  }, {
+    "annuel" : "2022",
+    "milieu" : "urbain",
+    "type_emploi" : "ensemble",
+    "valeur" : "151000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "ensemble",
+    "type_emploi" : "emploi non rémuneré",
+    "valeur" : "-207000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "ensemble",
+    "type_emploi" : "emploi rémuneré",
+    "valeur" : "49000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "ensemble",
+    "type_emploi" : "ensemble",
+    "valeur" : "-158000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "type_emploi" : "emploi non rémuneré",
+    "valeur" : "-188000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "type_emploi" : "emploi rémuneré",
+    "valeur" : "-11000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "rural",
+    "type_emploi" : "ensemble",
+    "valeur" : "-199000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "type_emploi" : "emploi non rémuneré",
+    "valeur" : "-18000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "type_emploi" : "emploi rémuneré",
+    "valeur" : "59000"
+  }, {
+    "annuel" : "2023",
+    "milieu" : "urbain",
+    "type_emploi" : "ensemble",
+    "valeur" : "41000"
+  } ],
+  "indicateur" : "création d'emploi par type d'emploi"
+}

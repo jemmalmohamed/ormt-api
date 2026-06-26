@@ -1,0 +1,264 @@
+{
+  "actif" : true,
+  "description" : "Sous domaine du domaine Employabilité et insertion professionnelle.",
+  "indicateurs" : [ {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "chercheurs d'emploi bénéficiaires",
+    "description" : "bénéficiaires idmaj ventilés par diplôme (hors pi).",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "diplôme",
+      "nom" : "diplome",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires IDMAJ par diplôme (hors PI) - Camembert"
+    } ],
+    "nom" : "bénéficiaires idmaj par diplôme (hors pi)",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires idmaj par diplôme (hors pi)",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "chercheurs d'emploi bénéficiaires",
+    "description" : "bénéficiaires idmaj ventilés par genre (y compris le pi).",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "genre",
+      "nom" : "genre",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires IDMAJ par genre (y compris le PI) - Camembert"
+    } ],
+    "nom" : "bénéficiaires idmaj par genre (y compris le pi)",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires idmaj par genre (y compris le pi)",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "chercheurs d'emploi bénéficiaires",
+    "description" : "bénéficiaires idmaj (hors pi).",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "région",
+      "nom" : "region",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "choropleth",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires IDMAJ  (hors PI) - CHOROPLETH"
+    } ],
+    "nom" : "bénéficiaires idmaj par région (hors pi)",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires idmaj (hors pi)",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "chercheurs d'emploi bénéficiaires",
+    "description" : "bénéficiaires idmaj ventilés par secteur d'activité (hors pi).",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "sae_idmaj",
+      "nom" : "sae_idmaj",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires IDMAJ par secteur d'activité (hors PI) - Camembert"
+    } ],
+    "nom" : "bénéficiaires idmaj par secteur d'activité (hors pi)",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires idmaj par secteur d'activité (hors pi)",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "chercheurs d'emploi bénéficiaires",
+    "description" : "bénéficiaires idmaj ventilés par type de contrat (hors pi).",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "type de contrat",
+      "nom" : "type_contrat",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires IDMAJ par type de contrat (hors PI) - Camembert"
+    } ],
+    "nom" : "bénéficiaires idmaj par type de contrat (hors pi)",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires idmaj par type de contrat (hors pi)",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "chercheurs d'emploi bénéficiaires",
+    "description" : "bénéficiaires idmaj ventilés par âge (hors pi).",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : true,
+        "temporelle" : false
+      },
+      "libelle" : "age",
+      "nom" : "age",
+      "type" : "texte"
+    }, {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "camembert",
+      "isDefault" : true,
+      "nom" : "Bénéficiaires IDMAJ par âge (hors PI) - Camembert"
+    } ],
+    "nom" : "bénéficiaires idmaj par âge (hors pi)",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "bénéficiaires idmaj par âge (hors pi)",
+    "typeTb" : "décisionnel",
+    "unite" : "%"
+  }, {
+    "abreviation" : "",
+    "actif" : true,
+    "categorie" : "chercheurs d'emploi bénéficiaires",
+    "description" : "nombre total des bénéficiaires idmaj, y compris le pi.",
+    "dimensions" : [ {
+      "association" : {
+        "principale" : false,
+        "temporelle" : true
+      },
+      "libelle" : "année",
+      "nom" : "annuel",
+      "type" : "texte"
+    } ],
+    "grapheConfigurations" : [ {
+      "chartOptionsJson" : null,
+      "chartSpecJson" : null,
+      "chartSpecVersion" : null,
+      "configSystem" : null,
+      "dimensionMappingJson" : "{\n  \"default\" : \"standard\"\n}",
+      "grapheTypeCode" : "histogramme",
+      "isDefault" : true,
+      "nom" : "Nombre des bénéficiaires IDMAJ, y compris le PI - Histogramme"
+    } ],
+    "nom" : "nombre des bénéficiaires idmaj, y compris le pi",
+    "regleCalcul" : null,
+    "source" : "anapec",
+    "titre" : "nombre des bénéficiaires idmaj, y compris le pi",
+    "typeTb" : "décisionnel",
+    "unite" : ""
+  } ],
+  "nom" : "idmaj"
+}
