@@ -1,0 +1,138 @@
+# Demo environment — all services in one file, no Traefik, direct port bindings.
+# Start:  ./start-demo.sh
+# Stop:   ./stop-demo.sh
+
+services:
+
+  # ─── PostgreSQL (API) ────────────────────────────────────────────────────────
+  ormt-database:
+    image: postgres:17.4
+    container_name: ormt-database
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ormt
+      POSTGRES_PASSWORD: ormt@database
+      POSTGRES_DB: ormt
+    volumes:
+      - pgdata_ormt:/var/lib/postgresql/data
+    ports:
+      - "5436:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ormt"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - ormt-demo
+
+  # ─── PostgreSQL (Keycloak) ────────────────────────────────────────────────────
+  ormt-kc-db:
+    image: postgres:15.3-alpine
+    container_name: ormt-kc-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: keycloak@database
+      POSTGRES_DB: keycloak
+    volumes:
+      - pgdata_kc:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U keycloak"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - ormt-demo
+
+  # ─── Keycloak ─────────────────────────────────────────────────────────────────
+  ormt-kc:
+    image: quay.io/keycloak/keycloak:26.1.3
+    container_name: ormt-kc
+    restart: unless-stopped
+    command: start-dev
+    environment:
+      KC_DB: postgres
+      KC_DB_URL_HOST: ormt-kc-db
+      KC_DB_USERNAME: keycloak
+      KC_DB_PASSWORD: keycloak@database
+      KC_DB_URL_DATABASE: keycloak
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
+      KC_HEALTH_ENABLED: "true"
+      KC_HTTP_ENABLED: "true"
+      # Public URL = localhost:8092 → tokens issued with http://localhost:8092 as issuer
+      KC_HOSTNAME: localhost
+      KC_HOSTNAME_PORT: "8092"
+      KC_HOSTNAME_STRICT: "false"
+      KC_HOSTNAME_STRICT_BACKCHANNEL: "false"
+    ports:
+      - "8092:8080"
+    depends_on:
+      ormt-kc-db:
+        condition: service_healthy
+    volumes:
+      - ../../services/keycloak/themes:/opt/keycloak/themes
+    networks:
+      - ormt-demo
+
+  # ─── MinIO ───────────────────────────────────────────────────────────────────
+  minio-ormt:
+    image: minio/minio:latest
+    container_name: minio-ormt
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minio
+      MINIO_ROOT_PASSWORD: minio@ormt
+    volumes:
+      - minio_data:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 20s
+      timeout: 10s
+      retries: 5
+      start_period: 20s
+    networks:
+      - ormt-demo
+
+  # ─── ORMT API ─────────────────────────────────────────────────────────────────
+  ormt-api:
+    build:
+      context: ../..
+      dockerfile: Dockerfile.demo
+    container_name: ormt-api
+    restart: unless-stopped
+    ports:
+      - "8093:8093"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"  # allows container → host:port
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      SPRING_DATASOURCE_URL: jdbc:postgresql://ormt-database:5432/ormt
+      KEYCLOAK_HOST: host.docker.internal:8092
+      MINIO_ENDPOINT: http://host.docker.internal:9000
+      # STARTER_* sont gérés automatiquement par entrypoint.sh (true 1er boot, false ensuite)
+    volumes:
+      - ormt_demo_state:/state
+    depends_on:
+      ormt-database:
+        condition: service_healthy
+      minio-ormt:
+        condition: service_healthy
+      ormt-kc:
+        condition: service_started
+    networks:
+      - ormt-demo
+
+volumes:
+  pgdata_ormt:
+  pgdata_kc:
+  minio_data:
+  ormt_demo_state:   # stocke le marqueur .initialized
+
+networks:
+  ormt-demo:
+    driver: bridge

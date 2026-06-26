@@ -1,0 +1,17 @@
+FROM eclipse-temurin:25-jdk-alpine
+
+LABEL maintainer="jemmalmohamed@gmail.com"
+
+VOLUME /tmp
+
+RUN chmod 777 /tmp
+
+EXPOSE 8093
+
+ARG JAR_FILE=target/ormt-api.jar
+
+ADD ${JAR_FILE} ormt-api.jar
+COPY docker/demo/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
