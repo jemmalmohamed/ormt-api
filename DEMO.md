@@ -1,12 +1,20 @@
-# ORMT API — Demo Environment
+# ORMT — Local Demo Environment
 
 ## Prérequis
 
 | Outil | Version minimale |
 |-------|-----------------|
 | Java  | 25+             |
-| Docker | 20.10+         |
+| Node.js / npm | requis pour Angular |
 | Maven | inclus via `./mvnw` |
+
+L'infrastructure doit déjà être disponible, par exemple via Jenkins ou une stack locale :
+
+| Service   | URL attendue              |
+|-----------|---------------------------|
+| PostgreSQL | `localhost:5436`        |
+| Keycloak  | `http://localhost:8092`   |
+| MinIO     | `http://localhost:9000`   |
 
 ---
 
@@ -19,17 +27,25 @@ cd ormt-api
 ```
 
 Le script fait automatiquement :
-1. Build du JAR (`mvnw clean package -DskipTests`)
-2. Démarrage de tous les services Docker en arrière-plan
+1. Réutilisation du JAR existant (`target/ormt-api.jar`)
+2. Démarrage de l'API avec `java -jar target/ormt-api.jar`
+3. Démarrage du frontend Angular depuis `../ormt-web-v1` sur le port `3000`
+
+Si le JAR n'existe pas encore, lancez une première fois avec compilation :
+
+```bash
+SKIP_BUILD=false ./start-demo.sh
+```
 
 ---
 
-## Accès (disponible ~60s après le démarrage)
+## Accès
 
 | Service   | URL                                        | Credentials          |
 |-----------|--------------------------------------------|----------------------|
 | API       | http://localhost:8093                      | —                    |
 | Swagger   | http://localhost:8093/swagger-ui.html      | —                    |
+| Frontend  | http://localhost:3000                      | —                    |
 | Keycloak  | http://localhost:8092                      | admin / admin        |
 | MinIO     | http://localhost:9001                      | minio / minio@ormt   |
 
@@ -39,44 +55,27 @@ Le script fait automatiquement :
 
 ```bash
 # Suivre les logs de l'API
-docker compose -f docker/demo/docker-compose.demo.yml logs -f ormt-api
+tail -f logs/demo-api.log
 
-# Arrêter l'environnement
+# Suivre les logs Angular
+tail -f logs/demo-web.log
+
+# Arrêter l'API et Angular
 ./stop-demo.sh
 
-# Arrêter et supprimer toutes les données
-docker compose -f docker/demo/docker-compose.demo.yml down -v
+# Changer les ports si besoin
+API_PORT=8094 WEB_PORT=3001 ./start-demo.sh
+
+# Forcer la recompilation du JAR avant le démarrage
+SKIP_BUILD=false ./start-demo.sh
+
+# Changer le chemin du frontend si besoin
+WEB_DIR=/path/to/ormt-web-v1 ./start-demo.sh
 ```
 
 ---
 
-## Comportement des données
+## Notes WSL
 
-### Premier démarrage
-L'API détecte automatiquement qu'aucune donnée n'existe et initialise :
-- Le schéma de base de données (migrations Flyway)
-- Le realm Keycloak avec les clients et rôles
-- Les buckets MinIO
-- Les données initiales (seed)
-
-```
-[demo] Premier démarrage — seed activé
-```
-
-### Redémarrages suivants
-Les starters sont automatiquement désactivés — les données existantes sont préservées.
-
-```
-[demo] Données existantes — seed désactivé
-```
-
-Cela signifie que redémarrer l'environnement (`./stop-demo.sh` puis `./start-demo.sh`) ne réinitialise pas les données.
-
-### Repartir de zéro
-
-```bash
-docker compose -f docker/demo/docker-compose.demo.yml down -v
-./start-demo.sh
-```
-
-Le flag `-v` supprime tous les volumes Docker (base de données, Keycloak, MinIO, marqueur d'initialisation). Le prochain démarrage repart d'un état vide.
+Angular est lancé avec `--host 0.0.0.0`, donc la page reste accessible depuis le navigateur Windows via `http://localhost:3000`.
+L'API utilise le profil `dev` par défaut. Les données ne sont pas réinitialisées par ces scripts.

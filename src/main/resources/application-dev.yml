@@ -3,8 +3,8 @@ server:
 
 starter:
   database:
-    reset: true
-    seed: true
+    reset: false
+    seed: false
   minio:
     reset: false
     seed: false
